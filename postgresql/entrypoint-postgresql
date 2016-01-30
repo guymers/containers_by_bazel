@@ -1,0 +1,48 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+# based on https://github.com/docker-library/postgres/blob/master/9.5/docker-entrypoint.sh
+
+localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+export LANG=en_US.UTF-8
+
+adduser --system --uid=941 --home "$POSTGRES_HOME" postgres
+if [ -d "$POSTGRES_HOME" -a "$(stat -c '%U' "$POSTGRES_HOME" 2>/dev/null)" = "root" ]; then
+  chown postgres "$POSTGRES_HOME"
+  chmod o-rwx "$POSTGRES_HOME"
+fi
+
+if [ "$1" = 'postgres' ]; then
+  export PGDATA="$POSTGRES_HOME/data"
+
+  mkdir -p /var/run/postgresql
+  chown -R postgres /var/run/postgresql
+
+  # look specifically for PG_VERSION, as it is expected in the DB dir
+  if [ ! -s "$PGDATA/PG_VERSION" ]; then
+    gosu postgres initdb
+
+    echo "ALTER USER postgres WITH SUPERUSER PASSWORD '$POSTGRES_PASSWORD';" | gosu postgres postgres --single -j
+
+    {
+      echo;
+      echo "host all all     10.0.0.0/8 md5";
+      echo "host all all  172.16.0.0/12 md5";
+      echo "host all all 192.168.0.0/16 md5";
+    } >> "$PGDATA/pg_hba.conf"
+    {
+      echo;
+      echo "listen_addresses = '*'";
+      echo "include_if_exists = '/etc/postgresql/overrides.conf'";
+    } >> "$PGDATA/postgresql.conf"
+
+    echo
+    echo "PostgreSQL init process complete; ready for start up."
+    echo
+  fi
+
+  gosu postgres "$@"
+else
+  exec "$@"
+fi

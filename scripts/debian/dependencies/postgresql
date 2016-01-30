@@ -1,0 +1,2 @@
+postgresql-9.5=${POSTGRESQL_DEB_VERSION}
+postgresql-contrib-9.5=${POSTGRESQL_DEB_VERSION}

@@ -1,0 +1,31 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+adduser --system --uid=911 --home "$NEXUS_WORK" nexus
+if [ -d "$NEXUS_WORK" -a "$(stat -c '%U' "$NEXUS_WORK" 2>/dev/null)" = "root" ]; then
+  chown nexus "$NEXUS_WORK"
+  chmod o-rwx "$NEXUS_WORK"
+fi
+
+if [ "$1" = 'nexus' ]; then
+  nexus_conf="$NEXUS_WORK/conf"
+
+  # the -Dapplication-conf nexus setting does nothing so add some config defaults
+  if [ ! -d "$nexus_conf" ]; then
+    gosu nexus mkdir -p "$nexus_conf"
+    gosu nexus cp -a "$NEXUS_CONFIG/." "$nexus_conf"
+  fi
+
+  /init-java-ssl.sh > /dev/null
+  source /java-opts.sh
+
+  exec gosu nexus java \
+    -Dnexus-work=${NEXUS_WORK} \
+    -Dnexus-webapp-context-path=${NEXUS_CONTEXT_PATH} \
+    -cp 'conf/:lib/*' \
+    ${JAVA_OPTS} \
+    org.sonatype.nexus.bootstrap.Launcher ./conf/jetty.xml ./conf/jetty-requestlog.xml
+else
+  exec "$@"
+fi

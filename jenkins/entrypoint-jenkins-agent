@@ -1,0 +1,32 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+adduser --system --uid=912 --home "$JENKINS_HOME" jenkins
+if [ -d "$JENKINS_HOME" -a "$(stat -c '%U' "$JENKINS_HOME" 2>/dev/null)" = "root" ]; then
+  chown jenkins "$JENKINS_HOME"
+  chmod o-rwx "$JENKINS_HOME"
+fi
+
+# based on https://github.com/carlossg/jenkins-swarm-slave-docker
+
+# if `docker run` first argument start with `-` the user is passing jenkins swarm launcher arguments
+if [[ $# -lt 1 ]] || [[ "$1" == "-"* ]]; then
+
+  # if -master is not provided and using --link jenkins:jenkins
+  if [[ "$@" != *"-master "* ]] && [ ! -z "$JENKINS_PORT_8080_TCP_ADDR" ]; then
+    PARAMS="-master http://$JENKINS_PORT_8080_TCP_ADDR:$JENKINS_PORT_8080_TCP_PORT"
+  fi
+  if [[ "$@" != *"-tunnel "* ]] && [ ! -z "$JENKINS_PORT_50000_TCP_ADDR" ]; then
+    PARAMS="-tunnel $JENKINS_PORT_50000_TCP_ADDR:$JENKINS_PORT_50000_TCP_PORT"
+  fi
+
+  /init-java-ssl.sh > /dev/null
+  source /java-opts.sh
+
+  # horrible hack to substitute env variables in the args
+  ARGS=$(echo "$@" | perl -p -e 's/(\$([A-Z0-9_]+))/defined $ENV{$2} ? $ENV{$2} : $&/eg')
+  exec java $JAVA_OPTS -jar /usr/share/jenkins/swarm-client.jar -fsroot $HOME $PARAMS $ARGS
+fi
+
+exec "$@"

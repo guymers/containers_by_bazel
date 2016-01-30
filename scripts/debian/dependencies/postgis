@@ -1,0 +1,4 @@
+postgresql-9.5=${POSTGRESQL_DEB_VERSION}
+postgresql-contrib-9.5=${POSTGRESQL_DEB_VERSION}
+postgis=${POSTGIS_DEB_VERSION}
+postgresql-9.5-postgis-2.2=${POSTGIS_DEB_VERSION}
