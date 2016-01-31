@@ -3,7 +3,7 @@ load("/tools/build_defs/docker/docker", "docker_build")
 # /var/lib/dpkg/info/openssl.postinst
 # /var/lib/dpkg/info/ca-certificates.postinst
 # /usr/sbin/update-ca-certificates
-def add_certs(name, base):
+def add_certs(name, base, visibility = None):
   docker_build(
     name = name,
     base = base,
@@ -534,4 +534,5 @@ def add_certs(name, base):
       "/etc/ssl/certs/thawte_Primary_Root_CA_-_G2.pem": "/usr/share/ca-certificates/mozilla/thawte_Primary_Root_CA_-_G2.crt",
       "/etc/ssl/certs/thawte_Primary_Root_CA_-_G3.pem": "/usr/share/ca-certificates/mozilla/thawte_Primary_Root_CA_-_G3.crt",
     },
+    visibility = visibility,
   )

@@ -17,7 +17,6 @@ if [ "$1" = 'nexus' ]; then
     gosu nexus cp -a "$NEXUS_CONFIG/." "$nexus_conf"
   fi
 
-  /init-java-ssl.sh > /dev/null
   source /java-opts.sh
 
   exec gosu nexus java \

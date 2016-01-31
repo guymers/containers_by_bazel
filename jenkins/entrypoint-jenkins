@@ -33,7 +33,6 @@ export -f copy_reference_file
 if [ "$1" = 'jenkins' ]; then
   find /usr/share/jenkins/ref/ -type f -exec gosu jenkins bash -c "copy_reference_file '{}'" \;
 
-  /init-java-ssl.sh > /dev/null
   source /java-opts.sh
 
   exec gosu jenkins java ${JAVA_OPTS} -jar /usr/share/jenkins/jenkins.war $JENKINS_OPTS

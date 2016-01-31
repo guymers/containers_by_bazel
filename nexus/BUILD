@@ -1,16 +1,7 @@
 load("/tools/build_defs/docker/docker", "docker_build")
 load("//macros:gosu.bzl", "add_gosu")
-load("//macros:ssl.bzl", "add_certs")
 
-add_certs(
-  name = "nexus-ssl",
-  base = "//java:jre",
-)
-
-add_gosu(
-  name = "nexus-gosu",
-  base = ":nexus-ssl",
-)
+add_gosu(name = "nexus-gosu", base = "//java:jre-ssl")
 
 genrule(
   name = "nexus-bundle-tar",

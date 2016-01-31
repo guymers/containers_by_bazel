@@ -7,7 +7,8 @@ ROOT="$DIR/.."
 
 bazel build --jobs $(nproc) --verbose_failures \
   //scripts/debian:all \
-  //scripts/ssl:all
+  //scripts/ssl:all \
+  //scripts/java:all
 
 echo "- Updating WORKSPACE with latest dependencies"
 new_debian_dependencies="$OUT_DIR/scripts/debian/WORKSPACE.debian_deps"
@@ -38,3 +39,7 @@ echo "- Updating ssl macro"
 macros_dir="$ROOT/macros"
 cp "$OUT_DIR/scripts/ssl/ssl.bzl" "$macros_dir/ssl.bzl"
 cp "$OUT_DIR/scripts/ssl/ca-certificates.crt" "$macros_dir/ssl/ca-certificates.crt"
+
+
+echo "- Creating java cacerts file"
+cp "$OUT_DIR/scripts/java/cacerts" "$ROOT/java/cacerts"

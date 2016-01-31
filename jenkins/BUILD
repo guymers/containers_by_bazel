@@ -1,16 +1,7 @@
 load("/tools/build_defs/docker/docker", "docker_build")
 load("//macros:gosu.bzl", "add_gosu")
-load("//macros:ssl.bzl", "add_certs")
 
-add_certs(
-  name = "jre-ssl",
-  base = "//java:jre",
-)
-
-add_gosu(
-  name = "jre-gosu",
-  base = ":jre-ssl",
-)
+add_gosu(name = "jre-gosu", base = "//java:jre-ssl")
 
 docker_build(
   name = "jenkins-1",

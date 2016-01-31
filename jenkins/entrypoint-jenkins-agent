@@ -21,7 +21,6 @@ if [[ $# -lt 1 ]] || [[ "$1" == "-"* ]]; then
     PARAMS="-tunnel $JENKINS_PORT_50000_TCP_ADDR:$JENKINS_PORT_50000_TCP_PORT"
   fi
 
-  /init-java-ssl.sh > /dev/null
   source /java-opts.sh
 
   # horrible hack to substitute env variables in the args

@@ -11,7 +11,7 @@ load("/tools/build_defs/docker/docker", "docker_build")
 # /var/lib/dpkg/info/openssl.postinst
 # /var/lib/dpkg/info/ca-certificates.postinst
 # /usr/sbin/update-ca-certificates
-def add_certs(name, base):
+def add_certs(name, base, visibility = None):
   docker_build(
     name = name,
     base = base,
@@ -26,4 +26,5 @@ while read link cert; do
   echo "      \"$certs_dir/$link\": \"$cert\","
 done < <(docker run --rm "$container" ls -l "$certs_dir" | grep ' -> ' | awk '{print $9, $11}' | sort)
 echo "    },"
+echo "    visibility = visibility,"
 echo "  )"

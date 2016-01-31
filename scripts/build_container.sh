@@ -12,7 +12,7 @@ version="$3"
 
 # separate build and run as we only need to capture the run output
 # and it contains no useful information worth displaying
-bazel build "$bazel_target"
+bazel build --verbose_failures "$bazel_target"
 
 # possibility of two builds at the same time tagging the same image
 # make sure this is only run once at a time per docker daemon
