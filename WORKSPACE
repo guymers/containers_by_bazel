@@ -13,6 +13,13 @@ http_file(
 
 
 http_file(
+  name = "sbt-bundle",
+  url = "https://dl.bintray.com/sbt/native-packages/sbt/0.13.9/sbt-0.13.9.tgz",
+  sha256 = "148f2801f2993773de6f8859fe0e6520fcabe649d66bb316e13aff8b2fd7f504",
+)
+
+
+http_file(
   name = "nexus-bundle",
   url = "https://download.sonatype.com/nexus/oss/nexus-2.12.0-01-bundle.tar.gz",
   sha256 = "bf3c02ef9cdea0e854e0feba85d74f79215db04b692aebbaea37e4caf83c7fcc",

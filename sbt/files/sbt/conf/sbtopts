@@ -1,0 +1,7 @@
+-sbt-create
+
+-mem 2048
+-J-XX:+CMSClassUnloadingEnabled
+-J-XX:+UseConcMarkSweepGC
+-sbt-dir /etc/sbt/.sbt
+-ivy /ivy2

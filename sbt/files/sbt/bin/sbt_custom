@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+if [ -n "$SBT_PROXY" ]; then
+mkdir -p /etc/sbt/.sbt
+# http://www.scala-sbt.org/0.13/docs/Proxy-Repositories.html
+cat > /etc/sbt/.sbt/repositories <<- EOF
+[repositories]
+local
+my-ivy-proxy-releases: $SBT_PROXY/ivy-releases/, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]
+my-maven-proxy-releases: $SBT_PROXY/maven-releases/
+EOF
+
+export SBT_OPTS="-Dsbt.override.build.repos=true"
+else
+rm -f /etc/sbt/.sbt/repositories
+fi
+
+/usr/share/sbt/bin/sbt "$@"
