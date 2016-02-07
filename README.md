@@ -1,4 +1,4 @@
-Build docker images using Bazel. Benefits include reproducibility, rebuilt speed, composability.
+Build docker images using Bazel. Benefits include reproducibility, rebuild speed, composability.
 
 
 ### To create containers
@@ -14,6 +14,7 @@ You can use ./build_container:
     ./scripts/build_container.sh //nodejs nodejs ${NODEJS_VERSION}
     ./scripts/build_container.sh //postgresql postgresql ${POSTGRESQL_VERSION}
     ./scripts/build_container.sh //postgresql:postgis postgis ${POSTGRESQL_VERSION}-${POSTGIS_VERSION}
+    ./scripts/build_container.sh //sbt sbt ${SBT_VERSION}
 
 Or just build everything at once:
 
@@ -26,7 +27,8 @@ Or just build everything at once:
       //nginx \
       //nodejs \
       //postgresql \
-      //postgresql:postgis
+      //postgresql:postgis \
+      //sbt
 
 ### To update dependencies
 Create the docker containers to pull dependency versions from:
@@ -35,4 +37,4 @@ Create the docker containers to pull dependency versions from:
 
 Update dependencies in files:
 
-    ./scripts/build.sh
+    ./scripts/update_dependencies.sh

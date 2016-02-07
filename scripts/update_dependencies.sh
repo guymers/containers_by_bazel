@@ -43,3 +43,4 @@ cp "$OUT_DIR/scripts/ssl/ca-certificates.crt" "$macros_dir/ssl/ca-certificates.c
 
 echo "- Creating java cacerts file"
 cp "$OUT_DIR/scripts/java/cacerts" "$ROOT/java/cacerts"
+chmod 644 "$ROOT/java/cacerts"

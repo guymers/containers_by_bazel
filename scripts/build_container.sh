@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+set -u
 set -o pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
@@ -14,14 +15,11 @@ version="$3"
 # and it contains no useful information worth displaying
 bazel build --verbose_failures "$bazel_target"
 
-# possibility of two builds at the same time tagging the same image
-# make sure this is only run once at a time per docker daemon
 run_result=$(bazel run "$bazel_target" | grep "^Tagging")
-local_image=$(echo "$run_result" | awk '{print $4}')
 local_image_sha=$(echo "$run_result" | awk '{print $2}')
 remote_image="$DOCKER_REGISTRY/$container_name"
 
-echo "Built $local_image"
+echo "Built $(echo "$run_result" | awk '{print $4}')"
 
 # if there is no version provided then generate one from the git
 # commit + current timestamp
@@ -32,7 +30,7 @@ if [ -z "$version" ]; then
   latest_sha=$(docker inspect --format="{{ .Id }}" "$remote_image" 2> /dev/null || echo "")
 
   if [ "$local_image_sha" = "$latest_sha" ]; then
-    echo "Image $remote_image has not changed"
+    echo "Image $remote_image has not changed" >&2
     exit 0
   fi
 
@@ -50,13 +48,18 @@ fi
 
 current_sha=$(docker inspect --format="{{ .Id }}" "$remote_image_version" 2> /dev/null || echo "")
 
+if [ "$local_image_sha" == "$current_sha" ]; then
+  echo "Image has not changed $remote_image $version"
+  exit 0
+fi
+
 # enforce docker tag immutability
-if [ -n "$current_sha" ] && [ "$sha" != "$current_sha" ]; then
-  echo "Attempting to update $remote_image_version to new hash $sha"
+if [ -n "$current_sha" ] && [ "$local_image_sha" != "$current_sha" ]; then
+  echo "Attempting to update $remote_image_version to new hash $local_image_sha" >&2
   exit 1
 fi
 
-docker tag -f "$local_image" "$remote_image_version"
+docker tag -f "$local_image_sha" "$remote_image_version"
 
 echo "Created $remote_image $version"
 exit 0

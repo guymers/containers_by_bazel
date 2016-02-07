@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+set -o pipefail
 
 declare -A VERSION_PREFIXES
 VERSION_PREFIXES["git"]="1:"
@@ -82,8 +83,8 @@ while read name version; do
   version="${version_prefix}${version}"
 
   info=$(apt-cache show "$name=$version")
-  sha256=$(echo "$info" | grep "SHA256: " | cut -d':' -f2 | tr -d ' ')
-  filename=$(echo "$info" | grep "Filename: " | cut -d':' -f2 | tr -d ' ')
+  sha256=$(echo "$info" | awk '/^SHA256: /{print $2; exit}')
+  filename=$(echo "$info" | awk '/^Filename: /{print $2; exit}')
 
   url=$(find_url "$filename")
   if [ -n "$url" ]; then
