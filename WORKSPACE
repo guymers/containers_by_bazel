@@ -1,7 +1,7 @@
 http_file(
   name = "docker-debian-jessie",
-  url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/03fb724966e714018678211dfe16b89c108f4f09/jessie/rootfs.tar.xz",
-  sha256 = "ee850685fba000bbb9c284202d11d13a7ad6e9dd3758050696c2d51971587f00",
+  url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9/jessie/rootfs.tar.xz",
+  sha256 = "cf108f28911b722a1355c2713ca61b2185c436ad197a949043352ee404ff3b3d",
 )
 
 http_file(
@@ -463,8 +463,8 @@ http_file(
 )
 http_file(
   name = "deb-libgssapi-krb5-2",
-  url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libgssapi-krb5-2_1.12.1+dfsg-19+deb8u1_amd64.deb",
-  sha256 = "2104538072b4da78132b8b0ed12ca53f02fd15ad13aaafd1dc07e7de1cc21b8c",
+  url = "http://security.debian.org/pool/updates/main/k/krb5/libgssapi-krb5-2_1.12.1+dfsg-19+deb8u2_amd64.deb",
+  sha256 = "06e83f850bb4271de223623f1f44cc2956390a289d0e94a150ba4fbb97ac8b4a",
 )
 http_file(
   name = "deb-libgssapi3-heimdal",
@@ -568,8 +568,8 @@ http_file(
 )
 http_file(
   name = "deb-libk5crypto3",
-  url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libk5crypto3_1.12.1+dfsg-19+deb8u1_amd64.deb",
-  sha256 = "3d9c0ae71316d20a47f27abef7ef6d9ab3fd6f1979d3f0fb3d315f19a7099d90",
+  url = "http://security.debian.org/pool/updates/main/k/krb5/libk5crypto3_1.12.1+dfsg-19+deb8u2_amd64.deb",
+  sha256 = "3560254d2fa86f56a29f6e2fbd7c54ef30503225c64d67c2cb44f126166eb9ac",
 )
 http_file(
   name = "deb-libkeyutils1",
@@ -588,13 +588,13 @@ http_file(
 )
 http_file(
   name = "deb-libkrb5-3",
-  url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libkrb5-3_1.12.1+dfsg-19+deb8u1_amd64.deb",
-  sha256 = "941e8d2a732966c8138866e2f40b956533bd0b31a9c2957b4ba960628341a62e",
+  url = "http://security.debian.org/pool/updates/main/k/krb5/libkrb5-3_1.12.1+dfsg-19+deb8u2_amd64.deb",
+  sha256 = "dedd4adcdf8b347417c4cb09ae23eb49e232540374d6c51590b08910d2392532",
 )
 http_file(
   name = "deb-libkrb5support0",
-  url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libkrb5support0_1.12.1+dfsg-19+deb8u1_amd64.deb",
-  sha256 = "1b3679fa3cf9ad41cb6e17ed26e9776023915d50a32721c0bd7100e02199c938",
+  url = "http://security.debian.org/pool/updates/main/k/krb5/libkrb5support0_1.12.1+dfsg-19+deb8u2_amd64.deb",
+  sha256 = "60134b1bdc5e7e0625c36d03ff271b727ced0041572149c0a871a44e1a0ddf9c",
 )
 http_file(
   name = "deb-liblapack3",
@@ -963,8 +963,8 @@ http_file(
 )
 http_file(
   name = "deb-libtiff5",
-  url = "http://httpredir.debian.org/debian/pool/main/t/tiff/libtiff5_4.0.3-12.3_amd64.deb",
-  sha256 = "267237fcc1af0336c96e8db97920cc2337e0d4c46660f349689e217e3d1510a6",
+  url = "http://security.debian.org/pool/updates/main/t/tiff/libtiff5_4.0.3-12.3+deb8u1_amd64.deb",
+  sha256 = "06b4254a0a78fdf199b044975d5b750902ca8916400db7cc309deeba44dee42e",
 )
 http_file(
   name = "deb-liburiparser1",
@@ -1258,18 +1258,18 @@ http_file(
 )
 http_file(
   name = "deb-openjdk-8-jdk",
-  url = "http://http.debian.net/debian/pool/main/o/openjdk-8/openjdk-8-jdk_8u66-b17-1~bpo8+1_amd64.deb",
-  sha256 = "397c0ba53aa7b994571efdad70f10cca9adc1a81e2bc3516c0b5ba385773d2d2",
+  url = "http://http.debian.net/debian/pool/main/o/openjdk-8/openjdk-8-jdk_8u72-b15-1~bpo8+1_amd64.deb",
+  sha256 = "20aba9289fa2cb340750578e5f2782fafac19fad64cb7f033a67e280868849ed",
 )
 http_file(
   name = "deb-openjdk-8-jre",
-  url = "http://http.debian.net/debian/pool/main/o/openjdk-8/openjdk-8-jre_8u66-b17-1~bpo8+1_amd64.deb",
-  sha256 = "aef6eb2c73b7c405dba37852b18c043d41531722900c0e5014b6cc54f9ce3aa2",
+  url = "http://http.debian.net/debian/pool/main/o/openjdk-8/openjdk-8-jre_8u72-b15-1~bpo8+1_amd64.deb",
+  sha256 = "990b9922e7d902c1bcbd6d0449d8c49d1ecc38df04315680dbf1626cf47bd8d4",
 )
 http_file(
   name = "deb-openjdk-8-jre-headless",
-  url = "http://http.debian.net/debian/pool/main/o/openjdk-8/openjdk-8-jre-headless_8u66-b17-1~bpo8+1_amd64.deb",
-  sha256 = "07da5d2f1c5592c565955898571d684d3f87f54f860d6b87edf48f9efe18705e",
+  url = "http://http.debian.net/debian/pool/main/o/openjdk-8/openjdk-8-jre-headless_8u72-b15-1~bpo8+1_amd64.deb",
+  sha256 = "92b0a442e6774d8b7d226020eb647b92490bcf45836ba5dfef1fe454e0188564",
 )
 http_file(
   name = "deb-openssl",
@@ -1280,11 +1280,6 @@ http_file(
   name = "deb-perl",
   url = "http://httpredir.debian.org/debian/pool/main/p/perl/perl_5.20.2-3+deb8u3_amd64.deb",
   sha256 = "51a8d51f2cc522004d3fe472f6e4acac94c69d83586511353e0413b680f460ef",
-)
-http_file(
-  name = "deb-perl-base",
-  url = "http://httpredir.debian.org/debian/pool/main/p/perl/perl-base_5.20.2-3+deb8u3_amd64.deb",
-  sha256 = "f74bdd736e51947358ef5a9974db30a45751df9bef94cba97a77050eeea4c88c",
 )
 http_file(
   name = "deb-perl-modules",
