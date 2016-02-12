@@ -1,4 +1,4 @@
-load("/tools/build_defs/docker/docker", "docker_build")
+load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 
 def add_gosu(name, base):
   docker_build(

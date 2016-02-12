@@ -8,7 +8,7 @@ def plugins(name, plugin_file, target_prefix = ""):
   )
 
   native.genrule(
-    name = name + "-workspace",
+    name = name + "_workspace",
     srcs = [":" + name],
     outs = ["plugins.WORKSPACE"],
     cmd = "$(location " + target_prefix + "//scripts/jenkins:workspace) $< > $@",
@@ -16,7 +16,7 @@ def plugins(name, plugin_file, target_prefix = ""):
   )
 
   native.genrule(
-    name = name + "-filegroup",
+    name = name + "_filegroup",
     srcs = [":" + name],
     outs = ["plugins.filegroup"],
     cmd = "$(location " + target_prefix + "//scripts/jenkins:filegroup) $< > $@",

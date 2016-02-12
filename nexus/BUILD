@@ -1,19 +1,19 @@
-load("/tools/build_defs/docker/docker", "docker_build")
+load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 load("//macros:gosu.bzl", "add_gosu")
 
-add_gosu(name = "nexus-gosu", base = "//java:jre-ssl")
+add_gosu(name = "nexus_gosu", base = "//java:jre_ssl")
 
 genrule(
-  name = "nexus-bundle-tar",
-  srcs = ["@nexus-bundle//file"],
-  outs = ["nexus-bundle.tar"],
+  name = "nexus_bundle_tar",
+  srcs = ["@nexus_bundle//file"],
+  outs = ["nexus_bundle.tar"],
   cmd = "cat $< | gunzip >$@",
 )
 
 docker_build(
-  name = "nexus-bin",
-  base = ":nexus-gosu",
-  tars = [":nexus-bundle-tar"],
+  name = "nexus_bin",
+  base = ":nexus_gosu",
+  tars = [":nexus_bundle_tar"],
   env = {
     "NEXUS_HOME": "/opt/nexus",
   },
@@ -23,7 +23,7 @@ docker_build(
 
 docker_build(
   name = "nexus",
-  base = ":nexus-bin",
+  base = ":nexus_bin",
   env = {
     "NEXUS_WORK": "/nexus_work",
     "NEXUS_CONFIG": "/etc/nexus",

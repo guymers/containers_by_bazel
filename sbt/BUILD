@@ -1,17 +1,17 @@
-load("/tools/build_defs/docker/docker", "docker_build")
+load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 
 genrule(
-  name = "bin-tar",
-  srcs = ["@sbt-bundle//file"],
-  outs = ["sbt-bin.tar"],
+  name = "bin_tar",
+  srcs = ["@sbt_bundle//file"],
+  outs = ["sbt_bin.tar"],
   cmd = "cat $< | gunzip >$@",
 )
 
 docker_build(
-  name = "sbt-base",
-  base = "//java:jdk-ssl",
+  name = "sbt_base",
+  base = "//java:jdk_ssl",
   directory = "/usr/share",
-  tars = [":bin-tar"],
+  tars = [":bin_tar"],
   files = ["files/sbt"],
   symlinks = {
     "/usr/bin/sbt": "/usr/share/sbt/bin/sbt_custom",
@@ -20,8 +20,8 @@ docker_build(
 )
 
 genrule(
-  name = "ivy-cache",
-  srcs = [":sbt-base.tar"],
+  name = "ivy_cache",
+  srcs = [":sbt_base.tar"],
   outs = ["ivy_cache.tar"],
   cmd = "$(location :sbt_ivy_cache) $< $@",
   tools = [":sbt_ivy_cache"],
@@ -33,16 +33,16 @@ sh_binary(
 )
 
 docker_build(
-  name = "sbt-with-ivy-cache",
-  base = ":sbt-base",
+  name = "sbt_with_ivy_cache",
+  base = ":sbt_base",
   directory = "/ivy2",
-  tars = [":ivy-cache"],
+  tars = [":ivy_cache"],
 )
 
 # support running as non-root
 docker_build(
-  name = "sbt-ivy-cache-permissions",
-  base = ":sbt-with-ivy-cache",
+  name = "sbt_ivy_cache_permissions",
+  base = ":sbt_with_ivy_cache",
   directory = "/",
   mode = "0777",
   files = ["files/ivy2"],
@@ -50,7 +50,7 @@ docker_build(
 
 docker_build(
   name = "sbt",
-  base = ":sbt-ivy-cache-permissions",
+  base = ":sbt_ivy_cache_permissions",
   directory = "/etc",
   mode = "0777",
   files = ["files/etc/sbt"],

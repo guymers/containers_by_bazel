@@ -1,5 +1,5 @@
 genrule(
-  name = "ca-certificates-crt",
+  name = "ca_certificates_crt",
   srcs = ["//scripts/docker:container-versions.txt"],
   outs = ["ca-certificates.crt"],
   cmd = "$(location :crt_file) > $@",
@@ -7,7 +7,7 @@ genrule(
 )
 
 genrule(
-  name = "ssl-macro",
+  name = "macro",
   srcs = ["//scripts/docker:container-versions.txt"],
   outs = ["ssl.bzl"],
   cmd = "$(location :ssl_macro) > $@",

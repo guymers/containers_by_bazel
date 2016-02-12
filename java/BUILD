@@ -1,9 +1,9 @@
-load("/tools/build_defs/docker/docker", "docker_build")
+load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 load("//macros:ssl.bzl", "add_certs")
 
 docker_build(
   name = "java",
-  base = "//base:debian-jessie",
+  base = "//base:debian_jessie",
   env = {
     "LANG": "C.UTF-8",
     "LC_CTYPE": "C.UTF-8",
@@ -30,22 +30,22 @@ docker_build(
 
 
 add_certs(
-  name = "jre-ssl-base",
+  name = "jre_ssl_base",
   base = ":jre",
   visibility = ["//scripts/java:__pkg__"],
 )
 docker_build(
-  name = "jre-ssl",
-  base = ":jre-ssl-base",
+  name = "jre_ssl",
+  base = ":jre_ssl_base",
   directory = "/etc/ssl/certs/java/",
   files = ["cacerts"],
   visibility = ["//visibility:public"],
 )
 
-add_certs(name = "jdk-ssl-base", base = ":jdk")
+add_certs(name = "jdk_ssl_base", base = ":jdk")
 docker_build(
-  name = "jdk-ssl",
-  base = ":jdk-ssl-base",
+  name = "jdk_ssl",
+  base = ":jdk_ssl_base",
   directory = "/etc/ssl/certs/java/",
   files = ["cacerts"],
   visibility = ["//visibility:public"],

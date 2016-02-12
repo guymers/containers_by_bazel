@@ -25,5 +25,7 @@ while read spec || [ -n "$spec" ]; do
   fi
   sha256=$(sha256sum "$tmp_file" | awk '{print $1}')
 
+  # workspace names may contain only A-Z, a-z, 0-9, '_'
+  name=$(echo "$name" | sed 's/[^A-Za-z0-9_]/_/g')
   echo "$name" "$url" "$sha256"
 done < "$2"

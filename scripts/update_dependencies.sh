@@ -23,7 +23,7 @@ mv "$DIR/../WORKSPACE.new" "$ROOT/WORKSPACE"
 
 
 echo "- Updating deps/debs/BUILD latest dependencies"
-filegroups_dir="$OUT_DIR/scripts/debian/bazel_filegroup_dependencies"
+filegroups_dir="$OUT_DIR/scripts/debian/filegroup_dependencies"
 
 deps_build_file="$ROOT/deps/debs/BUILD"
 echo 'package(default_visibility = ["//visibility:public"])' > "$deps_build_file"

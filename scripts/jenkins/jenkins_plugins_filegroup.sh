@@ -6,7 +6,7 @@ BAZEL_DIR="$0.runfiles"
 [ -d "$BAZEL_DIR" ] && DIR="$BAZEL_DIR" || DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.."
 source "$(find "$DIR" -name "bazel_functions.sh")"
 
-readonly jenkins_prefix=jenkins-plugin
+readonly jenkins_prefix=jenkins_plugin
 
 dependencies=()
 

@@ -21,7 +21,7 @@ group_name=$(basename "$1")
 container="bazel-container/dependencies-$c"
 
 docker run --rm "$container" /find_deps.sh "$dependencies" | while read name version url sha256; do
-  # workspace names may contain only A-Z, a-z, 0-9, '-', '_' and '.'
-  name=$(echo "$name" | sed 's/[^A-Za-z0-9_\.-]/_/g')
+  # workspace names may contain only A-Z, a-z, 0-9, '_'
+  name=$(echo "$name" | sed 's/[^A-Za-z0-9_]/_/g')
   echo "$name $version $url $sha256"
 done

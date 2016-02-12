@@ -8,7 +8,7 @@ function bazel_http_file() {
 
 cat << EOF
 http_file(
-  name = "$prefix-$name",
+  name = "${prefix}_${name}",
   url = "$url",
   sha256 = "$sha256",
 )
@@ -25,7 +25,7 @@ function bazel_filegroup() {
   echo "  name = \"$name\","
   echo "  srcs = ["
   for src in "${sortedSrcs[@]}"; do
-    echo "    \"@$prefix-$src//file\","
+    echo "    \"@${prefix}_${src}//file\","
   done
   echo "  ],"
   echo ")"

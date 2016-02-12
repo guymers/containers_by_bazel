@@ -1,6 +1,6 @@
 genrule(
-  name = "java-cacerts",
-  srcs = ["//java:jre-ssl-base.tar"],
+  name = "java_cacerts",
+  srcs = ["//java:jre_ssl_base.tar"],
   outs = ["cacerts"],
   cmd = "$(location :generate_java_cacerts) $< $@",
   tools = [":generate_java_cacerts"],
