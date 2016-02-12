@@ -223,6 +223,13 @@ filegroup(
 )
 
 filegroup(
+  name = "polipo",
+  srcs = [
+    "@deb_polipo//file",
+  ],
+)
+
+filegroup(
   name = "postgis",
   srcs = [
     "@deb_fontconfig//file",

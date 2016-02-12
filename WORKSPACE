@@ -784,8 +784,8 @@ http_file(
 )
 http_file(
   name = "deb_libpq5",
-  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/libpq5_9.5.0-1.pgdg80+2_amd64.deb",
-  sha256 = "dba67ed89f55c066c34bfd23e6f4fdb813dad34c87bf79eddb63a23cdb413c84",
+  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/libpq5_9.5.1-1.pgdg80+1_amd64.deb",
+  sha256 = "4ee4b8a2c9ff626b8b5aa86af19b4a9c45b668fc875cffa83ecb42825a63856b",
 )
 http_file(
   name = "deb_libproj0",
@@ -1293,14 +1293,19 @@ http_file(
   sha256 = "5b98575bc28bf48bc43c13315fb30379e9d7dade2c9b9947114a95065808a941",
 )
 http_file(
+  name = "deb_polipo",
+  url = "http://httpredir.debian.org/debian/pool/main/p/polipo/polipo_1.1.1-5_amd64.deb",
+  sha256 = "236fe22bf28f6240e76b7b5065033f12759c2980249e65c1ffaaff40b71797f0",
+)
+http_file(
   name = "deb_postgis",
   url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgis_2.2.1+dfsg-2.pgdg80+1_amd64.deb",
   sha256 = "6cdd7b3bad352322a8ac1b0d72a893ee2486c834e97438e831cdd07129941d7d",
 )
 http_file(
   name = "deb_postgresql_9_5",
-  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-9.5_9.5.0-1.pgdg80+2_amd64.deb",
-  sha256 = "9b0d1d6a5424be7b1b45eb853a6d747efb37594c65279d22c484025db80f9dbd",
+  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-9.5_9.5.1-1.pgdg80+1_amd64.deb",
+  sha256 = "c6ba032f1b6e2ec66ae118e6752cdcb4b519760ee9a6a8c0d73974fda0ec83c0",
 )
 http_file(
   name = "deb_postgresql_9_5_postgis_2_2",
@@ -1314,8 +1319,8 @@ http_file(
 )
 http_file(
   name = "deb_postgresql_client_9_5",
-  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-client-9.5_9.5.0-1.pgdg80+2_amd64.deb",
-  sha256 = "c1ba735c0a0c30f44b56747564c29944970b5b9a8b87b5f94afe66affeb613ea",
+  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-client-9.5_9.5.1-1.pgdg80+1_amd64.deb",
+  sha256 = "0bbe7cec5388c71b12b2f8d664b8c64c11be25551d2e26b4eeb5e6d36560dc03",
 )
 http_file(
   name = "deb_postgresql_client_common",
@@ -1329,8 +1334,8 @@ http_file(
 )
 http_file(
   name = "deb_postgresql_contrib_9_5",
-  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-contrib-9.5_9.5.0-1.pgdg80+2_amd64.deb",
-  sha256 = "62aa4d5cef57d72829ded7d9059faa0bf49e8d07a8061ebadaa92b5e2d5c3b55",
+  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-contrib-9.5_9.5.1-1.pgdg80+1_amd64.deb",
+  sha256 = "8f9362528d1ba4dc0e74bf7d552ce453b09d913a9c0a3909552900873edb1fc6",
 )
 http_file(
   name = "deb_proj_data",

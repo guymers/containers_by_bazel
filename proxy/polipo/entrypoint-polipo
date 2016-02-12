@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+adduser --system --uid=981 --home "$POLIPO_HOME" polipo
+if [ -d "$POLIPO_HOME" -a "$(stat -c '%U' "$POLIPO_HOME" 2>/dev/null)" = "root" ]; then
+  chown polipo "$POLIPO_HOME"
+  chmod o-rwx "$POLIPO_HOME"
+fi
+
+if [ "$1" = 'polipo' ]; then
+  chown polipo /dev/stdout
+  exec gosu polipo "$@"
+else
+  exec "$@"
+fi

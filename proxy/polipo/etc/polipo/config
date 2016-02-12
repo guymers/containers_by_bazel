@@ -1,0 +1,7 @@
+proxyAddress = "::0"
+serverTimeout = 15s
+dnsUseGethostbyname = yes
+
+diskCacheRoot = /polipo-cache/
+logFile = /dev/stdout
+logLevel = 31
