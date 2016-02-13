@@ -1239,8 +1239,8 @@ http_file(
 )
 http_file(
   name = "deb_nginx",
-  url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.9.9-1~jessie_amd64.deb",
-  sha256 = "9bc0a0c61215038bbac45c2f7252c0779ed55e1744ba9414a14038ab5797b7a5",
+  url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.9.11-1~jessie_amd64.deb",
+  sha256 = "4964df281546e06a646dc51a03205875f37c991fdcddc9522bc8f3f24d36c98f",
 )
 http_file(
   name = "deb_nodejs",
