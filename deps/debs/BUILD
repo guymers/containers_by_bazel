@@ -525,6 +525,21 @@ filegroup(
 )
 
 filegroup(
+  name = "ssh",
+  srcs = [
+    "@deb_libbsd0//file",
+    "@deb_libedit2//file",
+    "@deb_libgssapi_krb5_2//file",
+    "@deb_libk5crypto3//file",
+    "@deb_libkeyutils1//file",
+    "@deb_libkrb5_3//file",
+    "@deb_libkrb5support0//file",
+    "@deb_libssl1_0_0//file",
+    "@deb_openssh_client//file",
+  ],
+)
+
+filegroup(
   name = "zip",
   srcs = [
     "@deb_zip//file",

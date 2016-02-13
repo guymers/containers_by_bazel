@@ -1273,6 +1273,11 @@ http_file(
   sha256 = "92b0a442e6774d8b7d226020eb647b92490bcf45836ba5dfef1fe454e0188564",
 )
 http_file(
+  name = "deb_openssh_client",
+  url = "http://httpredir.debian.org/debian/pool/main/o/openssh/openssh-client_6.7p1-5+deb8u1_amd64.deb",
+  sha256 = "adc6511142be4b6fdd32ae958b596af055fb658ed2974e550446722a425808e0",
+)
+http_file(
   name = "deb_openssl",
   url = "http://httpredir.debian.org/debian/pool/main/o/openssl/openssl_1.0.1k-3+deb8u2_amd64.deb",
   sha256 = "66588530fb24beeb96508bfb950e4b9893d433174dcd9e55c88b7233c1eb0893",

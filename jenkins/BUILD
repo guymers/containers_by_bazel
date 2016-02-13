@@ -20,7 +20,7 @@ docker_build(
 docker_build(
   name = "jenkins",
   base = ":jenkins_2",
-  debs = ["//deps/debs:git"] + ["//deps/debs:zip"],
+  debs = ["//deps/debs:git"] + ["//deps/debs:ssh"] + ["//deps/debs:zip"],
   env = {
     "JENKINS_HOME": "/jenkins",
     "JENKINS_SLAVE_AGENT_PORT": "50000",

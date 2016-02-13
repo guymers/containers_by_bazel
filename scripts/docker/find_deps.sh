@@ -21,6 +21,7 @@ VERSION_PREFIXES["libxfixes3"]="1:"
 VERSION_PREFIXES["libxrender1"]="1:"
 VERSION_PREFIXES["libxt6"]="1:"
 VERSION_PREFIXES["libxxf86vm1"]="1:"
+VERSION_PREFIXES["openssh-client"]="1:"
 VERSION_PREFIXES["x11-common"]="1:"
 
 VERSION_PREFIXES["libgmp10"]="2:"
