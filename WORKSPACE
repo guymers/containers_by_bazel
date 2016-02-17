@@ -1,8 +1,8 @@
-# 2016-01-25 debootstraps
+# 2016-02-16 debootstraps (CVE-2015-7547, glibc)
 http_file(
   name = "docker_debian_jessie",
-  url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9/jessie/rootfs.tar.xz",
-  sha256 = "cf108f28911b722a1355c2713ca61b2185c436ad197a949043352ee404ff3b3d",
+  url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/7d44cfcf679a8cd9803482305c22c7e1af3fee15/jessie/rootfs.tar.xz",
+  sha256 = "f545f9e00d2c6803e2846fc2e346ec90f64db93d86baf357a917f308d9bc277d",
 )
 
 http_file(
@@ -454,8 +454,8 @@ http_file(
 )
 http_file(
   name = "deb_libgraphite2_3",
-  url = "http://httpredir.debian.org/debian/pool/main/g/graphite2/libgraphite2-3_1.2.4-3_amd64.deb",
-  sha256 = "88cb1916cb5eaca0ca9659c413955c6953dcc3d5eb9fc698e45113541fe58621",
+  url = "http://security.debian.org/pool/updates/main/g/graphite2/libgraphite2-3_1.3.5-1~deb8u1_amd64.deb",
+  sha256 = "ea1bcb58603da6be1b98e37ae4221ef173fba9fc0d7db3dc2c9478ef8b42e3fe",
 )
 http_file(
   name = "deb_libgsm1",
@@ -1224,8 +1224,8 @@ http_file(
 )
 http_file(
   name = "deb_locales",
-  url = "http://httpredir.debian.org/debian/pool/main/g/glibc/locales_2.19-18+deb8u2_all.deb",
-  sha256 = "e7694d8bfafffbf78b3ebb79f9e3218d699f0e13b761e1f4c7848705eebc9fe2",
+  url = "http://security.debian.org/pool/updates/main/g/glibc/locales_2.19-18+deb8u3_all.deb",
+  sha256 = "5b946def9a80ca9af4baa073e41068181dcec977dc9dbd2a6ed53ab2f8a2a0b9",
 )
 http_file(
   name = "deb_mime_support",
