@@ -42,7 +42,7 @@ if [ "$1" = 'postgres' ]; then
     echo
   fi
 
-  gosu postgres "$@"
+  exec gosu postgres "$@"
 else
   exec "$@"
 fi

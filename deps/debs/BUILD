@@ -206,6 +206,8 @@ filegroup(
 filegroup(
   name = "nginx",
   srcs = [
+    "@deb_gettext_base//file",
+    "@deb_libasprintf0c2//file",
     "@deb_libssl1_0_0//file",
     "@deb_nginx//file",
   ],

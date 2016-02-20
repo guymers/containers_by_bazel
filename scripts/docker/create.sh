@@ -6,6 +6,7 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOCKER_NO_CACHE=${DOCKER_NO_CACHE:-false}
 [ "$DOCKER_NO_CACHE" = "true" ] && NO_CACHE="--no-cache" || NO_CACHE=""
 
+bazel build //base:debian_jessie
 base_image=$(bazel run //base:debian_jessie | grep "^Tagging" | awk '{print $4}')
 docker tag -f "$base_image" bazel-container/base:latest
 

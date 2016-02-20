@@ -68,6 +68,11 @@ http_file(
   sha256 = "002c9fa9445cfec4964637f22c73265d8a868f0810104452a6c906af52e43dab",
 )
 http_file(
+  name = "deb_gettext_base",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gettext/gettext-base_0.19.3-2_amd64.deb",
+  sha256 = "01e776306ec6e08d9428a24da7dbedee4be978969ddbb6f3107b5252ad35caf1",
+)
+http_file(
   name = "deb_git",
   url = "http://httpredir.debian.org/debian/pool/main/g/git/git_2.1.4-2.1+deb8u1_amd64.deb",
   sha256 = "f6b773373f63615aeb1ba6104db07c99e961f6b27093d8964de8c94c42cee976",
@@ -111,6 +116,11 @@ http_file(
   name = "deb_libasound2_data",
   url = "http://httpredir.debian.org/debian/pool/main/a/alsa-lib/libasound2-data_1.0.28-1_all.deb",
   sha256 = "3eb437f80b8042d4670367b14a017f7c530d7077aec6e0cc6368610e986d0ce8",
+)
+http_file(
+  name = "deb_libasprintf0c2",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gettext/libasprintf0c2_0.19.3-2_amd64.deb",
+  sha256 = "c497f1a092ab90b5df73a1d031afc792f02531bd47f55c6de0e38cf9ebb9181c",
 )
 http_file(
   name = "deb_libasyncns0",

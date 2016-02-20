@@ -35,8 +35,12 @@ Or just build everything at once:
 ### To update dependencies
 Create the docker containers to pull dependency versions from:
 
-    ./scripts/docker/create.sh
+    DOCKER_NO_CACHE=true ./scripts/docker/create.sh
 
 Update dependencies in files:
 
     ./scripts/update_dependencies.sh
+
+Find packages that have been upgraded:
+
+    ./scripts/debian/find_upgrades.sh
