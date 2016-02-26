@@ -37,10 +37,12 @@ done
 
 echo "- Updating ssl macro"
 macros_dir="$ROOT/macros"
-cp "$OUT_DIR/scripts/ssl/ssl.bzl" "$macros_dir/ssl.bzl"
+"$DIR/ssl/ssl_macro.sh" > "$macros_dir/ssl.bzl"
+#cp "$OUT_DIR/scripts/ssl/ssl.bzl" "$macros_dir/ssl.bzl"
 cp "$OUT_DIR/scripts/ssl/ca-certificates.crt" "$macros_dir/ssl/ca-certificates.crt"
 
 
 echo "- Creating java cacerts file"
+# ./scripts/java/generate_java_cacerts.sh > java/cacerts
 cp "$OUT_DIR/scripts/java/cacerts" "$ROOT/java/cacerts"
 chmod 644 "$ROOT/java/cacerts"

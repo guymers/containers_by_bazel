@@ -9,7 +9,7 @@ RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 573BFD6B3D8FBC64107
 RUN echo "deb http://nginx.org/packages/mainline/debian/ jessie nginx" > /etc/apt/sources.list.d/nginx.list
 
 RUN wget -qO - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
-RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main" 9.4 > /etc/apt/sources.list.d/pgdg.list
+RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main" 9.5 > /etc/apt/sources.list.d/pgdg.list
 
 RUN apt-get update
 

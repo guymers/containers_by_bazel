@@ -22,7 +22,7 @@ echo "Built $(echo "$run_result" | awk '{print $4}')"
 
 # if there is no version provided then generate one from the container id
 if [ -z "$version" ]; then
-  version="${local_image_id:0:10}"
+  version="${local_image_id:0:12}"
 fi
 
 remote_image_version="$remote_image:$version"

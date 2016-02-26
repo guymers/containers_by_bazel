@@ -18,6 +18,6 @@ find /ivy2 -exec touch -t 200001010000 {} \;
 EOF
 
 cmd="sbt exit && sh /output/deterministic.sh && cd /ivy2 && find cache -print0 | LC_ALL=C sort -z | tar --no-recursion --null -T - -cf /output/$out_file && chown $(id -u):$(id -g) /output/$out_file"
-docker run --rm -v "$(pwd)/$out_dir":/output $docker_image bash -c "$cmd" > /dev/null
+docker run --rm -v "$(pwd)/$out_dir":/output $docker_image bash -c "$cmd"
 
 rm -f "$out_dir/deterministic.sh"

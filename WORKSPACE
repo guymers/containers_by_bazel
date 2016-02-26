@@ -7,16 +7,16 @@ http_file(
 
 http_file(
   name = "gosu",
-  url = "https://github.com/tianon/gosu/releases/download/1.2/gosu-amd64",
+  url = "https://github.com/tianon/gosu/releases/download/1.7/gosu-amd64",
   executable = 1,
-  sha256 = "b72f033f33606ca7ef061510c42c9b922ffd5ee31796bd965185207be3aa01d7",
+  sha256 = "34049cfc713e8b74b90d6de49690fa601dc040021980812b2f1f691534be8a50",
 )
 
 
 http_file(
   name = "sbt_bundle",
-  url = "https://dl.bintray.com/sbt/native-packages/sbt/0.13.9/sbt-0.13.9.tgz",
-  sha256 = "148f2801f2993773de6f8859fe0e6520fcabe649d66bb316e13aff8b2fd7f504",
+  url = "https://dl.bintray.com/sbt/native-packages/sbt/0.13.11/sbt-0.13.11.tgz",
+  sha256 = "a36a6fbf6dd70afd93fb8db16c40e8ac00798fdddfa0b4c678786dc15617afa6",
 )
 
 
@@ -30,8 +30,8 @@ http_file(
 ###### JENKINS
 http_file(
   name = "jenkins_war",
-  url = "http://mirrors.jenkins-ci.org/war-stable/1.642.1/jenkins.war",
-  sha256 = "ce036e227fe1fed15e3da9be8d29e859bdcda7118895fd269d1c9ac35925de66",
+  url = "http://mirrors.jenkins-ci.org/war-stable/1.642.2/jenkins.war",
+  sha256 = "024b04524f230dea62424de95f372d8c89ed942b21dbef68117b259842b96907",
 )
 http_file(
   name = "jenkins_agent_jar",
@@ -924,8 +924,8 @@ http_file(
 )
 http_file(
   name = "deb_libssh2_1",
-  url = "http://httpredir.debian.org/debian/pool/main/libs/libssh2/libssh2-1_1.4.3-4.1_amd64.deb",
-  sha256 = "dbf8c089c78fdb9794761116a390c9df9cc1a6c31d797bd0d9a595398503603e",
+  url = "http://security.debian.org/pool/updates/main/libs/libssh2/libssh2-1_1.4.3-4.1+deb8u1_amd64.deb",
+  sha256 = "f86ee1ec688ede70acb23d9f7ad6c4bed25a631efe568b483f3cabee391b60f0",
 )
 http_file(
   name = "deb_libssl1_0_0",
@@ -1139,8 +1139,8 @@ http_file(
 )
 http_file(
   name = "deb_libxerces_c3_1",
-  url = "http://httpredir.debian.org/debian/pool/main/x/xerces-c/libxerces-c3.1_3.1.1-5.1_amd64.deb",
-  sha256 = "d4df49008bcbd49e994014ee184d6f8b3ab1274f403ed9d5831b742ea84834a6",
+  url = "http://security.debian.org/pool/updates/main/x/xerces-c/libxerces-c3.1_3.1.1-5.1+deb8u1_amd64.deb",
+  sha256 = "d6e1e089e75eb27ac8b4deb26ed9a6c47298d6be3314362ec63084384f8ee1fa",
 )
 http_file(
   name = "deb_libxext6",
@@ -1249,13 +1249,13 @@ http_file(
 )
 http_file(
   name = "deb_nginx",
-  url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.9.11-1~jessie_amd64.deb",
-  sha256 = "4964df281546e06a646dc51a03205875f37c991fdcddc9522bc8f3f24d36c98f",
+  url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.9.12-1~jessie_amd64.deb",
+  sha256 = "5a02b0ff275ad0d0f3c4cfd99d21825be8af62a3098bf4b88b82c42cb394d9b5",
 )
 http_file(
   name = "deb_nodejs",
-  url = "https://deb.nodesource.com/node_5.x/pool/main/n/nodejs/nodejs_5.6.0-1nodesource1~jessie1_amd64.deb",
-  sha256 = "3129132be46efae6334968c42d3d44ce1bf080c957cefc081899dd8049ed4ff8",
+  url = "https://deb.nodesource.com/node_5.x/pool/main/n/nodejs/nodejs_5.7.0-1nodesource1~jessie1_amd64.deb",
+  sha256 = "f54e6569d915aa6abe0a4434bea0dd9d9df60fd0120a0c6e50898a3c5d5e9aa4",
 )
 http_file(
   name = "deb_odbcinst",
