@@ -24,7 +24,7 @@ EOF
 while read link cert; do
   [[ "$cert" == /* ]] || cert="$certs_dir/$cert"
   echo "      \"$certs_dir/$link\": \"$cert\","
-done < <(docker run --rm "$container" ls -l "$certs_dir" | grep ' -> ' | awk '{print $9, $11}' | sort)
+done < <(docker run --rm "$container" ls -l "$certs_dir" | grep ' -> ' | awk '{print $9, $11}' | LC_ALL=C sort)
 echo "    },"
 echo "    visibility = visibility,"
 echo "  )"
