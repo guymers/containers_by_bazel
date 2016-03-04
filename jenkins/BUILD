@@ -13,6 +13,7 @@ docker_build(
 docker_build(
   name = "jenkins_2",
   base = ":jenkins_1",
+  mode = "0644",
   directory = "/usr/share/jenkins/ref/init.groovy.d",
   files = glob(["init.groovy.d/*"]),
 )
