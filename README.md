@@ -46,6 +46,7 @@ Then you'll need to pretty much copy ```scripts/update_dependencies.sh```
 You can use the ./build_container script. It ensures that you cannot override the same tag with a different image.
 
     source ./scripts/versions.sh
+    ./scripts/build_container.sh //grafana grafana ${GRAFANA_VERSION}
     ./scripts/build_container.sh //java:jdk jdk ${JAVA_VERSION}
     ./scripts/build_container.sh //java:jre jre ${JAVA_VERSION}
     ./scripts/build_container.sh //jenkins jenkins ${JENKINS_VERSION}
@@ -53,6 +54,7 @@ You can use the ./build_container script. It ensures that you cannot override th
     ./scripts/build_container.sh //proxy/nexus nexus ${NEXUS_VERSION}
     ./scripts/build_container.sh //nginx nginx ${NGINX_VERSION}
     ./scripts/build_container.sh //nodejs nodejs ${NODEJS_VERSION}
+    ./scripts/build_container.sh //prometheus prometheus ${PROMETHEUS_VERSION}
     ./scripts/build_container.sh //proxy/polipo polipo ${POLIPO_VERSION}
     ./scripts/build_container.sh //postgresql postgresql ${POSTGRESQL_VERSION}
     ./scripts/build_container.sh //postgresql:postgis postgis ${POSTGRESQL_VERSION}-${POSTGIS_VERSION}
@@ -61,6 +63,7 @@ You can use the ./build_container script. It ensures that you cannot override th
 Or just build everything at once:
 
     bazel build \
+      //grafana \
       //java:jdk \
       //java:jre \
       //jenkins \
@@ -68,6 +71,7 @@ Or just build everything at once:
       //proxy/nexus \
       //nginx \
       //nodejs \
+      //prometheus \
       //proxy/polipo \
       //postgresql \
       //postgresql:postgis \

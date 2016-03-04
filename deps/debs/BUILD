@@ -33,6 +33,19 @@ filegroup(
 )
 
 filegroup(
+  name = "grafana",
+  srcs = [
+    "@deb_fontconfig_config//file",
+    "@deb_fonts_dejavu_core//file",
+    "@deb_libexpat1//file",
+    "@deb_libfontconfig1//file",
+    "@deb_libfreetype6//file",
+    "@deb_libpng12_0//file",
+    "@deb_ucf//file",
+  ],
+)
+
+filegroup(
   name = "jdk",
   srcs = [
     "@deb_ca_certificates//file",

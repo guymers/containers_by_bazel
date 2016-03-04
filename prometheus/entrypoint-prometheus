@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+adduser --system --uid=921 --home "$PROMETHEUS_HOME" prometheus
+if [ -d "$PROMETHEUS_HOME" -a "$(stat -c '%U' "$PROMETHEUS_HOME" 2>/dev/null)" = "root" ]; then
+  chown prometheus "$PROMETHEUS_HOME"
+  chmod o-rwx "$PROMETHEUS_HOME"
+fi
+
+if [ "$1" = 'prometheus' ]; then
+  exec gosu prometheus
+else
+  exec "$@"
+fi

@@ -12,6 +12,25 @@ http_file(
   sha256 = "34049cfc713e8b74b90d6de49690fa601dc040021980812b2f1f691534be8a50",
 )
 
+http_file(
+  name = "grafana",
+  url = "https://grafanarel.s3.amazonaws.com/builds/grafana_2.6.0_amd64.deb",
+  sha256 = "6aa97489ff8daab738f0c23cd45b56522056ba5c3197a7363473377322fe7fad",
+)
+
+
+http_file(
+  name = "prometheus_bundle",
+  url = "https://github.com/prometheus/prometheus/releases/download/0.16.2/prometheus-0.16.2.linux-amd64.tar.gz",
+  sha256 = "1af683c9d5f5cb23685e000149902f5cefa11f421967f2457dde86cdf9e5a060",
+)
+
+maven_jar(
+  name = "jmx_prometheus_javaagent",
+  artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:0.6",
+  sha1 = "19e9c04f88c8af71054d91045bb9c720adc8ac58",
+)
+
 
 http_file(
   name = "sbt_bundle",
