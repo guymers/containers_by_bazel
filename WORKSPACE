@@ -948,8 +948,8 @@ http_file(
 )
 http_file(
   name = "deb_libssl1_0_0",
-  url = "http://httpredir.debian.org/debian/pool/main/o/openssl/libssl1.0.0_1.0.1k-3+deb8u2_amd64.deb",
-  sha256 = "aa41d2c95db285013aa3898c15a1045d86f9f08b61918bfe007e36859f07a1e1",
+  url = "http://security.debian.org/pool/updates/main/o/openssl/libssl1.0.0_1.0.1k-3+deb8u4_amd64.deb",
+  sha256 = "9e5c80b203b67857d6e9e96f86e34fe25d3ab2437113d9255df18b8b86c08149",
 )
 http_file(
   name = "deb_libswscale3",
@@ -1273,8 +1273,8 @@ http_file(
 )
 http_file(
   name = "deb_nodejs",
-  url = "https://deb.nodesource.com/node_5.x/pool/main/n/nodejs/nodejs_5.7.0-1nodesource1~jessie1_amd64.deb",
-  sha256 = "f54e6569d915aa6abe0a4434bea0dd9d9df60fd0120a0c6e50898a3c5d5e9aa4",
+  url = "https://deb.nodesource.com/node_5.x/pool/main/n/nodejs/nodejs_5.7.1-1nodesource1~jessie1_amd64.deb",
+  sha256 = "2c10ae91912723e8e77b6fc6be9f6d6ff44a3ebcbb11562aebe2fb2862ce5e8f",
 )
 http_file(
   name = "deb_odbcinst",
@@ -1308,18 +1308,23 @@ http_file(
 )
 http_file(
   name = "deb_openssl",
-  url = "http://httpredir.debian.org/debian/pool/main/o/openssl/openssl_1.0.1k-3+deb8u2_amd64.deb",
-  sha256 = "66588530fb24beeb96508bfb950e4b9893d433174dcd9e55c88b7233c1eb0893",
+  url = "http://security.debian.org/pool/updates/main/o/openssl/openssl_1.0.1k-3+deb8u4_amd64.deb",
+  sha256 = "6f1717d337487e2f4de6b0372cfb4b0d13e84b0a4d2e609599845b0730cadcba",
 )
 http_file(
   name = "deb_perl",
-  url = "http://httpredir.debian.org/debian/pool/main/p/perl/perl_5.20.2-3+deb8u3_amd64.deb",
-  sha256 = "51a8d51f2cc522004d3fe472f6e4acac94c69d83586511353e0413b680f460ef",
+  url = "http://security.debian.org/pool/updates/main/p/perl/perl_5.20.2-3+deb8u4_amd64.deb",
+  sha256 = "de5d656743c04347415bd90d645f6e4e09e78bcfe1b87775beee4884bdd094dc",
+)
+http_file(
+  name = "deb_perl_base",
+  url = "http://security.debian.org/pool/updates/main/p/perl/perl-base_5.20.2-3+deb8u4_amd64.deb",
+  sha256 = "6187ac448ad214b46465680f3da93a1a81030524a631ef14952a3bd9d8d66d45",
 )
 http_file(
   name = "deb_perl_modules",
-  url = "http://httpredir.debian.org/debian/pool/main/p/perl/perl-modules_5.20.2-3+deb8u3_all.deb",
-  sha256 = "1f77660effa0f26f2f8b1f452964a690a9432b0717383601898ca25bf7b893d1",
+  url = "http://security.debian.org/pool/updates/main/p/perl/perl-modules_5.20.2-3+deb8u4_all.deb",
+  sha256 = "c2209a937943f1118cecaa61451e37615ce5cd61d345ebb6a94067490892cc27",
 )
 http_file(
   name = "deb_pgdg_keyring",
