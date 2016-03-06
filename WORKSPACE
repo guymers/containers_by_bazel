@@ -21,8 +21,8 @@ http_file(
 
 http_file(
   name = "prometheus_bundle",
-  url = "https://github.com/prometheus/prometheus/releases/download/0.16.2/prometheus-0.16.2.linux-amd64.tar.gz",
-  sha256 = "1af683c9d5f5cb23685e000149902f5cefa11f421967f2457dde86cdf9e5a060",
+  url = "https://github.com/prometheus/prometheus/releases/download/0.17.0/prometheus-0.17.0.linux-amd64.tar.gz",
+  sha256 = "0a0e301a2f166a52a4e870f1f83e7a6bee3783d7ce35c7ba34f1d2f20a78cbd8",
 )
 
 maven_jar(

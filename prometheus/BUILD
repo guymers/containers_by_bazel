@@ -16,7 +16,7 @@ docker_build(
   tars = [":prometheus_bundle_tar"],
 
   directory = "/opt",
-  symlinks = { "/opt/prometheus": "/opt/prometheus-0.16.2.linux-amd64" },
+  symlinks = { "/opt/prometheus": "/opt/prometheus-0.17.0.linux-amd64" },
 )
 
 docker_build(
