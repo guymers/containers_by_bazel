@@ -93,4 +93,4 @@ Find packages that have been upgraded:
 Create sbt ivy cache
 
     bazel build //sbt/ivy_cache
-    cp bazel-genfiles/sbt/ivy_cache/ivy_cache.tar sbt/ivy_cache
+    // bazel-genfiles/sbt/ivy_cache/ivy_cache.tar

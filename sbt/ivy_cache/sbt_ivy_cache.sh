@@ -12,6 +12,7 @@ out_file=$(basename "$out")
 
 # make the tar deterministic https://lists.gnu.org/archive/html/help-tar/2015-05/msg00005.html
 cat << EOF > "$out_dir/deterministic.sh"
+find /ivy2 -exec chmod 777 {} \; # support running as non-root
 find /ivy2 -name "ivydata-*.properties" -type f -exec sed -i '2s/.*/#Sun Jan 31 00:00:00 UTC 2016/' {} \;
 find /ivy2 -exec touch -t 200001010000 {} \;
 EOF

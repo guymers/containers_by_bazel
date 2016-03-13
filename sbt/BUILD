@@ -22,7 +22,8 @@ docker_build(
   name = "sbt_with_ivy_cache",
   base = ":sbt_base",
   directory = "/ivy2",
-  tars = ["//sbt/ivy_cache"],
+  #tars = ["//sbt/ivy_cache"],
+  tars = ["@sbt_ivy_cache//file"],
 )
 
 # support running as non-root

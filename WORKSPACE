@@ -40,6 +40,11 @@ new_http_archive(
   sha256 = "a36a6fbf6dd70afd93fb8db16c40e8ac00798fdddfa0b4c678786dc15617afa6",
   build_file_content = "exports_files(['sbt'])",
 )
+http_file(
+  name = "sbt_ivy_cache",
+  url = "https://raw.githubusercontent.com/guymers/sbt-ivy-cache/master/sbt-0.13.11-ivy-cache.tar",
+  sha256 = "e9e1596d5c141f2b946442260e7bb412405e6af70316ee8f8e0fe87635cb5996",
+)
 
 
 new_http_archive(
