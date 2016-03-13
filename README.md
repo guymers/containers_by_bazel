@@ -89,3 +89,8 @@ Update dependencies in files:
 Find packages that have been upgraded:
 
     ./scripts/debian/find_upgrades.sh
+
+Create sbt ivy cache
+
+    bazel build //sbt/ivy_cache
+    cp bazel-genfiles/sbt/ivy_cache/ivy_cache.tar sbt/ivy_cache

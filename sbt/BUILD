@@ -1,34 +1,28 @@
 load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 
 docker_build(
-  name = "sbt_base",
+  name = "sbt_base_raw",
   base = "//java:jdk_ssl",
   directory = "/usr/share",
-  files = ["@sbt//:sbt", "files/sbt"],
+  files = ["@sbt//:sbt"],
+)
+
+docker_build(
+  name = "sbt_base",
+  base = ":sbt_base_raw",
+  directory = "/usr/share",
+  files = ["files/sbt"],
   symlinks = {
     "/usr/bin/sbt": "/usr/share/sbt/bin/sbt_custom",
   },
-  visibility = ["//visibility:public"],
-)
-
-genrule(
-  name = "ivy_cache",
-  srcs = [":sbt_base.tar"],
-  outs = ["ivy_cache.tar"],
-  cmd = "$(location :sbt_ivy_cache) $< $@",
-  tools = [":sbt_ivy_cache"],
-)
-
-sh_binary(
-  name = "sbt_ivy_cache",
-  srcs = ["sbt_ivy_cache.sh"]
+  visibility = ["//sbt:__subpackages__"],
 )
 
 docker_build(
   name = "sbt_with_ivy_cache",
   base = ":sbt_base",
   directory = "/ivy2",
-  tars = [":ivy_cache"],
+  tars = ["//sbt/ivy_cache"],
 )
 
 # support running as non-root
