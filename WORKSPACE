@@ -19,10 +19,12 @@ http_file(
 )
 
 
-http_file(
-  name = "prometheus_bundle",
+new_http_archive(
+  name = "prometheus",
   url = "https://github.com/prometheus/prometheus/releases/download/0.17.0/prometheus-0.17.0.linux-amd64.tar.gz",
   sha256 = "0a0e301a2f166a52a4e870f1f83e7a6bee3783d7ce35c7ba34f1d2f20a78cbd8",
+  strip_prefix = "prometheus-0.17.0.linux-amd64",
+  build_file_content = "exports_files(['prometheus'])",
 )
 
 maven_jar(
@@ -32,17 +34,19 @@ maven_jar(
 )
 
 
-http_file(
-  name = "sbt_bundle",
+new_http_archive(
+  name = "sbt",
   url = "https://dl.bintray.com/sbt/native-packages/sbt/0.13.11/sbt-0.13.11.tgz",
   sha256 = "a36a6fbf6dd70afd93fb8db16c40e8ac00798fdddfa0b4c678786dc15617afa6",
+  build_file_content = "exports_files(['sbt'])",
 )
 
 
-http_file(
-  name = "nexus_bundle",
+new_http_archive(
+  name = "nexus",
   url = "https://download.sonatype.com/nexus/oss/nexus-2.12.0-01-bundle.tar.gz",
   sha256 = "bf3c02ef9cdea0e854e0feba85d74f79215db04b692aebbaea37e4caf83c7fcc",
+  build_file_content = "exports_files(['nexus-2.12.0-01'])",
 )
 
 

@@ -3,21 +3,14 @@ load("//macros:gosu.bzl", "add_gosu")
 
 add_gosu(name = "nexus_gosu", base = "//java:jre_ssl")
 
-genrule(
-  name = "nexus_bundle_tar",
-  srcs = ["@nexus_bundle//file"],
-  outs = ["nexus_bundle.tar"],
-  cmd = "cat $< | gunzip >$@",
-)
-
 docker_build(
   name = "nexus_bin",
   base = ":nexus_gosu",
-  tars = [":nexus_bundle_tar"],
   env = {
     "NEXUS_HOME": "/opt/nexus",
   },
   directory = "/opt",
+  files = ["@nexus//:nexus-2.12.0-01"],
   symlinks = { "/opt/nexus": "/opt/nexus-2.12.0-01" },
 )
 

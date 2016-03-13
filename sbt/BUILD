@@ -1,18 +1,10 @@
 load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 
-genrule(
-  name = "bin_tar",
-  srcs = ["@sbt_bundle//file"],
-  outs = ["sbt_bin.tar"],
-  cmd = "cat $< | gunzip >$@",
-)
-
 docker_build(
   name = "sbt_base",
   base = "//java:jdk_ssl",
   directory = "/usr/share",
-  tars = [":bin_tar"],
-  files = ["files/sbt"],
+  files = ["@sbt//:sbt", "files/sbt"],
   symlinks = {
     "/usr/bin/sbt": "/usr/share/sbt/bin/sbt_custom",
   },
@@ -29,7 +21,7 @@ genrule(
 
 sh_binary(
   name = "sbt_ivy_cache",
-  srcs = ["sbt_ivy_cache.sh"],
+  srcs = ["sbt_ivy_cache.sh"]
 )
 
 docker_build(

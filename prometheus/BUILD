@@ -3,20 +3,11 @@ load("//macros:gosu.bzl", "add_gosu")
 
 add_gosu(name = "base_gosu", base = "//base:debian_jessie")
 
-genrule(
-  name = "prometheus_bundle_tar",
-  srcs = ["@prometheus_bundle//file"],
-  outs = ["prometheus_bundle.tar"],
-  cmd = "cat $< | gunzip >$@",
-)
-
 docker_build(
   name = "prometheus_bin",
   base = ":base_gosu",
-  tars = [":prometheus_bundle_tar"],
-
   directory = "/opt",
-  symlinks = { "/opt/prometheus": "/opt/prometheus-0.17.0.linux-amd64" },
+  files = ["@prometheus//:prometheus"],
 )
 
 docker_build(
@@ -32,7 +23,7 @@ docker_build(
   workdir = "/prometheus",
   entrypoint = ["/entrypoint-prometheus"],
   cmd = [
-    "/opt/prometheus/prometheus",
+    "/opt/prometheus",
     "-config.file", "/etc/prometheus/prometheus.yml",
     "-storage.local.path", "/prometheus",
   ],
