@@ -1,3 +1,3 @@
-bazel-container/dependencies-ca-certificates 4996343be46d
-bazel-container/dependencies-nodejs 1918ad474709
-bazel-container/dependencies-base e278be8ded47
+bazel-container/dependencies-ca-certificates 9f382c0eeb2e
+bazel-container/dependencies-nodejs cb179d23558d
+bazel-container/dependencies-base a29377155ede

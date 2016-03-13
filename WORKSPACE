@@ -188,28 +188,28 @@ http_file(
 )
 http_file(
   name = "deb_libavcodec56",
-  url = "http://httpredir.debian.org/debian/pool/main/liba/libav/libavcodec56_11.4-1~deb8u1_amd64.deb",
-  sha256 = "d782b465df3f2320586edeb714dbaef289e787308128ed1d144c903465fec76c",
+  url = "http://security.debian.org/pool/updates/main/liba/libav/libavcodec56_11.6-1~deb8u1_amd64.deb",
+  sha256 = "f5c608ca421b374f43fd16abda8fa252cf202e847e9cf8259ae0acdd41727517",
 )
 http_file(
   name = "deb_libavdevice55",
-  url = "http://httpredir.debian.org/debian/pool/main/liba/libav/libavdevice55_11.4-1~deb8u1_amd64.deb",
-  sha256 = "59a0ab782471eeadf09ff8cf5b43538c222b79982ba2a954a6af2edf29255a3e",
+  url = "http://security.debian.org/pool/updates/main/liba/libav/libavdevice55_11.6-1~deb8u1_amd64.deb",
+  sha256 = "f92658de36efa619ce969c5c803b5d36473bf8dbbef7d823dc9f63d2aa52dcfd",
 )
 http_file(
   name = "deb_libavformat56",
-  url = "http://httpredir.debian.org/debian/pool/main/liba/libav/libavformat56_11.4-1~deb8u1_amd64.deb",
-  sha256 = "449281c651bf36190697f8018952bc65a97cf8e050b7719ba521e1f7f8a2c817",
+  url = "http://security.debian.org/pool/updates/main/liba/libav/libavformat56_11.6-1~deb8u1_amd64.deb",
+  sha256 = "3ea4d3c5eba05bba60a56acf8604ca79f0dc437ff7c4674af990cca4c06f0305",
 )
 http_file(
   name = "deb_libavresample2",
-  url = "http://httpredir.debian.org/debian/pool/main/liba/libav/libavresample2_11.4-1~deb8u1_amd64.deb",
-  sha256 = "287ef85655eee4c9ccc6f2a8578276f84f45830f534371eb3c5ee318be79861f",
+  url = "http://security.debian.org/pool/updates/main/liba/libav/libavresample2_11.6-1~deb8u1_amd64.deb",
+  sha256 = "1e5d3b8d7ac6a57ca43679c39afed5fb3d33443e4635342ed15d855df8773dc8",
 )
 http_file(
   name = "deb_libavutil54",
-  url = "http://httpredir.debian.org/debian/pool/main/liba/libav/libavutil54_11.4-1~deb8u1_amd64.deb",
-  sha256 = "d4c1470533ee8861f6a8d12cdd7f89efec34c9427a59e907883ae7a6e319482a",
+  url = "http://security.debian.org/pool/updates/main/liba/libav/libavutil54_11.6-1~deb8u1_amd64.deb",
+  sha256 = "ee12192bcc578ea301a7c3ccef2fa8d0749308305108a0a75df41bce7ffc3482",
 )
 http_file(
   name = "deb_libblas3",
@@ -578,8 +578,8 @@ http_file(
 )
 http_file(
   name = "deb_libjasper1",
-  url = "http://httpredir.debian.org/debian/pool/main/j/jasper/libjasper1_1.900.1-debian1-2.4_amd64.deb",
-  sha256 = "6ab507d5f6d5dc66e590f6804e41ea6c96e0df8d371b9d7ced5bfc14455fcdd0",
+  url = "http://security.debian.org/pool/updates/main/j/jasper/libjasper1_1.900.1-debian1-2.4+deb8u1_amd64.deb",
+  sha256 = "1151d414a1870152d983a99737df962734b5387227298e4dae405aa2902c59c3",
 )
 http_file(
   name = "deb_libjbig0",
@@ -918,8 +918,8 @@ http_file(
 )
 http_file(
   name = "deb_libsmbclient",
-  url = "http://httpredir.debian.org/debian/pool/main/s/samba/libsmbclient_4.1.17+dfsg-2+deb8u1_amd64.deb",
-  sha256 = "99657ca77e7b79deb29b2f397e53c85736491c8e84144309441741b3c6b0c9a5",
+  url = "http://security.debian.org/pool/updates/main/s/samba/libsmbclient_4.1.17+dfsg-2+deb8u2_amd64.deb",
+  sha256 = "d6ba599c7d297a6a6f4a1eab869d81691395e0aed4b372be2beac4c9cc6808d7",
 )
 http_file(
   name = "deb_libsndfile1",
@@ -953,8 +953,8 @@ http_file(
 )
 http_file(
   name = "deb_libswscale3",
-  url = "http://httpredir.debian.org/debian/pool/main/liba/libav/libswscale3_11.4-1~deb8u1_amd64.deb",
-  sha256 = "46c0474b32875988de30a4a97a2b130fe56f3d0159337fe6460a16c2dde03666",
+  url = "http://security.debian.org/pool/updates/main/liba/libav/libswscale3_11.6-1~deb8u1_amd64.deb",
+  sha256 = "5d31a5f8c9cf64e5156a06a6f79fdd0e3f98f1d74ce6b235d0c0fa078f0dd71e",
 )
 http_file(
   name = "deb_libtalloc2",
@@ -1048,8 +1048,8 @@ http_file(
 )
 http_file(
   name = "deb_libwbclient0",
-  url = "http://httpredir.debian.org/debian/pool/main/s/samba/libwbclient0_4.1.17+dfsg-2+deb8u1_amd64.deb",
-  sha256 = "7cc3cd8bf9d7119205e861b8912804936b3c270e3df0af7d7c7eab6943e5379a",
+  url = "http://security.debian.org/pool/updates/main/s/samba/libwbclient0_4.1.17+dfsg-2+deb8u2_amd64.deb",
+  sha256 = "01e4c8cdc5b6a180a1c7aa6a0fa0c438f61bafec18e7dc6eded4c4c42bb1a4c7",
 )
 http_file(
   name = "deb_libwebp5",
@@ -1273,8 +1273,8 @@ http_file(
 )
 http_file(
   name = "deb_nodejs",
-  url = "https://deb.nodesource.com/node_5.x/pool/main/n/nodejs/nodejs_5.7.1-1nodesource1~jessie1_amd64.deb",
-  sha256 = "2c10ae91912723e8e77b6fc6be9f6d6ff44a3ebcbb11562aebe2fb2862ce5e8f",
+  url = "https://deb.nodesource.com/node_5.x/pool/main/n/nodejs/nodejs_5.8.0-1nodesource1~jessie1_amd64.deb",
+  sha256 = "831dec957fb0fe412f99913e2523a90e9e2c5ca227665a490dd25cef47817f34",
 )
 http_file(
   name = "deb_odbcinst",
@@ -1418,8 +1418,8 @@ http_file(
 )
 http_file(
   name = "deb_samba_libs",
-  url = "http://httpredir.debian.org/debian/pool/main/s/samba/samba-libs_4.1.17+dfsg-2+deb8u1_amd64.deb",
-  sha256 = "5629d07a8cc94f75a1914416947161e784c4b4ca19e93336982021bcb138829b",
+  url = "http://security.debian.org/pool/updates/main/s/samba/samba-libs_4.1.17+dfsg-2+deb8u2_amd64.deb",
+  sha256 = "15cff97eb215daffb971bf2f221f8a5ea1eb49612445a40189fab82c20e66153",
 )
 http_file(
   name = "deb_shared_mime_info",
