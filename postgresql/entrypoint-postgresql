@@ -25,6 +25,22 @@ if [ "$1" = 'postgres' ]; then
 
     echo "ALTER USER postgres WITH SUPERUSER PASSWORD '$POSTGRES_PASSWORD';" | gosu postgres postgres --single -j
 
+    # internal start of server in order to allow set-up using psql-client
+    # does not listen on TCP/IP and waits until start finishes
+    gosu postgres pg_ctl -D "$PGDATA" \
+      -o "-c listen_addresses=''" \
+      -w start
+    echo
+    for f in /initdb.d/*; do
+      case "$f" in
+        *.sql)  echo "- running $f"; psql -v ON_ERROR_STOP=1 --username postgres < "$f"; echo ;;
+        *)      echo "- ignoring $f" ;;
+      esac
+      echo
+    done
+    gosu postgres pg_ctl -D "$PGDATA" -m fast -w stop
+
+
     {
       echo;
       echo "host all all     10.0.0.0/8 md5";

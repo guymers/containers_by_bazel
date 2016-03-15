@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+adduser --system --uid=913 --home "$CATALINA_HOME" tomcat
+chown -R tomcat "$CATALINA_HOME"
+
+if [ "$1" = 'tomcat' ]; then
+  #source /java-opts.sh
+
+  exec gosu tomcat "$CATALINA_HOME/bin/catalina.sh" run
+else
+  exec "$@"
+fi

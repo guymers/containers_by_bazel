@@ -24,6 +24,7 @@ VERSION_PREFIXES["libxxf86vm1"]="1:"
 VERSION_PREFIXES["openssh-client"]="1:"
 VERSION_PREFIXES["x11-common"]="1:"
 
+VERSION_PREFIXES["default-jre-headless"]="2:"
 VERSION_PREFIXES["libgmp10"]="2:"
 VERSION_PREFIXES["libice6"]="2:"
 VERSION_PREFIXES["libldb1"]="2:"

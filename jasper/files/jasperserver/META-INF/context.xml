@@ -1,0 +1,12 @@
+<Context path="/jasperserver" reloadable="false">
+  <Resource name="jdbc/jasperserver" auth="Container" type="javax.sql.DataSource"
+            maxActive="100" maxIdle="30" maxWait="10000"
+            username="postgres" password="postgres"
+            driverClassName="org.postgresql.Driver"
+            accessToUnderlyingConnectionAllowed = "true"
+            validationQuery="SELECT 1"
+            testOnBorrow="true"
+            url="jdbc:postgresql://postgres:5432/jasperserver"
+            factory="com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourceFactory"
+  />
+</Context>

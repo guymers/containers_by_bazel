@@ -68,6 +68,42 @@ http_file(
 )
 
 
+###### TOMCAT
+new_http_archive(
+  name = "tomcat",
+  url = "https://www.apache.org/dist/tomcat/tomcat-7/v7.0.68/bin/apache-tomcat-7.0.68.tar.gz",
+  sha256 = "2c1a02422f265607de733521e54f18613e9dd5efc2861914fe45a858227bb8e0",
+  build_file_content = "exports_files(['apache-tomcat-7.0.68'])",
+)
+
+
+###### JASPER
+new_http_archive(
+  name = "jasper_server",
+  url = "http://downloads.sourceforge.net/project/jasperserver/JasperServer/JasperReports%20Server%20Community%20Edition%206.2.0/jasperreports-server-cp-6.2.0-bin.zip",
+  sha256 = "b91f8546a3c20a10bd6277be969f82349f9ce87ac368d0aeeff3458b2a340633",
+  strip_prefix = "jasperreports-server-cp-6.2.0-bin",
+  build_file_content = "exports_files([ \
+    'jasperserver.war', \
+    'apache-ant', \
+    'buildomatic', \
+  ])"
+)
+maven_jar(
+  name = "postgresql_driver",
+  artifact = "org.postgresql:postgresql:9.4.1208",
+  sha1 = "5c7e80698b80a5045fe64daa67426051bbd16a56",
+)
+
+# jasperreports-server-cp-6.2.0-bin
+new_http_archive(
+  name = "jasper_client",
+  url = "http://downloads.sourceforge.net/project/jasperstudio/JaspersoftStudio-6.2.0/TIBCOJaspersoftStudio-6.2.0.final-linux-x86_64.tgz",
+  sha256 = "4d668c1c06d5a149509691836ef4d6eeb26bf00867104593efcf20151fccf97a",
+  build_file_content = "exports_files(['TIBCOJaspersoftStudio-6.2.0.final'])",
+)
+
+
 ###### START DEBIAN DEPENDENCIES
 
 http_file(
@@ -964,6 +1000,16 @@ http_file(
   name = "deb_libswscale3",
   url = "http://security.debian.org/pool/updates/main/liba/libav/libswscale3_11.6-1~deb8u1_amd64.deb",
   sha256 = "5d31a5f8c9cf64e5156a06a6f79fdd0e3f98f1d74ce6b235d0c0fa078f0dd71e",
+)
+http_file(
+  name = "deb_libswt_gtk_3_java",
+  url = "http://httpredir.debian.org/debian/pool/main/s/swt-gtk/libswt-gtk-3-java_3.8.2-3_amd64.deb",
+  sha256 = "6bfe0c87f9527583b45336f670673da279946128c6ca20a7abe0ddd42ef20f9a",
+)
+http_file(
+  name = "deb_libswt_gtk_3_jni",
+  url = "http://httpredir.debian.org/debian/pool/main/s/swt-gtk/libswt-gtk-3-jni_3.8.2-3_amd64.deb",
+  sha256 = "4af7ac4b267e9ac0890bba9201371ad19e9b544e17319db3224f45cbc048a5eb",
 )
 http_file(
   name = "deb_libtalloc2",
