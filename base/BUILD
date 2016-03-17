@@ -3,7 +3,7 @@ load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 # Extract .xz files
 genrule(
   name = "debian_jessie_tar",
-  srcs = ["@docker_debian_jessie//file"],
+  srcs = ["@debian_jessie//file"],
   outs = ["debian_jessie_extracted.tar"],
   cmd = "cat $< | xzcat >$@",
 )

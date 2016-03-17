@@ -28,7 +28,6 @@ filegroup(
     "@deb_libssh2_1//file",
     "@deb_libtasn1_6//file",
     "@deb_perl//file",
-    "@deb_perl_base//file",
     "@deb_perl_modules//file",
   ],
 )
@@ -307,7 +306,6 @@ filegroup(
     "@deb_libgdbm3//file",
     "@deb_nodejs//file",
     "@deb_perl//file",
-    "@deb_perl_base//file",
     "@deb_perl_modules//file",
     "@deb_rlwrap//file",
   ],

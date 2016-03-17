@@ -1,8 +1,14 @@
-# 2016-02-16 debootstraps (CVE-2015-7547, glibc)
+# 2016-03-01
 http_file(
-  name = "docker_debian_jessie",
-  url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/7d44cfcf679a8cd9803482305c22c7e1af3fee15/jessie/rootfs.tar.xz",
-  sha256 = "f545f9e00d2c6803e2846fc2e346ec90f64db93d86baf357a917f308d9bc277d",
+  name = "debian_jessie",
+  url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/d431f09a3730996c0f759eb446bff454f715a321/jessie/rootfs.tar.xz",
+  sha256 = "9cad68d05a0df76bab8a8d6a6d19242fef470fbe358bfeaf4d525ec6a1a5da5f",
+)
+# 2016-03-15
+http_file(
+  name = "debian_stretch",
+  url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/ac656be13c552d02afcb261e8cdbd1a63e971143/stretch/rootfs.tar.xz",
+  sha256 = "946ad10ede7d719719b21a6f378e27b5c7737baaeb5987501a4d3b153be47a6a",
 )
 
 http_file(
@@ -528,8 +534,8 @@ http_file(
 )
 http_file(
   name = "deb_libgraphite2_3",
-  url = "http://security.debian.org/pool/updates/main/g/graphite2/libgraphite2-3_1.3.5-1~deb8u1_amd64.deb",
-  sha256 = "ea1bcb58603da6be1b98e37ae4221ef173fba9fc0d7db3dc2c9478ef8b42e3fe",
+  url = "http://security.debian.org/pool/updates/main/g/graphite2/libgraphite2-3_1.3.6-1~deb8u1_amd64.deb",
+  sha256 = "7bb13d6dd08e71c4fca35b8316d4a3cdf7b9f96ffbad42c3030a86d6933dc4f9",
 )
 http_file(
   name = "deb_libgsm1",
@@ -1328,8 +1334,8 @@ http_file(
 )
 http_file(
   name = "deb_nodejs",
-  url = "https://deb.nodesource.com/node_5.x/pool/main/n/nodejs/nodejs_5.8.0-1nodesource1~jessie1_amd64.deb",
-  sha256 = "831dec957fb0fe412f99913e2523a90e9e2c5ca227665a490dd25cef47817f34",
+  url = "https://deb.nodesource.com/node_5.x/pool/main/n/nodejs/nodejs_5.9.0-1nodesource1~jessie1_amd64.deb",
+  sha256 = "d04692151c84cce2fdb1cedef5529318019607ebae4e76441231afe21bf98644",
 )
 http_file(
   name = "deb_odbcinst",
@@ -1370,11 +1376,6 @@ http_file(
   name = "deb_perl",
   url = "http://security.debian.org/pool/updates/main/p/perl/perl_5.20.2-3+deb8u4_amd64.deb",
   sha256 = "de5d656743c04347415bd90d645f6e4e09e78bcfe1b87775beee4884bdd094dc",
-)
-http_file(
-  name = "deb_perl_base",
-  url = "http://security.debian.org/pool/updates/main/p/perl/perl-base_5.20.2-3+deb8u4_amd64.deb",
-  sha256 = "6187ac448ad214b46465680f3da93a1a81030524a631ef14952a3bd9d8d66d45",
 )
 http_file(
   name = "deb_perl_modules",
