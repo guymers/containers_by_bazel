@@ -2,7 +2,7 @@
 set -e
 set -o pipefail
 
-BAZEL_DIR="$0.runfiles"
+readonly BAZEL_DIR="$0.runfiles"
 [ -d "$BAZEL_DIR" ] && DIR="$BAZEL_DIR" || DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.."
 source "$(find "$DIR" -name "versions.sh")"
 
@@ -16,9 +16,9 @@ dependencies=$(
 dependencies=$(echo "$dependencies" | tr '\r\n' ' ')
 
 # TODO check docker for tag with every name?
-group_name=$(basename "$1")
+readonly group_name=$(basename "$1")
 [ "$group_name" == nodejs ] && c=nodejs || c=base
-container="bazel-container/dependencies-$c"
+readonly container="bazel-container/dependencies-$c"
 
 docker run --rm "$container" /find_deps.sh "$dependencies" | while read name version url sha256; do
   # workspace names may contain only A-Z, a-z, 0-9, '_'

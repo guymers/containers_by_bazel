@@ -2,8 +2,8 @@
 set -e
 set -o pipefail
 
-prefix="$1"
-group_name=$(basename "$2")
+readonly prefix="$1"
+readonly group_name=$(basename "$2")
 
 echo "filegroup("
 echo "  name = \"$group_name\","

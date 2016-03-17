@@ -2,7 +2,7 @@
 set -e
 set -o pipefail
 
-BAZEL_DIR="$0.runfiles"
+readonly BAZEL_DIR="$0.runfiles"
 [ -d "$BAZEL_DIR" ] && DIR="$BAZEL_DIR" || DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.."
 source "$(find "$DIR" -name "bazel_functions.sh")"
 

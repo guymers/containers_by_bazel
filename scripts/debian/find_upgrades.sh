@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 set -o pipefail
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+readonly DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$DIR/../versions.sh"
 
 dependencies=$(
@@ -17,6 +17,6 @@ dependencies=$(
 )
 dependencies=$(echo "$dependencies" | tr '\r\n' ' ')
 
-container="bazel-container/dependencies-base"
-cmd="apt-get install --no-install-recommends --yes $dependencies && apt-get update && apt-get -u upgrade --assume-no"
+readonly container="bazel-container/dependencies-base"
+readonly cmd="apt-get install --no-install-recommends --yes $dependencies && apt-get update && apt-get -u upgrade --assume-no"
 docker run --rm "$container" bash -c "$cmd"

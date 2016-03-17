@@ -6,17 +6,17 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly DEFAULT_REGISTRY="bazel"
 DOCKER_REGISTRY=${DOCKER_REGISTRY:-$DEFAULT_REGISTRY}
 
-bazel_target="$1"
-container_name="$2"
-version="$3"
+readonly bazel_target="$1"
+readonly container_name="$2"
+readonly version="$3"
 
 # separate build and run as we only need to capture the run output
 # and it contains no useful information worth displaying
 bazel build --verbose_failures "$bazel_target"
 
-run_result=$(bazel run "$bazel_target" | grep "^Tagging")
-local_image_id=$(echo "$run_result" | awk '{print $2}')
-remote_image="$DOCKER_REGISTRY/$container_name"
+readonly run_result=$(bazel run "$bazel_target" | grep "^Tagging")
+readonly local_image_id=$(echo "$run_result" | awk '{print $2}')
+readonly remote_image="$DOCKER_REGISTRY/$container_name"
 
 echo "Built $(echo "$run_result" | awk '{print $4}')"
 

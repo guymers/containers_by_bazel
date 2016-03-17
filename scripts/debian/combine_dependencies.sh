@@ -2,12 +2,12 @@
 set -e
 set -o pipefail
 
-BAZEL_DIR="$0.runfiles"
+readonly BAZEL_DIR="$0.runfiles"
 [ -d "$BAZEL_DIR" ] && DIR="$BAZEL_DIR" || DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.."
 source "$(find "$DIR" -name "bazel_functions.sh")"
 
 prefix="$1"
-files=("${@:2}")
+readonly files=("${@:2}")
 
 declare -A dependencies
 
@@ -26,7 +26,7 @@ done
 echo "$dependencies"
 
 ## http://unix.stackexchange.com/a/195749
-sortedDependencies=( $( printf "%s\n" "${!dependencies[@]}" | sort -n ) )
+readonly sortedDependencies=( $( printf "%s\n" "${!dependencies[@]}" | sort -n ) )
 
 for name in "${sortedDependencies[@]}"; do
   bazel_http_file $prefix $name ${dependencies[$name]}

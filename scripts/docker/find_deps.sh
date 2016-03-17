@@ -64,9 +64,9 @@ VERSION_PREFIXES["libpostproc52"]="6:"
 VERSION_PREFIXES["libswscale3"]="6:"
 
 # http://stackoverflow.com/a/26239050
-pkg_dep_info=$(apt-get install --no-install-recommends --print-uris --yes --verbose-versions ${@})
+readonly pkg_dep_info=$(apt-get install --no-install-recommends --print-uris --yes --verbose-versions ${@})
 
-urls=($(echo "$pkg_dep_info" | grep ^\' | cut -d\' -f2))
+readonly urls=($(echo "$pkg_dep_info" | grep ^\' | cut -d\' -f2))
 
 function find_url() {
   local seeking=$1

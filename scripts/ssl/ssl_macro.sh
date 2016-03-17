@@ -2,8 +2,8 @@
 set -e
 set -o pipefail
 
-container="bazel-container/dependencies-ca-certificates"
-certs_dir="/etc/ssl/certs"
+readonly container="bazel-container/dependencies-ca-certificates"
+readonly certs_dir="/etc/ssl/certs"
 
 cat << EOF
 load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
