@@ -17,6 +17,7 @@ def dependencies(name, dependencies, prefix = "deb", target_prefix = ""):
       outs = ["_deb_%s" % f],
       cmd = "$(location " + target_prefix + "//scripts/debian:find_dependencies) $(location " + f + ") > $@",
       tools = [target_prefix + "//scripts/debian:find_dependencies"],
+      local = 1, # ignore sandboxing as script connects to docker
     ) for f in dependencies
   ]
 

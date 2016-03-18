@@ -4,6 +4,7 @@ genrule(
   outs = ["cacerts"],
   cmd = "$(location :generate_java_cacerts) $< $@",
   tools = [":generate_java_cacerts"],
+  local = 1, # ignore sandboxing as script connects to docker
 )
 
 sh_binary(

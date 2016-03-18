@@ -4,6 +4,7 @@ genrule(
   outs = ["ca-certificates.crt"],
   cmd = "$(location :crt_file) > $@",
   tools = [":crt_file"],
+  local = 1, # ignore sandboxing as script connects to docker
 )
 
 genrule(
