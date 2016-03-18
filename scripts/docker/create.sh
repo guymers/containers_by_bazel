@@ -12,6 +12,8 @@ docker tag -f "$base_image" bazel-container/base:latest
 
 docker build $NO_CACHE -t bazel-container/dependencies-base -f "$DIR/base.Dockerfile" "$DIR"
 docker build -t bazel-container/dependencies-ca-certificates -f "$DIR/ca-certificates.Dockerfile" "$DIR"
+docker build -t bazel-container/dependencies-nginx -f "$DIR/nginx.Dockerfile" "$DIR"
 docker build -t bazel-container/dependencies-nodejs -f "$DIR/nodejs.Dockerfile" "$DIR"
+docker build -t bazel-container/dependencies-zulu -f "$DIR/zulu.Dockerfile" "$DIR"
 
 docker images | grep "^bazel-container/dependencies-" | awk '{print $1, $3}' > "$DIR/container-versions.txt"

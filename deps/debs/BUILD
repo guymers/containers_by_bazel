@@ -635,3 +635,30 @@ filegroup(
   ],
 )
 
+filegroup(
+  name = "zulu",
+  srcs = [
+    "@deb_fontconfig_config//file",
+    "@deb_fonts_dejavu_core//file",
+    "@deb_java_common//file",
+    "@deb_libasound2//file",
+    "@deb_libasound2_data//file",
+    "@deb_libexpat1//file",
+    "@deb_libfontconfig1//file",
+    "@deb_libfreetype6//file",
+    "@deb_libpng12_0//file",
+    "@deb_libx11_6//file",
+    "@deb_libx11_data//file",
+    "@deb_libxau6//file",
+    "@deb_libxcb1//file",
+    "@deb_libxdmcp6//file",
+    "@deb_libxext6//file",
+    "@deb_libxi6//file",
+    "@deb_libxrender1//file",
+    "@deb_libxtst6//file",
+    "@deb_ucf//file",
+    "@deb_x11_common//file",
+    "@deb_zulu_8//file",
+  ],
+)
+

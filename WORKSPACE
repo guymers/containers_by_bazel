@@ -1502,4 +1502,9 @@ http_file(
   url = "http://httpredir.debian.org/debian/pool/main/z/zip/zip_3.0-8_amd64.deb",
   sha256 = "d76ceb8244aa5612de5449d966cf75c0d7afcbb0fd377605b26c19274313faac",
 )
+http_file(
+  name = "deb_zulu_8",
+  url = "http://repos.azulsystems.com/debian/pool/main/zulu8.13.0.5-jdk8.0.72-linux_amd64.deb",
+  sha256 = "6fd3ed1323ab8e9e625dbd836e15deccf65af9f5ddf413c02c65b835c5bb7f55",
+)
 ###### END DEBIAN DEPENDENCIES
