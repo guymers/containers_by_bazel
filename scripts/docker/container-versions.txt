@@ -1,5 +1,5 @@
-bazel-container/dependencies-zulu f925ab98ef6e
-bazel-container/dependencies-nodejs 42beec2eb3fe
-bazel-container/dependencies-nginx d4c61f7b5498
-bazel-container/dependencies-ca-certificates a10f0765a32c
-bazel-container/dependencies-base 83400d555ac1
+bazel-container/dependencies-zulu 8acf7c6a4a3d
+bazel-container/dependencies-nodejs 63aebf9959e5
+bazel-container/dependencies-nginx d69b54801593
+bazel-container/dependencies-ca-certificates 23738661f589
+bazel-container/dependencies-base c953e96d9235

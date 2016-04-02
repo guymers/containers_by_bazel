@@ -64,8 +64,8 @@ new_http_archive(
 ###### JENKINS
 http_file(
   name = "jenkins_war",
-  url = "http://mirrors.jenkins-ci.org/war-stable/1.642.2/jenkins.war",
-  sha256 = "024b04524f230dea62424de95f372d8c89ed942b21dbef68117b259842b96907",
+  url = "http://mirrors.jenkins-ci.org/war-stable/1.642.4/jenkins.war",
+  sha256 = "74affea437708c2e1fbcd97cdf73dc1c1c78d7a6e7ea0c521c7084a140859f15",
 )
 http_file(
   name = "jenkins_agent_jar",
@@ -144,13 +144,13 @@ http_file(
 )
 http_file(
   name = "deb_git",
-  url = "http://httpredir.debian.org/debian/pool/main/g/git/git_2.1.4-2.1+deb8u1_amd64.deb",
-  sha256 = "f6b773373f63615aeb1ba6104db07c99e961f6b27093d8964de8c94c42cee976",
+  url = "http://security.debian.org/pool/updates/main/g/git/git_2.1.4-2.1+deb8u2_amd64.deb",
+  sha256 = "84f07ce699af6da4326824b81ddef79fb14556d995e0caa5d4236bf18ff7dfd1",
 )
 http_file(
   name = "deb_git_man",
-  url = "http://httpredir.debian.org/debian/pool/main/g/git/git-man_2.1.4-2.1+deb8u1_all.deb",
-  sha256 = "fa9b0e1360898bfdd2a5b8a9a9108b166181642aefce460c2f344b467c21e78a",
+  url = "http://security.debian.org/pool/updates/main/g/git/git-man_2.1.4-2.1+deb8u2_all.deb",
+  sha256 = "b4fd6bce179acff4c9a7c267720c57e1c9ca6132bfb01be842809849efc1d233",
 )
 http_file(
   name = "deb_init_system_helpers",
@@ -864,8 +864,8 @@ http_file(
 )
 http_file(
   name = "deb_libpq5",
-  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/libpq5_9.5.1-1.pgdg80+1_amd64.deb",
-  sha256 = "4ee4b8a2c9ff626b8b5aa86af19b4a9c45b668fc875cffa83ecb42825a63856b",
+  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/libpq5_9.5.2-1.pgdg80+1_amd64.deb",
+  sha256 = "8784a8d12813f45fa52f704c5ac6bf88c7d65d5989e5af3d2d276876d3603f20",
 )
 http_file(
   name = "deb_libproj0",
@@ -1329,13 +1329,13 @@ http_file(
 )
 http_file(
   name = "deb_nginx",
-  url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.9.12-1~jessie_amd64.deb",
-  sha256 = "5a02b0ff275ad0d0f3c4cfd99d21825be8af62a3098bf4b88b82c42cb394d9b5",
+  url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.9.13-1~jessie_amd64.deb",
+  sha256 = "cf3565515e3c649ec5cbee7ca6640f04791a9ee7e37f170154df2d934fe069ab",
 )
 http_file(
   name = "deb_nodejs",
-  url = "https://deb.nodesource.com/node_5.x/pool/main/n/nodejs/nodejs_5.9.0-1nodesource1~jessie1_amd64.deb",
-  sha256 = "d04692151c84cce2fdb1cedef5529318019607ebae4e76441231afe21bf98644",
+  url = "https://deb.nodesource.com/node_5.x/pool/main/n/nodejs/nodejs_5.10.0-1nodesource1~jessie1_amd64.deb",
+  sha256 = "5bef841aa40fb376f7196966e2a2671b67a68595c06847f882cbb84e3635e03d",
 )
 http_file(
   name = "deb_odbcinst",
@@ -1399,8 +1399,8 @@ http_file(
 )
 http_file(
   name = "deb_postgresql_9_5",
-  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-9.5_9.5.1-1.pgdg80+1_amd64.deb",
-  sha256 = "c6ba032f1b6e2ec66ae118e6752cdcb4b519760ee9a6a8c0d73974fda0ec83c0",
+  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-9.5_9.5.2-1.pgdg80+1_amd64.deb",
+  sha256 = "85b83dfb42f5ec1506d4994f91e38226b89de3fe4ee5eae4d64114e3b2767d76",
 )
 http_file(
   name = "deb_postgresql_9_5_postgis_2_2",
@@ -1414,23 +1414,23 @@ http_file(
 )
 http_file(
   name = "deb_postgresql_client_9_5",
-  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-client-9.5_9.5.1-1.pgdg80+1_amd64.deb",
-  sha256 = "0bbe7cec5388c71b12b2f8d664b8c64c11be25551d2e26b4eeb5e6d36560dc03",
+  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-client-9.5_9.5.2-1.pgdg80+1_amd64.deb",
+  sha256 = "85a9f5b562daa5eef32a44593d107f5f5c55e0f99eb52ac5d7885e3fed4da13d",
 )
 http_file(
   name = "deb_postgresql_client_common",
-  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_172.pgdg80+1_all.deb",
-  sha256 = "4322b6fadb4bffaddc833f12c61e6792a960714604aca96db10aa8bd6a90a68f",
+  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_173.pgdg80+1_all.deb",
+  sha256 = "bb8076ecac42c8ba748dcdf6314f2e48dff5f9a7615dbcdbdecf1b82b4992f6a",
 )
 http_file(
   name = "deb_postgresql_common",
-  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_172.pgdg80+1_all.deb",
-  sha256 = "55a9ed363ad9255c09f7231f792cfb5f92e78fd2bfce5f5fbf644f43b3c73b70",
+  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_173.pgdg80+1_all.deb",
+  sha256 = "7392979880921b9328edb0fc2901ccbaa99efe308631c73ee722d3043f08f965",
 )
 http_file(
   name = "deb_postgresql_contrib_9_5",
-  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-contrib-9.5_9.5.1-1.pgdg80+1_amd64.deb",
-  sha256 = "8f9362528d1ba4dc0e74bf7d552ce453b09d913a9c0a3909552900873edb1fc6",
+  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-contrib-9.5_9.5.2-1.pgdg80+1_amd64.deb",
+  sha256 = "9c0b1f0cb6aa420d0f6109a5f24f15b49f77c3d9b8ec65b6a32cf1b30fb33e01",
 )
 http_file(
   name = "deb_proj_data",
