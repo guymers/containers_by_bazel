@@ -49,6 +49,7 @@ You can use the ./build_container script. It ensures that you cannot override th
     ./scripts/build_container.sh //grafana grafana ${GRAFANA_VERSION}
     ./scripts/build_container.sh //java:jdk jdk ${JAVA_VERSION}
     ./scripts/build_container.sh //java:jre jre ${JAVA_VERSION}
+    ./scripts/build_container.sh //java:zulu zulu ${ZULU_VERSION}
     ./scripts/build_container.sh //jenkins jenkins ${JENKINS_VERSION}
     ./scripts/build_container.sh //jenkins:agent jenkins-agent ${JENKINS_SWARM_VERSION}
     ./scripts/build_container.sh //proxy/nexus nexus ${NEXUS_VERSION}
@@ -66,6 +67,7 @@ Or just build everything at once:
       //grafana \
       //java:jdk \
       //java:jre \
+      //java:zulu \
       //jenkins \
       //jenkins:agent \
       //proxy/nexus \

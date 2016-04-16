@@ -8,7 +8,7 @@ DOCKER_REGISTRY=${DOCKER_REGISTRY:-$DEFAULT_REGISTRY}
 
 readonly bazel_target="$1"
 readonly container_name="$2"
-readonly version="$3"
+version="$3"
 
 # separate build and run as we only need to capture the run output
 # and it contains no useful information worth displaying

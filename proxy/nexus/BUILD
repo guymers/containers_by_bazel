@@ -10,8 +10,8 @@ docker_build(
     "NEXUS_HOME": "/opt/nexus",
   },
   directory = "/opt",
-  files = ["@nexus//:nexus-2.12.0-01"],
-  symlinks = { "/opt/nexus": "/opt/nexus-2.12.0-01" },
+  files = ["@nexus//:nexus-2.12.1-01"],
+  symlinks = { "/opt/nexus": "/opt/nexus-2.12.1-01" },
 )
 
 docker_build(
