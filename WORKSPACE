@@ -55,9 +55,9 @@ http_file(
 
 new_http_archive(
   name = "nexus",
-  url = "https://download.sonatype.com/nexus/oss/nexus-2.12.1-01-bundle.tar.gz",
-  sha256 = "d1a0d7025bc106cf2e1a2a178d997ab81081809ae4c1e9244cfa47c9687506a9",
-  build_file_content = "exports_files(['nexus-2.12.1-01'])",
+  url = "http://download.sonatype.com/nexus/3/nexus-3.0.0-03-unix.tar.gz",
+  sha256 = "0666769effc200a520825cce22d59a5a296d03795f72f57d0a97fbe61836d0ca",
+  build_file_content = "exports_files(['nexus-3.0.0-03'])",
 )
 
 

@@ -1,0 +1,10 @@
+-XX:+UnlockDiagnosticVMOptions
+-XX:+UnsyncloadClass
+-Djava.net.preferIPv4Stack=true
+-Dkaraf.home=/opt/sonatype/nexus
+-Dkaraf.base=/opt/sonatype/nexus
+-Dkaraf.etc=/nexus-data/etc
+-Djava.util.logging.config.file=/nexus-data/etc/java.util.logging.properties
+-Dkaraf.data=/nexus-data
+-Djava.io.tmpdir=/nexus-data/tmp
+-Dkaraf.startLocalConsole=false
