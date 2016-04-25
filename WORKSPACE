@@ -1288,13 +1288,13 @@ http_file(
 )
 http_file(
   name = "deb_nginx",
-  url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.9.13-1~jessie_amd64.deb",
-  sha256 = "cf3565515e3c649ec5cbee7ca6640f04791a9ee7e37f170154df2d934fe069ab",
+  url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.9.15-1~jessie_amd64.deb",
+  sha256 = "5da3083beaf5cba17e46459ed2dbd34d0a6e5ff01e300dcdefcd45a661d1af29",
 )
 http_file(
   name = "deb_nodejs",
-  url = "https://deb.nodesource.com/node_5.x/pool/main/n/nodejs/nodejs_5.10.1-1nodesource1~jessie1_amd64.deb",
-  sha256 = "a4d7f92e396f609ceace7043598fc9558f5f2ed57d2bd6de860123023c48df48",
+  url = "https://deb.nodesource.com/node_5.x/pool/main/n/nodejs/nodejs_5.11.0-1nodesource1~jessie1_amd64.deb",
+  sha256 = "f1bb30d4ff9096effcb171bd5c5af97031d36e6e03347ec01fb52ba6825f6f3a",
 )
 http_file(
   name = "deb_odbcinst",
