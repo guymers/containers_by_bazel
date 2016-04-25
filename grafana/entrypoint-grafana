@@ -2,21 +2,25 @@
 set -e
 set -o pipefail
 
-GRAFANA_WORK=/var/lib/grafana
-adduser --system --uid=922 --home "$GRAFANA_WORK" grafana
-if [ -d "$GRAFANA_WORK" -a "$(stat -c '%U' "$GRAFANA_WORK" 2>/dev/null)" = "root" ]; then
-  chown grafana "$GRAFANA_WORK"
-  chmod o-rwx "$GRAFANA_WORK"
+if [ -d "$GRAFANA_DATA" -a "$(stat -c '%U' "$GRAFANA_DATA" 2>/dev/null)" = "root" ]; then
+  chown grafana "$GRAFANA_DATA"
+  chmod o-rwx "$GRAFANA_DATA"
+fi
+
+if [ -d "$GRAFANA_LOGS" -a "$(stat -c '%U' "$GRAFANA_LOGS" 2>/dev/null)" = "root" ]; then
+  chown grafana "$GRAFANA_LOGS"
+  chmod o-rwx "$GRAFANA_LOGS"
 fi
 
 if [ "$1" = 'grafana' ]; then
-  chown -R grafana /var/log/grafana
+  readonly conf_file="$GRAFANA_CONF/grafana.ini"
 
   exec gosu grafana /usr/sbin/grafana-server \
-    --homepath=/usr/share/grafana \
-    --config=/etc/grafana/grafana.ini \
-    cfg:default.paths.data=/var/lib/grafana \
-    cfg:default.paths.logs=/var/log/grafana
+    --homepath="$GRAFANA_HOME" \
+    --config="$conf_file" \
+    cfg:default.paths.data="$GRAFANA_DATA" \
+    cfg:default.paths.logs="$GRAFANA_LOGS" \
+    cfg:default.paths.plugins="$GRAFANA_DATA/plugins"
 else
   exec "$@"
 fi

@@ -2,25 +2,28 @@
 set -e
 set -o pipefail
 
-adduser --system --uid=911 --home "$NEXUS_DATA" nexus
 if [ -d "$NEXUS_DATA" -a "$(stat -c '%U' "$NEXUS_DATA" 2>/dev/null)" = "root" ]; then
   chown nexus "$NEXUS_DATA"
   chmod o-rwx "$NEXUS_DATA"
 fi
 
 if [ "$1" = 'nexus' ]; then
-  readonly nexus_conf_defaults="$NEXUS_HOME/etc"
+  readonly nexus_data_conf="$NEXUS_DATA/etc"
 
-  if [ ! -d "$NEXUS_CONF" ]; then
-    gosu nexus mkdir -p "$NEXUS_CONF"
-    gosu nexus cp -a --no-clobber "$nexus_conf_defaults/." "$NEXUS_CONF"
-    chmod 644 "$NEXUS_CONF"/*
+  # the -Dapplication-conf nexus setting does nothing so add some config defaults
+  if [ ! -d "$nexus_data_conf" ]; then
+    gosu nexus mkdir -p "$nexus_data_conf"
+    gosu nexus cp -a --no-clobber "$NEXUS_CONF/." "$nexus_data_conf"
   fi
 
   source /java-opts.sh
-  export INSTALL4J_ADD_VM_PARAMS="$JAVA_OPTS"
 
-  exec gosu nexus "$NEXUS_HOME/bin/nexus" run
+  exec gosu nexus java \
+    -Dnexus-work=${NEXUS_DATA} \
+    -Dnexus-webapp-context-path=${NEXUS_CONTEXT_PATH} \
+    -cp 'conf/:lib/*' \
+    ${JAVA_OPTS} \
+    org.sonatype.nexus.bootstrap.Launcher ./conf/jetty.xml ./conf/jetty-requestlog.xml
 else
   exec "$@"
 fi

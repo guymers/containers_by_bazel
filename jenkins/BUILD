@@ -1,11 +1,22 @@
 load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 load("//macros:gosu.bzl", "add_gosu")
+load("//macros/user:user.bzl", "add_user")
 
-add_gosu(name = "jre_gosu", base = "//java:jre_ssl")
+JENKINS_HOME = "/jenkins"
+
+add_gosu(name = "jenkins_gosu", base = "//java:zulu_ssl")
+
+add_user(
+  name = "base",
+  base = ":jenkins_gosu",
+  id = "912",
+  user = "jenkins",
+  home = JENKINS_HOME,
+)
 
 docker_build(
   name = "jenkins_1",
-  base = ":jre_gosu",
+  base = ":base",
   files = ["@jenkins_war//file"],
   directory = "/usr/share/jenkins",
 )
@@ -23,14 +34,14 @@ docker_build(
   base = ":jenkins_2",
   debs = ["//deps/debs:git"] + ["//deps/debs:ssh"] + ["//deps/debs:zip"],
   env = {
-    "JENKINS_HOME": "/jenkins",
+    "JENKINS_HOME": JENKINS_HOME,
     "JENKINS_SLAVE_AGENT_PORT": "50000",
   },
   directory = "/",
   files = ["entrypoint-jenkins"],
-  volumes = ["/jenkins"],
+  volumes = [JENKINS_HOME],
   ports = ["8080", "50000"],
-  workdir = "/jenkins",
+  workdir = JENKINS_HOME,
   entrypoint = ["/entrypoint-jenkins"],
   cmd = ["jenkins"],
   visibility = ["//visibility:public"],
@@ -39,7 +50,7 @@ docker_build(
 
 docker_build(
   name = "jenkins_agent_1",
-  base = ":jre_gosu",
+  base = ":jenkins_gosu",
   files = ["@jenkins_agent_jar//file"],
   directory = "/usr/share/jenkins",
   symlinks = {
@@ -49,14 +60,14 @@ docker_build(
 
 docker_build(
   name = "agent",
-  base = ":jenkins_agent_1",
+  base = ":base",
   env = {
-    "JENKINS_HOME": "/jenkins",
+    "JENKINS_HOME": JENKINS_HOME,
   },
   directory = "/",
   files = ["entrypoint-jenkins-agent"],
-  volumes = ["/jenkins"],
-  workdir = "/jenkins",
+  volumes = [JENKINS_HOME],
+  workdir = JENKINS_HOME,
   entrypoint = ["/entrypoint-jenkins-agent"],
   visibility = ["//visibility:public"],
 )

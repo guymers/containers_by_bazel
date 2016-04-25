@@ -20,16 +20,15 @@ http_file(
 
 http_file(
   name = "grafana",
-  url = "https://grafanarel.s3.amazonaws.com/builds/grafana_2.6.0_amd64.deb",
-  sha256 = "6aa97489ff8daab738f0c23cd45b56522056ba5c3197a7363473377322fe7fad",
+  url = "https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.0-beta51460725904_amd64.deb",
+  sha256 = "fa5c33d393700263457b49c257b0e97bd03b4a3dbdb01cbb1e0b9ae57c9133f3",
 )
-
 
 new_http_archive(
   name = "prometheus",
-  url = "https://github.com/prometheus/prometheus/releases/download/0.17.0/prometheus-0.17.0.linux-amd64.tar.gz",
-  sha256 = "0a0e301a2f166a52a4e870f1f83e7a6bee3783d7ce35c7ba34f1d2f20a78cbd8",
-  strip_prefix = "prometheus-0.17.0.linux-amd64",
+  url = "https://github.com/prometheus/prometheus/releases/download/0.18.0/prometheus-0.18.0.linux-amd64.tar.gz",
+  sha256 = "dfcdf8f77deb3ced5976a27795c80806aad596037347304b790ceae09dfb1bb9",
+  strip_prefix = "prometheus-0.18.0.linux-amd64",
   build_file_content = "exports_files(['prometheus'])",
 )
 
@@ -52,9 +51,14 @@ http_file(
   sha256 = "e9e1596d5c141f2b946442260e7bb412405e6af70316ee8f8e0fe87635cb5996",
 )
 
-
 new_http_archive(
   name = "nexus",
+  url = "https://download.sonatype.com/nexus/oss/nexus-2.13.0-01-bundle.tar.gz",
+  sha256 = "4c4e88a2410e1740e688ea1ab3c6066a6a90f76c479e10e4718c517a27f3a614",
+  build_file_content = "exports_files(['nexus-2.13.0-01'])",
+)
+new_http_archive(
+  name = "nexus3",
   url = "http://download.sonatype.com/nexus/3/nexus-3.0.0-03-unix.tar.gz",
   sha256 = "0666769effc200a520825cce22d59a5a296d03795f72f57d0a97fbe61836d0ca",
   build_file_content = "exports_files(['nexus-3.0.0-03'])",
