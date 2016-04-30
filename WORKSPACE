@@ -20,8 +20,8 @@ http_file(
 
 http_file(
   name = "grafana",
-  url = "https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.0-beta51460725904_amd64.deb",
-  sha256 = "fa5c33d393700263457b49c257b0e97bd03b4a3dbdb01cbb1e0b9ae57c9133f3",
+  url = "https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.0-beta61461918338_amd64.deb",
+  sha256 = "5bff1cc89bef57003709fc7d3440f9168d5d0e032abf25280ec8c4da0074d04f",
 )
 
 new_http_archive(
@@ -708,8 +708,8 @@ http_file(
 )
 http_file(
   name = "deb_libmysqlclient18",
-  url = "http://httpredir.debian.org/debian/pool/main/m/mysql-5.5/libmysqlclient18_5.5.47-0+deb8u1_amd64.deb",
-  sha256 = "5fcef91d976ca6cb31976bd83690bcead2e35a11451accde3b209facbfdcff3c",
+  url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/libmysqlclient18_5.5.49-0+deb8u1_amd64.deb",
+  sha256 = "809b228ce87d6a84e5904a3945cad3a731bdc8c5dba534b65a4a5af0eb790caa",
 )
 http_file(
   name = "deb_libnetcdfc7",
@@ -1283,8 +1283,8 @@ http_file(
 )
 http_file(
   name = "deb_mysql_common",
-  url = "http://httpredir.debian.org/debian/pool/main/m/mysql-5.5/mysql-common_5.5.47-0+deb8u1_all.deb",
-  sha256 = "7041645ff7e20a7b3250afa0ffc8c7ea4e78bb1045820f5945820328eec70474",
+  url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/mysql-common_5.5.49-0+deb8u1_all.deb",
+  sha256 = "458009b3205130104bba0833136c6eca8dbc634b181cec6c37a4b969d6478d3d",
 )
 http_file(
   name = "deb_nginx",
@@ -1293,8 +1293,8 @@ http_file(
 )
 http_file(
   name = "deb_nodejs",
-  url = "https://deb.nodesource.com/node_5.x/pool/main/n/nodejs/nodejs_5.11.0-1nodesource1~jessie1_amd64.deb",
-  sha256 = "f1bb30d4ff9096effcb171bd5c5af97031d36e6e03347ec01fb52ba6825f6f3a",
+  url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.0.0-1nodesource1~jessie1_amd64.deb",
+  sha256 = "67576b0dab2417e3adee2659a5a11df8e962a3965a2f9ab2e1c3bab27c44dc34",
 )
 http_file(
   name = "deb_odbcinst",
