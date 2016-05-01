@@ -1,6 +1,6 @@
 #!/bin/bash
 
-readonly MEMORY_LIMIT_IN_BYTES=$(cat /sys/fs/cgroup/memory/memory.limit_in_bytes)
+readonly MEMORY_LIMIT_IN_BYTES=$(cat /sys/fs/cgroup/memory/memory.limit_in_bytes 2> /dev/null || echo 1073741824)
 readonly MEMORY_LIMIT=$((MEMORY_LIMIT_IN_BYTES / 1024 / 1024))
 # make heap size 90% of total memory
 readonly HEAP_SIZE=$((MEMORY_LIMIT / 100 * 90))
