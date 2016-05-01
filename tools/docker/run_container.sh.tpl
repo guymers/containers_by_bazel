@@ -1,4 +1,4 @@
-#!/bin/bash -eu
+#!/bin/bash
 
 # From bazel/tools/build_defs/docker/incremental_load.sh.tpl
 
@@ -30,6 +30,9 @@ function incr_load() {
 
 
 # Begin custom code
+readonly raw_mem_limit="%{mem_limit}"
+readonly mem_limit="${raw_mem_limit:-128m}"
+
 readonly image=$(cat "${RUNFILES}/%{image_name}")
 readonly test_script="${RUNFILES}/%{test_script}"
 
@@ -50,7 +53,21 @@ readonly cmd="
   ./${test_script_base}
 "
 
-OUTPUT=$("${DOCKER}" run --rm -v "${RUNFILES}:/bazel_docker:ro" $image bash -c "$cmd")
+readonly docker_args="-m ${mem_limit} -v ${RUNFILES}:/bazel_docker:ro"
+
+if [[ %{daemon} = true ]]; then
+  readonly container_id=$("${DOCKER}" run -d $docker_args "$image")
+
+  function cleanup {
+    "${DOCKER}" stop "${container_id}" > /dev/null
+    "${DOCKER}" rm "${container_id}" > /dev/null
+  }
+  trap cleanup EXIT
+
+  OUTPUT=$("${DOCKER}" exec "$container_id" bash -c "$cmd")
+else
+  OUTPUT=$("${DOCKER}" run --rm $docker_args "$image" bash -c "$cmd")
+fi
 
 %{exit_code_compare_command}
 

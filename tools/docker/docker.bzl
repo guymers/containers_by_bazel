@@ -59,14 +59,20 @@ def _docker_test_impl(ctx):
     else:
       diff_command = _DIFF_COMMAND % (ctx.file.golden.short_path, ctx.label.name)
 
+  daemon = "false"
+  if ctx.attr.daemon:
+    daemon = "true"
+
   layers = getattr(ctx.attr.image, "docker_layers", [])
   layer = layers[0]
 
   ctx.template_action(
       template = ctx.file.run_container_template,
       substitutions = {
-        "%{image_name}": _get_runfile_path(ctx, layer["name"]),
-        "%{load_statements}": "\n".join([
+        "%{daemon}" : daemon,
+        "%{mem_limit}" : ctx.attr.mem_limit,
+        "%{image_name}" : _get_runfile_path(ctx, layer["name"]),
+        "%{load_statements}" : "\n".join([
             "incr_load '%s' '%s'" % (_get_runfile_path(ctx, l["name"]),
                                      _get_runfile_path(ctx, l["layer"]))
             # The last layer is the first in the list of layers.
@@ -88,15 +94,17 @@ def _docker_test_impl(ctx):
 
 _docker_test_attrs = {
     "image": attr.label(allow_files=docker_filetype),
+    "daemon": attr.bool(),
+    "mem_limit": attr.string(),
     "test": attr.label(allow_files = True, single_file = True),
     "files": attr.label_list(allow_files = True),
+    "golden": attr.label(allow_files = True, single_file = True),
+    "error": attr.int(),
+    "regex": attr.bool(),
     "run_container_template": attr.label(
         default=Label("//tools/docker:run_container_template"),
         single_file=True,
         allow_files=True),
-    "golden": attr.label(allow_files = True, single_file = True),
-    "error": attr.int(),
-    "regex": attr.bool(),
 }
 
 docker_test = rule(
