@@ -39,7 +39,7 @@ readonly test_script="${RUNFILES}/%{test_script}"
 readonly test_files=(%{test_files})
 readonly full_test_files=("${test_files[@]/#/${RUNFILES}/}")
 
-tar -chf "${RUNFILES}/__runfiles.tar" "${test_script}" "${full_test_files[@]}"
+tar -chf "${RUNFILES}/__runfiles.tar" "${test_script}" "${full_test_files[@]}" > /dev/null
 
 readonly test_script_base=$(basename "${test_script}")
 readonly test_dir=$(dirname "${test_script}")
@@ -56,6 +56,7 @@ readonly cmd="
 readonly docker_args="-m ${mem_limit} -v ${RUNFILES}:/bazel_docker:ro"
 
 if [[ %{daemon} = true ]]; then
+  echo "Running as exec on daemon"
   readonly container_id=$("${DOCKER}" run -d $docker_args "$image")
 
   function cleanup {
@@ -66,6 +67,7 @@ if [[ %{daemon} = true ]]; then
 
   OUTPUT=$("${DOCKER}" exec "$container_id" bash -c "$cmd")
 else
+  echo "Running as command"
   OUTPUT=$("${DOCKER}" run --rm $docker_args "$image" bash -c "$cmd")
 fi
 
