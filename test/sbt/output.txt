@@ -1,0 +1,2 @@
+Book(Benjamin Pierce,Types and Programming Languages,262162091,44.11)
+Benjamin Pierce :: Types and Programming Languages :: 262162091 :: 44.11 :: HNil

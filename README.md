@@ -79,6 +79,10 @@ Or just build everything at once:
       //postgresql:postgis \
       //sbt
 
+To test:
+
+    bazel test //test/...
+
 #### To update dependencies
 Create the docker containers to pull dependency versions from:
 
