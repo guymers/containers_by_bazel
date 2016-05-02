@@ -56,8 +56,27 @@ readonly cmd="
 readonly docker_args="-m ${mem_limit} -v ${RUNFILES}:/bazel_docker:ro"
 
 if [[ %{daemon} = true ]]; then
-  echo "Running as exec on daemon"
-  readonly container_id=$("${DOCKER}" run -d $docker_args "$image")
+  echo "Running exec on daemon"
+
+  # support lxc execution driver so this can run on circleci
+  readonly lxc_driver=$(docker info | grep "^Execution Driver:" | grep lxc)
+
+  if [[ -n "$lxc_driver" ]]; then
+    # https://github.com/docker/docker/issues/6313#issuecomment-45781046
+    readonly ports=($(docker inspect --format='{{range $p, $conf := .Config.ExposedPorts}} {{$p}} {{end}}' "$image"))
+    extra_docker_args=""
+    for port in "${ports[@]}"; do
+      p=$(echo "$port" | sed -r 's#([0-9]+)/tcp#\1#')
+      if [[ -n "$p" ]]; then
+        extra_docker_args="$extra_docker_args -p 127.0.0.1:$p:$p"
+      fi
+    done
+  else
+    extra_docker_args=""
+  fi
+  echo "$extra_docker_args"
+
+  readonly container_id=$("${DOCKER}" run -d $docker_args $extra_docker_args "$image")
 
   function cleanup {
     "${DOCKER}" stop "${container_id}" > /dev/null
@@ -65,7 +84,11 @@ if [[ %{daemon} = true ]]; then
   }
   trap cleanup EXIT
 
-  OUTPUT=$("${DOCKER}" exec "$container_id" bash -c "$cmd")
+  if [[ -n "$lxc_driver" ]]; then
+    OUTPUT=$(sudo lxc-attach -n "$container_id" -- bash -c "$cmd")
+  else
+    OUTPUT=$("${DOCKER}" exec "$container_id" bash -c "$cmd")
+  fi
 else
   echo "Running as command"
   OUTPUT=$("${DOCKER}" run --rm $docker_args "$image" bash -c "$cmd")
