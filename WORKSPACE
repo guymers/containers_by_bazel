@@ -1,13 +1,13 @@
-# 2016-04-04
+# 2016-05-03 debootstraps (openssl CVEs)
 http_file(
   name = "debian_jessie",
-  url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/04fb8b48a6fcf3d1831a3fc684adb648c8b4d876/jessie/rootfs.tar.xz",
-  sha256 = "80437c758aa741644af78ac13fe85d411f5cf59e17d26bc05388893c2d8b06c8",
+  url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/ed37bd96cb42face3ef38cf13dfb91cad59d0629/jessie/rootfs.tar.xz",
+  sha256 = "504f65dc2b65b9c80873ebfbd7299c4464376fccf4bff15fb48b2edbe02b4cf7",
 )
-# 2016-03-15
+# 2016-04-04 debootstraps
 http_file(
   name = "debian_stretch",
-  url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/ac656be13c552d02afcb261e8cdbd1a63e971143/stretch/rootfs.tar.xz",
+  url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/e119819585a29ce6d8ebcf9ac269dea6ada36c9e/stretch/rootfs.tar.xz",
   sha256 = "946ad10ede7d719719b21a6f378e27b5c7737baaeb5987501a4d3b153be47a6a",
 )
 
@@ -20,8 +20,8 @@ http_file(
 
 http_file(
   name = "grafana",
-  url = "https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.0-beta61461918338_amd64.deb",
-  sha256 = "5bff1cc89bef57003709fc7d3440f9168d5d0e032abf25280ec8c4da0074d04f",
+  url = "https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.0-beta71462173753_amd64.deb",
+  sha256 = "1ba56ec25ecfd8c248fb76f3e99b68005669a4a8e7a95459448ecde33a0f2ab0",
 )
 
 new_http_archive(
@@ -813,13 +813,13 @@ http_file(
 )
 http_file(
   name = "deb_libpoppler46",
-  url = "http://httpredir.debian.org/debian/pool/main/p/poppler/libpoppler46_0.26.5-2_amd64.deb",
-  sha256 = "686978fc7004853a43c9442c9eccc489c57eb68705a396b9f3547dd7b9057ce2",
+  url = "http://security.debian.org/pool/updates/main/p/poppler/libpoppler46_0.26.5-2+deb8u1_amd64.deb",
+  sha256 = "86b03c6b8376fecb75a3e0074ad594c3b139d6a6ebe8209366e8c0fe881404e8",
 )
 http_file(
   name = "deb_libpoppler_glib8",
-  url = "http://httpredir.debian.org/debian/pool/main/p/poppler/libpoppler-glib8_0.26.5-2_amd64.deb",
-  sha256 = "cb0856786b10baeeda75d25e6ad4d39e0418b08f8d616fcf2e4ab1c3bb9a40d1",
+  url = "http://security.debian.org/pool/updates/main/p/poppler/libpoppler-glib8_0.26.5-2+deb8u1_amd64.deb",
+  sha256 = "f620f976e9863c8c8d827304c9d17731c1e1e486ffb07ffbee9b594aa07c6196",
 )
 http_file(
   name = "deb_libpopt0",
@@ -963,8 +963,8 @@ http_file(
 )
 http_file(
   name = "deb_libssl1_0_0",
-  url = "http://httpredir.debian.org/debian/pool/main/o/openssl/libssl1.0.0_1.0.1k-3+deb8u4_amd64.deb",
-  sha256 = "9e5c80b203b67857d6e9e96f86e34fe25d3ab2437113d9255df18b8b86c08149",
+  url = "http://security.debian.org/pool/updates/main/o/openssl/libssl1.0.0_1.0.1k-3+deb8u5_amd64.deb",
+  sha256 = "9dc8eace58271482074309886e229551aa5a9a6d3c9747cd7cd3dc290bce812c",
 )
 http_file(
   name = "deb_libswscale3",
@@ -988,8 +988,8 @@ http_file(
 )
 http_file(
   name = "deb_libtasn1_6",
-  url = "http://httpredir.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.2-3+deb8u1_amd64.deb",
-  sha256 = "270a85aec1690bfc278a16c1d400e2a308cbdd3fd301abb764bbf8f1355116bb",
+  url = "http://security.debian.org/pool/updates/main/libt/libtasn1-6/libtasn1-6_4.2-3+deb8u2_amd64.deb",
+  sha256 = "ee4439d502ed1a6a3330011d4b114cc419b40a4cc508550d253b8d491e6a0e5e",
 )
 http_file(
   name = "deb_libtdb1",
@@ -1293,8 +1293,8 @@ http_file(
 )
 http_file(
   name = "deb_nodejs",
-  url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.0.0-1nodesource1~jessie1_amd64.deb",
-  sha256 = "67576b0dab2417e3adee2659a5a11df8e962a3965a2f9ab2e1c3bab27c44dc34",
+  url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.1.0-1nodesource1~jessie1_amd64.deb",
+  sha256 = "99cb6fcbb75408d73b24f57a894f34598fa133031a713f749ebe2844b6316a92",
 )
 http_file(
   name = "deb_odbcinst",
@@ -1328,8 +1328,8 @@ http_file(
 )
 http_file(
   name = "deb_openssl",
-  url = "http://httpredir.debian.org/debian/pool/main/o/openssl/openssl_1.0.1k-3+deb8u4_amd64.deb",
-  sha256 = "6f1717d337487e2f4de6b0372cfb4b0d13e84b0a4d2e609599845b0730cadcba",
+  url = "http://security.debian.org/pool/updates/main/o/openssl/openssl_1.0.1k-3+deb8u5_amd64.deb",
+  sha256 = "10dc378a6d8071542959d5a447a2c533439e00d6c3423eac3093903d67504b3b",
 )
 http_file(
   name = "deb_perl",
@@ -1463,7 +1463,7 @@ http_file(
 )
 http_file(
   name = "deb_zulu_8",
-  url = "http://repos.azulsystems.com/debian/pool/main/zulu8.13.0.5-jdk8.0.72-linux_amd64.deb",
-  sha256 = "6fd3ed1323ab8e9e625dbd836e15deccf65af9f5ddf413c02c65b835c5bb7f55",
+  url = "http://repos.azulsystems.com/debian/pool/main/zulu8.15.0.1-jdk8.0.92-linux_amd64.deb",
+  sha256 = "d691ad43763a9b5a8e5a03d9202254de66aaca89f26619822f3174c26f845446",
 )
 ###### END DEBIAN DEPENDENCIES
