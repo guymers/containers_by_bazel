@@ -605,6 +605,16 @@ filegroup(
 )
 
 filegroup(
+  name = "redis",
+  srcs = [
+    "@deb_init_system_helpers//file",
+    "@deb_libjemalloc1//file",
+    "@deb_redis_server//file",
+    "@deb_redis_tools//file",
+  ],
+)
+
+filegroup(
   name = "ssh",
   srcs = [
     "@deb_libbsd0//file",

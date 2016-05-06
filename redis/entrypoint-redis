@@ -1,0 +1,19 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+if [ -d "$REDIS_HOME" -a "$(stat -c '%U' "$REDIS_HOME" 2>/dev/null)" = "root" ]; then
+  chown redis "$REDIS_HOME"
+  chmod o-rwx "$REDIS_HOME"
+fi
+
+if [ "$1" = 'redis-server' ]; then
+  readonly MEMORY_LIMIT_IN_BYTES=$(cat /sys/fs/cgroup/memory/memory.limit_in_bytes 2> /dev/null || echo 1073741824)
+  readonly MEMORY_LIMIT=$((MEMORY_LIMIT_IN_BYTES / 1024 / 1024))
+  # make maxmemory 80% of total memory
+  readonly MAXMEMORY=$((MEMORY_LIMIT / 100 * 80))
+
+  exec gosu redis "$@" --maxmemory "${MAXMEMORY}M"
+else
+  exec "$@"
+fi

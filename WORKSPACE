@@ -612,6 +612,11 @@ http_file(
   sha256 = "d0b55e2da6648d6b91ced51e8c8ccfbe024283ffbbc1484f704ff7b0c97f8c51",
 )
 http_file(
+  name = "deb_libjemalloc1",
+  url = "http://httpredir.debian.org/debian/pool/main/j/jemalloc/libjemalloc1_3.6.0-3_amd64.deb",
+  sha256 = "caeeb8b60bee0b732de25b6091dae30d58f1cebcf7467900525d5d266d4360ba",
+)
+http_file(
   name = "deb_libjpeg62_turbo",
   url = "http://httpredir.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg62-turbo_1.3.1-12_amd64.deb",
   sha256 = "ac397a0c8d16891dbc0348a9ee30506b8b4cafe138a25b3af9e3cd0b417fab3d",
@@ -1425,6 +1430,16 @@ http_file(
   name = "deb_qtcore4_l10n",
   url = "http://httpredir.debian.org/debian/pool/main/q/qt4-x11/qtcore4-l10n_4.8.6+git64-g5dc8b2b+dfsg-3+deb8u1_all.deb",
   sha256 = "cd01807de060b3ec83e7de24242c6723b1069887a0c5f8cbeddb299db8975c60",
+)
+http_file(
+  name = "deb_redis_server",
+  url = "http://http.debian.net/debian/pool/main/r/redis/redis-server_3.0.6-2~bpo8+1_amd64.deb",
+  sha256 = "1f2678893625753673601f00dba264d0868f56285f8cefe86d868d66f47dd526",
+)
+http_file(
+  name = "deb_redis_tools",
+  url = "http://http.debian.net/debian/pool/main/r/redis/redis-tools_3.0.6-2~bpo8+1_amd64.deb",
+  sha256 = "fee6c9ae5df0572aee0188f73cac283af827f10d5bde6d09dca77dc00ec43ce8",
 )
 http_file(
   name = "deb_rlwrap",

@@ -45,6 +45,9 @@ VERSION_PREFIXES["libxinerama1"]="2:"
 VERSION_PREFIXES["libxrandr2"]="2:"
 VERSION_PREFIXES["libxtst6"]="2:"
 VERSION_PREFIXES["libxvidcore4"]="2:"
+VERSION_PREFIXES["redis-sentinel"]="2:"
+VERSION_PREFIXES["redis-server"]="2:"
+VERSION_PREFIXES["redis-tools"]="2:"
 VERSION_PREFIXES["samba-libs"]="2:"
 
 VERSION_PREFIXES["cpp"]="4:"
@@ -65,7 +68,6 @@ VERSION_PREFIXES["libswscale3"]="6:"
 
 # http://stackoverflow.com/a/26239050
 readonly pkg_dep_info=$(apt-get install --no-install-recommends --print-uris --yes --verbose-versions ${@})
-
 readonly urls=($(echo "$pkg_dep_info" | grep ^\' | cut -d\' -f2))
 
 function find_url() {
