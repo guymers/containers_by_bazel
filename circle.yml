@@ -7,6 +7,7 @@ machine:
 dependencies:
   pre:
     # stop services that are running by default
+    - sudo service mongodb stop
     - sudo service mysql stop
     - sudo service postgresql stop 9.4
     - sudo service postgresql stop 9.5
