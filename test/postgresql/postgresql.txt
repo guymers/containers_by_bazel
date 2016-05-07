@@ -1,0 +1,7 @@
+CREATE DATABASE
+CREATE TABLE
+INSERT 0 1
+ test_table_id | name
+---------------+------
+             1 | blah
+(1 row)

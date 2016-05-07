@@ -1,0 +1,8 @@
+CREATE DATABASE
+CREATE EXTENSION
+CREATE TABLE
+INSERT 0 1
+ test_table_id | name |                        geom
+---------------+------+----------------------------------------------------
+             1 | blah | 0101000020E6100000CB49287D21C451C0F0BF95ECD8244540
+(1 row)

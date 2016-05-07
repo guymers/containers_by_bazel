@@ -47,8 +47,6 @@ You can use the ./build_container script. It ensures that you cannot override th
 
     source ./scripts/versions.sh
     ./scripts/build_container.sh //grafana grafana ${GRAFANA_VERSION}
-    ./scripts/build_container.sh //java:jdk jdk ${JAVA_VERSION}
-    ./scripts/build_container.sh //java:jre jre ${JAVA_VERSION}
     ./scripts/build_container.sh //java:zulu zulu ${ZULU_VERSION}
     ./scripts/build_container.sh //jenkins jenkins ${JENKINS_VERSION}
     ./scripts/build_container.sh //jenkins:agent jenkins-agent ${JENKINS_SWARM_VERSION}
@@ -62,26 +60,6 @@ You can use the ./build_container script. It ensures that you cannot override th
     ./scripts/build_container.sh //postgresql:postgis postgis ${POSTGRESQL_VERSION}-${POSTGIS_VERSION}
     ./scripts/build_container.sh //redis redis ${REDIS_VERSION}
     ./scripts/build_container.sh //sbt sbt ${SBT_VERSION}
-
-Or just build everything at once:
-
-    bazel build \
-      //grafana \
-      //java:jdk \
-      //java:jre \
-      //java:zulu \
-      //jenkins \
-      //jenkins:agent \
-      //proxy/nexus \
-      //nginx \
-      //nodejs \
-      //php \
-      //prometheus \
-      //proxy/polipo \
-      //postgresql \
-      //postgresql:postgis \
-      //redis \
-      //sbt
 
 To test:
 

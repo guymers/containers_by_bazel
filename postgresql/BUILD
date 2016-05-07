@@ -38,7 +38,7 @@ docker_build(
 docker_build(
   name = "postgis",
   base = ":postgresql_base",
-  debs = ["//deps/jessie:postgresql", "//deps/debs:postgis"],
+  debs = ["//deps/jessie:postgresql", "//deps/jessie:postgis"],
   symlinks = {
     "/usr/lib/liblapack.so.3": "/usr/lib/lapack/liblapack.so.3",
     "/usr/lib/liblapack.so.3gf": "/usr/lib/lapack/liblapack.so.3",
