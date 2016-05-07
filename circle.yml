@@ -18,6 +18,7 @@ dependencies:
     - wget https://github.com/bazelbuild/bazel/releases/download/0.2.2b/bazel_0.2.2b-linux-x86_64.deb
     - sha256sum -c bazel_0.2.2b-linux-x86_64.deb.sha256
     - sudo dpkg -i bazel_0.2.2b-linux-x86_64.deb
+    - sudo netstat -plant
   post:
     - echo 'startup --output_base /home/ubuntu/.cache/bazel/' > ~/.bazelrc
     # sandboxing does not work  --sandbox_debug
@@ -31,5 +32,7 @@ test:
     # circleci needs to mount ports so run one test at a time to avoid possible conflicts
     - bazel test --jobs 1 --verbose_failures //test/...
   post:
-    - mkdir $CIRCLE_ARTIFACTS/bazel-testlogs
-    - cp -a bazel-testlogs/. $CIRCLE_ARTIFACTS/bazel-testlogs
+    - mkdir -p "$CIRCLE_ARTIFACTS/bazel-testlogs"
+    - cp -a bazel-testlogs/. "$CIRCLE_ARTIFACTS/bazel-testlogs"
+    - mkdir -p "$CIRCLE_TEST_REPORTS/junit"
+    - find bazel-testlogs/ -type f -name "*.xml" -exec cp --parents "{}" "$CIRCLE_TEST_REPORTS/junit/" \;
