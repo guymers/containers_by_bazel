@@ -31,5 +31,7 @@ test:
     # circleci needs to mount ports so run one test at a time to avoid possible conflicts
     - bazel test --jobs 1 --verbose_failures //test/...
   post:
-    - mkdir $CIRCLE_ARTIFACTS/bazel-testlogs
-    - cp -a bazel-testlogs/. $CIRCLE_ARTIFACTS/bazel-testlogs
+    - mkdir -p "$CIRCLE_ARTIFACTS/bazel-testlogs"
+    - cp -a bazel-testlogs/. "$CIRCLE_ARTIFACTS/bazel-testlogs"
+    - mkdir -p "$CIRCLE_TEST_REPORTS/junit"
+    - find bazel-testlogs/ -type f -name "*.xml" -exec cp --parents "{}" "$CIRCLE_TEST_REPORTS/junit/" \;
