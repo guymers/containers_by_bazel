@@ -18,6 +18,7 @@ dependencies:
     - wget https://github.com/bazelbuild/bazel/releases/download/0.2.2b/bazel_0.2.2b-linux-x86_64.deb
     - sha256sum -c bazel_0.2.2b-linux-x86_64.deb.sha256
     - sudo dpkg -i bazel_0.2.2b-linux-x86_64.deb
+    - sudo netstat -plant
   post:
     - echo 'startup --output_base /home/ubuntu/.cache/bazel/' > ~/.bazelrc
     # sandboxing does not work  --sandbox_debug
