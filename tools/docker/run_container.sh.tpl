@@ -74,7 +74,6 @@ if [[ %{daemon} = true ]]; then
   else
     extra_docker_args=""
   fi
-  echo "$extra_docker_args"
 
   readonly container_id=$("${DOCKER}" run -d $docker_args $extra_docker_args "$image")
 
