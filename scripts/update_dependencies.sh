@@ -19,19 +19,21 @@ readonly tail="^###### END DEBIAN DEPENDENCIES$"
 # http://superuser.com/a/440057
 sed -e "/$lead/,/$tail/{ /$lead/{p; r "$new_debian_dependencies"
         }; /$tail/p; d }" "$ROOT/WORKSPACE" > "$ROOT/WORKSPACE.new"
-mv "$DIR/../WORKSPACE.new" "$ROOT/WORKSPACE"
+mv "$ROOT/WORKSPACE.new" "$ROOT/WORKSPACE"
 
 
 echo "- Updating deps/debs/BUILD latest dependencies"
-readonly filegroups_dir="$OUT_DIR/scripts/debian/filegroup_dependencies"
+for dist in "jessie" "stretch"; do
+  filegroups_dir="$OUT_DIR/scripts/debian/filegroup_$dist"
 
-readonly deps_build_file="$ROOT/deps/debs/BUILD"
-echo 'package(default_visibility = ["//visibility:public"])' > "$deps_build_file"
-echo '' >> "$deps_build_file"
-
-for file in $(ls "$filegroups_dir" | sort); do
-  cat "$filegroups_dir/$file" >> "$deps_build_file"
+  deps_build_file="$ROOT/deps/$dist/BUILD"
+  echo 'package(default_visibility = ["//visibility:public"])' > "$deps_build_file"
   echo '' >> "$deps_build_file"
+
+  for file in $(ls "$filegroups_dir" | sort); do
+    cat "$filegroups_dir/$file" >> "$deps_build_file"
+    echo '' >> "$deps_build_file"
+  done
 done
 
 

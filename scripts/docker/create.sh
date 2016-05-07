@@ -6,14 +6,22 @@ readonly DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOCKER_NO_CACHE=${DOCKER_NO_CACHE:-false}
 [ "$DOCKER_NO_CACHE" = "true" ] && NO_CACHE="--no-cache" || NO_CACHE=""
 
-bazel build //base:debian_jessie
-readonly base_image=$(bazel run //base:debian_jessie | grep "^Tagging" | awk '{print $4}')
-docker tag -f "$base_image" bazel-container/base:latest
+bazel build //base:jessie //base:stretch
 
-docker build $NO_CACHE -t bazel-container/dependencies-base -f "$DIR/base.Dockerfile" "$DIR"
-docker build -t bazel-container/dependencies-ca-certificates -f "$DIR/ca-certificates.Dockerfile" "$DIR"
-docker build -t bazel-container/dependencies-nginx -f "$DIR/nginx.Dockerfile" "$DIR"
-docker build -t bazel-container/dependencies-nodejs -f "$DIR/nodejs.Dockerfile" "$DIR"
-docker build -t bazel-container/dependencies-zulu -f "$DIR/zulu.Dockerfile" "$DIR"
+readonly jessie_image=$(bazel run //base:jessie | grep "^Tagging" | awk '{print $4}')
+docker tag -f "$jessie_image" bazel/base:jessie
 
-docker images | grep "^bazel-container/dependencies-" | awk '{print $1, $3}' > "$DIR/container-versions.txt"
+readonly JESSIE_DIR="$DIR/jessie"
+docker build $NO_CACHE -t bazel/dependencies:jessie-base -f "$JESSIE_DIR/base.Dockerfile" "$JESSIE_DIR"
+docker build -t bazel/dependencies:jessie-ca-certificates -f "$JESSIE_DIR/ca-certificates.Dockerfile" "$JESSIE_DIR"
+docker build -t bazel/dependencies:jessie-nginx -f "$JESSIE_DIR/nginx.Dockerfile" "$JESSIE_DIR"
+docker build -t bazel/dependencies:jessie-nodejs -f "$JESSIE_DIR/nodejs.Dockerfile" "$JESSIE_DIR"
+docker build -t bazel/dependencies:jessie-zulu -f "$JESSIE_DIR/zulu.Dockerfile" "$JESSIE_DIR"
+
+readonly stretch_image=$(bazel run //base:stretch | grep "^Tagging" | awk '{print $4}')
+docker tag -f "$stretch_image" bazel/base:stretch
+
+readonly STRETCH_DIR="$DIR/stretch"
+docker build $NO_CACHE -t bazel/dependencies:stretch-base -f "$STRETCH_DIR/base.Dockerfile" "$STRETCH_DIR"
+
+docker images | grep "^bazel/dependencies" | awk '{print $1, $2, $3}' > "$DIR/container-versions.txt"

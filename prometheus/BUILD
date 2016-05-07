@@ -4,7 +4,7 @@ load("//macros/user:user.bzl", "add_user")
 
 PROMETHEUS_HOME = "/prometheus"
 
-add_gosu(name = "base_gosu", base = "//base:debian_jessie")
+add_gosu(name = "base_gosu", base = "//base:jessie")
 
 add_user(
   name = "base",

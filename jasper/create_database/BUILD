@@ -17,7 +17,7 @@ docker_build(
   env = {
     "JAVA_HOME": "/usr/lib/jvm/java-8-openjdk-amd64",
   },
-  debs = ["//deps/debs:jdk"],
+  debs = ["//deps/jessie:jdk"],
 )
 
 # TODO reuse //tomcat

@@ -1,21 +1,21 @@
 def dependencies(name, dependencies, prefix = "deb", target_prefix = ""):
   native.genrule(
-    name = name + "deps",
+    name = name + "_deps",
     srcs = [":deb_" + f for f in dependencies],
-    outs = ["WORKSPACE.debian_deps"],
-    cmd = "$(location " + target_prefix + "//scripts/debian:combine_dependencies) " + prefix + " $(SRCS) > $@",
+    outs = ["WORKSPACE." + name + ".debian_deps"],
+    cmd = "$(location " + target_prefix + "//scripts/debian:combine_dependencies) " + prefix + "_" + name + " $(SRCS) > $@",
     tools = [target_prefix + "//scripts/debian:combine_dependencies"],
   )
 
   [
     native.genrule(
-      name = name + "deb_" + f,
+      name = "deb_" + f,
       srcs = [
         f,
         target_prefix + "//scripts/docker:container-versions.txt",
       ],
       outs = ["_deb_%s" % f],
-      cmd = "$(location " + target_prefix + "//scripts/debian:find_dependencies) $(location " + f + ") > $@",
+      cmd = "$(location " + target_prefix + "//scripts/debian:find_dependencies) " + name + " $(location " + f + ") > $@",
       tools = [target_prefix + "//scripts/debian:find_dependencies"],
       local = 1, # ignore sandboxing as script connects to docker
     ) for f in dependencies
@@ -23,10 +23,10 @@ def dependencies(name, dependencies, prefix = "deb", target_prefix = ""):
 
   [
     native.genrule(
-      name = name + "bazel_filegroup_" + f,
+      name = "dep_filegroup_" + f,
       srcs = [":deb_" + f],
       outs = ["filegroup_%s" % f],
-      cmd = "$(location " + target_prefix + "//scripts/debian:bazel_filegroup) " + prefix + " $< > $@",
+      cmd = "$(location " + target_prefix + "//scripts/debian:bazel_filegroup) " + prefix + "_" + name + " $< > $@",
       tools = [target_prefix + "//scripts/debian:bazel_filegroup"],
     ) for f in dependencies
   ]

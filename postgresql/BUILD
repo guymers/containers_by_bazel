@@ -1,15 +1,12 @@
 load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 load("//macros:gosu.bzl", "add_gosu")
 
-add_gosu(
-  name = "postgresql_gosu",
-  base = "//base:debian_jessie",
-)
+add_gosu(name = "postgresql_gosu", base = "//base:jessie")
 
 docker_build(
   name = "postgresql_base",
   base = ":postgresql_gosu",
-  debs = ["//deps/debs:locales"],
+  debs = ["//deps/jessie:locales"],
   env = {
     "LANG": "en_US.UTF-8",
     "POSTGRES_HOME": "/var/lib/postgresql",
@@ -30,7 +27,7 @@ docker_build(
 docker_build(
   name = "postgresql",
   base = ":postgresql_base",
-  debs = ["//deps/debs:postgresql"],
+  debs = ["//deps/jessie:postgresql"],
   symlinks = {
     "/usr/lib/liblapack.so.3": "/usr/lib/lapack/liblapack.so.3",
     "/usr/lib/liblapack.so.3gf": "/usr/lib/lapack/liblapack.so.3",
@@ -41,7 +38,7 @@ docker_build(
 docker_build(
   name = "postgis",
   base = ":postgresql_base",
-  debs = ["//deps/debs:postgresql", "//deps/debs:postgis"],
+  debs = ["//deps/jessie:postgresql", "//deps/debs:postgis"],
   symlinks = {
     "/usr/lib/liblapack.so.3": "/usr/lib/lapack/liblapack.so.3",
     "/usr/lib/liblapack.so.3gf": "/usr/lib/lapack/liblapack.so.3",

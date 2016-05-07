@@ -6,7 +6,7 @@ GRAFANA_DATA = "/var/lib/grafana"
 GRAFANA_LOGS = "/var/log/grafana"
 GRAFANA_CONF = "/etc/grafana"
 
-add_gosu(name = "base_gosu", base = "//base:debian_jessie")
+add_gosu(name = "base_gosu", base = "//base:jessie")
 
 add_user(
   name = "base",
@@ -20,7 +20,7 @@ add_user(
 docker_build(
   name = "grafana",
   base = ":base",
-  debs = ["//deps/debs:grafana", "@grafana//file"],
+  debs = ["//deps/jessie:grafana", "@grafana//file"],
   env = {
     "GRAFANA_HOME": "/usr/share/grafana",
     "GRAFANA_DATA": GRAFANA_DATA,

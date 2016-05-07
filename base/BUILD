@@ -1,15 +1,28 @@
+package(default_visibility = ["//visibility:public"])
+
 load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 
-# Extract .xz files
 genrule(
-  name = "debian_jessie_tar",
+  name = "jessie_tar",
   srcs = ["@debian_jessie//file"],
-  outs = ["debian_jessie_extracted.tar"],
+  outs = ["jessie_extracted.tar"],
   cmd = "cat $< | xzcat >$@",
 )
 
 docker_build(
-  name = "debian_jessie",
-  tars = [":debian_jessie_tar"],
-  visibility = ["//visibility:public"],
+  name = "jessie",
+  tars = [":jessie_tar"],
+)
+
+
+genrule(
+  name = "stretch_tar",
+  srcs = ["@debian_stretch//file"],
+  outs = ["stretch_extracted.tar"],
+  cmd = "cat $< | xzcat >$@",
+)
+
+docker_build(
+  name = "stretch",
+  tars = [":stretch_tar"],
 )

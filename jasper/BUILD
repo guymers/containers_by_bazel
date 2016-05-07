@@ -49,7 +49,7 @@ docker_build(
 docker_build(
   name = "client_base",
   base = "//java:jre_ssl",
-  debs = ["//deps/debs:jasper_client"],
+  debs = ["//deps/jessie:jasper_client"],
 )
 
 docker_build(

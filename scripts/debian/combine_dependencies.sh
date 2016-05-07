@@ -16,7 +16,7 @@ for file in "${files[@]}"; do
     current="$url $sha256"
     previous=${dependencies["$name"]}
     if [ -n "$previous" ] && [ "$current" != "$previous" ]; then
-      echo "$name at $version already exists as $previous"
+      echo "$name at $version already exists as '$previous'"
       exit 1
     fi
     dependencies["$name"]="$current"

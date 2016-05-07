@@ -5,7 +5,7 @@ load("//macros/user:user.bzl", "add_user")
 REDIS_CONF = "/etc/redis"
 REDIS_HOME = "/redis-data"
 
-add_gosu(name = "base_gosu", base = "//base:debian_jessie")
+add_gosu(name = "base_gosu", base = "//base:jessie")
 
 add_user(
   name = "base",
@@ -18,7 +18,7 @@ add_user(
 docker_build(
   name = "redis",
   base = ":base",
-  debs = ["//deps/debs:redis"],
+  debs = ["//deps/jessie:redis"],
   env = {
     "REDIS_CONF": REDIS_CONF,
     "REDIS_HOME": REDIS_HOME,

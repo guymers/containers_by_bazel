@@ -4,7 +4,7 @@ load("//java:java.bzl", "java_create")
 
 docker_build(
   name = "java",
-  base = "//base:debian_jessie",
+  base = "//base:jessie",
   env = {
     "LANG": "C.UTF-8",
     "LC_CTYPE": "C.UTF-8",

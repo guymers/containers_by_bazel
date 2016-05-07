@@ -1,12 +1,12 @@
 load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 load("//macros:gosu.bzl", "add_gosu")
 
-add_gosu(name = "polipo_gosu", base = "//base:debian_jessie")
+add_gosu(name = "polipo_gosu", base = "//base:jessie")
 
 docker_build(
   name = "polipo",
   base = ":polipo_gosu",
-  debs = ["//deps/debs:polipo"],
+  debs = ["//deps/jessie:polipo"],
   env = {
     "POLIPO_HOME": "/polipo-cache",
   },

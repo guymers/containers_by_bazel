@@ -1,4 +1,4 @@
-FROM bazel-container/dependencies-base
+FROM bazel/dependencies:jessie-base
 
 RUN apt-get install -y \
     apt-transport-https \

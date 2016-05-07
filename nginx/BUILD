@@ -3,8 +3,8 @@ load("//macros:ssl.bzl", "add_certs")
 
 docker_build(
   name = "nginx",
-  base = "//base:debian_jessie",
-  debs = ["//deps/debs:nginx"],
+  base = "//base:jessie",
+  debs = ["//deps/jessie:nginx"],
   symlinks = {
     "/var/log/nginx/access.log": "/dev/stdout",
     "/var/log/nginx/error.log": "/dev/stderr",

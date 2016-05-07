@@ -2,10 +2,15 @@ package(default_visibility = ["//visibility:public"])
 
 load("//scripts/debian:dependencies.bzl", "dependencies")
 
-dependencies(
-  name = "",
-  dependencies = glob(["dependencies/*"]),
+genrule(
+  name = "deps",
+  srcs = [":jessie_deps", ":stretch_deps"],
+  outs = ["WORKSPACE.debian_deps"],
+  cmd = "cat $(SRCS) > $@"
 )
+
+dependencies(name = "jessie", dependencies = glob(["jessie/*"]))
+dependencies(name = "stretch", dependencies = glob(["stretch/*"]))
 
 sh_binary(
   name = "bazel_filegroup",

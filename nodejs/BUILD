@@ -2,8 +2,8 @@ load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 
 docker_build(
   name = "nodejs",
-  base = "//base:debian_jessie",
-  debs = ["//deps/debs:nodejs"],
+  base = "//base:jessie",
+  debs = ["//deps/jessie:nodejs"],
   symlinks = { "/usr/bin/node": "/usr/bin/nodejs" },
 
   directory = "/",

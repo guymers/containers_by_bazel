@@ -5,7 +5,7 @@ def java_create(name, base):
   docker_build(
     name = name,
     base = base,
-    debs = ["//deps/debs:" + name],
+    debs = ["//deps/jessie:" + name],
     visibility = ["//visibility:public"],
   )
 

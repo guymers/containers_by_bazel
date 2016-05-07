@@ -4,27 +4,27 @@ set -o pipefail
 readonly DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$DIR/../versions.sh"
 
-readonly container_prefix="bazel-container/dependencies-"
+readonly container="bazel/dependencies"
 dependency_containers=()
 
 while read f; do
-  file="$DIR/dependencies/$f"
+  file="$DIR/jessie/$f"
 
   if [ -f "$file" ]; then
     group_name=$(basename "$file")
 
     c=base
-    if docker images | grep "^${container_prefix}${group_name}" > /dev/null; then
+    if docker images | grep "^${container}" | grep "jessie-${group_name}" > /dev/null; then
       c="$group_name"
     fi
 
     while IFS="=" read dependency version; do
       # yes eval, easiest way to substitute variables
       version=$(eval echo "$version")
-      dependency_containers+=("$c|$dependency=$version")
+      dependency_containers+=("jessie-$c|$dependency=$version")
     done < "$file"
   fi
-done < <(ls "$DIR/dependencies/")
+done < <(ls "$DIR/jessie/")
 
 dependency_containers+=("zzzzz|zzzzz=0")
 
