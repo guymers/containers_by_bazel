@@ -5,7 +5,7 @@ while ! psql -U postgres &>/dev/null; do :; done
 sleep 5
 while ! psql -U postgres &>/dev/null; do :; done
 
-readonly psql="psql -h 127.0.0.1 -U postgres"
+readonly psql="psql -h 127.0.0.1 -U postgres --no-password"
 $psql -c "CREATE DATABASE test"
 $psql -d test -c "CREATE EXTENSION IF NOT EXISTS postgis"
 $psql -d test -c "CREATE TABLE test_table (test_table_id SERIAL PRIMARY KEY, name TEXT NOT NULL)"
