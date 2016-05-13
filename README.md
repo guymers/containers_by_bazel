@@ -88,4 +88,5 @@ Create sbt ivy cache
 912 jenkins
 921 prometheus
 922 grafana
+930 nginx
 931 redis

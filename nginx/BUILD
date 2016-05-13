@@ -1,9 +1,18 @@
 load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 load("//macros:ssl.bzl", "add_certs")
+load("//macros/user:user.bzl", "add_user")
+
+add_user(
+  name = "base",
+  base = "//base:jessie",
+  id = "930",
+  user = "nginx",
+  home = "/var/www",
+)
 
 docker_build(
   name = "nginx",
-  base = "//base:jessie",
+  base = ":base",
   debs = ["//deps/jessie:nginx"],
   symlinks = {
     "/var/log/nginx/access.log": "/dev/stdout",

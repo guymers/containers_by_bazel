@@ -1,0 +1,3 @@
+38ffd4972ae513a0c79a8be4573403edcd709f0f572105362b08ff50cf6de521  index
+<title>Welcome to nginx!</title>
+<h1>Welcome to nginx!</h1>
