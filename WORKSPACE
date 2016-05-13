@@ -69,7 +69,7 @@ new_http_archive(
 http_file(
   name = "jenkins_war",
   url = "http://mirrors.jenkins-ci.org/war-stable/1.651.2/jenkins.war",
-  sha256 = "863533451e49ec480f010ac5815421d39708597ffbbce7ce67c54f0145428500",
+  sha256 = "1e239db19071beaac3f2db3ec6a568346bbeb9087f5f0fcf19adf6ae62cbcc2b",
 )
 http_file(
   name = "jenkins_agent_jar",
