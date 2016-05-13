@@ -65,6 +65,7 @@ filegroup(
     "@deb_stretch_gcc//file",
     "@deb_stretch_gcc_5//file",
     "@deb_stretch_gcc_5_base//file",
+    "@deb_stretch_gcc_6_base//file",
     "@deb_stretch_libasan2//file",
     "@deb_stretch_libatomic1//file",
     "@deb_stretch_libbsd0//file",
