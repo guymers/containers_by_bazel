@@ -20,8 +20,8 @@ http_file(
 
 http_file(
   name = "grafana",
-  url = "https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.1_amd64.deb",
-  sha256 = "739f6a3c032dc4d38f8a121bf6a9a84a96630bb5a0317483cacd19d4d6aba738",
+	url = "https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.2-1463383025_amd64.deb",
+  sha256 = "cd1289926749e289c2476dff4f7349c266800a2a81f38eae49ef68ca18e716a4",
 )
 
 new_http_archive(
@@ -423,8 +423,8 @@ http_file(
 )
 http_file(
   name = "deb_jessie_libexpat1",
-  url = "http://httpredir.debian.org/debian/pool/main/e/expat/libexpat1_2.1.0-6+deb8u1_amd64.deb",
-  sha256 = "1b006e659f383e09909595d8b84b79828debd7323d00e8a28b72ccd902273861",
+  url = "http://security.debian.org/pool/updates/main/e/expat/libexpat1_2.1.0-6+deb8u2_amd64.deb",
+  sha256 = "70abf38f7a6d3b1f26dcd4666aba2c6893525bdc8b054d5187632e99c0510d41",
 )
 http_file(
   name = "deb_jessie_libfaad2",
@@ -588,8 +588,8 @@ http_file(
 )
 http_file(
   name = "deb_jessie_libidn11",
-  url = "http://httpredir.debian.org/debian/pool/main/libi/libidn/libidn11_1.29-1+b2_amd64.deb",
-  sha256 = "58c8c52dd9beba1090375f700cdeb1fa10454ef53a226685ee2077094b9e9af5",
+  url = "http://security.debian.org/pool/updates/main/libi/libidn/libidn11_1.29-1+deb8u1_amd64.deb",
+  sha256 = "28bd650c76b8bc25120eaa1253af8b04dcd71bbb73d65733c8bb21d773a94b46",
 )
 http_file(
   name = "deb_jessie_libiso9660_8",
@@ -898,8 +898,8 @@ http_file(
 )
 http_file(
   name = "deb_jessie_librsvg2_2",
-  url = "http://httpredir.debian.org/debian/pool/main/libr/librsvg/librsvg2-2_2.40.5-1+deb8u1_amd64.deb",
-  sha256 = "4e44acb01a99d77a0a1e436efcbe6a2c52162e5fe18e4686a4b261c5f76bf6ac",
+  url = "http://security.debian.org/pool/updates/main/libr/librsvg/librsvg2-2_2.40.5-1+deb8u2_amd64.deb",
+  sha256 = "fead83722cc48a6cd679e3b847b88d6cfaca0847bc7d80c4ef6f10568c24fe08",
 )
 http_file(
   name = "deb_jessie_librtmp1",
@@ -1183,8 +1183,8 @@ http_file(
 )
 http_file(
   name = "deb_jessie_libxerces_c3_1",
-  url = "http://httpredir.debian.org/debian/pool/main/x/xerces-c/libxerces-c3.1_3.1.1-5.1+deb8u1_amd64.deb",
-  sha256 = "d6e1e089e75eb27ac8b4deb26ed9a6c47298d6be3314362ec63084384f8ee1fa",
+  url = "http://security.debian.org/pool/updates/main/x/xerces-c/libxerces-c3.1_3.1.1-5.1+deb8u2_amd64.deb",
+  sha256 = "432ee0593f49932c47690f2a248ff06e263c3c74c4cb19abd9e4ba6125f0694c",
 )
 http_file(
   name = "deb_jessie_libxext6",
@@ -1298,8 +1298,8 @@ http_file(
 )
 http_file(
   name = "deb_jessie_nodejs",
-  url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.1.0-1nodesource1~jessie1_amd64.deb",
-  sha256 = "99cb6fcbb75408d73b24f57a894f34598fa133031a713f749ebe2844b6316a92",
+  url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.2.0-1nodesource1~jessie1_amd64.deb",
+  sha256 = "8604c369b6c62d2e1784ae18305c34a7be7aa55cbf72d7c90543bc83aa8ffbc7",
 )
 http_file(
   name = "deb_jessie_odbcinst",
@@ -1433,13 +1433,13 @@ http_file(
 )
 http_file(
   name = "deb_jessie_redis_server",
-  url = "http://http.debian.net/debian/pool/main/r/redis/redis-server_3.0.6-2~bpo8+1_amd64.deb",
-  sha256 = "1f2678893625753673601f00dba264d0868f56285f8cefe86d868d66f47dd526",
+  url = "http://http.debian.net/debian/pool/main/r/redis/redis-server_3.2.0-2~bpo8+1_amd64.deb",
+  sha256 = "4288ffba343f64d4b45f9594108c299b6c5fd36fa2e8ce968fbbd9a829595386",
 )
 http_file(
   name = "deb_jessie_redis_tools",
-  url = "http://http.debian.net/debian/pool/main/r/redis/redis-tools_3.0.6-2~bpo8+1_amd64.deb",
-  sha256 = "fee6c9ae5df0572aee0188f73cac283af827f10d5bde6d09dca77dc00ec43ce8",
+  url = "http://http.debian.net/debian/pool/main/r/redis/redis-tools_3.2.0-2~bpo8+1_amd64.deb",
+  sha256 = "d2b0e18ae0eabbcb87ae00c62e3f2c21847cdd31f734da150721b02e4fa21bbe",
 )
 http_file(
   name = "deb_jessie_rlwrap",
@@ -1499,8 +1499,8 @@ http_file(
 )
 http_file(
   name = "deb_stretch_binutils",
-  url = "http://httpredir.debian.org/debian/pool/main/b/binutils/binutils_2.26-8_amd64.deb",
-  sha256 = "081db34ce11c8e30c57fba2408e45f339e76761dc6527537b9ba5a5dc6b6cdb8",
+  url = "http://httpredir.debian.org/debian/pool/main/b/binutils/binutils_2.26-9_amd64.deb",
+  sha256 = "2be9454d68995262bae33dcdd9a7408842c2ab97d213261e6933001b6a78c935",
 )
 http_file(
   name = "deb_stretch_cpp",
@@ -1509,8 +1509,8 @@ http_file(
 )
 http_file(
   name = "deb_stretch_cpp_5",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-5/cpp-5_5.3.1-17_amd64.deb",
-  sha256 = "eda88778d9545765e0f3aab3c832a729e5225b105fb946ca43bbcdcced230163",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-5/cpp-5_5.3.1-19_amd64.deb",
+  sha256 = "62aa22a3642b65ed7fdab6c55d6e48e42faf708b09e743372acf9d6052be1fc8",
 )
 http_file(
   name = "deb_stretch_file",
@@ -1524,28 +1524,28 @@ http_file(
 )
 http_file(
   name = "deb_stretch_gcc_5",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-5/gcc-5_5.3.1-17_amd64.deb",
-  sha256 = "a3a54b67b56bad093dfdb3cf45c47e806fc1c543a8e4a0064f47377fcaa32207",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-5/gcc-5_5.3.1-19_amd64.deb",
+  sha256 = "0f0732d10364b172436cc8db37507af9c78f3d5d175c4b8c01ee87945e5bb454",
 )
 http_file(
   name = "deb_stretch_gcc_5_base",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-5/gcc-5-base_5.3.1-17_amd64.deb",
-  sha256 = "10379bd04a42b097aff1f9e51745a2884996593d5d96f469bfe753d145c6e156",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-5/gcc-5-base_5.3.1-19_amd64.deb",
+  sha256 = "bc87a264147446f653a8f946924c7a66ac42df654af88b1ba5a0c350177caab2",
 )
 http_file(
   name = "deb_stretch_gcc_6_base",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/gcc-6-base_6.1.1-1_amd64.deb",
-  sha256 = "6ae166290709b2cada8b3ebeb52857817ee1581473ae63d1befc9f597d08d9f0",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/gcc-6-base_6.1.1-3_amd64.deb",
+  sha256 = "55e5662a4bbf686f496f7f2ad868ec9baff50cc0429f9bd935be12145e5a3470",
 )
 http_file(
   name = "deb_stretch_libasan2",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-5/libasan2_5.3.1-17_amd64.deb",
-  sha256 = "370e3b1d9019bdef3f8e5263cb9c267e637209c1cdfe148d119f8266edb41416",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-5/libasan2_5.3.1-19_amd64.deb",
+  sha256 = "91fcee14510cac1dadb6a7ef43ab3ef9e914a338b0f73c7158b88f6f60c1d932",
 )
 http_file(
   name = "deb_stretch_libatomic1",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libatomic1_6.1.1-1_amd64.deb",
-  sha256 = "23ad42f7a852c51f56538b708684a232b52f1536acacd7c76d4b8938fd327172",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libatomic1_6.1.1-3_amd64.deb",
+  sha256 = "760a00474520c6b2c6b8b47d76351c90289c32bb0718244b5bffeca05c10f849",
 )
 http_file(
   name = "deb_stretch_libbsd0",
@@ -1569,13 +1569,13 @@ http_file(
 )
 http_file(
   name = "deb_stretch_libcc1_0",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libcc1-0_6.1.1-1_amd64.deb",
-  sha256 = "c849242ebe812edb60b6e28a623426f463e2c8ccaa7bdf1e0c56bea288c34137",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libcc1-0_6.1.1-3_amd64.deb",
+  sha256 = "4f392e40f943e61c101b5075988867ecf4ce9b599d247fea62fbdb1a80b051e2",
 )
 http_file(
   name = "deb_stretch_libcilkrts5",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libcilkrts5_6.1.1-1_amd64.deb",
-  sha256 = "d98bc0df86a359bb9df3eee6dd672b4836f3e35653f63d2a860615f093bd201f",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libcilkrts5_6.1.1-3_amd64.deb",
+  sha256 = "92a258ee96b73182f5eeed2a1dcd4a50ef07465e028f0d58a6dc4733216133bd",
 )
 http_file(
   name = "deb_stretch_libcurl3",
@@ -1594,13 +1594,13 @@ http_file(
 )
 http_file(
   name = "deb_stretch_libgcc1",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libgcc1_6.1.1-1_amd64.deb",
-  sha256 = "aa6188aa406b31fe497205b7678dff78b915e52c5cef1b98f7620aac674f2e76",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libgcc1_6.1.1-3_amd64.deb",
+  sha256 = "1ca7784dcbbcd3ba169e13dd8f0d3e3e1b914504b3908243af7327f8f627c14b",
 )
 http_file(
   name = "deb_stretch_libgcc_5_dev",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-5/libgcc-5-dev_5.3.1-17_amd64.deb",
-  sha256 = "b4019af27c5438fb89001c55b822f01e264798846bcc49548543aea9ea6290c4",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-5/libgcc-5-dev_5.3.1-19_amd64.deb",
+  sha256 = "5536b4f4afe2c12d2f0346cd9aaa3842119db5eabdc311e7d775222f0b25c15a",
 )
 http_file(
   name = "deb_stretch_libgdbm3",
@@ -1619,8 +1619,8 @@ http_file(
 )
 http_file(
   name = "deb_stretch_libgomp1",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libgomp1_6.1.1-1_amd64.deb",
-  sha256 = "d2cbc3aef35acf8f75be4d9cc2cd0df6eab26c1493708a9ffe907d33462bcdd7",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libgomp1_6.1.1-3_amd64.deb",
+  sha256 = "a74ea8cac931dff1342d656db28a4461afb38a0ee4f4c92308bdb4652db856cc",
 )
 http_file(
   name = "deb_stretch_libgssapi_krb5_2",
@@ -1649,8 +1649,8 @@ http_file(
 )
 http_file(
   name = "deb_stretch_libitm1",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libitm1_6.1.1-1_amd64.deb",
-  sha256 = "fe0094fd29b73d9e124c8cc06ce7fbf6e3c22bd847ecd2c2d766d04bdf2a1ce1",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libitm1_6.1.1-3_amd64.deb",
+  sha256 = "66578d822aa386780abe73068bfa383b803793b72b0fd436ae3c472376633d51",
 )
 http_file(
   name = "deb_stretch_libk5crypto3",
@@ -1679,8 +1679,8 @@ http_file(
 )
 http_file(
   name = "deb_stretch_liblsan0",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/liblsan0_6.1.1-1_amd64.deb",
-  sha256 = "2bb9ce4eefcd972a53899607df65afd884bfe427baa6c03d54c729686ebde7fe",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/liblsan0_6.1.1-3_amd64.deb",
+  sha256 = "881843110bf37313413878fbc5159eeac445621b49fbcfb4e02089ed35d59787",
 )
 http_file(
   name = "deb_stretch_libltdl7",
@@ -1709,8 +1709,8 @@ http_file(
 )
 http_file(
   name = "deb_stretch_libmpx0",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-5/libmpx0_5.3.1-17_amd64.deb",
-  sha256 = "2256df177143a42e757e524e29e5f26eb7c83bc6ea1c7ab525dd75cc14c1370b",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-5/libmpx0_5.3.1-19_amd64.deb",
+  sha256 = "c2aba8377d79ca5ff4e95bc3a0ded2f5109b64638a694f404a70c0f6ac5f59ab",
 )
 http_file(
   name = "deb_stretch_libnettle6",
@@ -1754,13 +1754,13 @@ http_file(
 )
 http_file(
   name = "deb_stretch_libpq5",
-  url = "http://httpredir.debian.org/debian/pool/main/p/postgresql-9.5/libpq5_9.5.2-1_amd64.deb",
-  sha256 = "1fc92eb44bbab1c390c147ad638c86a79e80d6e6c86071730a6ff6a8176e74fd",
+  url = "http://httpredir.debian.org/debian/pool/main/p/postgresql-9.5/libpq5_9.5.3-1_amd64.deb",
+  sha256 = "a6675cce79ee1aa655436ea32ae6cd7ae666055302e25e156415c3dca0438c7b",
 )
 http_file(
   name = "deb_stretch_libquadmath0",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libquadmath0_6.1.1-1_amd64.deb",
-  sha256 = "7707145f3da16061020a538051c64087aac37e9fcb7513b80c14344aa60c39ea",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libquadmath0_6.1.1-3_amd64.deb",
+  sha256 = "18a682e130cb90ceacaaa9634ed2baa44b53e96e7cb1f9cae8f0906d225bf7be",
 )
 http_file(
   name = "deb_stretch_librtmp1",
@@ -1799,8 +1799,8 @@ http_file(
 )
 http_file(
   name = "deb_stretch_libstdc__6",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libstdc++6_6.1.1-1_amd64.deb",
-  sha256 = "f4dd71474d8ca7c53450a45cf03953369f5ab0e991b29dc108d57e017660e682",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libstdc++6_6.1.1-3_amd64.deb",
+  sha256 = "18621aae8b7babef88a84aba9ec7ae844dc09d82aa54e609d7f1693bdf71c1ce",
 )
 http_file(
   name = "deb_stretch_libtasn1_6",
@@ -1814,13 +1814,13 @@ http_file(
 )
 http_file(
   name = "deb_stretch_libtsan0",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libtsan0_6.1.1-1_amd64.deb",
-  sha256 = "138a72ec129963ccd245676bba22004b751c20ed7a610be6acd2b7745b0862f0",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libtsan0_6.1.1-3_amd64.deb",
+  sha256 = "49a6258a71d32dec3cebccda7618b5759d5ee54ea8c12bfb1befe964c244c29b",
 )
 http_file(
   name = "deb_stretch_libubsan0",
-  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libubsan0_6.1.1-1_amd64.deb",
-  sha256 = "2b30dcfa54000340469abcff6bef841363aeab5374816a4d33d27413dd30a59a",
+  url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libubsan0_6.1.1-3_amd64.deb",
+  sha256 = "9ad5b607398d2e32452445fe970f1f6bdfee096755b28fde258d2452fbba0d50",
 )
 http_file(
   name = "deb_stretch_libxml2",
@@ -1934,8 +1934,8 @@ http_file(
 )
 http_file(
   name = "deb_stretch_php_common",
-  url = "http://httpredir.debian.org/debian/pool/main/p/php-defaults/php-common_35_all.deb",
-  sha256 = "af4877932646adc40a85e78544371120186d8109dc90ea676e7375585a5817a6",
+  url = "http://httpredir.debian.org/debian/pool/main/p/php-defaults/php-common_40_all.deb",
+  sha256 = "b5b163e967516dc68d8b965eff60d6c37daade68dbd1f18fcb7b1b164a8482c1",
 )
 http_file(
   name = "deb_stretch_php_tideways",
