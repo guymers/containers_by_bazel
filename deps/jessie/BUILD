@@ -631,6 +631,21 @@ filegroup(
 )
 
 filegroup(
+  name = "tomcat7",
+  srcs = [
+    "@deb_jessie_libcommons_dbcp_java//file",
+    "@deb_jessie_libcommons_pool_java//file",
+    "@deb_jessie_libecj_java//file",
+    "@deb_jessie_libservlet3_0_java//file",
+    "@deb_jessie_libtomcat7_java//file",
+    "@deb_jessie_netcat//file",
+    "@deb_jessie_netcat_traditional//file",
+    "@deb_jessie_tomcat7_common//file",
+    "@deb_jessie_tomcat7_user//file",
+  ],
+)
+
+filegroup(
   name = "zip",
   srcs = [
     "@deb_jessie_zip//file",

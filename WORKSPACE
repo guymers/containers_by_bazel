@@ -20,7 +20,7 @@ http_file(
 
 http_file(
   name = "grafana",
-	url = "https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.2-1463383025_amd64.deb",
+  url = "https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.2-1463383025_amd64.deb",
   sha256 = "cd1289926749e289c2476dff4f7349c266800a2a81f38eae49ef68ca18e716a4",
 )
 
@@ -79,13 +79,11 @@ http_file(
 
 
 ###### TOMCAT
-new_http_archive(
-  name = "tomcat",
-  url = "https://www.apache.org/dist/tomcat/tomcat-7/v7.0.68/bin/apache-tomcat-7.0.68.tar.gz",
-  sha256 = "2c1a02422f265607de733521e54f18613e9dd5efc2861914fe45a858227bb8e0",
-  build_file_content = "exports_files(['apache-tomcat-7.0.68'])",
+http_file(
+  name = "tomcat_sample_war",
+  url = "https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war",
+  sha256 = "89b33caa5bf4cfd235f060c396cb1a5acb2734a1366db325676f48c5f5ed92e5",
 )
-
 
 ###### JASPER
 new_http_archive(
@@ -357,6 +355,16 @@ http_file(
   sha256 = "90e5ad7e86de2f8e1a4a1c5d7a37f41a86806417c69cbe2b78335be0478a0231",
 )
 http_file(
+  name = "deb_jessie_libcommons_dbcp_java",
+  url = "http://httpredir.debian.org/debian/pool/main/libc/libcommons-dbcp-java/libcommons-dbcp-java_1.4-5_all.deb",
+  sha256 = "e485e0ea71484d7fda5d2158325f01b0592446a1ab26905bbf2e51d77725533a",
+)
+http_file(
+  name = "deb_jessie_libcommons_pool_java",
+  url = "http://httpredir.debian.org/debian/pool/main/c/commons-pool/libcommons-pool-java_1.6-2_all.deb",
+  sha256 = "d3d9fb183a9c7b6379b51998f7ae18bc32faafb091672620f7af47454aef2a1e",
+)
+http_file(
   name = "deb_jessie_libcroco3",
   url = "http://httpredir.debian.org/debian/pool/main/libc/libcroco/libcroco3_0.6.8-3+b1_amd64.deb",
   sha256 = "330941dbd4b3ff90cc4625c980e41e2d7447c284d0b4734393b80f7597a37c72",
@@ -405,6 +413,11 @@ http_file(
   name = "deb_jessie_libdrm2",
   url = "http://httpredir.debian.org/debian/pool/main/libd/libdrm/libdrm2_2.4.58-2_amd64.deb",
   sha256 = "71f8ee27453d46ab42afb83143cda72b8453673dbb8d9ed4ebdb286a0388946c",
+)
+http_file(
+  name = "deb_jessie_libecj_java",
+  url = "http://httpredir.debian.org/debian/pool/main/e/ecj/libecj-java_3.10.1-1_all.deb",
+  sha256 = "e3cc2d131706cb5bd4d980c3f8151caa868e6e1146bc11f5e06d61732a65e80e",
 )
 http_file(
   name = "deb_jessie_libedit2",
@@ -927,6 +940,11 @@ http_file(
   sha256 = "9dccd2d6fa4f973836f4519d2d768158642b9526ad27d0b414987e29cf30d88c",
 )
 http_file(
+  name = "deb_jessie_libservlet3_0_java",
+  url = "http://security.debian.org/pool/updates/main/t/tomcat7/libservlet3.0-java_7.0.56-3+deb8u2_all.deb",
+  sha256 = "4862a5b63dfd96d2c845b25be836c27da4ce32efc676d6ec23d3e915d668e9ef",
+)
+http_file(
   name = "deb_jessie_libsfcgal1",
   url = "http://apt.postgresql.org/pub/repos/apt/pool/main/s/sfcgal/libsfcgal1_1.2.2-1~bpo8+1.pgdg80+1_amd64.deb",
   sha256 = "77f9475f4151c186a5fa3a08a0cab0c207e95ca4b3a7acc500df46c8f0b611de",
@@ -1025,6 +1043,11 @@ http_file(
   name = "deb_jessie_libtiff5",
   url = "http://httpredir.debian.org/debian/pool/main/t/tiff/libtiff5_4.0.3-12.3+deb8u1_amd64.deb",
   sha256 = "06b4254a0a78fdf199b044975d5b750902ca8916400db7cc309deeba44dee42e",
+)
+http_file(
+  name = "deb_jessie_libtomcat7_java",
+  url = "http://security.debian.org/pool/updates/main/t/tomcat7/libtomcat7-java_7.0.56-3+deb8u2_all.deb",
+  sha256 = "70c98b2cf1458112dc9ceb59b05da3af36eaba7ddd229ba69c72b220d409fc3f",
 )
 http_file(
   name = "deb_jessie_liburiparser1",
@@ -1292,6 +1315,16 @@ http_file(
   sha256 = "458009b3205130104bba0833136c6eca8dbc634b181cec6c37a4b969d6478d3d",
 )
 http_file(
+  name = "deb_jessie_netcat",
+  url = "http://httpredir.debian.org/debian/pool/main/n/netcat/netcat_1.10-41_all.deb",
+  sha256 = "58eab873f9fb34a92d71a76332cfe1031a8c28cbdd76219f598350e70427d03a",
+)
+http_file(
+  name = "deb_jessie_netcat_traditional",
+  url = "http://httpredir.debian.org/debian/pool/main/n/netcat/netcat-traditional_1.10-41_amd64.deb",
+  sha256 = "15cdebe879e12783232b541b482e41cf80d83ec4037955ee5fe8deb14ad00698",
+)
+http_file(
   name = "deb_jessie_nginx",
   url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.9.15-1~jessie_amd64.deb",
   sha256 = "5da3083beaf5cba17e46459ed2dbd34d0a6e5ff01e300dcdefcd45a661d1af29",
@@ -1465,6 +1498,16 @@ http_file(
   name = "deb_jessie_ssl_cert",
   url = "http://httpredir.debian.org/debian/pool/main/s/ssl-cert/ssl-cert_1.0.35_all.deb",
   sha256 = "101e0398158fd078fe0e1973912bbb887f0a77021ecf908cfba9ca0ab58e9005",
+)
+http_file(
+  name = "deb_jessie_tomcat7_common",
+  url = "http://security.debian.org/pool/updates/main/t/tomcat7/tomcat7-common_7.0.56-3+deb8u2_all.deb",
+  sha256 = "78c7145d8a0c374eb19dcff06db57b916449c6e4dbfa1889db1037b8020f72d9",
+)
+http_file(
+  name = "deb_jessie_tomcat7_user",
+  url = "http://security.debian.org/pool/updates/main/t/tomcat7/tomcat7-user_7.0.56-3+deb8u2_all.deb",
+  sha256 = "5d809fc66936a348648152f73f652f34b566eab1248cf1248b93598f9505b5c7",
 )
 http_file(
   name = "deb_jessie_ucf",

@@ -1,28 +1,46 @@
 load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 load("//macros:gosu.bzl", "add_gosu")
+load("//macros/user:user.bzl", "add_user")
 
-add_gosu(name = "tomcat_gosu", base = "//java:jre_ssl")
+CATALINA_HOME = "/usr/share/tomcat7"
+CATALINA_BASE = "/var/lib/tomcat7"
+TOMCAT_HOME = "/tomcat7"
+
+add_gosu(name = "tomcat_gosu", base = "//java:zulu_ssl")
+
+add_user(
+  name = "base",
+  base = ":tomcat_gosu",
+  id = "913",
+  user = "tomcat",
+  home = TOMCAT_HOME,
+)
 
 docker_build(
   name = "tomcat_bin",
-  base = ":tomcat_gosu",
+  base = ":base",
+  debs = ["//deps/jessie:tomcat7"],
   env = {
-    "CATALINA_HOME": "/opt/tomcat7",
-    "CATALINA_BASE": "/opt/tomcat7",
+    "CATALINA_BASE": CATALINA_BASE,
+    "CATALINA_HOME": CATALINA_HOME,
+    "CATALINA_OUT": "/dev/stdout",
+    "CATALINA_TMPDIR": "/tmp",
+    "LOGGING_CONFIG": "-Djava.util.logging.config.file=/etc/tomcat7/logging.properties",
+    "TOMCAT_HOME": TOMCAT_HOME,
   },
-  directory = "/opt",
-  files = ["@tomcat//:apache-tomcat-7.0.68"],
-  symlinks = { "/opt/tomcat7": "/opt/apache-tomcat-7.0.68" },
+  symlinks = {
+    CATALINA_BASE + "/conf": "/etc/tomcat7",
+    CATALINA_BASE + "/work": "/var/cache/tomcat7/work",
+  }
 )
 
 docker_build(
   name = "tomcat",
   base = ":tomcat_bin",
-  files = ["entrypoint-tomcat"],
+  files = ["entrypoint-tomcat", "etc"],
   ports = ["8080"],
-  workdir = "/opt/tomcat7",
-  cmd = ["/opt/tomcat7/bin/catalina.sh", "run"],
-  #entrypoint = ["/entrypoint-tomcat"],
-  #cmd = ["tomcat"],
+  workdir = TOMCAT_HOME,
+  entrypoint = ["/entrypoint-tomcat"],
+  cmd = ["tomcat"],
   visibility = ["//visibility:public"],
 )

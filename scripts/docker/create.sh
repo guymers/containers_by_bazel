@@ -18,6 +18,9 @@ docker build -t bazel/dependencies:jessie-nginx -f "$JESSIE_DIR/nginx.Dockerfile
 docker build -t bazel/dependencies:jessie-nodejs -f "$JESSIE_DIR/nodejs.Dockerfile" "$JESSIE_DIR"
 docker build -t bazel/dependencies:jessie-zulu -f "$JESSIE_DIR/zulu.Dockerfile" "$JESSIE_DIR"
 
+docker build -t bazel/dependencies:jessie-java -f "$JESSIE_DIR/java.Dockerfile" "$JESSIE_DIR"
+docker tag -f bazel/dependencies:jessie-java bazel/dependencies:jessie-tomcat7
+
 readonly stretch_image=$(bazel run //base:stretch | grep "^Tagging" | awk '{print $4}')
 docker tag -f "$stretch_image" bazel/base:stretch
 
