@@ -1313,18 +1313,23 @@ http_file(
 )
 http_file(
   name = "deb_jessie_openjdk_8_jdk",
-  url = "http://http.debian.net/debian/pool/main/o/openjdk-8/openjdk-8-jdk_8u72-b15-1~bpo8+1_amd64.deb",
-  sha256 = "20aba9289fa2cb340750578e5f2782fafac19fad64cb7f033a67e280868849ed",
+  url = "http://http.debian.net/debian/pool/main/o/openjdk-8/openjdk-8-jdk_8u91-b14-1~bpo8+1_amd64.deb",
+  sha256 = "9a8b58041544a725d94364cabca4b6aea6fffadca2388e3a982903a4dc402547",
+)
+http_file(
+  name = "deb_jessie_openjdk_8_jdk_headless",
+  url = "http://http.debian.net/debian/pool/main/o/openjdk-8/openjdk-8-jdk-headless_8u91-b14-1~bpo8+1_amd64.deb",
+  sha256 = "97c5c523b7fe4af5956d286d6ab4769bdcd81b88ad50ed0d670cd324c3af6772",
 )
 http_file(
   name = "deb_jessie_openjdk_8_jre",
-  url = "http://http.debian.net/debian/pool/main/o/openjdk-8/openjdk-8-jre_8u72-b15-1~bpo8+1_amd64.deb",
-  sha256 = "990b9922e7d902c1bcbd6d0449d8c49d1ecc38df04315680dbf1626cf47bd8d4",
+  url = "http://http.debian.net/debian/pool/main/o/openjdk-8/openjdk-8-jre_8u91-b14-1~bpo8+1_amd64.deb",
+  sha256 = "81573fd956d1f22dfc330eaf61c1c47c9bcc49deea4802684e14e7160f0ba1a4",
 )
 http_file(
   name = "deb_jessie_openjdk_8_jre_headless",
-  url = "http://http.debian.net/debian/pool/main/o/openjdk-8/openjdk-8-jre-headless_8u72-b15-1~bpo8+1_amd64.deb",
-  sha256 = "92b0a442e6774d8b7d226020eb647b92490bcf45836ba5dfef1fe454e0188564",
+  url = "http://http.debian.net/debian/pool/main/o/openjdk-8/openjdk-8-jre-headless_8u91-b14-1~bpo8+1_amd64.deb",
+  sha256 = "bbf2e09589ba7b7d604b0ac39af40dbd1106c74dbd659c7aba1f0bffa6980288",
 )
 http_file(
   name = "deb_jessie_openssh_client",
@@ -1554,18 +1559,18 @@ http_file(
 )
 http_file(
   name = "deb_stretch_libc6",
-  url = "http://httpredir.debian.org/debian/pool/main/g/glibc/libc6_2.22-7_amd64.deb",
-  sha256 = "9292aecdd8dd76bb4cb0826ec0adf12c5c01dacf8d53d0ce32770315ab153d97",
+  url = "http://httpredir.debian.org/debian/pool/main/g/glibc/libc6_2.22-9_amd64.deb",
+  sha256 = "c4f8eca2b3c07295e2610781166ea6f0c4490ff1c3e91d3e8c1b12e0b6b6bf25",
 )
 http_file(
   name = "deb_stretch_libc6_dev",
-  url = "http://httpredir.debian.org/debian/pool/main/g/glibc/libc6-dev_2.22-7_amd64.deb",
-  sha256 = "1c3ceda99e08ad10a40567267696366d6e1b959d27f372f24681ee80cba6655d",
+  url = "http://httpredir.debian.org/debian/pool/main/g/glibc/libc6-dev_2.22-9_amd64.deb",
+  sha256 = "00df158ce508e448d80ec28f479ae4aaada4773d0afe9956378111bb2f60ccd3",
 )
 http_file(
   name = "deb_stretch_libc_dev_bin",
-  url = "http://httpredir.debian.org/debian/pool/main/g/glibc/libc-dev-bin_2.22-7_amd64.deb",
-  sha256 = "d430856fbbdf6ebcf06379e15937a7b0bdcb4bc49b5cbb3b5e528ab1ad0a6aaf",
+  url = "http://httpredir.debian.org/debian/pool/main/g/glibc/libc-dev-bin_2.22-9_amd64.deb",
+  sha256 = "05e3d129a64b323670d46e1e8381f26d2b566e5ae39d3cf1872d61a6420e7cdc",
 )
 http_file(
   name = "deb_stretch_libcc1_0",
@@ -1829,8 +1834,8 @@ http_file(
 )
 http_file(
   name = "deb_stretch_linux_libc_dev",
-  url = "http://httpredir.debian.org/debian/pool/main/l/linux/linux-libc-dev_4.5.3-2_amd64.deb",
-  sha256 = "578c311408a8e21e0f8b498b8542aa1efa7687b2893622df50bae50ae07e444f",
+  url = "http://httpredir.debian.org/debian/pool/main/l/linux/linux-libc-dev_4.5.4-1_amd64.deb",
+  sha256 = "8798e3fd9a5a267b2d717ba88628111da132a559defa3837717f087bf5bd0123",
 )
 http_file(
   name = "deb_stretch_m4",

@@ -222,6 +222,7 @@ filegroup(
     "@deb_jessie_libxtst6//file",
     "@deb_jessie_libxxf86vm1//file",
     "@deb_jessie_openjdk_8_jdk//file",
+    "@deb_jessie_openjdk_8_jdk_headless//file",
     "@deb_jessie_openjdk_8_jre//file",
     "@deb_jessie_openjdk_8_jre_headless//file",
     "@deb_jessie_openssl//file",
