@@ -88,9 +88,9 @@ http_file(
 ###### JASPER
 new_http_archive(
   name = "jasper_server",
-  url = "http://downloads.sourceforge.net/project/jasperserver/JasperServer/JasperReports%20Server%20Community%20Edition%206.2.0/jasperreports-server-cp-6.2.0-bin.zip",
-  sha256 = "b91f8546a3c20a10bd6277be969f82349f9ce87ac368d0aeeff3458b2a340633",
-  strip_prefix = "jasperreports-server-cp-6.2.0-bin",
+  url = "http://downloads.sourceforge.net/project/jasperserver/JasperServer/JasperReports%20Server%20Community%20Edition%206.2.1/jasperreports-server-cp-6.2.1-bin.zip",
+  sha256 = "f7d7f7e3be7a6d01c5c00386978402665ee3a01c9f013fe8ac37c569dba43350",
+  strip_prefix = "jasperreports-server-cp-6.2.1-bin",
   build_file_content = "exports_files([ \
     'jasperserver.war', \
     'apache-ant', \
@@ -103,12 +103,11 @@ maven_jar(
   sha1 = "5c7e80698b80a5045fe64daa67426051bbd16a56",
 )
 
-# jasperreports-server-cp-6.2.0-bin
 new_http_archive(
   name = "jasper_client",
-  url = "http://downloads.sourceforge.net/project/jasperstudio/JaspersoftStudio-6.2.0/TIBCOJaspersoftStudio-6.2.0.final-linux-x86_64.tgz",
-  sha256 = "4d668c1c06d5a149509691836ef4d6eeb26bf00867104593efcf20151fccf97a",
-  build_file_content = "exports_files(['TIBCOJaspersoftStudio-6.2.0.final'])",
+  url = "http://downloads.sourceforge.net/project/jasperstudio/JaspersoftStudio-6.2.2/TIBCOJaspersoftStudio-6.2.2.final-linux-x86_64.tgz",
+  sha256 = "b43a4ee5ddf8a1f192ea4e268b389c2b766f9a6fbd5ef58e6bbef9f2cdf73b7e",
+  build_file_content = "exports_files(['TIBCOJaspersoftStudio-6.2.2.final'])",
 )
 
 

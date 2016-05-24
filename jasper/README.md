@@ -1,20 +1,22 @@
 ```
-bazel run //jasper:database
-bazel run //jasper:server
-bazel run //jasper:client
+bazel run //jasper/database
+bazel run //jasper/server
+bazel run //jasper/client
 ```
 
-Server
+## Server
+
 ```
-docker run -ti --rm --name jasper-postgres -p 5432:5432 bazel/jasper:database
-docker run -ti --rm -p 8080:8080 --link jasper-postgres:postgres bazel/jasper:jasper
+docker run -ti --rm --name jasper-postgres bazel/jasper_database:database
+docker run -ti --rm -m 1024m -p 8080:8080 --link jasper-postgres:postgres bazel/jasper_server:server
 ```
 
-Client
+Open http://localhost:8080, log in with jasperadmin:jasperadmin
+
+## Client
 ```
-docker run --rm -ti -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix bazel/jasper:client
+docker run --rm -ti -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix bazel/jasper_client:client
 ```
 
 Probably need to run ```xhost +local:``` in order for the gui to work
 Run ```xhost -``` when finished
-```

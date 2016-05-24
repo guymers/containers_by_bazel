@@ -1,5 +1,8 @@
 load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 
+CATALINA_HOME = "/usr/share/tomcat7"
+CATALINA_BASE = "/var/lib/tomcat7"
+
 docker_build(
   name = "temp_database",
   base = "//postgresql",
@@ -11,36 +14,29 @@ docker_build(
   ],
 )
 
-docker_build(
-  name = "temp_database_jdk",
-  base = ":temp_database",
-  env = {
-    "JAVA_HOME": "/usr/lib/jvm/java-8-openjdk-amd64",
-  },
-  debs = ["//deps/jessie:jdk"],
-)
-
 # TODO reuse //tomcat
 docker_build(
-  name = "temp_database_jdk_tomcat",
-  base = ":temp_database_jdk",
+  name = "temp_database_tomcat",
+  base = ":temp_database",
+  debs = ["//deps/jessie:zulu", "//deps/jessie:tomcat7"],
   env = {
-    "CATALINA_HOME": "/opt/apache-tomcat-7.0.68",
-    "CATALINA_BASE": "/opt/apache-tomcat-7.0.68",
+    "JAVA_HOME": "/usr/lib/jvm/zulu-8-amd64",
+
+    "CATALINA_BASE": CATALINA_BASE,
+    "CATALINA_HOME": CATALINA_HOME,
+    "CATALINA_OUT": "/dev/stdout",
+    "CATALINA_TMPDIR": "/tmp",
   },
-  directory = "/opt",
-  files = ["@tomcat//:apache-tomcat-7.0.68"],
-  symlinks = { "/opt/tomcat7": "/opt/apache-tomcat-7.0.68" },
 )
 
 genrule(
   name = "create_database",
-  srcs = [":temp_database_jdk_tomcat.tar"],
+  srcs = [":temp_database_tomcat.tar"],
   outs = ["jasperserver.dump"],
   cmd = "$(location :create_jasperserver_database) $< $@",
   tools = [":create_jasperserver_database"],
   local = 1, # ignore sandboxing as script connects to docker
-  visibility = ["//jasper:__pkg__"],
+  visibility = ["//jasper/database:__pkg__"],
 )
 
 sh_binary(
