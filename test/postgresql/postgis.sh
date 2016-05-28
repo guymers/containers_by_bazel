@@ -1,9 +1,9 @@
 #!/bin/bash -e
 
-while ! psql -U postgres &>/dev/null; do :; done
-# probably hit the server when it was started locally applying the init folder
-sleep 5
-while ! psql -U postgres &>/dev/null; do :; done
+# set host to not connect through the socket to avoid connecting when applying the init folder
+while ! psql -U postgres -h localhost -c "SELECT 1" &>/dev/null; do
+  sleep 2
+done
 
 readonly psql="psql -U postgres --no-password"
 $psql -c "CREATE DATABASE test"
