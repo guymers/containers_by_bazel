@@ -1,0 +1,43 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+if [ -d "$ZK_DATA" -a "$(stat -c '%U' "$ZK_DATA" 2>/dev/null)" = "root" ]; then
+  chown zookeeper "$ZK_DATA"
+  chmod o-rwx "$ZK_DATA"
+fi
+
+if [ -d "$EXHIBITOR_SHARED" -a "$(stat -c '%U' "$EXHIBITOR_SHARED" 2>/dev/null)" = "root" ]; then
+  chown zookeeper "$EXHIBITOR_SHARED"
+  chmod o-rwx "$EXHIBITOR_SHARED"
+fi
+
+if [ "$1" = 'zookeeper' ]; then
+  chown zookeeper "$ZK_HOME/"
+  chown zookeeper "$ZK_HOME/conf/"
+
+  export JMX_MONITORING=false
+  source /java-opts.sh
+
+  readonly default_props_file=/tmp/exhibitor_default.properties
+  cat /etc/exhibitor/default.properties > "$default_props_file"
+  if [ -f "/etc/exhibitor/java.env" ]; then
+    java_env=""
+    while read line; do
+      before_equals=$(echo "${line%%=*}")
+      after_equals=$(echo "${line#*=}")
+      java_env="$java_env $before_equals=\"$(eval echo "$after_equals")\";"
+    done </etc/exhibitor/java.env
+    echo "java-environment=$java_env" >> "$default_props_file"
+  fi
+  if [ -n "$ZK_ENSEMBLE_SIZE" ]; then
+    echo "auto-manage-instances-fixed-ensemble-size=${ZK_ENSEMBLE_SIZE}" >> "$default_props_file"
+  fi
+
+  exec gosu zookeeper java -jar /opt/exhibitor/exhibitor.jar \
+    --defaultconfig "$default_props_file" \
+    --hostname ${HOSTNAME} \
+    "${@:2}"
+else
+  exec "$@"
+fi

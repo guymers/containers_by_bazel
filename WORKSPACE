@@ -19,6 +19,12 @@ http_file(
 )
 
 http_file(
+  name = "tini",
+  url = "https://github.com/krallin/tini/releases/download/v0.9.0/tini_0.9.0.deb",
+  sha256 = "21a2d4436e9fd12248bbcc5d881ca7815f35e836e1c9f6595a7c490fd2e6bc0f",
+)
+
+http_file(
   name = "grafana",
   url = "https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.2-1463383025_amd64.deb",
   sha256 = "cd1289926749e289c2476dff4f7349c266800a2a81f38eae49ef68ca18e716a4",
@@ -75,6 +81,22 @@ http_file(
   name = "jenkins_agent_jar",
   url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/2.0/swarm-client-2.0-jar-with-dependencies.jar",
   sha256 = "98e6e07cc73c6a37134e2e653ceb841b8c5790ffee73ce6abb38bda6ed5be274",
+)
+
+###### MAVEN
+new_http_archive(
+  name = "maven",
+  url = "http://mirrors.ocf.berkeley.edu/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz",
+  sha256 = "6e3e9c949ab4695a204f74038717aa7b2689b1be94875899ac1b3fe42800ff82",
+  build_file_content = "exports_files(['apache-maven-3.3.9'])",
+)
+
+###### ZOOKEEPER
+new_http_archive(
+  name = "zookeeper",
+  url = "http://mirrors.ocf.berkeley.edu/apache/zookeeper/zookeeper-3.4.8/zookeeper-3.4.8.tar.gz",
+  sha256 = "f10a0b51f45c4f64c1fe69ef713abf9eb9571bc7385a82da892e83bb6c965e90",
+  build_file_content = "exports_files(['zookeeper-3.4.8'])",
 )
 
 

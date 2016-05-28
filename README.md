@@ -60,6 +60,7 @@ You can use the ./build_container script. It ensures that you cannot override th
     ./scripts/build_container.sh //postgresql:postgis postgis ${POSTGRESQL_VERSION}-${POSTGIS_VERSION}
     ./scripts/build_container.sh //redis redis ${REDIS_VERSION}
     ./scripts/build_container.sh //sbt sbt ${SBT_VERSION}
+    ./scripts/build_container.sh //zookeeper zookeeper ${ZOOKEEPER_VERSION}
 
 To test:
 
@@ -88,6 +89,7 @@ Create sbt ivy cache
     911 nexus
     912 jenkins
     913 tomcat
+    919 zookeeper
     921 prometheus
     922 grafana
     930 nginx

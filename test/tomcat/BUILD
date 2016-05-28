@@ -19,6 +19,7 @@ docker_test(
   size = "medium",
   image = ":tomcat_test",
   daemon = True,
+  mem_limit = "1024m",
   test = "test.sh",
   golden = "output.txt",
 )
