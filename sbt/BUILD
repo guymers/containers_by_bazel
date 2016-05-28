@@ -1,5 +1,3 @@
-load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
-
 docker_build(
   name = "sbt_base_raw",
   base = "//java:zulu_ssl",

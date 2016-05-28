@@ -1,4 +1,3 @@
-load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 load("//tomcat/war_to_tar:war_to_tar.bzl", "war_to_tar")
 load("//tools/docker:docker.bzl", "docker_test")
 

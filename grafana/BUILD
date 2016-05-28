@@ -1,4 +1,3 @@
-load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 load("//macros:gosu.bzl", "add_gosu")
 load("//macros/user:user.bzl", "add_user")
 

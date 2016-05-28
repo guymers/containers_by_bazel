@@ -1,5 +1,3 @@
-load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
-
 JASPER_STUDIO_VERSION = "6.2.2"
 
 docker_build(

@@ -1,7 +1,5 @@
 package(default_visibility = ["//visibility:public"])
 
-load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
-
 genrule(
   name = "jessie_tar",
   srcs = ["@debian_jessie//file"],

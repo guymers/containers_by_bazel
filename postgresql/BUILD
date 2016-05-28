@@ -1,4 +1,3 @@
-load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
 load("//macros:gosu.bzl", "add_gosu")
 
 add_gosu(name = "postgresql_gosu", base = "//base:jessie")
