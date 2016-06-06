@@ -1,8 +1,8 @@
-bazel/dependencies stretch-base 3cf1bad60dc9
-bazel/dependencies jessie-java 9676183cc15a
-bazel/dependencies jessie-tomcat7 9676183cc15a
-bazel/dependencies jessie-zulu 7ceff7e5eb92
-bazel/dependencies jessie-nodejs 474a0a89015e
-bazel/dependencies jessie-nginx 59e00dddb05d
-bazel/dependencies jessie-ca-certificates 0a37a96820a9
-bazel/dependencies jessie-base 094688a7c9e6
+bazel/dependencies stretch-base d5bf57b40c41
+bazel/dependencies jessie-java e8825f1964ad
+bazel/dependencies jessie-tomcat7 e8825f1964ad
+bazel/dependencies jessie-zulu c9d5567bce30
+bazel/dependencies jessie-nodejs 48ede001d0a2
+bazel/dependencies jessie-nginx a0f52919dd32
+bazel/dependencies jessie-ca-certificates a9de98a7b1ff
+bazel/dependencies jessie-base d76f7c524688
