@@ -3,6 +3,7 @@ package(default_visibility = ["//visibility:public"])
 filegroup(
   name = "php",
   srcs = [
+    "@deb_stretch_libapparmor1//file",
     "@deb_stretch_libbsd0//file",
     "@deb_stretch_libcurl3//file",
     "@deb_stretch_libedit2//file",
@@ -64,8 +65,6 @@ filegroup(
     "@deb_stretch_file//file",
     "@deb_stretch_gcc//file",
     "@deb_stretch_gcc_5//file",
-    "@deb_stretch_gcc_5_base//file",
-    "@deb_stretch_gcc_6_base//file",
     "@deb_stretch_libasan2//file",
     "@deb_stretch_libatomic1//file",
     "@deb_stretch_libbsd0//file",
@@ -74,7 +73,6 @@ filegroup(
     "@deb_stretch_libcc1_0//file",
     "@deb_stretch_libcilkrts5//file",
     "@deb_stretch_libedit2//file",
-    "@deb_stretch_libgcc1//file",
     "@deb_stretch_libgcc_5_dev//file",
     "@deb_stretch_libgdbm3//file",
     "@deb_stretch_libgmp10//file",
@@ -96,7 +94,6 @@ filegroup(
     "@deb_stretch_libsigsegv2//file",
     "@deb_stretch_libssl1_0_2//file",
     "@deb_stretch_libssl_dev//file",
-    "@deb_stretch_libstdc__6//file",
     "@deb_stretch_libtool//file",
     "@deb_stretch_libtsan0//file",
     "@deb_stretch_libubsan0//file",

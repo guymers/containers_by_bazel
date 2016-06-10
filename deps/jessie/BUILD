@@ -28,7 +28,6 @@ filegroup(
     "@deb_jessie_libssh2_1//file",
     "@deb_jessie_libtasn1_6//file",
     "@deb_jessie_perl//file",
-    "@deb_jessie_perl_base//file",
     "@deb_jessie_perl_modules//file",
   ],
 )
@@ -308,7 +307,6 @@ filegroup(
     "@deb_jessie_libgdbm3//file",
     "@deb_jessie_nodejs//file",
     "@deb_jessie_perl//file",
-    "@deb_jessie_perl_base//file",
     "@deb_jessie_perl_modules//file",
     "@deb_jessie_rlwrap//file",
   ],
