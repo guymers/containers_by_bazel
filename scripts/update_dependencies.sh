@@ -37,14 +37,12 @@ for dist in "jessie" "stretch"; do
 done
 
 
-echo "- Updating ssl macro"
-readonly macros_dir="$ROOT/macros"
-"$DIR/ssl/ssl_macro.sh" > "$macros_dir/ssl.bzl"
-#cp "$OUT_DIR/scripts/ssl/ssl.bzl" "$macros_dir/ssl.bzl"
-cp "$OUT_DIR/scripts/ssl/ca-certificates.crt" "$macros_dir/ssl/ca-certificates.crt"
+echo "- Updating ssl certs"
+readonly certs_dir="$ROOT/base/ca_certificates"
+cp "$OUT_DIR/scripts/ssl/certs.BUILD" "$certs_dir/BUILD"
+cp "$OUT_DIR/scripts/ssl/ca-certificates.crt" "$certs_dir/ca-certificates.crt"
 
 
 echo "- Creating java cacerts file"
-# ./scripts/java/generate_java_cacerts.sh > java/cacerts
 cp "$OUT_DIR/scripts/java/cacerts" "$ROOT/java/cacerts"
 chmod 644 "$ROOT/java/cacerts"

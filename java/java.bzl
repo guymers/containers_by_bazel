@@ -1,24 +1,40 @@
-load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
-load("//macros:ssl.bzl", "add_certs")
+load("@bazel_rules_container//container:container.bzl", "container_image")
 
-def java_create(name, base):
-  docker_build(
+def java_image(
+  name,
+  base,
+  files,
+  java_home = "java-8-openjdk-amd64",
+  visibility = ["//visibility:public"]
+):
+  container_image(
     name = name,
     base = base,
-    debs = ["//deps/jessie:" + name],
-    visibility = ["//visibility:public"],
+    layers = [files, "//java:script_files"],
+    env = {
+      "LANG": "C.UTF-8",
+      "LC_CTYPE": "C.UTF-8",
+      "JAVA_HOME": "/usr/lib/jvm/" + java_home,
+      "PATH": "/usr/lib/jvm/" + java_home + "/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+
+      "JMX_MONITORING": "true",
+      "JMX_HOSTNAME": "127.0.0.1",
+      "JMX_PORT": "1099",
+
+      #"GC_LOG_FOLDER": "/var/log/java/gc",
+      "OOM_DUMP_FOLDER": "/var/log/java/oom",
+    },
+    ports = ["1099"],
+    volumes = [
+      "/var/log/java/gc",
+      "/var/log/java/oom",
+    ],
+    visibility = visibility,
   )
 
-  add_certs(
-    name = name + "_ssl_base",
-    base = ":" + name,
-    visibility = ["//scripts/java:__pkg__"],
-  )
-
-  docker_build(
+  container_image(
     name = name + "_ssl",
-    base = ":" + name + "_ssl_base",
-    directory = "/etc/ssl/certs/java/",
-    files = ["cacerts"],
-    visibility = ["//visibility:public"],
+    base = ":" + name,
+    layers = ["//base/ca_certificates", "//java:certs"],
+    visibility = visibility,
   )

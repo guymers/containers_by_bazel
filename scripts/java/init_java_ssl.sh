@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # /var/lib/dpkg/info/ca-certificates-java.postinst
-storepass='changeit'
+readonly storepass='changeit'
 JAR=/usr/share/ca-certificates-java/ca-certificates-java.jar
 
 find /etc/ssl/certs -name \*.pem | \

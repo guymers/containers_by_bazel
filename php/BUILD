@@ -1,20 +1,30 @@
-docker_build(
-  name = "php",
-  base = "//base:stretch",
+container_layer(
+  name = "files",
   debs = ["//deps/stretch:php"],
   symlinks = {
     "/usr/bin/php": "/usr/bin/php7.0",
     "/usr/bin/php-fpm": "/usr/bin/php-fpm7.0",
   },
-  volumes = ["/etc/php/7.0"],
+)
+
+container_image(
+  name = "php",
+  base = "//base:stretch",
+  layers = [":files"],
 
   visibility = ["//visibility:public"],
 )
 
-docker_build(
+
+container_layer(
+  name = "dev_files",
+  debs = ["//deps/stretch:php_dev"],
+)
+
+container_image(
   name = "dev",
   base = ":php",
-  debs = ["//deps/stretch:php_dev"],
+  layers = [":dev_files"],
 
   visibility = ["//visibility:public"],
 )

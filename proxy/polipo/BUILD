@@ -1,16 +1,28 @@
-load("//macros:gosu.bzl", "add_gosu")
+load("//macros/user:user.bzl", "user_layer")
 
-add_gosu(name = "polipo_gosu", base = "//base:jessie")
+POLIPO_HOME = "/polipo-cache"
 
-docker_build(
-  name = "polipo",
-  base = ":polipo_gosu",
+user_layer(
+  name = "user",
+  id = "981",
+  user = "polipo",
+  home = POLIPO_HOME,
+)
+
+container_layer(
+  name = "files",
   debs = ["//deps/jessie:polipo"],
-  env = {
-    "POLIPO_HOME": "/polipo-cache",
-  },
   directory = "/",
   files = ["entrypoint-polipo", "etc"],
+)
+
+container_image(
+  name = "polipo",
+  base = "//base:jessie",
+  layers = ["//base/gosu", ":user", ":files"],
+  env = {
+    "POLIPO_HOME": POLIPO_HOME,
+  },
   volumes = [
     "/polipo-cache",
     "/etc/polipo",

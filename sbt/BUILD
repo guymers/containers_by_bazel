@@ -1,13 +1,12 @@
-docker_build(
-  name = "sbt_base_raw",
-  base = "//java:zulu_ssl",
+container_layer(
+  name = "files",
   directory = "/usr/share",
   files = ["@sbt//:sbt"],
+  visibility = ["//sbt:__subpackages__"],
 )
 
-docker_build(
-  name = "sbt_base",
-  base = ":sbt_base_raw",
+container_layer(
+  name = "custom_files",
   directory = "/usr/share",
   files = ["files/sbt"],
   symlinks = {
@@ -16,28 +15,37 @@ docker_build(
   visibility = ["//sbt:__subpackages__"],
 )
 
-docker_build(
-  name = "sbt_with_ivy_cache",
-  base = ":sbt_base",
+container_layer(
+  name = "ivy_cache",
   directory = "/ivy2",
   #tars = ["//sbt/ivy_cache"],
   tars = ["@sbt_ivy_cache//file"],
 )
 
 # support running as non-root
-docker_build(
-  name = "sbt_ivy_cache_permissions",
-  base = ":sbt_with_ivy_cache",
+container_layer(
+  name = "ivy_cache_permissions",
   directory = "/",
   mode = "0777",
   files = ["files/ivy2"],
 )
 
-docker_build(
-  name = "sbt",
-  base = ":sbt_ivy_cache_permissions",
+container_layer(
+  name = "sbt_permissions",
   directory = "/etc",
   mode = "0777",
   files = ["files/etc/sbt"],
+)
+
+container_image(
+  name = "sbt",
+  base = "//java:zulu_ssl",
+  layers = [
+    ":files",
+    ":custom_files",
+    ":ivy_cache",
+    ":ivy_cache_permissions",
+    ":sbt_permissions",
+  ],
   visibility = ["//visibility:public"],
 )

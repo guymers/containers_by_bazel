@@ -7,7 +7,6 @@ set -o pipefail
 localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 export LANG=en_US.UTF-8
 
-adduser --system --uid=941 --home "$POSTGRES_HOME" postgres
 if [ -d "$POSTGRES_HOME" -a "$(stat -c '%U' "$POSTGRES_HOME" 2>/dev/null)" = "root" ]; then
   chown postgres "$POSTGRES_HOME"
   chmod o-rwx "$POSTGRES_HOME"

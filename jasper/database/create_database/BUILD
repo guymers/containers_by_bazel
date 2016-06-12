@@ -1,9 +1,13 @@
 CATALINA_HOME = "/usr/share/tomcat7"
 CATALINA_BASE = "/var/lib/tomcat7"
 
-docker_build(
-  name = "temp_database",
-  base = "//postgresql",
+container_layer(
+  name = "deps",
+  debs = ["//deps/jessie:zulu", "//deps/jessie:tomcat7"],
+)
+
+container_layer(
+  name = "files",
   directory = "/opt/jasperserver",
   files = [
     "@jasper_server//:buildomatic",
@@ -13,10 +17,10 @@ docker_build(
 )
 
 # TODO reuse //tomcat
-docker_build(
+container_image(
   name = "temp_database_tomcat",
-  base = ":temp_database",
-  debs = ["//deps/jessie:zulu", "//deps/jessie:tomcat7"],
+  base = "//postgresql",
+  layers = [":deps", ":files"],
   env = {
     "JAVA_HOME": "/usr/lib/jvm/zulu-8-amd64",
 

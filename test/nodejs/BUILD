@@ -1,6 +1,4 @@
-load("//tools/docker:docker.bzl", "docker_test")
-
-docker_test(
+container_test(
   name = "nodejs",
   size = "small",
   image = "//nodejs",

@@ -8,11 +8,11 @@ genrule(
 )
 
 genrule(
-  name = "macro",
+  name = "build_file",
   srcs = ["//scripts/docker:container-versions.txt"],
-  outs = ["ssl.bzl"],
-  cmd = "$(location :ssl_macro) > $@",
-  tools = [":ssl_macro"],
+  outs = ["certs.BUILD"],
+  cmd = "$(location :ca_certificates_build) > $@",
+  tools = [":ca_certificates_build"],
 )
 
 sh_binary(
@@ -21,6 +21,6 @@ sh_binary(
 )
 
 sh_binary(
-  name = "ssl_macro",
-  srcs = ["ssl_macro.sh"],
+  name = "ca_certificates_build",
+  srcs = ["ca_certificates_build.sh"],
 )

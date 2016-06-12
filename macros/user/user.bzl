@@ -1,6 +1,6 @@
-load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
+load("@bazel_rules_container//container:container.bzl", "container_layer")
 
-def add_user(name, base, id, user, home):
+def user_layer(name, id, user, home):
   native.genrule(
     name = "user_" + id + "_" + name,
     srcs = ["//macros/user:files/passwd"],
@@ -17,12 +17,12 @@ def add_user(name, base, id, user, home):
     tools = ["//macros/user:add_group"],
   )
 
-  docker_build(
+  container_layer(
     name = name,
-    base = base,
     files = [
       "user_" + id + "_" + name,
       "group_" + id + "_" + name,
-    ],
+      ],
     directory = "/etc",
   )
+

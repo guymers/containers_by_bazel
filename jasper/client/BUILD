@@ -1,15 +1,19 @@
 JASPER_STUDIO_VERSION = "6.2.2"
 
-docker_build(
-  name = "client_base",
-  base = "//java:zulu_ssl",
+container_layer(
+  name = "client_deps",
   debs = ["//deps/jessie:jasper_client"],
 )
 
-docker_build(
-  name = "client",
-  base = ":client_base",
+container_layer(
+  name = "client_files",
   directory = "/opt/",
   files = ["@jasper_client//:TIBCOJaspersoftStudio-" + JASPER_STUDIO_VERSION + ".final"],
+)
+
+container_image(
+  name = "client",
+  base = "//java:zulu_ssl",
+  layers = [":client_deps", ":client_files"],
   cmd = ["/opt/TIBCOJaspersoftStudio-" + JASPER_STUDIO_VERSION + ".final/Jaspersoft Studio"],
 )

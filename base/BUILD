@@ -7,9 +7,13 @@ genrule(
   cmd = "cat $< | xzcat >$@",
 )
 
-docker_build(
-  name = "jessie",
+container_layer(
+  name = "jessie_layer",
   tars = [":jessie_tar"],
+)
+container_image(
+  name = "jessie",
+  layers = [":jessie_layer"],
 )
 
 
@@ -20,7 +24,11 @@ genrule(
   cmd = "cat $< | xzcat >$@",
 )
 
-docker_build(
-  name = "stretch",
+container_layer(
+  name = "stretch_layer",
   tars = [":stretch_tar"],
+)
+container_image(
+  name = "stretch",
+  layers = [":stretch_layer"],
 )

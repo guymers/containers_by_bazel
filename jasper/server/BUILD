@@ -3,18 +3,22 @@ load("//tomcat/war_to_tar:war_to_tar.bzl", "war_to_tar")
 CATALINA_BASE = "/var/lib/tomcat7"
 CATALINA_HOME = "/usr/share/tomcat7"
 
-docker_build(
-  name = "jasper_tomcat_lib",
-  base = "//tomcat",
+container_layer(
+  name = "jdbc_driver",
   directory = CATALINA_HOME + "/lib",
   files = ["@postgresql_driver//jar"],
 )
 
-docker_build(
-  name = "jasper_base",
-  base = ":jasper_tomcat_lib",
+container_layer(
+  name = "files",
   directory = CATALINA_BASE + "/webapps/ROOT",
   tars = [":jasperserver_tar"],
+)
+
+container_layer(
+  name = "config",
+  directory = CATALINA_BASE + "/webapps/ROOT",
+  files = ["jasperserver/META-INF", "jasperserver/WEB-INF"],
 )
 
 war_to_tar(
@@ -23,9 +27,8 @@ war_to_tar(
   tar = "jasperserver.tar",
 )
 
-docker_build(
+container_image(
   name = "server",
-  base = ":jasper_base",
-  directory = CATALINA_BASE + "/webapps/ROOT",
-  files = ["jasperserver/META-INF", "jasperserver/WEB-INF"],
+  base = "//tomcat",
+  layers = [":jdbc_driver", ":files", ":config"],
 )

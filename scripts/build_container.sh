@@ -23,21 +23,32 @@ echo "Built $(echo "$run_result" | awk '{print $4}')"
 # if there is no version provided then generate one from the container id
 if [ -z "$version" ]; then
   version="${local_image_id:0:12}"
-
-  remote_image_version="$remote_image:$version"
-
-  # docker image ids are not deterministic until 1.10 so just check if an image exists with the tag
-  if [ "$DOCKER_REGISTRY" != "$DEFAULT_REGISTRY" ]; then
-    if docker pull "$remote_image_version" 2> /dev/null; then
-      echo "Image has not changed $remote_image $version"
-      exit 0
-    fi
-  fi
 fi
 
 remote_image_version="$remote_image:$version"
+echo $remote_image_version
 
-docker tag -f "$local_image_id" "$remote_image_version"
+if [ "$DOCKER_REGISTRY" != "$DEFAULT_REGISTRY" ]; then
+  docker pull "$remote_image_version" 2> /dev/null || true
+fi
 
-echo "Created $remote_image $version"
-exit 0
+# enforce docker tag immutability
+current_id=$(docker inspect --format="{{ .Id }}" "$remote_image_version" 2> /dev/null || echo "")
+if [ -n "$current_id" ]; then
+  current_id=${current_id:7} # remove sha256: prefix
+
+  if [ "$local_image_id" == "$current_id" ]; then
+    docker tag "$local_image_id" "$remote_image_version"
+
+    echo "Image has not changed $remote_image $version"
+    exit 0
+  else
+    echo "Attempting to update $remote_image_version to new hash $local_image_id" >&2
+    exit 1
+  fi
+else
+  docker tag "$local_image_id" "$remote_image_version"
+
+  echo "Created $remote_image $version"
+  exit 0
+fi

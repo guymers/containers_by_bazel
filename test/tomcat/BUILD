@@ -1,5 +1,4 @@
 load("//tomcat/war_to_tar:war_to_tar.bzl", "war_to_tar")
-load("//tools/docker:docker.bzl", "docker_test")
 
 war_to_tar(
   name = "sample_tar",
@@ -7,14 +6,18 @@ war_to_tar(
   tar = "sample.tar",
 )
 
-docker_build(
-  name = "tomcat_test",
-  base = "//tomcat",
+container_layer(
+  name = "sample_war_layer",
   directory = "/var/lib/tomcat7/webapps/ROOT",
   tars = [":sample_tar"],
 )
+container_image(
+  name = "tomcat_test",
+  base = "//tomcat",
+  layers = [":sample_war_layer"],
+)
 
-docker_test(
+container_test(
   name = "tomcat",
   size = "medium",
   image = ":tomcat_test",

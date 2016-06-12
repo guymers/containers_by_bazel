@@ -1,39 +1,37 @@
-load("//macros:ssl.bzl", "add_certs")
-load("//java:java.bzl", "java_create")
+package(default_visibility = ["//java:__subpackages__"])
 
-docker_build(
-  name = "java",
-  base = "//base:jessie",
-  env = {
-    "LANG": "C.UTF-8",
-    "LC_CTYPE": "C.UTF-8",
-    "JAVA_HOME": "/usr/lib/jvm/java-8-openjdk-amd64",
-    "PATH": "/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+load("//java:java.bzl", "java_image")
 
-    "JMX_MONITORING": "true",
-    "JMX_HOSTNAME": "127.0.0.1",
-    "JMX_PORT": "1099",
+container_layer(
+  name = "certs",
+  directory = "/etc/ssl/certs/java/",
+  files = ["cacerts"],
+)
 
-    #"GC_LOG_FOLDER": "/var/log/java/gc",
-    "OOM_DUMP_FOLDER": "/var/log/java/oom",
-  },
+container_layer(
+  name = "script_files",
   directory = "/",
   files = glob(["scripts/*"]),
-  ports = ["1099"],
-  volumes = [
-    "/var/log/java/gc",
-    "/var/log/java/oom",
-  ],
 )
-java_create("jre", ":java")
-java_create("jdk", ":java")
 
-docker_build(
-  name = "zulu_base",
-  base = ":java",
-  env = {
-    "JAVA_HOME": "/usr/lib/jvm/zulu-8-amd64",
-    "PATH": "/usr/lib/jvm/zulu-8-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
-  },
+container_layer(name = "jre_files", debs = ["//deps/jessie:jre"])
+java_image(
+  name = "jre",
+  base = "//base:jessie",
+  files = ":jre_files",
 )
-java_create("zulu", ":zulu_base")
+
+container_layer(name = "jdk_files", debs = ["//deps/jessie:jdk"])
+java_image(
+  name = "jdk",
+  base = "//base:jessie",
+  files = ":jdk_files",
+)
+
+container_layer(name = "zulu_files", debs = ["//deps/jessie:zulu"])
+java_image(
+  name = "zulu",
+  base = "//base:jessie",
+  files = ":zulu_files",
+  java_home = "zulu-8-amd64"
+)

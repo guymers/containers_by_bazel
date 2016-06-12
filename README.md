@@ -18,7 +18,7 @@ Choose a commit and add the below to your WORKSPACE file:
 
 Create a BUILD file and use the name of the git repository prefixed with a @.
 
-    docker_build(
+    container_image(
       name = "jenkins_with_plugins",
       base = "@docker_by_bazel//jenkins",
       ...
@@ -94,3 +94,5 @@ Create sbt ivy cache
     922 grafana
     930 nginx
     931 redis
+    941 postgres
+    981 polipo

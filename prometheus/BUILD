@@ -1,33 +1,33 @@
-load("//macros:gosu.bzl", "add_gosu")
-load("//macros/user:user.bzl", "add_user")
+load("//macros/user:user.bzl", "user_layer")
 
 PROMETHEUS_HOME = "/prometheus"
 
-add_gosu(name = "base_gosu", base = "//base:jessie")
-
-add_user(
-  name = "base",
-  base = ":base_gosu",
+user_layer(
+  name = "user",
   id = "921",
   user = "prometheus",
   home = PROMETHEUS_HOME,
 )
 
-docker_build(
-  name = "prometheus_bin",
-  base = ":base",
+container_layer(
+  name = "files",
   directory = "/opt",
   files = ["@prometheus//:prometheus"],
 )
 
-docker_build(
+container_layer(
+  name = "scripts",
+  directory = "/",
+  files = ["entrypoint-prometheus", "etc"],
+)
+
+container_image(
   name = "prometheus",
-  base = ":prometheus_bin",
+  base = "//base:jessie",
+  layers = ["//base/gosu", ":user", ":files", ":scripts"],
   env = {
     "PROMETHEUS_HOME": PROMETHEUS_HOME,
   },
-  directory = "/",
-  files = ["entrypoint-prometheus", "etc"],
   volumes = [PROMETHEUS_HOME, "/etc/prometheus"],
   ports = ["9090"],
   workdir = PROMETHEUS_HOME,

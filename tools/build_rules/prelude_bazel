@@ -1,1 +1,2 @@
-load("@bazel_tools//tools/build_defs/docker:docker.bzl", "docker_build")
+load("@bazel_rules_container//container:container.bzl", "container_layer", "container_image")
+load("@bazel_rules_container//container:test.bzl", "container_test")

@@ -1,3 +1,11 @@
+workspace(name = "container_by_bazel")
+
+git_repository(
+  name = "bazel_rules_container",
+  remote = "https://github.com/guymers/bazel_rules_container.git",
+  commit = "3ea64814991ca541c1e2c65ac0bd7314d649d3e5",
+)
+
 # 2016-06-08 debootstraps (esp. 8.5 and 7.11)
 http_file(
   name = "debian_jessie",

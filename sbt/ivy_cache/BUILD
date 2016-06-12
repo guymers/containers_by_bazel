@@ -1,6 +1,12 @@
+container_image(
+  name = "sbt_base",
+  base = "//java:zulu_ssl",
+  layers = ["//sbt:files", "//sbt:custom_files"],
+)
+
 genrule(
   name = "ivy_cache",
-  srcs = ["//sbt:sbt_base.tar"],
+  srcs = [":sbt_base.tar"],
   outs = ["ivy_cache.tar"],
   cmd = "$(location :sbt_ivy_cache) $< $@",
   tools = [":sbt_ivy_cache"],
