@@ -13,7 +13,7 @@ container_layer(
 
 container_image(
   name = "maven",
-  base = "//java:zulu_ssl",
+  base = "//java:zulu",
   layers = [":files"],
   env = {
     "M2_HOME": MAVEN_HOME,

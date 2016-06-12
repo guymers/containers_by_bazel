@@ -39,7 +39,7 @@ container_layer(
 
 container_image(
   name = "sbt",
-  base = "//java:zulu_ssl",
+  base = "//java:zulu",
   layers = [
     ":files",
     ":custom_files",

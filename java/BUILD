@@ -1,37 +1,35 @@
-package(default_visibility = ["//java:__subpackages__"])
-
-load("//java:java.bzl", "java_image")
-
-container_layer(
-  name = "certs",
-  directory = "/etc/ssl/certs/java/",
-  files = ["cacerts"],
-)
-
 container_layer(
   name = "script_files",
   directory = "/",
   files = glob(["scripts/*"]),
 )
 
-container_layer(name = "jre_files", debs = ["//deps/jessie:jre"])
-java_image(
-  name = "jre",
-  base = "//base:jessie",
-  files = ":jre_files",
+container_layer(
+  name = "zulu_files",
+  debs = ["//deps/jessie:zulu"]
 )
 
-container_layer(name = "jdk_files", debs = ["//deps/jessie:jdk"])
-java_image(
-  name = "jdk",
-  base = "//base:jessie",
-  files = ":jdk_files",
-)
-
-container_layer(name = "zulu_files", debs = ["//deps/jessie:zulu"])
-java_image(
+container_image(
   name = "zulu",
   base = "//base:jessie",
-  files = ":zulu_files",
-  java_home = "zulu-8-amd64"
+  layers = ["//base/ca_certificates", ":zulu_files", "//java:script_files"],
+  env = {
+    "LANG": "C.UTF-8",
+    "LC_CTYPE": "C.UTF-8",
+    "JAVA_HOME": "/usr/lib/jvm/zulu-8-amd64",
+    "PATH": "/usr/lib/jvm/zulu-8-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+
+    "JMX_MONITORING": "true",
+    "JMX_HOSTNAME": "127.0.0.1",
+    "JMX_PORT": "1099",
+
+    #"GC_LOG_FOLDER": "/var/log/java/gc",
+    "OOM_DUMP_FOLDER": "/var/log/java/oom",
+  },
+  ports = ["1099"],
+  volumes = [
+    "/var/log/java/gc",
+    "/var/log/java/oom",
+  ],
+  visibility = ["//visibility:public"],
 )

@@ -23,7 +23,7 @@ container_layer(
 
 container_image(
   name = "tomcat",
-  base = "//java:zulu_ssl",
+  base = "//java:zulu",
   layers = ["//base/gosu", ":user", ":files"],
   env = {
     "CATALINA_BASE": CATALINA_BASE,

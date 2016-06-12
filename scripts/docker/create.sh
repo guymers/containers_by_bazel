@@ -9,7 +9,7 @@ DOCKER_NO_CACHE=${DOCKER_NO_CACHE:-false}
 bazel build //base:jessie //base:stretch
 
 readonly jessie_image=$(bazel run //base:jessie | grep "^Tagging" | awk '{print $4}')
-docker tag -f "$jessie_image" bazel/base:jessie
+docker tag "$jessie_image" bazel/base:jessie
 
 readonly JESSIE_DIR="$DIR/jessie"
 docker build $NO_CACHE -t bazel/dependencies:jessie-base -f "$JESSIE_DIR/base.Dockerfile" "$JESSIE_DIR"

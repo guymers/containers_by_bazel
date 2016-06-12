@@ -144,16 +144,6 @@ new_http_archive(
 ###### START DEBIAN DEPENDENCIES
 
 http_file(
-  name = "deb_jessie_ca_certificates",
-  url = "http://httpredir.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20141019+deb8u1_all.deb",
-  sha256 = "f58d646045855277c87f532ea5c18df319e91d9892437880c9a0169b834f1bd8",
-)
-http_file(
-  name = "deb_jessie_ca_certificates_java",
-  url = "http://httpredir.debian.org/debian/pool/main/c/ca-certificates-java/ca-certificates-java_20140324_all.deb",
-  sha256 = "86e20ad98bb0cecf4bfda6cc1ac95b75c87c6677dff00b599e5110ec3b3580eb",
-)
-http_file(
   name = "deb_jessie_fontconfig",
   url = "http://httpredir.debian.org/debian/pool/main/f/fontconfig/fontconfig_2.11.0-6.3_amd64.deb",
   sha256 = "468c59a21cdd69bd82b8ad01c65d033851a00eda27dc32b24178b38cc41a72c5",
@@ -232,16 +222,6 @@ http_file(
   name = "deb_jessie_libatk1_0_data",
   url = "http://httpredir.debian.org/debian/pool/main/a/atk1.0/libatk1.0-data_2.14.0-1_all.deb",
   sha256 = "fd3d0906bdb08b9d8db9458f29b3c24640ca56669d30d82b9db7c9d1abaf2535",
-)
-http_file(
-  name = "deb_jessie_libatk_wrapper_java",
-  url = "http://httpredir.debian.org/debian/pool/main/j/java-atk-wrapper/libatk-wrapper-java_0.30.5-1_all.deb",
-  sha256 = "83357dbc26fea1d42a03c5b6213cbba6d690973779bd8c060c239a608cf5eaf2",
-)
-http_file(
-  name = "deb_jessie_libatk_wrapper_java_jni",
-  url = "http://httpredir.debian.org/debian/pool/main/j/java-atk-wrapper/libatk-wrapper-java-jni_0.30.5-1_amd64.deb",
-  sha256 = "9c57fc85df5293060bf632b88646af406b9afec98f6174fbea8e387c06a8e789",
 )
 http_file(
   name = "deb_jessie_libaudio2",
@@ -769,16 +749,6 @@ http_file(
   sha256 = "e2437a4d2a21a9195feb00b608c31dfee9fbb835e7a0a1121fa3503cf8ab80fb",
 )
 http_file(
-  name = "deb_jessie_libnspr4",
-  url = "http://httpredir.debian.org/debian/pool/main/n/nspr/libnspr4_4.10.7-1+deb8u1_amd64.deb",
-  sha256 = "076fac740e3174bf7e1c4eeb53ce76255cd937434e1012942ee5d0708621ee14",
-)
-http_file(
-  name = "deb_jessie_libnss3",
-  url = "http://httpredir.debian.org/debian/pool/main/n/nss/libnss3_3.17.2-1.1+deb8u2_amd64.deb",
-  sha256 = "81dd198a215b7be622aa7438d745520dc3ddf6b7debab844b105a3c492f11d1e",
-)
-http_file(
   name = "deb_jessie_libntdb1",
   url = "http://httpredir.debian.org/debian/pool/main/n/ntdb/libntdb1_1.0-5_amd64.deb",
   sha256 = "9f9805301589ec30570c56318427d44085932d080c4b56a1f94fd8bb4c5daccd",
@@ -842,11 +812,6 @@ http_file(
   name = "deb_jessie_libpangoft2_1_0_0",
   url = "http://httpredir.debian.org/debian/pool/main/p/pango1.0/libpangoft2-1.0-0_1.36.8-3_amd64.deb",
   sha256 = "30f34db7a73ac7e1b8f2945ac1b5d34e649beb2fa71b2232c0ccde0ca19e697d",
-)
-http_file(
-  name = "deb_jessie_libpcsclite1",
-  url = "http://httpredir.debian.org/debian/pool/main/p/pcsc-lite/libpcsclite1_1.8.13-1_amd64.deb",
-  sha256 = "b35bb0fd48cfa12a541a37a721d2d3520790c1bad7faedd7b7cf816dce830c1e",
 )
 http_file(
   name = "deb_jessie_libpixman_1_0",
@@ -1374,26 +1339,6 @@ http_file(
   sha256 = "81735ef04f880d0c22452ff4c8ee47c8ce7a11cd935d134cfbe426d3fb0ac32c",
 )
 http_file(
-  name = "deb_jessie_openjdk_8_jdk",
-  url = "http://ftp.debian.org/debian/pool/main/o/openjdk-8/openjdk-8-jdk_8u91-b14-1~bpo8+1_amd64.deb",
-  sha256 = "9a8b58041544a725d94364cabca4b6aea6fffadca2388e3a982903a4dc402547",
-)
-http_file(
-  name = "deb_jessie_openjdk_8_jdk_headless",
-  url = "http://ftp.debian.org/debian/pool/main/o/openjdk-8/openjdk-8-jdk-headless_8u91-b14-1~bpo8+1_amd64.deb",
-  sha256 = "97c5c523b7fe4af5956d286d6ab4769bdcd81b88ad50ed0d670cd324c3af6772",
-)
-http_file(
-  name = "deb_jessie_openjdk_8_jre",
-  url = "http://ftp.debian.org/debian/pool/main/o/openjdk-8/openjdk-8-jre_8u91-b14-1~bpo8+1_amd64.deb",
-  sha256 = "81573fd956d1f22dfc330eaf61c1c47c9bcc49deea4802684e14e7160f0ba1a4",
-)
-http_file(
-  name = "deb_jessie_openjdk_8_jre_headless",
-  url = "http://ftp.debian.org/debian/pool/main/o/openjdk-8/openjdk-8-jre-headless_8u91-b14-1~bpo8+1_amd64.deb",
-  sha256 = "bbf2e09589ba7b7d604b0ac39af40dbd1106c74dbd659c7aba1f0bffa6980288",
-)
-http_file(
   name = "deb_jessie_openssh_client",
   url = "http://httpredir.debian.org/debian/pool/main/o/openssh/openssh-client_6.7p1-5+deb8u2_amd64.deb",
   sha256 = "7ab10e9e4fa429c52a9073300ff021d6a22cb75670712f1f721d42225c9a8d81",
@@ -1500,13 +1445,13 @@ http_file(
 )
 http_file(
   name = "deb_jessie_redis_server",
-  url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.0-2~bpo8+1_amd64.deb",
-  sha256 = "4288ffba343f64d4b45f9594108c299b6c5fd36fa2e8ce968fbbd9a829595386",
+  url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.0-3~bpo8+1_amd64.deb",
+  sha256 = "69bab84b4e8399542d8f8f260e65097968fa6c2c6b3f75a2d51e5122b2fddeec",
 )
 http_file(
   name = "deb_jessie_redis_tools",
-  url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.0-2~bpo8+1_amd64.deb",
-  sha256 = "d2b0e18ae0eabbcb87ae00c62e3f2c21847cdd31f734da150721b02e4fa21bbe",
+  url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.0-3~bpo8+1_amd64.deb",
+  sha256 = "103f36f7ecb064a7824c3f8debb3b9ce4ab62656b53afa774a0b29013fa33999",
 )
 http_file(
   name = "deb_jessie_rlwrap",
@@ -1625,14 +1570,19 @@ http_file(
   sha256 = "030e441cc6368041536a69adcaed6b4f4a37e0145817fc3eff16f37e3a81ecae",
 )
 http_file(
+  name = "deb_stretch_libc6",
+  url = "http://httpredir.debian.org/debian/pool/main/g/glibc/libc6_2.22-11_amd64.deb",
+  sha256 = "c6860400e4713b7698d2e7acaba5bf2202169267c1de743c5635d2132fa2dbc5",
+)
+http_file(
   name = "deb_stretch_libc6_dev",
-  url = "http://httpredir.debian.org/debian/pool/main/g/glibc/libc6-dev_2.22-9_amd64.deb",
-  sha256 = "00df158ce508e448d80ec28f479ae4aaada4773d0afe9956378111bb2f60ccd3",
+  url = "http://httpredir.debian.org/debian/pool/main/g/glibc/libc6-dev_2.22-11_amd64.deb",
+  sha256 = "9dda5d895a4ad0bac43ca1dd37f915f91320dbbc971a695971d46042fa58687d",
 )
 http_file(
   name = "deb_stretch_libc_dev_bin",
-  url = "http://httpredir.debian.org/debian/pool/main/g/glibc/libc-dev-bin_2.22-9_amd64.deb",
-  sha256 = "05e3d129a64b323670d46e1e8381f26d2b566e5ae39d3cf1872d61a6420e7cdc",
+  url = "http://httpredir.debian.org/debian/pool/main/g/glibc/libc-dev-bin_2.22-11_amd64.deb",
+  sha256 = "77fd9ab3532dfce0231333cbd2f6e6ac66fa314b7d0bf4908a02892447e7fc9d",
 )
 http_file(
   name = "deb_stretch_libcc1_0",
@@ -1886,8 +1836,8 @@ http_file(
 )
 http_file(
   name = "deb_stretch_linux_libc_dev",
-  url = "http://httpredir.debian.org/debian/pool/main/l/linux/linux-libc-dev_4.5.5-1_amd64.deb",
-  sha256 = "03c4da89bcf16082a6c2a98fd462184b0e727c9f202abb8ac2eb08e90dadb656",
+  url = "http://httpredir.debian.org/debian/pool/main/l/linux/linux-libc-dev_4.6.1-1_amd64.deb",
+  sha256 = "8f5cccac850924afd251e7db858722ed9f046858830345305d4cc528d2c87902",
 )
 http_file(
   name = "deb_stretch_m4",

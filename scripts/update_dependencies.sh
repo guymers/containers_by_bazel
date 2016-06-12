@@ -7,8 +7,7 @@ readonly ROOT="$DIR/.."
 
 bazel build --jobs $(nproc) --verbose_failures \
   //scripts/debian:all \
-  //scripts/ssl:all \
-  //scripts/java:all
+  //scripts/ssl:all
 
 echo "- Updating WORKSPACE with latest dependencies"
 readonly new_debian_dependencies="$OUT_DIR/scripts/debian/WORKSPACE.debian_deps"
@@ -41,8 +40,3 @@ echo "- Updating ssl certs"
 readonly certs_dir="$ROOT/base/ca_certificates"
 cp "$OUT_DIR/scripts/ssl/certs.BUILD" "$certs_dir/BUILD"
 cp "$OUT_DIR/scripts/ssl/ca-certificates.crt" "$certs_dir/ca-certificates.crt"
-
-
-echo "- Creating java cacerts file"
-cp "$OUT_DIR/scripts/java/cacerts" "$ROOT/java/cacerts"
-chmod 644 "$ROOT/java/cacerts"

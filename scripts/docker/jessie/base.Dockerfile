@@ -1,5 +1,4 @@
-#FROM bazel/base:jessie
-FROM debian:jessie
+FROM bazel/base:jessie
 
 RUN apt-get update && apt-get install -y wget
 

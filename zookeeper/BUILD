@@ -34,7 +34,7 @@ container_layer(
 
 container_image(
   name = "zookeeper",
-  base = "//java:zulu_ssl",
+  base = "//java:zulu",
   layers = [
     "//base/gosu", "//base/tini", ":user",
     ":exhibitor", ":files", ":scripts",

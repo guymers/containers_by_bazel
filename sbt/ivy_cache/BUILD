@@ -1,6 +1,6 @@
 container_image(
   name = "sbt_base",
-  base = "//java:zulu_ssl",
+  base = "//java:zulu",
   layers = ["//sbt:files", "//sbt:custom_files"],
 )
 
