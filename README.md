@@ -1,17 +1,17 @@
-Build docker images using Bazel. Benefits include reproducibility, rebuild speed, composability.
+Build OCI images using Bazel. Benefits include reproducibility, rebuild speed, composability.
 
 ### To use as a base
 
 Choose a commit and add the below to your WORKSPACE file:
 
     git_repository(
-      name = "docker_by_bazel",
-      remote = "https://github.com/guymers/docker-by-bazel.git",
+      name = "containers_by_bazel",
+      remote = "https://github.com/guymers/containers_by_bazel.git",
       commit = "<commit-id>",
     )
 
     ###### START REPO
-    [contents of https://raw.githubusercontent.com/guymers/docker-by-bazel/<commit-id>/WORKSPACE]
+    [contents of https://raw.githubusercontent.com/guymers/containers_by_bazel/<commit-id>/WORKSPACE]
     ###### END REPO
 
 #### Using containers
@@ -20,7 +20,7 @@ Create a BUILD file and use the name of the git repository prefixed with a @.
 
     container_image(
       name = "jenkins_with_plugins",
-      base = "@docker_by_bazel//jenkins",
+      base = "@containers_by_bazel//jenkins",
       ...
     )
 
@@ -28,12 +28,12 @@ Create a BUILD file and use the name of the git repository prefixed with a @.
 
 Create a BUILD file with the contents:
 
-    load("@docker_by_bazel//scripts/debian:dependencies.bzl", "dependencies")
+    load("@containers_by_bazel//scripts/debian:dependencies.bzl", "dependencies")
 
     dependencies(
       name = "",
       dependencies = glob(["dependencies/*"]),
-      target_prefix = "@docker_by_bazel"
+      target_prefix = "@containers_by_bazel"
     )
 
 Where the dependencies folder contains files in the format of the ones in ```scripts/debian/dependencies/```

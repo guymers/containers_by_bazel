@@ -1,4 +1,4 @@
-workspace(name = "container_by_bazel")
+workspace(name = "containers_by_bazel")
 
 git_repository(
   name = "bazel_rules_container",

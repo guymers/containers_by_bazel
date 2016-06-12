@@ -1,10 +1,11 @@
 {
-  "name": "docker-by-bazel",
+  "name": "containers_by_bazel",
+  "private": true,
   "version": "1.0.0",
-  "description": "Bazel docker container test",
+  "description": "Bazel nodejs container test",
   "license": "Apache-2.0",
   "main": "index.js",
-  "repository": "guymers/docker-by-bazel",
+  "repository": "guymers/containers_by_bazel",
   "dependencies": {
     "glob": "7.0.3"
   }

@@ -1,5 +1,5 @@
 lazy val commonSettings = Seq(
-  name := "docker-by-bazel",
+  name := "containers-by-bazel",
   scalaVersion := "2.11.8",
 
   scalacOptions ++= Seq(

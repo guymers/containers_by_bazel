@@ -2,4 +2,4 @@
 
 cd project
 sbt assembly > /dev/null
-java -jar target/scala-2.11/docker-by-bazel-assembly-0.1-SNAPSHOT.jar
+java -jar target/scala-2.11/containers-by-bazel-assembly-0.1-SNAPSHOT.jar
