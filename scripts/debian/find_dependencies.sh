@@ -4,7 +4,7 @@ set -o pipefail
 
 readonly BAZEL_DIR="$0.runfiles"
 [ -d "$BAZEL_DIR" ] && DIR="$BAZEL_DIR" || DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.."
-source "$(find "$DIR" -name "versions.sh")"
+source "$DIR/containers_by_bazel/scripts/versions.sh"
 
 dependencies=$(
   while IFS="=" read dependency version; do

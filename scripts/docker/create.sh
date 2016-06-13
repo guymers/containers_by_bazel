@@ -20,6 +20,7 @@ docker build -t bazel/dependencies:jessie-zulu -f "$JESSIE_DIR/zulu.Dockerfile" 
 
 docker build -t bazel/dependencies:jessie-postgresql -f "$JESSIE_DIR/postgresql.Dockerfile" "$JESSIE_DIR"
 docker tag bazel/dependencies:jessie-postgresql bazel/dependencies:jessie-postgis
+docker tag bazel/dependencies:jessie-postgresql bazel/dependencies:jessie-postgresql-client
 
 docker build -t bazel/dependencies:jessie-java -f "$JESSIE_DIR/java.Dockerfile" "$JESSIE_DIR"
 docker tag bazel/dependencies:jessie-java bazel/dependencies:jessie-tomcat7

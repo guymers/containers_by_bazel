@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 set -o pipefail
+
 readonly DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$DIR/../versions.sh"
 
