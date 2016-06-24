@@ -1270,8 +1270,8 @@ http_file(
 )
 http_file(
   name = "deb_jessie_libxslt1_1",
-  url = "http://httpredir.debian.org/debian/pool/main/libx/libxslt/libxslt1.1_1.1.28-2+b2_amd64.deb",
-  sha256 = "998578e30eb81dcec568576c71955e4b0acc55db4df57f7e9b5596793f46c8c1",
+  url = "http://security.debian.org/pool/updates/main/libx/libxslt/libxslt1.1_1.1.28-2+deb8u1_amd64.deb",
+  sha256 = "8a0f7ef8204dab62bde764a303aecea2a551133b656ba0523000e52c3c7542f7",
 )
 http_file(
   name = "deb_jessie_libxt6",
@@ -1325,8 +1325,8 @@ http_file(
 )
 http_file(
   name = "deb_jessie_nodejs",
-  url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.2.1-1nodesource1~jessie1_amd64.deb",
-  sha256 = "62573a10afd9227a6793719e60c49cddddee013810b80a67d2ddf48509bbdcec",
+  url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.2.2-1nodesource1~jessie1_amd64.deb",
+  sha256 = "640b1c6cb2eee7adb8b3e79e1f6e17bc7804956d26c5e4475ef4537aa98bccbb",
 )
 http_file(
   name = "deb_jessie_odbcinst",
@@ -1395,13 +1395,13 @@ http_file(
 )
 http_file(
   name = "deb_jessie_postgresql_client_common",
-  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_174.pgdg80+1_all.deb",
-  sha256 = "9b89f6ac93972096af4ff5ee47dd26a60b6221060f44c01ced0d83dc7408fa8b",
+  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_175.pgdg80+1_all.deb",
+  sha256 = "bf83c607033b9ee61106c315316212312658404fe7a782f7068fe90995543798",
 )
 http_file(
   name = "deb_jessie_postgresql_common",
-  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_174.pgdg80+1_all.deb",
-  sha256 = "dae852235a384e9d3d537f4a994817a864447bef59495e80601a266744c89c86",
+  url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_175.pgdg80+1_all.deb",
+  sha256 = "0d869bc5b28811b025865399023f5e911beda7b2410abaceb31e8f1687eda213",
 )
 http_file(
   name = "deb_jessie_postgresql_contrib_9_5",
@@ -1866,73 +1866,73 @@ http_file(
 )
 http_file(
   name = "deb_stretch_php7_0_bcmath",
-  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-bcmath_7.0.7-4_amd64.deb",
-  sha256 = "9982c31e62ae08e23f77e1874ae014f09fb2a215b4e8e763a263f79911d96ac6",
+  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-bcmath_7.0.7-5_amd64.deb",
+  sha256 = "6d58dcfca7d437b722814a8a15fb3ec199fc5ca64f1d5e2e6bb451304b490cd9",
 )
 http_file(
   name = "deb_stretch_php7_0_cli",
-  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-cli_7.0.7-4_amd64.deb",
-  sha256 = "17912fbd655940f8569f3cfd93eb467da1ec3974effbd3081f38c4edaa94cb17",
+  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-cli_7.0.7-5_amd64.deb",
+  sha256 = "2e7c4929a47d8231a99f09982abfc442342c2d9412eeb8abbfbde706d55712a7",
 )
 http_file(
   name = "deb_stretch_php7_0_common",
-  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-common_7.0.7-4_amd64.deb",
-  sha256 = "095f4a3c8b4998469ed0d0e3f17a4479d384d44cfaabcf08f8a1fc749d9c67a7",
+  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-common_7.0.7-5_amd64.deb",
+  sha256 = "fdf539017cfaf18088b153e661640af59beb117c9a11bda6e9a702431a74f82c",
 )
 http_file(
   name = "deb_stretch_php7_0_curl",
-  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-curl_7.0.7-4_amd64.deb",
-  sha256 = "2f45dbd50bd72751693354d3c97c9ff4a5e702ff2af087b0e4f3f40f69b73582",
+  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-curl_7.0.7-5_amd64.deb",
+  sha256 = "7cc8118c21d625a3a0c75f68334f16141b16be6c67097dd92d6a0d9458575688",
 )
 http_file(
   name = "deb_stretch_php7_0_dev",
-  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-dev_7.0.7-4_amd64.deb",
-  sha256 = "4b828cc62e2dbe931f5d929ffd95852226691839d2776869fa585dac35de4a71",
+  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-dev_7.0.7-5_amd64.deb",
+  sha256 = "5d1ce702a2159dd2f3b767fbaf7f2bf11cb2390c6900447db9897fb56c2a1a24",
 )
 http_file(
   name = "deb_stretch_php7_0_fpm",
-  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-fpm_7.0.7-4_amd64.deb",
-  sha256 = "2df8cebb8a91834df1367f788480c459d6b8972605607ddc9e4b7c2d909375eb",
+  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-fpm_7.0.7-5_amd64.deb",
+  sha256 = "83ff01f65002706d55809b06ce73e029801ee4e27066f0ac1ce3d489008de624",
 )
 http_file(
   name = "deb_stretch_php7_0_intl",
-  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-intl_7.0.7-4_amd64.deb",
-  sha256 = "34cc8bf970c1c40786d3872926de054af72cf2112baa5b9b70c9c95458e59827",
+  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-intl_7.0.7-5_amd64.deb",
+  sha256 = "d7740a48963a8342bcd72d6e2f4f90a5bb2882d2c9408c7d2e40d55ada9f424d",
 )
 http_file(
   name = "deb_stretch_php7_0_json",
-  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-json_7.0.7-4_amd64.deb",
-  sha256 = "385e0bd20faf6b0bf3c7989fcff42ba4d795f9b8134347ed6ff875cd2f092d63",
+  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-json_7.0.7-5_amd64.deb",
+  sha256 = "2caa8d266b2c8d2324bc715faaf859f07d860e45a681f116e421d517ed99dedc",
 )
 http_file(
   name = "deb_stretch_php7_0_mbstring",
-  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-mbstring_7.0.7-4_amd64.deb",
-  sha256 = "d6290925e45b42e90af4a1afcf0bcfecccca9780e3838abbf6f199bd8035f8fa",
+  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-mbstring_7.0.7-5_amd64.deb",
+  sha256 = "223aac976509d9de80d2e208b0adf1d8e4f7b222f23a50345a84a4f363f80734",
 )
 http_file(
   name = "deb_stretch_php7_0_mcrypt",
-  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-mcrypt_7.0.7-4_amd64.deb",
-  sha256 = "675ec792307a302667d92973cc247f99d75f2a32aebc8d5d411613902d314265",
+  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-mcrypt_7.0.7-5_amd64.deb",
+  sha256 = "b1186eb5f5a871b093ffee5516c53d81b8927ebe48a2c9270146734ebe736d2a",
 )
 http_file(
   name = "deb_stretch_php7_0_opcache",
-  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-opcache_7.0.7-4_amd64.deb",
-  sha256 = "6978fdd695d07a034d8773bc991125fa098f786c755a6e91b5de95fc7151e472",
+  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-opcache_7.0.7-5_amd64.deb",
+  sha256 = "d7ebdbc6448275bdfb0f6b8d0b96b67298387efb0bb858bc1c1bd1503f572a6c",
 )
 http_file(
   name = "deb_stretch_php7_0_pgsql",
-  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-pgsql_7.0.7-4_amd64.deb",
-  sha256 = "c233022251d1c5a780a9b5173faf03186f6c9a90f9b0919575c2cf36e0b78939",
+  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-pgsql_7.0.7-5_amd64.deb",
+  sha256 = "31227282e6e828ec19c6725546ab46068857e0f85d0e151a21c73fbcfa9426b5",
 )
 http_file(
   name = "deb_stretch_php7_0_phpdbg",
-  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-phpdbg_7.0.7-4_amd64.deb",
-  sha256 = "66837110d222fda6c0d99fbefd81f8da2f60a3353483daf5fe86a847db3da808",
+  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-phpdbg_7.0.7-5_amd64.deb",
+  sha256 = "37df33f24de20d0c36f156975a595fb28bc689c38baaca7bb504a2fe2cfd0119",
 )
 http_file(
   name = "deb_stretch_php7_0_readline",
-  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-readline_7.0.7-4_amd64.deb",
-  sha256 = "2424ca1fd9cbc3cc9db1785d00f8018fe5387cf1a3f5bb67da61188af42c351f",
+  url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-readline_7.0.7-5_amd64.deb",
+  sha256 = "cb515b7a4086d573f3a12b2ba8e7a8ef6e67b0e9295a2a7ac08534f30eae4452",
 )
 http_file(
   name = "deb_stretch_php_apcu",
@@ -1941,8 +1941,8 @@ http_file(
 )
 http_file(
   name = "deb_stretch_php_common",
-  url = "http://httpredir.debian.org/debian/pool/main/p/php-defaults/php-common_41_all.deb",
-  sha256 = "fc1f06882cea9455a4b9a4ae80b3cf5ba8acc9a39a40399ba92bf17f142e794f",
+  url = "http://httpredir.debian.org/debian/pool/main/p/php-defaults/php-common_42_all.deb",
+  sha256 = "6bdfb3e45dd87b6d09ea80d21fe0a5244408ff8e1c5ec08e4fd9d7f90ae78b89",
 )
 http_file(
   name = "deb_stretch_php_tideways",
