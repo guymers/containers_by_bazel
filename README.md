@@ -10,9 +10,8 @@ Choose a commit and add the below to your WORKSPACE file:
       commit = "<commit-id>",
     )
 
-    ###### START REPO
-    [contents of https://raw.githubusercontent.com/guymers/containers_by_bazel/<commit-id>/WORKSPACE]
-    ###### END REPO
+    load("@containers_by_bazel//scripts:repositories.bzl", "dependency_repositories")
+    dependency_repositories()
 
 #### Using containers
 
@@ -45,7 +44,8 @@ Then you'll need to pretty much copy ```scripts/update_dependencies.sh```
 #### To create containers
 You can use the ./build_container script. It ensures that you cannot override the same tag with a different image.
 
-    source ./scripts/versions.sh
+    bazel build //scripts/versions
+    source ./bazel-bin/scripts/versions/versions.sh
     ./scripts/build_container.sh //grafana grafana ${GRAFANA_VERSION}
     ./scripts/build_container.sh //java:zulu zulu ${ZULU_VERSION}
     ./scripts/build_container.sh //jenkins jenkins ${JENKINS_VERSION}

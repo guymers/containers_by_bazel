@@ -1,8 +1,9 @@
 load("//macros/user:user.bzl", "user_layer")
+load("//scripts/versions:versions.bzl", "NEXUS_VERSION")
 
 NEXUS_HOME = "/opt/sonatype/nexus"
 NEXUS_DATA = "/nexus-data"
-VERSION = "2.13.0-01"
+VERSION = NEXUS_VERSION
 
 user_layer(
   name = "user",

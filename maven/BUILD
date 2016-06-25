@@ -1,5 +1,7 @@
+load("//scripts/versions:versions.bzl", "MAVEN_VERSION")
+
 MAVEN_HOME = "/opt/maven"
-VERSION = "3.3.9"
+VERSION = MAVEN_VERSION
 
 container_layer(
   name = "files",

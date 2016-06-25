@@ -2,14 +2,16 @@
 set -e
 set -o pipefail
 
-readonly prefix="$1"
+readonly BAZEL_DIR="$0.runfiles"
+[ -d "$BAZEL_DIR" ] && DIR="$BAZEL_DIR" || DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.."
+source "$DIR/containers_by_bazel/scripts/bazel_functions.sh"
+
+prefix="$1"
 readonly group_name=$(basename "$2")
 
-echo "filegroup("
-echo "  name = \"$group_name\","
-echo "  srcs = ["
-cat "$2" | sort | while read name version url sha256; do
-  echo "    \"@${prefix}_${name}//file\","
-done
-echo "  ],"
-echo ")"
+srcs=()
+while read name version url sha256; do
+  srcs+=("$name")
+done < "$2"
+
+bazel_filegroup "$prefix" "$group_name" "${srcs[@]}"

@@ -1,9 +1,10 @@
 load("//macros/user:user.bzl", "user_layer")
+load("//scripts/versions:versions.bzl", "ZOOKEEPER_VERSION")
 
 ZK_HOME = "/opt/zookeeper"
 ZK_DATA = "/zookeeper"
 EXHIBITOR_SHARED = "/exhibitor"
-VERSION = "3.4.8"
+VERSION = ZOOKEEPER_VERSION
 
 user_layer(
   name = "user",
