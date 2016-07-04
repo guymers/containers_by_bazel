@@ -791,8 +791,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libservlet3_0_java",
-    url = "http://httpredir.debian.org/debian/pool/main/t/tomcat7/libservlet3.0-java_7.0.56-3+deb8u2_all.deb",
-    sha256 = "4862a5b63dfd96d2c845b25be836c27da4ce32efc676d6ec23d3e915d668e9ef",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libservlet3.0-java_7.0.56-3+deb8u3_all.deb",
+    sha256 = "82da54d2e91ac701ef5b3518fc815a8f6195aab0854fc1654953b2bd923d927f",
   )
   native.http_file(
     name = "deb_jessie_libsfcgal1",
@@ -896,8 +896,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libtomcat7_java",
-    url = "http://httpredir.debian.org/debian/pool/main/t/tomcat7/libtomcat7-java_7.0.56-3+deb8u2_all.deb",
-    sha256 = "70c98b2cf1458112dc9ceb59b05da3af36eaba7ddd229ba69c72b220d409fc3f",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libtomcat7-java_7.0.56-3+deb8u3_all.deb",
+    sha256 = "d2d4e51e0f9fd7768d610b4fca16f4e708e601c88db82dca91b1bf95db68fc2e",
   )
   native.http_file(
     name = "deb_jessie_liburiparser1",
@@ -1056,8 +1056,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libxerces_c3_1",
-    url = "http://httpredir.debian.org/debian/pool/main/x/xerces-c/libxerces-c3.1_3.1.1-5.1+deb8u2_amd64.deb",
-    sha256 = "432ee0593f49932c47690f2a248ff06e263c3c74c4cb19abd9e4ba6125f0694c",
+    url = "http://security.debian.org/pool/updates/main/x/xerces-c/libxerces-c3.1_3.1.1-5.1+deb8u3_amd64.deb",
+    sha256 = "ffd359aebbb68f69795944caf08ee1750d09885cc59af32e5ac065463135101e",
   )
   native.http_file(
     name = "deb_jessie_libxext6",
@@ -1301,13 +1301,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_redis_server",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.0-3~bpo8+1_amd64.deb",
-    sha256 = "69bab84b4e8399542d8f8f260e65097968fa6c2c6b3f75a2d51e5122b2fddeec",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.1-1~bpo8+1_amd64.deb",
+    sha256 = "1f13fd3f495b3d8af4b9a9ab55b2bade681b07ccaaae42306d477991f540cdd9",
   )
   native.http_file(
     name = "deb_jessie_redis_tools",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.0-3~bpo8+1_amd64.deb",
-    sha256 = "103f36f7ecb064a7824c3f8debb3b9ce4ab62656b53afa774a0b29013fa33999",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.1-1~bpo8+1_amd64.deb",
+    sha256 = "6c33f181619febfdce3e8b3de8fe0d547eb350b5b4673e26e42bd132127cc032",
   )
   native.http_file(
     name = "deb_jessie_rlwrap",
@@ -1331,8 +1331,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_tomcat7_common",
-    url = "http://httpredir.debian.org/debian/pool/main/t/tomcat7/tomcat7-common_7.0.56-3+deb8u2_all.deb",
-    sha256 = "78c7145d8a0c374eb19dcff06db57b916449c6e4dbfa1889db1037b8020f72d9",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/tomcat7-common_7.0.56-3+deb8u3_all.deb",
+    sha256 = "dcfca0fea0e779532946fdc8401a00d5e484cdec2ad673998440064d9090258b",
   )
   native.http_file(
     name = "deb_jessie_tomcat7_user",

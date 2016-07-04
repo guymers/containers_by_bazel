@@ -98,12 +98,12 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "1e239db19071beaac3f2db3ec6a568346bbeb9087f5f0fcf19adf6ae62cbcc2b",
+    sha256 = "0acf4fdbee16e0012128cb660626bae5063c51657fc7329531a48a4f84eee401",
   )
   native.http_file(
     name = "jenkins_agent_jar",
     url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/" + JENKINS_SWARM_VERSION + "/swarm-client-" + JENKINS_SWARM_VERSION + "-jar-with-dependencies.jar",
-    sha256 = "98e6e07cc73c6a37134e2e653ceb841b8c5790ffee73ce6abb38bda6ed5be274",
+    sha256 = "dbabd2757624df588b258a3c476c06946e0e8c3e98076cc17d7ade371b91a967",
   )
 
   ###### MAVEN
