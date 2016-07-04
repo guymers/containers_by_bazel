@@ -31,4 +31,4 @@ docker tag "$stretch_image" bazel/base:stretch
 readonly STRETCH_DIR="$DIR/stretch"
 docker build $NO_CACHE -t bazel/dependencies:stretch-base -f "$STRETCH_DIR/base.Dockerfile" "$STRETCH_DIR"
 
-docker images | grep "^bazel/dependencies" | awk '{print $1, $2, $3}' > "$DIR/container-versions.txt"
+docker images | grep "^bazel/dependencies" | awk '{print $1, $2, $3}' | LC_ALL=C sort > "$DIR/container-versions.txt"

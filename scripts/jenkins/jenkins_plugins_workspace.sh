@@ -10,4 +10,4 @@ readonly jenkins_prefix=jenkins_plugin
 
 while read name url sha256; do
   bazel_http_file "$jenkins_prefix" "$name" "$url" "$sha256"
-done < <(cat "$1" | sort)
+done < <(cat "$1" | LC_ALL=C sort)

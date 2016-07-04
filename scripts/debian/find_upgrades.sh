@@ -32,7 +32,7 @@ dependency_containers+=("zzzzz|zzzzz=0")
 readonly sorted_dependency_containers=($(
   for item in "${dependency_containers[@]}"; do
     echo "$item"
-  done | sort | uniq
+  done | LC_ALL=C sort | uniq
 ))
 
 current_container=

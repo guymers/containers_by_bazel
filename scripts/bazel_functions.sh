@@ -34,7 +34,7 @@ function bazel_filegroup() {
   local prefix="$1"
   local name="$2"
   local srcs="${@:3}"
-  local sortedSrcs=( $( printf "%s\n" "${srcs[@]}" | sort -n) )
+  local sortedSrcs=( $( printf "%s\n" "${srcs[@]}" | LC_ALL=C sort) )
 
   echo "filegroup("
   echo "  name = \"$name\","

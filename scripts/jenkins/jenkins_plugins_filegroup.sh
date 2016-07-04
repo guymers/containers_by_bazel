@@ -12,6 +12,6 @@ dependencies=()
 
 while read name url sha256; do
   dependencies+=("$name")
-done < <(cat "$1" | sort)
+done < <(cat "$1" | LC_ALL=C sort)
 
 bazel_filegroup "$jenkins_prefix" "plugins" "${dependencies[@]}"

@@ -42,7 +42,7 @@ for file in "${files[@]}"; do
 done
 
 ## http://unix.stackexchange.com/a/195749
-readonly sortedDependencies=( $( printf "%s\n" "${!dependencies[@]}" | sort -n ) )
+readonly sortedDependencies=( $( printf "%s\n" "${!dependencies[@]}" | LC_ALL=C sort ) )
 
 echo "def $prefix():"
 for name in "${sortedDependencies[@]}"; do

@@ -5,7 +5,7 @@ set -o pipefail
 readonly name="$1"
 readonly files=("${@:2}")
 ## http://unix.stackexchange.com/a/195749
-readonly sorted_files=( $( printf "%s\n" "${files[@]}" | sort -n ) )
+readonly sorted_files=( $( printf "%s\n" "${files[@]}" | LC_ALL=C sort ) )
 
 echo 'package(default_visibility = ["//visibility:public"])'
 echo ''
