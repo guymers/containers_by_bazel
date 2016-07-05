@@ -1,4 +1,6 @@
 machine:
+  pre:
+    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | bash -s -- 1.10.0
   services:
     - docker
   java:
@@ -6,18 +8,13 @@ machine:
 
 dependencies:
   pre:
-    # stop services that are running by default
-    - sudo service mysql stop
-    - sudo service postgresql stop 9.4
-    - sudo service postgresql stop 9.5
-    - sudo service redis-server stop
     - sudo apt-get update
     # http://bazel.io/docs/install.html
     - sudo apt-get install -y pkg-config zip g++ zlib1g-dev unzip
-    - wget https://github.com/bazelbuild/bazel/releases/download/0.2.2b/bazel_0.2.2b-linux-x86_64.deb.sha256
-    - wget https://github.com/bazelbuild/bazel/releases/download/0.2.2b/bazel_0.2.2b-linux-x86_64.deb
-    - sha256sum -c bazel_0.2.2b-linux-x86_64.deb.sha256
-    - sudo dpkg -i bazel_0.2.2b-linux-x86_64.deb
+    - wget https://github.com/bazelbuild/bazel/releases/download/0.3.0/bazel_0.3.0-linux-x86_64.deb.sha256
+    - wget https://github.com/bazelbuild/bazel/releases/download/0.3.0/bazel_0.3.0-linux-x86_64.deb
+    - sha256sum -c bazel_0.3.0-linux-x86_64.deb.sha256
+    - sudo dpkg -i bazel_0.3.0-linux-x86_64.deb
   post:
     - echo 'startup --output_base /home/ubuntu/.cache/bazel/' > ~/.bazelrc
     # sandboxing does not work  --sandbox_debug
@@ -26,10 +23,17 @@ dependencies:
   cache_directories:
     - "/home/ubuntu/.cache/bazel"
 
+database:
+  pre:
+    # stop services that are running by default
+    - sudo service mysql stop
+    - sudo service postgresql stop 9.4
+    - sudo service postgresql stop 9.5
+    - sudo service redis-server stop
+
 test:
   override:
-    # circleci needs to mount ports so run one test at a time to avoid possible conflicts
-    - bazel test --jobs 1 --verbose_failures //test/...
+    - bazel test --verbose_failures //test/...
   post:
     - mkdir -p "$CIRCLE_ARTIFACTS/bazel-testlogs"
     - cp -a bazel-testlogs/. "$CIRCLE_ARTIFACTS/bazel-testlogs"
