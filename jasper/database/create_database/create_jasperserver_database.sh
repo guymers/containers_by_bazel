@@ -3,11 +3,11 @@ set -e
 set -o pipefail
 
 readonly docker_tar="$1"
-readonly docker_image=$(
-  tar xf "$docker_tar" ./manifest.json --to-stdout \
-    | grep -Eo '"Config":[[:space:]]*"[^"]+"' | tail -n1 \
-    | sed -r -e 's#"Config":.*?"([0-9a-f]+)\.json"#\1#'
+readonly docker_image_id=$(
+  tar -xf "$docker_tar" ./manifest.json --to-stdout | \
+    sed -r -e 's#.*"Config":.*?"([0-9a-f]+)\.json".*#\1#'
 )
+readonly docker_image="sha256:$docker_image_id"
 docker load -i "$docker_tar"
 
 readonly out="$2"

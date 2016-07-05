@@ -3,11 +3,11 @@ set -e
 set -o pipefail
 
 readonly docker_tar="$1"
-readonly docker_image=$(
-  tar xf "$docker_tar" ./manifest.json --to-stdout \
-    | grep -Eo '"Config":[[:space:]]*"[^"]+"' | tail -n1 \
-    | sed -r -e 's#"Config":.*?"([0-9a-f]+)\.json"#\1#'
+readonly docker_image_id=$(
+  tar -xf "$docker_tar" ./manifest.json --to-stdout | \
+    sed -r -e 's#.*"Config":.*?"([0-9a-f]+)\.json".*#\1#'
 )
+readonly docker_image="sha256:$docker_image_id"
 docker load -i "$docker_tar"
 
 readonly out="$2"
@@ -22,6 +22,6 @@ find /ivy2 -exec touch -t 200001010000 {} \;
 EOF
 
 readonly cmd="sbt exit && sh /output/deterministic.sh && cd /ivy2 && find cache -print0 | LC_ALL=C sort -z | tar --no-recursion --null -T - -cf /output/$out_file && chown $(id -u):$(id -g) /output/$out_file"
-docker run --rm -v "$(pwd)/$out_dir":/output $docker_image bash -c "$cmd" > /dev/null
+docker run --rm -v "$(pwd)/$out_dir":/output "$docker_image" bash -c "$cmd" > /dev/null
 
 rm -f "$out_dir/deterministic.sh"
