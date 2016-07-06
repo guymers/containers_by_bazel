@@ -710,6 +710,11 @@ def deb_jessie():
     sha256 = "4fa0d52f5c06d18a5a36670619526d9e6b8d0e24676ab53cd3c7884ef571a882",
   )
   native.http_file(
+    name = "deb_jessie_libpsl0",
+    url = "http://httpredir.debian.org/debian/pool/main/libp/libpsl/libpsl0_0.5.1-1_amd64.deb",
+    sha256 = "f4defaf534d277632f1d23d6057c5255b032c62436e635ea89a1a7007a54b7e3",
+  )
+  native.http_file(
     name = "deb_jessie_libpulse0",
     url = "http://httpredir.debian.org/debian/pool/main/p/pulseaudio/libpulse0_5.0-13_amd64.deb",
     sha256 = "4958457ad7edff49073b77c7d86f93c3f4cd67c294a69082b57ea026f544124b",
@@ -1343,6 +1348,11 @@ def deb_jessie():
     name = "deb_jessie_ucf",
     url = "http://httpredir.debian.org/debian/pool/main/u/ucf/ucf_3.0030_all.deb",
     sha256 = "1b93d9fc5930b9d8382705b71605e07fe11f4796db239b7ac2644bf4fbd7f6a2",
+  )
+  native.http_file(
+    name = "deb_jessie_wget",
+    url = "http://httpredir.debian.org/debian/pool/main/w/wget/wget_1.16-1_amd64.deb",
+    sha256 = "92f9049d9ca63d5d416ba5f228c204c1229393b64db80c97146fb55fe542f1bb",
   )
   native.http_file(
     name = "deb_jessie_x11_common",

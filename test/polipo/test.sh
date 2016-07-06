@@ -1,8 +1,5 @@
 #!/bin/bash -e
 
-apt-get update > /dev/null
-apt-get install -y wget > /dev/null
-
 export http_proxy=http://localhost:8123
 readonly url=http://mirror.internode.on.net/pub/test/1meg.test
 cd /tmp

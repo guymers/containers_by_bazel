@@ -14,12 +14,12 @@ container_layer(
 container_image(
   name = "tomcat_test",
   base = "//tomcat",
-  layers = [":sample_war_layer"],
+  layers = ["//test:wget", ":sample_war_layer"],
 )
 
 container_test(
   name = "tomcat",
-  size = "medium",
+  size = "small",
   image = ":tomcat_test",
   daemon = True,
   mem_limit = "1024m",

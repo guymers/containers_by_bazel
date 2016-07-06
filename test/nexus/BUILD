@@ -1,7 +1,13 @@
+container_image(
+  name = "nexus_wget",
+  base = "//proxy/nexus",
+  layers = ["//test:wget"],
+)
+
 container_test(
   name = "nexus",
   size = "medium",
-  image = "//proxy/nexus",
+  image = ":nexus_wget",
   daemon = True,
   mem_limit = "512m",
   test = "test.sh",

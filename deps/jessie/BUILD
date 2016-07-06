@@ -483,6 +483,23 @@ filegroup(
 )
 
 filegroup(
+  name = "wget",
+  srcs = [
+    "@deb_jessie_libffi6//file",
+    "@deb_jessie_libgmp10//file",
+    "@deb_jessie_libgnutls_deb0_28//file",
+    "@deb_jessie_libhogweed2//file",
+    "@deb_jessie_libicu52//file",
+    "@deb_jessie_libidn11//file",
+    "@deb_jessie_libnettle4//file",
+    "@deb_jessie_libp11_kit0//file",
+    "@deb_jessie_libpsl0//file",
+    "@deb_jessie_libtasn1_6//file",
+    "@deb_jessie_wget//file",
+  ],
+)
+
+filegroup(
   name = "zip",
   srcs = [
     "@deb_jessie_zip//file",
