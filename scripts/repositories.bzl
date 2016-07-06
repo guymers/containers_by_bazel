@@ -56,9 +56,17 @@ def dependency_repositories():
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "9005735b4be621290984c4c4664b7da798b403ae5e6a4db4786f01aa9d508525",
+    sha256 = "660ba94efb1f4cff4934dc55bfe1b920f9bc4630bf731de4a67599b048c42c5c",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
+  )
+
+  native.new_http_archive(
+    name = "prometheus_node_exporter",
+    url = "https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-amd64.tar.gz",
+    sha256 = "d48de5b89dac04aca751177afaa9b0919e5b3d389364d40160babc00d63aac7b",
+    strip_prefix = "node_exporter-0.12.0.linux-amd64",
+    build_file_content = "exports_files(['node_exporter'])",
   )
 
   native.maven_jar(
