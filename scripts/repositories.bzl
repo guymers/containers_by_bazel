@@ -1,10 +1,13 @@
 load(
   "//scripts/versions:versions.bzl",
   "GRAFANA_VERSION",
+  "JASPERREPORTS_SERVER_VERSION",
+  "JASPERSOFT_STUDIO_VERSION",
   "JENKINS_VERSION",
   "JENKINS_SWARM_VERSION",
   "MAVEN_VERSION",
   "NEXUS_VERSION",
+  "PENATHO_DI_VERSION",
   "PROMETHEUS_VERSION",
   "ZOOKEEPER_VERSION"
 )
@@ -141,9 +144,9 @@ def dependency_repositories():
   ###### JASPER
   native.new_http_archive(
     name = "jasper_server",
-    url = "http://downloads.sourceforge.net/project/jasperserver/JasperServer/JasperReports%20Server%20Community%20Edition%206.2.1/jasperreports-server-cp-6.2.1-bin.zip",
+    url = "http://downloads.sourceforge.net/project/jasperserver/JasperServer/JasperReports%20Server%20Community%20Edition%20" + JASPERREPORTS_SERVER_VERSION + "/jasperreports-server-cp-" + JASPERREPORTS_SERVER_VERSION + "-bin.zip",
     sha256 = "f7d7f7e3be7a6d01c5c00386978402665ee3a01c9f013fe8ac37c569dba43350",
-    strip_prefix = "jasperreports-server-cp-6.2.1-bin",
+    strip_prefix = "jasperreports-server-cp-" + JASPERREPORTS_SERVER_VERSION + "-bin",
     build_file_content = "exports_files([ \
       'jasperserver.war', \
       'apache-ant', \
@@ -158,7 +161,14 @@ def dependency_repositories():
 
   native.new_http_archive(
     name = "jasper_client",
-    url = "http://downloads.sourceforge.net/project/jasperstudio/JaspersoftStudio-6.2.2/TIBCOJaspersoftStudio-6.2.2.final-linux-x86_64.tgz",
+    url = "http://downloads.sourceforge.net/project/jasperstudio/JaspersoftStudio-" + JASPERSOFT_STUDIO_VERSION + "/TIBCOJaspersoftStudio-" + JASPERSOFT_STUDIO_VERSION + ".final-linux-x86_64.tgz",
     sha256 = "b43a4ee5ddf8a1f192ea4e268b389c2b766f9a6fbd5ef58e6bbef9f2cdf73b7e",
-    build_file_content = "exports_files(['TIBCOJaspersoftStudio-6.2.2.final'])",
+    build_file_content = "exports_files(['TIBCOJaspersoftStudio-" + JASPERSOFT_STUDIO_VERSION + ".final'])",
+  )
+
+  native.new_http_archive(
+    name = "pentaho_data_integration",
+    url = "http://downloads.sourceforge.net/project/pentaho/Data%20Integration/6.1/pdi-ce-" + PENATHO_DI_VERSION + ".zip",
+    sha256 = "ef5076c09e8481d1ab4cfc5f7d4701437f80f2b97a3bf19dfa74821de9524495",
+    build_file_content = "exports_files(['data-integration'])",
   )

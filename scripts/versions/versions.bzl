@@ -37,6 +37,11 @@ POLIPO_VERSION = "1.1.1-5"
 JENKINS_VERSION = "1.651.3"
 JENKINS_SWARM_VERSION = "2.1"
 
+JASPERSOFT_STUDIO_VERSION = "6.2.2"
+JASPERREPORTS_SERVER_VERSION = "6.2.1"
+
+PENATHO_DI_VERSION = "6.1.0.1-196"
+
 def _version_shell_script_impl(ctx):
   # (.+)=(%\{.+\})   =>   "$2": $1,
   ctx.template_action(
@@ -66,6 +71,9 @@ def _version_shell_script_impl(ctx):
       "%{POLIPO_VERSION}": POLIPO_VERSION,
       "%{JENKINS_VERSION}": JENKINS_VERSION,
       "%{JENKINS_SWARM_VERSION}": JENKINS_SWARM_VERSION,
+      "%{JASPERSOFT_STUDIO_VERSION}": JASPERSOFT_STUDIO_VERSION,
+      "%{JASPERREPORTS_SERVER_VERSION}": JASPERREPORTS_SERVER_VERSION,
+      "%{PENATHO_DI_VERSION}": PENATHO_DI_VERSION,
     },
     output=ctx.outputs.script
   )

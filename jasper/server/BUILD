@@ -10,15 +10,9 @@ container_layer(
 )
 
 container_layer(
-  name = "files",
+  name = "webapp",
   directory = CATALINA_BASE + "/webapps/ROOT",
   tars = [":jasperserver_tar"],
-)
-
-container_layer(
-  name = "config",
-  directory = CATALINA_BASE + "/webapps/ROOT",
-  files = ["jasperserver/META-INF", "jasperserver/WEB-INF"],
 )
 
 war_to_tar(
@@ -27,8 +21,34 @@ war_to_tar(
   tar = "jasperserver.tar",
 )
 
+container_layer(
+  name = "webapp_config",
+  directory = CATALINA_BASE + "/webapps/ROOT",
+  files = ["jasperserver/META-INF", "jasperserver/WEB-INF"],
+)
+
+container_layer(
+  name = "buildomatic",
+  directory = "/opt/jasperserver",
+  files = [
+    "@jasper_server//:buildomatic",
+    "@jasper_server//:apache-ant",
+    "jasperserver/buildomatic"
+  ],
+)
+
+container_layer(
+  name = "files",
+  files = [ "entrypoint-jasper-server" ],
+)
+
 container_image(
   name = "server",
   base = "//tomcat",
-  layers = [":jdbc_driver", ":files", ":config"],
+  layers = [":jdbc_driver", ":webapp", ":webapp_config", ":buildomatic", ":files"],
+  volumes = [
+    "/init_jasper_server.d",
+    "/opt/jasperserver/buildomatic/build_conf", # written to if buildomatic runs
+  ],
+  entrypoint = ["/entrypoint-jasper-server"],
 )

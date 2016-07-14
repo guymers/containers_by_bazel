@@ -1,0 +1,22 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+# TODO maybe put buildomatic into its own container
+readonly init_dir=/init_jasper_server.d
+
+# http://www.cyberciti.biz/faq/linux-unix-shell-check-if-directory-empty/
+if [ -n "$(ls -A $init_dir)" ]; then
+  echo "Importing..."
+
+  initial_dir=$(pwd)
+  cd /opt/jasperserver/buildomatic
+  ./js-import.sh --input-dir "$init_dir"
+  rm -rf /tmp/main
+
+  echo "Import complete"
+  echo ""
+  cd "$initial_dir"
+fi
+
+exec /entrypoint-tomcat "$@"

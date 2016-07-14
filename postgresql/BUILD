@@ -29,6 +29,7 @@ container_image(
   volumes = [
     "/var/lib/postgresql",
     "/etc/postgresql",
+    "/initdb.d",
   ],
   ports = ["5432"],
   entrypoint = ["/entrypoint-postgresql"],

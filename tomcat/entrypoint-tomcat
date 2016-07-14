@@ -17,7 +17,7 @@ cp --no-clobber /usr/share/tomcat7/skel/conf/* /etc/tomcat7/
 
 if [ "$1" = 'tomcat' ]; then
   source /java-opts.sh
-  export CATALINA_OPTS="$JAVA_OPTS"
+  export CATALINA_OPTS="$JAVA_OPTS -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv4Addresses=true"
   export JAVA_OPTS=""
 
   exec gosu tomcat "$CATALINA_HOME/bin/catalina.sh" run
