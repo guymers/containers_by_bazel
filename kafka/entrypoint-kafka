@@ -1,0 +1,42 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+if [ -d "$KAFKA_DATA" -a "$(stat -c '%U' "$KAFKA_DATA" 2>/dev/null)" = "root" ]; then
+  chown kafka "$KAFKA_DATA"
+  chmod o-rwx "$KAFKA_DATA"
+fi
+
+if [ "$1" = 'kafka' ]; then
+  # set values set by java-opts.sh in JAVA_OPTS to a space to avoid Kafka adding defaults
+  export KAFKA_JMX_OPTS=" "
+  export KAFKA_HEAP_OPTS=" "
+  export KAFKA_JVM_PERFORMANCE_OPTS=" "
+
+  if [ -f "$KAFKA_CONF/log4j.properties" ]; then
+    export KAFKA_LOG4J_OPTS="-Dlog4j.configuration=file:$KAFKA_CONF/log4j.properties"
+  fi
+  export LOG_DIR="$KAFKA_DATA/logs"
+
+  source /java-opts.sh
+  export KAFKA_HEAP_OPTS="$JAVA_OPTS"
+
+  readonly kafka_tmp_config_dir=/tmp/kafka/config
+  mkdir -p "$kafka_tmp_config_dir"
+   {
+    echo "broker.id=$KAFKA_BROKER_ID";
+    echo "log.dirs=$KAFKA_DATA/log_$KAFKA_BROKER_ID";
+  } >> "$kafka_tmp_config_dir/env_server.properties"
+  # http://stackoverflow.com/a/14017638
+  awk -F= '!a[$1]++' "$kafka_tmp_config_dir/env_server.properties" "$KAFKA_HOME/config/server.properties" > "$kafka_tmp_config_dir/server.properties"
+
+  if [ -f "$KAFKA_CONF/server.properties" ]; then
+    # http://stackoverflow.com/a/14017638
+    awk -F= '!a[$1]++' "$KAFKA_CONF/server.properties" "$kafka_tmp_config_dir/server.properties" > "$kafka_tmp_config_dir/server.properties.tmp"
+    mv "$kafka_tmp_config_dir/server.properties.tmp" "$kafka_tmp_config_dir/server.properties"
+  fi
+
+  exec gosu kafka "$KAFKA_HOME/bin/kafka-server-start.sh" "$kafka_tmp_config_dir/server.properties"
+else
+  exec "$@"
+fi

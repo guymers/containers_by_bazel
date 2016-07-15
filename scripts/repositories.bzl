@@ -5,6 +5,7 @@ load(
   "JASPERSOFT_STUDIO_VERSION",
   "JENKINS_VERSION",
   "JENKINS_SWARM_VERSION",
+  "KAFKA_VERSION",
   "MAVEN_VERSION",
   "NEXUS_VERSION",
   "PENATHO_DI_VERSION",
@@ -18,7 +19,7 @@ def dependency_repositories():
   native.git_repository(
     name = "bazel_rules_container",
     remote = "https://github.com/guymers/bazel_rules_container.git",
-    tag = "0.1.1",
+    tag = "0.1.2",
   )
 
   # 2016-06-08 debootstraps (esp. 8.5 and 7.11)
@@ -131,6 +132,14 @@ def dependency_repositories():
     url = "http://mirrors.ocf.berkeley.edu/apache/zookeeper/zookeeper-" + ZOOKEEPER_VERSION + "/zookeeper-" + ZOOKEEPER_VERSION + ".tar.gz",
     sha256 = "f10a0b51f45c4f64c1fe69ef713abf9eb9571bc7385a82da892e83bb6c965e90",
     build_file_content = "exports_files(['zookeeper-" + ZOOKEEPER_VERSION + "'])",
+  )
+
+  ###### KAFKA
+  native.new_http_archive(
+    name = "kafka",
+    url = "http://mirrors.ocf.berkeley.edu/apache/kafka/" + KAFKA_VERSION + "/kafka_2.11-" + KAFKA_VERSION + ".tgz",
+    sha256 = "bee90d7287647119cf78948a7379729565ee0275eb67acfc1b0653b62a8246ee",
+    build_file_content = "exports_files(['kafka_2.11-" + KAFKA_VERSION + "'])",
   )
 
 
