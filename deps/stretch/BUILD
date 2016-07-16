@@ -121,9 +121,11 @@ filegroup(
     "@deb_stretch_zlib1g_dev//file",
     "@deb_stretch_gcc_5_base//file",
     "@deb_stretch_gcc_6_base//file",
+    "@deb_stretch_libc_bin//file",
     "@deb_stretch_libc6//file",
     "@deb_stretch_libgcc1//file",
     "@deb_stretch_libstdc__6//file",
+    "@deb_stretch_perl_base//file",
   ],
 )
 
