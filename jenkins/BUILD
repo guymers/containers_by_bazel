@@ -1,4 +1,5 @@
 load("//macros/user:user.bzl", "user_layer")
+load("//scripts/versions:versions.bzl", "JENKINS_SWARM_VERSION")
 
 JENKINS_HOME = "/jenkins"
 
@@ -15,6 +16,7 @@ container_image(
   layers = ["//base/gosu", ":user"],
   env = {
     "JENKINS_HOME": JENKINS_HOME,
+    "JENKINS_OPTS": "-Djenkins.install.runSetupWizard=false",
   },
   volumes = [JENKINS_HOME],
   workdir = JENKINS_HOME,
@@ -29,10 +31,22 @@ container_layer(
 )
 
 container_layer(
+  name = "default_config",
+  mode = "0644",
+  directory = "/usr/share/jenkins/ref",
+  files = ["ref/config.xml"],
+)
+container_layer(
+  name = "default_user",
+  mode = "0644",
+  directory = "/usr/share/jenkins/ref/users/admin",
+  files = ["ref/users/admin/config.xml"],
+)
+container_layer(
   name = "init_scripts",
   mode = "0644",
   directory = "/usr/share/jenkins/ref/init.groovy.d",
-  files = glob(["init.groovy.d/*"]),
+  files = glob(["ref/init.groovy.d/*"]),
 )
 
 container_layer(
@@ -43,7 +57,7 @@ container_layer(
 container_image(
   name = "jenkins",
   base = ":base",
-  layers = [":files", ":init_scripts", ":scripts"],
+  layers = [":files", ":default_config", ":default_user", ":init_scripts", ":scripts"],
   env = {
     "JENKINS_AGENT_PORT": "50000",
   },
@@ -59,7 +73,7 @@ container_layer(
   files = ["@jenkins_agent_jar//file"],
   directory = "/usr/share/jenkins",
   symlinks = {
-    "/usr/share/jenkins/swarm-client.jar": "/usr/share/jenkins/swarm-client-2.0-jar-with-dependencies.jar"
+    "/usr/share/jenkins/swarm-client.jar": "/usr/share/jenkins/swarm-client-" + JENKINS_SWARM_VERSION + "-jar-with-dependencies.jar"
   },
 )
 

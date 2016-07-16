@@ -110,7 +110,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "0acf4fdbee16e0012128cb660626bae5063c51657fc7329531a48a4f84eee401",
+    sha256 = "b9dc36de1ea16ccf3af1b371fdd09757cbeae7863a30bd637bf3924a78302a48",
   )
   native.http_file(
     name = "jenkins_agent_jar",

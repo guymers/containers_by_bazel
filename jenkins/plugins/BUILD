@@ -6,8 +6,8 @@ sh_binary(
 )
 
 sh_binary(
-  name = "workspace",
-  srcs = ["jenkins_plugins_workspace.sh"],
+  name = "bzl",
+  srcs = ["jenkins_plugins_bzl.sh"],
   deps = ["//scripts:bazel_functions"],
 )
 

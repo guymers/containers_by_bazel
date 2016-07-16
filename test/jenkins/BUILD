@@ -6,7 +6,7 @@ container_image(
 
 container_test(
   name = "jenkins",
-  size = "medium",
+  size = "small",
   image = ":jenkins_wget",
   daemon = True,
   mem_limit = "1024m",

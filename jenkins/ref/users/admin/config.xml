@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<user>
+  <fullName>admin</fullName>
+  <properties>
+    <hudson.security.HudsonPrivateSecurityRealm_-Details>
+      <!-- echo -n 'admin{salt}' | sha256sum -->
+      <passwordHash>salt:b7fb607331b76717bb17edcda11a8f1eead244f5d743ce97ba5d021577327f1a</passwordHash>
+    </hudson.security.HudsonPrivateSecurityRealm_-Details>
+  </properties>
+</user>

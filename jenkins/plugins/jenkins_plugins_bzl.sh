@@ -8,6 +8,7 @@ source "$DIR/containers_by_bazel/scripts/bazel_functions.sh"
 
 readonly jenkins_prefix=jenkins_plugin
 
+echo "def jenkins_plugins():"
 while read name url sha256; do
-  bazel_http_file "$jenkins_prefix" "$name" "$url" "$sha256"
+  bazel_native_http_file "$jenkins_prefix" "$name" "$url" "$sha256"
 done < <(cat "$1" | LC_ALL=C sort)

@@ -7,34 +7,52 @@ if [ -d "$JENKINS_HOME" -a "$(stat -c '%U' "$JENKINS_HOME" 2>/dev/null)" = "root
   chmod o-rwx "$JENKINS_HOME"
 fi
 
-# Copy files from /usr/share/jenkins/ref into /var/jenkins_home
-# So the initial JENKINS_HOME is set with expected content.
-# Don't override, as this is just a reference setup, and use from UI
-# can then change this, upgrade plugins, etc.
-copy_reference_file() {
-  f="${1%/}"
-  rel="${f:23}"
-  dir="$(dirname ${f})"
+# from https://github.com/jenkinsci/docker/blob/master/jenkins.sh
+function copy_reference_file() {
+  local f="${1%/}"
+  local rel="${f:23}"
+  local dir="$(dirname $f)"
   mkdir -p "$JENKINS_HOME/${dir:23}"
 
-  if [[ ${rel} == plugins/*.hpi ]]; then
+  if [[ "$rel" == plugins/*.hpi ]]; then
     plugin=${rel%.hpi}
-    cp -r "/usr/share/jenkins/ref/${rel}" "$JENKINS_HOME/${plugin}.jpi";
+    cp -a --no-clobber "/usr/share/jenkins/ref/${rel}" "$JENKINS_HOME/${plugin}.jpi"
     rel="${plugin}.jpi"
   else
-    cp -r "/usr/share/jenkins/ref/${rel}" "$JENKINS_HOME/${rel}";
+    cp -a --no-clobber "/usr/share/jenkins/ref/${rel}" "$JENKINS_HOME/${rel}"
   fi
   # pin plugins on initial copy
-  [[ ${rel} == plugins/*.jpi ]] && touch "$JENKINS_HOME/${rel}.pinned"
+  [[ "$rel" == plugins/*.jpi ]] && touch "$JENKINS_HOME/${rel}.pinned"
 }
 export -f copy_reference_file
 
 if [ "$1" = 'jenkins' ]; then
+  readonly initial_admin_password_file="$JENKINS_HOME/secrets/initialAdminPassword"
+  [[ -f "$JENKINS_HOME/config.xml" ]] && first_run=false || first_run=true
+  if [[ "$first_run" == true ]]; then
+    if [[ ! -f "$initial_admin_password_file" ]]; then
+      gosu jenkins mkdir -p "$JENKINS_HOME/secrets"
+      readonly cmd="head -c 100 /dev/urandom | md5sum | awk '{print \$1}' > $initial_admin_password_file"
+      gosu jenkins bash -c "$cmd"
+      chmod 600 "$initial_admin_password_file"
+    fi
+  fi
+
   find /usr/share/jenkins/ref/ -type f -exec gosu jenkins bash -c "copy_reference_file '{}'" \;
 
-  source /java-opts.sh
+  if [[ "$first_run" == true ]]; then
+    readonly admin_config_file="$JENKINS_HOME/users/admin/config.xml"
+    if [[ -f "$admin_config_file" ]]; then
+      password=$(cat "$initial_admin_password_file")
+      salt=$(md5sum "$initial_admin_password_file" | awk '{print $1}')
+      salted_password=$(echo -n "$password{$salt}" | sha256sum | awk '{print $1}')
+      sed -i -r -e "s#<passwordHash>.+</passwordHash>#<passwordHash>$salt:$salted_password</passwordHash>#" "$admin_config_file"
+      echo "Admin password has been set to: $password"
+    fi
+  fi
 
-  exec gosu jenkins java ${JAVA_OPTS} -jar /usr/share/jenkins/jenkins.war $JENKINS_OPTS
+  source /java-opts.sh
+  exec gosu jenkins java $JAVA_OPTS $JENKINS_OPTS -jar /usr/share/jenkins/jenkins.war $JENKINS_ARGS
 else
   exec "$@"
 fi
