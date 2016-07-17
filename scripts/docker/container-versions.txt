@@ -1,5 +1,6 @@
 bazel/dependencies jessie-base 220a9c1d3cfc
 bazel/dependencies jessie-ca-certificates 93ffa403c6de
+bazel/dependencies jessie-grafana e9aae5781a7f
 bazel/dependencies jessie-java f60a60daaeab
 bazel/dependencies jessie-nginx eaa16164d8b4
 bazel/dependencies jessie-nodejs 36752344c9b5

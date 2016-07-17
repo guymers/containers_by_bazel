@@ -1,7 +1,7 @@
 load("//macros/user:user.bzl", "user_layer")
 
-GRAFANA_DATA = "/var/lib/grafana"
-GRAFANA_LOGS = "/var/log/grafana"
+GRAFANA_DATA = "/grafana"
+GRAFANA_LOGS = GRAFANA_DATA + "/logs"
 GRAFANA_CONF = "/etc/grafana"
 
 user_layer(
@@ -13,7 +13,7 @@ user_layer(
 
 container_layer(
   name = "files",
-  debs = ["//deps/jessie:grafana", "@grafana//file"],
+  debs = ["//deps/jessie:grafana"],
   directory = "/",
   files = ["entrypoint-grafana"],
 )
@@ -22,11 +22,7 @@ container_layer(
 container_image(
   name = "grafana",
   base = "//base:jessie",
-  layers = [
-    "//base/gosu",
-    ":user",
-    ":files",
-  ],
+  layers = ["//base/gosu", ":user", ":files"],
 
   env = {
     "GRAFANA_HOME": "/usr/share/grafana",

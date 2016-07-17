@@ -30,6 +30,11 @@ def deb_jessie():
     sha256 = "b4fd6bce179acff4c9a7c267720c57e1c9ca6132bfb01be842809849efc1d233",
   )
   native.http_file(
+    name = "deb_jessie_grafana",
+    url = "https://packagecloud.io/grafana/stable/debian/pool/wheezy/main/g/grafana/grafana_3.1.0-1468321182_amd64.deb",
+    sha256 = "a55ed865b3ee44c724648b4544c613abaf59463cd7577dcf28aeac7503b60c80",
+  )
+  native.http_file(
     name = "deb_jessie_init_system_helpers",
     url = "http://httpredir.debian.org/debian/pool/main/i/init-system-helpers/init-system-helpers_1.22_all.deb",
     sha256 = "bd10514a4fb6b377ec5fddb6f3dcdefe30d840c32d3dd5376d09e5a2dfc953dd",

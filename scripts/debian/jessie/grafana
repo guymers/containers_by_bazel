@@ -1,1 +1,1 @@
-libfontconfig1=2.11.0-6.3
+grafana=${GRAFANA_DEB_VERSION}

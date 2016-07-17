@@ -14,6 +14,7 @@ docker tag "$jessie_image" bazel/base:jessie
 readonly JESSIE_DIR="$DIR/jessie"
 docker build $NO_CACHE -t bazel/dependencies:jessie-base -f "$JESSIE_DIR/base.Dockerfile" "$JESSIE_DIR"
 docker build -t bazel/dependencies:jessie-ca-certificates -f "$JESSIE_DIR/ca-certificates.Dockerfile" "$JESSIE_DIR"
+docker build -t bazel/dependencies:jessie-grafana -f "$JESSIE_DIR/grafana.Dockerfile" "$JESSIE_DIR"
 docker build -t bazel/dependencies:jessie-nginx -f "$JESSIE_DIR/nginx.Dockerfile" "$JESSIE_DIR"
 docker build -t bazel/dependencies:jessie-nodejs -f "$JESSIE_DIR/nodejs.Dockerfile" "$JESSIE_DIR"
 docker build -t bazel/dependencies:jessie-zulu -f "$JESSIE_DIR/zulu.Dockerfile" "$JESSIE_DIR"

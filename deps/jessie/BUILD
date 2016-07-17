@@ -39,6 +39,7 @@ filegroup(
   srcs = [
     "@deb_jessie_fontconfig_config//file",
     "@deb_jessie_fonts_dejavu_core//file",
+    "@deb_jessie_grafana//file",
     "@deb_jessie_libexpat1//file",
     "@deb_jessie_libfontconfig1//file",
     "@deb_jessie_libfreetype6//file",

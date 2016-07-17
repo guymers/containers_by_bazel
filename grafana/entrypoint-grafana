@@ -15,6 +15,12 @@ fi
 if [ "$1" = 'grafana' ]; then
   readonly conf_file="$GRAFANA_CONF/grafana.ini"
 
+  if [ -z "$GF_SECURITY_ADMIN_PASSWORD" ]; then
+    GF_SECURITY_ADMIN_PASSWORD=$(head -c 100 /dev/urandom | md5sum | awk '{print $1}')
+    export GF_SECURITY_ADMIN_PASSWORD
+    echo "Admin password has been set to: $GF_SECURITY_ADMIN_PASSWORD"
+  fi
+
   exec gosu grafana /usr/sbin/grafana-server \
     --homepath="$GRAFANA_HOME" \
     --config="$conf_file" \

@@ -51,12 +51,6 @@ def dependency_repositories():
     sha256 = "21a2d4436e9fd12248bbcc5d881ca7815f35e836e1c9f6595a7c490fd2e6bc0f",
   )
 
-  native.http_file(
-    name = "grafana",
-    url = "https://grafanarel.s3.amazonaws.com/builds/grafana_" + GRAFANA_VERSION + "-1464167696_amd64.deb",
-    sha256 = "cd1289926749e289c2476dff4f7349c266800a2a81f38eae49ef68ca18e716a4",
-  )
-
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
