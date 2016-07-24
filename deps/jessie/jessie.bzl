@@ -596,8 +596,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libmysqlclient18",
-    url = "http://httpredir.debian.org/debian/pool/main/m/mysql-5.5/libmysqlclient18_5.5.49-0+deb8u1_amd64.deb",
-    sha256 = "809b228ce87d6a84e5904a3945cad3a731bdc8c5dba534b65a4a5af0eb790caa",
+    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/libmysqlclient18_5.5.50-0+deb8u1_amd64.deb",
+    sha256 = "b9666637c45e7111445f0ef8f2b57701d4fca73bd243ab778fc318fe1a84fba6",
   )
   native.http_file(
     name = "deb_jessie_libnetcdfc7",
@@ -1171,8 +1171,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_mysql_common",
-    url = "http://httpredir.debian.org/debian/pool/main/m/mysql-5.5/mysql-common_5.5.49-0+deb8u1_all.deb",
-    sha256 = "458009b3205130104bba0833136c6eca8dbc634b181cec6c37a4b969d6478d3d",
+    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/mysql-common_5.5.50-0+deb8u1_all.deb",
+    sha256 = "b72c1449e13838738ef83f45f38754b2ac2eae6ab8309cb9ef3097daddedc4cb",
   )
   native.http_file(
     name = "deb_jessie_netcat",
@@ -1186,8 +1186,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nginx",
-    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.11.1-1~jessie_amd64.deb",
-    sha256 = "4bfcfd88bbe60f96b1f4a9c30885670d770e16cafccb489a1ccdc9bea3ee99d6",
+    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.11.2-1~jessie_amd64.deb",
+    sha256 = "3c984a186fbccf36f73a06683977a2416645e723045ad6eb61f0d584f26847bd",
   )
   native.http_file(
     name = "deb_jessie_nodejs",

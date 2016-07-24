@@ -53,8 +53,8 @@ def dependency_repositories():
 
   native.new_http_archive(
     name = "prometheus",
-    url = "https://github.com/prometheus/prometheus/releases/download/" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "660ba94efb1f4cff4934dc55bfe1b920f9bc4630bf731de4a67599b048c42c5c",
+    url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
+    sha256 = "2ef4f7e416c6fdc07396be9a72f69670733a0c6f72060c8bb42d6ff3410eae96",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
