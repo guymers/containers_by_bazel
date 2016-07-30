@@ -1186,13 +1186,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nginx",
-    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.11.2-1~jessie_amd64.deb",
-    sha256 = "3c984a186fbccf36f73a06683977a2416645e723045ad6eb61f0d584f26847bd",
+    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.11.3-1~jessie_amd64.deb",
+    sha256 = "31cc31f0b74ea322e611a6fda7b6ba6ea043b1d4d3b965084ceacf2c5801b2c9",
   )
   native.http_file(
     name = "deb_jessie_nodejs",
-    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.3.0-1nodesource1~jessie1_amd64.deb",
-    sha256 = "ab5a7ed777408d6a9f530b30c5cfa35bbab2daec1b0f0d0188874b374fd25ebd",
+    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.3.1-1nodesource1~jessie1_amd64.deb",
+    sha256 = "31bed5f1905786a3562c5680181f50a2af77494a927676c56d20aff59ee65e32",
   )
   native.http_file(
     name = "deb_jessie_odbcinst",
@@ -1216,13 +1216,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_perl",
-    url = "http://httpredir.debian.org/debian/pool/main/p/perl/perl_5.20.2-3+deb8u5_amd64.deb",
-    sha256 = "b60d918cbdfe7a77e5ea8d39a2dc235205a595c2050843a196e0a6f1afccf8da",
+    url = "http://security.debian.org/pool/updates/main/p/perl/perl_5.20.2-3+deb8u6_amd64.deb",
+    sha256 = "c8e863928022d4723a40177958b0d1e236540b2ae540bf17f534124fc45f8b43",
   )
   native.http_file(
     name = "deb_jessie_perl_modules",
-    url = "http://httpredir.debian.org/debian/pool/main/p/perl/perl-modules_5.20.2-3+deb8u5_all.deb",
-    sha256 = "e757a89f1e81eda9cf2a70972aa33f611c5fb26bffa892b63dd638f4e19e2529",
+    url = "http://security.debian.org/pool/updates/main/p/perl/perl-modules_5.20.2-3+deb8u6_all.deb",
+    sha256 = "59c74e72dc08a7d13245cceee1b4877238503b2e24ef05209dd4ce34256d034c",
   )
   native.http_file(
     name = "deb_jessie_pgdg_keyring",
@@ -1311,13 +1311,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_redis_server",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.1-1~bpo8+1_amd64.deb",
-    sha256 = "1f13fd3f495b3d8af4b9a9ab55b2bade681b07ccaaae42306d477991f540cdd9",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.1-4~bpo8+1_amd64.deb",
+    sha256 = "ca39ebd88a2005d671cda46883de062e22016eac29f84893bee919c5fb619d2a",
   )
   native.http_file(
     name = "deb_jessie_redis_tools",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.1-1~bpo8+1_amd64.deb",
-    sha256 = "6c33f181619febfdce3e8b3de8fe0d547eb350b5b4673e26e42bd132127cc032",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.1-4~bpo8+1_amd64.deb",
+    sha256 = "42ad988dd1c2a34ffbaf81d0c77e86933b31db10e6cbbcf01949eca0f8b87d44",
   )
   native.http_file(
     name = "deb_jessie_rlwrap",
@@ -1371,6 +1371,6 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_zulu_8",
-    url = "http://repos.azulsystems.com/debian/pool/main/zulu8.15.0.1-jdk8.0.92-linux_amd64.deb",
-    sha256 = "d691ad43763a9b5a8e5a03d9202254de66aaca89f26619822f3174c26f845446",
+    url = "http://repos.azulsystems.com/debian/pool/main/zulu8.17.0.3-jdk8.0.102-linux_amd64.deb",
+    sha256 = "011234d29133c519a17123be755bf26a83e3ebeedda047a47669593c31a0f249",
   )
