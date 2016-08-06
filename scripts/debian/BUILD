@@ -2,8 +2,27 @@ package(default_visibility = ["//visibility:public"])
 
 load("//scripts/debian:dependencies.bzl", "dependencies")
 
-dependencies(name = "jessie", dependencies = glob(["jessie/*"]))
-dependencies(name = "stretch", dependencies = glob(["stretch/*"]))
+dependencies(name = "jessie", dependencies = {
+  ":jessie/git": "base",
+  ":jessie/grafana": "grafana",
+  ":jessie/jasper_client": "base",
+  ":jessie/locales": "base",
+  ":jessie/nginx": "nginx",
+  ":jessie/nodejs": "nodejs",
+  ":jessie/polipo": "base",
+  ":jessie/postgis": "postgresql",
+  ":jessie/postgresql": "postgresql",
+  ":jessie/redis": "base",
+  ":jessie/ssh": "base",
+  ":jessie/tomcat7": "java",
+  ":jessie/wget": "base",
+  ":jessie/zip": "base",
+  ":jessie/zulu": "zulu",
+})
+dependencies(name = "stretch", dependencies = {
+  ":stretch/php": "base",
+  ":stretch/php_dev": "base",
+})
 
 sh_binary(
   name = "bazel_filegroup",
@@ -25,6 +44,11 @@ sh_binary(
 sh_binary(
   name = "find_dependencies",
   srcs = ["find_dependencies.sh"],
+)
+
+sh_binary(
+  name = "substitute_dependencies",
+  srcs = ["substitute_dependencies.sh"],
   deps = [":versions"],
 )
 

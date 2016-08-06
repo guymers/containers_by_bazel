@@ -1,5 +1,1 @@
 bazel-*
-
-/WORKSPACE.*
-
-/scripts/docker/container-versions.txt

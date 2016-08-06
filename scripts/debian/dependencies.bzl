@@ -5,42 +5,81 @@ def dependencies(name, dependencies, prefix = "deb", target_prefix = "", parent_
     extra_deps_tools = [parent_bzl_file]
     parent_bzl_file_location = "$(location " + parent_bzl_file + ")"
 
-  native.genrule(
-    name = "deps_" + name,
-    srcs = [":deb_" + f for f in dependencies],
-    outs = [name + ".bzl"],
-    cmd = "$(location " + target_prefix + "//scripts/debian:combine_dependencies) '" + prefix + "_" + name + "' '" + parent_bzl_file_location + "' $(SRCS) > $@",
-    tools = [target_prefix + "//scripts/debian:combine_dependencies"] + extra_deps_tools,
-  )
+  substitute_dependencies_target = target_path(target_prefix, "substitute_dependencies")
 
   [
     native.genrule(
-      name = "deb_" + f,
+      name = substituted_dependency_target_name(name, dependency),
+      srcs = [dependency],
+      outs = ["dependency_%s" % dependency_name(dependency)],
+      cmd = location(substitute_dependencies_target) + " " + location(dependency) + " > $@",
+      tools = [substitute_dependencies_target],
+    ) for dependency in dependencies
+  ]
+
+  find_dependencies_target = target_path(target_prefix, "find_dependencies")
+
+  [
+    native.genrule(
+      name = "debian_dependencies_%s_%s" % (name, dependency_name(dependency)),
       srcs = [
-        f,
-        target_prefix + "//scripts/docker:container-versions.txt",
+        ":" + substituted_dependency_target_name(name, dependency),
+        target_prefix + "//scripts/docker:_built/%s/%s" % (name, dependencies[dependency]),
       ],
-      outs = ["_deb_%s" % f],
-      cmd = "$(location " + target_prefix + "//scripts/debian:find_dependencies) '" + name + "' $(location " + f + ") > $@",
-      tools = [target_prefix + "//scripts/debian:find_dependencies"],
+      outs = ["debian_deps_%s" % dependency_name(dependency)],
+      cmd = location(find_dependencies_target) + " '" + container_image(name, dependencies[dependency]) + "' " + location(":" + substituted_dependency_target_name(name, dependency)) + " > $@",
+      tools = [find_dependencies_target],
       local = 1, # ignore sandboxing as script connects to docker
-    ) for f in dependencies
+    ) for dependency in dependencies
   ]
 
+  combine_dependencies_target = target_path(target_prefix, "combine_dependencies")
+
   native.genrule(
-    name = "deps_group_" + name,
-    srcs = [":dep_filegroup_" + f for f in dependencies],
-    outs = [name + ".filegroup"],
-    cmd = "$(location " + target_prefix + "//scripts/debian:combine_filegroups) '" + name + "' $(SRCS) > $@",
-    tools = [target_prefix + "//scripts/debian:combine_filegroups"],
+    name = "bazel_dependencies_file_%s" % name,
+    srcs = [":debian_dependencies_%s_%s" % (name, dependency_name(dependency)) for dependency in dependencies],
+    outs = [name + ".bzl"],
+    cmd = location(combine_dependencies_target) + " '" + prefix + "_" + name + "' '" + parent_bzl_file_location + "' $(SRCS) > $@",
+    tools = [combine_dependencies_target] + extra_deps_tools,
   )
+
+  bazel_filegroup_target = target_path(target_prefix, "bazel_filegroup")
 
   [
     native.genrule(
-      name = "dep_filegroup_" + f,
-      srcs = [":deb_" + f],
-      outs = ["filegroup_%s" % f],
-      cmd = "$(location " + target_prefix + "//scripts/debian:bazel_filegroup) '" + prefix + "_" + name + "' $< > $@",
-      tools = [target_prefix + "//scripts/debian:bazel_filegroup"],
-    ) for f in dependencies
+      name = "debian_dependencies_filegroup_%s_%s" % (name, dependency_name(dependency)),
+      srcs = [":debian_dependencies_%s_%s" % (name, dependency_name(dependency))],
+      outs = ["filegroup_%s" % dependency_name(dependency)],
+      cmd = location(bazel_filegroup_target) + " '" + prefix + "_" + name + "' $< > $@",
+      tools = [bazel_filegroup_target],
+    ) for dependency in dependencies
   ]
+
+  combine_filegroups_target = target_path(target_prefix, "combine_filegroups")
+
+  native.genrule(
+    name = "debian_dependencies_group_" + name,
+    srcs = [":debian_dependencies_filegroup_%s_%s" % (name, dependency_name(dependency)) for dependency in dependencies],
+    outs = [name + ".filegroup"],
+    cmd = location(combine_filegroups_target) + " '" + name + "' $(SRCS) > $@",
+    tools = [combine_filegroups_target],
+  )
+
+
+def location(target):
+  return "$(location " + target + ")"
+
+def target_path(target_prefix, script):
+  return target_prefix + "//scripts/debian:" + script
+
+def dependency_name(dependency):
+  return dependency.strip(chars=':')
+
+def container_image(name, tag):
+  return "bazel/dependencies:%s-%s" % (name, tag)
+
+def substituted_dependency_target_name(name, dependency):
+  return "substituted_dependency_versions_%s_%s" % (name, dependency_name(dependency))
+
+def substituted_dependency_target(target_prefix, name, dependency):
+  return target_path(target_prefix, substituted_dependency_target_name(name, dependency))

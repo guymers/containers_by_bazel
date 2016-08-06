@@ -8,28 +8,36 @@ DOCKER_NO_CACHE=${DOCKER_NO_CACHE:-false}
 
 bazel build //base:jessie //base:stretch
 
+# when https://github.com/docker/docker/issues/9656 is fixed run docker builds in parallel
+
+function build_image() {
+  local dir="$1"
+  local distro="$2"
+  local app="$3"
+
+  local random_tag="bazel_dep_$(cat /dev/urandom | head -c 10 | md5sum | awk '{print $1}')"
+
+  docker build $NO_CACHE -t "$random_tag" -f "$dir/$app.Dockerfile" "$dir"
+  local id=$(docker inspect --format="{{ .Id }}" "$random_tag")
+  docker tag "$random_tag" "bazel/dependencies:$distro-$app"
+  echo "$id"
+}
+
 readonly jessie_image=$(bazel run //base:jessie | grep "^Tagging" | awk '{print $4}')
 docker tag "$jessie_image" bazel/base:jessie
 
-readonly JESSIE_DIR="$DIR/jessie"
-docker build $NO_CACHE -t bazel/dependencies:jessie-base -f "$JESSIE_DIR/base.Dockerfile" "$JESSIE_DIR"
-docker build -t bazel/dependencies:jessie-ca-certificates -f "$JESSIE_DIR/ca-certificates.Dockerfile" "$JESSIE_DIR"
-docker build -t bazel/dependencies:jessie-grafana -f "$JESSIE_DIR/grafana.Dockerfile" "$JESSIE_DIR"
-docker build -t bazel/dependencies:jessie-nginx -f "$JESSIE_DIR/nginx.Dockerfile" "$JESSIE_DIR"
-docker build -t bazel/dependencies:jessie-nodejs -f "$JESSIE_DIR/nodejs.Dockerfile" "$JESSIE_DIR"
-docker build -t bazel/dependencies:jessie-zulu -f "$JESSIE_DIR/zulu.Dockerfile" "$JESSIE_DIR"
-
-docker build -t bazel/dependencies:jessie-postgresql -f "$JESSIE_DIR/postgresql.Dockerfile" "$JESSIE_DIR"
-docker tag bazel/dependencies:jessie-postgresql bazel/dependencies:jessie-postgis
-docker tag bazel/dependencies:jessie-postgresql bazel/dependencies:jessie-postgresql-client
-
-docker build -t bazel/dependencies:jessie-java -f "$JESSIE_DIR/java.Dockerfile" "$JESSIE_DIR"
-docker tag bazel/dependencies:jessie-java bazel/dependencies:jessie-tomcat7
+for app in base ca-certificates grafana java nginx nodejs postgresql zulu; do
+  # TODO do this in a single command
+  build_image "$DIR/jessie" "jessie" "$app" | tee "$DIR/_built/jessie/$app.tmp"
+  tail -n1 "$DIR/_built/jessie/$app.tmp" > "$DIR/_built/jessie/$app"
+  rm -f "$DIR/_built/jessie/$app.tmp"
+done
 
 readonly stretch_image=$(bazel run //base:stretch | grep "^Tagging" | awk '{print $4}')
 docker tag "$stretch_image" bazel/base:stretch
 
-readonly STRETCH_DIR="$DIR/stretch"
-docker build $NO_CACHE -t bazel/dependencies:stretch-base -f "$STRETCH_DIR/base.Dockerfile" "$STRETCH_DIR"
-
-docker images | grep "^bazel/dependencies" | awk '{print $1, $2, $3}' | LC_ALL=C sort > "$DIR/container-versions.txt"
+for app in base; do
+  build_image "$DIR/stretch" "stretch" "$app" | tee "$DIR/_built/stretch/$app.tmp"
+  tail -n1 "$DIR/_built/stretch/$app.tmp" > "$DIR/_built/stretch/$app"
+  rm -f "$DIR/_built/stretch/$app.tmp"
+done
