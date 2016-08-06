@@ -1,5 +1,6 @@
 load(
   "//scripts/versions:versions.bzl",
+  "ELASTICSEARCH_VERSION",
   "GRAFANA_VERSION",
   "JASPERREPORTS_SERVER_VERSION",
   "JASPERSOFT_STUDIO_VERSION",
@@ -135,6 +136,16 @@ def dependency_repositories():
     sha256 = "bee90d7287647119cf78948a7379729565ee0275eb67acfc1b0653b62a8246ee",
     build_file_content = "exports_files(['kafka_2.11-" + KAFKA_VERSION + "'])",
   )
+
+  ###### ELASTICSEARCH
+  # cannot use the deb file because it contains two copies of lib/elasticsearch-2.3.5.jar
+  native.new_http_archive(
+    name = "elasticsearch",
+    url = "https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/" + ELASTICSEARCH_VERSION + "/elasticsearch-" + ELASTICSEARCH_VERSION + ".tar.gz",
+    sha256 = "1119a8c18620b98c4b85261318663a1f26dea92a26f34dfeb7f813fb7cbb468a",
+    build_file_content = "exports_files(['elasticsearch-" + ELASTICSEARCH_VERSION + "'])",
+  )
+
 
 
   ###### TOMCAT

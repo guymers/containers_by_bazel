@@ -46,6 +46,7 @@ You can use the ./build_container script. It ensures that you cannot override th
 
     bazel build //scripts/versions
     source ./bazel-bin/scripts/versions/versions.sh
+    ./scripts/build_container.sh //elasticsearch elasticsearch ${ELASTICSEARCH_VERSION}
     ./scripts/build_container.sh //grafana grafana ${GRAFANA_VERSION}
     ./scripts/build_container.sh //java:zulu zulu ${ZULU_VERSION}
     ./scripts/build_container.sh //jenkins jenkins ${JENKINS_VERSION}
@@ -90,6 +91,7 @@ Create sbt ivy cache
     911 nexus
     912 jenkins
     913 tomcat
+    917 elasticsearch
     918 kafka
     919 zookeeper
     921 prometheus

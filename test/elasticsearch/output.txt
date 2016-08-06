@@ -1,0 +1,2 @@
+  "cluster_name" : "Elasticsearch",
+  "tagline" : "You Know, for Search"
