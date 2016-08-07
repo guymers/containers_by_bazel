@@ -20,6 +20,7 @@ function build_image() {
   docker build $NO_CACHE -t "$random_tag" -f "$dir/$app.Dockerfile" "$dir"
   local id=$(docker inspect --format="{{ .Id }}" "$random_tag")
   docker tag "$random_tag" "bazel/dependencies:$distro-$app"
+  docker rmi "$random_tag"
   echo "$id"
 }
 
