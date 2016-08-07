@@ -141,8 +141,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libgssapi_krb5_2",
-    url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libgssapi-krb5-2_1.14.2+dfsg-1_amd64.deb",
-    sha256 = "b7e895ef27ac5e25d520f2dfdb9564a32f352bd1f614a7403325989085321eb5",
+    url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libgssapi-krb5-2_1.14.3+dfsg-1_amd64.deb",
+    sha256 = "8e0f65dfb9c69158387f26a4ffd286f4e620955270bfe53242706df5776544b9",
   )
   native.http_file(
     name = "deb_stretch_libhogweed4",
@@ -171,8 +171,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libk5crypto3",
-    url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libk5crypto3_1.14.2+dfsg-1_amd64.deb",
-    sha256 = "db5c15587038f07df3fe057b72c2b1d45fd6dcd6796bae8a3f625ee232e9ebf6",
+    url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libk5crypto3_1.14.3+dfsg-1_amd64.deb",
+    sha256 = "91067fdf9757895288ec7e9fc502f749bd17e0f3ed62eea1c6c239024f940030",
   )
   native.http_file(
     name = "deb_stretch_libkeyutils1",
@@ -181,13 +181,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libkrb5_3",
-    url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libkrb5-3_1.14.2+dfsg-1_amd64.deb",
-    sha256 = "35129e1cc2ec8fe3615d06141ba6b0e602d2cf470fe4f1d6a9f832557e8df2fd",
+    url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libkrb5-3_1.14.3+dfsg-1_amd64.deb",
+    sha256 = "f93d1ccb54e9fc62fb566d67242f15795b703ee65842a00fc9aaf59203f60ef4",
   )
   native.http_file(
     name = "deb_stretch_libkrb5support0",
-    url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libkrb5support0_1.14.2+dfsg-1_amd64.deb",
-    sha256 = "e5f21114b54981fa6daccf2ec0be580105358a2235477858a6dd15dc857ed159",
+    url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libkrb5support0_1.14.3+dfsg-1_amd64.deb",
+    sha256 = "ed052648040a02e3c69a45d5487982882082260c8dc6dd7024faa1c45364f775",
   )
   native.http_file(
     name = "deb_stretch_libldap_2_4_2",
@@ -246,8 +246,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libp11_kit0",
-    url = "http://httpredir.debian.org/debian/pool/main/p/p11-kit/libp11-kit0_0.23.2-3_amd64.deb",
-    sha256 = "389ab2c392d45dc528afe4fea9f215e7389bb8267d8de2c0ea64a347ef3a7ba6",
+    url = "http://httpredir.debian.org/debian/pool/main/p/p11-kit/libp11-kit0_0.23.2-4_amd64.deb",
+    sha256 = "b44dc33ccc20725b700a5053c12755d97b6bcd4fe0d46a2d7fb6bcf9012c5ecf",
   )
   native.http_file(
     name = "deb_stretch_libpcre16_3",
