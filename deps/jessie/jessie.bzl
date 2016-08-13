@@ -1,13 +1,13 @@
 def deb_jessie():
   native.http_file(
     name = "deb_jessie_fontconfig",
-    url = "http://httpredir.debian.org/debian/pool/main/f/fontconfig/fontconfig_2.11.0-6.3_amd64.deb",
-    sha256 = "468c59a21cdd69bd82b8ad01c65d033851a00eda27dc32b24178b38cc41a72c5",
+    url = "http://security.debian.org/pool/updates/main/f/fontconfig/fontconfig_2.11.0-6.3+deb8u1_amd64.deb",
+    sha256 = "5383eabf18c4c3dc3d581d1efea0e6ccbfd2c08a6a98cd3e6c491b1a99759375",
   )
   native.http_file(
     name = "deb_jessie_fontconfig_config",
-    url = "http://httpredir.debian.org/debian/pool/main/f/fontconfig/fontconfig-config_2.11.0-6.3_all.deb",
-    sha256 = "aac3676ecc281890f83173258acc3178a84b305cd9e8b5fda4f8299cae793839",
+    url = "http://security.debian.org/pool/updates/main/f/fontconfig/fontconfig-config_2.11.0-6.3+deb8u1_all.deb",
+    sha256 = "f7963c0338fd031101f3f684a4e37306eefcd05094220947dd9cb7388a2fe85f",
   )
   native.http_file(
     name = "deb_jessie_fonts_dejavu_core",
@@ -326,8 +326,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libfontconfig1",
-    url = "http://httpredir.debian.org/debian/pool/main/f/fontconfig/libfontconfig1_2.11.0-6.3_amd64.deb",
-    sha256 = "2b21f91c8b46caba41221f1e45c5a37cac08ce1298dd7a28442f1b7332fa211b",
+    url = "http://security.debian.org/pool/updates/main/f/fontconfig/libfontconfig1_2.11.0-6.3+deb8u1_amd64.deb",
+    sha256 = "0bb54d61c13aa5b5253cb5e08aaca0dfc4c626a05ee30f51d0e3002cda166fec",
   )
   native.http_file(
     name = "deb_jessie_libfreetype6",
@@ -706,8 +706,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libpq5",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/libpq5_9.5.3-1.pgdg80+1_amd64.deb",
-    sha256 = "db86bab3cfbf5bc2ca67958f166c071697d3ce4d9e8b3c94ba0bfcc20c6db2a2",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/libpq5_9.5.4-1.pgdg80+1_amd64.deb",
+    sha256 = "1c1bf2a5156a0bb19fff018377342853f1dd16ada1396edae6ec8bc54ff45fea",
   )
   native.http_file(
     name = "deb_jessie_libproj0",
@@ -1241,8 +1241,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_5",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-9.5_9.5.3-1.pgdg80+1_amd64.deb",
-    sha256 = "5a41d744ed3370f8b66578b1b795530764a4235333d39ec10c727a1dec3a0845",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-9.5_9.5.4-1.pgdg80+1_amd64.deb",
+    sha256 = "0987f01bd58a3d1741ec5e0e7a2db2842b3a92473b91380783a1e743ab87483e",
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_5_postgis_2_2",
@@ -1256,8 +1256,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_postgresql_client_9_5",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-client-9.5_9.5.3-1.pgdg80+1_amd64.deb",
-    sha256 = "221685c91eea5505bbfd600691f3bd3c7c76f6c90b00d1d10f03395ee22fe943",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-client-9.5_9.5.4-1.pgdg80+1_amd64.deb",
+    sha256 = "12298509748959ed88c97bd73f9416193ec07781d666f68c873f566a5c713e4d",
   )
   native.http_file(
     name = "deb_jessie_postgresql_client_common",
@@ -1271,8 +1271,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_postgresql_contrib_9_5",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-contrib-9.5_9.5.3-1.pgdg80+1_amd64.deb",
-    sha256 = "64bf7ddb72e55f6c01409985d4cc1ec491f10140c4686d609e069795bc7463da",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-contrib-9.5_9.5.4-1.pgdg80+1_amd64.deb",
+    sha256 = "487ec897fb903ddd928b8aa0662668de5f908bb5c4d34ad6a3615c86265f157f",
   )
   native.http_file(
     name = "deb_jessie_proj_data",
@@ -1311,13 +1311,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_redis_server",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.1-4~bpo8+1_amd64.deb",
-    sha256 = "ca39ebd88a2005d671cda46883de062e22016eac29f84893bee919c5fb619d2a",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.3-1~bpo8+1_amd64.deb",
+    sha256 = "7ebbc1556fd238a68867a388432b3b83f3d2ba1192b785c50b6f0677b3bf8a00",
   )
   native.http_file(
     name = "deb_jessie_redis_tools",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.1-4~bpo8+1_amd64.deb",
-    sha256 = "42ad988dd1c2a34ffbaf81d0c77e86933b31db10e6cbbcf01949eca0f8b87d44",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.3-1~bpo8+1_amd64.deb",
+    sha256 = "dfe63f0115c9a138834573dd87b9785d76b2530e42ca6641730af59066520aae",
   )
   native.http_file(
     name = "deb_jessie_rlwrap",
