@@ -52,6 +52,7 @@ You can use the ./build_container script. It ensures that you cannot override th
     ./scripts/build_container.sh //jenkins jenkins ${JENKINS_VERSION}
     ./scripts/build_container.sh //jenkins:agent jenkins-agent ${JENKINS_SWARM_VERSION}
     ./scripts/build_container.sh //kafka kafka ${KAFKA_VERSION}
+    ./scripts/build_container.sh //kibana kibana ${KIBANA_VERSION}
     ./scripts/build_container.sh //proxy/nexus nexus ${NEXUS_VERSION}
     ./scripts/build_container.sh //nginx nginx ${NGINX_VERSION}
     ./scripts/build_container.sh //nodejs nodejs ${NODEJS_VERSION}
@@ -96,6 +97,7 @@ Create sbt ivy cache
     919 zookeeper
     921 prometheus
     922 grafana
+    923 kibana
     930 nginx
     931 redis
     941 postgres

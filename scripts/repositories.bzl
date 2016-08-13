@@ -7,6 +7,7 @@ load(
   "JENKINS_VERSION",
   "JENKINS_SWARM_VERSION",
   "KAFKA_VERSION",
+  "KIBANA_VERSION",
   "MAVEN_VERSION",
   "NEXUS_VERSION",
   "PENATHO_DI_VERSION",
@@ -146,6 +147,13 @@ def dependency_repositories():
     build_file_content = "exports_files(['elasticsearch-" + ELASTICSEARCH_VERSION + "'])",
   )
 
+  ###### KIBANA
+  native.new_http_archive(
+    name = "kibana",
+    url = "https://download.elastic.co/kibana/kibana/kibana-" + KIBANA_VERSION + "-linux-x64.tar.gz",
+    sha256 = "f4f11ce06679f734d01446d0e4016256c4d9f57be6d07a790dbf97bed0998b44",
+    build_file_content = "exports_files(['kibana-" + KIBANA_VERSION + "-linux-x64'])",
+  )
 
 
   ###### TOMCAT

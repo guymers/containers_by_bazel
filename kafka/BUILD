@@ -37,10 +37,7 @@ container_layer(
 container_image(
   name = "kafka",
   base = "//java:zulu",
-  layers = [
-    "//base/gosu", "//base/tini", ":user",
-    ":files", ":config_overrides", ":scripts",
-  ],
+  layers = ["//base/gosu", ":user", ":files", ":config_overrides", ":scripts"],
   env = {
     "KAFKA_HOME": KAFKA_HOME,
     "KAFKA_CONF": KAFKA_CONF,
