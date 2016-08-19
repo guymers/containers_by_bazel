@@ -134,7 +134,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "kafka",
     url = "http://mirrors.ocf.berkeley.edu/apache/kafka/" + KAFKA_VERSION + "/kafka_2.11-" + KAFKA_VERSION + ".tgz",
-    sha256 = "bee90d7287647119cf78948a7379729565ee0275eb67acfc1b0653b62a8246ee",
+    sha256 = "2d73625aeddd827c9e92eefb3c727a78455725fbca4361c221eaa05ae1fab02d",
     build_file_content = "exports_files(['kafka_2.11-" + KAFKA_VERSION + "'])",
   )
 

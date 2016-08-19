@@ -14,7 +14,6 @@ filegroup(
     "@deb_stretch_libgnutls30//file",
     "@deb_stretch_libgssapi_krb5_2//file",
     "@deb_stretch_libhogweed4//file",
-    "@deb_stretch_libicu55//file",
     "@deb_stretch_libicu57//file",
     "@deb_stretch_libidn11//file",
     "@deb_stretch_libk5crypto3//file",
