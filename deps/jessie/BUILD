@@ -3,6 +3,23 @@ package(default_visibility = ["//visibility:public"])
 exports_files(["jessie.bzl"])
 
 filegroup(
+  name = "dnsmasq",
+  srcs = [
+    "@deb_jessie_dnsmasq//file",
+    "@deb_jessie_dnsmasq_base//file",
+    "@deb_jessie_init_system_helpers//file",
+    "@deb_jessie_libdbus_1_3//file",
+    "@deb_jessie_libgmp10//file",
+    "@deb_jessie_libhogweed2//file",
+    "@deb_jessie_libidn11//file",
+    "@deb_jessie_libmnl0//file",
+    "@deb_jessie_libnetfilter_conntrack3//file",
+    "@deb_jessie_libnettle4//file",
+    "@deb_jessie_libnfnetlink0//file",
+  ],
+)
+
+filegroup(
   name = "git",
   srcs = [
     "@deb_jessie_git//file",

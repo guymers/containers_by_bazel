@@ -3,6 +3,7 @@ package(default_visibility = ["//visibility:public"])
 load("//scripts/debian:dependencies.bzl", "dependencies")
 
 dependencies(name = "jessie", dependencies = {
+  ":jessie/dnsmasq": "base",
   ":jessie/git": "base",
   ":jessie/grafana": "grafana",
   ":jessie/jasper_client": "base",

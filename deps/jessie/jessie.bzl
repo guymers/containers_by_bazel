@@ -1,5 +1,15 @@
 def deb_jessie():
   native.http_file(
+    name = "deb_jessie_dnsmasq",
+    url = "http://httpredir.debian.org/debian/pool/main/d/dnsmasq/dnsmasq_2.72-3+deb8u1_all.deb",
+    sha256 = "198fb357673219759ade204f34660c3a5ff52c2ed5d2afca4433d62a4b5fa3b5",
+  )
+  native.http_file(
+    name = "deb_jessie_dnsmasq_base",
+    url = "http://httpredir.debian.org/debian/pool/main/d/dnsmasq/dnsmasq-base_2.72-3+deb8u1_amd64.deb",
+    sha256 = "21c63dba82cf15959b0847fd81fabd3812c9732259545603d06e5823510300d5",
+  )
+  native.http_file(
     name = "deb_jessie_fontconfig",
     url = "http://security.debian.org/pool/updates/main/f/fontconfig/fontconfig_2.11.0-6.3+deb8u1_amd64.deb",
     sha256 = "5383eabf18c4c3dc3d581d1efea0e6ccbfd2c08a6a98cd3e6c491b1a99759375",
@@ -575,6 +585,11 @@ def deb_jessie():
     sha256 = "009d10d0aaec943c17f802a5678179f070fc01790d454c4954aa6dd1512c3aeb",
   )
   native.http_file(
+    name = "deb_jessie_libmnl0",
+    url = "http://httpredir.debian.org/debian/pool/main/libm/libmnl/libmnl0_1.0.3-5_amd64.deb",
+    sha256 = "73c0bf142f036272f4217ef8b2b68d19435a272468692d20ad0439bfc368a876",
+  )
+  native.http_file(
     name = "deb_jessie_libmodplug1",
     url = "http://httpredir.debian.org/debian/pool/main/libm/libmodplug/libmodplug1_0.8.8.4-4.1+b1_amd64.deb",
     sha256 = "f45e9603bb07304bebea11458716ec25c77f3cc0f20f67e08e094ae47201f8b3",
@@ -605,9 +620,19 @@ def deb_jessie():
     sha256 = "3f60dc741326ddfc6e9da716632d1bad4be11e4159313b9b236045178fe5d42b",
   )
   native.http_file(
+    name = "deb_jessie_libnetfilter_conntrack3",
+    url = "http://httpredir.debian.org/debian/pool/main/libn/libnetfilter-conntrack/libnetfilter-conntrack3_1.0.4-1_amd64.deb",
+    sha256 = "a3b8f09a009f2509ad7898122a80de75759de1a8434caee387c9eb1c62c8b840",
+  )
+  native.http_file(
     name = "deb_jessie_libnettle4",
     url = "http://httpredir.debian.org/debian/pool/main/n/nettle/libnettle4_2.7.1-5+deb8u1_amd64.deb",
     sha256 = "e2437a4d2a21a9195feb00b608c31dfee9fbb835e7a0a1121fa3503cf8ab80fb",
+  )
+  native.http_file(
+    name = "deb_jessie_libnfnetlink0",
+    url = "http://httpredir.debian.org/debian/pool/main/libn/libnfnetlink/libnfnetlink0_1.0.1-3_amd64.deb",
+    sha256 = "5d486022cd9e047e9afbb1617cf4519c0decfc3d2c1fad7e7fe5604943dbbf37",
   )
   native.http_file(
     name = "deb_jessie_libntdb1",
