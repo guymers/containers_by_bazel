@@ -131,8 +131,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libgnutls30",
-    url = "http://httpredir.debian.org/debian/pool/main/g/gnutls28/libgnutls30_3.5.2-2_amd64.deb",
-    sha256 = "159c2f84bb43a240110b28b6da385a9d4b9a5f2353f922ac8a204cc85fc49d56",
+    url = "http://httpredir.debian.org/debian/pool/main/g/gnutls28/libgnutls30_3.5.3-2_amd64.deb",
+    sha256 = "15508b71c711444ccde47dff6b6ca025a9ec1fc5e24e111c6359dcb38f9b80e4",
   )
   native.http_file(
     name = "deb_stretch_libgomp1",
