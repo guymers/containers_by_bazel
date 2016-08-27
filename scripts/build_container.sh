@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 set -o pipefail
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 readonly DEFAULT_REGISTRY="bazel"
 DOCKER_REGISTRY=${DOCKER_REGISTRY:-$DEFAULT_REGISTRY}
@@ -26,9 +25,9 @@ if [ -z "$version" ]; then
 fi
 
 remote_image_version="$remote_image:$version"
-echo $remote_image_version
 
 if [ "$DOCKER_REGISTRY" != "$DEFAULT_REGISTRY" ]; then
+  echo "Pulling $remote_image_version"
   docker pull "$remote_image_version" 2> /dev/null || true
 fi
 

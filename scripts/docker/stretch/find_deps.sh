@@ -3,6 +3,7 @@ set -e
 set -o pipefail
 
 # http://stackoverflow.com/a/26239050
+# shellcheck disable=SC2068
 readonly pkg_dep_info=$(apt-get install --no-install-recommends --print-uris --yes --verbose-versions ${@})
 readonly urls=($(echo "$pkg_dep_info" | grep ^\' | cut -d\' -f2))
 
@@ -18,7 +19,7 @@ function find_url() {
   echo "$e"
 }
 
-while read name version; do
+while read -r name version; do
   info=$(apt-cache show "$name=$version")
   sha256=$(echo "$info" | awk '/^SHA256: /{print $2; exit}')
   filename=$(echo "$info" | awk '/^Filename: /{print $2; exit}')

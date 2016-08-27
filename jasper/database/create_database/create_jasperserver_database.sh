@@ -34,6 +34,6 @@ gosu postgres pg_dump jasperserver > /output/$out_file
 EOF
 
 readonly cmd="bash /output/create.sh && chown $(id -u):$(id -g) /output/$out_file"
-docker run --rm -v "$(pwd)/$out_dir":/output $docker_image bash -c "$cmd" > /dev/null
+docker run --rm -v "$(pwd)/$out_dir":/output "$docker_image" bash -c "$cmd" > /dev/null
 
 rm -f "$out_dir/create.sh"

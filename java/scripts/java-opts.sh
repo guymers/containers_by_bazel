@@ -14,7 +14,7 @@ if [ "$AUTO_JAVA_HEAP_SIZE" = "true" ]; then
 
   readonly MEMORY_LIMIT_IN_BYTES=$(cat /sys/fs/cgroup/memory/memory.limit_in_bytes 2> /dev/null || echo 1073741824)
   readonly MEMORY_LIMIT=$((MEMORY_LIMIT_IN_BYTES / 1024 / 1024))
-  readonly HEAP_SIZE=$((MEMORY_LIMIT / 100 * $HEAP_SIZE_PERCENTAGE))
+  readonly HEAP_SIZE=$((MEMORY_LIMIT * HEAP_SIZE_PERCENTAGE / 100))
   JAVA_OPTS="$JAVA_OPTS -Xms${HEAP_SIZE}m -Xmx${HEAP_SIZE}m"
 fi
 

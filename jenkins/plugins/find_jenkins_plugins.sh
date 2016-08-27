@@ -13,13 +13,13 @@ readonly TEMP="$1"
 declare -A plugins
 
 # based on https://github.com/jenkinsci/docker/blob/master/plugins.sh
-while read spec || [ -n "$spec" ]; do
+while read -r spec || [ -n "$spec" ]; do
   plugin=(${spec//:/ })
   name=${plugin[0]}
   version=${plugin[1]}
 
   [[ $name =~ ^# ]] && continue
-  [[ $name =~ ^\s*$ ]] && continue
+  [[ $name =~ ^[[:space:]]*$ ]] && continue
   [[ -z $version ]] && version="latest"
 
   existing_version=${plugins[$name]}
@@ -43,6 +43,6 @@ while read spec || [ -n "$spec" ]; do
   sha256=$(sha256sum "$tmp_file" | awk '{print $1}')
 
   # workspace names may contain only A-Z, a-z, 0-9, '_'
-  name=$(echo "$name" | sed 's/[^A-Za-z0-9_]/_/g')
+  name="${name//[^A-Za-z0-9_]/_}"
   echo "$name" "$url" "$sha256"
 done < "$2"

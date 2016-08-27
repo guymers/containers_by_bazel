@@ -201,8 +201,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libltdl7",
-    url = "http://httpredir.debian.org/debian/pool/main/libt/libtool/libltdl7_2.4.6-0.1_amd64.deb",
-    sha256 = "dae9501f694f8e5e507e137639570fd446b3d0334dc86d8e52751739b40748e9",
+    url = "http://httpredir.debian.org/debian/pool/main/libt/libtool/libltdl7_2.4.6-2_amd64.deb",
+    sha256 = "95311ecc8342b3660246f8c7d2a506a768878f521bb26ec7286551ddf275b6fc",
   )
   native.http_file(
     name = "deb_stretch_libmagic1",
@@ -246,8 +246,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libp11_kit0",
-    url = "http://httpredir.debian.org/debian/pool/main/p/p11-kit/libp11-kit0_0.23.2-4_amd64.deb",
-    sha256 = "b44dc33ccc20725b700a5053c12755d97b6bcd4fe0d46a2d7fb6bcf9012c5ecf",
+    url = "http://httpredir.debian.org/debian/pool/main/p/p11-kit/libp11-kit0_0.23.2-5_amd64.deb",
+    sha256 = "79d4b4be9e53a603211bad881cc558794c300dcfb42430f15aa6d612cdca45d8",
   )
   native.http_file(
     name = "deb_stretch_libpcre16_3",
@@ -336,8 +336,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libtool",
-    url = "http://httpredir.debian.org/debian/pool/main/libt/libtool/libtool_2.4.6-0.1_all.deb",
-    sha256 = "e0eb756b46f8c22a04a8d60e0f76db313dba47bb5797fbb58a684876e7fd0d1e",
+    url = "http://httpredir.debian.org/debian/pool/main/libt/libtool/libtool_2.4.6-2_all.deb",
+    sha256 = "2781f99f13839a9439d4f65582c611a6e101b400d46a5e02c4fe30fea5f1956c",
   )
   native.http_file(
     name = "deb_stretch_libtsan0",

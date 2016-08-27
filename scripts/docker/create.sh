@@ -15,10 +15,13 @@ function build_image() {
   local distro="$2"
   local app="$3"
 
-  local random_tag="bazel_dep_$(cat /dev/urandom | head -c 10 | md5sum | awk '{print $1}')"
+  local random_tag
+  random_tag="bazel_dep_$(head -c 10 /dev/urandom | md5sum | awk '{print $1}')"
 
   docker build $NO_CACHE -t "$random_tag" -f "$dir/$app.Dockerfile" "$dir"
-  local id=$(docker inspect --format="{{ .Id }}" "$random_tag")
+  local id
+  id=$(docker inspect --format="{{ .Id }}" "$random_tag")
+
   docker tag "$random_tag" "bazel/dependencies:$distro-$app"
   docker rmi "$random_tag"
   echo "$id"
@@ -37,7 +40,7 @@ done
 readonly stretch_image=$(bazel run //base:stretch | grep "^Tagging" | awk '{print $4}')
 docker tag "$stretch_image" bazel/base:stretch
 
-for app in base; do
+for app in base ca-certificates; do
   build_image "$DIR/stretch" "stretch" "$app" | tee "$DIR/_built/stretch/$app.tmp"
   tail -n1 "$DIR/_built/stretch/$app.tmp" > "$DIR/_built/stretch/$app"
   rm -f "$DIR/_built/stretch/$app.tmp"

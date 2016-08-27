@@ -5,7 +5,7 @@ readonly DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly OUT_DIR="$DIR/../bazel-genfiles/"
 readonly ROOT="$DIR/.."
 
-bazel build --jobs $(nproc) --verbose_failures \
+bazel build --jobs "$(nproc)" --verbose_failures \
   //scripts/debian:all \
   //scripts/ssl:all
 

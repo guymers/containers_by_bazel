@@ -1,4 +1,6 @@
-#!/bin/bash -e
+#!/bin/bash
+set -e
+set -o pipefail
 
 # prevent port collisions
 export JMX_PORT=""

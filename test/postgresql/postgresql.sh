@@ -1,4 +1,6 @@
-#!/bin/bash -e
+#!/bin/bash
+set -e
+set -o pipefail
 
 # set host to not connect through the socket to avoid connecting when applying the init folder
 while ! psql -U postgres -h localhost -c "SELECT 1" &>/dev/null; do
