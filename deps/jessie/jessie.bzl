@@ -481,8 +481,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libidn11",
-    url = "http://httpredir.debian.org/debian/pool/main/libi/libidn/libidn11_1.29-1+deb8u1_amd64.deb",
-    sha256 = "28bd650c76b8bc25120eaa1253af8b04dcd71bbb73d65733c8bb21d773a94b46",
+    url = "http://security.debian.org/pool/updates/main/libi/libidn/libidn11_1.29-1+deb8u2_amd64.deb",
+    sha256 = "de106dcbcdaf046d61ee9eaaecf04854a5e45aef78a5aac6868af32b1d2cdfe8",
   )
   native.http_file(
     name = "deb_jessie_libiso9660_8",
@@ -1216,8 +1216,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nodejs",
-    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.4.0-1nodesource1~jessie1_amd64.deb",
-    sha256 = "d79a38c336f28c55309257c573b9322cf8d45b523a3814d879f17c78bc2fb6ce",
+    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.5.0-1nodesource1~jessie1_amd64.deb",
+    sha256 = "4101d8c1855f1c2b036d130e99e047ab7906ae41b45d3268ff35d42507bbc41b",
   )
   native.http_file(
     name = "deb_jessie_odbcinst",
@@ -1336,13 +1336,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_redis_server",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.3-1~bpo8+1_amd64.deb",
-    sha256 = "7ebbc1556fd238a68867a388432b3b83f3d2ba1192b785c50b6f0677b3bf8a00",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.3-2~bpo8+1_amd64.deb",
+    sha256 = "65ce29e7107289fd370ef126c9f9f6f8d4d000e07c5ec389b4877242800c6638",
   )
   native.http_file(
     name = "deb_jessie_redis_tools",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.3-1~bpo8+1_amd64.deb",
-    sha256 = "dfe63f0115c9a138834573dd87b9785d76b2530e42ca6641730af59066520aae",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.3-2~bpo8+1_amd64.deb",
+    sha256 = "55f4c1a755576c5ef09bb1a2d0e4c2ba580815c2ab8669ae7e77dcf9eb1a047e",
   )
   native.http_file(
     name = "deb_jessie_rlwrap",

@@ -45,11 +45,6 @@ def deb_stretch():
     sha256 = "71b570ac9b50c77b6a9fe5fafc42cea322c4de11f9e6e1246cfed5572440a90c",
   )
   native.http_file(
-    name = "deb_stretch_gcc_6_base",
-    url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/gcc-6-base_6.1.1-11_amd64.deb",
-    sha256 = "a7ba3cff3a96827c9d666ba3fee2e991c0095b1ca81e6437f63f3b62aa9eb959",
-  )
-  native.http_file(
     name = "deb_stretch_libapparmor1",
     url = "http://httpredir.debian.org/debian/pool/main/a/apparmor/libapparmor1_2.10.95-4_amd64.deb",
     sha256 = "b906cf84297dee13196d6d12843fe249736c912383910a7463c521136826d95b",
@@ -70,19 +65,14 @@ def deb_stretch():
     sha256 = "030e441cc6368041536a69adcaed6b4f4a37e0145817fc3eff16f37e3a81ecae",
   )
   native.http_file(
-    name = "deb_stretch_libc6",
-    url = "http://httpredir.debian.org/debian/pool/main/g/glibc/libc6_2.23-4_amd64.deb",
-    sha256 = "b295fe515a5b25a31c10c8d6551b71c1c6e0d5c79ddcb8ddf15c8484cb4a65e7",
-  )
-  native.http_file(
     name = "deb_stretch_libc6_dev",
-    url = "http://httpredir.debian.org/debian/pool/main/g/glibc/libc6-dev_2.23-4_amd64.deb",
-    sha256 = "722e452985c49bd2005d9bc58ea8e83d177e76177cae16ded90455c2569122da",
+    url = "http://httpredir.debian.org/debian/pool/main/g/glibc/libc6-dev_2.23-5_amd64.deb",
+    sha256 = "8384115bf86f4f4d019eead0c7f430b13838d11b2bcd3bcc6fdcf1cf3fcb9afa",
   )
   native.http_file(
     name = "deb_stretch_libc_dev_bin",
-    url = "http://httpredir.debian.org/debian/pool/main/g/glibc/libc-dev-bin_2.23-4_amd64.deb",
-    sha256 = "c5fedd510b63a6566d2b471e75977cf8a11129186a88fd53921582a21588c389",
+    url = "http://httpredir.debian.org/debian/pool/main/g/glibc/libc-dev-bin_2.23-5_amd64.deb",
+    sha256 = "02ca70bbf5fa311407101c23bb2ece5aacdca737ba0b3774e2162569e94aebfd",
   )
   native.http_file(
     name = "deb_stretch_libcc1_0",
@@ -110,11 +100,6 @@ def deb_stretch():
     sha256 = "0e09dff6fdd6985aaf8c18a3b631d865dd75f323fde248d2f224745ec75d41a0",
   )
   native.http_file(
-    name = "deb_stretch_libgcc1",
-    url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libgcc1_6.1.1-11_amd64.deb",
-    sha256 = "88e668685ac4b3f12ffd86532dec1e36310f6a612fbecccf775aa016b944b5cb",
-  )
-  native.http_file(
     name = "deb_stretch_libgcc_6_dev",
     url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libgcc-6-dev_6.1.1-11_amd64.deb",
     sha256 = "9be11253692a600e4c35f8c6104549f5844b130dd43f03ec406063368eca960a",
@@ -131,8 +116,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libgnutls30",
-    url = "http://httpredir.debian.org/debian/pool/main/g/gnutls28/libgnutls30_3.5.3-2_amd64.deb",
-    sha256 = "15508b71c711444ccde47dff6b6ca025a9ec1fc5e24e111c6359dcb38f9b80e4",
+    url = "http://httpredir.debian.org/debian/pool/main/g/gnutls28/libgnutls30_3.5.3-4_amd64.deb",
+    sha256 = "68070bc6e868a543f6176e1824b4376747acf7fef32b3d00cc1a2a5efd086624",
   )
   native.http_file(
     name = "deb_stretch_libgomp1",
@@ -141,8 +126,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libgssapi_krb5_2",
-    url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libgssapi-krb5-2_1.14.3+dfsg-1_amd64.deb",
-    sha256 = "8e0f65dfb9c69158387f26a4ffd286f4e620955270bfe53242706df5776544b9",
+    url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libgssapi-krb5-2_1.14.3+dfsg-2_amd64.deb",
+    sha256 = "8b9a069e4769d92b9cc22577cbe0452d93f280ebbc3fd6f05049397c04e7ec90",
   )
   native.http_file(
     name = "deb_stretch_libhogweed4",
@@ -151,8 +136,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libicu57",
-    url = "http://httpredir.debian.org/debian/pool/main/i/icu/libicu57_57.1-2_amd64.deb",
-    sha256 = "ba01a0bb2632bc21aff1c12dbee7fb12afb267dff102fa31691936d5b3f4a644",
+    url = "http://httpredir.debian.org/debian/pool/main/i/icu/libicu57_57.1-4_amd64.deb",
+    sha256 = "3a3b6a52e673df1327bcf5055d7043e6e1aad6fcc8e86c54a6caf89fd38dd2b6",
   )
   native.http_file(
     name = "deb_stretch_libidn11",
@@ -171,8 +156,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libk5crypto3",
-    url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libk5crypto3_1.14.3+dfsg-1_amd64.deb",
-    sha256 = "91067fdf9757895288ec7e9fc502f749bd17e0f3ed62eea1c6c239024f940030",
+    url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libk5crypto3_1.14.3+dfsg-2_amd64.deb",
+    sha256 = "baeb4d06b2f8d9fe368049985889f639dce79df1f71217cc811e7633047a4235",
   )
   native.http_file(
     name = "deb_stretch_libkeyutils1",
@@ -181,13 +166,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libkrb5_3",
-    url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libkrb5-3_1.14.3+dfsg-1_amd64.deb",
-    sha256 = "f93d1ccb54e9fc62fb566d67242f15795b703ee65842a00fc9aaf59203f60ef4",
+    url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libkrb5-3_1.14.3+dfsg-2_amd64.deb",
+    sha256 = "fb1074adcb3fb43fe3dce7bd28535c1f5f7559aff889f3a03742a415ceb1082c",
   )
   native.http_file(
     name = "deb_stretch_libkrb5support0",
-    url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libkrb5support0_1.14.3+dfsg-1_amd64.deb",
-    sha256 = "ed052648040a02e3c69a45d5487982882082260c8dc6dd7024faa1c45364f775",
+    url = "http://httpredir.debian.org/debian/pool/main/k/krb5/libkrb5support0_1.14.3+dfsg-2_amd64.deb",
+    sha256 = "103edf23b5f91b3352597861754723862c68525293ede8f719ea2e7fc2fe7c66",
   )
   native.http_file(
     name = "deb_stretch_libldap_2_4_2",
@@ -241,8 +226,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libnghttp2_14",
-    url = "http://httpredir.debian.org/debian/pool/main/n/nghttp2/libnghttp2-14_1.13.0-1_amd64.deb",
-    sha256 = "15c90ff73767269dfbafae6fcb3887b59121a1fcc44bc5aaeb1e946cc3500bfd",
+    url = "http://httpredir.debian.org/debian/pool/main/n/nghttp2/libnghttp2-14_1.14.0-1_amd64.deb",
+    sha256 = "5f4856b1712ff48b73b9a610efeffc8fe59d7a874c89270d512f3ff7c3b25a3c",
   )
   native.http_file(
     name = "deb_stretch_libp11_kit0",
@@ -251,28 +236,23 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libpcre16_3",
-    url = "http://httpredir.debian.org/debian/pool/main/p/pcre3/libpcre16-3_8.39-1_amd64.deb",
-    sha256 = "7ced60190eaa2cf7cfa22cd11b6d28894ef629b86267abebd3f4917dcd69eec2",
-  )
-  native.http_file(
-    name = "deb_stretch_libpcre3",
-    url = "http://httpredir.debian.org/debian/pool/main/p/pcre3/libpcre3_8.39-1_amd64.deb",
-    sha256 = "006775f6b03ec0ea009e89f286be3685e9bfc35c38392e869e658c5eb42d0dd3",
+    url = "http://httpredir.debian.org/debian/pool/main/p/pcre3/libpcre16-3_8.39-2_amd64.deb",
+    sha256 = "493a473b4f0421bb20dc1cb0ebe635758a94cbaf6ae078bcdf19eb05f27bc701",
   )
   native.http_file(
     name = "deb_stretch_libpcre32_3",
-    url = "http://httpredir.debian.org/debian/pool/main/p/pcre3/libpcre32-3_8.39-1_amd64.deb",
-    sha256 = "c4463c1332501fdaea097c3d1b6214aadbdffa94c439e83da6bd5f7dc4b4ee72",
+    url = "http://httpredir.debian.org/debian/pool/main/p/pcre3/libpcre32-3_8.39-2_amd64.deb",
+    sha256 = "4f7c2a43f94f94ed6e16ac58952d0cea443a77f997f34f28f68bdd2d92851307",
   )
   native.http_file(
     name = "deb_stretch_libpcre3_dev",
-    url = "http://httpredir.debian.org/debian/pool/main/p/pcre3/libpcre3-dev_8.39-1_amd64.deb",
-    sha256 = "333ce49cbfa2f4f5ee9ec3218709c088e2c3c84e7df5f5af6c6dffb36e5a836d",
+    url = "http://httpredir.debian.org/debian/pool/main/p/pcre3/libpcre3-dev_8.39-2_amd64.deb",
+    sha256 = "f93d729b14e0939714ca7670b8422c22aa8742f409fd0b8046bde2ce5b92c538",
   )
   native.http_file(
     name = "deb_stretch_libpcrecpp0v5",
-    url = "http://httpredir.debian.org/debian/pool/main/p/pcre3/libpcrecpp0v5_8.39-1_amd64.deb",
-    sha256 = "2b5a6e15f85e091d829253dc29d1f7bf8bc57fde7ec6430662a824d150e5157f",
+    url = "http://httpredir.debian.org/debian/pool/main/p/pcre3/libpcrecpp0v5_8.39-2_amd64.deb",
+    sha256 = "c6b7f2242b0f6152b030bee31459222bdf859926477084e8f6ce5004e4d627df",
   )
   native.http_file(
     name = "deb_stretch_libperl5_22",
@@ -281,8 +261,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libpq5",
-    url = "http://httpredir.debian.org/debian/pool/main/p/postgresql-9.5/libpq5_9.5.4-1_amd64.deb",
-    sha256 = "d59d7eaff48a793f13ab39d288da717644a44583f73b819f56576f341c234ccf",
+    url = "http://httpredir.debian.org/debian/pool/main/p/postgresql-9.6/libpq5_9.6~rc1-1_amd64.deb",
+    sha256 = "d3c7bb59242431c599c75d36c84688bf72ebc509768d61d211d81038bc04310c",
   )
   native.http_file(
     name = "deb_stretch_libquadmath0",
@@ -323,11 +303,6 @@ def deb_stretch():
     name = "deb_stretch_libssl_dev",
     url = "http://httpredir.debian.org/debian/pool/main/o/openssl/libssl-dev_1.0.2h-1_amd64.deb",
     sha256 = "9bede1f80e3074b135e91a54137924bfdc23b41f2bff286e110f6036c93b79a4",
-  )
-  native.http_file(
-    name = "deb_stretch_libstdc__6",
-    url = "http://httpredir.debian.org/debian/pool/main/g/gcc-6/libstdc++6_6.1.1-11_amd64.deb",
-    sha256 = "121ae4d0ff4c3d5f56a02e1af92d7e261fa1cd909cfbf0656ef20408dc1cae81",
   )
   native.http_file(
     name = "deb_stretch_libtasn1_6",
@@ -375,89 +350,84 @@ def deb_stretch():
     sha256 = "4017d74074776bb4dc3fcef598aba46dd3ebba9a609b5c0986104ae5219dd0cc",
   )
   native.http_file(
-    name = "deb_stretch_perl_base",
-    url = "http://httpredir.debian.org/debian/pool/main/p/perl/perl-base_5.22.2-3_amd64.deb",
-    sha256 = "c36c422936db175f52e7c4cdbe0f68b4b338cdba49c4aff4efb4aaf1e929222b",
-  )
-  native.http_file(
     name = "deb_stretch_perl_modules_5_22",
     url = "http://httpredir.debian.org/debian/pool/main/p/perl/perl-modules-5.22_5.22.2-3_all.deb",
     sha256 = "71b333a958cfe12a4a1cfb91646e24776489c676d88b0e0d11309502ba5becf8",
   )
   native.http_file(
     name = "deb_stretch_php7_0_bcmath",
-    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-bcmath_7.0.9-2_amd64.deb",
-    sha256 = "f19e178a9834054cc19ffba137180710e341b90454f5c286632811fd7ccc7aec",
+    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-bcmath_7.0.10-1_amd64.deb",
+    sha256 = "6dcdd6975cc351126597ccff3938093aedb0ce499a6e3391b18a95f1ee278a57",
   )
   native.http_file(
     name = "deb_stretch_php7_0_cli",
-    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-cli_7.0.9-2_amd64.deb",
-    sha256 = "4523ba741d9fe3c661cd7f2de85e47584cc9f69ef7d168756325a6af34206e38",
+    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-cli_7.0.10-1_amd64.deb",
+    sha256 = "9bbe108d3902b5ac5d5fda3e1fb092f2eea930abb02e1de929caf105198bfc2e",
   )
   native.http_file(
     name = "deb_stretch_php7_0_common",
-    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-common_7.0.9-2_amd64.deb",
-    sha256 = "afd4de9d5d9426bf3cf0fc171c349f0e17117759e5980742fb57fc82462f3e02",
+    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-common_7.0.10-1_amd64.deb",
+    sha256 = "88f7128fe7f67a40b68f56cf952aae9e672f62039810f8d195597a450c4437ec",
   )
   native.http_file(
     name = "deb_stretch_php7_0_curl",
-    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-curl_7.0.9-2_amd64.deb",
-    sha256 = "45578a656ab2f742c906cd0ccf104f17047d636af46d495d60678be01c9b5930",
+    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-curl_7.0.10-1_amd64.deb",
+    sha256 = "5993267a6cb3ef9ac7f398780ee86c0ce6b5398e63243b4396f9d7f7125c7f7f",
   )
   native.http_file(
     name = "deb_stretch_php7_0_dev",
-    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-dev_7.0.9-2_amd64.deb",
-    sha256 = "49d15bb4067cb61303b5c0847b52ccca0720dd6e6c1bfc83c68213c817dd1cc2",
+    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-dev_7.0.10-1_amd64.deb",
+    sha256 = "ce5ac42105759cfff4075684ce528ce239a60df6fbe33b86daac4b07354a115f",
   )
   native.http_file(
     name = "deb_stretch_php7_0_fpm",
-    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-fpm_7.0.9-2_amd64.deb",
-    sha256 = "b948400d7143149db93875206d9f156f6855f31ab84f2ff106370076ceaa54fc",
+    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-fpm_7.0.10-1_amd64.deb",
+    sha256 = "54a63bf5c9e3c0856d061f79c0dd798e11e5e76103b2addcd16a191792faa4a9",
   )
   native.http_file(
     name = "deb_stretch_php7_0_intl",
-    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-intl_7.0.9-2_amd64.deb",
-    sha256 = "381ff9159e9f35614de32c87e627504b8e64dc58e7e5ae1b4098a18ce0ac57c5",
+    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-intl_7.0.10-1_amd64.deb",
+    sha256 = "d54ce287c7e508afad237f0b56a52f43e237e35ef7994ce61c846ea868ef3817",
   )
   native.http_file(
     name = "deb_stretch_php7_0_json",
-    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-json_7.0.9-2_amd64.deb",
-    sha256 = "7b9adec0aa4c9de9d088cdd931fed419cc95d351cf02272ce43d69855d04fc2c",
+    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-json_7.0.10-1_amd64.deb",
+    sha256 = "1a02ff56482e45434187888ef8a677e2ae8615a5933df4a66315ce423a739604",
   )
   native.http_file(
     name = "deb_stretch_php7_0_mbstring",
-    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-mbstring_7.0.9-2_amd64.deb",
-    sha256 = "77e75fce188351d04073879172407ff096c4ec9f7f98b222f724dc3912f2746d",
+    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-mbstring_7.0.10-1_amd64.deb",
+    sha256 = "92182bad6756a9ea954d6685b12971fb9512c18aeb6743791073040faa19be7a",
   )
   native.http_file(
     name = "deb_stretch_php7_0_mcrypt",
-    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-mcrypt_7.0.9-2_amd64.deb",
-    sha256 = "a483fcad60068c48e2978b2bed6b781906142b19ba131e59cd6f678c5a00b1f4",
+    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-mcrypt_7.0.10-1_amd64.deb",
+    sha256 = "d5bc26e9316dbc07ea376039d3c577459f39ee4c110cf1c1c318f47514535329",
   )
   native.http_file(
     name = "deb_stretch_php7_0_opcache",
-    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-opcache_7.0.9-2_amd64.deb",
-    sha256 = "d5c71da26db0d6e83acda13b3fd2b7ee9173a6c2642cb95df6a59261cb15811e",
+    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-opcache_7.0.10-1_amd64.deb",
+    sha256 = "f329b7850c53396bbed4e201d0a759fd058b48a4d38102d33149e446c3a61a4c",
   )
   native.http_file(
     name = "deb_stretch_php7_0_pgsql",
-    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-pgsql_7.0.9-2_amd64.deb",
-    sha256 = "0f2ea89b9a9c411dad827305ce214da1fd7b9eadb3e9b8d89df220e091db1a99",
+    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-pgsql_7.0.10-1_amd64.deb",
+    sha256 = "4c99c47003327d5d56a7150948a73ccc8dacf8c260436c62fb16bdd8862df2a8",
   )
   native.http_file(
     name = "deb_stretch_php7_0_phpdbg",
-    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-phpdbg_7.0.9-2_amd64.deb",
-    sha256 = "c9d86ea6927dda6b3cb32aef4d4747decf9701c1e799a3625e1442614a0d1dd2",
+    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-phpdbg_7.0.10-1_amd64.deb",
+    sha256 = "bf8d27ca423b5817b40ce99da36595e11d3290a7796b7cd67295c081c4ca0de3",
   )
   native.http_file(
     name = "deb_stretch_php7_0_readline",
-    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-readline_7.0.9-2_amd64.deb",
-    sha256 = "f5ce49be3929e995a301bbe437ff90b97c97331b8155d6b3a5a1554c36095d62",
+    url = "http://httpredir.debian.org/debian/pool/main/p/php7.0/php7.0-readline_7.0.10-1_amd64.deb",
+    sha256 = "d94f71f29afdd88c2caaadb74454cf040306c78590ac609afc80478ca241deac",
   )
   native.http_file(
     name = "deb_stretch_php_apcu",
-    url = "http://httpredir.debian.org/debian/pool/main/p/php-apcu/php-apcu_5.1.3+4.0.11+unpack-1_amd64.deb",
-    sha256 = "52917d33169a34c9288bc0a367ffd3c085f21722e27e8b9941b0f947681f29b0",
+    url = "http://httpredir.debian.org/debian/pool/main/p/php-apcu/php-apcu_5.1.5+4.0.11-1_amd64.deb",
+    sha256 = "b841c1e2a1b6a7e772cba80e3f6b46ad7f398262f1a9aca478b937c1a687985b",
   )
   native.http_file(
     name = "deb_stretch_php_common",
@@ -471,8 +441,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_php_xdebug",
-    url = "http://httpredir.debian.org/debian/pool/main/x/xdebug/php-xdebug_2.4.0-5_amd64.deb",
-    sha256 = "ab85c26400df168024e6331bd15012c0a750e618bf2985f0074b943bb29b0ed7",
+    url = "http://httpredir.debian.org/debian/pool/main/x/xdebug/php-xdebug_2.4.1-1_amd64.deb",
+    sha256 = "2fb2950042ddac9e135727b9c6b46d553294e6d90c8c31e8700cccc6badd5439",
   )
   native.http_file(
     name = "deb_stretch_psmisc",

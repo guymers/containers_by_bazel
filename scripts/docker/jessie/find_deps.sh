@@ -46,10 +46,11 @@ VERSION_PREFIXES=(
   ["libxrandr2"]="2:"
   ["libxtst6"]="2:"
   ["libxvidcore4"]="2:"
-  ["redis-sentinel"]="2:"
-  ["redis-server"]="2:"
-  ["redis-tools"]="2:"
   ["samba-libs"]="2:"
+
+  ["redis-sentinel"]="3:"
+  ["redis-server"]="3:"
+  ["redis-tools"]="3:"
 
   ["cpp"]="4:"
   ["g++"]="4:"
