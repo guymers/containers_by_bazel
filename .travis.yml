@@ -30,7 +30,7 @@ before_script:
   # TODO fix sandboxing  --sandbox_debug
   - echo 'test --genrule_strategy=standalone --spawn_strategy=standalone' >> ~/.bazelrc
 script:
-  - bazel fetch //test/...
+  - bazel fetch //test/... || true
   - bazel test --verbose_failures //test/...
 after_script:
 addons:

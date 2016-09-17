@@ -1,1 +1,1 @@
-"name":"plugin:kibana","state":"green"
+"name":"kibana","state":"green"

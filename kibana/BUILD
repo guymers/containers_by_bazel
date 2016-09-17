@@ -16,9 +16,9 @@ user_layer(
 container_layer(
   name = "files",
   directory = "/opt",
-  files = ["@kibana//:kibana-" + VERSION + "-linux-x64"],
+  files = ["@kibana//:kibana-" + VERSION + "-linux-x86_64"],
   symlinks = {
-    "/opt/kibana": "/opt/kibana-" + VERSION + "-linux-x64",
+    "/opt/kibana": "/opt/kibana-" + VERSION + "-linux-x86_64",
   },
 )
 

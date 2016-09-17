@@ -611,8 +611,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libmysqlclient18",
-    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/libmysqlclient18_5.5.50-0+deb8u1_amd64.deb",
-    sha256 = "b9666637c45e7111445f0ef8f2b57701d4fca73bd243ab778fc318fe1a84fba6",
+    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/libmysqlclient18_5.5.52-0+deb8u1_amd64.deb",
+    sha256 = "356f1a0da3eb1053267ae984556fa9b3e5210b7f32a5ccc438c17f19c69b7e77",
   )
   native.http_file(
     name = "deb_jessie_libnetcdfc7",
@@ -826,8 +826,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libservlet3_0_java",
-    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libservlet3.0-java_7.0.56-3+deb8u3_all.deb",
-    sha256 = "82da54d2e91ac701ef5b3518fc815a8f6195aab0854fc1654953b2bd923d927f",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libservlet3.0-java_7.0.56-3+deb8u4_all.deb",
+    sha256 = "4af672ee757bb9c1d4f29e9c119679e3f3769db71708476690e76ce4b43d0939",
   )
   native.http_file(
     name = "deb_jessie_libsfcgal1",
@@ -931,8 +931,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libtomcat7_java",
-    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libtomcat7-java_7.0.56-3+deb8u3_all.deb",
-    sha256 = "d2d4e51e0f9fd7768d610b4fca16f4e708e601c88db82dca91b1bf95db68fc2e",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libtomcat7-java_7.0.56-3+deb8u4_all.deb",
+    sha256 = "f9b0f14566c365eab789e4a429d82d4dabf63b9a9803736a88fdcb1ebe82c005",
   )
   native.http_file(
     name = "deb_jessie_liburiparser1",
@@ -1196,8 +1196,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_mysql_common",
-    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/mysql-common_5.5.50-0+deb8u1_all.deb",
-    sha256 = "b72c1449e13838738ef83f45f38754b2ac2eae6ab8309cb9ef3097daddedc4cb",
+    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/mysql-common_5.5.52-0+deb8u1_all.deb",
+    sha256 = "487f786c1b712183586ea4c026fe1edab00156bb32db90a5ca4274a0f3caf2df",
   )
   native.http_file(
     name = "deb_jessie_netcat",
@@ -1211,13 +1211,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nginx",
-    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.11.3-1~jessie_amd64.deb",
-    sha256 = "31cc31f0b74ea322e611a6fda7b6ba6ea043b1d4d3b965084ceacf2c5801b2c9",
+    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.11.4-1~jessie_amd64.deb",
+    sha256 = "b678df0ccbc26e593cb5312295a9577c5f1fb9feff6b2432050a193b24260c9f",
   )
   native.http_file(
     name = "deb_jessie_nodejs",
-    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.5.0-1nodesource1~jessie1_amd64.deb",
-    sha256 = "4101d8c1855f1c2b036d130e99e047ab7906ae41b45d3268ff35d42507bbc41b",
+    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.6.0-1nodesource1~jessie1_amd64.deb",
+    sha256 = "ce1c252c52e1f13e8a5332697b05a78808afdc87bdcf71bef8230b748dbd0d02",
   )
   native.http_file(
     name = "deb_jessie_odbcinst",
@@ -1366,8 +1366,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_tomcat7_common",
-    url = "http://security.debian.org/pool/updates/main/t/tomcat7/tomcat7-common_7.0.56-3+deb8u3_all.deb",
-    sha256 = "dcfca0fea0e779532946fdc8401a00d5e484cdec2ad673998440064d9090258b",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/tomcat7-common_7.0.56-3+deb8u4_all.deb",
+    sha256 = "2498f5a7256eccaba55c536c0ca86a5f918d799e7ab31553f3f48bc142d7c1c1",
   )
   native.http_file(
     name = "deb_jessie_tomcat7_user",

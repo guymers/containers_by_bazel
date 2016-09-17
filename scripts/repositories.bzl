@@ -56,7 +56,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "b42f642090f1313ab49cccaa0c58a91b7a566a911ac7830697f67db060f3d329",
+    sha256 = "46c8aa0fe71d2a484d7b393d2c420b21ad849a129eac66fc740283e3c8377f85",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -106,7 +106,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "b1ea4e1e72a7fe6ead79f7c93b76934d2b8291ab764fc212abe952fa4322a74a",
+    sha256 = "32e07928198e065965e598ab5a655e2d21be2407873ce2533d0edb58aa1a369a",
   )
   native.http_file(
     name = "jenkins_agent_jar",
@@ -143,16 +143,16 @@ def dependency_repositories():
   native.new_http_archive(
     name = "elasticsearch",
     url = "https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/" + ELASTICSEARCH_VERSION + "/elasticsearch-" + ELASTICSEARCH_VERSION + ".tar.gz",
-    sha256 = "1119a8c18620b98c4b85261318663a1f26dea92a26f34dfeb7f813fb7cbb468a",
+    sha256 = "3ae01140ae7bcbb91436feef381fbed774e36ef6d1e8e6a3153640db82acf4c9",
     build_file_content = "exports_files(['elasticsearch-" + ELASTICSEARCH_VERSION + "'])",
   )
 
   ###### KIBANA
   native.new_http_archive(
     name = "kibana",
-    url = "https://download.elastic.co/kibana/kibana/kibana-" + KIBANA_VERSION + "-linux-x64.tar.gz",
-    sha256 = "f4f11ce06679f734d01446d0e4016256c4d9f57be6d07a790dbf97bed0998b44",
-    build_file_content = "exports_files(['kibana-" + KIBANA_VERSION + "-linux-x64'])",
+    url = "https://download.elastic.co/kibana/kibana/kibana-" + KIBANA_VERSION + "-linux-x86_64.tar.gz",
+    sha256 = "2cc005b7bfbe2436f4cf93fcdb957ab5683e7d7843537dfd2bd51644c835dcaf",
+    build_file_content = "exports_files(['kibana-" + KIBANA_VERSION + "-linux-x86_64'])",
   )
 
 

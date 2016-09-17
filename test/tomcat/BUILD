@@ -19,7 +19,7 @@ container_image(
 
 container_test(
   name = "tomcat",
-  size = "small",
+  size = "medium",
   image = ":tomcat_test",
   daemon = True,
   mem_limit = "1024m",
