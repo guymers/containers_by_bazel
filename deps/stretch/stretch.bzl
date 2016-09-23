@@ -116,8 +116,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libgnutls30",
-    url = "http://httpredir.debian.org/debian/pool/main/g/gnutls28/libgnutls30_3.5.3-4_amd64.deb",
-    sha256 = "68070bc6e868a543f6176e1824b4376747acf7fef32b3d00cc1a2a5efd086624",
+    url = "http://httpredir.debian.org/debian/pool/main/g/gnutls28/libgnutls30_3.5.4-2_amd64.deb",
+    sha256 = "095675f3ef8cc3b917bf85a30efaa3292ad91f67573bf8e856eeed98b97b0c27",
   )
   native.http_file(
     name = "deb_stretch_libgomp1",
@@ -326,8 +326,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libxml2",
-    url = "http://httpredir.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-1+b1_amd64.deb",
-    sha256 = "8f2d2dcbc28fc67bb2dc8657e512a1a1ee7eae86c7753cbc7da70c27020805fb",
+    url = "http://httpredir.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-2_amd64.deb",
+    sha256 = "1e2837b2dbec525eb71c0b1877ae2b5ffe718ad40964915b5da602fa6a57d1a3",
   )
   native.http_file(
     name = "deb_stretch_linux_libc_dev",
@@ -348,11 +348,6 @@ def deb_stretch():
     name = "deb_stretch_perl",
     url = "http://httpredir.debian.org/debian/pool/main/p/perl/perl_5.22.2-5_amd64.deb",
     sha256 = "4a595bb77130f6e131e16f01a50eb40fa2654f55a9ad842ee51893d86b17ca70",
-  )
-  native.http_file(
-    name = "deb_stretch_perl_base",
-    url = "http://httpredir.debian.org/debian/pool/main/p/perl/perl-base_5.22.2-5_amd64.deb",
-    sha256 = "8fd93a4a23779f71dd3e23aadd0ea0d7de00d1d477557a8b435706b1245477df",
   )
   native.http_file(
     name = "deb_stretch_perl_modules_5_22",
