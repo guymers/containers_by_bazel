@@ -571,8 +571,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_liblwgeom_2_2_5",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/liblwgeom-2.2-5_2.2.2+dfsg-4.pgdg80+1_amd64.deb",
-    sha256 = "98e365096891ecaab599839c5b6770613ac2be48ea547f133e51c903d64aca5e",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/liblwgeom-2.2-5_2.2.2+dfsg-5.pgdg80+1_amd64.deb",
+    sha256 = "68dca7f5e922a16fed172adec825b525edf25a111194732cc8cead7a5c3bad7e",
   )
   native.http_file(
     name = "deb_jessie_libmad0",
@@ -731,8 +731,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libpq5",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/libpq5_9.5.4-1.pgdg80+1_amd64.deb",
-    sha256 = "1c1bf2a5156a0bb19fff018377342853f1dd16ada1396edae6ec8bc54ff45fea",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.6/libpq5_9.6.0-1.pgdg80+1_amd64.deb",
+    sha256 = "d31424d727919e00740ad70f3a86f7b1da4227eec4fcae2e7e2ed6fbab57d312",
   )
   native.http_file(
     name = "deb_jessie_libproj0",
@@ -871,8 +871,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libssl1_0_0",
-    url = "http://security.debian.org/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u4_amd64.deb",
-    sha256 = "55c5dced4d3a8c53f764536a9d6c8aaeba5c705e7ac226b41a640621ad0e03cd",
+    url = "http://security.debian.org/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u5_amd64.deb",
+    sha256 = "e38239b8ab5e2b944aafe1f7484f3cab1100f8807a2e104b026adebda71afba6",
   )
   native.http_file(
     name = "deb_jessie_libswscale3",
@@ -1216,8 +1216,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nodejs",
-    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.6.0-1nodesource1~jessie1_amd64.deb",
-    sha256 = "ce1c252c52e1f13e8a5332697b05a78808afdc87bdcf71bef8230b748dbd0d02",
+    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.7.0-1nodesource1~jessie1_amd64.deb",
+    sha256 = "a14e09c9d43122de3014daf21b3a83f74037b6980436641161252ce585d1acdc",
   )
   native.http_file(
     name = "deb_jessie_odbcinst",
@@ -1236,8 +1236,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_openssl",
-    url = "http://security.debian.org/pool/updates/main/o/openssl/openssl_1.0.1t-1+deb8u4_amd64.deb",
-    sha256 = "81039a4ba6dd21f2fd351fd7012eafe277cefb68f98006c26817f238753f2f3d",
+    url = "http://security.debian.org/pool/updates/main/o/openssl/openssl_1.0.1t-1+deb8u5_amd64.deb",
+    sha256 = "a70d960a12802daf27e86655d936aedeef52dd030809d6ba4cb0a1ee7f7097e5",
   )
   native.http_file(
     name = "deb_jessie_perl",
@@ -1261,43 +1261,43 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_postgis",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgis_2.2.2+dfsg-4.pgdg80+1_amd64.deb",
-    sha256 = "1fc080940aefeef9be2db2f9905964fc55dd17b06d24a926a39edd1854bef534",
+    url = "http://ftp.debian.org/debian/pool/main/p/postgis/postgis_2.2.2+dfsg-1~bpo8+1_amd64.deb",
+    sha256 = "3da37f38898cf2fada0a7219d36397d2d59d664f899f086078d0f3d194c90ac9",
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_5",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-9.5_9.5.4-1.pgdg80+1_amd64.deb",
-    sha256 = "0987f01bd58a3d1741ec5e0e7a2db2842b3a92473b91380783a1e743ab87483e",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-9.5_9.5.4-1.pgdg80+2_amd64.deb",
+    sha256 = "43489872e6fb12188ef3febe71697c7a28f997fe110466e0f159ddea9282d07d",
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_5_postgis_2_2",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.5-postgis-2.2_2.2.2+dfsg-4.pgdg80+1_amd64.deb",
-    sha256 = "dd45155f9543fff548edaea474ba4a6815989da4bbc23538798cf38ea9206e82",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.5-postgis-2.2_2.2.2+dfsg-7~137.gite11228b.pgdg80+1_amd64.deb",
+    sha256 = "cdb9e289fc69c9e60d73ee1b7f397d7e05b08e03341be0541bc6b3f6aa676bcd",
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_5_postgis_2_2_scripts",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.5-postgis-2.2-scripts_2.2.2+dfsg-4.pgdg80+1_all.deb",
-    sha256 = "af25c05fd6abab33bb8998e5635c6452d88f740c8ead162d24e97168e4116ecc",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.5-postgis-2.2-scripts_2.2.2+dfsg-7~137.gite11228b.pgdg80+1_all.deb",
+    sha256 = "7fd8db1350b016fd84ecba3ec10db54403c8f3b0e012fe82944fb1cbd44b041d",
   )
   native.http_file(
     name = "deb_jessie_postgresql_client_9_5",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-client-9.5_9.5.4-1.pgdg80+1_amd64.deb",
-    sha256 = "12298509748959ed88c97bd73f9416193ec07781d666f68c873f566a5c713e4d",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-client-9.5_9.5.4-1.pgdg80+2_amd64.deb",
+    sha256 = "273bfc0270833c9bd481c535132a60639141babdf101ad3715e33bfac4a8ac55",
   )
   native.http_file(
     name = "deb_jessie_postgresql_client_common",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_175.pgdg80+1_all.deb",
-    sha256 = "bf83c607033b9ee61106c315316212312658404fe7a782f7068fe90995543798",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_177.pgdg80+1_all.deb",
+    sha256 = "387559630a9e105ef5422e92b743c16ef70686094b3bd5db35114b2d6bbc1dcc",
   )
   native.http_file(
     name = "deb_jessie_postgresql_common",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_175.pgdg80+1_all.deb",
-    sha256 = "0d869bc5b28811b025865399023f5e911beda7b2410abaceb31e8f1687eda213",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_177.pgdg80+1_all.deb",
+    sha256 = "ffea4a13827196aec7ca540dd943fea26c69c776dc1ba3318a94fdde53cb4e1a",
   )
   native.http_file(
     name = "deb_jessie_postgresql_contrib_9_5",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-contrib-9.5_9.5.4-1.pgdg80+1_amd64.deb",
-    sha256 = "487ec897fb903ddd928b8aa0662668de5f908bb5c4d34ad6a3615c86265f157f",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.5/postgresql-contrib-9.5_9.5.4-1.pgdg80+2_amd64.deb",
+    sha256 = "c9db2a83f872cd8ee3b897d39ad790654c851b6f7e64f6afb1b807707f3048b4",
   )
   native.http_file(
     name = "deb_jessie_proj_data",
