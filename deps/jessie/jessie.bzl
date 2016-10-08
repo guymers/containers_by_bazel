@@ -116,28 +116,28 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libavcodec56",
-    url = "http://httpredir.debian.org/debian/pool/main/liba/libav/libavcodec56_11.7-1~deb8u1_amd64.deb",
-    sha256 = "3ae5e9a6efb64ce23b9a2e18ae5156ad26f960a9d63b68466bcef86e0470c57b",
+    url = "http://security.debian.org/pool/updates/main/liba/libav/libavcodec56_11.8-1~deb8u1_amd64.deb",
+    sha256 = "e8e1d4d57e1b0ba037fc3863a989fe262c921bf05f45b7b0dd14cca9681ce2db",
   )
   native.http_file(
     name = "deb_jessie_libavdevice55",
-    url = "http://httpredir.debian.org/debian/pool/main/liba/libav/libavdevice55_11.7-1~deb8u1_amd64.deb",
-    sha256 = "52fbf0f1a59701118383803e326ad0ca4e8350a0149bdb977ac218b74f62fd95",
+    url = "http://security.debian.org/pool/updates/main/liba/libav/libavdevice55_11.8-1~deb8u1_amd64.deb",
+    sha256 = "13a4f2cab3b9670d975b9a89ebd4b46f668c7e0ff88e5f50557a96b189b8e9ec",
   )
   native.http_file(
     name = "deb_jessie_libavformat56",
-    url = "http://httpredir.debian.org/debian/pool/main/liba/libav/libavformat56_11.7-1~deb8u1_amd64.deb",
-    sha256 = "aa1179f0f17587b1b9ffdd7847688f1c2f00abe63ffc545761b317927f4b63d6",
+    url = "http://security.debian.org/pool/updates/main/liba/libav/libavformat56_11.8-1~deb8u1_amd64.deb",
+    sha256 = "9560e7867352604348dfec41b85e24de661d09b0198889ea46acd094b13a5ec6",
   )
   native.http_file(
     name = "deb_jessie_libavresample2",
-    url = "http://httpredir.debian.org/debian/pool/main/liba/libav/libavresample2_11.7-1~deb8u1_amd64.deb",
-    sha256 = "5388bfca0217ee12227ce2bdf2b25a1c35d06bb23417b524b7be940ff487abbc",
+    url = "http://security.debian.org/pool/updates/main/liba/libav/libavresample2_11.8-1~deb8u1_amd64.deb",
+    sha256 = "df897cdc4f34a2927d2913a17cc859b09fb0050ad5808028ace9eb1ace61f8e7",
   )
   native.http_file(
     name = "deb_jessie_libavutil54",
-    url = "http://httpredir.debian.org/debian/pool/main/liba/libav/libavutil54_11.7-1~deb8u1_amd64.deb",
-    sha256 = "b2e05ac8af3ffeb0789f332a9cb1fc510728305a068e0a2eda00ebe03f42cdf3",
+    url = "http://security.debian.org/pool/updates/main/liba/libav/libavutil54_11.8-1~deb8u1_amd64.deb",
+    sha256 = "34f2812d237d060bfeeff56795eb0aa94eb9b0abfec29e18824df5f58cce0223",
   )
   native.http_file(
     name = "deb_jessie_libblas3",
@@ -876,8 +876,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libswscale3",
-    url = "http://httpredir.debian.org/debian/pool/main/liba/libav/libswscale3_11.7-1~deb8u1_amd64.deb",
-    sha256 = "2be55e9ad7551a63447f0f5b53645f9da186ff6e3dd79a901924ed22f3c73ecd",
+    url = "http://security.debian.org/pool/updates/main/liba/libav/libswscale3_11.8-1~deb8u1_amd64.deb",
+    sha256 = "c1f843e3c3af554781e0c5a67a787a102612f6d7187467ba164691b243275059",
   )
   native.http_file(
     name = "deb_jessie_libswt_gtk_3_java",
@@ -1336,13 +1336,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_redis_server",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.3-2~bpo8+1_amd64.deb",
-    sha256 = "65ce29e7107289fd370ef126c9f9f6f8d4d000e07c5ec389b4877242800c6638",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.4-1~bpo8+1_amd64.deb",
+    sha256 = "246b903a07a5320cd9920e91561bd1b7059f6a20ab1845b572cebbcf4194fb38",
   )
   native.http_file(
     name = "deb_jessie_redis_tools",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.3-2~bpo8+1_amd64.deb",
-    sha256 = "55f4c1a755576c5ef09bb1a2d0e4c2ba580815c2ab8669ae7e77dcf9eb1a047e",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.4-1~bpo8+1_amd64.deb",
+    sha256 = "2dcb6fa5c0e72935a5d3afc582abb9f2f27f0af5b4e71db9a0cc5138420fcc30",
   )
   native.http_file(
     name = "deb_jessie_rlwrap",

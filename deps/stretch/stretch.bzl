@@ -221,8 +221,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libmpfr4",
-    url = "http://httpredir.debian.org/debian/pool/main/m/mpfr4/libmpfr4_3.1.4-2_amd64.deb",
-    sha256 = "6a0302090f6fa8466c060daaa6a2c2f1f721ce4b6e86876805f93be7d338b932",
+    url = "http://httpredir.debian.org/debian/pool/main/m/mpfr4/libmpfr4_3.1.5-1_amd64.deb",
+    sha256 = "95730a4709b898ffaf677f9b3ab6f6ebef5a96866589a8cf5f775448b3413a98",
   )
   native.http_file(
     name = "deb_stretch_libmpx2",
@@ -236,8 +236,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libnghttp2_14",
-    url = "http://httpredir.debian.org/debian/pool/main/n/nghttp2/libnghttp2-14_1.14.1-1_amd64.deb",
-    sha256 = "fb3443e8dc65caf27e012f7c75985df97ff0427d20402ee50cc0ad526a37083b",
+    url = "http://httpredir.debian.org/debian/pool/main/n/nghttp2/libnghttp2-14_1.15.0-1_amd64.deb",
+    sha256 = "edfe5d97a2ce97f27fabdde906c3cf018f23064cc4b1c74877afb6500c88e3cd",
   )
   native.http_file(
     name = "deb_stretch_libp11_kit0",
@@ -271,8 +271,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libpq5",
-    url = "http://httpredir.debian.org/debian/pool/main/p/postgresql-9.6/libpq5_9.6~rc1-1+b1_amd64.deb",
-    sha256 = "04653bf73572a5faddb7f984198881e2a71f8794e372ca90d96f92a12f78129a",
+    url = "http://httpredir.debian.org/debian/pool/main/p/postgresql-9.6/libpq5_9.6.0-1_amd64.deb",
+    sha256 = "74cb396ac3871cfbf3b531eaf47b11a3f28b7fd531f7399b75e0785f2cd5eddf",
   )
   native.http_file(
     name = "deb_stretch_libquadmath0",
