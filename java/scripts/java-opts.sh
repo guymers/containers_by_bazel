@@ -30,7 +30,8 @@ JAVA_OPTS="$JAVA_OPTS -Dsun.net.inetaddr.ttl=$DNS_TTL"
 JMX_MONITORING=${JMX_MONITORING:-true}
 JMX_PORT=${JMX_PORT:-1099}
 if [ "$JMX_MONITORING" = "true" ]; then
-  JAVA_OPTS="$JAVA_OPTS -Djava.rmi.server.hostname=$(hostname --ip) -Dcom.sun.management.jmxremote.port=$JMX_PORT -Dcom.sun.management.jmxremote.rmi.port=$JMX_PORT -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
+  CONTAINER_IP=${CONTAINER_IP:-$(hostname --ip | awk '{print $1}')}
+  JAVA_OPTS="$JAVA_OPTS -Djava.rmi.server.hostname=$CONTAINER_IP -Dcom.sun.management.jmxremote.port=$JMX_PORT -Dcom.sun.management.jmxremote.rmi.port=$JMX_PORT -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
 fi
 
 if [ -n "$OOM_DUMP_FOLDER" ]; then
