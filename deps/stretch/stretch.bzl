@@ -16,8 +16,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_binutils",
-    url = "http://httpredir.debian.org/debian/pool/main/b/binutils/binutils_2.26.1-1_amd64.deb",
-    sha256 = "5a9e224483fd135c110a3e194ce9399927861b2edba6cac48d5c2529b2c7d510",
+    url = "http://httpredir.debian.org/debian/pool/main/b/binutils/binutils_2.27-8_amd64.deb",
+    sha256 = "cc5d1265383f637aafdd89d5129ec5adc5dcd4fe4de642b19dd206da3cbbf3c4",
   )
   native.http_file(
     name = "deb_stretch_cpp",
@@ -141,8 +141,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libhogweed4",
-    url = "http://httpredir.debian.org/debian/pool/main/n/nettle/libhogweed4_3.2-1_amd64.deb",
-    sha256 = "df04ed7da07fd9cae4b5656f0c38379e696715dbb573a267128b16cddb9ca80d",
+    url = "http://httpredir.debian.org/debian/pool/main/n/nettle/libhogweed4_3.3-1_amd64.deb",
+    sha256 = "61f0ef0e85a1074990198545a8e96660b90c2cfb7cd123804ddc81b5ae81c8e3",
   )
   native.http_file(
     name = "deb_stretch_libicu57",
@@ -231,8 +231,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libnettle6",
-    url = "http://httpredir.debian.org/debian/pool/main/n/nettle/libnettle6_3.2-1_amd64.deb",
-    sha256 = "392122d9d32a630c4e482e9a252cbb338192478c6fdecb633eea02e62cf53e61",
+    url = "http://httpredir.debian.org/debian/pool/main/n/nettle/libnettle6_3.3-1_amd64.deb",
+    sha256 = "5d732b1620a7ceeabea8f157d4833a298f3ac071bd4606ac861d5e4b331319d3",
   )
   native.http_file(
     name = "deb_stretch_libnghttp2_14",
