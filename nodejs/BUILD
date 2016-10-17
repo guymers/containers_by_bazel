@@ -1,6 +1,6 @@
 container_layer(
   name = "files",
-  debs = ["//deps/jessie:nodejs"],
+  debs = ["//deps/jessie:nodejs", "@yarnpkg//file"],
   symlinks = { "/usr/bin/node": "/usr/bin/nodejs" },
   directory = "/",
   files = ["usr"],

@@ -3,5 +3,5 @@ set -e
 set -o pipefail
 
 cd project
-npm install > /dev/null
+yarn install > /dev/null
 node index.js

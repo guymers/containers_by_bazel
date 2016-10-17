@@ -12,6 +12,7 @@ load(
   "NEXUS_VERSION",
   "PENATHO_DI_VERSION",
   "PROMETHEUS_VERSION",
+  "YARN_VERSION",
   "ZOOKEEPER_VERSION"
 )
 load("//deps/jessie:jessie.bzl", "deb_jessie")
@@ -154,6 +155,15 @@ def dependency_repositories():
     sha256 = "2cc005b7bfbe2436f4cf93fcdb957ab5683e7d7843537dfd2bd51644c835dcaf",
     build_file_content = "exports_files(['kibana-" + KIBANA_VERSION + "-linux-x86_64'])",
   )
+
+
+  ###### YARN
+  native.http_file(
+    name = "yarnpkg",
+    url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
+    sha256 = "ca82094e9945b6c788b950c8910f2be28a2c1ffd69661d4b9f7066b3ad172ae9",
+  )
+
 
 
   ###### TOMCAT
