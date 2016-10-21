@@ -25,17 +25,17 @@ def dependency_repositories():
     tag = "0.2.1",
   )
 
-  # 2016-09-23 debootstraps
+  # 2016-10-20 debootstraps
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/88ae21052affd8a14553bb969f9d41c464032122/jessie/rootfs.tar.xz",
-    sha256 = "ae0dbe2be7da8f6916ef9adabab9d726d3cc2eafa5460911618b3cf9d35548ee",
+    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/5f84ff77365de2ee50655978edad2ba5004c1321/jessie/rootfs.tar.xz",
+    sha256 = "281309c6497ba8622d4e04b0796048a83900ff175cdf3a7766c557ace4ba0e37",
   )
-  # 2016-09-23 debootstraps
+  # 2016-10-17 debootstraps
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/ee8b1cb93b20e3b9afc264126f1fe9b5518735c5/stretch/rootfs.tar.xz",
-    sha256 = "cc1be65e82b8fe303447e3a10a9d2e370b4e10539108de1cbb3dfb7d7832c48a",
+    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/42df3048e98cdd2f849abab65a29719ae6189923/stretch/rootfs.tar.xz",
+    sha256 = "ee309b86b827e280f2c0ddb001a9f28358aaf0a51d43eb0faa382de5ed5535db",
   )
 
   deb_jessie()
@@ -43,21 +43,21 @@ def dependency_repositories():
 
   native.http_file(
     name = "gosu",
-    url = "https://github.com/tianon/gosu/releases/download/1.7/gosu-amd64",
+    url = "https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64",
     executable = 1,
-    sha256 = "34049cfc713e8b74b90d6de49690fa601dc040021980812b2f1f691534be8a50",
+    sha256 = "5b3b03713a888cee84ecbf4582b21ac9fd46c3d935ff2d7ea25dd5055d302d3c",
   )
 
   native.http_file(
     name = "tini",
-    url = "https://github.com/krallin/tini/releases/download/v0.9.0/tini_0.9.0.deb",
-    sha256 = "21a2d4436e9fd12248bbcc5d881ca7815f35e836e1c9f6595a7c490fd2e6bc0f",
+    url = "https://github.com/krallin/tini/releases/download/v0.10.0/tini_0.10.0.deb",
+    sha256 = "98b6eb1576b54b201d0920a7f494d47c4759b9d656f5c06ac3d611c8c196a0ff",
   )
 
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "46c8aa0fe71d2a484d7b393d2c420b21ad849a129eac66fc740283e3c8377f85",
+    sha256 = "77da9e852b4087d70fd6e04c3dc71b37127124a87ee6e66523b14bcbc28bd6ca",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -92,7 +92,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "4c4e88a2410e1740e688ea1ab3c6066a6a90f76c479e10e4718c517a27f3a614",
+    sha256 = "00e45f83d70714cf5f3436c007b290ad28d81cceb18dacdfad59d6a95493557a",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
   native.new_http_archive(
@@ -107,7 +107,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "32e07928198e065965e598ab5a655e2d21be2407873ce2533d0edb58aa1a369a",
+    sha256 = "eb0484ab9a405d663724ec2a678ee648b7995b7b1b1021bf85dcddf7d2b2f577",
   )
   native.http_file(
     name = "jenkins_agent_jar",
@@ -144,7 +144,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "elasticsearch",
     url = "https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/" + ELASTICSEARCH_VERSION + "/elasticsearch-" + ELASTICSEARCH_VERSION + ".tar.gz",
-    sha256 = "3ae01140ae7bcbb91436feef381fbed774e36ef6d1e8e6a3153640db82acf4c9",
+    sha256 = "23a369ef42955c19aaaf9e34891eea3a055ed217d7fbe76da0998a7a54bbe167",
     build_file_content = "exports_files(['elasticsearch-" + ELASTICSEARCH_VERSION + "'])",
   )
 
@@ -161,7 +161,7 @@ def dependency_repositories():
   native.http_file(
     name = "yarnpkg",
     url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "ca82094e9945b6c788b950c8910f2be28a2c1ffd69661d4b9f7066b3ad172ae9",
+    sha256 = "d91cceb7bceeb287c68dc6305e38fdb7575a7a33dba6eec11c083954080167cb",
   )
 
 
