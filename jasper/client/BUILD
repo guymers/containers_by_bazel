@@ -13,7 +13,7 @@ container_layer(
 
 container_image(
   name = "client",
-  base = "//java:zulu",
+  base = "//base:jessie",
   layers = [":client_deps", ":client_files"],
   cmd = ["/opt/TIBCOJaspersoftStudio-" + JASPER_STUDIO_VERSION + ".final/Jaspersoft Studio"],
 )

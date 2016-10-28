@@ -1,4 +1,4 @@
-<Context path="" reloadable="false">
+<Context path="/" reloadable="false">
   <Resource name="jdbc/jasperserver" auth="Container" type="javax.sql.DataSource"
             maxActive="100" maxIdle="30" maxWait="10000"
             username="postgres" password="postgres"

@@ -3,6 +3,13 @@ load("//tomcat/war_to_tar:war_to_tar.bzl", "war_to_tar")
 CATALINA_BASE = "/var/lib/tomcat7"
 CATALINA_HOME = "/usr/share/tomcat7"
 
+config_setting(
+  name = "jasperserver_context",
+  values = {
+    "define": "JASPERSERVER_CONTEXT=jasperserver"
+  }
+)
+
 container_layer(
   name = "jdbc_driver",
   directory = CATALINA_HOME + "/lib",
@@ -11,7 +18,10 @@ container_layer(
 
 container_layer(
   name = "webapp",
-  directory = CATALINA_BASE + "/webapps/ROOT",
+  directory = CATALINA_BASE + "/webapps/" + select({
+    ":jasperserver_context": "jasperserver",
+    "//conditions:default": "ROOT",
+  }),
   tars = [":jasperserver_tar"],
 )
 
@@ -23,7 +33,10 @@ war_to_tar(
 
 container_layer(
   name = "webapp_config",
-  directory = CATALINA_BASE + "/webapps/ROOT",
+  directory = CATALINA_BASE + "/webapps/" + select({
+    ":jasperserver_context": "jasperserver",
+    "//conditions:default": "ROOT",
+  }),
   files = ["jasperserver/META-INF", "jasperserver/WEB-INF"],
 )
 
