@@ -256,8 +256,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libcurl3_gnutls",
-    url = "http://deb.debian.org/debian/pool/main/c/curl/libcurl3-gnutls_7.38.0-4+deb8u4_amd64.deb",
-    sha256 = "987d566aa6cb82bdf8d559611a8a51387223e74284f1c28d9e1c07a4ee6e2843",
+    url = "http://security.debian.org/pool/updates/main/c/curl/libcurl3-gnutls_7.38.0-4+deb8u5_amd64.deb",
+    sha256 = "5fa22ca0d16083ed24935a3848e73d2fdccab6ed6b349b9e966260a20ca0cd10",
   )
   native.http_file(
     name = "deb_jessie_libdap11",
@@ -1336,13 +1336,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_redis_server",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.4-1~bpo8+1_amd64.deb",
-    sha256 = "246b903a07a5320cd9920e91561bd1b7059f6a20ab1845b572cebbcf4194fb38",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.5-1~bpo8+1_amd64.deb",
+    sha256 = "43ffa0cfb02d95a71d7d45940299192625f969cf76ef393ec6b1fa146196796f",
   )
   native.http_file(
     name = "deb_jessie_redis_tools",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.4-1~bpo8+1_amd64.deb",
-    sha256 = "2dcb6fa5c0e72935a5d3afc582abb9f2f27f0af5b4e71db9a0cc5138420fcc30",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.5-1~bpo8+1_amd64.deb",
+    sha256 = "e401f25eba1c74069a0969eb73bba065b73c4938b516f44991c97bfe9db52564",
   )
   native.http_file(
     name = "deb_jessie_samba_libs",
@@ -1391,6 +1391,6 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_zulu_8",
-    url = "http://repos.azulsystems.com/debian/pool/main/zulu8.17.0.3-jdk8.0.102-linux_amd64.deb",
-    sha256 = "011234d29133c519a17123be755bf26a83e3ebeedda047a47669593c31a0f249",
+    url = "http://repos.azulsystems.com/debian/pool/main/zulu8.19.0.1-jdk8.0.112-linux_amd64.deb",
+    sha256 = "acb7c4c1267d8ee7f0a1c0584d35a48f8ca2418dee25fb634454ec906cbb228c",
   )

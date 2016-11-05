@@ -25,17 +25,17 @@ def dependency_repositories():
     tag = "0.2.1",
   )
 
-  # 2016-10-20 debootstraps
+  # 2016-11-04 debootstraps
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/5f84ff77365de2ee50655978edad2ba5004c1321/jessie/rootfs.tar.xz",
-    sha256 = "281309c6497ba8622d4e04b0796048a83900ff175cdf3a7766c557ace4ba0e37",
+    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/2c836bc53feb12f70a07dacaa6256d4d66624f38/jessie/rootfs.tar.xz",
+    sha256 = "5ce47f6e19bb20d8f2ce7cc1801dc5451c82469e4101601a9af44d181d548a65",
   )
-  # 2016-10-17 debootstraps
+  # 2016-11-04 debootstraps
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/42df3048e98cdd2f849abab65a29719ae6189923/stretch/rootfs.tar.xz",
-    sha256 = "ee309b86b827e280f2c0ddb001a9f28358aaf0a51d43eb0faa382de5ed5535db",
+    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/9b1dd4b1594b8df02f7caa739e84b187edaab404/stretch/rootfs.tar.xz",
+    sha256 = "17268959f2108f7edbcfe3b19523b66c8c0c70e56525d8f7ebd6cc27887cf194",
   )
 
   deb_jessie()
@@ -57,7 +57,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "77da9e852b4087d70fd6e04c3dc71b37127124a87ee6e66523b14bcbc28bd6ca",
+    sha256 = "8421a5f31a2e4721e945abb19c7831df7c461755120f9d467ef6bf07cc572305",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -95,11 +95,12 @@ def dependency_repositories():
     sha256 = "00e45f83d70714cf5f3436c007b290ad28d81cceb18dacdfad59d6a95493557a",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
+  NEXUS_3_VERSION="3.1.0-04"
   native.new_http_archive(
     name = "nexus3",
-    url = "http://download.sonatype.com/nexus/3/nexus-3.0.0-03-unix.tar.gz",
-    sha256 = "0666769effc200a520825cce22d59a5a296d03795f72f57d0a97fbe61836d0ca",
-    build_file_content = "exports_files(['nexus-3.0.0-03'])",
+    url = "http://download.sonatype.com/nexus/3/nexus-" + NEXUS_3_VERSION + "-unix.tar.gz",
+    sha256 = "bf1cd6dcbd010b6c35f50f8923dcf58e77c2f39854ba00d0de8b37f260c6fc0a",
+    build_file_content = "exports_files(['" + NEXUS_3_VERSION + "'])",
   )
 
 
@@ -107,7 +108,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "eb0484ab9a405d663724ec2a678ee648b7995b7b1b1021bf85dcddf7d2b2f577",
+    sha256 = "6eb89e410b263a4c73028cc4e0165e8fd567c0a35df43d12ab4117a1fc86ad31",
   )
   native.http_file(
     name = "jenkins_agent_jar",
@@ -135,7 +136,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "kafka",
     url = "http://mirrors.ocf.berkeley.edu/apache/kafka/" + KAFKA_VERSION + "/kafka_2.11-" + KAFKA_VERSION + ".tgz",
-    sha256 = "2d73625aeddd827c9e92eefb3c727a78455725fbca4361c221eaa05ae1fab02d",
+    sha256 = "6d9532ae65c9c8126241e7b928b118aaa3a694dab08069471f0e61f4f0329390",
     build_file_content = "exports_files(['kafka_2.11-" + KAFKA_VERSION + "'])",
   )
 
@@ -152,7 +153,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "kibana",
     url = "https://download.elastic.co/kibana/kibana/kibana-" + KIBANA_VERSION + "-linux-x86_64.tar.gz",
-    sha256 = "2cc005b7bfbe2436f4cf93fcdb957ab5683e7d7843537dfd2bd51644c835dcaf",
+    sha256 = "a4939d1241c353fe1f53c262e854f185835a4d0a7dcfc11da870922d1711c7e8",
     build_file_content = "exports_files(['kibana-" + KIBANA_VERSION + "-linux-x86_64'])",
   )
 

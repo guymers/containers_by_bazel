@@ -26,13 +26,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_cpp_6",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/cpp-6_6.2.0-9_amd64.deb",
-    sha256 = "6121e8346a7fcb64971153d0021ad9cc690c20618efbc92b9a62d14585797314",
+    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/cpp-6_6.2.0-10_amd64.deb",
+    sha256 = "39901f29ce908e6777ae797835139d8a8e6d2244008f8afc3f2dffb8f2b23828",
   )
   native.http_file(
     name = "deb_stretch_file",
-    url = "http://deb.debian.org/debian/pool/main/f/file/file_5.28-4_amd64.deb",
-    sha256 = "9f47c016ee85e30085dc3d997fc86126218a0a0c0cb5ec928e75322f3411bae7",
+    url = "http://deb.debian.org/debian/pool/main/f/file/file_5.29-1_amd64.deb",
+    sha256 = "e683946d49f36d4748e0c58d91de52435ceb49f975c46402d03c46ae0c13ee88",
   )
   native.http_file(
     name = "deb_stretch_gcc",
@@ -41,13 +41,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_gcc_6",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/gcc-6_6.2.0-9_amd64.deb",
-    sha256 = "401d633e463f4a456c258731b071f6571bc2914a0700c83e05737706063221c5",
-  )
-  native.http_file(
-    name = "deb_stretch_gcc_6_base",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/gcc-6-base_6.2.0-9_amd64.deb",
-    sha256 = "8344de3b7ba6ff95d157f5eb14bbd315d1729e3e01685288de2d6316095d8fb0",
+    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/gcc-6_6.2.0-10_amd64.deb",
+    sha256 = "bdf3361db5c85230918ea905397a99d1515967f995079428dee32b56657e455e",
   )
   native.http_file(
     name = "deb_stretch_libapparmor1",
@@ -56,23 +51,18 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libasan3",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libasan3_6.2.0-9_amd64.deb",
-    sha256 = "4704e320b67aaa4d4d6672cc87b6699b627dbdea33419a8f9001360318cd2edd",
+    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libasan3_6.2.0-10_amd64.deb",
+    sha256 = "16018264fbd0b85fb3d683f22d0e5b8771a1e996945eeaf0a4195acfb8dffffc",
   )
   native.http_file(
     name = "deb_stretch_libatomic1",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libatomic1_6.2.0-9_amd64.deb",
-    sha256 = "7de5a521d32069b1d5ced8e7f1dbe0748e9ac080ed54df728e354e19bd8c3cf1",
+    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libatomic1_6.2.0-10_amd64.deb",
+    sha256 = "18bc1926d5bc37be1839413246b4ac0d6213efd12f18369d0a362dc7f1c8e9fb",
   )
   native.http_file(
     name = "deb_stretch_libbsd0",
     url = "http://deb.debian.org/debian/pool/main/libb/libbsd/libbsd0_0.8.3-1_amd64.deb",
     sha256 = "030e441cc6368041536a69adcaed6b4f4a37e0145817fc3eff16f37e3a81ecae",
-  )
-  native.http_file(
-    name = "deb_stretch_libc6",
-    url = "http://deb.debian.org/debian/pool/main/g/glibc/libc6_2.24-5_amd64.deb",
-    sha256 = "8aa90964c6d75087a99add0ed0aa587287d1aa8ce9546b9fe4126e1524c326f4",
   )
   native.http_file(
     name = "deb_stretch_libc6_dev",
@@ -86,13 +76,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libcc1_0",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libcc1-0_6.2.0-9_amd64.deb",
-    sha256 = "9ebaa7d38515e4fec8c7f199f68aab772a07d77ee6d2376c68b6da6672ea6d50",
+    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libcc1-0_6.2.0-10_amd64.deb",
+    sha256 = "8bc98301c5b5ec1c672f62d43d5b4848730dfdea5fa0e95e302d068441ea07da",
   )
   native.http_file(
     name = "deb_stretch_libcilkrts5",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libcilkrts5_6.2.0-9_amd64.deb",
-    sha256 = "e56ebfd7fb4e9383f3913dda6725b910feb0f69720f645a4bfbb3917b255405c",
+    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libcilkrts5_6.2.0-10_amd64.deb",
+    sha256 = "6e6bf7c257cc9f430bdc5bd93d9667fd6bc163ab3c3c61f125953fd08d9987eb",
   )
   native.http_file(
     name = "deb_stretch_libcurl3",
@@ -110,14 +100,9 @@ def deb_stretch():
     sha256 = "a385cd7ce2cc6c73e271c4692d4c152d96d6c9ad756c3a36bf503f9c2a462de4",
   )
   native.http_file(
-    name = "deb_stretch_libgcc1",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libgcc1_6.2.0-9_amd64.deb",
-    sha256 = "01f9455ed7c29347f15883e88f06f604e687e4a3bae9b6c74b68e2987b9cddbf",
-  )
-  native.http_file(
     name = "deb_stretch_libgcc_6_dev",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libgcc-6-dev_6.2.0-9_amd64.deb",
-    sha256 = "c2ec2f9fe997ae90c3092685f8fe33c3685467fc57bc54b9ea5a024d3c8eec6e",
+    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libgcc-6-dev_6.2.0-10_amd64.deb",
+    sha256 = "cadad9f4a303cc054bccb0ae260772fb39ea0da40c381bbdead56571dcea54f2",
   )
   native.http_file(
     name = "deb_stretch_libgdbm3",
@@ -131,13 +116,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libgnutls30",
-    url = "http://deb.debian.org/debian/pool/main/g/gnutls28/libgnutls30_3.5.5-2_amd64.deb",
-    sha256 = "05186e2edd0383dd624a8be61c330a4ab2fec0e51643172ff1e1aba97d203699",
+    url = "http://deb.debian.org/debian/pool/main/g/gnutls28/libgnutls30_3.5.5-4_amd64.deb",
+    sha256 = "0d2c1ca7586f97b27524ee79fe013b97a5ab60686d52f5bb36f6a5cdc69e7a26",
   )
   native.http_file(
     name = "deb_stretch_libgomp1",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libgomp1_6.2.0-9_amd64.deb",
-    sha256 = "6cde1fa4733588b7bb8ddf45d4d74b3e676a2b703171027e7610a180d2a1bd4e",
+    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libgomp1_6.2.0-10_amd64.deb",
+    sha256 = "4949db91f5414bf4ac7bc12373f2d4103dbb4ab7d8d60a02042fc4b762114a90",
   )
   native.http_file(
     name = "deb_stretch_libgssapi_krb5_2",
@@ -166,8 +151,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libitm1",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libitm1_6.2.0-9_amd64.deb",
-    sha256 = "caab58a33ee93339c99929ea24b1145ff04ae72fcd2b49cd7910dd2c6da86ce2",
+    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libitm1_6.2.0-10_amd64.deb",
+    sha256 = "e2581cdc5da5cea2520e4b1b6dd3383b82eaebc199444f22b553ff9294688e57",
   )
   native.http_file(
     name = "deb_stretch_libk5crypto3",
@@ -196,8 +181,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_liblsan0",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/liblsan0_6.2.0-9_amd64.deb",
-    sha256 = "e1c7d61f52a198833ecabed2f9c88a059e76148397fe138938649c4b3fd188bf",
+    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/liblsan0_6.2.0-10_amd64.deb",
+    sha256 = "0023bd380c7e4990fb0dea643e8eef96f2d1b7574677a2c4991c5713ca2534e7",
   )
   native.http_file(
     name = "deb_stretch_libltdl7",
@@ -206,13 +191,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libmagic1",
-    url = "http://deb.debian.org/debian/pool/main/f/file/libmagic1_5.28-4_amd64.deb",
-    sha256 = "82400332418e110edc100e8898590a70f1349004fa4d9f5ae67b5f0e93453623",
+    url = "http://deb.debian.org/debian/pool/main/f/file/libmagic1_5.29-1_amd64.deb",
+    sha256 = "92a21282c24043ea68c0bd69f34f499eaa6b568ef4abbacd3e8c42684ab44eed",
   )
   native.http_file(
     name = "deb_stretch_libmagic_mgc",
-    url = "http://deb.debian.org/debian/pool/main/f/file/libmagic-mgc_5.28-4_amd64.deb",
-    sha256 = "409dbb559b8a6402f245e870a3c7ce3ddca108624f16ccde994f2cbae7a78342",
+    url = "http://deb.debian.org/debian/pool/main/f/file/libmagic-mgc_5.29-1_amd64.deb",
+    sha256 = "705dba58b209b62f9133cdab901f7d4f6ad0d5a2ed80002af0a7bd80ed673aa2",
   )
   native.http_file(
     name = "deb_stretch_libmcrypt4",
@@ -231,8 +216,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libmpx2",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libmpx2_6.2.0-9_amd64.deb",
-    sha256 = "5c3406dc50ff5a730fa144629d093ac7fb108df57f030ad1842201a9cd018104",
+    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libmpx2_6.2.0-10_amd64.deb",
+    sha256 = "50aac463664d26385d160996fafd8e745a8a30a9a6f16520c5cc69735d03a084",
   )
   native.http_file(
     name = "deb_stretch_libnettle6",
@@ -241,8 +226,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libnghttp2_14",
-    url = "http://deb.debian.org/debian/pool/main/n/nghttp2/libnghttp2-14_1.15.0-1_amd64.deb",
-    sha256 = "edfe5d97a2ce97f27fabdde906c3cf018f23064cc4b1c74877afb6500c88e3cd",
+    url = "http://deb.debian.org/debian/pool/main/n/nghttp2/libnghttp2-14_1.16.0-1_amd64.deb",
+    sha256 = "b5fbf421665d9538348e4139f2fd8483f052da76d2163dc2574c71053430c0ce",
   )
   native.http_file(
     name = "deb_stretch_libp11_kit0",
@@ -281,8 +266,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libquadmath0",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libquadmath0_6.2.0-9_amd64.deb",
-    sha256 = "2b0785de845ceba1c96a66367c801b26df5964da21bd18ce9978fd1a81e099aa",
+    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libquadmath0_6.2.0-10_amd64.deb",
+    sha256 = "4c742e3dfee6066be93405995fae37551c70db5c98063160b4936e103c9a68a2",
   )
   native.http_file(
     name = "deb_stretch_librtmp1",
@@ -291,13 +276,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libsasl2_2",
-    url = "http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.26.dfsg1-15_amd64.deb",
-    sha256 = "bea364b190fa9208a5f13559705774372e09d6182d1b4bdab720034634a26ced",
+    url = "http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.27~72-g88d82a3+dfsg-1_amd64.deb",
+    sha256 = "216fe96148d3dfef707a5b6c28d74a5f22d97954bdbbe16baecd1811252a1c09",
   )
   native.http_file(
     name = "deb_stretch_libsasl2_modules_db",
-    url = "http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/libsasl2-modules-db_2.1.26.dfsg1-15_amd64.deb",
-    sha256 = "662c0cfa550a9288769188e765a7e327afde9a647985c2e7f04542f1cbecf52a",
+    url = "http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/libsasl2-modules-db_2.1.27~72-g88d82a3+dfsg-1_amd64.deb",
+    sha256 = "5e11c84591540b62240d5445d44769f9320359a287d5a2589c60f012be396f44",
   )
   native.http_file(
     name = "deb_stretch_libsigsegv2",
@@ -320,11 +305,6 @@ def deb_stretch():
     sha256 = "087eda36d107ddef9096108a89c2e1a2415c920474ba22a9a92840c4e61420d8",
   )
   native.http_file(
-    name = "deb_stretch_libstdc__6",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libstdc++6_6.2.0-9_amd64.deb",
-    sha256 = "272588ea83b30339d954f0e282a2cdba2b35197d1e8a80f2430b953fcd38e1c9",
-  )
-  native.http_file(
     name = "deb_stretch_libtasn1_6",
     url = "http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.9-4_amd64.deb",
     sha256 = "b3a7b8e063eb52d4dfde59fcca6f6f27e9b8831803fef4c563acb969f81f8b87",
@@ -336,18 +316,18 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libtsan0",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libtsan0_6.2.0-9_amd64.deb",
-    sha256 = "d8dd9d1ad767b816144b8dbfebca754ab9a34f1d13f36dcb96f64b0ce5d2fe69",
+    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libtsan0_6.2.0-10_amd64.deb",
+    sha256 = "ac6136769c25c51010852b6645e013e72b49de4bb8aa4bee31d7fbb6aca0612b",
   )
   native.http_file(
     name = "deb_stretch_libubsan0",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libubsan0_6.2.0-9_amd64.deb",
-    sha256 = "10c1b8c8c0b1eeb6114e179e70e87da5074f3c82145d9df0ca664399266abf46",
+    url = "http://deb.debian.org/debian/pool/main/g/gcc-6/libubsan0_6.2.0-10_amd64.deb",
+    sha256 = "b7e7beaa1a1d5647193cec705048dbdd46aae0426cb641620eded7785c1b0bd5",
   )
   native.http_file(
     name = "deb_stretch_libxml2",
-    url = "http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-2_amd64.deb",
-    sha256 = "1e2837b2dbec525eb71c0b1877ae2b5ffe718ad40964915b5da602fa6a57d1a3",
+    url = "http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-2.1_amd64.deb",
+    sha256 = "e086842b894d72657fb3f78c99f33e763f4c84b085e0b1e3f140bea015c81466",
   )
   native.http_file(
     name = "deb_stretch_linux_libc_dev",
@@ -481,6 +461,6 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_zlib1g_dev",
-    url = "http://deb.debian.org/debian/pool/main/z/zlib/zlib1g-dev_1.2.8.dfsg-2+b1_amd64.deb",
-    sha256 = "71678d2ff2774a726f413cd46a923f960cdcfb56f063d20c1544a2d8b6d12d7f",
+    url = "http://deb.debian.org/debian/pool/main/z/zlib/zlib1g-dev_1.2.8.dfsg-2+b3_amd64.deb",
+    sha256 = "4ffec1b297b8b86e17c99827a4543cda52460d40f1fbe7b398fa562793604d15",
   )
