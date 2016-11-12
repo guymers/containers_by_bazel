@@ -611,8 +611,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libmysqlclient18",
-    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/libmysqlclient18_5.5.52-0+deb8u1_amd64.deb",
-    sha256 = "356f1a0da3eb1053267ae984556fa9b3e5210b7f32a5ccc438c17f19c69b7e77",
+    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/libmysqlclient18_5.5.53-0+deb8u1_amd64.deb",
+    sha256 = "053f840d060c46107347364bada55dd82475d38476b16acf0b4466ec712436d3",
   )
   native.http_file(
     name = "deb_jessie_libnetcdfc7",
@@ -1161,8 +1161,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libxslt1_1",
-    url = "http://deb.debian.org/debian/pool/main/libx/libxslt/libxslt1.1_1.1.28-2+deb8u1_amd64.deb",
-    sha256 = "8a0f7ef8204dab62bde764a303aecea2a551133b656ba0523000e52c3c7542f7",
+    url = "http://security.debian.org/pool/updates/main/libx/libxslt/libxslt1.1_1.1.28-2+deb8u2_amd64.deb",
+    sha256 = "b12409ab84d4c61ab051e6db9d705dac0b1e41816854b9794a362e9668cca7f3",
   )
   native.http_file(
     name = "deb_jessie_libxt6",
@@ -1196,8 +1196,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_mysql_common",
-    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/mysql-common_5.5.52-0+deb8u1_all.deb",
-    sha256 = "487f786c1b712183586ea4c026fe1edab00156bb32db90a5ca4274a0f3caf2df",
+    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/mysql-common_5.5.53-0+deb8u1_all.deb",
+    sha256 = "327fc2bcbf53fed05bff4a496c7cf89558bb4ab74a4303c1b03acf9ebd4be78e",
   )
   native.http_file(
     name = "deb_jessie_netcat",
@@ -1336,13 +1336,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_redis_server",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.5-1~bpo8+1_amd64.deb",
-    sha256 = "43ffa0cfb02d95a71d7d45940299192625f969cf76ef393ec6b1fa146196796f",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.5-2~bpo8+1_amd64.deb",
+    sha256 = "b23b3f28d6ae10a627d4cb57010c9837292da3bb57935f7671c2159d0d5fb92d",
   )
   native.http_file(
     name = "deb_jessie_redis_tools",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.5-1~bpo8+1_amd64.deb",
-    sha256 = "e401f25eba1c74069a0969eb73bba065b73c4938b516f44991c97bfe9db52564",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.5-2~bpo8+1_amd64.deb",
+    sha256 = "72616cbb71e5b9d77341d42cbc812041b6acb99b9eb90a5b159fad6da6135668",
   )
   native.http_file(
     name = "deb_jessie_samba_libs",

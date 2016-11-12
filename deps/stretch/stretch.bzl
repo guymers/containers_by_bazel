@@ -6,8 +6,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_automake",
-    url = "http://deb.debian.org/debian/pool/main/a/automake-1.15/automake_1.15-4_all.deb",
-    sha256 = "169409b9a08b423c72d2d8fa2749b7aec8bc79df0f6e2944d532f9e1fc41a99c",
+    url = "http://deb.debian.org/debian/pool/main/a/automake-1.15/automake_1.15-5_all.deb",
+    sha256 = "8cd4dfd30513e6b94b2ed523cd3987ff5c1d0afd6991f46fa25ced571c9a20c5",
   )
   native.http_file(
     name = "deb_stretch_autotools_dev",
@@ -116,8 +116,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libgnutls30",
-    url = "http://deb.debian.org/debian/pool/main/g/gnutls28/libgnutls30_3.5.5-4_amd64.deb",
-    sha256 = "0d2c1ca7586f97b27524ee79fe013b97a5ab60686d52f5bb36f6a5cdc69e7a26",
+    url = "http://deb.debian.org/debian/pool/main/g/gnutls28/libgnutls30_3.5.5-6_amd64.deb",
+    sha256 = "bd833ec819e818a98d5837f607933bc7364a45c654477a3b26976071e923e9ae",
   )
   native.http_file(
     name = "deb_stretch_libgomp1",
