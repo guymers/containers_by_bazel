@@ -461,8 +461,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libhdf5_8",
-    url = "http://deb.debian.org/debian/pool/main/h/hdf5/libhdf5-8_1.8.13+docs-15_amd64.deb",
-    sha256 = "a1af5d06efbf7b9d457d186ddaf7198560e57db9aa7cdc55b06319751390be7c",
+    url = "http://security.debian.org/pool/updates/main/h/hdf5/libhdf5-8_1.8.13+docs-15+deb8u1_amd64.deb",
+    sha256 = "a897d53a3f64d05cb653d2a0c89b05ab13af44761c0df819e88a46929c5feadf",
   )
   native.http_file(
     name = "deb_jessie_libhogweed2",
@@ -476,8 +476,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libicu52",
-    url = "http://deb.debian.org/debian/pool/main/i/icu/libicu52_52.1-8+deb8u3_amd64.deb",
-    sha256 = "2d5468b219f0684fe22bc577b296d51683b7c7ece8a4a91ed702085adaaca47e",
+    url = "http://security.debian.org/pool/updates/main/i/icu/libicu52_52.1-8+deb8u4_amd64.deb",
+    sha256 = "d093682f5e37be6dd2ddde27919d73d1504f0f55681d2391eca141a4f5bb2551",
   )
   native.http_file(
     name = "deb_jessie_libidn11",
@@ -826,8 +826,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libservlet3_0_java",
-    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libservlet3.0-java_7.0.56-3+deb8u4_all.deb",
-    sha256 = "4af672ee757bb9c1d4f29e9c119679e3f3769db71708476690e76ce4b43d0939",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libservlet3.0-java_7.0.56-3+deb8u5_all.deb",
+    sha256 = "17b2e3b9ce99d909a4ad6ba1e39c70c3d446113223f8014fd53394cdb4ab966f",
   )
   native.http_file(
     name = "deb_jessie_libsfcgal1",
@@ -931,8 +931,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libtomcat7_java",
-    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libtomcat7-java_7.0.56-3+deb8u4_all.deb",
-    sha256 = "f9b0f14566c365eab789e4a429d82d4dabf63b9a9803736a88fdcb1ebe82c005",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libtomcat7-java_7.0.56-3+deb8u5_all.deb",
+    sha256 = "749ec2662389349fcfa4f044993e57f00f24efdcf24f58a49dd1a4bb80f317e0",
   )
   native.http_file(
     name = "deb_jessie_liburiparser1",
@@ -1336,13 +1336,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_redis_server",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.5-2~bpo8+1_amd64.deb",
-    sha256 = "b23b3f28d6ae10a627d4cb57010c9837292da3bb57935f7671c2159d0d5fb92d",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.5-4~bpo8+1_amd64.deb",
+    sha256 = "7e53ca1965e8f7fc301ad53d849e7ea9fdd17d7802786f65ebb772df0c8091f9",
   )
   native.http_file(
     name = "deb_jessie_redis_tools",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.5-2~bpo8+1_amd64.deb",
-    sha256 = "72616cbb71e5b9d77341d42cbc812041b6acb99b9eb90a5b159fad6da6135668",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.5-4~bpo8+1_amd64.deb",
+    sha256 = "31dbaaa5117c82413714164dddf965b9b6a8b2ca80f610ef620ec49e35ee68b9",
   )
   native.http_file(
     name = "deb_jessie_samba_libs",
@@ -1361,13 +1361,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_tomcat7_common",
-    url = "http://security.debian.org/pool/updates/main/t/tomcat7/tomcat7-common_7.0.56-3+deb8u4_all.deb",
-    sha256 = "2498f5a7256eccaba55c536c0ca86a5f918d799e7ab31553f3f48bc142d7c1c1",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/tomcat7-common_7.0.56-3+deb8u5_all.deb",
+    sha256 = "9bd19853053ee5b12445d111d6f62a3a10f8a619c6c9ab523801e36eb9f7b2a1",
   )
   native.http_file(
     name = "deb_jessie_tomcat7_user",
-    url = "http://security.debian.org/pool/updates/main/t/tomcat7/tomcat7-user_7.0.56-3+deb8u4_all.deb",
-    sha256 = "35549d47ce4897589b90e9fffe63a6028b10a237687519276b2a60171c5f8679",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/tomcat7-user_7.0.56-3+deb8u5_all.deb",
+    sha256 = "0c9ca99681562296f1ed83cd4de7254e912e821f5700a5bd8a937dafd403658f",
   )
   native.http_file(
     name = "deb_jessie_ucf",
