@@ -1,4 +1,4 @@
 php7.0-dev=${PHP_VERSION}
 php7.0-phpdbg=${PHP_VERSION}
-php-xdebug=2.4.1-1
-php-tideways=4.0.3-3
+php-xdebug=2.5.0-1
+php-tideways=4.0.7-1

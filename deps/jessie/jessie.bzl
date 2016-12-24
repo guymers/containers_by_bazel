@@ -571,8 +571,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_liblwgeom_2_3_0",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/liblwgeom-2.3-0_2.3.0+dfsg-2.pgdg80+1_amd64.deb",
-    sha256 = "59669752bccc9841f05046b08353e2c4fec3680c5fd53fd9cdc5c6ac8db7004f",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/liblwgeom-2.3-0_2.3.1+dfsg-1.pgdg80+1_amd64.deb",
+    sha256 = "f452ee0f4ee6a84bce43e845228fbb638910f5279f2b454628508a240639130b",
   )
   native.http_file(
     name = "deb_jessie_libmad0",
@@ -731,8 +731,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libpq5",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.6/libpq5_9.6.1-1.pgdg80+1_amd64.deb",
-    sha256 = "ed080f95e9346105b2ea569ee158ea28b59647b844a203b20011e96abd57d9d4",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-9.6/libpq5_9.6.1-2.pgdg80+1_amd64.deb",
+    sha256 = "af08e19bb0ec8ed0a80e8868967538d9178a9aa0500530e5b24f45d23954db8d",
   )
   native.http_file(
     name = "deb_jessie_libproj0",
@@ -826,8 +826,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libservlet3_0_java",
-    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libservlet3.0-java_7.0.56-3+deb8u5_all.deb",
-    sha256 = "17b2e3b9ce99d909a4ad6ba1e39c70c3d446113223f8014fd53394cdb4ab966f",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libservlet3.0-java_7.0.56-3+deb8u6_all.deb",
+    sha256 = "70edf84cfcae5e7530ef838b3fdbfc10a2694bf0bf128085ffcb208ba1929c8a",
   )
   native.http_file(
     name = "deb_jessie_libsfcgal1",
@@ -841,8 +841,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libsmbclient",
-    url = "http://deb.debian.org/debian/pool/main/s/samba/libsmbclient_4.2.10+dfsg-0+deb8u3_amd64.deb",
-    sha256 = "f451b7887f12c4809ed2fc19b478c33da3dea1a5fe5510a3d872bddd40de4a27",
+    url = "http://security.debian.org/pool/updates/main/s/samba/libsmbclient_4.2.14+dfsg-0+deb8u2_amd64.deb",
+    sha256 = "da3ba173ca5afefa5a870e66f383d308bc209f631eb945f4a835045e3c17c0a5",
   )
   native.http_file(
     name = "deb_jessie_libsndfile1",
@@ -906,8 +906,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libtevent0",
-    url = "http://deb.debian.org/debian/pool/main/t/tevent/libtevent0_0.9.25-0+deb8u1_amd64.deb",
-    sha256 = "d1cff919c02969e523b5d136d7369f7cd03ac8c54c5e6326602ae220b2a30fcf",
+    url = "http://security.debian.org/pool/updates/main/t/tevent/libtevent0_0.9.28-0+deb8u1_amd64.deb",
+    sha256 = "63f03b029f6fa04c2caee944f4ecb91591575c933a035ffca6fd8695e0a855f3",
   )
   native.http_file(
     name = "deb_jessie_libthai0",
@@ -931,8 +931,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libtomcat7_java",
-    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libtomcat7-java_7.0.56-3+deb8u5_all.deb",
-    sha256 = "749ec2662389349fcfa4f044993e57f00f24efdcf24f58a49dd1a4bb80f317e0",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libtomcat7-java_7.0.56-3+deb8u6_all.deb",
+    sha256 = "defbcb126990f86b6322bb10b6ea9354debc2a6d67efe98e2e6ce0f3e9eca3bf",
   )
   native.http_file(
     name = "deb_jessie_liburiparser1",
@@ -986,8 +986,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libwbclient0",
-    url = "http://deb.debian.org/debian/pool/main/s/samba/libwbclient0_4.2.10+dfsg-0+deb8u3_amd64.deb",
-    sha256 = "02610fa38594f49dfd3f65c975f911f1a17ff0060b942bd56f2752f7d564c7f2",
+    url = "http://security.debian.org/pool/updates/main/s/samba/libwbclient0_4.2.14+dfsg-0+deb8u2_amd64.deb",
+    sha256 = "6b93ca4c8ef7e2787f1c70d58f7dc9631c4aeec8efe87f58b0a9bd251170a25c",
   )
   native.http_file(
     name = "deb_jessie_libwebp5",
@@ -1211,13 +1211,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nginx",
-    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.11.5-1~jessie_amd64.deb",
-    sha256 = "abe2888256cdaeea6d2be4daaffdf4aea3af51d3f417526b589740b0f54fd88e",
+    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.11.7-1~jessie_amd64.deb",
+    sha256 = "f1773d9422ccdabe00a7f30bcc071c52d714714c27d048f0fd11c5f9cf05b731",
   )
   native.http_file(
     name = "deb_jessie_nodejs",
-    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.9.1-1nodesource1~jessie1_amd64.deb",
-    sha256 = "c815500662b2c17bd393b6da6e89dbcb708b378b2d32eabb83f58faae0f661e0",
+    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.9.2-1nodesource1~jessie1_amd64.deb",
+    sha256 = "6894b8a38404c0820e6ef829c12d8826cda0a72c19f2b2979e0ff86b246134e4",
   )
   native.http_file(
     name = "deb_jessie_odbcinst",
@@ -1261,8 +1261,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_postgis",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgis_2.3.0+dfsg-2.pgdg80+1_amd64.deb",
-    sha256 = "ace8965dc6f5c43c24c3546dc4391d991bbc1b2e0c3dadbf4bb80fd356ce41b9",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgis_2.3.1+dfsg-1.pgdg80+1_amd64.deb",
+    sha256 = "212733b6d0e686d30624f42d1a85f305aaf34288dcaf5bd091c1d114b7d4146d",
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_5",
@@ -1271,13 +1271,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_5_postgis_2_3",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.5-postgis-2.3_2.3.0+dfsg-2.pgdg80+1_amd64.deb",
-    sha256 = "92173873b953f70692c0cef247712a63cf3d4717c62745ee4cd5b387614b62bf",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.5-postgis-2.3_2.3.1+dfsg-1.pgdg80+1_amd64.deb",
+    sha256 = "b156ed5da76dcedaef3ec8ecb0d56c97be206b3feaeb3797fbd303a34942bb63",
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_5_postgis_2_3_scripts",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.5-postgis-2.3-scripts_2.3.0+dfsg-2.pgdg80+1_all.deb",
-    sha256 = "db482cb600200beeb399ad85bc59731b335d45e049c622fe8cfbffb03550a4c8",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.5-postgis-2.3-scripts_2.3.1+dfsg-1.pgdg80+1_all.deb",
+    sha256 = "f137d686e53b8a990789f28e271eacb4682a90da69e8615f1a9cbffb1d087831",
   )
   native.http_file(
     name = "deb_jessie_postgresql_client_9_5",
@@ -1336,18 +1336,18 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_redis_server",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.5-4~bpo8+1_amd64.deb",
-    sha256 = "7e53ca1965e8f7fc301ad53d849e7ea9fdd17d7802786f65ebb772df0c8091f9",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.6-1~bpo8+1_amd64.deb",
+    sha256 = "62ee63f41ef8d50d6de12650774167f848c09329579e668a1caea8b9ec87b726",
   )
   native.http_file(
     name = "deb_jessie_redis_tools",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.5-4~bpo8+1_amd64.deb",
-    sha256 = "31dbaaa5117c82413714164dddf965b9b6a8b2ca80f610ef620ec49e35ee68b9",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.6-1~bpo8+1_amd64.deb",
+    sha256 = "c8c88e2075ec7327d0c712b6a06d1a92dd4d7e953c967f14155ac26dd4fe0b1d",
   )
   native.http_file(
     name = "deb_jessie_samba_libs",
-    url = "http://deb.debian.org/debian/pool/main/s/samba/samba-libs_4.2.10+dfsg-0+deb8u3_amd64.deb",
-    sha256 = "fc9204aa1becc6cdd0ac219243d5e7df9876c0091c7daf500895db8e31369285",
+    url = "http://security.debian.org/pool/updates/main/s/samba/samba-libs_4.2.14+dfsg-0+deb8u2_amd64.deb",
+    sha256 = "402ec756aa7f621eb45f750fe558b8a5d70211cbcc5dee3ef6a35cc22c2d1860",
   )
   native.http_file(
     name = "deb_jessie_shared_mime_info",
@@ -1361,13 +1361,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_tomcat7_common",
-    url = "http://security.debian.org/pool/updates/main/t/tomcat7/tomcat7-common_7.0.56-3+deb8u5_all.deb",
-    sha256 = "9bd19853053ee5b12445d111d6f62a3a10f8a619c6c9ab523801e36eb9f7b2a1",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/tomcat7-common_7.0.56-3+deb8u6_all.deb",
+    sha256 = "6925b315cca1d7f1aa9048be13431d2b0071cc6bfd9644bc3e60ac53e0c4ce0f",
   )
   native.http_file(
     name = "deb_jessie_tomcat7_user",
-    url = "http://security.debian.org/pool/updates/main/t/tomcat7/tomcat7-user_7.0.56-3+deb8u5_all.deb",
-    sha256 = "0c9ca99681562296f1ed83cd4de7254e912e821f5700a5bd8a937dafd403658f",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/tomcat7-user_7.0.56-3+deb8u6_all.deb",
+    sha256 = "637d620b28365ae63c1c19beaf3e3cb211d48bb023374ff8999b5996898d9426",
   )
   native.http_file(
     name = "deb_jessie_ucf",

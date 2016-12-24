@@ -25,17 +25,17 @@ def dependency_repositories():
     tag = "0.2.1",
   )
 
-  # 2016-11-04 debootstraps
+  # 2016-12-13 debootstraps
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/2c836bc53feb12f70a07dacaa6256d4d66624f38/jessie/rootfs.tar.xz",
-    sha256 = "5ce47f6e19bb20d8f2ce7cc1801dc5451c82469e4101601a9af44d181d548a65",
+    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/d220bea42308935d3bee1b40701f39e8c0d69860/jessie/rootfs.tar.xz",
+    sha256 = "dac81ff0d7b96abe1981a23396d48ed35c54ab0ed2935c23017e7a422fc80a61",
   )
-  # 2016-11-04 debootstraps
+  # 2016-12-13 debootstraps
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/9b1dd4b1594b8df02f7caa739e84b187edaab404/stretch/rootfs.tar.xz",
-    sha256 = "17268959f2108f7edbcfe3b19523b66c8c0c70e56525d8f7ebd6cc27887cf194",
+    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/99079665857cbbdf221f8d3e44d5081dd13e4ff7/stretch/rootfs.tar.xz",
+    sha256 = "88f55b17de14bdc08bbd17e669f8550168b58df6e8f9ac01391bf5ea8de65bcb",
   )
 
   deb_jessie()
@@ -108,7 +108,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "6eb89e410b263a4c73028cc4e0165e8fd567c0a35df43d12ab4117a1fc86ad31",
+    sha256 = "c1b82650ad4bbddc696a18b4907c6e21078adfdabd4ed609c789aba29483fa72",
   )
   native.http_file(
     name = "jenkins_agent_jar",
@@ -128,7 +128,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "zookeeper",
     url = "http://mirrors.ocf.berkeley.edu/apache/zookeeper/zookeeper-" + ZOOKEEPER_VERSION + "/zookeeper-" + ZOOKEEPER_VERSION + ".tar.gz",
-    sha256 = "f10a0b51f45c4f64c1fe69ef713abf9eb9571bc7385a82da892e83bb6c965e90",
+    sha256 = "e7f340412a61c7934b5143faef8d13529b29242ebfba2eba48169f4a8392f535",
     build_file_content = "exports_files(['zookeeper-" + ZOOKEEPER_VERSION + "'])",
   )
 
@@ -136,7 +136,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "kafka",
     url = "http://mirrors.ocf.berkeley.edu/apache/kafka/" + KAFKA_VERSION + "/kafka_2.11-" + KAFKA_VERSION + ".tgz",
-    sha256 = "6d9532ae65c9c8126241e7b928b118aaa3a694dab08069471f0e61f4f0329390",
+    sha256 = "1540800779429d8f0a08be7b300e4cb6500056961440a01c8dbb281db76f0929",
     build_file_content = "exports_files(['kafka_2.11-" + KAFKA_VERSION + "'])",
   )
 
@@ -162,7 +162,7 @@ def dependency_repositories():
   native.http_file(
     name = "yarnpkg",
     url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "d91cceb7bceeb287c68dc6305e38fdb7575a7a33dba6eec11c083954080167cb",
+    sha256 = "2bc88f65ccbc0dc1be66f0d4d985f008949af33ecce258e23323fe1c69a0bfa9",
   )
 
 
