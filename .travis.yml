@@ -8,22 +8,21 @@ before_install:
   - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0x219BD9C9
   - sudo sh -c 'echo "deb http://repos.azulsystems.com/ubuntu stable main" > /etc/apt/sources.list.d/zulu.list'
   - sudo apt-get update
-  - sudo apt-get install -y --no-install-recommends zulu-8=8.17.0.3
+  - sudo apt-get install -y --no-install-recommends zulu-8=8.19.0.1
   - java -version
   # docker
   - sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
   - sudo sh -c 'echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" > /etc/apt/sources.list.d/docker.list'
   - sudo apt-get update
   - sudo apt-get purge docker-engine || true
-  - sudo apt-get install -y --no-install-recommends docker-engine=1.11.2-0~trusty
+  - sudo apt-get install -y --no-install-recommends docker-engine=1.12.5-0~ubuntu-trusty
   - sudo usermod -aG docker $USER
   - docker -v
-  # bazel  http://bazel.io/docs/install.html
-  - sudo apt-get install -y --no-install-recommends pkg-config zip g++ zlib1g-dev unzip
-  - wget https://github.com/bazelbuild/bazel/releases/download/0.3.1/bazel_0.3.1-linux-x86_64.deb.sha256
-  - wget https://github.com/bazelbuild/bazel/releases/download/0.3.1/bazel_0.3.1-linux-x86_64.deb
-  - sha256sum -c bazel_0.3.1-linux-x86_64.deb.sha256
-  - sudo dpkg -i bazel_0.3.1-linux-x86_64.deb
+  # bazel
+  - echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
+  - curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
+  - sudo apt-get update
+  - sudo apt-get install bazel
   - bazel version
 install:
 before_script:
