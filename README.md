@@ -12,6 +12,15 @@ Choose a commit and add the below to your WORKSPACE file:
 
     load("@containers_by_bazel//scripts:repositories.bzl", "dependency_repositories")
     dependency_repositories()
+    
+    load("@bazel_rules_container//container:repositories.bzl", "container_repositories")
+    container_repositories()
+    
+    load("@io_bazel_rules_go//go:def.bzl", "go_repositories")
+    go_repositories()
+    
+    load("@bazel_rules_container//container:repositories_go.bzl", "container_repositories_go")
+    container_repositories_go()
 
 #### Using containers
 

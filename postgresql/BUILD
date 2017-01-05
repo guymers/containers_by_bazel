@@ -24,7 +24,7 @@ container_image(
     "LANG": "en_US.UTF-8",
     "POSTGRES_HOME": POSTGRES_HOME,
     "POSTGRES_PASSWORD": "postgres",
-    "PATH": "/usr/lib/postgresql/9.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "PATH": "/usr/lib/postgresql/9.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
   },
   volumes = [
     "/var/lib/postgresql",

@@ -6,7 +6,7 @@ def jmx_javaagent(name, base):
     directory = "/prometheus",
     files = ["@jmx_prometheus_javaagent//jar"],
     symlinks = {
-      "/prometheus/jmx_prometheus_javaagent.jar": "/prometheus/jmx_prometheus_javaagent-0.6.jar",
+      "/prometheus/jmx_prometheus_javaagent.jar": "/prometheus/jmx_prometheus_javaagent-0.7.jar",
     }
   )
 

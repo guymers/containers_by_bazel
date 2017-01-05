@@ -10,6 +10,7 @@ source "$DIR/containers_by_bazel/scripts/versions/versions.sh"
 while IFS="=" read -r dependency version; do
   if [ -n "$dependency" ]; then
     # yes eval, easiest way to substitute variables
+    dependency=$(eval echo "$dependency")
     version=$(eval echo "$version")
     echo "$dependency=$version"
   fi

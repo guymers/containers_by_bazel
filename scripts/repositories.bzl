@@ -50,30 +50,30 @@ def dependency_repositories():
 
   native.http_file(
     name = "tini",
-    url = "https://github.com/krallin/tini/releases/download/v0.10.0/tini_0.10.0.deb",
-    sha256 = "98b6eb1576b54b201d0920a7f494d47c4759b9d656f5c06ac3d611c8c196a0ff",
+    url = "https://github.com/krallin/tini/releases/download/v0.13.2/tini_0.13.2.deb",
+    sha256 = "8786eb7300ed5603f0f8045d8dcba67144656609ecedbb117f8bc418f1c15cce",
   )
 
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "8421a5f31a2e4721e945abb19c7831df7c461755120f9d467ef6bf07cc572305",
+    sha256 = "0511576f19ff060712d19fb343957113f6a47b2d2edcbe4889eaaa844b31f516",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
 
   native.new_http_archive(
     name = "prometheus_node_exporter",
-    url = "https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-amd64.tar.gz",
-    sha256 = "d48de5b89dac04aca751177afaa9b0919e5b3d389364d40160babc00d63aac7b",
-    strip_prefix = "node_exporter-0.12.0.linux-amd64",
+    url = "https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.linux-amd64.tar.gz",
+    sha256 = "2de5d1e51330c41588ed4c88bc531a3d2dccf6b4d7b99d5782d95cff27a3c049",
+    strip_prefix = "node_exporter-0.13.0.linux-amd64",
     build_file_content = "exports_files(['node_exporter'])",
   )
 
   native.maven_jar(
     name = "jmx_prometheus_javaagent",
-    artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:0.6",
-    sha1 = "19e9c04f88c8af71054d91045bb9c720adc8ac58",
+    artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:0.7",
+    sha1 = "92dac2d3069132f18b99d363a330c60a986fadc0",
   )
 
 
@@ -92,7 +92,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "00e45f83d70714cf5f3436c007b290ad28d81cceb18dacdfad59d6a95493557a",
+    sha256 = "2264411f73adb0d3ec2b5c2390a5894f6d4e44fa59d7253c9e3d8940e04a8e6d",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
   NEXUS_3_VERSION="3.1.0-04"
@@ -108,7 +108,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "c1b82650ad4bbddc696a18b4907c6e21078adfdabd4ed609c789aba29483fa72",
+    sha256 = "efbb4360de55947189f67895be0960ddfd75104732802948f082f8a5e93228ca",
   )
   native.http_file(
     name = "jenkins_agent_jar",
