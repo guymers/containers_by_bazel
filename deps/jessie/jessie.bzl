@@ -421,8 +421,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libgraphicsmagick3",
-    url = "http://deb.debian.org/debian/pool/main/g/graphicsmagick/libgraphicsmagick3_1.3.20-3+deb8u1_amd64.deb",
-    sha256 = "d6091cc1e1ded7750e9565042354d546e4c8d5257c43a3bd38554ee01b415130",
+    url = "http://security.debian.org/pool/updates/main/g/graphicsmagick/libgraphicsmagick3_1.3.20-3+deb8u2_amd64.deb",
+    sha256 = "f33737e2cd1367f52c5252dffcf6e5b88e7dbbafd053d60845ee4b580a597e88",
   )
   native.http_file(
     name = "deb_jessie_libgraphite2_3",
@@ -1141,8 +1141,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libxml2",
-    url = "http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.1+dfsg1-5+deb8u3_amd64.deb",
-    sha256 = "889c31413bd03e5d87421bc945b8a195b2eab9f72aa88aaf0ae566dd024632ee",
+    url = "http://security.debian.org/pool/updates/main/libx/libxml2/libxml2_2.9.1+dfsg1-5+deb8u4_amd64.deb",
+    sha256 = "c26bd9a184963951bc513190a6bd0fd1bb03ff5cd80074d7066e4c438e184ae5",
   )
   native.http_file(
     name = "deb_jessie_libxrandr2",
@@ -1216,8 +1216,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nodejs",
-    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.9.2-1nodesource1~jessie1_amd64.deb",
-    sha256 = "6894b8a38404c0820e6ef829c12d8826cda0a72c19f2b2979e0ff86b246134e4",
+    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.9.3-1nodesource1~jessie1_amd64.deb",
+    sha256 = "465bb7f6e8a7e7f8a40af98b54f4439f6a5a3f63b30559b131f86414c829bc1f",
   )
   native.http_file(
     name = "deb_jessie_odbcinst",
@@ -1286,13 +1286,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_postgresql_client_common",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_177.pgdg80+1_all.deb",
-    sha256 = "387559630a9e105ef5422e92b743c16ef70686094b3bd5db35114b2d6bbc1dcc",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_178.pgdg80+1_all.deb",
+    sha256 = "fe7607fc923c60799a768e79860b884fea1029f90426040d573ab0c89a37e64f",
   )
   native.http_file(
     name = "deb_jessie_postgresql_common",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_177.pgdg80+1_all.deb",
-    sha256 = "ffea4a13827196aec7ca540dd943fea26c69c776dc1ba3318a94fdde53cb4e1a",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_178.pgdg80+1_all.deb",
+    sha256 = "b0fcac36095a8aa1ff27e8040949c2f1ec2e3d9d0c54b0337dc2cabb6ff02573",
   )
   native.http_file(
     name = "deb_jessie_postgresql_contrib_9_5",

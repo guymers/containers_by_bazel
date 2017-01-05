@@ -34,7 +34,6 @@ filegroup(
     "@deb_stretch_libsasl2_2//file",
     "@deb_stretch_libsasl2_modules_db//file",
     "@deb_stretch_libssh2_1//file",
-    "@deb_stretch_libssl1_0_2//file",
     "@deb_stretch_libssl1_1//file",
     "@deb_stretch_libtasn1_6//file",
     "@deb_stretch_libxml2//file",
