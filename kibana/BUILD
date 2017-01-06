@@ -1,7 +1,7 @@
 load("//macros/user:user.bzl", "user_layer")
 load("//scripts/versions:versions.bzl", "KIBANA_VERSION")
 
-KIBANA_HOME = "/opt/kibana"
+KIBANA_HOME = "/usr/share/kibana"
 KIBANA_PLUGIN_DIR = KIBANA_HOME + "/plugins"
 CONF_DIR = "/etc/kibana"
 VERSION = KIBANA_VERSION
@@ -15,11 +15,8 @@ user_layer(
 
 container_layer(
   name = "files",
-  directory = "/opt",
-  files = ["@kibana//:kibana-" + VERSION + "-linux-x86_64"],
-  symlinks = {
-    "/opt/kibana": "/opt/kibana-" + VERSION + "-linux-x86_64",
-  },
+  directory = "/",
+  debs = ["@kibana//file"],
 )
 
 container_layer(

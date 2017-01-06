@@ -7,14 +7,7 @@ if [ -d "$ES_DATA" -a "$(stat -c '%U' "$ES_DATA" 2>/dev/null)" = "root" ]; then
   chmod o-rwx "$ES_DATA"
 fi
 
-if [ -d "$PLUGINS_DIR" -a "$(stat -c '%U' "$PLUGINS_DIR" 2>/dev/null)" = "root" ]; then
-  chown elasticsearch "$PLUGINS_DIR"
-  chmod o-rwx "$PLUGINS_DIR"
-fi
-
 if [ "$1" = 'elasticsearch' ]; then
-  mkdir -p "$CONF_DIR/scripts"
-
   source /java-opts.sh
 
   # pull the bits from bin/elasticsearch.in.sh that have not been set by sourcing java-opts
@@ -30,13 +23,15 @@ if [ "$1" = 'elasticsearch' ]; then
   JAVA_OPTS="$JAVA_OPTS -Djna.nosys=true"
 
   # the command bin/elasticsearch executes
-  exec gosu elasticsearch java $JAVA_OPTS -cp "$ES_CLASSPATH" \
+  exec gosu elasticsearch java $JAVA_OPTS \
+    -Djava.security.policy="$CONF_DIR/java.policy" \
     -Des.path.home="$ES_HOME" \
-    -Des.default.path.conf="$CONF_DIR" \
-    -Des.default.path.data="$DATA_DIR" \
-    -Des.default.path.logs="$LOG_DIR" \
-    -Des.default.path.plugins="$PLUGINS_DIR" \
-    org.elasticsearch.bootstrap.Elasticsearch start "${@:2}"
+    -cp "$ES_CLASSPATH" \
+    org.elasticsearch.bootstrap.Elasticsearch \
+      -Epath.conf="$CONF_DIR" \
+      -Epath.data="$DATA_DIR" \
+      -Epath.logs="$LOG_DIR" \
+      "${@:2}"
 else
   exec "$@"
 fi

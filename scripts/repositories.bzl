@@ -141,20 +141,17 @@ def dependency_repositories():
   )
 
   ###### ELASTICSEARCH
-  # cannot use the deb file because it contains two copies of lib/elasticsearch-2.3.5.jar
-  native.new_http_archive(
+  native.http_file(
     name = "elasticsearch",
-    url = "https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/" + ELASTICSEARCH_VERSION + "/elasticsearch-" + ELASTICSEARCH_VERSION + ".tar.gz",
-    sha256 = "23a369ef42955c19aaaf9e34891eea3a055ed217d7fbe76da0998a7a54bbe167",
-    build_file_content = "exports_files(['elasticsearch-" + ELASTICSEARCH_VERSION + "'])",
+    url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-" + ELASTICSEARCH_VERSION + ".deb",
+    sha256 = "c8a38990a24b558fb9c65492034caa00044e638d0ede6d440b00cb4eacb46d1d",
   )
 
   ###### KIBANA
-  native.new_http_archive(
+  native.http_file(
     name = "kibana",
-    url = "https://download.elastic.co/kibana/kibana/kibana-" + KIBANA_VERSION + "-linux-x86_64.tar.gz",
-    sha256 = "a4939d1241c353fe1f53c262e854f185835a4d0a7dcfc11da870922d1711c7e8",
-    build_file_content = "exports_files(['kibana-" + KIBANA_VERSION + "-linux-x86_64'])",
+    url = "https://artifacts.elastic.co/downloads/kibana/kibana-" + KIBANA_VERSION + "-amd64.deb",
+    sha256 = "568418b72ce690a7a14200a106fbb00dae31e69d6ee207602baff3a3d630788f",
   )
 
 

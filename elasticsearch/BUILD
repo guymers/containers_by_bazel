@@ -1,12 +1,13 @@
 load("//macros/user:user.bzl", "user_layer")
 load("//scripts/versions:versions.bzl", "ELASTICSEARCH_VERSION")
 
-ES_HOME = "/opt/elasticsearch"
+ES_HOME = "/usr/share/elasticsearch"
 ES_DATA = "/elasticsearch"
 CONF_DIR = "/etc/elasticsearch"
+SCRIPTS_DIR = CONF_DIR + "/scripts"
 DATA_DIR = ES_DATA + "/data"
 LOG_DIR = ES_DATA + "/logs"
-PLUGINS_DIR = "/opt/elasticsearch/plugins"
+PLUGINS_DIR = ES_HOME + "/plugins"
 VERSION = ELASTICSEARCH_VERSION
 
 user_layer(
@@ -18,11 +19,8 @@ user_layer(
 
 container_layer(
   name = "files",
-  directory = "/opt",
-  files = ["@elasticsearch//:elasticsearch-" + VERSION],
-  symlinks = {
-    "/opt/elasticsearch": "/opt/elasticsearch-" + VERSION,
-  },
+  directory = "/",
+  debs = ["@elasticsearch//file"],
 )
 
 container_layer(
@@ -37,10 +35,16 @@ container_layer(
   files = glob(["config/*"]),
 )
 
+container_layer(
+  name = "scripts",
+  directory = SCRIPTS_DIR,
+  files = glob(["config/scripts/*"]),
+)
+
 container_image(
   name = "elasticsearch",
   base = "//java:zulu",
-  layers = ["//base/gosu", ":user", ":files", ":init", ":config"],
+  layers = ["//base/gosu", ":user", ":files", ":init", ":config", ":scripts"],
 
   env = {
     "ES_HOME": ES_HOME,

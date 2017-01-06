@@ -4,9 +4,9 @@ set -o pipefail
 
 if [ "$1" = 'kibana' ]; then
   # the command bin/kibana executes
-  exec gosu kibana node $KIBANA_NODE_OPTIONS "$KIBANA_HOME/src/cli" \
+  exec gosu kibana node $KIBANA_NODE_OPTIONS --no-warnings "$KIBANA_HOME/src/cli" \
     --config "$CONF_DIR/kibana.yml" \
-    --plugin-dir "$KIBANA_HOME/src/plugins" \
+    --plugin-dir "$KIBANA_HOME/src/core_plugins" \
     --plugin-dir "$KIBANA_PLUGIN_DIR" \
     "${@:2}"
 else
