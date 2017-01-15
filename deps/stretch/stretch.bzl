@@ -241,8 +241,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libp11_kit0",
-    url = "http://deb.debian.org/debian/pool/main/p/p11-kit/libp11-kit0_0.23.2-5_amd64.deb",
-    sha256 = "79d4b4be9e53a603211bad881cc558794c300dcfb42430f15aa6d612cdca45d8",
+    url = "http://deb.debian.org/debian/pool/main/p/p11-kit/libp11-kit0_0.23.3-2_amd64.deb",
+    sha256 = "866d778eb205f8eacb6940afb7c763819ce2c0e27146d4b9710de918843e3c25",
   )
   native.http_file(
     name = "deb_stretch_libpcre16_3",
@@ -286,13 +286,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libsasl2_2",
-    url = "http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.27~101-g0780600+dfsg-1_amd64.deb",
-    sha256 = "beda116ceec5fff7129429625e2d422f9e47289264e7f2d4f608c945fbdeb540",
+    url = "http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.27~101-g0780600+dfsg-2_amd64.deb",
+    sha256 = "f19b04ae4a1ec23e791606eb1869f278bbb3582479312e6912ca3c773f64d58a",
   )
   native.http_file(
     name = "deb_stretch_libsasl2_modules_db",
-    url = "http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/libsasl2-modules-db_2.1.27~101-g0780600+dfsg-1_amd64.deb",
-    sha256 = "8aa2fc016dc4600e30997f738b40990c1d1fd30ea54e08e142ef03c3079010be",
+    url = "http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/libsasl2-modules-db_2.1.27~101-g0780600+dfsg-2_amd64.deb",
+    sha256 = "edf2d90d87a95795d87d1bf58324e2ae0725710d01c5c36481db862e87b7998b",
   )
   native.http_file(
     name = "deb_stretch_libsigsegv2",
@@ -341,8 +341,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_linux_libc_dev",
-    url = "http://deb.debian.org/debian/pool/main/l/linux/linux-libc-dev_4.8.11-1_amd64.deb",
-    sha256 = "38cfbb8d2add8d48722b31e7ac9bc4aea4252cfcf84f43c9157907453a3bede9",
+    url = "http://deb.debian.org/debian/pool/main/l/linux/linux-libc-dev_4.8.15-2_amd64.deb",
+    sha256 = "7f697f67e78d94edf26047565ea957c371d522a7cb82264be69e1f14cc27eb58",
   )
   native.http_file(
     name = "deb_stretch_m4",
@@ -441,8 +441,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_php_common",
-    url = "http://deb.debian.org/debian/pool/main/p/php-defaults/php-common_47_all.deb",
-    sha256 = "ee42734eac3d7e2f130c6d9f13839ca143d8466c7fba015de32841dd5b149e92",
+    url = "http://deb.debian.org/debian/pool/main/p/php-defaults/php-common_49_all.deb",
+    sha256 = "8a0b67270d026aba39ad4eb863352834035b93505e710c1b5738e5aafdb272d4",
   )
   native.http_file(
     name = "deb_stretch_php_tideways",
