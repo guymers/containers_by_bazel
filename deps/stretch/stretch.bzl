@@ -46,8 +46,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libapparmor1",
-    url = "http://deb.debian.org/debian/pool/main/a/apparmor/libapparmor1_2.10.95-8_amd64.deb",
-    sha256 = "1af0fd5421d9ad209f258e2c0914285f7402732fe6962bd029d21e271f257d4b",
+    url = "http://deb.debian.org/debian/pool/main/a/apparmor/libapparmor1_2.11.0-1_amd64.deb",
+    sha256 = "988024e96b86d0bbf18ee15064c4493f92000ed0ffbbbb667d94c8ba364061bc",
   )
   native.http_file(
     name = "deb_stretch_libasan3",
@@ -63,11 +63,6 @@ def deb_stretch():
     name = "deb_stretch_libbsd0",
     url = "http://deb.debian.org/debian/pool/main/libb/libbsd/libbsd0_0.8.3-1_amd64.deb",
     sha256 = "030e441cc6368041536a69adcaed6b4f4a37e0145817fc3eff16f37e3a81ecae",
-  )
-  native.http_file(
-    name = "deb_stretch_libc6",
-    url = "http://deb.debian.org/debian/pool/main/g/glibc/libc6_2.24-8_amd64.deb",
-    sha256 = "53981fbf7b3faf19bad3b5f549006ac8ac6ba1cfd02b09dc57cfec0f309e759b",
   )
   native.http_file(
     name = "deb_stretch_libc6_dev",
@@ -121,8 +116,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libgnutls30",
-    url = "http://deb.debian.org/debian/pool/main/g/gnutls28/libgnutls30_3.5.7-3_amd64.deb",
-    sha256 = "812fafd9e702a70a03ec3022b665f3a9143c207b3e053f27003d3c711af5b877",
+    url = "http://deb.debian.org/debian/pool/main/g/gnutls28/libgnutls30_3.5.8-1_amd64.deb",
+    sha256 = "52427bbc460e0445e9002a736673fc5c27ca373e1ec75307c8ab57e2be366d71",
   )
   native.http_file(
     name = "deb_stretch_libgomp1",
@@ -151,8 +146,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libisl15",
-    url = "http://deb.debian.org/debian/pool/main/i/isl/libisl15_0.17.1-1_amd64.deb",
-    sha256 = "2c0f4718c1f54850d0374a7595ad14003a99f8aeeed21ab9095a87741f0bb51f",
+    url = "http://deb.debian.org/debian/pool/main/i/isl/libisl15_0.18-1_amd64.deb",
+    sha256 = "7f0a81e458df5e9648252bf3a76ffd57f366a0ddcab5290a9c3bb5bc0c79e513",
   )
   native.http_file(
     name = "deb_stretch_libitm1",
@@ -181,13 +176,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libldap_2_4_2",
-    url = "http://deb.debian.org/debian/pool/main/o/openldap/libldap-2.4-2_2.4.44+dfsg-2_amd64.deb",
-    sha256 = "14de1fd25dd3af9c4fa2c2afd7d30a660a10ebe97f1deff7234d42a75d229383",
+    url = "http://deb.debian.org/debian/pool/main/o/openldap/libldap-2.4-2_2.4.44+dfsg-3_amd64.deb",
+    sha256 = "1a7ee1e0961d1590faa0df8b4837643607f135a5d8d0bbd9122c5a7e7cdcac5d",
   )
   native.http_file(
     name = "deb_stretch_libldap_common",
-    url = "http://deb.debian.org/debian/pool/main/o/openldap/libldap-common_2.4.44+dfsg-2_all.deb",
-    sha256 = "d6b37b8ae55a0723f58131cd97d55c75612926abde910cc388d8ff19b9dc6dec",
+    url = "http://deb.debian.org/debian/pool/main/o/openldap/libldap-common_2.4.44+dfsg-3_all.deb",
+    sha256 = "dea929d92cae24d7a1b9a38bd0f3397dc7acccb4d744127f2f12d2a65a9daa4a",
   )
   native.http_file(
     name = "deb_stretch_liblsan0",
@@ -346,8 +341,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_m4",
-    url = "http://deb.debian.org/debian/pool/main/m/m4/m4_1.4.17-5_amd64.deb",
-    sha256 = "1df5867d722c42983276d9aeb65ec0c00115b1d3daedef901c010e9664adcd6a",
+    url = "http://deb.debian.org/debian/pool/main/m/m4/m4_1.4.18-1_amd64.deb",
+    sha256 = "8cd8aea91350e1729d7367065b3ca2116867da4de6cdde1777c5be8aeff0dba5",
   )
   native.http_file(
     name = "deb_stretch_mime_support",

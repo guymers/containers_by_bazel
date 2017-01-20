@@ -611,8 +611,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libmysqlclient18",
-    url = "http://deb.debian.org/debian/pool/main/m/mysql-5.5/libmysqlclient18_5.5.53-0+deb8u1_amd64.deb",
-    sha256 = "053f840d060c46107347364bada55dd82475d38476b16acf0b4466ec712436d3",
+    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/libmysqlclient18_5.5.54-0+deb8u1_amd64.deb",
+    sha256 = "bacc8e176188bcdd3645268fb49ad5b50b4b19ff9dcd2e1c1baa26472967d7f7",
   )
   native.http_file(
     name = "deb_jessie_libnetcdfc7",
@@ -1196,8 +1196,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_mysql_common",
-    url = "http://deb.debian.org/debian/pool/main/m/mysql-5.5/mysql-common_5.5.53-0+deb8u1_all.deb",
-    sha256 = "327fc2bcbf53fed05bff4a496c7cf89558bb4ab74a4303c1b03acf9ebd4be78e",
+    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/mysql-common_5.5.54-0+deb8u1_all.deb",
+    sha256 = "82378b931ed58d7d377af3f9c289e32dba386dc94e8881a63a76694a07a92cd1",
   )
   native.http_file(
     name = "deb_jessie_netcat",
