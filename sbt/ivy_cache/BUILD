@@ -1,7 +1,7 @@
 container_image(
   name = "sbt_base",
   base = "//java:zulu",
-  layers = ["//sbt:files", "//sbt:custom_files"],
+  layers = ["//sbt:files", "//sbt:custom_file_bin", "//sbt:custom_file_conf"],
 )
 
 genrule(

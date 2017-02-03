@@ -22,7 +22,7 @@ def dependency_repositories():
   native.git_repository(
     name = "bazel_rules_container",
     remote = "https://github.com/guymers/bazel_rules_container.git",
-    tag = "0.3.0",
+    tag = "0.3.1",
   )
 
   # 2017-01-16 debootstraps
@@ -79,14 +79,14 @@ def dependency_repositories():
 
   native.new_http_archive(
     name = "sbt",
-    url = "https://dl.bintray.com/sbt/native-packages/sbt/0.13.11/sbt-0.13.11.tgz",
-    sha256 = "a36a6fbf6dd70afd93fb8db16c40e8ac00798fdddfa0b4c678786dc15617afa6",
-    build_file_content = "exports_files(['sbt'])",
+    url = "https://dl.bintray.com/sbt/native-packages/sbt/0.13.13/sbt-0.13.13.tgz",
+    sha256 = "40d03d21a260c5a6a43f8349298f41c9d047f97972057d9d915afd8945faf979",
+    build_file_content = "exports_files(['sbt-launcher-packaging-0.13.13'])",
   )
   native.http_file(
     name = "sbt_ivy_cache",
-    url = "https://raw.githubusercontent.com/guymers/sbt-ivy-cache/master/sbt-0.13.11-ivy-cache.tar",
-    sha256 = "e9e1596d5c141f2b946442260e7bb412405e6af70316ee8f8e0fe87635cb5996",
+    url = "https://raw.githubusercontent.com/guymers/sbt-ivy-cache/master/sbt-0.13.13-ivy-cache.tar",
+    sha256 = "a9bda5c8ece7d766634c86ce9f48035c645af1a75eb264a3923fc110ae377ed6",
   )
 
   native.new_http_archive(
@@ -95,11 +95,11 @@ def dependency_repositories():
     sha256 = "2264411f73adb0d3ec2b5c2390a5894f6d4e44fa59d7253c9e3d8940e04a8e6d",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
-  NEXUS_3_VERSION="3.1.0-04"
+  NEXUS_3_VERSION="3.2.0-01"
   native.new_http_archive(
     name = "nexus3",
     url = "http://download.sonatype.com/nexus/3/nexus-" + NEXUS_3_VERSION + "-unix.tar.gz",
-    sha256 = "bf1cd6dcbd010b6c35f50f8923dcf58e77c2f39854ba00d0de8b37f260c6fc0a",
+    sha256 = "350064ac0ee3938916891276fca91ff4d8f564542b50ca0322129cd3d48d81af",
     build_file_content = "exports_files(['" + NEXUS_3_VERSION + "'])",
   )
 
@@ -108,7 +108,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "efbb4360de55947189f67895be0960ddfd75104732802948f082f8a5e93228ca",
+    sha256 = "73b216449cb5eacd4fe5a6ee2e089245705e5815b448e315fbc8b6de7809e55f",
   )
   native.http_file(
     name = "jenkins_agent_jar",
@@ -144,14 +144,14 @@ def dependency_repositories():
   native.http_file(
     name = "elasticsearch",
     url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-" + ELASTICSEARCH_VERSION + ".deb",
-    sha256 = "c8a38990a24b558fb9c65492034caa00044e638d0ede6d440b00cb4eacb46d1d",
+    sha256 = "6f446164010bbfccd734484e2805e6c20b4d66d9b6125c0b157a47be22d8fe09",
   )
 
   ###### KIBANA
   native.http_file(
     name = "kibana",
     url = "https://artifacts.elastic.co/downloads/kibana/kibana-" + KIBANA_VERSION + "-amd64.deb",
-    sha256 = "568418b72ce690a7a14200a106fbb00dae31e69d6ee207602baff3a3d630788f",
+    sha256 = "8d37da997badb479579860fa6ada556826204e5052ed17a345c48503b22e5f34",
   )
 
 
@@ -159,7 +159,7 @@ def dependency_repositories():
   native.http_file(
     name = "yarnpkg",
     url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "2bc88f65ccbc0dc1be66f0d4d985f008949af33ecce258e23323fe1c69a0bfa9",
+    sha256 = "eaac04789ae5616338146ff8e19be18938b2dce2cdbde5d2a071a8e209b6cd53",
   )
 
 

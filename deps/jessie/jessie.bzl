@@ -551,8 +551,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_liblcms2_2",
-    url = "http://deb.debian.org/debian/pool/main/l/lcms2/liblcms2-2_2.6-3+b3_amd64.deb",
-    sha256 = "4539f7234010ee670e4ca5d7f8168d05104e25f424f3a6af12093808700ed061",
+    url = "http://security.debian.org/pool/updates/main/l/lcms2/liblcms2-2_2.6-3+deb8u1_amd64.deb",
+    sha256 = "b2e241cebd822744a7a7f9cda8056264650f5b75fc9f2f68d331f53a59929908",
   )
   native.http_file(
     name = "deb_jessie_libldap_2_4_2",
@@ -871,8 +871,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libssl1_0_0",
-    url = "http://deb.debian.org/debian/pool/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u5_amd64.deb",
-    sha256 = "e38239b8ab5e2b944aafe1f7484f3cab1100f8807a2e104b026adebda71afba6",
+    url = "http://security.debian.org/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u6_amd64.deb",
+    sha256 = "0fc777d9242fd93851eb49c4aafd22505048b7797c0178f20c909ff918320619",
   )
   native.http_file(
     name = "deb_jessie_libswscale3",
@@ -1216,8 +1216,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nodejs",
-    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.9.4-1nodesource1~jessie1_amd64.deb",
-    sha256 = "3763e0baee7dc2318d01c0012713e9b4fa0a400c2a3f3018aa587e68f9a14244",
+    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.9.5-1nodesource1~jessie1_amd64.deb",
+    sha256 = "c11c34e25861673f74b6a70bcd9f005a6b3383d7f1f60a5719067d776600a027",
   )
   native.http_file(
     name = "deb_jessie_odbcinst",
@@ -1236,8 +1236,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_openssl",
-    url = "http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.0.1t-1+deb8u5_amd64.deb",
-    sha256 = "a70d960a12802daf27e86655d936aedeef52dd030809d6ba4cb0a1ee7f7097e5",
+    url = "http://security.debian.org/pool/updates/main/o/openssl/openssl_1.0.1t-1+deb8u6_amd64.deb",
+    sha256 = "41613658b4e93ffaa7de25060a4a1ab2f8dfa1ee15ed90aeac850a9bf5a134bb",
   )
   native.http_file(
     name = "deb_jessie_perl",
@@ -1391,6 +1391,6 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_zulu_8",
-    url = "http://repos.azulsystems.com/debian/pool/main/zulu8.19.0.1-jdk8.0.112-linux_amd64.deb",
-    sha256 = "acb7c4c1267d8ee7f0a1c0584d35a48f8ca2418dee25fb634454ec906cbb228c",
+    url = "http://repos.azulsystems.com/debian/pool/main/zulu8.20.0.5-jdk8.0.121-linux_amd64.deb",
+    sha256 = "a43def587153e5345788b2001affbb439515f6c996a7fc7ecc059982ad47a370",
   )
