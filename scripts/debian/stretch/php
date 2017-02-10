@@ -9,4 +9,4 @@ php7.0-mcrypt=${PHP_VERSION}
 php7.0-opcache=${PHP_VERSION}
 php7.0-pgsql=${PHP_VERSION}
 
-php-apcu=5.1.7+4.0.11-2
+php-apcu=5.1.8+4.0.11-1
