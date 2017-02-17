@@ -18,11 +18,11 @@ if [ "$AUTO_JAVA_HEAP_SIZE" = "true" ]; then
   JAVA_OPTS="$JAVA_OPTS -Xms${HEAP_SIZE}m -Xmx${HEAP_SIZE}m"
 fi
 
-# http://blog.sokolenko.me/2014/11/javavm-options-production.html
-# https://engineering.linkedin.com/garbage-collection/garbage-collection-optimization-high-throughput-and-low-latency-java-applications
-JAVA_OPTS="$JAVA_OPTS -server -Djava.awt.headless=true"
-JAVA_OPTS="$JAVA_OPTS -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+ParallelRefProcEnabled"
-JAVA_OPTS="$JAVA_OPTS -XX:+CMSClassUnloadingEnabled -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=75"
+# https://jenkins.io/blog/2016/11/21/gc-tuning/
+JAVA_OPTS="$JAVA_OPTS -server -XX:+AlwaysPreTouch"
+JAVA_OPTS="$JAVA_OPTS -XX:+UseG1GC -XX:+ExplicitGCInvokesConcurrent -XX:+ParallelRefProcEnabled"
+JAVA_OPTS="$JAVA_OPTS -XX:+UseStringDeduplication -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20"
+JAVA_OPTS="$JAVA_OPTS -XX:+UnlockDiagnosticVMOptions -XX:G1SummarizeRSetStatsPeriod=1"
 
 DNS_TTL=${DNS_TTL:-60}
 JAVA_OPTS="$JAVA_OPTS -Dsun.net.inetaddr.ttl=$DNS_TTL"
@@ -39,7 +39,8 @@ if [ -n "$OOM_DUMP_FOLDER" ]; then
 fi
 
 if [ -n "$GC_LOG_FOLDER" ]; then
-  JAVA_OPTS="$JAVA_OPTS -XX:+AlwaysPreTouch -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintTenuringDistribution"
+  JAVA_OPTS="$JAVA_OPTS -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintTenuringDistribution"
+  JAVA_OPTS="$JAVA_OPTS -XX:+PrintHeapAtGC -XX:+PrintGCCause -XX:+PrintReferenceGC -XX:+PrintAdaptiveSizePolicy"
   JAVA_OPTS="$JAVA_OPTS -XX:+PrintGCApplicationStoppedTime -XX:-OmitStackTraceInFastThrow"
   JAVA_OPTS="$JAVA_OPTS -Xloggc:$GC_LOG_FOLDER -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M"
 fi
