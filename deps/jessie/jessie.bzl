@@ -41,8 +41,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_grafana",
-    url = "https://packagecloud.io/grafana/stable/debian/pool/wheezy/main/g/grafana/grafana_4.1.1-1484211277_amd64.deb",
-    sha256 = "f5e7b3d0bcfb69742c1556469aafbcec132d013e74db7df8a14ed1dc6865fe8d",
+    url = "https://packagecloud.io/grafana/stable/debian/pool/wheezy/main/g/grafana/grafana_4.1.2-1486989747_amd64.deb",
+    sha256 = "ec0f9b700fca5f627e85e2d14fdc44200798dd92cbd58a9eb6483584d82eac1d",
   )
   native.http_file(
     name = "deb_jessie_init_system_helpers",
@@ -826,8 +826,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libservlet3_0_java",
-    url = "http://deb.debian.org/debian/pool/main/t/tomcat7/libservlet3.0-java_7.0.56-3+deb8u7_all.deb",
-    sha256 = "159c305eee5bb0b040b481caac712a419aecb23fc5ee0690acfadfa7bea1ec2e",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libservlet3.0-java_7.0.56-3+deb8u8_all.deb",
+    sha256 = "1f7bfc95bdbe9d0305b5bebbf162c21eb7d5c71857d8bdbd77a948a88d2e814c",
   )
   native.http_file(
     name = "deb_jessie_libsfcgal1",
@@ -931,8 +931,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libtomcat7_java",
-    url = "http://deb.debian.org/debian/pool/main/t/tomcat7/libtomcat7-java_7.0.56-3+deb8u7_all.deb",
-    sha256 = "a3285a06ee68273c89bf039e2c68ed2d39e2e82926708e788b872b812308e984",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libtomcat7-java_7.0.56-3+deb8u8_all.deb",
+    sha256 = "fdb8c3a15cc1bbf22dcbd6db1b00e7f2bde6cd2b4dd6ba8e4b2c243f22d83d32",
   )
   native.http_file(
     name = "deb_jessie_liburiparser1",
@@ -1361,8 +1361,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_tomcat7_common",
-    url = "http://deb.debian.org/debian/pool/main/t/tomcat7/tomcat7-common_7.0.56-3+deb8u7_all.deb",
-    sha256 = "1f41d998f3b15ad8fea55385851f614a7aab3b93886e9541e9e5da74b125bde2",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/tomcat7-common_7.0.56-3+deb8u8_all.deb",
+    sha256 = "fbffa9d377703e2163fd757e00808c21ce35601e967f702e19dad4e6a3c48ae2",
   )
   native.http_file(
     name = "deb_jessie_tomcat7_user",

@@ -57,7 +57,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "0511576f19ff060712d19fb343957113f6a47b2d2edcbe4889eaaa844b31f516",
+    sha256 = "971c5f365c3f53f52d05729acf43962905832b33d740798094850a25645de5ae",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -159,7 +159,7 @@ def dependency_repositories():
   native.http_file(
     name = "yarnpkg",
     url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "eaac04789ae5616338146ff8e19be18938b2dce2cdbde5d2a071a8e209b6cd53",
+    sha256 = "c4ab238cbda1215bad07f728fd3f8a6a9690455a04145ee9e34f5daf90d10a37",
   )
 
 
