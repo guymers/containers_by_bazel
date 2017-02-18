@@ -22,7 +22,7 @@ container_layer(
 container_image(
   name = "grafana",
   base = "//base:jessie",
-  layers = ["//base/gosu", ":user", ":files"],
+  layers = [":user", ":files"],
 
   env = {
     "GRAFANA_HOME": "/usr/share/grafana",

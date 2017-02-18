@@ -9,7 +9,7 @@ fi
 
 if [ "$1" = 'polipo' ]; then
   chown polipo /dev/stdout
-  exec gosu polipo "$@"
+  exec chroot --userspec=polipo / "$@"
 else
   exec "$@"
 fi

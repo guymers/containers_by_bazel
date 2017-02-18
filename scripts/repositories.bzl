@@ -41,11 +41,18 @@ def dependency_repositories():
   deb_jessie()
   deb_stretch()
 
-  native.http_file(
-    name = "gosu",
-    url = "https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64",
-    executable = 1,
-    sha256 = "5b3b03713a888cee84ecbf4582b21ac9fd46c3d935ff2d7ea25dd5055d302d3c",
+  native.new_http_archive(
+    name = "su_exec",
+    url = "https://github.com/ncopa/su-exec/archive/v0.2.tar.gz",
+    sha256 = "ec4acbd8cde6ceeb2be67eda1f46c709758af6db35cacbcde41baac349855e25",
+    strip_prefix = "su-exec-0.2",
+    build_file_content = " \
+      cc_binary( \
+        name = 'su_exec', \
+        srcs = ['su-exec.c'], \
+        visibility = ['//visibility:public'], \
+      )\
+    ",
   )
 
   native.http_file(

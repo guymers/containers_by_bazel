@@ -13,7 +13,7 @@ if [ "$1" = 'redis-server' ]; then
   # make maxmemory 80% of total memory
   readonly MAXMEMORY=$((MEMORY_LIMIT / 100 * 80))
 
-  exec gosu redis "$@" --maxmemory "${MAXMEMORY}M"
+  exec chroot --userspec=redis / "$@" --maxmemory "${MAXMEMORY}M"
 else
   exec "$@"
 fi

@@ -37,7 +37,7 @@ container_image(
   name = "zookeeper",
   base = "//java:zulu",
   layers = [
-    "//base/gosu", "//base/tini", ":user",
+    "//base/tini", ":user",
     ":exhibitor", ":files", ":scripts",
   ],
   env = {

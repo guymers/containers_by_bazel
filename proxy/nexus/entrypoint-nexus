@@ -12,13 +12,13 @@ if [ "$1" = 'nexus' ]; then
 
   # the -Dapplication-conf nexus setting does nothing so add some config defaults
   if [ ! -d "$nexus_data_conf" ]; then
-    gosu nexus mkdir -p "$nexus_data_conf"
-    gosu nexus cp -a --no-clobber "$NEXUS_CONF/." "$nexus_data_conf"
+    chroot --userspec=nexus / mkdir -p "$nexus_data_conf"
+    chroot --userspec=nexus / cp -a --no-clobber "$NEXUS_CONF/." "$nexus_data_conf"
   fi
 
   source /java-opts.sh
 
-  exec gosu nexus java \
+  exec su_exec nexus java \
     -Dnexus-work=${NEXUS_DATA} \
     -Dnexus-webapp-context-path=${NEXUS_CONTEXT_PATH} \
     -cp 'conf/:lib/*' \

@@ -13,7 +13,7 @@ user_layer(
 container_image(
   name = "base",
   base = "//java:zulu",
-  layers = ["//base/gosu", ":user"],
+  layers = [":user"],
   env = {
     "JENKINS_HOME": JENKINS_HOME,
     "JENKINS_OPTS": "-Djenkins.install.runSetupWizard=false",

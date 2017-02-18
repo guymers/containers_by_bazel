@@ -20,11 +20,7 @@ container_layer(
 container_image(
   name = "redis",
   base = "//base:jessie",
-  layers = [
-    "//base/gosu",
-    ":user",
-    ":files",
-  ],
+  layers = [":user", ":files"],
   env = {
     "REDIS_CONF": REDIS_CONF,
     "REDIS_HOME": REDIS_HOME,

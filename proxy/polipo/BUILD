@@ -19,7 +19,7 @@ container_layer(
 container_image(
   name = "polipo",
   base = "//base:jessie",
-  layers = ["//base/ca_certificates", "//base/gosu", ":user", ":files"],
+  layers = ["//base/ca_certificates", ":user", ":files"],
   env = {
     "POLIPO_HOME": POLIPO_HOME,
   },

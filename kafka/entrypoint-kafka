@@ -36,7 +36,7 @@ if [ "$1" = 'kafka' ]; then
     mv "$kafka_tmp_config_dir/server.properties.tmp" "$kafka_tmp_config_dir/server.properties"
   fi
 
-  exec gosu kafka "$KAFKA_HOME/bin/kafka-server-start.sh" "$kafka_tmp_config_dir/server.properties"
+  exec chroot --userspec=kafka / "$KAFKA_HOME/bin/kafka-server-start.sh" "$kafka_tmp_config_dir/server.properties"
 else
   exec "$@"
 fi

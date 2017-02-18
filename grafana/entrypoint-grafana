@@ -21,7 +21,7 @@ if [ "$1" = 'grafana' ]; then
     echo "Admin password has been set to: $GF_SECURITY_ADMIN_PASSWORD"
   fi
 
-  exec gosu grafana /usr/sbin/grafana-server \
+  exec chroot --userspec=grafana / /usr/sbin/grafana-server \
     --homepath="$GRAFANA_HOME" \
     --config="$conf_file" \
     cfg:default.paths.data="$GRAFANA_DATA" \

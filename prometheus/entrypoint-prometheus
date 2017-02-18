@@ -8,7 +8,7 @@ if [ -d "$PROMETHEUS_HOME" -a "$(stat -c '%U' "$PROMETHEUS_HOME" 2>/dev/null)" =
 fi
 
 if [ "$1" = 'prometheus' ]; then
-  exec gosu prometheus
+  exec chroot --userspec=prometheus /
 else
   exec "$@"
 fi

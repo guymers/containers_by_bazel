@@ -19,7 +19,7 @@ container_layer(
 container_image(
   name = "base",
   base = "//base:jessie",
-  layers = ["//base/gosu", ":user", ":base_files"],
+  layers = [":user", ":base_files"],
   env = {
     "LANG": "en_US.UTF-8",
     "POSTGRES_HOME": POSTGRES_HOME,

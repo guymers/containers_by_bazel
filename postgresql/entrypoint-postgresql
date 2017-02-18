@@ -20,13 +20,13 @@ if [ "$1" = 'postgres' ]; then
 
   # look specifically for PG_VERSION, as it is expected in the DB dir
   if [ ! -s "$PGDATA/PG_VERSION" ]; then
-    gosu postgres initdb
+    chroot --userspec=postgres / initdb
 
-    echo "ALTER USER postgres WITH SUPERUSER PASSWORD '$POSTGRES_PASSWORD';" | gosu postgres postgres --single -j
+    echo "ALTER USER postgres WITH SUPERUSER PASSWORD '$POSTGRES_PASSWORD';" | chroot --userspec=postgres / postgres --single -j
 
     # internal start of server in order to allow set-up using psql-client
     # does not listen on TCP/IP and waits until start finishes
-    gosu postgres pg_ctl -D "$PGDATA" \
+    chroot --userspec=postgres / pg_ctl -D "$PGDATA" \
       -o "-c listen_addresses=''" \
       -w start
     echo
@@ -37,7 +37,7 @@ if [ "$1" = 'postgres' ]; then
       esac
       echo
     done
-    gosu postgres pg_ctl -D "$PGDATA" -m fast -w stop
+    chroot --userspec=postgres / pg_ctl -D "$PGDATA" -m fast -w stop
 
 
     {
@@ -57,7 +57,7 @@ if [ "$1" = 'postgres' ]; then
     echo
   fi
 
-  exec gosu postgres "$@"
+  exec chroot --userspec=postgres / "$@"
 else
   exec "$@"
 fi

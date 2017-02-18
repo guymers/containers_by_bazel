@@ -34,7 +34,7 @@ if [ "$1" = 'zookeeper' ]; then
     echo "auto-manage-instances-fixed-ensemble-size=${ZK_ENSEMBLE_SIZE}" >> "$default_props_file"
   fi
 
-  exec gosu zookeeper java -jar /opt/exhibitor/exhibitor.jar \
+  exec chroot --userspec=zookeeper / java -jar /opt/exhibitor/exhibitor.jar \
     --defaultconfig "$default_props_file" \
     --hostname ${HOSTNAME} \
     "${@:2}"

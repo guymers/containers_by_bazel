@@ -20,7 +20,7 @@ if [ "$1" = 'tomcat' ]; then
   export CATALINA_OPTS="$JAVA_OPTS -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv4Addresses=true"
   export JAVA_OPTS=""
 
-  exec gosu tomcat "$CATALINA_HOME/bin/catalina.sh" run
+  exec chroot --userspec=tomcat / "$CATALINA_HOME/bin/catalina.sh" run
 else
   exec "$@"
 fi

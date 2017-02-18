@@ -34,7 +34,7 @@ container_layer(
 container_image(
   name = "kibana",
   base = "//nodejs",
-  layers = ["//base/gosu", "//base/tini", ":user", ":files", ":init", ":config"],
+  layers = ["//base/tini", ":user", ":files", ":init", ":config"],
 
   env = {
     "KIBANA_HOME": KIBANA_HOME,

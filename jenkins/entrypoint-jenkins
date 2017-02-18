@@ -31,14 +31,14 @@ if [ "$1" = 'jenkins' ]; then
   [[ -f "$JENKINS_HOME/config.xml" ]] && first_run=false || first_run=true
   if [[ "$first_run" == true ]]; then
     if [[ ! -f "$initial_admin_password_file" ]]; then
-      gosu jenkins mkdir -p "$JENKINS_HOME/secrets"
+      chroot --userspec=jenkins / mkdir -p "$JENKINS_HOME/secrets"
       readonly cmd="head -c 100 /dev/urandom | md5sum | awk '{print \$1}' > $initial_admin_password_file"
-      gosu jenkins bash -c "$cmd"
+      chroot --userspec=jenkins / bash -c "$cmd"
       chmod 600 "$initial_admin_password_file"
     fi
   fi
 
-  find /usr/share/jenkins/ref/ -type f -exec gosu jenkins bash -c "copy_reference_file '{}'" \;
+  find /usr/share/jenkins/ref/ -type f -exec chroot --userspec=jenkins / bash -c "copy_reference_file '{}'" \;
 
   if [[ "$first_run" == true ]]; then
     readonly admin_config_file="$JENKINS_HOME/users/admin/config.xml"
@@ -52,7 +52,7 @@ if [ "$1" = 'jenkins' ]; then
   fi
 
   source /java-opts.sh
-  exec gosu jenkins java $JAVA_OPTS $JENKINS_OPTS -jar /usr/share/jenkins/jenkins.war $JENKINS_ARGS
+  exec chroot --userspec=jenkins / java $JAVA_OPTS $JENKINS_OPTS -jar /usr/share/jenkins/jenkins.war $JENKINS_ARGS
 else
   exec "$@"
 fi

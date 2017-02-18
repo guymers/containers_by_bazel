@@ -22,15 +22,15 @@ export PGDATA
 mkdir -p /var/run/postgresql
 chown -R postgres /var/run/postgresql
 
-gosu postgres initdb
-gosu postgres pg_ctl -D "\$PGDATA" -o "-c listen_addresses='*'" -w start
+chroot --userspec=postgres / initdb
+chroot --userspec=postgres / pg_ctl -D "\$PGDATA" -o "-c listen_addresses='*'" -w start
 
 cd /opt/jasperserver/buildomatic
 ./js-ant create-js-db
 ./js-ant init-js-db-ce
 ./js-ant import-minimal-ce
 
-gosu postgres pg_dump jasperserver > /output/$out_file
+chroot --userspec=postgres / pg_dump jasperserver > /output/$out_file
 EOF
 
 readonly cmd="bash /output/create.sh && chown $(id -u):$(id -g) /output/$out_file"

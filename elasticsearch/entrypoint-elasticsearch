@@ -23,7 +23,7 @@ if [ "$1" = 'elasticsearch' ]; then
   JAVA_OPTS="$JAVA_OPTS -Djna.nosys=true"
 
   # the command bin/elasticsearch executes
-  exec gosu elasticsearch java $JAVA_OPTS \
+  exec chroot --userspec=elasticsearch / java $JAVA_OPTS \
     -Djava.security.policy="$CONF_DIR/java.policy" \
     -Des.path.home="$ES_HOME" \
     -cp "$ES_CLASSPATH" \

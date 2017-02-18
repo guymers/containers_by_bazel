@@ -24,7 +24,7 @@ container_layer(
 container_image(
   name = "prometheus",
   base = "//base:jessie",
-  layers = ["//base/gosu", ":user", ":files", ":scripts"],
+  layers = [":user", ":files", ":scripts"],
   env = {
     "PROMETHEUS_HOME": PROMETHEUS_HOME,
   },
