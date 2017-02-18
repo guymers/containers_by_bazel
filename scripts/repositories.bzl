@@ -1,6 +1,7 @@
 load(
   "//scripts/versions:versions.bzl",
   "ELASTICSEARCH_VERSION",
+  "GERRIT_VERSION",
   "GRAFANA_VERSION",
   "JASPERREPORTS_SERVER_VERSION",
   "JASPERSOFT_STUDIO_VERSION",
@@ -159,6 +160,14 @@ def dependency_repositories():
     name = "kibana",
     url = "https://artifacts.elastic.co/downloads/kibana/kibana-" + KIBANA_VERSION + "-amd64.deb",
     sha256 = "8d37da997badb479579860fa6ada556826204e5052ed17a345c48503b22e5f34",
+  )
+
+
+  ###### GERRIT
+  native.http_file(
+    name = "gerrit",
+    url = "https://github.com/yarnpkg/yarn/releases/download/v" + GERRIT_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
+    sha256 = "c4ab238cbda1215bad07f728fd3f8a6a9690455a04145ee9e34f5daf90d10a37",
   )
 
 

@@ -1,0 +1,33 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+
+if [ -d "$GERRIT_SITE" -a "$(stat -c '%U' "$GERRIT_SITE" 2>/dev/null)" = "root" ]; then
+  chown gerrit "$GERRIT_SITE"
+  chmod o-rwx "$GERRIT_SITE"
+fi
+
+if [ "$1" = 'gerrit' ]; then
+  if [ ! -d "$GERRIT_SITE/.gerritcodereview" ]; then
+    chroot --userspec=gerrit / mkdir -p "$GERRIT_SITE/etc"
+    chroot --userspec=gerrit / cp -a --no-clobber "$GERRIT_CONF/." "$GERRIT_SITE/etc"
+  fi
+
+  source /java-opts.sh
+  readonly GERRIT_WAR="$GERRIT_HOME/bin/gerrit.war"
+  readonly run_war="chroot --userspec=gerrit / java ${JAVA_OPTS} -DGerritCodeReview=1 -jar $GERRIT_WAR"
+
+  # from deb postinst script
+  $run_war init --batch --no-auto-start --install-all-plugins -d "$GERRIT_SITE"
+  $run_war reindex -d "$GERRIT_SITE"
+
+  GERRIT_ARGS="--console-log"
+  if [ "$GERRIT_SLAVE" = true ]; then
+    GERRIT_ARGS="$GERRIT_ARGS --slave"
+  fi
+
+  exec $run_war daemon -d "$GERRIT_SITE" ${GERRIT_ARGS}
+else
+  exec "$@"
+fi

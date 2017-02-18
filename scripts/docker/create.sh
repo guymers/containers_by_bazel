@@ -30,7 +30,7 @@ function build_image() {
 readonly jessie_image=$(bazel run //base:jessie | grep "^Tagging" | awk '{print $4}')
 docker tag "$jessie_image" bazel/base:jessie
 
-for app in base ca-certificates grafana java nginx nodejs postgresql zulu; do
+for app in base ca-certificates gerrit grafana java nginx nodejs postgresql zulu; do
   # TODO do this in a single command
   build_image "$DIR/jessie" "jessie" "$app" | tee "$DIR/_built/jessie/$app.tmp"
   tail -n1 "$DIR/_built/jessie/$app.tmp" > "$DIR/_built/jessie/$app"

@@ -4,6 +4,7 @@ load("//scripts/debian:dependencies.bzl", "dependencies")
 
 dependencies(name = "jessie", dependencies = {
   ":jessie/dnsmasq": "base",
+  ":jessie/gerrit": "gerrit",
   ":jessie/git": "base",
   ":jessie/grafana": "grafana",
   ":jessie/jasper_client": "base",
