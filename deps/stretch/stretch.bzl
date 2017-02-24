@@ -286,8 +286,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libpq5",
-    url = "http://deb.debian.org/debian/pool/main/p/postgresql-9.6/libpq5_9.6.1-2_amd64.deb",
-    sha256 = "85395d9dc560b15377c9e9608db23d252dbdf292297b06ed995b98c00b2d5083",
+    url = "http://deb.debian.org/debian/pool/main/p/postgresql-9.6/libpq5_9.6.2-1_amd64.deb",
+    sha256 = "0575074144adca85739b2075024cb341a8eebe3ea8e248fc3e633dee6fbaf1d3",
   )
   native.http_file(
     name = "deb_stretch_libpsl5",
@@ -331,13 +331,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libssl1_1",
-    url = "http://deb.debian.org/debian/pool/main/o/openssl/libssl1.1_1.1.0d-2_amd64.deb",
-    sha256 = "91b04e5dcc62d261220b2b919f00d483a89e420bdf219a9bf3794f68054fe5a2",
+    url = "http://deb.debian.org/debian/pool/main/o/openssl/libssl1.1_1.1.0e-1_amd64.deb",
+    sha256 = "5b622e2bd89639c8677d6e1a060dcb4bb22fb6b2cdce70da8c5c801e8a953784",
   )
   native.http_file(
     name = "deb_stretch_libssl_dev",
-    url = "http://deb.debian.org/debian/pool/main/o/openssl/libssl-dev_1.1.0d-2_amd64.deb",
-    sha256 = "c58603856e8da9c2c409ff6b18ff612d75da33fd909346e28ad3708e3a2432da",
+    url = "http://deb.debian.org/debian/pool/main/o/openssl/libssl-dev_1.1.0e-1_amd64.deb",
+    sha256 = "03e2afd9ee83c3075f009795d3b7a0237599115fa83d4b9291ca0cd30104b2bf",
   )
   native.http_file(
     name = "deb_stretch_libstdc__6",

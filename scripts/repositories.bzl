@@ -163,14 +163,6 @@ def dependency_repositories():
   )
 
 
-  ###### GERRIT
-  native.http_file(
-    name = "gerrit",
-    url = "https://github.com/yarnpkg/yarn/releases/download/v" + GERRIT_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "c4ab238cbda1215bad07f728fd3f8a6a9690455a04145ee9e34f5daf90d10a37",
-  )
-
-
   ###### YARN
   native.http_file(
     name = "yarnpkg",
