@@ -1216,8 +1216,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nginx",
-    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.11.9-1~jessie_amd64.deb",
-    sha256 = "1453b482adcde3f14a31b1f9b76db533fc07c9046021c3e88888ce9956648545",
+    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.11.10-1~jessie_amd64.deb",
+    sha256 = "ef2e967ec175f2c0f3aa4d40f345de1df5a94897262c679dfa7c286c4357538e",
   )
   native.http_file(
     name = "deb_jessie_nodejs",

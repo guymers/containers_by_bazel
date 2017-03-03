@@ -26,17 +26,17 @@ def dependency_repositories():
     tag = "0.3.3",
   )
 
-  # 2017-01-16 debootstraps
+  # 2017-02-27 debootstraps
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/b39d31635ca26c8b1f3d982090ba8d54167c4d85/jessie/rootfs.tar.xz",
-    sha256 = "467328e24c316fd058f086eb8eb77706f3f448ad8886d202e7c9687d30692eca",
+    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/a3d2e76fdd618d1ca1b145c0a2268e828d547ea2/jessie/rootfs.tar.xz",
+    sha256 = "ab64bdabdd7143681459b070aedbf8aba16a2718af782dc18d4274b920b2183b",
   )
-  # 2017-01-16 debootstraps
+  # 2017-02-27 debootstraps
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/23f6f0c85fc2d2ebe6e1a56ef6243779d0ce89a2/stretch/rootfs.tar.xz",
-    sha256 = "85d5b3e4313479f6b807245280054104a5e42aba88c2ba70d7b9825c3884f578",
+    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/9a92e5d953eea52fe51db71cc03a958660bec67f/stretch/rootfs.tar.xz",
+    sha256 = "e8f91df62b913b3af8c47dbe2baa44a3f21be870f899ac97a368de6137994344",
   )
 
   deb_jessie()
@@ -116,7 +116,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "73b216449cb5eacd4fe5a6ee2e089245705e5815b448e315fbc8b6de7809e55f",
+    sha256 = "3eb599dd78ecf00e5f177ec5c4b1ba4274be4e5f63236da6ac92401a66fa91e8",
   )
   native.http_file(
     name = "jenkins_agent_jar",
@@ -152,14 +152,14 @@ def dependency_repositories():
   native.http_file(
     name = "elasticsearch",
     url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-" + ELASTICSEARCH_VERSION + ".deb",
-    sha256 = "6f446164010bbfccd734484e2805e6c20b4d66d9b6125c0b157a47be22d8fe09",
+    sha256 = "654ecd45809fba5f7978d228f554cb6a9c6e27249704f67295c17e0df43eefe4",
   )
 
   ###### KIBANA
   native.http_file(
     name = "kibana",
     url = "https://artifacts.elastic.co/downloads/kibana/kibana-" + KIBANA_VERSION + "-amd64.deb",
-    sha256 = "8d37da997badb479579860fa6ada556826204e5052ed17a345c48503b22e5f34",
+    sha256 = "9dfac5fd21806fe8595a363f5eb78617ca71d09f7dcddb76602670e4f7d613c9",
   )
 
 
@@ -167,7 +167,7 @@ def dependency_repositories():
   native.http_file(
     name = "yarnpkg",
     url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "c4ab238cbda1215bad07f728fd3f8a6a9690455a04145ee9e34f5daf90d10a37",
+    sha256 = "65476d162fd5d05e7d6204551c4995cd8c8234729ef3a847d4a0f8d54f3c7035",
   )
 
 
