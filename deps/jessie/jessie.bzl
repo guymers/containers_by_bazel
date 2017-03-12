@@ -26,8 +26,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_gerrit",
-    url = "http://deb.gerritforge.com/dists/gerrit/contrib/binary-amd64/gerrit-2.13.5-1.noarch.deb",
-    sha256 = "69e72dc2b77739e772e82e003643a9337608c261a54d4469a1b282a0e20b3089",
+    url = "http://deb.gerritforge.com/dists/gerrit/contrib/binary-amd64/gerrit-2.13.6-1.noarch.deb",
+    sha256 = "0ffef1e647a5d80e761eb4c07d4681c8c05f3c742935b54c56c0a188e39557b0",
   )
   native.http_file(
     name = "deb_jessie_gettext_base",
