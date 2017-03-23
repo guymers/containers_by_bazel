@@ -16,8 +16,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_binutils",
-    url = "http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.27.90.20170124-2_amd64.deb",
-    sha256 = "464846c488e500a4d031644ada33631352c8585f141029e0b7735cb65124cf55",
+    url = "http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.28-2_amd64.deb",
+    sha256 = "6e7bba228267765861adad79fed088cc5675d7443448cd28ed8ce8c0a8ff42ae",
   )
   native.http_file(
     name = "deb_stretch_cpp",
@@ -216,8 +216,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libmpc3",
-    url = "http://deb.debian.org/debian/pool/main/m/mpclib3/libmpc3_1.0.3-1_amd64.deb",
-    sha256 = "1ce082070c2b6f52e5859c34ad124d23118fa1aea837e3351bf79e70099ccd88",
+    url = "http://deb.debian.org/debian/pool/main/m/mpclib3/libmpc3_1.0.3-1+b2_amd64.deb",
+    sha256 = "99b2bd2c8618494116bef1d13d0525fe2885be46e2441a4697afd7ec93efb431",
   )
   native.http_file(
     name = "deb_stretch_libmpfr4",
@@ -276,8 +276,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libperl5_24",
-    url = "http://deb.debian.org/debian/pool/main/p/perl/libperl5.24_5.24.1-1_amd64.deb",
-    sha256 = "e3c652896591c0580cbab237f25931c58212d9c77fe1ab518392bc5c6cecfe67",
+    url = "http://deb.debian.org/debian/pool/main/p/perl/libperl5.24_5.24.1-2_amd64.deb",
+    sha256 = "fd030e61a8d6fbf03dc2de67a0b599aebfa13188175c23807f588c7c1207c348",
   )
   native.http_file(
     name = "deb_stretch_libpq5",
@@ -381,13 +381,18 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_perl",
-    url = "http://deb.debian.org/debian/pool/main/p/perl/perl_5.24.1-1_amd64.deb",
-    sha256 = "59675551d3a6000f47abd89780fcba8b92cd75047c6e835c727c4d080c7bb792",
+    url = "http://deb.debian.org/debian/pool/main/p/perl/perl_5.24.1-2_amd64.deb",
+    sha256 = "f8dbe99d8e0244f2aa7b1f20fa2ef07ae7717860e19e5cf3c9cafa2a8fc9d767",
+  )
+  native.http_file(
+    name = "deb_stretch_perl_base",
+    url = "http://deb.debian.org/debian/pool/main/p/perl/perl-base_5.24.1-2_amd64.deb",
+    sha256 = "a751af5b15e3e112ad79da660988b94ea065b048f8086167664b5073cd253c12",
   )
   native.http_file(
     name = "deb_stretch_perl_modules_5_24",
-    url = "http://deb.debian.org/debian/pool/main/p/perl/perl-modules-5.24_5.24.1-1_all.deb",
-    sha256 = "ff6f4d04fe5ff5a6d45836b47e5e2b989d9340d86e03f44363c3013775dd9c28",
+    url = "http://deb.debian.org/debian/pool/main/p/perl/perl-modules-5.24_5.24.1-2_all.deb",
+    sha256 = "78f091971c9e297343b343e91f20b82aca358e4dea09c3e344504141c8710fa8",
   )
   native.http_file(
     name = "deb_stretch_php7_0_bcmath",

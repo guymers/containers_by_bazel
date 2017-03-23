@@ -576,8 +576,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_liblwgeom_2_3_0",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/liblwgeom-2.3-0_2.3.2+dfsg-1~exp1.pgdg80+1_amd64.deb",
-    sha256 = "1a46ab288ae51bb796026e2fabca4a218dde8edd13b925c94fcb3fbddb3e8dcc",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/liblwgeom-2.3-0_2.3.2+dfsg-1~exp2~145.gita526c31.pgdg80+1_amd64.deb",
+    sha256 = "69f50202e631fa539f79a29f5b8c618c4acb9835e3102db7ea61ab8720246b63",
   )
   native.http_file(
     name = "deb_jessie_libmad0",
@@ -1216,13 +1216,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nginx",
-    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.11.10-1~jessie_amd64.deb",
-    sha256 = "ef2e967ec175f2c0f3aa4d40f345de1df5a94897262c679dfa7c286c4357538e",
+    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.11.11-1~jessie_amd64.deb",
+    sha256 = "fddf12fbf9cbe2ef53683bf823381b59276376432246b64eec3237184794227b",
   )
   native.http_file(
     name = "deb_jessie_nodejs",
-    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.10.0-1nodesource1~jessie1_amd64.deb",
-    sha256 = "8be1241c4d7c9c9856439bc484630c03ee72bd2943ba6e97e49488efc00ab2ab",
+    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.10.1-1nodesource1~jessie1_amd64.deb",
+    sha256 = "54723694a8872127a2e621b366979cef22150e9bfacdc111b592e5b32bf86248",
   )
   native.http_file(
     name = "deb_jessie_odbcinst",
@@ -1266,8 +1266,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_postgis",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgis_2.3.2+dfsg-1~exp1.pgdg80+1_amd64.deb",
-    sha256 = "8686106fe1b5407e12a28a389cc259f227ac4ab00c39fc8dda17a89604f8fa29",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgis_2.3.2+dfsg-1~exp2~145.gita526c31.pgdg80+1_amd64.deb",
+    sha256 = "ab2955730f6376aca593c13f79e8c77a52bc1c77e2ffe4d553f446ad6b0c59cd",
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_6",
@@ -1276,13 +1276,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_6_postgis_2_3",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.6-postgis-2.3_2.3.2+dfsg-1~exp1.pgdg80+1_amd64.deb",
-    sha256 = "83b4ecfd3c1a4a06128bf9c1c207fad10ccb0d7cae81f3e1442c77d641dc4cfb",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.6-postgis-2.3_2.3.2+dfsg-1~exp2~145.gita526c31.pgdg80+1_amd64.deb",
+    sha256 = "905a898a466e6c8a1dfab65472d9feb04fdd61f4f5d72c9b6dfbb48ba8021a0c",
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_6_postgis_2_3_scripts",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.6-postgis-2.3-scripts_2.3.2+dfsg-1~exp1.pgdg80+1_all.deb",
-    sha256 = "bd788784485a9f5c9fff42e9925fa4af6bb8dc7da01bdf9e227f76594e390664",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.6-postgis-2.3-scripts_2.3.2+dfsg-1~exp2~145.gita526c31.pgdg80+1_all.deb",
+    sha256 = "348cc92ad9d7aaced8665aebefc34f9a4687a8fd3b6918e008101d9b13096271",
   )
   native.http_file(
     name = "deb_jessie_postgresql_client_9_6",
@@ -1341,13 +1341,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_redis_server",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.6-1~bpo8+1_amd64.deb",
-    sha256 = "62ee63f41ef8d50d6de12650774167f848c09329579e668a1caea8b9ec87b726",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.8-2~bpo8+1_amd64.deb",
+    sha256 = "660fb0b07fad591fe6b44f547c0314b91f2fa1515375c51d7cf8be01072e1206",
   )
   native.http_file(
     name = "deb_jessie_redis_tools",
-    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.6-1~bpo8+1_amd64.deb",
-    sha256 = "c8c88e2075ec7327d0c712b6a06d1a92dd4d7e953c967f14155ac26dd4fe0b1d",
+    url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-tools_3.2.8-2~bpo8+1_amd64.deb",
+    sha256 = "3d4d774463b57b48417fea94dceba3050ca7a7022acb768dd287fe33d44efcd0",
   )
   native.http_file(
     name = "deb_jessie_samba_libs",
