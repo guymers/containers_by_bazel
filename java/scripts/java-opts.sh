@@ -18,11 +18,20 @@ if [ "$AUTO_JAVA_HEAP_SIZE" = "true" ]; then
   JAVA_OPTS="$JAVA_OPTS -Xms${HEAP_SIZE}m -Xmx${HEAP_SIZE}m"
 fi
 
-# https://jenkins.io/blog/2016/11/21/gc-tuning/
 JAVA_OPTS="$JAVA_OPTS -server -XX:+AlwaysPreTouch"
-JAVA_OPTS="$JAVA_OPTS -XX:+UseG1GC -XX:+ExplicitGCInvokesConcurrent -XX:+ParallelRefProcEnabled"
-JAVA_OPTS="$JAVA_OPTS -XX:+UseStringDeduplication -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20"
-JAVA_OPTS="$JAVA_OPTS -XX:+UnlockDiagnosticVMOptions -XX:G1SummarizeRSetStatsPeriod=1"
+
+USE_G1GC=${USE_G1GC:-false}
+if [ "$USE_G1GC" = "true" ]; then
+  # https://jenkins.io/blog/2016/11/21/gc-tuning/
+  JAVA_OPTS="$JAVA_OPTS -XX:+UseG1GC -XX:+ExplicitGCInvokesConcurrent -XX:+ParallelRefProcEnabled"
+  JAVA_OPTS="$JAVA_OPTS -XX:+UseStringDeduplication -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20"
+  JAVA_OPTS="$JAVA_OPTS -XX:+UnlockDiagnosticVMOptions -XX:G1SummarizeRSetStatsPeriod=1"
+else
+  # http://blog.sokolenko.me/2014/11/javavm-options-production.html
+  # https://engineering.linkedin.com/garbage-collection/garbage-collection-optimization-high-throughput-and-low-latency-java-applications
+  JAVA_OPTS="$JAVA_OPTS -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+ParallelRefProcEnabled"
+  JAVA_OPTS="$JAVA_OPTS -XX:+CMSClassUnloadingEnabled -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=75"
+fi
 
 DNS_TTL=${DNS_TTL:-60}
 JAVA_OPTS="$JAVA_OPTS -Dsun.net.inetaddr.ttl=$DNS_TTL"
