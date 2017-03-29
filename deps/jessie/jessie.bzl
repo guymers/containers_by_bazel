@@ -576,8 +576,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_liblwgeom_2_3_0",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/liblwgeom-2.3-0_2.3.2+dfsg-1~exp2~145.gita526c31.pgdg80+1_amd64.deb",
-    sha256 = "69f50202e631fa539f79a29f5b8c618c4acb9835e3102db7ea61ab8720246b63",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/liblwgeom-2.3-0_2.3.2+dfsg-1~exp2.pgdg80+1_amd64.deb",
+    sha256 = "68066b51cde6355a9d5d87396ac937c62ad7e644a7bd52adbbaf213137576fe7",
   )
   native.http_file(
     name = "deb_jessie_libmad0",
@@ -846,8 +846,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libsmbclient",
-    url = "http://deb.debian.org/debian/pool/main/s/samba/libsmbclient_4.2.14+dfsg-0+deb8u2_amd64.deb",
-    sha256 = "da3ba173ca5afefa5a870e66f383d308bc209f631eb945f4a835045e3c17c0a5",
+    url = "http://security.debian.org/pool/updates/main/s/samba/libsmbclient_4.2.14+dfsg-0+deb8u4_amd64.deb",
+    sha256 = "281ac6eb7b2a9998876174b702a0ce8601169c207ab253d6643f7a2ebef500eb",
   )
   native.http_file(
     name = "deb_jessie_libsndfile1",
@@ -991,8 +991,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libwbclient0",
-    url = "http://deb.debian.org/debian/pool/main/s/samba/libwbclient0_4.2.14+dfsg-0+deb8u2_amd64.deb",
-    sha256 = "6b93ca4c8ef7e2787f1c70d58f7dc9631c4aeec8efe87f58b0a9bd251170a25c",
+    url = "http://security.debian.org/pool/updates/main/s/samba/libwbclient0_4.2.14+dfsg-0+deb8u4_amd64.deb",
+    sha256 = "7e7f9026c82a5e1e4c0798f95a0a0f86f406cfef13b7a13f4e1f95b65022ef01",
   )
   native.http_file(
     name = "deb_jessie_libwebp5",
@@ -1266,8 +1266,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_postgis",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgis_2.3.2+dfsg-1~exp2~145.gita526c31.pgdg80+1_amd64.deb",
-    sha256 = "ab2955730f6376aca593c13f79e8c77a52bc1c77e2ffe4d553f446ad6b0c59cd",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgis_2.3.2+dfsg-1~exp2.pgdg80+1_amd64.deb",
+    sha256 = "5ae76db347b1c68f28e3a0bd129665d16746dba4a79d663af39e04321a73c972",
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_6",
@@ -1276,13 +1276,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_6_postgis_2_3",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.6-postgis-2.3_2.3.2+dfsg-1~exp2~145.gita526c31.pgdg80+1_amd64.deb",
-    sha256 = "905a898a466e6c8a1dfab65472d9feb04fdd61f4f5d72c9b6dfbb48ba8021a0c",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.6-postgis-2.3_2.3.2+dfsg-1~exp2.pgdg80+1_amd64.deb",
+    sha256 = "e686a82775ae95915b61184ee30ccbc4276fcfd47229c4114d5602609484000b",
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_6_postgis_2_3_scripts",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.6-postgis-2.3-scripts_2.3.2+dfsg-1~exp2~145.gita526c31.pgdg80+1_all.deb",
-    sha256 = "348cc92ad9d7aaced8665aebefc34f9a4687a8fd3b6918e008101d9b13096271",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.6-postgis-2.3-scripts_2.3.2+dfsg-1~exp2.pgdg80+1_all.deb",
+    sha256 = "9bc95d7285491e97c37a657dca12d3364eca966c7deffc599062e06f83459b2e",
   )
   native.http_file(
     name = "deb_jessie_postgresql_client_9_6",
@@ -1351,8 +1351,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_samba_libs",
-    url = "http://deb.debian.org/debian/pool/main/s/samba/samba-libs_4.2.14+dfsg-0+deb8u2_amd64.deb",
-    sha256 = "402ec756aa7f621eb45f750fe558b8a5d70211cbcc5dee3ef6a35cc22c2d1860",
+    url = "http://security.debian.org/pool/updates/main/s/samba/samba-libs_4.2.14+dfsg-0+deb8u4_amd64.deb",
+    sha256 = "c9130eef210c79ec075bbe00d003642465886bb7f5deeb3fd54bb4d8daef0487",
   )
   native.http_file(
     name = "deb_jessie_shared_mime_info",
