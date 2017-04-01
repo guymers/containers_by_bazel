@@ -11,8 +11,8 @@ container_layer(
   name = "files",
   debs = ["//deps/jessie:nginx"],
   symlinks = {
-    "/var/log/nginx/access.log": "/dev/stdout",
-    "/var/log/nginx/error.log": "/dev/stderr",
+    "./var/log/nginx/access.log": "/dev/stdout",
+    "./var/log/nginx/error.log": "/dev/stderr",
   },
 )
 
@@ -25,7 +25,7 @@ container_image(
   ],
   volumes = ["/etc/nginx"],
   ports = ["80", "443"],
-  cmd = ["nginx", "-g", "daemon off;"],
+  cmd = ["/usr/sbin/nginx", "-g", "daemon off;"],
   visibility = ["//visibility:public"],
 )
 

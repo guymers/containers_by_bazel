@@ -23,20 +23,20 @@ def dependency_repositories():
   native.git_repository(
     name = "bazel_rules_container",
     remote = "https://github.com/guymers/bazel_rules_container.git",
-    tag = "0.3.3",
+    tag = "0.3.4",
   )
 
-  # 2017-02-27 debootstraps
+  # 2017-03-20 debootstraps
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/a3d2e76fdd618d1ca1b145c0a2268e828d547ea2/jessie/rootfs.tar.xz",
-    sha256 = "ab64bdabdd7143681459b070aedbf8aba16a2718af782dc18d4274b920b2183b",
+    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/e8131d071a42b8e88cabbb0aa33023c7b66b7b93/jessie/rootfs.tar.xz",
+    sha256 = "922227ad9243864ca3d327ab00c22f03caa0c7d1d1873cff9fa8baf4d80cc154",
   )
-  # 2017-02-27 debootstraps
+  # 2017-03-20 debootstraps
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/9a92e5d953eea52fe51db71cc03a958660bec67f/stretch/rootfs.tar.xz",
-    sha256 = "e8f91df62b913b3af8c47dbe2baa44a3f21be870f899ac97a368de6137994344",
+    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/84acea02caa27a742d423069251ee269d1a39e2a/stretch/rootfs.tar.xz",
+    sha256 = "45fed57c90f2df7209f8ae58396968831b22bf7b83b1fdef643a174fb65aaa31",
   )
 
   deb_jessie()

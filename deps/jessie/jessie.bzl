@@ -1221,8 +1221,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nodejs",
-    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.10.1-1nodesource1~jessie1_amd64.deb",
-    sha256 = "54723694a8872127a2e621b366979cef22150e9bfacdc111b592e5b32bf86248",
+    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.10.1-2nodesource1~jessie1_amd64.deb",
+    sha256 = "7e18a15e4b5b22fcc6e6838abfa3df34b63e12a4672f14bc91a43e7ebfc6ae7d",
   )
   native.http_file(
     name = "deb_jessie_odbcinst",
