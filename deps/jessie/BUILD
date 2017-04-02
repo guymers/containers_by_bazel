@@ -20,6 +20,41 @@ filegroup(
 )
 
 filegroup(
+  name = "erlang",
+  srcs = [
+    "@deb_jessie_erlang_asn1//file",
+    "@deb_jessie_erlang_base//file",
+    "@deb_jessie_erlang_corba//file",
+    "@deb_jessie_erlang_crypto//file",
+    "@deb_jessie_erlang_diameter//file",
+    "@deb_jessie_erlang_edoc//file",
+    "@deb_jessie_erlang_eldap//file",
+    "@deb_jessie_erlang_erl_docgen//file",
+    "@deb_jessie_erlang_eunit//file",
+    "@deb_jessie_erlang_ic//file",
+    "@deb_jessie_erlang_inets//file",
+    "@deb_jessie_erlang_mnesia//file",
+    "@deb_jessie_erlang_nox//file",
+    "@deb_jessie_erlang_odbc//file",
+    "@deb_jessie_erlang_os_mon//file",
+    "@deb_jessie_erlang_parsetools//file",
+    "@deb_jessie_erlang_percept//file",
+    "@deb_jessie_erlang_public_key//file",
+    "@deb_jessie_erlang_runtime_tools//file",
+    "@deb_jessie_erlang_snmp//file",
+    "@deb_jessie_erlang_ssh//file",
+    "@deb_jessie_erlang_ssl//file",
+    "@deb_jessie_erlang_syntax_tools//file",
+    "@deb_jessie_erlang_tools//file",
+    "@deb_jessie_erlang_xmerl//file",
+    "@deb_jessie_init_system_helpers//file",
+    "@deb_jessie_libltdl7//file",
+    "@deb_jessie_libodbc1//file",
+    "@deb_jessie_libssl1_0_0//file",
+  ],
+)
+
+filegroup(
   name = "gerrit",
   srcs = [
     "@deb_jessie_gerrit//file",
@@ -480,6 +515,18 @@ filegroup(
     "@deb_jessie_postgresql_contrib_9_6//file",
     "@deb_jessie_ssl_cert//file",
     "@deb_jessie_ucf//file",
+  ],
+)
+
+filegroup(
+  name = "rabbitmq",
+  srcs = [
+    "@deb_jessie_cron//file",
+    "@deb_jessie_libpopt0//file",
+    "@deb_jessie_libwrap0//file",
+    "@deb_jessie_logrotate//file",
+    "@deb_jessie_rabbitmq_server//file",
+    "@deb_jessie_socat//file",
   ],
 )
 

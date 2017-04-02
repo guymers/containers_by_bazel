@@ -1,0 +1,19 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+if [ -d "$RABBITMQ_HOME" -a "$(stat -c '%U' "$RABBITMQ_HOME" 2>/dev/null)" = "root" ]; then
+  chown rabbitmq "$RABBITMQ_HOME"
+  chmod o-rwx "$RABBITMQ_HOME"
+
+  if [ -d "$RABBITMQ_HOME/mnesia" ]; then
+    chown rabbitmq "$RABBITMQ_HOME/mnesia"
+  fi
+fi
+
+if [ "$1" = 'rabbitmq-server' ]; then
+  # do what /usr/sbin/rabbitmq-server does when run as root
+  exec chroot --userspec=rabbitmq / /usr/lib/rabbitmq/bin/rabbitmq-server "${@:2}"
+else
+  exec "$@"
+fi

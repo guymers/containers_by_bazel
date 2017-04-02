@@ -1,5 +1,10 @@
 def deb_jessie():
   native.http_file(
+    name = "deb_jessie_cron",
+    url = "http://deb.debian.org/debian/pool/main/c/cron/cron_3.0pl1-127+deb8u1_amd64.deb",
+    sha256 = "27b935e215a766ea202d7c50837309fc6af75bdee65d92a96d9fb2bb6a4774cb",
+  )
+  native.http_file(
     name = "deb_jessie_dnsmasq",
     url = "http://deb.debian.org/debian/pool/main/d/dnsmasq/dnsmasq_2.72-3+deb8u1_all.deb",
     sha256 = "198fb357673219759ade204f34660c3a5ff52c2ed5d2afca4433d62a4b5fa3b5",
@@ -8,6 +13,131 @@ def deb_jessie():
     name = "deb_jessie_dnsmasq_base",
     url = "http://deb.debian.org/debian/pool/main/d/dnsmasq/dnsmasq-base_2.72-3+deb8u1_amd64.deb",
     sha256 = "21c63dba82cf15959b0847fd81fabd3812c9732259545603d06e5823510300d5",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_asn1",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-asn1_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "d8c51990b34ad0777126ef9029e33adc74ec2494263e9810a620e5e2b8f939f2",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_base",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-base_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "e21c0c99fcc62dce7018c4daf39044a0265a9cfa20cf9e040af123c86e94191c",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_corba",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-corba_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "1d5bf3aac9ffdd1bbe61dcf2e0825e2568ca3287b93a6400b14b7da958bf2a45",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_crypto",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-crypto_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "5b0d3a893a2c84c3b712390ad1b8793a72a00c00eb85cbe61ebe02f7b84f6c6a",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_diameter",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-diameter_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "baab9d120388a275996ca3fea2054dad6a62e84cc269091c7312fc4a62d9341a",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_edoc",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-edoc_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "b15db47a54ec56580ba604cc4da432342cf4a92ebb93df3a19741c07333aa767",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_eldap",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-eldap_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "d63072a52fd6989a2f2aa24f0fc3fd85ae26862561915ec1f75ba8a92219ac99",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_erl_docgen",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-erl-docgen_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "7b2d8d672356f452fe9366347939e42d15643d9f05cab8e251c67c830d4946c5",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_eunit",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-eunit_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "baedb2dfc7ccf013774879b6ec422cfe66a7fff24fe26c5ae3bb568ea08481b5",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_ic",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-ic_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "cee01990133691f6ca820e1c3b0970fc936d9a596da0f560cacdef7861373371",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_inets",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-inets_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "ad033d80b2f3397f2f64bbca009e61d695645059db968c0cbc3f0add70c35025",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_mnesia",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-mnesia_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "b1eb1c8954b2b2bcfdd21002daedeb98f03cdbb73a53d3bba9a03536ca29c250",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_nox",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-nox_19.2.1+dfsg-2~bpo8+1_all.deb",
+    sha256 = "6b102e98fece4a0b92ac3c4e4bd3fa92778abf3de8516e7dff4dd19c46d32ee2",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_odbc",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-odbc_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "ec867409d975c02ccc2f885b6c40102a6047af377a9ff67dd996bb09d280e57d",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_os_mon",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-os-mon_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "a7de8416b514e837b7a4157042b9221219b88eab365ef06027af6f8436e6bfc7",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_parsetools",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-parsetools_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "b98c8fce44e85356306b73f5a30b234a1db658910e7384fed062698e34cee6d0",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_percept",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-percept_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "da7e8aa2a7e4d29ab49888c929b84781081e42c5a363785c37d4fcfd1d2e3dce",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_public_key",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-public-key_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "ee60c8304ee80ee5b4e22d800f0725d9b5aa510c4073480f87b9926cbda4d690",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_runtime_tools",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-runtime-tools_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "2e4358c82de391f1b9e95b03ef9276f7316112a4927ddf2e872f22759400dd1c",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_snmp",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-snmp_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "69902c18da07110ccc2d400f4f9acd8cf27db60834093729f0673902f3506cb1",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_ssh",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-ssh_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "9dd6ba8678ebf97a8bf0e5a5b5d1e92267909c1a69d900ad66733dc4dee4b3e8",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_ssl",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-ssl_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "c358b9d93a802d5f00cfb1bcf98e7f11d2a83f72a4040b20d813e83b95826ee1",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_syntax_tools",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-syntax-tools_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "a5ca1a3bb1a6bedc2a44424a97918f072bf7fc1225366e92ff840a18daaf422b",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_tools",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-tools_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "763636121095b2b1303419212ab240a2d2f03a8ef447693e715e35da5904bac0",
+  )
+  native.http_file(
+    name = "deb_jessie_erlang_xmerl",
+    url = "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-xmerl_19.2.1+dfsg-2~bpo8+1_amd64.deb",
+    sha256 = "e8bad062dca361c77c6baed588f21b956d63b3df896b6622d57a162d38d1ee57",
   )
   native.http_file(
     name = "deb_jessie_fontconfig",
@@ -1195,6 +1325,11 @@ def deb_jessie():
     sha256 = "8079335cca3d98643ccf695b6ce18f7904d747c3c3f588911bacf04d1be78393",
   )
   native.http_file(
+    name = "deb_jessie_logrotate",
+    url = "http://deb.debian.org/debian/pool/main/l/logrotate/logrotate_3.8.7-1+b1_amd64.deb",
+    sha256 = "7d7bc35dafc3161ccca9633d1cc8485a60ed30b6f4b9010a2a2eab32e44ac693",
+  )
+  native.http_file(
     name = "deb_jessie_mime_support",
     url = "http://deb.debian.org/debian/pool/main/m/mime-support/mime-support_3.58_all.deb",
     sha256 = "c05ebe8f38da4ff19d028c9f4680414149e5c7a746de13bc9db0a562796ed213",
@@ -1340,6 +1475,11 @@ def deb_jessie():
     sha256 = "cd01807de060b3ec83e7de24242c6723b1069887a0c5f8cbeddb299db8975c60",
   )
   native.http_file(
+    name = "deb_jessie_rabbitmq_server",
+    url = "http://www.rabbitmq.com/debian/pool/main/r/rabbitmq-server/rabbitmq-server_3.6.9-1_all.deb",
+    sha256 = "ff100febb8c409692e57f3dc98fd2fc667f83eeefa3958a6fda865ce40a40349",
+  )
+  native.http_file(
     name = "deb_jessie_redis_server",
     url = "http://ftp.debian.org/debian/pool/main/r/redis/redis-server_3.2.8-2~bpo8+1_amd64.deb",
     sha256 = "660fb0b07fad591fe6b44f547c0314b91f2fa1515375c51d7cf8be01072e1206",
@@ -1358,6 +1498,11 @@ def deb_jessie():
     name = "deb_jessie_shared_mime_info",
     url = "http://deb.debian.org/debian/pool/main/s/shared-mime-info/shared-mime-info_1.3-1_amd64.deb",
     sha256 = "50c122e36f96e5cc808c6b7528ebd27f8086783e2c5b7c39ac7f6da6f62b09c1",
+  )
+  native.http_file(
+    name = "deb_jessie_socat",
+    url = "http://deb.debian.org/debian/pool/main/s/socat/socat_1.7.2.4-2_amd64.deb",
+    sha256 = "2d950b7818e990f17acbf3f260d763f506faf767136c250c3943acb535e74573",
   )
   native.http_file(
     name = "deb_jessie_ssl_cert",

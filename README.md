@@ -107,6 +107,7 @@ Create sbt ivy cache
     923 kibana
     930 nginx
     931 redis
+    939 rabbitmq
     941 postgres
     951 gerrit
     981 polipo

@@ -4,6 +4,7 @@ load("//scripts/debian:dependencies.bzl", "dependencies")
 
 dependencies(name = "jessie", dependencies = {
   ":jessie/dnsmasq": "base",
+  ":jessie/erlang": "erlang",
   ":jessie/gerrit": "gerrit",
   ":jessie/git": "base",
   ":jessie/grafana": "grafana",
@@ -14,6 +15,7 @@ dependencies(name = "jessie", dependencies = {
   ":jessie/polipo": "base",
   ":jessie/postgis": "postgresql",
   ":jessie/postgresql": "postgresql",
+  ":jessie/rabbitmq": "rabbitmq",
   ":jessie/redis": "base",
   ":jessie/ssh": "base",
   ":jessie/tomcat7": "java",

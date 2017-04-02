@@ -1,8 +1,10 @@
 container_layer(
   name = "files",
-  debs = ["//deps/jessie:nodejs", "@yarnpkg//file"],
-  symlinks = { "/usr/bin/node": "/usr/bin/nodejs" },
   directory = "/",
+  debs = ["//deps/jessie:nodejs", "@yarnpkg//file"],
+  symlinks = { "./usr/bin/node": "/usr/bin/nodejs" },
+
+  visibility = ["//visibility:public"],
 )
 
 container_image(
