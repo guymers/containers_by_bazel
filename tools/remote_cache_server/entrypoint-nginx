@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+if [ -d "$CACHE_DIRECTORY" -a "$(stat -c '%U' "$CACHE_DIRECTORY" 2>/dev/null)" = "root" ]; then
+  chown www-data "$CACHE_DIRECTORY"
+  chmod o-rwx "$CACHE_DIRECTORY"
+fi
+
+exec "$@"
