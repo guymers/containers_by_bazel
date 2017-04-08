@@ -5,7 +5,7 @@ def user_layer(name, id, user, home, shell = "/usr/sbin/nologin", target_prefix 
     name = "user_" + id + "_" + name,
     srcs = [target_prefix + "//macros/user:files/passwd"],
     outs = ["passwd"],
-    cmd = "$(location " + target_prefix + "//macros/user:add_user) $< " + id + " " + user + " " + home + " " + shell + "> $@",
+    cmd = "$(location " + target_prefix + "//macros/user:add_user) $< '" + id + "' '" + user + "' '" + home + "' '" + shell + "' > $@",
     tools = [target_prefix + "//macros/user:add_user"],
   )
 
@@ -13,7 +13,7 @@ def user_layer(name, id, user, home, shell = "/usr/sbin/nologin", target_prefix 
     name = "group_" + id + "_" + name,
     srcs = [target_prefix + "//macros/user:files/group"],
     outs = ["group"],
-    cmd = "$(location " + target_prefix + "//macros/user:add_group) $< " + id + " " + user + "> $@",
+    cmd = "$(location " + target_prefix + "//macros/user:add_group) $< '" + id + "' '" + user + "' > $@",
     tools = [target_prefix + "//macros/user:add_group"],
   )
 
