@@ -976,8 +976,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libsmbclient",
-    url = "http://security.debian.org/pool/updates/main/s/samba/libsmbclient_4.2.14+dfsg-0+deb8u4_amd64.deb",
-    sha256 = "281ac6eb7b2a9998876174b702a0ce8601169c207ab253d6643f7a2ebef500eb",
+    url = "http://security.debian.org/pool/updates/main/s/samba/libsmbclient_4.2.14+dfsg-0+deb8u5_amd64.deb",
+    sha256 = "52ed9ca178b3b6257892a388d0f5df00aa4aa3440b7ff6432ee449b8a91fbcee",
   )
   native.http_file(
     name = "deb_jessie_libsndfile1",
@@ -1121,8 +1121,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libwbclient0",
-    url = "http://security.debian.org/pool/updates/main/s/samba/libwbclient0_4.2.14+dfsg-0+deb8u4_amd64.deb",
-    sha256 = "7e7f9026c82a5e1e4c0798f95a0a0f86f406cfef13b7a13f4e1f95b65022ef01",
+    url = "http://security.debian.org/pool/updates/main/s/samba/libwbclient0_4.2.14+dfsg-0+deb8u5_amd64.deb",
+    sha256 = "c75c0c47a588318e670666a4a7717cff3091e4b86c4526676fc3d8e11f347877",
   )
   native.http_file(
     name = "deb_jessie_libwebp5",
@@ -1351,13 +1351,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nginx",
-    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.11.11-1~jessie_amd64.deb",
-    sha256 = "fddf12fbf9cbe2ef53683bf823381b59276376432246b64eec3237184794227b",
+    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.11.13-1~jessie_amd64.deb",
+    sha256 = "bfa5d68e16585278e1e9571deb83c7bb9b44aaac8300987313cf9cd3a899b159",
   )
   native.http_file(
     name = "deb_jessie_nodejs",
-    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.10.1-2nodesource1~jessie1_amd64.deb",
-    sha256 = "7e18a15e4b5b22fcc6e6838abfa3df34b63e12a4672f14bc91a43e7ebfc6ae7d",
+    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.10.2-1nodesource1~jessie1_amd64.deb",
+    sha256 = "ad21f502c3b7ab1efcd2005bfe53e3e1a698f970f252e9afcd73e23f7a86d52c",
   )
   native.http_file(
     name = "deb_jessie_odbcinst",
@@ -1491,8 +1491,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_samba_libs",
-    url = "http://security.debian.org/pool/updates/main/s/samba/samba-libs_4.2.14+dfsg-0+deb8u4_amd64.deb",
-    sha256 = "c9130eef210c79ec075bbe00d003642465886bb7f5deeb3fd54bb4d8daef0487",
+    url = "http://security.debian.org/pool/updates/main/s/samba/samba-libs_4.2.14+dfsg-0+deb8u5_amd64.deb",
+    sha256 = "bbf51f341c08925de1c0eb4c0f40118ab5a5ae452426c01ef0ccb5f77827b612",
   )
   native.http_file(
     name = "deb_jessie_shared_mime_info",

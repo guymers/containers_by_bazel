@@ -1,7 +1,7 @@
 load(
-  "@bazel_rules_container//container:container.bzl",
+  "@bazel_rules_container//container:layer.bzl",
   "container_layer",
   "container_layer_debian_stretch_symlink_fix",
-  "container_image"
 )
+load("@bazel_rules_container//container:image.bzl", "container_image")
 load("@bazel_rules_container//container:test.bzl", "container_test")
