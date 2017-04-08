@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-set -o pipefail
 
 readonly url=http://localhost:8080/hello
 readonly tmp_file=index

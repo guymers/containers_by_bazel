@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-set -o pipefail
 
 # http://mintbeans.com/setup-zookeeper-and-exhibitor-on-docker/
 ENSEMBLE_SIZE=3

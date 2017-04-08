@@ -2,11 +2,11 @@
 
 readonly zk_cli="/opt/zookeeper/bin/zkCli.sh -server 127.0.0.1:2181"
 
-until $zk_cli create /test-word jimjams 2>&1 | grep -q '^Created /test-word'; do
+until $zk_cli create /test-word jimjams 2>&1 | grep '^Created /test-word' > /dev/null ; do
   sleep 5
 done
 
-until $zk_cli get /test-word 2>&1 | grep -q '^jimjams'; do
+until $zk_cli get /test-word 2>&1 | grep '^jimjams' > /dev/null ; do
   sleep 5
 done
 

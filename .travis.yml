@@ -25,12 +25,11 @@ before_install:
   - sudo apt-get install bazel=0.4.5
   - bazel version
 install:
-before_script:
-  # TODO fix sandboxing  --sandbox_debug
-  - echo 'test --genrule_strategy=standalone --spawn_strategy=standalone' >> ~/.bazelrc
 script:
   - bazel fetch //test/... || true
-  - bazel test --verbose_failures //test/...
+  - bazel build //test/...
+  # too many random failures with sandboxing enabled
+  - bazel test --strategy=TestRunner=standalone --verbose_failures //test/...
 after_script:
 addons:
   artifacts:

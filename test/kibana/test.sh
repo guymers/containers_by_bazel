@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-set -o pipefail
 
 readonly url=http://localhost:5601/api/status
 readonly tmp_file=status

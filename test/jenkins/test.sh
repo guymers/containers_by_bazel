@@ -5,7 +5,7 @@ readonly url=http://localhost:8080
 
 # Jenkins returns 503 while initializing
 while wget --retry-connrefused --waitretry=10 --timeout=20 --tries=10 -O /dev/null "$url" 2>&1 | \
-    grep -q "ERROR 503: Service Unavailable"; do
+    grep "ERROR 503: Service Unavailable" > /dev/null ; do
   sleep 2
 done
 

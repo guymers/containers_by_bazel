@@ -9,7 +9,7 @@ container_test(
   size = "medium",
   image = ":gerrit_wget",
   daemon = True,
-  mem_limit = "512m",
+  mem_limit = "1024m",
   test = "test.sh",
   golden = "output.txt",
 )

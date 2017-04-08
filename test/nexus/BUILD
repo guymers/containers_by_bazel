@@ -9,7 +9,7 @@ container_test(
   size = "medium",
   image = ":nexus_wget",
   daemon = True,
-  mem_limit = "512m",
+  mem_limit = "2048m",
   test = "test.sh",
   golden = "output.txt",
 )

@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-set -o pipefail
 
 export http_proxy=http://localhost:8123
 export https_proxy=http://localhost:8123

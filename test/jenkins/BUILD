@@ -9,7 +9,7 @@ container_test(
   size = "small",
   image = ":jenkins_wget",
   daemon = True,
-  mem_limit = "1024m",
+  mem_limit = "2048m",
   test = "test.sh",
   golden = "output.txt",
 )
