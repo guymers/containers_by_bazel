@@ -1,4 +1,5 @@
-load("@bazel_rules_container//container:container.bzl", "container_layer", "container_image")
+load("@bazel_rules_container//container:layer.bzl", "container_layer")
+load("@bazel_rules_container//container:image.bzl", "container_image")
 
 def jmx_javaagent(name, base):
   container_layer(
