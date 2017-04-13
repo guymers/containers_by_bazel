@@ -13,6 +13,7 @@ load(
   "NEXUS_VERSION",
   "PENATHO_DI_VERSION",
   "PROMETHEUS_VERSION",
+  "SBT_VERSION",
   "YARN_VERSION",
   "ZOOKEEPER_VERSION"
 )
@@ -87,14 +88,9 @@ def dependency_repositories():
 
   native.new_http_archive(
     name = "sbt",
-    url = "https://dl.bintray.com/sbt/native-packages/sbt/0.13.13/sbt-0.13.13.tgz",
-    sha256 = "40d03d21a260c5a6a43f8349298f41c9d047f97972057d9d915afd8945faf979",
-    build_file_content = "exports_files(['sbt-launcher-packaging-0.13.13'])",
-  )
-  native.http_file(
-    name = "sbt_ivy_cache",
-    url = "https://raw.githubusercontent.com/guymers/sbt-ivy-cache/master/sbt-0.13.13-ivy-cache.tar",
-    sha256 = "a9bda5c8ece7d766634c86ce9f48035c645af1a75eb264a3923fc110ae377ed6",
+    url = "https://dl.bintray.com/sbt/native-packages/sbt/" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
+    sha256 = "b6e073d7c201741dcca92cfdd1dd3cd76c42a47dc9d8c8ead8df7117deed7aef",
+    build_file_content = "exports_files(['sbt'])",
   )
 
   native.new_http_archive(

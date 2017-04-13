@@ -25,6 +25,7 @@ container_image(
     "REDIS_CONF": REDIS_CONF,
     "REDIS_HOME": REDIS_HOME,
   },
+  volumes = [REDIS_HOME],
   ports = ["6379"],
   workdir = REDIS_HOME,
   entrypoint = ["/entrypoint-redis"],

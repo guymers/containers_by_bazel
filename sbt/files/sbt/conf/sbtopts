@@ -1,7 +1,7 @@
--sbt-create
-
 -mem 2048
+-ivy /ivy2
+
+-Dsbt.preloaded=/usr/share/sbt/lib/local-preloaded
+
 -J-XX:+CMSClassUnloadingEnabled
 -J-XX:+UseConcMarkSweepGC
--sbt-dir /etc/sbt/.sbt
--ivy /ivy2

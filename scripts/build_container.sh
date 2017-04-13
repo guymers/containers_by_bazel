@@ -37,7 +37,7 @@ if [ -n "$current_id" ]; then
   current_id=${current_id:7} # remove sha256: prefix
 
   if [ "$local_image_id" == "$current_id" ]; then
-    docker tag "$local_image_id" "$remote_image_version"
+    docker tag "sha256:$local_image_id" "$remote_image_version"
 
     echo "Image has not changed $remote_image $version"
     exit 0
@@ -46,7 +46,7 @@ if [ -n "$current_id" ]; then
     exit 1
   fi
 else
-  docker tag "$local_image_id" "$remote_image_version"
+  docker tag "sha256:$local_image_id" "$remote_image_version"
 
   echo "Created $remote_image $version"
   exit 0

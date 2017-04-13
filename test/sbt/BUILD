@@ -7,7 +7,6 @@ container_test(
   files = [
     "project/build.sbt",
     "project/Main.scala",
-    "project/project/plugins.sbt",
   ],
   golden = "output.txt",
 )
