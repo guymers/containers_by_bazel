@@ -631,8 +631,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libjasper1",
-    url = "http://security.debian.org/pool/updates/main/j/jasper/libjasper1_1.900.1-debian1-2.4+deb8u2_amd64.deb",
-    sha256 = "7ea7a42a9822705845abedc072178364dfdaa4ce798e461a8f6ea8eb731599c0",
+    url = "http://security.debian.org/pool/updates/main/j/jasper/libjasper1_1.900.1-debian1-2.4+deb8u3_amd64.deb",
+    sha256 = "a0887eb2f617ac0031ba195fd00119c85f3c20eb9d9670b2dc2d93e75faf1de9",
   )
   native.http_file(
     name = "deb_jessie_libjbig0",
