@@ -16,9 +16,9 @@ user_layer(
 container_layer(
   name = "files",
   directory = "/opt",
-  files = ["@kafka//:kafka_2.11-" + VERSION],
+  files = ["@kafka//:kafka_2.12-" + VERSION],
   symlinks = {
-    "/opt/kafka": "/opt/kafka_2.11-" + VERSION,
+    "/opt/kafka": "/opt/kafka_2.12-" + VERSION,
   },
 )
 

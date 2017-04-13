@@ -112,12 +112,12 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "3eb599dd78ecf00e5f177ec5c4b1ba4274be4e5f63236da6ac92401a66fa91e8",
+    sha256 = "33a3f4d983c6188a332291e1d974afa0a2ee96a0ae3cb6dd4f2098086525f9f1",
   )
   native.http_file(
     name = "jenkins_agent_jar",
-    url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/" + JENKINS_SWARM_VERSION + "/swarm-client-" + JENKINS_SWARM_VERSION + "-jar-with-dependencies.jar",
-    sha256 = "fc5ad10aaca1a3563c1ec650ad9bcb8ecbea0be9cd10053421f89647daeef8eb",
+    url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/" + JENKINS_SWARM_VERSION + "/swarm-client-" + JENKINS_SWARM_VERSION + ".jar",
+    sha256 = "931b026d311023fe19c130211bef137f4873fafc19e4a41bca8fa41ffbb27a49",
   )
 
   ###### MAVEN
@@ -132,16 +132,16 @@ def dependency_repositories():
   native.new_http_archive(
     name = "zookeeper",
     url = "http://mirrors.ocf.berkeley.edu/apache/zookeeper/zookeeper-" + ZOOKEEPER_VERSION + "/zookeeper-" + ZOOKEEPER_VERSION + ".tar.gz",
-    sha256 = "e7f340412a61c7934b5143faef8d13529b29242ebfba2eba48169f4a8392f535",
+    sha256 = "7f7f5414e044ac11fee2a1e0bc225469f51fb0cdf821e67df762a43098223f27",
     build_file_content = "exports_files(['zookeeper-" + ZOOKEEPER_VERSION + "'])",
   )
 
   ###### KAFKA
   native.new_http_archive(
     name = "kafka",
-    url = "http://mirrors.ocf.berkeley.edu/apache/kafka/" + KAFKA_VERSION + "/kafka_2.11-" + KAFKA_VERSION + ".tgz",
-    sha256 = "1540800779429d8f0a08be7b300e4cb6500056961440a01c8dbb281db76f0929",
-    build_file_content = "exports_files(['kafka_2.11-" + KAFKA_VERSION + "'])",
+    url = "http://mirrors.ocf.berkeley.edu/apache/kafka/" + KAFKA_VERSION + "/kafka_2.12-" + KAFKA_VERSION + ".tgz",
+    sha256 = "4147c809eb91a6941fd17b28fa42a093f57ec01c80a04945e6e7a3fd8d1ec45f",
+    build_file_content = "exports_files(['kafka_2.12-" + KAFKA_VERSION + "'])",
   )
 
   ###### ELASTICSEARCH
@@ -163,7 +163,7 @@ def dependency_repositories():
   native.http_file(
     name = "yarnpkg",
     url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "65476d162fd5d05e7d6204551c4995cd8c8234729ef3a847d4a0f8d54f3c7035",
+    sha256 = "f4bcdee3918a91fa9115c43dc1df33da830c147aa259ca936a0ce2f733191cf4",
   )
 
 

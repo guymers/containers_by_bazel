@@ -73,7 +73,7 @@ container_layer(
   files = ["@jenkins_agent_jar//file"],
   directory = "/usr/share/jenkins",
   symlinks = {
-    "/usr/share/jenkins/swarm-client.jar": "/usr/share/jenkins/swarm-client-" + JENKINS_SWARM_VERSION + "-jar-with-dependencies.jar"
+    "/usr/share/jenkins/swarm-client.jar": "/usr/share/jenkins/swarm-client-" + JENKINS_SWARM_VERSION + ".jar"
   },
 )
 
