@@ -156,8 +156,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_gerrit",
-    url = "http://deb.gerritforge.com/dists/gerrit/contrib/binary-amd64/gerrit-2.13.6-1.noarch.deb",
-    sha256 = "0ffef1e647a5d80e761eb4c07d4681c8c05f3c742935b54c56c0a188e39557b0",
+    url = "http://deb.gerritforge.com/dists/gerrit/contrib/binary-amd64/gerrit-2.13.7-1.noarch.deb",
+    sha256 = "94c7ca27247ccde75c7571b607f8b2464e24114a7555839e2f3090885a433d92",
   )
   native.http_file(
     name = "deb_jessie_gettext_base",
@@ -611,8 +611,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libicu52",
-    url = "http://deb.debian.org/debian/pool/main/i/icu/libicu52_52.1-8+deb8u4_amd64.deb",
-    sha256 = "d093682f5e37be6dd2ddde27919d73d1504f0f55681d2391eca141a4f5bb2551",
+    url = "http://security.debian.org/pool/updates/main/i/icu/libicu52_52.1-8+deb8u5_amd64.deb",
+    sha256 = "8882b51b67973d23719f078dec907a81fe3ec6675954dfa6b6784d0547cc66db",
   )
   native.http_file(
     name = "deb_jessie_libidn11",
@@ -1393,11 +1393,6 @@ def deb_jessie():
     name = "deb_jessie_pgdg_keyring",
     url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/pgdg-keyring/pgdg-keyring_2017.1_all.deb",
     sha256 = "75ff8a3187ae6ae7e2d11469f499408326f5c9e79c3542d2e623505ffdfbd068",
-  )
-  native.http_file(
-    name = "deb_jessie_polipo",
-    url = "http://deb.debian.org/debian/pool/main/p/polipo/polipo_1.1.1-5_amd64.deb",
-    sha256 = "236fe22bf28f6240e76b7b5065033f12759c2980249e65c1ffaaff40b71797f0",
   )
   native.http_file(
     name = "deb_jessie_postgis",

@@ -146,8 +146,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libicu57",
-    url = "http://deb.debian.org/debian/pool/main/i/icu/libicu57_57.1-5_amd64.deb",
-    sha256 = "fcd1d9e5e2f8276ed0e237fcbd1878b4fa3c0acb32f6287164b5210fcceff36e",
+    url = "http://deb.debian.org/debian/pool/main/i/icu/libicu57_57.1-6_amd64.deb",
+    sha256 = "6d44f35bfc8b9a4c9040a420b72fa41fdb533490025c301d67c59ae8ff6d23f1",
   )
   native.http_file(
     name = "deb_stretch_libidn11",

@@ -12,7 +12,6 @@ dependencies(name = "jessie", dependencies = {
   ":jessie/locales": "base",
   ":jessie/nginx": "nginx",
   ":jessie/nodejs": "nodejs",
-  ":jessie/polipo": "base",
   ":jessie/postgis": "postgresql",
   ":jessie/postgresql": "postgresql",
   ":jessie/rabbitmq": "rabbitmq",

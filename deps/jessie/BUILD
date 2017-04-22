@@ -232,13 +232,6 @@ filegroup(
 )
 
 filegroup(
-  name = "polipo",
-  srcs = [
-    "@deb_jessie_polipo//file",
-  ],
-)
-
-filegroup(
   name = "postgis",
   srcs = [
     "@deb_jessie_fontconfig//file",

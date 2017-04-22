@@ -1,6 +1,6 @@
 container_image(
   name = "nexus_wget",
-  base = "//proxy/nexus",
+  base = "//nexus",
   layers = ["//test:wget"],
 )
 
