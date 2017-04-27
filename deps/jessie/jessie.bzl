@@ -251,28 +251,28 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libavcodec56",
-    url = "http://deb.debian.org/debian/pool/main/liba/libav/libavcodec56_11.8-1~deb8u1_amd64.deb",
-    sha256 = "e8e1d4d57e1b0ba037fc3863a989fe262c921bf05f45b7b0dd14cca9681ce2db",
+    url = "http://security.debian.org/pool/updates/main/liba/libav/libavcodec56_11.9-1~deb8u1_amd64.deb",
+    sha256 = "73a9846c17e65b07d1ab4999a2c7e44044c7c45d61a2824d5a665b351ebcfab6",
   )
   native.http_file(
     name = "deb_jessie_libavdevice55",
-    url = "http://deb.debian.org/debian/pool/main/liba/libav/libavdevice55_11.8-1~deb8u1_amd64.deb",
-    sha256 = "13a4f2cab3b9670d975b9a89ebd4b46f668c7e0ff88e5f50557a96b189b8e9ec",
+    url = "http://security.debian.org/pool/updates/main/liba/libav/libavdevice55_11.9-1~deb8u1_amd64.deb",
+    sha256 = "3af494a104f45c1aac826c3670ea0bc37897ceec0a924dd4658b45dbef2b247a",
   )
   native.http_file(
     name = "deb_jessie_libavformat56",
-    url = "http://deb.debian.org/debian/pool/main/liba/libav/libavformat56_11.8-1~deb8u1_amd64.deb",
-    sha256 = "9560e7867352604348dfec41b85e24de661d09b0198889ea46acd094b13a5ec6",
+    url = "http://security.debian.org/pool/updates/main/liba/libav/libavformat56_11.9-1~deb8u1_amd64.deb",
+    sha256 = "f6fb9f9e456c446a1edd6e583254b184b3309ae21297c683a3ecdd2887bf96bf",
   )
   native.http_file(
     name = "deb_jessie_libavresample2",
-    url = "http://deb.debian.org/debian/pool/main/liba/libav/libavresample2_11.8-1~deb8u1_amd64.deb",
-    sha256 = "df897cdc4f34a2927d2913a17cc859b09fb0050ad5808028ace9eb1ace61f8e7",
+    url = "http://security.debian.org/pool/updates/main/liba/libav/libavresample2_11.9-1~deb8u1_amd64.deb",
+    sha256 = "787c13205140924be6a5bb2144be7e28bd1c29e1a4c4d94f783f3568ae9675a4",
   )
   native.http_file(
     name = "deb_jessie_libavutil54",
-    url = "http://deb.debian.org/debian/pool/main/liba/libav/libavutil54_11.8-1~deb8u1_amd64.deb",
-    sha256 = "34f2812d237d060bfeeff56795eb0aa94eb9b0abfec29e18824df5f58cce0223",
+    url = "http://security.debian.org/pool/updates/main/liba/libav/libavutil54_11.9-1~deb8u1_amd64.deb",
+    sha256 = "8e17692d3c7e006c2b9ba4f8e34f5e54b34a67a675c8592b98078e1e9f1deb6f",
   )
   native.http_file(
     name = "deb_jessie_libblas3",
@@ -746,8 +746,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libmysqlclient18",
-    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/libmysqlclient18_5.5.54-0+deb8u1_amd64.deb",
-    sha256 = "bacc8e176188bcdd3645268fb49ad5b50b4b19ff9dcd2e1c1baa26472967d7f7",
+    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/libmysqlclient18_5.5.55-0+deb8u1_amd64.deb",
+    sha256 = "16cc1e9524ddd952e57f5bef60cd58e047a52bbe91c983e7bc703cfaead82fc1",
   )
   native.http_file(
     name = "deb_jessie_libnetcdfc7",
@@ -1011,8 +1011,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libswscale3",
-    url = "http://deb.debian.org/debian/pool/main/liba/libav/libswscale3_11.8-1~deb8u1_amd64.deb",
-    sha256 = "c1f843e3c3af554781e0c5a67a787a102612f6d7187467ba164691b243275059",
+    url = "http://security.debian.org/pool/updates/main/liba/libav/libswscale3_11.9-1~deb8u1_amd64.deb",
+    sha256 = "a118d95fb1c4d7c61d31373b9dbc76eb3e4921cc192d3476a587d336cf6a65cd",
   )
   native.http_file(
     name = "deb_jessie_libswt_gtk_3_java",
@@ -1336,8 +1336,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_mysql_common",
-    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/mysql-common_5.5.54-0+deb8u1_all.deb",
-    sha256 = "82378b931ed58d7d377af3f9c289e32dba386dc94e8881a63a76694a07a92cd1",
+    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/mysql-common_5.5.55-0+deb8u1_all.deb",
+    sha256 = "aa45126c71ab1978d3e2d7b2e498ecc55778627a40361c75011a2a631151dcba",
   )
   native.http_file(
     name = "deb_jessie_netcat",
