@@ -88,11 +88,6 @@ Update dependencies in files:
 
     ./scripts/update_dependencies.sh
 
-Create sbt ivy cache
-
-    bazel build //sbt/ivy_cache
-    // bazel-genfiles/sbt/ivy_cache/ivy_cache.tar
-
 ### Users
 
     911 nexus

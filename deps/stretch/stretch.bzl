@@ -16,8 +16,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_binutils",
-    url = "http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.28-3_amd64.deb",
-    sha256 = "e254cdda0ab1e787d9323a97bf66a1212a585c33de60d805c27c0e5ee07df3f5",
+    url = "http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.28-4_amd64.deb",
+    sha256 = "d65d14717a23d9989722effdbcfaf369c31b28724d9280930f694580b736ac29",
   )
   native.http_file(
     name = "deb_stretch_cpp",
@@ -91,8 +91,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libcurl3",
-    url = "http://deb.debian.org/debian/pool/main/c/curl/libcurl3_7.52.1-4_amd64.deb",
-    sha256 = "4ea5bf1d7a611b95e8621bff2f2d546c26e5a97406244349d01410d49b947508",
+    url = "http://deb.debian.org/debian/pool/main/c/curl/libcurl3_7.52.1-5_amd64.deb",
+    sha256 = "e5079e9c1c61acb02cc6e74df2a796bab5773ac8fec3e997fb322f00b19aa4ab",
   )
   native.http_file(
     name = "deb_stretch_libedit2",

@@ -59,30 +59,22 @@ def dependency_repositories():
 
   native.http_file(
     name = "tini",
-    url = "https://github.com/krallin/tini/releases/download/v0.13.2/tini_0.13.2.deb",
-    sha256 = "8786eb7300ed5603f0f8045d8dcba67144656609ecedbb117f8bc418f1c15cce",
+    url = "https://github.com/krallin/tini/releases/download/v0.14.0/tini_0.14.0-amd64.deb",
+    sha256 = "420e47096487f72e3e48cca85ce379f18f9c6d2c3809ecc4bcf34e2b35f7c490",
   )
 
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "971c5f365c3f53f52d05729acf43962905832b33d740798094850a25645de5ae",
+    sha256 = "07f466ad23848c7dd740e722355d25ae1d24584d6574a8f10542d1da13368d2f",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
 
-  native.new_http_archive(
-    name = "prometheus_node_exporter",
-    url = "https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.linux-amd64.tar.gz",
-    sha256 = "2de5d1e51330c41588ed4c88bc531a3d2dccf6b4d7b99d5782d95cff27a3c049",
-    strip_prefix = "node_exporter-0.13.0.linux-amd64",
-    build_file_content = "exports_files(['node_exporter'])",
-  )
-
   native.maven_jar(
     name = "jmx_prometheus_javaagent",
-    artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:0.7",
-    sha1 = "92dac2d3069132f18b99d363a330c60a986fadc0",
+    artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:0.9",
+    sha1 = "fd6a31dd3eaed80d29453b9fc0d6f5496424928f",
   )
 
 
@@ -140,7 +132,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "kafka",
     url = "http://mirrors.ocf.berkeley.edu/apache/kafka/" + KAFKA_VERSION + "/kafka_2.12-" + KAFKA_VERSION + ".tgz",
-    sha256 = "4147c809eb91a6941fd17b28fa42a093f57ec01c80a04945e6e7a3fd8d1ec45f",
+    sha256 = "e523b448b24a908202c35f12fd0caaa49ce70070305c360f7ed2270bb2c95f47",
     build_file_content = "exports_files(['kafka_2.12-" + KAFKA_VERSION + "'])",
   )
 
@@ -163,7 +155,7 @@ def dependency_repositories():
   native.http_file(
     name = "yarnpkg",
     url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "f4bcdee3918a91fa9115c43dc1df33da830c147aa259ca936a0ce2f733191cf4",
+    sha256 = "2ab4549664e04578c15159b228f2f5e877c1862bcdb9fc949260c7ad9cdc0ecf",
   )
 
 

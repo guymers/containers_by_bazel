@@ -156,8 +156,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_gerrit",
-    url = "http://deb.gerritforge.com/dists/gerrit/contrib/binary-amd64/gerrit-2.13.7-1.noarch.deb",
-    sha256 = "94c7ca27247ccde75c7571b607f8b2464e24114a7555839e2f3090885a433d92",
+    url = "http://deb.gerritforge.com/dists/gerrit/contrib/binary-amd64/gerrit-2.13.8-1.noarch.deb",
+    sha256 = "411f66eb1b2fd54437a18d3ec129d84b40255e032ce001a2db71e5d80e469c5f",
   )
   native.http_file(
     name = "deb_jessie_gettext_base",
@@ -476,8 +476,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libfreetype6",
-    url = "http://deb.debian.org/debian/pool/main/f/freetype/libfreetype6_2.5.2-3+deb8u1_amd64.deb",
-    sha256 = "80184d932f9b0acc130af081c60a2da114c7b1e7531c18c63174498fae47d862",
+    url = "http://security.debian.org/pool/updates/main/f/freetype/libfreetype6_2.5.2-3+deb8u2_amd64.deb",
+    sha256 = "58e384796f31cd582e6da200fad74d09f5aad968eb7a45c5c2fa202675660b46",
   )
   native.http_file(
     name = "deb_jessie_libfreexl1",
@@ -961,8 +961,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libservlet3_0_java",
-    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libservlet3.0-java_7.0.56-3+deb8u9_all.deb",
-    sha256 = "fb1eabbe727068255c61fbe79344f5d588f8354ae9f19289aba18b6b548b3aa1",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libservlet3.0-java_7.0.56-3+deb8u10_all.deb",
+    sha256 = "7d8d7d3cea5089b59a75f3a5a90abea6a306e8e8a00c1f04ce0664f0ad5e8eca",
   )
   native.http_file(
     name = "deb_jessie_libsfcgal1",
@@ -1061,13 +1061,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libtiff5",
-    url = "http://security.debian.org/pool/updates/main/t/tiff/libtiff5_4.0.3-12.3+deb8u2_amd64.deb",
-    sha256 = "82cbbffc6b090e3d3e09fa7fb37bf769666cba2bbf491501a432b9fb2599e509",
+    url = "http://security.debian.org/pool/updates/main/t/tiff/libtiff5_4.0.3-12.3+deb8u3_amd64.deb",
+    sha256 = "95d94fe0aa132febabecd308b669fbe4806c619ae32b99c3ad19f85c715314ff",
   )
   native.http_file(
     name = "deb_jessie_libtomcat7_java",
-    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libtomcat7-java_7.0.56-3+deb8u9_all.deb",
-    sha256 = "0e482fe227b6bbe0b46942549e6d4d2cd7caa8597fe3ba9db1619a3b73c92233",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/libtomcat7-java_7.0.56-3+deb8u10_all.deb",
+    sha256 = "b3dbd0f489534f8dc9a753c98000f195fb4e99b4877c9013e35ee08b838bbbbc",
   )
   native.http_file(
     name = "deb_jessie_liburiparser1",
@@ -1351,13 +1351,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nginx",
-    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.11.13-1~jessie_amd64.deb",
-    sha256 = "bfa5d68e16585278e1e9571deb83c7bb9b44aaac8300987313cf9cd3a899b159",
+    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.13.0-1~jessie_amd64.deb",
+    sha256 = "2ac0cc2796076b6f99bf9e9e3947e1d522afc3904d062aeb872c8903ddf6b0e0",
   )
   native.http_file(
     name = "deb_jessie_nodejs",
-    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.10.2-1nodesource1~jessie1_amd64.deb",
-    sha256 = "ad21f502c3b7ab1efcd2005bfe53e3e1a698f970f252e9afcd73e23f7a86d52c",
+    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.10.3-1nodesource1~jessie1_amd64.deb",
+    sha256 = "5eee2220e02f8dd1e3eb61c8a281d21377996b569d8516b05b7888c0bf513cd0",
   )
   native.http_file(
     name = "deb_jessie_odbcinst",
@@ -1506,8 +1506,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_tomcat7_common",
-    url = "http://security.debian.org/pool/updates/main/t/tomcat7/tomcat7-common_7.0.56-3+deb8u9_all.deb",
-    sha256 = "fe28028da0f8925c309e329391beb9cd3a2b22e78d0f28f92652ee5248c332ac",
+    url = "http://security.debian.org/pool/updates/main/t/tomcat7/tomcat7-common_7.0.56-3+deb8u10_all.deb",
+    sha256 = "d757ad4a3430a7c2d944bb43359665e843b51e142265f07d9b59b013a0bcd7b9",
   )
   native.http_file(
     name = "deb_jessie_tomcat7_user",
@@ -1536,6 +1536,6 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_zulu_8",
-    url = "http://repos.azulsystems.com/debian/pool/main/zulu8.20.0.5-jdk8.0.121-linux_amd64.deb",
-    sha256 = "a43def587153e5345788b2001affbb439515f6c996a7fc7ecc059982ad47a370",
+    url = "http://repos.azulsystems.com/debian/pool/main/zulu8.21.0.1-jdk8.0.131-linux_amd64.deb",
+    sha256 = "b4c0d496db48d157f183c1881712f8b127f8a37e0aa32aea80b5afcf03590a14",
   )
