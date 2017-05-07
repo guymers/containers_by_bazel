@@ -13,6 +13,7 @@ load(
   "NEXUS_VERSION",
   "PENATHO_DI_VERSION",
   "PROMETHEUS_VERSION",
+  "PROMETHEUS_JMX_JAVAAGENT",
   "SBT_VERSION",
   "YARN_VERSION",
   "ZOOKEEPER_VERSION"
@@ -73,7 +74,7 @@ def dependency_repositories():
 
   native.maven_jar(
     name = "jmx_prometheus_javaagent",
-    artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:0.9",
+    artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:" + PROMETHEUS_JMX_JAVAAGENT,
     sha1 = "fd6a31dd3eaed80d29453b9fc0d6f5496424928f",
   )
 

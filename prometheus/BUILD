@@ -1,4 +1,5 @@
 load("//macros/user:user.bzl", "user_layer")
+load("//scripts/versions:versions.bzl", "PROMETHEUS_JMX_JAVAAGENT")
 
 PROMETHEUS_HOME = "/prometheus"
 
@@ -37,5 +38,15 @@ container_image(
     "-config.file", "/etc/prometheus/prometheus.yml",
     "-storage.local.path", PROMETHEUS_HOME,
   ],
+  visibility = ["//visibility:public"],
+)
+
+container_layer(
+  name = "jmx_javaagent_layer",
+  directory = "/prometheus",
+  files = ["@jmx_prometheus_javaagent//jar"],
+  symlinks = {
+    "/prometheus/jmx_prometheus_javaagent.jar": "/prometheus/jmx_prometheus_javaagent-" + PROMETHEUS_JMX_JAVAAGENT + ".jar",
+  },
   visibility = ["//visibility:public"],
 )
