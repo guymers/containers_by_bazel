@@ -7,7 +7,6 @@ load("@containers_by_bazel//jenkins/plugins:plugins.bzl", "jenkins_plugins")
 jenkins_plugins(
   name = "generate",
   plugin_file = "plugins.txt",
-  target_prefix = "@containers_by_bazel"
 )
 ```
 
