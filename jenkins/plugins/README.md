@@ -1,4 +1,8 @@
-## Example
+## Generate Dependency Tree
+
+    bazel run //jenkins/plugins:dependency_tree -- /tmp/jenkins <plugins.txt>
+
+## Generate Bazel files
 
 Assuming a .../generate/BUILD file with the contents:
 ```

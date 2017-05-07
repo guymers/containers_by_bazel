@@ -2,17 +2,16 @@
 set -e
 set -o pipefail
 
-readonly JENKINS_PLUGIN_DOWNLOAD=https://updates.jenkins-ci.org/download
-# https://updates.jenkins-ci.org/download redirects from https to http
-readonly HTTP_PLUGIN_DOWNLOAD=http://mirrors.jenkins-ci.org
+readonly BAZEL_DIR="$0.runfiles"
+[ -d "$BAZEL_DIR" ] && DIR="$BAZEL_DIR" || DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../../.."
+# shellcheck source=scripts/bazel_functions.sh
+source "$DIR/containers_by_bazel/jenkins/plugins/jenkins_plugin_download.sh"
 
-# https://updates.jenkins-ci.org/update-center.json?id=default&version=2.7.1
-
-readonly TEMP="$1"
+readonly TEMP_DIR="$1"
 
 declare -A plugins
 
-# based on https://github.com/jenkinsci/docker/blob/master/plugins.sh
+# based on https://github.com/jenkinsci/docker/blob/06306a35681df39e0dda7d464682ea08d3baf2ea/install-plugins.sh (2.46.2)
 while read -r spec || [ -n "$spec" ]; do
   plugin=(${spec//:/ })
   name=${plugin[0]}
@@ -33,14 +32,10 @@ while read -r spec || [ -n "$spec" ]; do
 
   plugins["$name"]="$version"
 
-  url="${HTTP_PLUGIN_DOWNLOAD}/plugins/${name}/${version}/${name}.hpi"
-  download_url="${JENKINS_PLUGIN_DOWNLOAD}/plugins/${name}/${version}/${name}.hpi"
-  tmp_file="$TEMP/${name}_${version}.hpi"
-  if [ ! -f "$tmp_file" ]; then
-    curl -sSL -f "$download_url" -o "$tmp_file"
-    unzip -qqt "$tmp_file"
-  fi
-  sha256=$(sha256sum "$tmp_file" | awk '{print $1}')
+  r=$(download "$TEMP_DIR" "$name:$version")
+  name=$(echo "$r" | cut -d ' ' -f1)
+  url=$(echo "$r" | cut -d ' ' -f3)
+  sha256=$(echo "$r" | cut -d ' ' -f4)
 
   # workspace names may contain only A-Z, a-z, 0-9, '_'
   name="${name//[^A-Za-z0-9_]/_}"

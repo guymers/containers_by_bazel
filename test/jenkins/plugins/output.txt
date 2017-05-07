@@ -1,0 +1,6 @@
+envinject:2.0
+  ivy:1.21 (optional)
+  matrix-project:1.7
+    script-security:1.13
+    junit:1.2
+  script-security:1.22
