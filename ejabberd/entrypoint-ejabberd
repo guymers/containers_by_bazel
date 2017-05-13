@@ -1,0 +1,49 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+if [ -d "$EJABBERD_HOME" -a "$(stat -c '%U' "$EJABBERD_HOME" 2>/dev/null)" = "root" ]; then
+  chown ejabberd "$EJABBERD_HOME"
+  chmod o-rwx "$EJABBERD_HOME"
+fi
+
+if [ -d "$EJABBERD_LOGS" -a "$(stat -c '%U' "$EJABBERD_LOGS" 2>/dev/null)" = "root" ]; then
+  chown ejabberd "$EJABBERD_LOGS"
+  chmod o-rwx "$EJABBERD_LOGS"
+fi
+
+readonly DEFAULT_ERLANG_NODE="ejabberd@$HOSTNAME"
+export ERLANG_NODE="${ERLANG_NODE:-$DEFAULT_ERLANG_NODE}"
+
+if [ "$1" = 'ejabberd' ]; then
+  [[ -f "$EJABBERD_HOME/passwd.DCD" ]] && first_run=false || first_run=true
+
+  # substitute config variables because ejabberd is very particular about hostnames
+  mkdir -p "$EJABBERD_CONF_TMP"
+  cp -a "$EJABBERD_CONF"/* "$EJABBERD_CONF_TMP"
+  sed -i -e "s|@@HOSTNAME@@|$HOSTNAME|g" "$EJABBERD_CONF_TMP/ejabberd.yml"
+  sed -i -e "s|@@HOSTNAME@@|$HOSTNAME|g" "$EJABBERD_CONF_TMP/inetrc"
+
+  exec chroot --userspec=ejabberd / ejabberdctl foreground &
+  readonly child=$!
+
+  # from https://github.com/rroemhild/docker-ejabberd/blob/17.03-1/run.sh
+  function _trap() {
+    echo "Stopping ejabberd..."
+    exec chroot --userspec=ejabberd / ejabberdctl stop > /dev/null
+  }
+  trap _trap SIGTERM SIGINT
+
+  # wait for the server to start
+  chroot --userspec=ejabberd / ejabberdctl started
+
+  if [[ "$first_run" == true ]]; then
+    readonly admin_passwd=$(tr -dc 'A-Za-z0-9' < /dev/urandom | head -c 10)
+    chroot --userspec=ejabberd / ejabberdctl register admin "$HOSTNAME" "$admin_passwd"
+    echo "User admin@$HOSTNAME password has been set to: $admin_passwd"
+  fi
+
+  wait $child
+else
+  exec "$@"
+fi

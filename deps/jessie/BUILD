@@ -20,6 +20,13 @@ filegroup(
 )
 
 filegroup(
+  name = "ejabberd",
+  srcs = [
+    "@deb_jessie_libexpat1//file",
+  ],
+)
+
+filegroup(
   name = "erlang",
   srcs = [
     "@deb_jessie_erlang_asn1//file",
@@ -508,6 +515,24 @@ filegroup(
     "@deb_jessie_postgresql_contrib_9_6//file",
     "@deb_jessie_ssl_cert//file",
     "@deb_jessie_ucf//file",
+  ],
+)
+
+filegroup(
+  name = "python",
+  srcs = [
+    "@deb_jessie_libexpat1//file",
+    "@deb_jessie_libffi6//file",
+    "@deb_jessie_libpython2_7_minimal//file",
+    "@deb_jessie_libpython2_7_stdlib//file",
+    "@deb_jessie_libpython_stdlib//file",
+    "@deb_jessie_libsqlite3_0//file",
+    "@deb_jessie_libssl1_0_0//file",
+    "@deb_jessie_mime_support//file",
+    "@deb_jessie_python//file",
+    "@deb_jessie_python2_7//file",
+    "@deb_jessie_python2_7_minimal//file",
+    "@deb_jessie_python_minimal//file",
   ],
 )
 

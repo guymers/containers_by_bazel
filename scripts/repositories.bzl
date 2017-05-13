@@ -1,5 +1,6 @@
 load(
   "//scripts/versions:versions.bzl",
+  "EJABBERD_VERSION",
   "ELASTICSEARCH_VERSION",
   "GERRIT_VERSION",
   "GRAFANA_VERSION",
@@ -166,6 +167,14 @@ def dependency_repositories():
     name = "tomcat_sample_war",
     url = "https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war",
     sha256 = "89b33caa5bf4cfd235f060c396cb1a5acb2734a1366db325676f48c5f5ed92e5",
+  )
+
+
+  ###### EJABBERD
+  native.http_file(
+    name = "ejabberd",
+    url = "https://www.process-one.net/downloads/ejabberd/" + EJABBERD_VERSION + "/ejabberd_" + EJABBERD_VERSION + "-0_amd64.deb",
+    sha256 = "cc77e26c43c89dd382889ea3bd4a509033a9f746190ad6e198b557cb940a881f",
   )
 
   ###### JASPER

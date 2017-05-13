@@ -1,0 +1,2 @@
+ejabberd 17.04 is running in that node
+{'users': [{'username': 'admin'}, {'username': 'user'}]}
