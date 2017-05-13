@@ -28,17 +28,17 @@ def dependency_repositories():
     tag = "0.3.5",
   )
 
-  # 2017-04-24 debootstraps
+  # 2017-05-08 debootstraps
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/85783a1be267c670408b2ff7ba0460ec2e720af4/jessie/rootfs.tar.xz",
-    sha256 = "2bd2c057a904b2aa7d8e9ba036f3c724e65df036531785ade0a9799b43e2fb53",
+    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/f847fca3796b37498b1ad0e8165da2aee41d0faf/jessie/rootfs.tar.xz",
+    sha256 = "a2bd95f0071d5d6ea4fdb2c93b8f5ea58de0da0ad79b5f4ccda98e07b07ded28",
   )
-  # 2017-04-24 debootstraps
+  # 2017-05-08 debootstraps
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/db0495f80d55fd433bff0b7460baef3e88c6eb62/stretch/rootfs.tar.xz",
-    sha256 = "eff0be1a4f4afd08a4be913ac3466b11e28f4b822cc47bc4d3ff03e455b6d1f3",
+    url = "https://raw.githubusercontent.com/tianon/docker-brew-debian/6a620dbc1df446fcabdcd4c9c42a650a26377eb5/stretch/rootfs.tar.xz",
+    sha256 = "ad2d6169a834f261d7fc3c28c4df529ff639e4d34e332ca09de5f8fa63c1b1cd",
   )
 
   deb_jessie()
