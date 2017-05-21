@@ -56,6 +56,7 @@ You can use the ./build_container script. It ensures that you cannot override th
     bazel build //scripts/versions
     source ./bazel-bin/scripts/versions/versions.sh
     ./scripts/build_container.sh //dnsmasq dnsmasq ${DNSMASQ_VERSION}
+    ./scripts/build_container.sh //ejabberd ejabberd ${EJABBERD_VERSION}
     ./scripts/build_container.sh //elasticsearch elasticsearch ${ELASTICSEARCH_VERSION}
     ./scripts/build_container.sh //gerrit gerrit ${GERRIT_VERSION}
     ./scripts/build_container.sh //grafana grafana ${GRAFANA_VERSION}
@@ -101,6 +102,7 @@ Update dependencies in files:
     923 kibana
     930 nginx
     931 redis
+    938 ejabberd
     939 rabbitmq
     941 postgres
     951 gerrit

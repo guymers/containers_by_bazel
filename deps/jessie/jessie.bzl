@@ -936,8 +936,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_librtmp1",
-    url = "http://deb.debian.org/debian/pool/main/r/rtmpdump/librtmp1_2.4+20150115.gita107cef-1_amd64.deb",
-    sha256 = "639377e8325a830c5c0607cd6ae06e4f909771b87c9d16cc5de389b29bd7fbec",
+    url = "http://security.debian.org/pool/updates/main/r/rtmpdump/librtmp1_2.4+20150115.gita107cef-1+deb8u1_amd64.deb",
+    sha256 = "65eb322c80ec08598dfb5cfa47ab59a742d66b440ef3aeea0f1100876aec05f5",
   )
   native.http_file(
     name = "deb_jessie_libsamplerate0",
