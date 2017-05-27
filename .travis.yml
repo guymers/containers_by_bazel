@@ -8,7 +8,7 @@ before_install:
   - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0x219BD9C9
   - sudo sh -c 'echo "deb http://repos.azulsystems.com/ubuntu stable main" > /etc/apt/sources.list.d/zulu.list'
   - sudo apt-get update
-  - sudo apt-get install -y --no-install-recommends zulu-8=8.20.0.5
+  - sudo apt-get install -y --no-install-recommends zulu-8=8.21.0.1
   - java -version
   # docker
   - curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
@@ -22,7 +22,7 @@ before_install:
   - echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
   - curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
   - sudo apt-get update
-  - sudo apt-get install bazel=0.4.5
+  - sudo apt-get install bazel=0.5.0
   - bazel version
 install:
 script:
