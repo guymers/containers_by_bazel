@@ -68,7 +68,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "07f466ad23848c7dd740e722355d25ae1d24584d6574a8f10542d1da13368d2f",
+    sha256 = "bb4e3bf4c9cd2b30fc922e48ab584845739ed4aa50dea717ac76a56951e31b98",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -90,7 +90,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "2587b495b088ea78a334ac2a9aaad3182b0fc827f884a1d4e3a783b89ae1db50",
+    sha256 = "bf5cf479dbd262939017779a7b610119e11f97b0649d875f64dbdfae9e93cf72",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
   NEXUS_3_VERSION="3.2.0-01"
@@ -106,7 +106,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "33a3f4d983c6188a332291e1d974afa0a2ee96a0ae3cb6dd4f2098086525f9f1",
+    sha256 = "00424d3c851298b29376d1d09d7d3578a2bc4a03acf3914b317c47707cd5739a",
   )
   native.http_file(
     name = "jenkins_agent_jar",
@@ -157,7 +157,7 @@ def dependency_repositories():
   native.http_file(
     name = "yarnpkg",
     url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "2ab4549664e04578c15159b228f2f5e877c1862bcdb9fc949260c7ad9cdc0ecf",
+    sha256 = "1665f3ecf8128de92e4786675b4e99707d6f982caf80a235efc04499d165bab7",
   )
 
 

@@ -976,8 +976,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libsmbclient",
-    url = "http://deb.debian.org/debian/pool/main/s/samba/libsmbclient_4.2.14+dfsg-0+deb8u5_amd64.deb",
-    sha256 = "52ed9ca178b3b6257892a388d0f5df00aa4aa3440b7ff6432ee449b8a91fbcee",
+    url = "http://security.debian.org/pool/updates/main/s/samba/libsmbclient_4.2.14+dfsg-0+deb8u6_amd64.deb",
+    sha256 = "bcae9dbdc47ed4a13eec7db2711c9d831808ef8815f0e8588d644d388937ae06",
   )
   native.http_file(
     name = "deb_jessie_libsndfile1",
@@ -1031,8 +1031,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libtasn1_6",
-    url = "http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.2-3+deb8u2_amd64.deb",
-    sha256 = "ee4439d502ed1a6a3330011d4b114cc419b40a4cc508550d253b8d491e6a0e5e",
+    url = "http://security.debian.org/pool/updates/main/libt/libtasn1-6/libtasn1-6_4.2-3+deb8u3_amd64.deb",
+    sha256 = "36e01f21f439ede1e6957110798375808303d2c6549236811844bf014add93d0",
   )
   native.http_file(
     name = "deb_jessie_libtdb1",
@@ -1121,8 +1121,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libwbclient0",
-    url = "http://deb.debian.org/debian/pool/main/s/samba/libwbclient0_4.2.14+dfsg-0+deb8u5_amd64.deb",
-    sha256 = "c75c0c47a588318e670666a4a7717cff3091e4b86c4526676fc3d8e11f347877",
+    url = "http://security.debian.org/pool/updates/main/s/samba/libwbclient0_4.2.14+dfsg-0+deb8u6_amd64.deb",
+    sha256 = "4b846ee944ff7fcde5f0a422a02a619700bb53c291c9d75502712aadff0acf3c",
   )
   native.http_file(
     name = "deb_jessie_libwebp5",
@@ -1471,8 +1471,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_rabbitmq_server",
-    url = "http://www.rabbitmq.com/debian/pool/main/r/rabbitmq-server/rabbitmq-server_3.6.9-1_all.deb",
-    sha256 = "ff100febb8c409692e57f3dc98fd2fc667f83eeefa3958a6fda865ce40a40349",
+    url = "http://www.rabbitmq.com/debian/pool/main/r/rabbitmq-server/rabbitmq-server_3.6.10-1_all.deb",
+    sha256 = "7b23114de13fb4bfd8c962c6d9f915f3d692c3c6623ca122c3abd5d4980d772b",
   )
   native.http_file(
     name = "deb_jessie_redis_server",
@@ -1486,8 +1486,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_samba_libs",
-    url = "http://deb.debian.org/debian/pool/main/s/samba/samba-libs_4.2.14+dfsg-0+deb8u5_amd64.deb",
-    sha256 = "bbf51f341c08925de1c0eb4c0f40118ab5a5ae452426c01ef0ccb5f77827b612",
+    url = "http://security.debian.org/pool/updates/main/s/samba/samba-libs_4.2.14+dfsg-0+deb8u6_amd64.deb",
+    sha256 = "add91ace1b911e8fcb5d4c9c918a5bfe912f39458eeed19c7348fc1fa6756580",
   )
   native.http_file(
     name = "deb_jessie_shared_mime_info",
