@@ -26,7 +26,7 @@ def dependency_repositories():
   native.git_repository(
     name = "bazel_rules_container",
     remote = "https://github.com/guymers/bazel_rules_container.git",
-    tag = "0.4.0",
+    tag = "0.4.1",
   )
 
   # 2017-05-08 debootstraps
