@@ -691,8 +691,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libldap_2_4_2",
-    url = "http://deb.debian.org/debian/pool/main/o/openldap/libldap-2.4-2_2.4.40+dfsg-1+deb8u2_amd64.deb",
-    sha256 = "a6d4004f2b16dcc8523f20473815b95b564cba13f5953201a05bdda8aa002ba0",
+    url = "http://security.debian.org/pool/updates/main/o/openldap/libldap-2.4-2_2.4.40+dfsg-1+deb8u3_amd64.deb",
+    sha256 = "979fe2fdd6288af46154cfd0383661036fdd4c1af559a473ae5deeab7642091b",
   )
   native.http_file(
     name = "deb_jessie_libldb1",
