@@ -18,6 +18,7 @@ container_image(
   entrypoint = [
     "tini", "--",
     "/usr/sbin/dnsmasq",
+    "--pid-file=/run/dnsmasq.pid",
     "--keep-in-foreground",
     "--log-facility=/dev/stdout",
     "--log-async=20",

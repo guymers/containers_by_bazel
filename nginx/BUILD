@@ -19,11 +19,8 @@ container_layer(
 container_image(
   name = "nginx",
   base = "//base:jessie",
-  layers = [
-    ":user",
-    ":files",
-  ],
-  volumes = ["/etc/nginx"],
+  layers = [":user", ":files"],
+  volumes = ["/etc/nginx", "/var/cache/nginx"],
   ports = ["80", "443"],
   cmd = ["/usr/sbin/nginx", "-g", "daemon off;"],
   visibility = ["//visibility:public"],
@@ -32,8 +29,6 @@ container_image(
 container_image(
   name = "ssl",
   base = ":nginx",
-  layers = [
-    "//base/ca_certificates",
-  ],
+  layers = ["//base/ca_certificates"],
   visibility = ["//visibility:public"],
 )

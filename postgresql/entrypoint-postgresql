@@ -4,9 +4,6 @@ set -o pipefail
 
 # based on https://github.com/docker-library/postgres/blob/master/9.5/docker-entrypoint.sh
 
-localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-export LANG=en_US.UTF-8
-
 if [ -d "$POSTGRES_HOME" -a "$(stat -c '%U' "$POSTGRES_HOME" 2>/dev/null)" = "root" ]; then
   chown postgres "$POSTGRES_HOME"
   chmod o-rwx "$POSTGRES_HOME"

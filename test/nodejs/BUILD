@@ -3,6 +3,6 @@ container_test(
   size = "small",
   image = "//nodejs",
   test = "test.sh",
-  files = ["project/index.js", "project/package.json"],
+  files = ["main.js"],
   golden = "output.txt",
 )

@@ -5,3 +5,9 @@ INSERT 0 1
 ---------------+------
              1 | blah
 (1 row)
+
+                             List of databases
+ Name |  Owner   | Encoding |   Collate   |    Ctype    | Access privileges 
+------+----------+----------+-------------+-------------+-------------------
+ test | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+(1 row)

@@ -3,6 +3,7 @@ load("//macros/user:user.bzl", "user_layer")
 CATALINA_HOME = "/usr/share/tomcat7"
 CATALINA_BASE = "/var/lib/tomcat7"
 TOMCAT_HOME = "/tomcat7"
+TOMCAT_CONF = "/etc/tomcat7"
 
 user_layer(
   name = "user",
@@ -16,7 +17,7 @@ container_layer(
   debs = ["//deps/jessie:tomcat7"],
   files = ["entrypoint-tomcat", "etc"],
   symlinks = {
-    CATALINA_BASE + "/conf": "/etc/tomcat7",
+    CATALINA_BASE + "/conf": TOMCAT_CONF,
     CATALINA_BASE + "/work": "/var/cache/tomcat7/work",
   }
 )
@@ -30,9 +31,10 @@ container_image(
     "CATALINA_HOME": CATALINA_HOME,
     "CATALINA_OUT": "/dev/stdout",
     "CATALINA_TMPDIR": "/tmp",
-    "LOGGING_CONFIG": "-Djava.util.logging.config.file=/etc/tomcat7/logging.properties",
+    "LOGGING_CONFIG": "-Djava.util.logging.config.file=" + TOMCAT_CONF + "/logging.properties",
     "TOMCAT_HOME": TOMCAT_HOME,
   },
+  volumes = [TOMCAT_CONF, "/var/cache/tomcat7"],
   ports = ["8080"],
   workdir = TOMCAT_HOME,
   entrypoint = ["/entrypoint-tomcat"],

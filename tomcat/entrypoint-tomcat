@@ -2,10 +2,10 @@
 set -e
 set -o pipefail
 
-if [ -d "$TOMCAT_HOME" -a "$(stat -c '%U' "$TOMCAT_HOME" 2>/dev/null)" = "root" ]; then
-  chown tomcat "$TOMCAT_HOME"
-  chmod o-rwx "$TOMCAT_HOME"
-fi
+#if [ -d "$TOMCAT_HOME" -a "$(stat -c '%U' "$TOMCAT_HOME" 2>/dev/null)" = "root" ]; then
+#  chown tomcat "$TOMCAT_HOME"
+#  chmod o-rwx "$TOMCAT_HOME"
+#fi
 
 mkdir -p /var/cache/tomcat7/work
 chown tomcat /var/cache/tomcat7/work

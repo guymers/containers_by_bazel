@@ -3,9 +3,6 @@ set -e
 set -o pipefail
 
 if [ "$1" = 'kibana' ]; then
-  mkdir -p "/var/lib/kibana"
-  chown kibana "/var/lib/kibana"
-
   # the command bin/kibana executes
   exec chroot --userspec=kibana / node $KIBANA_NODE_OPTIONS --no-warnings "$KIBANA_HOME/src/cli" \
     --config "$CONF_DIR/kibana.yml" \

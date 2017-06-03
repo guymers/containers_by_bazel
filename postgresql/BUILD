@@ -1,4 +1,5 @@
 load("//macros/user:user.bzl", "user_layer")
+load("//scripts/versions:versions.bzl", "POSTGRESQL_MINOR_VERSION")
 
 POSTGRES_HOME = "/var/lib/postgresql"
 
@@ -10,8 +11,7 @@ user_layer(
 )
 
 container_layer(
-  name = "base_files",
-  debs = ["//deps/jessie:locales"],
+  name = "files",
   directory = "/",
   files = ["entrypoint-postgresql"],
 )
@@ -19,12 +19,12 @@ container_layer(
 container_image(
   name = "base",
   base = "//base:jessie",
-  layers = [":user", ":base_files"],
+  layers = ["//base/locale", ":user", ":files"],
   env = {
     "LANG": "en_US.UTF-8",
     "POSTGRES_HOME": POSTGRES_HOME,
     "POSTGRES_PASSWORD": "postgres",
-    "PATH": "/usr/lib/postgresql/9.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "PATH": "/usr/lib/postgresql/" + POSTGRESQL_MINOR_VERSION + "/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
   },
   volumes = [
     "/var/lib/postgresql",
