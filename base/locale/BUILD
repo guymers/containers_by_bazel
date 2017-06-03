@@ -16,13 +16,6 @@ container_image(
   layers = [":locale_files"],
 )
 
-# genrule(
-#   name = "locale_archive_tar",
-#   srcs = [":locale_archive"],
-#   outs = ["locale-archive.tar"],
-#   cmd = "tar --transform 's,.*/locale-archive,./usr/lib/locale/locale-archive,' -c -f $@ $<",
-# )
-
 genrule(
   name = "locale_archive_tar",
   srcs = [":locales.tar"],
