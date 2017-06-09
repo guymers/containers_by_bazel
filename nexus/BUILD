@@ -3,6 +3,7 @@ load("//scripts/versions:versions.bzl", "NEXUS_VERSION")
 
 NEXUS_HOME = "/opt/sonatype/nexus"
 NEXUS_DATA = "/nexus-data"
+NEXUS_CONF = "/etc/nexus"
 VERSION = NEXUS_VERSION
 
 user_layer(
@@ -20,23 +21,29 @@ container_layer(
 )
 
 container_layer(
+  name = "config",
+  directory = NEXUS_CONF,
+  files = glob(["etc/nexus/*"]),
+)
+
+container_layer(
   name = "scripts",
   mode = "0755",
   directory = "/",
-  files = ["entrypoint-nexus", "etc"],
+  files = ["entrypoint-nexus"],
 )
 
 container_image(
   name = "nexus",
   base = "//java:zulu",
-  layers = ["//base/su_exec", ":user", ":files", ":scripts"],
+  layers = ["//base/su_exec", ":user", ":files", ":config", ":scripts"],
   env = {
     "NEXUS_HOME": NEXUS_HOME,
     "NEXUS_DATA": NEXUS_DATA,
-    "NEXUS_CONF": "/etc/nexus",
+    "NEXUS_CONF": NEXUS_CONF,
     "NEXUS_CONTEXT_PATH": "/",
   },
-  volumes = [NEXUS_DATA],
+  volumes = [NEXUS_DATA, NEXUS_CONF],
   ports = ["8081"],
   workdir = NEXUS_HOME,
   entrypoint = ["/entrypoint-nexus"],
