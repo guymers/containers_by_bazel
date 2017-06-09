@@ -16,6 +16,7 @@ filegroup(
     "@deb_jessie_libnetfilter_conntrack3//file",
     "@deb_jessie_libnettle4//file",
     "@deb_jessie_libnfnetlink0//file",
+    "@deb_jessie_netbase//file",
   ],
 )
 
@@ -452,6 +453,7 @@ filegroup(
     "@deb_jessie_locales//file",
     "@deb_jessie_mime_support//file",
     "@deb_jessie_mysql_common//file",
+    "@deb_jessie_netbase//file",
     "@deb_jessie_odbcinst//file",
     "@deb_jessie_odbcinst1debian2//file",
     "@deb_jessie_openssl//file",
@@ -506,6 +508,7 @@ filegroup(
     "@deb_jessie_libxml2//file",
     "@deb_jessie_libxslt1_1//file",
     "@deb_jessie_locales//file",
+    "@deb_jessie_netbase//file",
     "@deb_jessie_openssl//file",
     "@deb_jessie_pgdg_keyring//file",
     "@deb_jessie_postgresql_9_6//file",

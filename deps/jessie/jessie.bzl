@@ -1340,6 +1340,11 @@ def deb_jessie():
     sha256 = "aa45126c71ab1978d3e2d7b2e498ecc55778627a40361c75011a2a631151dcba",
   )
   native.http_file(
+    name = "deb_jessie_netbase",
+    url = "http://deb.debian.org/debian/pool/main/n/netbase/netbase_5.3_all.deb",
+    sha256 = "3979bdd40c5666ef9bf71a5391ba01ad38e264f2ec96d289993f2a0805616dd3",
+  )
+  native.http_file(
     name = "deb_jessie_netcat",
     url = "http://deb.debian.org/debian/pool/main/n/netcat/netcat_1.10-41_all.deb",
     sha256 = "58eab873f9fb34a92d71a76332cfe1031a8c28cbdd76219f598350e70427d03a",
@@ -1351,13 +1356,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nginx",
-    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.13.0-1~jessie_amd64.deb",
-    sha256 = "2ac0cc2796076b6f99bf9e9e3947e1d522afc3904d062aeb872c8903ddf6b0e0",
+    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.13.1-1~jessie_amd64.deb",
+    sha256 = "c95902c55bd99d9d38d8fd930e43528e7caf174ef1f79626476dc611a26b497b",
   )
   native.http_file(
     name = "deb_jessie_nodejs",
-    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.10.3-1nodesource1~jessie1_amd64.deb",
-    sha256 = "5eee2220e02f8dd1e3eb61c8a281d21377996b569d8516b05b7888c0bf513cd0",
+    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.11.0-1nodesource1~jessie1_amd64.deb",
+    sha256 = "7bdcab0569fea5d7185a35fc8cf095fd8df38e9a53c0e96751185a267440996c",
   )
   native.http_file(
     name = "deb_jessie_odbcinst",
@@ -1381,13 +1386,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_perl",
-    url = "http://deb.debian.org/debian/pool/main/p/perl/perl_5.20.2-3+deb8u6_amd64.deb",
-    sha256 = "c8e863928022d4723a40177958b0d1e236540b2ae540bf17f534124fc45f8b43",
+    url = "http://security.debian.org/pool/updates/main/p/perl/perl_5.20.2-3+deb8u7_amd64.deb",
+    sha256 = "662366ec4e5de23c88e36ed415e86da073d5b519088b5765c895cffbbdaae129",
   )
   native.http_file(
     name = "deb_jessie_perl_modules",
-    url = "http://deb.debian.org/debian/pool/main/p/perl/perl-modules_5.20.2-3+deb8u6_all.deb",
-    sha256 = "59c74e72dc08a7d13245cceee1b4877238503b2e24ef05209dd4ce34256d034c",
+    url = "http://security.debian.org/pool/updates/main/p/perl/perl-modules_5.20.2-3+deb8u7_all.deb",
+    sha256 = "4e9c1d96f557005fd71625d2ba061d9701047557f454eb0a4ec3989dba8c663b",
   )
   native.http_file(
     name = "deb_jessie_pgdg_keyring",
