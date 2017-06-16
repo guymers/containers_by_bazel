@@ -3,6 +3,26 @@ package(default_visibility = ["//visibility:public"])
 exports_files(["jessie.bzl"])
 
 filegroup(
+  name = "cassandra",
+  srcs = [
+    "@deb_jessie_cassandra//file",
+    "@deb_jessie_cassandra_tools//file",
+    "@deb_jessie_libffi6//file",
+    "@deb_jessie_libjemalloc1//file",
+    "@deb_jessie_libpython2_7_minimal//file",
+    "@deb_jessie_libpython2_7_stdlib//file",
+    "@deb_jessie_libpython_stdlib//file",
+    "@deb_jessie_libsqlite3_0//file",
+    "@deb_jessie_libssl1_0_0//file",
+    "@deb_jessie_mime_support//file",
+    "@deb_jessie_python//file",
+    "@deb_jessie_python2_7//file",
+    "@deb_jessie_python2_7_minimal//file",
+    "@deb_jessie_python_minimal//file",
+  ],
+)
+
+filegroup(
   name = "dnsmasq",
   srcs = [
     "@deb_jessie_dnsmasq//file",

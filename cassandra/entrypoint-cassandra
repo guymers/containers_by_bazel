@@ -1,0 +1,65 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+if [ -d "$CASSANDRA_DATA" -a "$(stat -c '%U' "$CASSANDRA_DATA" 2>/dev/null)" = "root" ]; then
+  chown cassandra "$CASSANDRA_DATA"
+  chmod o-rwx "$CASSANDRA_DATA"
+fi
+
+if [ "$1" = 'cassandra' ]; then
+
+  # dont modify cassandra.yaml directly, copy it to tmp, modify and use -Dcassandra.config
+  mkdir -p /tmp/__cassandra/conf
+  cp -a "$CASSANDRA_CONF/cassandra.yaml" /tmp/__cassandra/conf/
+  readonly CASSANDRA_CONFIG_FILE=/tmp/__cassandra/conf/cassandra.yaml
+
+  # from https://github.com/docker-library/cassandra/blob/d83b850cd17bc9198876f8686197c730e29c7448/3.10/docker-entrypoint.sh
+  : ${CASSANDRA_RPC_ADDRESS='0.0.0.0'}
+
+  : ${CASSANDRA_LISTEN_ADDRESS='auto'}
+  if [ "$CASSANDRA_LISTEN_ADDRESS" = 'auto' ]; then
+    CASSANDRA_LISTEN_ADDRESS="$(hostname --ip-address)"
+  fi
+
+  : ${CASSANDRA_BROADCAST_ADDRESS="$CASSANDRA_LISTEN_ADDRESS"}
+
+  if [ "$CASSANDRA_BROADCAST_ADDRESS" = 'auto' ]; then
+    CASSANDRA_BROADCAST_ADDRESS="$(hostname --ip-address)"
+  fi
+  : ${CASSANDRA_BROADCAST_RPC_ADDRESS:=$CASSANDRA_BROADCAST_ADDRESS}
+
+  if [ -n "${CASSANDRA_NAME:+1}" ]; then
+    : ${CASSANDRA_SEEDS:="cassandra"}
+  fi
+  : ${CASSANDRA_SEEDS:="$CASSANDRA_BROADCAST_ADDRESS"}
+
+  sed -ri 's/(- seeds:).*/\1 "'"$CASSANDRA_SEEDS"'"/' "$CASSANDRA_CONFIG_FILE"
+
+  for yaml in \
+    broadcast_address \
+    broadcast_rpc_address \
+    cluster_name \
+    endpoint_snitch \
+    listen_address \
+    num_tokens \
+    rpc_address \
+    start_rpc \
+  ; do
+    var="CASSANDRA_${yaml^^}"
+    val="${!var}"
+    if [ "$val" ]; then
+      sed -ri 's/^(# )?('"$yaml"':).*/\2 '"$val"'/' "$CASSANDRA_CONFIG_FILE"
+    fi
+  done
+
+  source /java-opts.sh
+  export JVM_EXTRA_OPTS="$JAVA_OPTS"
+
+  # pass extra command line args
+  export CASSANDRA_EXTRA_OPTS="-Dcassandra.config=$CASSANDRA_CONFIG_FILE ${@:2}"
+
+  exec chroot --userspec=cassandra / cassandra -f
+else
+  exec "$@"
+fi

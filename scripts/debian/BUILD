@@ -3,6 +3,7 @@ package(default_visibility = ["//visibility:public"])
 load("//scripts/debian:dependencies.bzl", "dependencies")
 
 dependencies(name = "jessie", dependencies = {
+  ":jessie/cassandra": "cassandra",
   ":jessie/dnsmasq": "base",
   ":jessie/ejabberd": "erlang",
   ":jessie/erlang": "erlang",

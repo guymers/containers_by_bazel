@@ -94,6 +94,7 @@ Update dependencies in files:
     911 nexus
     912 jenkins
     913 tomcat
+    916 cassandra
     917 elasticsearch
     918 kafka
     919 zookeeper

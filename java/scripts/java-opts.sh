@@ -23,7 +23,8 @@ JAVA_OPTS="$JAVA_OPTS -server -XX:+AlwaysPreTouch"
 USE_G1GC=${USE_G1GC:-false}
 if [ "$USE_G1GC" = "true" ]; then
   # https://jenkins.io/blog/2016/11/21/gc-tuning/
-  JAVA_OPTS="$JAVA_OPTS -XX:+UseG1GC -XX:+ExplicitGCInvokesConcurrent -XX:+ParallelRefProcEnabled"
+  JAVA_OPTS="$JAVA_OPTS -XX:+UseG1GC -XX:G1RSetUpdatingPauseTimePercent=5"
+  JAVA_OPTS="$JAVA_OPTS -XX:+ExplicitGCInvokesConcurrent -XX:+ParallelRefProcEnabled"
   JAVA_OPTS="$JAVA_OPTS -XX:+UseStringDeduplication -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20"
   JAVA_OPTS="$JAVA_OPTS -XX:+UnlockDiagnosticVMOptions -XX:G1SummarizeRSetStatsPeriod=1"
 else
@@ -40,7 +41,9 @@ JMX_MONITORING=${JMX_MONITORING:-true}
 JMX_PORT=${JMX_PORT:-1099}
 if [ "$JMX_MONITORING" = "true" ]; then
   CONTAINER_IP=${CONTAINER_IP:-$(hostname --ip | awk '{print $1}')}
-  JAVA_OPTS="$JAVA_OPTS -Djava.rmi.server.hostname=$CONTAINER_IP -Dcom.sun.management.jmxremote.port=$JMX_PORT -Dcom.sun.management.jmxremote.rmi.port=$JMX_PORT -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
+  JAVA_OPTS="$JAVA_OPTS -Djava.rmi.server.hostname=$CONTAINER_IP"
+  JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.port=$JMX_PORT -Dcom.sun.management.jmxremote.rmi.port=$JMX_PORT"
+  JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
 fi
 
 if [ -n "$OOM_DUMP_FOLDER" ]; then
@@ -50,7 +53,7 @@ fi
 if [ -n "$GC_LOG_FOLDER" ]; then
   JAVA_OPTS="$JAVA_OPTS -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintTenuringDistribution"
   JAVA_OPTS="$JAVA_OPTS -XX:+PrintHeapAtGC -XX:+PrintGCCause -XX:+PrintReferenceGC -XX:+PrintAdaptiveSizePolicy"
-  JAVA_OPTS="$JAVA_OPTS -XX:+PrintGCApplicationStoppedTime -XX:-OmitStackTraceInFastThrow"
+  JAVA_OPTS="$JAVA_OPTS -XX:+PrintPromotionFailure -XX:+PrintGCApplicationStoppedTime -XX:-OmitStackTraceInFastThrow"
   JAVA_OPTS="$JAVA_OPTS -Xloggc:$GC_LOG_FOLDER -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M"
 fi
 export JAVA_OPTS

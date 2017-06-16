@@ -1,5 +1,15 @@
 def deb_jessie():
   native.http_file(
+    name = "deb_jessie_cassandra",
+    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra_3.10_all.deb",
+    sha256 = "1f9f6bc92f015e76debc74943e6a2a0049cc6bcaf809241578b135fdfe1d05ba",
+  )
+  native.http_file(
+    name = "deb_jessie_cassandra_tools",
+    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra-tools_3.10_all.deb",
+    sha256 = "5fe5e61deb7c3dcb5261c738dbaf0dd0fbf84d87c8388a27d6f482d0b648b465",
+  )
+  native.http_file(
     name = "deb_jessie_cron",
     url = "http://deb.debian.org/debian/pool/main/c/cron/cron_3.0pl1-127+deb8u1_amd64.deb",
     sha256 = "27b935e215a766ea202d7c50837309fc6af75bdee65d92a96d9fb2bb6a4774cb",
