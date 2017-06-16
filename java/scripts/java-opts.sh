@@ -7,25 +7,24 @@ else
   JAVA_OPTS=${JAVA_OPTS:-}
 fi
 
+JAVA_OPTS="$JAVA_OPTS -server -XX:+AlwaysPreTouch -XX:+UnlockExperimentalVMOptions"
+
 AUTO_JAVA_HEAP_SIZE=${AUTO_JAVA_HEAP_SIZE:-true}
 if [ "$AUTO_JAVA_HEAP_SIZE" = "true" ]; then
-  # make heap size 80% of total memory
-  HEAP_SIZE_PERCENTAGE=${HEAP_SIZE_PERCENTAGE:-80}
-
-  readonly MEMORY_LIMIT_IN_BYTES=$(cat /sys/fs/cgroup/memory/memory.limit_in_bytes 2> /dev/null || echo 1073741824)
-  readonly MEMORY_LIMIT=$((MEMORY_LIMIT_IN_BYTES / 1024 / 1024))
-  readonly HEAP_SIZE=$((MEMORY_LIMIT * HEAP_SIZE_PERCENTAGE / 100))
-  JAVA_OPTS="$JAVA_OPTS -Xms${HEAP_SIZE}m -Xmx${HEAP_SIZE}m"
+  if [ -n "$JAVA_HEAP_SIZE" ]; then
+    JAVA_OPTS="$JAVA_OPTS -Xms${JAVA_HEAP_SIZE}m -Xmx${JAVA_HEAP_SIZE}m"
+  else
+    JAVA_MAX_RAM_FRACTION=${JAVA_MAX_RAM_FRACTION:-1}
+    JAVA_OPTS="$JAVA_OPTS -XX:+UseCGroupMemoryLimitForHeap -XX:MaxRAMFraction=$JAVA_MAX_RAM_FRACTION"
+  fi
 fi
-
-JAVA_OPTS="$JAVA_OPTS -server -XX:+AlwaysPreTouch"
 
 USE_G1GC=${USE_G1GC:-false}
 if [ "$USE_G1GC" = "true" ]; then
   # https://jenkins.io/blog/2016/11/21/gc-tuning/
   JAVA_OPTS="$JAVA_OPTS -XX:+UseG1GC -XX:G1RSetUpdatingPauseTimePercent=5"
   JAVA_OPTS="$JAVA_OPTS -XX:+ExplicitGCInvokesConcurrent -XX:+ParallelRefProcEnabled"
-  JAVA_OPTS="$JAVA_OPTS -XX:+UseStringDeduplication -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20"
+  JAVA_OPTS="$JAVA_OPTS -XX:+UseStringDeduplication -XX:G1NewSizePercent=20"
   JAVA_OPTS="$JAVA_OPTS -XX:+UnlockDiagnosticVMOptions -XX:G1SummarizeRSetStatsPeriod=1"
 else
   # http://blog.sokolenko.me/2014/11/javavm-options-production.html

@@ -39,7 +39,7 @@ container_image(
     "CASSANDRA_CONF": CASSANDRA_CONF,
     "CASSANDRA_DATA": CASSANDRA_DATA,
 
-    "HEAP_SIZE_PERCENTAGE": "25",
+    "JAVA_MAX_RAM_FRACTION": "4",
   },
   volumes = [CASSANDRA_CONF, CASSANDRA_DATA],
   ports = ["7000", "7001", "9042", "9160"],
