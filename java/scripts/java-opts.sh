@@ -19,7 +19,7 @@ if [ "$AUTO_JAVA_HEAP_SIZE" = "true" ]; then
   fi
 fi
 
-USE_G1GC=${USE_G1GC:-false}
+USE_G1GC=${USE_G1GC:-true}
 if [ "$USE_G1GC" = "true" ]; then
   # https://jenkins.io/blog/2016/11/21/gc-tuning/
   JAVA_OPTS="$JAVA_OPTS -XX:+UseG1GC -XX:G1RSetUpdatingPauseTimePercent=5"

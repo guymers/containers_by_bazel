@@ -1,6 +1,6 @@
 container_test(
   name = "kafka",
-  size = "small",
+  size = "medium",
   image = "//kafka",
   daemon = True,
   mem_limit = "1280m",
