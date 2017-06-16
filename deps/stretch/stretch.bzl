@@ -366,8 +366,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_linux_libc_dev",
-    url = "http://deb.debian.org/debian/pool/main/l/linux/linux-libc-dev_4.9.30-1_amd64.deb",
-    sha256 = "1cb8da2d8e73d51866368098cc82f13254d96c797a459857f27179d1b5af23e1",
+    url = "http://deb.debian.org/debian/pool/main/l/linux/linux-libc-dev_4.9.30-2_amd64.deb",
+    sha256 = "c3d75ee9f083469006d0c6b26ef7d68a1c287abae02b86495a6fa54523074a84",
   )
   native.http_file(
     name = "deb_stretch_m4",

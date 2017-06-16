@@ -785,6 +785,11 @@ def deb_jessie():
     sha256 = "9f9805301589ec30570c56318427d44085932d080c4b56a1f94fd8bb4c5daccd",
   )
   native.http_file(
+    name = "deb_jessie_libnuma1",
+    url = "http://deb.debian.org/debian/pool/main/n/numactl/libnuma1_2.0.10-1_amd64.deb",
+    sha256 = "f9e26a9cbf362f2a9026220b988157beea2cf10f53a0beeee77c188f25574282",
+  )
+  native.http_file(
     name = "deb_jessie_libodbc1",
     url = "http://deb.debian.org/debian/pool/main/u/unixodbc/libodbc1_2.3.1-3_amd64.deb",
     sha256 = "be89131685dde9aaffcd65493222ece77df3eeb23fe2d4d3467bbbe14f59a68e",
@@ -1373,6 +1378,11 @@ def deb_jessie():
     name = "deb_jessie_nodejs",
     url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.11.0-1nodesource1~jessie1_amd64.deb",
     sha256 = "7bdcab0569fea5d7185a35fc8cf095fd8df38e9a53c0e96751185a267440996c",
+  )
+  native.http_file(
+    name = "deb_jessie_numactl",
+    url = "http://deb.debian.org/debian/pool/main/n/numactl/numactl_2.0.10-1_amd64.deb",
+    sha256 = "ef2491a7a8c717e4c434f2914a79fe5ff7f445c11f9e88f54125026e7c3bc8fe",
   )
   native.http_file(
     name = "deb_jessie_odbcinst",
