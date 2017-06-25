@@ -66,13 +66,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libc6_dev",
-    url = "http://deb.debian.org/debian/pool/main/g/glibc/libc6-dev_2.24-11_amd64.deb",
-    sha256 = "e4adc8d62e1149ca2a8797fdf49e4ad82ae05efdca846dd425114bea07620baf",
+    url = "http://security.debian.org/pool/updates/main/g/glibc/libc6-dev_2.24-11+deb9u1_amd64.deb",
+    sha256 = "0e10342da1da5f5497a38bd4f3e1f33b20dc83e75d2f3e0809fa6febfb01f6bc",
   )
   native.http_file(
     name = "deb_stretch_libc_dev_bin",
-    url = "http://deb.debian.org/debian/pool/main/g/glibc/libc-dev-bin_2.24-11_amd64.deb",
-    sha256 = "f1bdc020dd5f20016f031bccb31696653770a3531142d27252f03d95d7bf896c",
+    url = "http://security.debian.org/pool/updates/main/g/glibc/libc-dev-bin_2.24-11+deb9u1_amd64.deb",
+    sha256 = "29298cf593ff111a91affdd7c84108a298307a450c85644773650522f7be32d0",
   )
   native.http_file(
     name = "deb_stretch_libcc1_0",
@@ -116,8 +116,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libgnutls30",
-    url = "http://deb.debian.org/debian/pool/main/g/gnutls28/libgnutls30_3.5.8-5_amd64.deb",
-    sha256 = "f5b8212f28f24e5c26dee6511f43541a918160c4b746ff7dca443ea5f270021a",
+    url = "http://security.debian.org/pool/updates/main/g/gnutls28/libgnutls30_3.5.8-5+deb9u1_amd64.deb",
+    sha256 = "b902358ba258048ad19040a605ed592cba97a1fb60a2d1d7e64cbff4221b8481",
   )
   native.http_file(
     name = "deb_stretch_libgomp1",
@@ -366,8 +366,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_linux_libc_dev",
-    url = "http://deb.debian.org/debian/pool/main/l/linux/linux-libc-dev_4.9.30-2_amd64.deb",
-    sha256 = "c3d75ee9f083469006d0c6b26ef7d68a1c287abae02b86495a6fa54523074a84",
+    url = "http://security.debian.org/pool/updates/main/l/linux/linux-libc-dev_4.9.30-2+deb9u1_amd64.deb",
+    sha256 = "b90e7909f3e2208c5bfd07a82925ca6fd25a7b43f7667da253b0d641b02a585d",
   )
   native.http_file(
     name = "deb_stretch_m4",
