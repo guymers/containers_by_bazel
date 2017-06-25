@@ -8,36 +8,104 @@ if [ -d "$GERRIT_SITE" -a "$(stat -c '%U' "$GERRIT_SITE" 2>/dev/null)" = "root" 
 fi
 
 if [ "$1" = 'gerrit' ]; then
+  readonly as_gerrit="chroot --userspec=gerrit /"
+
+  FIRST_RUN=false
   if [ ! -d "$GERRIT_SITE/.gerritcodereview" ]; then
-    chroot --userspec=gerrit / mkdir -p "$GERRIT_SITE/etc"
-    chroot --userspec=gerrit / cp -a --no-clobber "$GERRIT_CONF/." "$GERRIT_SITE/etc"
+    FIRST_RUN=true
+
+    # initial config copy over
+    $as_gerrit mkdir -p "$GERRIT_SITE/etc"
+    $as_gerrit cp -a --no-clobber "$GERRIT_CONF/." "$GERRIT_SITE/etc"
+  fi
+
+  # take GERRIT_CONF/gerrit.confg and all gerrit.config files in subfolders of GERRIT_CONF
+  # and merge their contents into GERRIT_SITE/etc/gerrit.conf
+  if [ -f "$GERRIT_CONF/gerrit.confg" ]; then
+    git config -f "$GERRIT_CONF/gerrit.confg" --list | while IFS= read line; do
+      key=${line%=*}
+      value=${line#*=}
+      git config -f "$GERRIT_SITE/etc/gerrit.config" "$key" "$value"
+    done
+  fi
+
+  find "$GERRIT_CONF" -mindepth 2 -name 'gerrit.config' | sort | while IFS= read file; do
+    git config -f "$file" --list | while IFS= read line; do
+      key=${line%=*}
+      value=${line#*=}
+      git config -f "$GERRIT_SITE/etc/gerrit.config" "$key" "$value"
+    done
+  done
+
+  # the lib folder should match the lib folder in the container
+  $as_gerrit rm -rf "$GERRIT_SITE/lib"
+  $as_gerrit mkdir -p "$GERRIT_SITE/lib"
+  if [ -d "$GERRIT_HOME/lib" ]; then
+    $as_gerrit cp -a --no-clobber "$GERRIT_HOME/lib/." "$GERRIT_SITE/lib"
   fi
 
   readonly REF_PLUGINS_DIR="$GERRIT_HOME/plugins"
   if [ -d "$REF_PLUGINS_DIR" ]; then
     readonly PLUGINS_DIR="$GERRIT_SITE/plugins"
     if [ ! -d "$PLUGINS_DIR" ]; then
-      chroot --userspec=gerrit / mkdir -p "$PLUGINS_DIR"
+      $as_gerrit mkdir -p "$PLUGINS_DIR"
     fi
     (
       cd "$REF_PLUGINS_DIR" && \
-      find . -type f -exec chroot --userspec=gerrit / cp -a --no-clobber "$REF_PLUGINS_DIR/{}" "$PLUGINS_DIR/{}" \;
+      find . -type f -exec $as_gerrit cp -a "$REF_PLUGINS_DIR/{}" "$PLUGINS_DIR/{}" \;
     )
   fi
 
   source /java-opts.sh
   readonly GERRIT_WAR="$GERRIT_HOME/bin/gerrit.war"
-  readonly run_war="chroot --userspec=gerrit / java ${JAVA_OPTS} -DGerritCodeReview=1 -jar $GERRIT_WAR"
-
-  # from deb postinst script
-  $run_war init --batch --no-auto-start --install-all-plugins -d "$GERRIT_SITE"
-  $run_war reindex -d "$GERRIT_SITE"
+  readonly run_war="$as_gerrit java ${JAVA_OPTS} -DGerritCodeReview=1 -jar $GERRIT_WAR"
 
   GERRIT_ARGS="--console-log"
   if [ "$GERRIT_SLAVE" = true ]; then
     GERRIT_ARGS="$GERRIT_ARGS --slave"
   fi
 
+  readonly current_auth_type=$(git config -f "$GERRIT_SITE/etc/gerrit.config" auth.type)
+
+  if [ "$FIRST_RUN" = true ]; then
+    # set auth type to DEVELOPMENT_BECOME_ANY_ACCOUNT as it will auto create an admin user
+    git config -f "$GERRIT_SITE/etc/gerrit.config" auth.type DEVELOPMENT_BECOME_ANY_ACCOUNT
+
+    # when starting with DEVELOPMENT_BECOME_ANY_ACCOUNT, this key will be added to the admin account
+    if [ ! -f "$GERRIT_SITE/.ssh/id_rsa" ]; then
+      $as_gerrit mkdir -p "$GERRIT_SITE/.ssh"
+      $as_gerrit chmod 700 "$GERRIT_SITE/.ssh"
+      $as_gerrit ssh-keygen -f "$GERRIT_SITE/.ssh/id_rsa" -t rsa -N '' > /dev/null
+    fi
+  fi
+
+  $run_war init --batch --no-auto-start --install-all-plugins -d "$GERRIT_SITE"
+
+  if [ "$FIRST_RUN" = true ]; then
+    $run_war daemon -d "$GERRIT_SITE" ${GERRIT_ARGS} &
+    readonly GERRIT_PID=$!
+
+    # wait for gerrit to start
+    until $as_gerrit gerrit_ssh version &>/dev/null; do
+      sleep 1
+    done
+
+    for f in /init.d/*.sh; do
+      [ -e "$f" ] || continue
+      echo "- running $f"
+      $as_gerrit bash "$f"
+      echo
+    done
+
+    echo "Initial setup complete, restarting..."
+    kill $GERRIT_PID
+    wait $GERRIT_PID || true
+
+    # restore original auth.type
+    git config -f "$GERRIT_SITE/etc/gerrit.config" auth.type "$current_auth_type"
+  fi
+
+  $run_war reindex -d "$GERRIT_SITE"
   exec $run_war daemon -d "$GERRIT_SITE" ${GERRIT_ARGS}
 else
   exec "$@"

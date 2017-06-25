@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+
+ssh -oStrictHostKeyChecking=no -p 29418 admin@localhost gerrit "$@"
