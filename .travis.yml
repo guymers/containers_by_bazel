@@ -15,7 +15,7 @@ before_install:
   - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
   - sudo apt-get update
   - sudo apt-get purge docker-engine || true
-  - sudo apt-get install -y --no-install-recommends docker-ce=17.03.0~ce-0~ubuntu-trusty
+  - sudo apt-get install -y --no-install-recommends docker-ce=17.05.0~ce-0~ubuntu-trusty
   - sudo usermod -aG docker $USER
   - docker -v
   # bazel
