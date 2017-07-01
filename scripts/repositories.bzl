@@ -69,7 +69,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "bb4e3bf4c9cd2b30fc922e48ab584845739ed4aa50dea717ac76a56951e31b98",
+    sha256 = "4779d5cf08c50ed368a57b102ab3895e5e830d6b355ca4bfecf718a034a164e0",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -113,20 +113,13 @@ def dependency_repositories():
     sha256 = "bf5cf479dbd262939017779a7b610119e11f97b0649d875f64dbdfae9e93cf72",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
-  NEXUS_3_VERSION="3.2.0-01"
-  native.new_http_archive(
-    name = "nexus3",
-    url = "http://download.sonatype.com/nexus/3/nexus-" + NEXUS_3_VERSION + "-unix.tar.gz",
-    sha256 = "350064ac0ee3938916891276fca91ff4d8f564542b50ca0322129cd3d48d81af",
-    build_file_content = "exports_files(['" + NEXUS_3_VERSION + "'])",
-  )
 
 
   ###### JENKINS
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "00424d3c851298b29376d1d09d7d3578a2bc4a03acf3914b317c47707cd5739a",
+    sha256 = "34fde424dde0e050738f5ad1e316d54f741c237bd380bd663a07f96147bb1390",
   )
   native.http_file(
     name = "jenkins_agent_jar",
@@ -138,7 +131,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "maven",
     url = "http://mirrors.ocf.berkeley.edu/apache/maven/maven-3/" + MAVEN_VERSION + "/binaries/apache-maven-" + MAVEN_VERSION + "-bin.tar.gz",
-    sha256 = "6e3e9c949ab4695a204f74038717aa7b2689b1be94875899ac1b3fe42800ff82",
+    sha256 = "beb91419245395bd69a4a6edad5ca3ec1a8b64e41457672dc687c173a495f034",
     build_file_content = "exports_files(['apache-maven-" + MAVEN_VERSION + "'])",
   )
 
@@ -154,7 +147,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "kafka",
     url = "http://mirrors.ocf.berkeley.edu/apache/kafka/" + KAFKA_VERSION + "/kafka_2.12-" + KAFKA_VERSION + ".tgz",
-    sha256 = "e523b448b24a908202c35f12fd0caaa49ce70070305c360f7ed2270bb2c95f47",
+    sha256 = "ab6310dd0d9fce1e6e8045b51b471fb35c3e197714e6e6b03bc5864898785f2d",
     build_file_content = "exports_files(['kafka_2.12-" + KAFKA_VERSION + "'])",
   )
 
@@ -162,14 +155,14 @@ def dependency_repositories():
   native.http_file(
     name = "elasticsearch",
     url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-" + ELASTICSEARCH_VERSION + ".deb",
-    sha256 = "654ecd45809fba5f7978d228f554cb6a9c6e27249704f67295c17e0df43eefe4",
+    sha256 = "0d8ae6a20ca122928ac9e8a924e463a244524e60a7d169365242079ba1c46ef9",
   )
 
   ###### KIBANA
   native.http_file(
     name = "kibana",
     url = "https://artifacts.elastic.co/downloads/kibana/kibana-" + KIBANA_VERSION + "-amd64.deb",
-    sha256 = "9dfac5fd21806fe8595a363f5eb78617ca71d09f7dcddb76602670e4f7d613c9",
+    sha256 = "6277c0d711a6aae029521e80ccf0ba7faaac45ed91eb1524eb0122c812b50344",
   )
 
 
@@ -177,7 +170,7 @@ def dependency_repositories():
   native.http_file(
     name = "yarnpkg",
     url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "1665f3ecf8128de92e4786675b4e99707d6f982caf80a235efc04499d165bab7",
+    sha256 = "26eedf8e6f41d9faa0f19eb686bc4331dc42de1a21e45e85fabececb9a512b7c",
   )
 
 

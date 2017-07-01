@@ -1,13 +1,18 @@
 def deb_jessie():
   native.http_file(
+    name = "deb_jessie_ca_certificates",
+    url = "http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20141019+deb8u3_all.deb",
+    sha256 = "bd799f47f5ae3260b6402b1fe19fe2c37f2f4125afcd19327bf69a9cf436aeff",
+  )
+  native.http_file(
     name = "deb_jessie_cassandra",
-    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra_3.10_all.deb",
-    sha256 = "1f9f6bc92f015e76debc74943e6a2a0049cc6bcaf809241578b135fdfe1d05ba",
+    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra_3.11.0_all.deb",
+    sha256 = "b11372bcd2c1b0faebc1ec5e882f2036008cafcdb7d7efe7eff232b383459b86",
   )
   native.http_file(
     name = "deb_jessie_cassandra_tools",
-    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra-tools_3.10_all.deb",
-    sha256 = "5fe5e61deb7c3dcb5261c738dbaf0dd0fbf84d87c8388a27d6f482d0b648b465",
+    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra-tools_3.11.0_all.deb",
+    sha256 = "8af4ce6e0a1bf835c5b1d5a7d6bdfbb32a23a04e9f92d9eecb3020bd6efcb50f",
   )
   native.http_file(
     name = "deb_jessie_cron",
@@ -186,8 +191,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_grafana",
-    url = "https://packagecloud.io/grafana/stable/debian/pool/wheezy/main/g/grafana/grafana_4.1.2-1486989747_amd64.deb",
-    sha256 = "ec0f9b700fca5f627e85e2d14fdc44200798dd92cbd58a9eb6483584d82eac1d",
+    url = "https://packagecloud.io/grafana/stable/debian/pool/wheezy/main/g/grafana/grafana_4.3.2_amd64.deb",
+    sha256 = "81b83fad501003621465d14d6a309353c63a46622abd9c9849615e8cea91ef79",
   )
   native.http_file(
     name = "deb_jessie_init_system_helpers",
@@ -461,8 +466,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libexpat1",
-    url = "http://deb.debian.org/debian/pool/main/e/expat/libexpat1_2.1.0-6+deb8u3_amd64.deb",
-    sha256 = "682d2321297c56dec327770efa986d4bef43a5acb1a5528b3098e05652998fae",
+    url = "http://security.debian.org/pool/updates/main/e/expat/libexpat1_2.1.0-6+deb8u4_amd64.deb",
+    sha256 = "de7979297d0298271d71b4554772ba4da60ba6895ed86ca8fc9c1159c58913e4",
   )
   native.http_file(
     name = "deb_jessie_libfaad2",
@@ -1371,13 +1376,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nginx",
-    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.13.1-1~jessie_amd64.deb",
-    sha256 = "c95902c55bd99d9d38d8fd930e43528e7caf174ef1f79626476dc611a26b497b",
+    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.13.2-1~jessie_amd64.deb",
+    sha256 = "eaab198195757d24e71f2940b53eecea1e99a81cd9621b3fce60b25b48caf29a",
   )
   native.http_file(
     name = "deb_jessie_nodejs",
-    url = "https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.11.0-1nodesource1~jessie1_amd64.deb",
-    sha256 = "7bdcab0569fea5d7185a35fc8cf095fd8df38e9a53c0e96751185a267440996c",
+    url = "https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/nodejs_8.1.3-1nodesource1~jessie1_amd64.deb",
+    sha256 = "aa93260edbc10c2553d1c67d525cb8cebf1da326d870f6388c6e7ffd07e30ceb",
   )
   native.http_file(
     name = "deb_jessie_numactl",

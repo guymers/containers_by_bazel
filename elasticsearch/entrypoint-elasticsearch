@@ -11,7 +11,7 @@ if [ "$1" = 'elasticsearch' ]; then
   source /java-opts.sh
 
   # pull the bits from bin/elasticsearch.in.sh that have not been set by sourcing java-opts
-  ES_CLASSPATH="$ES_HOME/lib/elasticsearch-$ES_VERSION.jar:$ES_HOME/lib/*"
+  ES_CLASSPATH="$ES_HOME/lib/*"
 
   # Disables explicit GC
   JAVA_OPTS="$JAVA_OPTS -XX:+DisableExplicitGC"

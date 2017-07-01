@@ -14,15 +14,26 @@ user_layer(
 container_layer(
   name = "files",
   debs = ["//deps/jessie:grafana"],
+)
+
+container_layer(
+  name = "init",
+  mode = "0755",
   directory = "/",
   files = ["entrypoint-grafana"],
+)
+
+container_layer(
+  name = "config",
+  directory = GRAFANA_CONF,
+  files = glob(["etc/grafana/*"]),
 )
 
 # see https://github.com/grafana/grafana-docker
 container_image(
   name = "grafana",
   base = "//base:jessie",
-  layers = [":user", ":files"],
+  layers = [":user", ":files", ":init", ":config"],
 
   env = {
     "GRAFANA_HOME": "/usr/share/grafana",

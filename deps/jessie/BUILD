@@ -257,7 +257,9 @@ filegroup(
 filegroup(
   name = "nodejs",
   srcs = [
+    "@deb_jessie_ca_certificates//file",
     "@deb_jessie_nodejs//file",
+    "@deb_jessie_openssl//file",
   ],
 )
 

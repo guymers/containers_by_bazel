@@ -24,6 +24,7 @@ if [ "$1" = 'grafana' ]; then
   exec chroot --userspec=grafana / /usr/sbin/grafana-server \
     --homepath="$GRAFANA_HOME" \
     --config="$conf_file" \
+    cfg:default.log.mode="console" \
     cfg:default.paths.data="$GRAFANA_DATA" \
     cfg:default.paths.logs="$GRAFANA_LOGS" \
     cfg:default.paths.plugins="$GRAFANA_DATA/plugins"
