@@ -1,5 +1,4 @@
 load("//macros/user:user.bzl", "user_layer")
-load("//scripts/versions:versions.bzl", "BOUNCYCASTLE_VERSION")
 
 GERRIT_CONF = "/etc/gerrit"
 GERRIT_SITE = "/gerrit"
@@ -14,12 +13,6 @@ user_layer(
 container_layer(
   name = "files",
   debs = ["//deps/jessie:gerrit"] + ["//deps/jessie:ssh"],
-)
-
-container_layer(
-  name = "bouncycastle",
-  directory = "/var/gerrit/lib",
-  files = ["@bouncycastle_bcprov//jar", "@bouncycastle_bcpkix//jar", "@bouncycastle_bcpg//jar"],
 )
 
 container_layer(
@@ -45,7 +38,7 @@ container_layer(
 container_image(
   name = "gerrit",
   base = "//java:zulu",
-  layers = [":user", ":files", ":bouncycastle", ":init", ":config", ":scripts"],
+  layers = [":user", ":files", ":init", ":config", ":scripts"],
 
   env = {
     "GERRIT_HOME": "/var/gerrit",

@@ -171,8 +171,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_gerrit",
-    url = "http://deb.gerritforge.com/dists/gerrit/contrib/binary-amd64/gerrit-2.13.8-1.noarch.deb",
-    sha256 = "411f66eb1b2fd54437a18d3ec129d84b40255e032ce001a2db71e5d80e469c5f",
+    url = "http://deb.gerritforge.com/dists/gerrit/contrib/binary-amd64/gerrit-2.14.1-1.noarch.deb",
+    sha256 = "b7e91c70d3b194050f92b5cb078cb6001a0f077c5d2e9da58af3cf8da7b913f0",
   )
   native.http_file(
     name = "deb_jessie_gettext_base",

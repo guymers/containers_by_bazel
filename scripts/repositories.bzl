@@ -1,6 +1,5 @@
 load(
   "//scripts/versions:versions.bzl",
-  "BOUNCYCASTLE_VERSION",
   "EJABBERD_VERSION",
   "ELASTICSEARCH_VERSION",
   "GERRIT_VERSION",
@@ -78,25 +77,6 @@ def dependency_repositories():
     name = "jmx_prometheus_javaagent",
     artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:" + PROMETHEUS_JMX_JAVAAGENT,
     sha1 = "fd6a31dd3eaed80d29453b9fc0d6f5496424928f",
-  )
-
-
-  native.maven_jar(
-    name = "bouncycastle_bcprov",
-    artifact = "org.bouncycastle:bcprov-jdk15on:" + BOUNCYCASTLE_VERSION,
-    sha1 = "88a941faf9819d371e3174b5ed56a3f3f7d73269",
-  )
-
-  native.maven_jar(
-    name = "bouncycastle_bcpkix",
-    artifact = "org.bouncycastle:bcpkix-jdk15on:" + BOUNCYCASTLE_VERSION,
-    sha1 = "b8ffac2bbc6626f86909589c8cc63637cc936504",
-  )
-
-  native.maven_jar(
-    name = "bouncycastle_bcpg",
-    artifact = "org.bouncycastle:bcpg-jdk15on:" + BOUNCYCASTLE_VERSION,
-    sha1 = "ff4665a4b5633ff6894209d5dd10b7e612291858",
   )
 
 
