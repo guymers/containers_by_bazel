@@ -19,7 +19,7 @@ readonly locales=("${@:3}")
 cat << EOF > "$out_dir/create.sh"
 set -e
 
-for locale in "$locales"; do
+for locale in "${locales[@]}"; do
   localedef -i "\${locale%.*}" -f "\${locale#*.}" "\$locale"
 done
 

@@ -1,3 +1,4 @@
+# shellcheck disable=SC2030 disable=SC2031 disable=SC2148
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
 # distributed with this work for additional information
@@ -16,7 +17,7 @@
 
 # Read user-defined JVM options from jvm.options file
 JVM_OPTS_FILE="$CASSANDRA_CONF/jvm.options"
-for opt in `grep "^-" $JVM_OPTS_FILE`
+grep "^-" "$JVM_OPTS_FILE" | while IFS= read -r opt
 do
   JVM_OPTS="$JVM_OPTS $opt"
 done

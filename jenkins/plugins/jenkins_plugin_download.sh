@@ -22,7 +22,8 @@ function download() {
     curl --connect-timeout 10 --retry 3 --retry-delay 1 --retry-max-time 30 -s -f -L "$download_url" -o "$tmp_file"
     unzip -qqt "$tmp_file"
   fi
-  local sha256=$(sha256sum "$tmp_file" | awk '{print $1}')
+  local sha256
+  sha256=$(sha256sum "$tmp_file" | awk '{print $1}')
 
   echo "$name" "$version" "$url" "$sha256"
 }
