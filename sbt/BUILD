@@ -1,3 +1,5 @@
+IVY2_HOME = "/ivy2"
+
 container_layer(
   name = "files",
   directory = "/usr/share",
@@ -10,7 +12,7 @@ container_layer(
 container_layer(
   name = "config",
   directory = "/usr/share/sbt/conf",
-  files = ["files/sbt/conf/sbtopts"],
+  files = ["sbt/conf/sbtopts"],
   symlinks = {
     "./etc/sbt/sbtopts": "/usr/share/sbt/conf/sbtopts",
   },
@@ -21,7 +23,7 @@ container_layer(
   name = "ivy_cache_permissions",
   directory = "/",
   mode = "0777",
-  files = ["files/ivy2"],
+  files = ["ivy2"],
 )
 
 container_image(
@@ -33,6 +35,6 @@ container_image(
     ":ivy_cache_permissions",
   ],
   cmd = ["sbt"],
-  volumes = ["/ivy2"],
+  volumes = [IVY2_HOME],
   visibility = ["//visibility:public"],
 )
