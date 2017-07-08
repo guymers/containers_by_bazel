@@ -9,6 +9,12 @@ fi
 
 JAVA_OPTS="$JAVA_OPTS -server -XX:+AlwaysPreTouch -XX:+UnlockExperimentalVMOptions"
 
+# https://stackoverflow.com/a/2325109
+JAVA_RANDOM_PERFORMANCE=${JAVA_RANDOM_PERFORMANCE:-true}
+if [ "$JAVA_RANDOM_PERFORMANCE" = "true" ]; then
+  JAVA_OPTS="$JAVA_OPTS -Djava.security.egd=file:/dev/./urandom"
+fi
+
 AUTO_JAVA_HEAP_SIZE=${AUTO_JAVA_HEAP_SIZE:-true}
 if [ "$AUTO_JAVA_HEAP_SIZE" = "true" ]; then
   if [ -n "$JAVA_HEAP_SIZE_PERCENTAGE" ]; then
