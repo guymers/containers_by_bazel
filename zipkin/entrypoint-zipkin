@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+if [ "$1" = 'zipkin' ]; then
+  source /java-opts.sh
+
+  exec chroot --userspec=zipkin / java $JAVA_OPTS -cp /opt/zipkin/. org.springframework.boot.loader.PropertiesLauncher
+else
+  exec "$@"
+fi

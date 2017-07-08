@@ -17,6 +17,7 @@ load(
   "PROMETHEUS_JMX_JAVAAGENT",
   "SBT_VERSION",
   "YARN_VERSION",
+  "ZIPKIN_VERSION",
   "ZOOKEEPER_VERSION"
 )
 load("//deps/jessie:jessie.bzl", "deb_jessie")
@@ -168,6 +169,19 @@ def dependency_repositories():
     name = "ejabberd",
     url = "https://www.process-one.net/downloads/ejabberd/" + EJABBERD_VERSION + "/ejabberd_" + EJABBERD_VERSION + "-0_amd64.deb",
     sha256 = "cc77e26c43c89dd382889ea3bd4a509033a9f746190ad6e198b557cb940a881f",
+  )
+
+  ###### ZIPKIN
+  native.http_file(
+    name = "zipkin",
+    url = "https://jcenter.bintray.com/io/zipkin/java/zipkin-server/" + ZIPKIN_VERSION + "/zipkin-server-" + ZIPKIN_VERSION + "-exec.jar",
+    sha256 = "00422d2b67f9e0b8bddb8e91ae6ca8ecfdd47d695c45d1c55ae271da2aebc769",
+  )
+
+  native.http_file(
+    name = "zipkin_kafka",
+    url = "https://jcenter.bintray.com/io/zipkin/java/zipkin-autoconfigure-collector-kafka10/" + ZIPKIN_VERSION + "/zipkin-autoconfigure-collector-kafka10-" + ZIPKIN_VERSION + "-module.jar",
+    sha256 = "d1caadd7049a27f1f9b0cd4ca9e2647533b9a29a0cf5d6ed87e1d499983eb48e",
   )
 
   ###### JASPER
