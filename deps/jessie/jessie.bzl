@@ -996,8 +996,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libsmbclient",
-    url = "http://security.debian.org/pool/updates/main/s/samba/libsmbclient_4.2.14+dfsg-0+deb8u6_amd64.deb",
-    sha256 = "bcae9dbdc47ed4a13eec7db2711c9d831808ef8815f0e8588d644d388937ae06",
+    url = "http://security.debian.org/pool/updates/main/s/samba/libsmbclient_4.2.14+dfsg-0+deb8u7+b1_amd64.deb",
+    sha256 = "aecf00f43cea47ceaf11f6d490cb2fbbb34c5b4c17474a1d503fce334bfb92a5",
   )
   native.http_file(
     name = "deb_jessie_libsndfile1",
@@ -1141,8 +1141,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libwbclient0",
-    url = "http://security.debian.org/pool/updates/main/s/samba/libwbclient0_4.2.14+dfsg-0+deb8u6_amd64.deb",
-    sha256 = "4b846ee944ff7fcde5f0a422a02a619700bb53c291c9d75502712aadff0acf3c",
+    url = "http://security.debian.org/pool/updates/main/s/samba/libwbclient0_4.2.14+dfsg-0+deb8u7+b1_amd64.deb",
+    sha256 = "95949a324998cccc39c377347887fd055fce1ee8a28866af1618d58641acf2df",
   )
   native.http_file(
     name = "deb_jessie_libwebp5",
@@ -1381,8 +1381,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nodejs",
-    url = "https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/nodejs_8.1.3-1nodesource1~jessie1_amd64.deb",
-    sha256 = "aa93260edbc10c2553d1c67d525cb8cebf1da326d870f6388c6e7ffd07e30ceb",
+    url = "https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/nodejs_8.1.4-2nodesource1~jessie1_amd64.deb",
+    sha256 = "e5f39f965a94ffaa5d32c607c04969fff087d9a3f8710d2701ee36f8b21bda74",
   )
   native.http_file(
     name = "deb_jessie_numactl",
@@ -1451,13 +1451,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_postgresql_client_common",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_183.pgdg80+1_all.deb",
-    sha256 = "cc0e2b11c8ee9ebb7ae5f6b7020a5275d45f974269119ee286ace06b8625b866",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_184.pgdg80+1_all.deb",
+    sha256 = "4790955b127f1428f95a86f993de812d36e30fe025517fc545c8e02025a01e6b",
   )
   native.http_file(
     name = "deb_jessie_postgresql_common",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_183.pgdg80+1_all.deb",
-    sha256 = "9a4ed4078c62fa8e7b51d7931814e2675ae41ac7150d760bd96668dfddd5b0ba",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_184.pgdg80+1_all.deb",
+    sha256 = "05ef024ab6571e104c1c24ea5bc5473b958d16a6050f6ee5034b23a89e8a78f1",
   )
   native.http_file(
     name = "deb_jessie_postgresql_contrib_9_6",
@@ -1516,8 +1516,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_samba_libs",
-    url = "http://security.debian.org/pool/updates/main/s/samba/samba-libs_4.2.14+dfsg-0+deb8u6_amd64.deb",
-    sha256 = "add91ace1b911e8fcb5d4c9c918a5bfe912f39458eeed19c7348fc1fa6756580",
+    url = "http://security.debian.org/pool/updates/main/s/samba/samba-libs_4.2.14+dfsg-0+deb8u7+b1_amd64.deb",
+    sha256 = "963e1098fd910aca4d4d5d774b9c69c647d1ac60347dc2fd84f3356894944979",
   )
   native.http_file(
     name = "deb_jessie_shared_mime_info",
