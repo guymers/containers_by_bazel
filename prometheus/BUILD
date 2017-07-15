@@ -2,6 +2,7 @@ load("//macros/user:user.bzl", "user_layer")
 load("//scripts/versions:versions.bzl", "PROMETHEUS_JMX_JAVAAGENT")
 
 PROMETHEUS_HOME = "/prometheus"
+PROMETHEUS_CONF = "/etc/prometheus"
 
 user_layer(
   name = "user",
@@ -17,25 +18,31 @@ container_layer(
 )
 
 container_layer(
-  name = "scripts",
+  name = "init",
   directory = "/",
-  files = ["entrypoint-prometheus", "etc"],
+  files = ["entrypoint-prometheus"],
+)
+
+container_layer(
+  name = "config",
+  directory = PROMETHEUS_CONF,
+  files = glob(["etc/prometheus/*"]),
 )
 
 container_image(
   name = "prometheus",
   base = "//base:jessie",
-  layers = [":user", ":files", ":scripts"],
+  layers = [":user", ":files", ":init", ":config"],
   env = {
     "PROMETHEUS_HOME": PROMETHEUS_HOME,
   },
-  volumes = [PROMETHEUS_HOME, "/etc/prometheus"],
+  volumes = [PROMETHEUS_HOME, PROMETHEUS_CONF],
   ports = ["9090"],
   workdir = PROMETHEUS_HOME,
   entrypoint = ["/entrypoint-prometheus"],
   cmd = [
     "/opt/prometheus",
-    "-config.file", "/etc/prometheus/prometheus.yml",
+    "-config.file", PROMETHEUS_CONF + "/prometheus.yml",
     "-storage.local.path", PROMETHEUS_HOME,
   ],
   visibility = ["//visibility:public"],
