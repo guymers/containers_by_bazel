@@ -35,7 +35,7 @@ genrule(
   name = "create_database",
   srcs = [":temp_database_tomcat.tar"],
   outs = ["jasperserver.dump"],
-  cmd = "$(location :create_jasperserver_database) $< $@",
+  cmd = "$(location :create_jasperserver_database) $< > $@",
   tools = [":create_jasperserver_database"],
   local = 1, # ignore sandboxing as script connects to docker
   visibility = ["//jasper/database:__pkg__"],

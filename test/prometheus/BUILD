@@ -6,7 +6,7 @@ container_image(
 
 container_test(
   name = "prometheus",
-  size = "small",
+  size = "medium",
   image = ":prometheus_wget",
   daemon = True,
   test = "test.sh",

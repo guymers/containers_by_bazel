@@ -1,3 +1,5 @@
+load("@bazel_tools//tools/build_defs/pkg:pkg.bzl", "pkg_tar")
+
 container_layer(
   name = "locale",
   debs = ["//deps/jessie:locales"],
@@ -16,11 +18,17 @@ container_image(
   layers = [":locale_files"],
 )
 
-genrule(
+pkg_tar(
   name = "locale_archive_tar",
+  package_dir = "/usr/lib/locale",
+  files = [":locale_archive_file"],
+)
+
+genrule(
+  name = "locale_archive_file",
   srcs = [":locales.tar"],
-  outs = ["locale-archive.tar"],
-  cmd = "$(location :locale_gen_sh) $< $@ 'en_US.UTF-8'",
+  outs = ["locale-archive"],
+  cmd = "$(location :locale_gen_sh) $< 'en_US.UTF-8' > $@",
   local = 1, # ignore sandboxing as script connects to docker
   tools = [":locale_gen_sh"],
 )

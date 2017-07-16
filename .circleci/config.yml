@@ -1,0 +1,58 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/containers_by_bazel
+    docker:
+      - image: circleci/openjdk:8-jdk
+
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Install docker client
+          command: |
+            VER="17.05.0-ce"
+            curl -L -o /tmp/docker-$VER.tgz https://get.docker.com/builds/Linux/x86_64/docker-$VER.tgz
+            tar -xz -C /tmp -f /tmp/docker-$VER.tgz
+            sudo mv /tmp/docker/docker* /usr/bin
+            docker -v
+      - run:
+          name: Install docker wrapper
+          command: |
+            echo "#!/bin/bash" > /tmp/docker_wrapper
+            echo "export DOCKER_TLS_VERIFY=$DOCKER_TLS_VERIFY" >> /tmp/docker_wrapper
+            echo "export DOCKER_HOST=$DOCKER_HOST" >> /tmp/docker_wrapper
+            echo "export DOCKER_CERT_PATH=$DOCKER_CERT_PATH" >> /tmp/docker_wrapper
+            echo "export DOCKER_MACHINE_NAME=$DOCKER_MACHINE_NAME" >> /tmp/docker_wrapper
+            echo "/usr/bin/docker \"\$@\"" >> /tmp/docker_wrapper
+            sudo chmod +x /tmp/docker_wrapper
+            sudo mv /tmp/docker_wrapper /usr/local/bin/docker
+            docker -v
+      - run:
+          name: Install bazel
+          command: |
+            echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
+            curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
+            sudo apt-get update
+            sudo apt-get install bazel=0.5.2
+            bazel version
+
+      - run: bazel fetch //test/... || true
+      - run: bazel build //test/...
+      # the container only has 2 cores but the machine says it has more so explicitly set
+      # the number of jobs to avoid test timeouts
+      - run: bazel test --verbose_failures --jobs 2 --test_tag_filters=-not_circleci //test/...
+
+      # circleci requires xml test results to be in a single folder and cannot upload a symlink
+      - run:
+          command: |
+            mkdir -p testlogs/ && cp -r bazel-testlogs/ testlogs/
+            mkdir -p testresults/ && find bazel-testlogs/ -name *.xml -exec bash -c 'cp $1 testresults/${1//\//-}' _ {} \;
+          when: always
+
+      - store_test_results:
+          path: testresults/
+
+      - store_artifacts:
+          path: testlogs/
+          destination: testlogs

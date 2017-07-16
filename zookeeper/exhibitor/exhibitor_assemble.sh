@@ -8,15 +8,16 @@ readonly docker_image_id=$(
     sed -r -e 's#.*"Config":.*?"([0-9a-f]+)\.json".*#\1#'
 )
 readonly docker_image="sha256:$docker_image_id"
-docker load -i "$docker_tar"
+docker load -i "$docker_tar" > /dev/null
 
 readonly pom_file="$2"
+readonly pom_file_contents=$(cat "$pom_file")
 
-readonly out="$3"
-readonly out_dir=$(dirname "$out")
-readonly out_file=$(basename "$out")
+cat << EOF | docker run --rm -i "$docker_image" bash
+set -e
 
-cp "$pom_file" "$out_dir"
-
-cmd="cd /output && mvn clean package && mv target/exhibitor-1.5.6.jar $out_file && rm -r target && chown $(id -u):$(id -g) $out_file"
-docker run --rm -v "$(pwd)/$out_dir":/output "$docker_image" bash -c "$cmd" > /dev/null
+cd /tmp
+echo '$pom_file_contents' > pom.xml
+mvn clean package
+cat target/exhibitor-1.5.6.jar
+EOF

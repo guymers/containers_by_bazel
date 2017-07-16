@@ -7,8 +7,8 @@ bazel run //jasper/client
 ## Server
 
 ```
-docker run -ti --rm --name jasper-postgres bazel/jasper/database:database
-docker run -ti --rm -m 1024m -p 8080:8080 --link jasper-postgres:postgres bazel/jasper/server:server
+docker run --rm --name jasper-postgres bazel/jasper/database:database
+docker run --rm -m 1024m -p 8080:8080 --link jasper-postgres:postgres bazel/jasper/server:server
 ```
 
 Open http://localhost:8080, log in with jasperadmin:jasperadmin

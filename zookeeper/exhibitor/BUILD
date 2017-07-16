@@ -5,7 +5,7 @@ genrule(
     "pom.xml",
   ],
   outs = ["exhibitor.jar"],
-  cmd = "$(location :exhibitor_assemble) $(SRCS) $@",
+  cmd = "$(location :exhibitor_assemble) $(SRCS) > $@",
   tools = [":exhibitor_assemble"],
   local = 1, # ignore sandboxing as script connects to docker
   visibility = ["//zookeeper:__pkg__"],

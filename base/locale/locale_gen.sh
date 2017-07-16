@@ -8,25 +8,16 @@ readonly docker_image_id=$(
     sed -r -e 's#.*"Config":.*?"([0-9a-f]+)\.json".*#\1#'
 )
 readonly docker_image="sha256:$docker_image_id"
-docker load -i "$docker_tar"
+docker load -i "$docker_tar" > /dev/null
 
-readonly out="$2"
-readonly out_dir=$(dirname "$out")
-readonly out_file=$(basename "$out")
+readonly locales=("${@:2}")
 
-readonly locales=("${@:3}")
-
-cat << EOF > "$out_dir/create.sh"
+cat << EOF | docker run --rm -i "$docker_image" bash
 set -e
 
 for locale in "${locales[@]}"; do
   localedef -i "\${locale%.*}" -f "\${locale#*.}" "\$locale"
 done
 
-tar -c -f "/output/$out_file" /usr/lib/locale/locale-archive
+cat /usr/lib/locale/locale-archive
 EOF
-
-readonly cmd="bash /output/create.sh && chown $(id -u):$(id -g) /output/$out_file"
-docker run --rm -v "$(pwd)/$out_dir":/output "$docker_image" bash -c "$cmd" > /dev/null
-
-rm -f "$out_dir/create.sh"

@@ -8,4 +8,5 @@ container_test(
   options = ["--cap-add=NET_ADMIN", "--dns=127.0.0.1"],
   test = "test.sh",
   golden = "output.txt",
+  tags = ["not_circleci"], # remote docker doesnt support volumes
 )
