@@ -30,17 +30,17 @@ def dependency_repositories():
     tag = "0.5.1",
   )
 
-  # Update to 20170620 for amd64 (debuerreotype 0.2)
+  # Update to 20170723 for amd64 (debuerreotype 0.2)
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/af5a0043a929e0c87f7610da93bfe599ac40f29b/jessie/slim/rootfs.tar.xz",
-    sha256 = "92473def299d4cbb78e65480eb821bb3e9c40d57a72c7f568eb32c20e9721c3d",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/42bec5bc2f5a76ceeb125bc4e66d6f70a95e933f/jessie/slim/rootfs.tar.xz",
+    sha256 = "e0dd02851254598988e085a971e90400eccd7ec37a1eba1358b6b4db5ca67cec",
   )
-  # Update to 20170620 for amd64 (debuerreotype 0.2)
+  # Update to 20170723 for amd64 (debuerreotype 0.2)
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/af5a0043a929e0c87f7610da93bfe599ac40f29b/stretch/slim/rootfs.tar.xz",
-    sha256 = "d4da343de81520f8e39fecd0c896491f0fe50d705ce51ae5cecf5554fdacd3d4",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/42bec5bc2f5a76ceeb125bc4e66d6f70a95e933f/stretch/slim/rootfs.tar.xz",
+    sha256 = "1da2bcb090f43983974d9e498972b105531d24cb80dc80ee6e79c08fe9df9f3f",
   )
 
   deb_jessie()
@@ -83,8 +83,9 @@ def dependency_repositories():
 
   native.new_http_archive(
     name = "sbt",
-    url = "https://dl.bintray.com/sbt/native-packages/sbt/" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "b6e073d7c201741dcca92cfdd1dd3cd76c42a47dc9d8c8ead8df7117deed7aef",
+    url = "https://cocl.us/sbt01316tgz",
+    type = "tgz",
+    sha256 = "22729580a581e966259267eda4d937a2aecad86848f8a82fcc716dcae8dc760c",
     build_file_content = "exports_files(['sbt'])",
   )
 
@@ -100,7 +101,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "34fde424dde0e050738f5ad1e316d54f741c237bd380bd663a07f96147bb1390",
+    sha256 = "14d0788d89be82958a46965de039a55813f9727bd4d0592dc77905976483ba95",
   )
   native.http_file(
     name = "jenkins_agent_jar",
@@ -151,7 +152,7 @@ def dependency_repositories():
   native.http_file(
     name = "yarnpkg",
     url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "26eedf8e6f41d9faa0f19eb686bc4331dc42de1a21e45e85fabececb9a512b7c",
+    sha256 = "216ac08fecef0cda1f8d0cc8ebd5eaa0af91da5b102d44dcf5bb5c53be3a5c2c",
   )
 
 
@@ -175,13 +176,13 @@ def dependency_repositories():
   native.http_file(
     name = "zipkin",
     url = "https://jcenter.bintray.com/io/zipkin/java/zipkin-server/" + ZIPKIN_VERSION + "/zipkin-server-" + ZIPKIN_VERSION + "-exec.jar",
-    sha256 = "00422d2b67f9e0b8bddb8e91ae6ca8ecfdd47d695c45d1c55ae271da2aebc769",
+    sha256 = "557832a7915e45fa21fa644ed8f35ae4858bd9baed3fdf4889e0a17f26709f4c",
   )
 
   native.http_file(
     name = "zipkin_kafka",
     url = "https://jcenter.bintray.com/io/zipkin/java/zipkin-autoconfigure-collector-kafka10/" + ZIPKIN_VERSION + "/zipkin-autoconfigure-collector-kafka10-" + ZIPKIN_VERSION + "-module.jar",
-    sha256 = "d1caadd7049a27f1f9b0cd4ca9e2647533b9a29a0cf5d6ed87e1d499983eb48e",
+    sha256 = "25013cdcc12b09132e965083f8a5b52e3df0f2a21e2c093cad823aef3886bbd8",
   )
 
   ###### JASPER

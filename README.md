@@ -55,6 +55,7 @@ You can use the ./build_container script. It ensures that you cannot override th
 
     bazel build //scripts/versions
     source ./bazel-bin/scripts/versions/versions.sh
+    ./scripts/build_container.sh //cassandra cassandra ${CASSANDRA_VERSION}
     ./scripts/build_container.sh //dnsmasq dnsmasq ${DNSMASQ_VERSION}
     ./scripts/build_container.sh //ejabberd ejabberd ${EJABBERD_VERSION}
     ./scripts/build_container.sh //elasticsearch elasticsearch ${ELASTICSEARCH_VERSION}
@@ -69,11 +70,13 @@ You can use the ./build_container script. It ensures that you cannot override th
     ./scripts/build_container.sh //nginx nginx ${NGINX_VERSION}
     ./scripts/build_container.sh //nodejs nodejs ${NODEJS_VERSION}
     ./scripts/build_container.sh //php php ${PHP_VERSION}
-    ./scripts/build_container.sh //prometheus prometheus ${PROMETHEUS_VERSION}
     ./scripts/build_container.sh //postgresql postgresql ${POSTGRESQL_VERSION}
     ./scripts/build_container.sh //postgresql:postgis postgis ${POSTGRESQL_VERSION}-${POSTGIS_VERSION}
+    ./scripts/build_container.sh //prometheus prometheus ${PROMETHEUS_VERSION}
+    ./scripts/build_container.sh //rabbitmq rabbitmq ${RABBITMQ_VERSION}
     ./scripts/build_container.sh //redis redis ${REDIS_VERSION}
     ./scripts/build_container.sh //sbt sbt ${SBT_VERSION}
+    ./scripts/build_container.sh //zipkin zipkin ${ZIPKIN_VERSION}
     ./scripts/build_container.sh //zookeeper zookeeper ${ZOOKEEPER_VERSION}
 
 To test:

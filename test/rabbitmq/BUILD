@@ -6,7 +6,7 @@ container_image(
 
 container_test(
   name = "rabbitmq",
-  size = "small",
+  size = "medium",
   image = ":rabbitmq_nodejs",
   daemon = True,
   test = "test.sh",

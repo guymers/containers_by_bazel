@@ -385,11 +385,6 @@ def deb_stretch():
     sha256 = "6a8e57604f8cf6df56767127a3e281b0cc1321bbf08fbc8b0303dd190d97526d",
   )
   native.http_file(
-    name = "deb_stretch_perl_base",
-    url = "http://deb.debian.org/debian/pool/main/p/perl/perl-base_5.24.1-3+deb9u1_amd64.deb",
-    sha256 = "6ffc5fce29f12d52c0c6d8534ffe17d7140842efd4c02f303ffe2d188358b615",
-  )
-  native.http_file(
     name = "deb_stretch_perl_modules_5_24",
     url = "http://deb.debian.org/debian/pool/main/p/perl/perl-modules-5.24_5.24.1-3+deb9u1_all.deb",
     sha256 = "cd1d5210e8ca98b85bae8c2be7940403bf18c5668a20ed623f9880596873ce91",

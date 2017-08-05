@@ -115,7 +115,6 @@ filegroup(
     "@deb_stretch_m4//file",
     "@deb_stretch_mime_support//file",
     "@deb_stretch_perl//file",
-    "@deb_stretch_perl_base//file",
     "@deb_stretch_perl_modules_5_24//file",
     "@deb_stretch_php7_0_cli//file",
     "@deb_stretch_php7_0_common//file",

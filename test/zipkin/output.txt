@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Webpack App</title>
-  <link href="/zipkin/app-7c5230d2db0e102ed853.min.css" rel="stylesheet"></head>
+  <link href="/zipkin/app-3e5d8c94e20c3f7316d1.min.css" rel="stylesheet"></head>
   <body>
-  <script type="text/javascript" src="/zipkin/app-7c5230d2db0e102ed853.min.js"></script></body>
+  <script type="text/javascript" src="/zipkin/app-3e5d8c94e20c3f7316d1.min.js"></script></body>
 </html>

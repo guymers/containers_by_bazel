@@ -171,8 +171,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_gerrit",
-    url = "http://deb.gerritforge.com/dists/gerrit/contrib/binary-amd64/gerrit-2.14.1-1.noarch.deb",
-    sha256 = "b7e91c70d3b194050f92b5cb078cb6001a0f077c5d2e9da58af3cf8da7b913f0",
+    url = "http://deb.gerritforge.com/dists/gerrit/contrib/binary-amd64/gerrit-2.14.2-1.noarch.deb",
+    sha256 = "3472bbf90073f86dddc1645d1dc78d16a8664e9bd58513313a1040b24a4b3ecf",
   )
   native.http_file(
     name = "deb_jessie_gettext_base",
@@ -191,8 +191,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_grafana",
-    url = "https://packagecloud.io/grafana/stable/debian/pool/wheezy/main/g/grafana/grafana_4.3.2_amd64.deb",
-    sha256 = "81b83fad501003621465d14d6a309353c63a46622abd9c9849615e8cea91ef79",
+    url = "https://packagecloud.io/grafana/stable/debian/pool/wheezy/main/g/grafana/grafana_4.4.2_amd64.deb",
+    sha256 = "684acc3859de06dc3b2c4081413307513bcc0ba0fe1f6872a5bf10b407dcf098",
   )
   native.http_file(
     name = "deb_jessie_init_system_helpers",
@@ -721,8 +721,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_liblwgeom_2_3_0",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/liblwgeom-2.3-0_2.3.2+dfsg-1~exp2.pgdg80+1_amd64.deb",
-    sha256 = "68066b51cde6355a9d5d87396ac937c62ad7e644a7bd52adbbaf213137576fe7",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/liblwgeom-2.3-0_2.3.3+dfsg-1.pgdg80+1_amd64.deb",
+    sha256 = "c932086813278e600bcfd70bc4c279dff58b7a62dfc95b57569111d087836a60",
   )
   native.http_file(
     name = "deb_jessie_libmad0",
@@ -761,8 +761,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libmysqlclient18",
-    url = "http://deb.debian.org/debian/pool/main/m/mysql-5.5/libmysqlclient18_5.5.55-0+deb8u1_amd64.deb",
-    sha256 = "16cc1e9524ddd952e57f5bef60cd58e047a52bbe91c983e7bc703cfaead82fc1",
+    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/libmysqlclient18_5.5.57-0+deb8u1_amd64.deb",
+    sha256 = "1fdc7f9283717d5be6ea85877abcdb3f5ddcf7ac912f51e539069776b9b6b760",
   )
   native.http_file(
     name = "deb_jessie_libnetcdfc7",
@@ -1356,8 +1356,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_mysql_common",
-    url = "http://deb.debian.org/debian/pool/main/m/mysql-5.5/mysql-common_5.5.55-0+deb8u1_all.deb",
-    sha256 = "aa45126c71ab1978d3e2d7b2e498ecc55778627a40361c75011a2a631151dcba",
+    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/mysql-common_5.5.57-0+deb8u1_all.deb",
+    sha256 = "8e88095a88261a4984fe66ed7489cbed5af2bd82aaa67d41f6ccfbfd5765193c",
   )
   native.http_file(
     name = "deb_jessie_netbase",
@@ -1376,8 +1376,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nginx",
-    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.13.2-1~jessie_amd64.deb",
-    sha256 = "eaab198195757d24e71f2940b53eecea1e99a81cd9621b3fce60b25b48caf29a",
+    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.13.3-1~jessie_amd64.deb",
+    sha256 = "8282a98426c17c1cf82e9388a8486c9f2d1c469854729fd0b4e45bc994c20097",
   )
   native.http_file(
     name = "deb_jessie_nodejs",
@@ -1415,11 +1415,6 @@ def deb_jessie():
     sha256 = "1d3ec73cbf0d4598a65fd22f3f445944bfb309d23257faa4b20e1b1435c4df49",
   )
   native.http_file(
-    name = "deb_jessie_perl_base",
-    url = "http://deb.debian.org/debian/pool/main/p/perl/perl-base_5.20.2-3+deb8u8_amd64.deb",
-    sha256 = "8d03a205b6e58a766dde83299e7c10b471faa9feb3a3edfd209e064d0aa5990b",
-  )
-  native.http_file(
     name = "deb_jessie_perl_modules",
     url = "http://deb.debian.org/debian/pool/main/p/perl/perl-modules_5.20.2-3+deb8u8_all.deb",
     sha256 = "3326332bdd54d549a3f1dbc5ec26ed56aefeaeaf5f98c9f929a5ebe861ddb24c",
@@ -1431,8 +1426,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_postgis",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgis_2.3.2+dfsg-1~exp2.pgdg80+1_amd64.deb",
-    sha256 = "5ae76db347b1c68f28e3a0bd129665d16746dba4a79d663af39e04321a73c972",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgis_2.3.3+dfsg-1.pgdg80+1_amd64.deb",
+    sha256 = "c878d6f06e9cf81750e5052934ca4c184faeb04073b4a6527124edb92e018e16",
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_6",
@@ -1441,13 +1436,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_6_postgis_2_3",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.6-postgis-2.3_2.3.2+dfsg-1~exp2.pgdg80+1_amd64.deb",
-    sha256 = "e686a82775ae95915b61184ee30ccbc4276fcfd47229c4114d5602609484000b",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.6-postgis-2.3_2.3.3+dfsg-1.pgdg80+1_amd64.deb",
+    sha256 = "46355ba04f4eba2c9e7dd157cf2be3e8d763d9e9489de5bde3b7621cad49b3a1",
   )
   native.http_file(
     name = "deb_jessie_postgresql_9_6_postgis_2_3_scripts",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.6-postgis-2.3-scripts_2.3.2+dfsg-1~exp2.pgdg80+1_all.deb",
-    sha256 = "9bc95d7285491e97c37a657dca12d3364eca966c7deffc599062e06f83459b2e",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-9.6-postgis-2.3-scripts_2.3.3+dfsg-1.pgdg80+1_all.deb",
+    sha256 = "094b0bd772c8510a86820b9aa415fdbb68e4594c4d00221f85b372388e900419",
   )
   native.http_file(
     name = "deb_jessie_postgresql_client_9_6",
@@ -1571,6 +1566,6 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_zulu_8",
-    url = "http://repos.azulsystems.com/debian/pool/main/zulu8.21.0.1-jdk8.0.131-linux_amd64.deb",
-    sha256 = "b4c0d496db48d157f183c1881712f8b127f8a37e0aa32aea80b5afcf03590a14",
+    url = "http://repos.azulsystems.com/debian/pool/main/zulu8.23.0.3-jdk8.0.144-linux_amd64.deb",
+    sha256 = "38ee5853bb545873fb10a3772b21dbc3b1a7b8a0f09c6733adfd21c514926f5f",
   )
