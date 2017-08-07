@@ -27,7 +27,7 @@ def dependency_repositories():
   native.git_repository(
     name = "bazel_rules_container",
     remote = "https://github.com/guymers/bazel_rules_container.git",
-    tag = "0.5.1",
+    tag = "0.5.2",
   )
 
   # Update to 20170723 for amd64 (debuerreotype 0.2)
