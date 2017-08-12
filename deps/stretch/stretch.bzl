@@ -276,8 +276,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libpq5",
-    url = "http://deb.debian.org/debian/pool/main/p/postgresql-9.6/libpq5_9.6.3-3_amd64.deb",
-    sha256 = "925ebffbd4a83826ace7a8dc95dd72159e3e022767914a298bd4c87e3a7545ed",
+    url = "http://security.debian.org/pool/updates/main/p/postgresql-9.6/libpq5_9.6.4-0+deb9u1_amd64.deb",
+    sha256 = "5eeda8bbbf8207432ea5ddcce04aa59135fd95b2ad49744f54ffcd84f8a2046e",
   )
   native.http_file(
     name = "deb_stretch_libprocps6",
@@ -366,8 +366,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_linux_libc_dev",
-    url = "http://deb.debian.org/debian/pool/main/l/linux/linux-libc-dev_4.9.30-2+deb9u2_amd64.deb",
-    sha256 = "01c67a48771d0487187ee300330b8ced9c44b63a714fe04a5158fef42dff6e0b",
+    url = "http://security.debian.org/pool/updates/main/l/linux/linux-libc-dev_4.9.30-2+deb9u3_amd64.deb",
+    sha256 = "39ef211b9e56214bf44a7aa148f4218d09cff44cb8d35bfe5a61c227eb03865f",
   )
   native.http_file(
     name = "deb_stretch_m4",
