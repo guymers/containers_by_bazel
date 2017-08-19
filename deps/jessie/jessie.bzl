@@ -1381,8 +1381,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nodejs",
-    url = "https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/nodejs_8.3.0-1nodesource1~jessie1_amd64.deb",
-    sha256 = "d219794faa79418bddaa8e94b74c3ffd7bfcbb383fd71b99cdb5ca215a38f089",
+    url = "https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/nodejs_8.4.0-1nodesource1~jessie1_amd64.deb",
+    sha256 = "8bffaa9cedc29f7ca9bb16b015948ff032b12b53c8c6ad5335073571374c1961",
   )
   native.http_file(
     name = "deb_jessie_numactl",
@@ -1501,8 +1501,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_rabbitmq_server",
-    url = "http://www.rabbitmq.com/debian/pool/main/r/rabbitmq-server/rabbitmq-server_3.6.10-1_all.deb",
-    sha256 = "7b23114de13fb4bfd8c962c6d9f915f3d692c3c6623ca122c3abd5d4980d772b",
+    url = "http://www.rabbitmq.com/debian/pool/main/r/rabbitmq-server/rabbitmq-server_3.6.11-1_all.deb",
+    sha256 = "b487edba0bc5db5c745e62059bdc896866db22d584c26c78d50be3d61c8f5a18",
   )
   native.http_file(
     name = "deb_jessie_redis_server",
