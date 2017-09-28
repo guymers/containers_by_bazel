@@ -1,8 +1,31 @@
+load("//scripts/versions:versions.bzl", "NODEJS_VERSION")
+
+NODEJS_DIR = "/opt/node-v" + NODEJS_VERSION + "-linux-x64"
+
+genrule(
+  name = "nodejs_tar",
+  srcs = ["@nodejs//file"],
+  outs = ["nodejs_extracted.tar"],
+  cmd = "cat $< | xzcat >$@",
+)
+
 container_layer(
-  name = "files",
+  name = "nodejs_layer",
+  directory = "/opt",
+  tars = [":nodejs_tar"],
+  symlinks = {
+    "./opt/nodejs": NODEJS_DIR,
+#    "./opt/node-v" + NODEJS_VERSION + "-linux-x64/bin/node": "/usr/bin/node",
+#    "./opt/node-v" + NODEJS_VERSION + "-linux-x64/bin/npm": "/usr/bin/npm"
+  },
+
+  visibility = ["//visibility:public"],
+)
+
+container_layer(
+  name = "yarn_layer",
   directory = "/",
-  debs = ["//deps/jessie:nodejs", "@yarnpkg//file"],
-  symlinks = { "./usr/bin/node": "/usr/bin/nodejs" },
+  debs = ["@yarnpkg//file"],
 
   visibility = ["//visibility:public"],
 )
@@ -10,7 +33,10 @@ container_layer(
 container_image(
   name = "nodejs",
   base = "//base:jessie",
-  layers = [":files"],
+  layers = ["//base/ca_certificates", ":nodejs_layer", ":yarn_layer"],
+  env = {
+    "PATH": NODEJS_DIR + "/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+  },
 
   visibility = ["//visibility:public"],
 )

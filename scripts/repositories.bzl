@@ -12,6 +12,7 @@ load(
   "KIBANA_VERSION",
   "MAVEN_VERSION",
   "NEXUS_VERSION",
+  "NODEJS_VERSION",
   "PENATHO_DI_VERSION",
   "PROMETHEUS_VERSION",
   "PROMETHEUS_JMX_JAVAAGENT",
@@ -30,17 +31,17 @@ def dependency_repositories():
     tag = "0.5.2",
   )
 
-  # Update to 20170723 for amd64 (debuerreotype 0.2)
+  # Update to 20170907 for amd64 (debuerreotype 0.4)
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/42bec5bc2f5a76ceeb125bc4e66d6f70a95e933f/jessie/slim/rootfs.tar.xz",
-    sha256 = "e0dd02851254598988e085a971e90400eccd7ec37a1eba1358b6b4db5ca67cec",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/97dc072ae1e6c66c1ccc71ead334ce5d5fc201f0/jessie/slim/rootfs.tar.xz",
+    sha256 = "ca23d8efaaea9207728cde6afcb73bc9c98e73e18be173958f01ed8feb8831bf",
   )
-  # Update to 20170723 for amd64 (debuerreotype 0.2)
+  # Update to 20170907 for amd64 (debuerreotype 0.4)
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/42bec5bc2f5a76ceeb125bc4e66d6f70a95e933f/stretch/slim/rootfs.tar.xz",
-    sha256 = "1da2bcb090f43983974d9e498972b105531d24cb80dc80ee6e79c08fe9df9f3f",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/97dc072ae1e6c66c1ccc71ead334ce5d5fc201f0/stretch/slim/rootfs.tar.xz",
+    sha256 = "1e19b4c93d872585b1f7f577814e4242fab5dcbec18ec40a13c68b6dac210424",
   )
 
   deb_jessie()
@@ -147,6 +148,13 @@ def dependency_repositories():
     sha256 = "6277c0d711a6aae029521e80ccf0ba7faaac45ed91eb1524eb0122c812b50344",
   )
 
+
+  ###### NODEJS
+  native.http_file(
+    name = "nodejs",
+    url = "https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz",
+    sha256 = "e6f52c3ed7e2cc34ebddbc563434fdf043feb449a60f028101eb45227aec3444"
+  )
 
   ###### YARN
   native.http_file(

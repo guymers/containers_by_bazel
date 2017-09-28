@@ -13,7 +13,6 @@ dependencies(name = "jessie", dependencies = {
   ":jessie/jasper_client": "base",
   ":jessie/locales": "base",
   ":jessie/nginx": "nginx",
-  ":jessie/nodejs": "nodejs",
   ":jessie/postgis": "postgresql",
   ":jessie/postgresql": "postgresql",
   ":jessie/python": "base",

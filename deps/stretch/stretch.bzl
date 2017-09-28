@@ -31,8 +31,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_file",
-    url = "http://deb.debian.org/debian/pool/main/f/file/file_5.30-1_amd64.deb",
-    sha256 = "cba1e478ea64d74693bf1afad8c32d439bfbd77d5f0548b317c0be681f949119",
+    url = "http://security.debian.org/pool/updates/main/f/file/file_5.30-1+deb9u1_amd64.deb",
+    sha256 = "17f2e3a7f5e24fc20b1cf99b00d10c68d5fcc92dfc6cd76157f05744a2f4650b",
   )
   native.http_file(
     name = "deb_stretch_gcc",
@@ -201,13 +201,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libmagic1",
-    url = "http://deb.debian.org/debian/pool/main/f/file/libmagic1_5.30-1_amd64.deb",
-    sha256 = "10d857f80a196661d8e781b1fdd18472e06d8e059f4f4d6fa1fdfb3bcc733186",
+    url = "http://security.debian.org/pool/updates/main/f/file/libmagic1_5.30-1+deb9u1_amd64.deb",
+    sha256 = "94816946cab2a283807b8dbd4fb7a6c7aeaab23af488f9b7a9167f2ea4432062",
   )
   native.http_file(
     name = "deb_stretch_libmagic_mgc",
-    url = "http://deb.debian.org/debian/pool/main/f/file/libmagic-mgc_5.30-1_amd64.deb",
-    sha256 = "c32a259e30dc90811382c6fd4a1933d0e42bb35541d57b272cfa51c94f55db67",
+    url = "http://security.debian.org/pool/updates/main/f/file/libmagic-mgc_5.30-1+deb9u1_amd64.deb",
+    sha256 = "a3a1a60347df51db20d3e0136e45f4a5c024df3e9391006cfde26a1f5b1c2e23",
   )
   native.http_file(
     name = "deb_stretch_libmcrypt4",
@@ -271,8 +271,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libperl5_24",
-    url = "http://deb.debian.org/debian/pool/main/p/perl/libperl5.24_5.24.1-3+deb9u1_amd64.deb",
-    sha256 = "49f5d6b133842f5bd20b825f74158387f0ffe53d2c6d763e73be7f00664a96f8",
+    url = "http://security.debian.org/pool/updates/main/p/perl/libperl5.24_5.24.1-3+deb9u2_amd64.deb",
+    sha256 = "b5bb33b12989eaf81e5244b4001b29b202b03984ba2e99a7d55d47b6cb5db036",
   )
   native.http_file(
     name = "deb_stretch_libpq5",
@@ -361,13 +361,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libxml2",
-    url = "http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-2.2_amd64.deb",
-    sha256 = "a10bf557a6be45304b77971412bb5c49cbc8450522292574af4e5127edd87e76",
+    url = "http://security.debian.org/pool/updates/main/libx/libxml2/libxml2_2.9.4+dfsg1-2.2+deb9u1_amd64.deb",
+    sha256 = "ae2e74a33ea43d59d4a8294dd15a4ad4caeb059075968166cd3fd161167c5f2e",
   )
   native.http_file(
     name = "deb_stretch_linux_libc_dev",
-    url = "http://security.debian.org/pool/updates/main/l/linux/linux-libc-dev_4.9.30-2+deb9u3_amd64.deb",
-    sha256 = "39ef211b9e56214bf44a7aa148f4218d09cff44cb8d35bfe5a61c227eb03865f",
+    url = "http://security.debian.org/pool/updates/main/l/linux/linux-libc-dev_4.9.30-2+deb9u5_amd64.deb",
+    sha256 = "2c6600d9baeb3884e2b7eac03a70120336e93c1bedbee44c3c2b98f93194fb0f",
   )
   native.http_file(
     name = "deb_stretch_m4",
@@ -381,13 +381,18 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_perl",
-    url = "http://deb.debian.org/debian/pool/main/p/perl/perl_5.24.1-3+deb9u1_amd64.deb",
-    sha256 = "6a8e57604f8cf6df56767127a3e281b0cc1321bbf08fbc8b0303dd190d97526d",
+    url = "http://security.debian.org/pool/updates/main/p/perl/perl_5.24.1-3+deb9u2_amd64.deb",
+    sha256 = "c6803865eb13a131387832377543ff4e01eb9bfe680088851b6371a30664b9fb",
+  )
+  native.http_file(
+    name = "deb_stretch_perl_base",
+    url = "http://security.debian.org/pool/updates/main/p/perl/perl-base_5.24.1-3+deb9u2_amd64.deb",
+    sha256 = "f9364fe44929930ded591ac8486330a7aa7327bf65771a78b63fcf6ab0f6f767",
   )
   native.http_file(
     name = "deb_stretch_perl_modules_5_24",
-    url = "http://deb.debian.org/debian/pool/main/p/perl/perl-modules-5.24_5.24.1-3+deb9u1_all.deb",
-    sha256 = "cd1d5210e8ca98b85bae8c2be7940403bf18c5668a20ed623f9880596873ce91",
+    url = "http://security.debian.org/pool/updates/main/p/perl/perl-modules-5.24_5.24.1-3+deb9u2_all.deb",
+    sha256 = "2468a971fc48b8275f99b52f2c29bafe4041940d7ed6a4ecbbbcde642e1bcb47",
   )
   native.http_file(
     name = "deb_stretch_php7_0_bcmath",

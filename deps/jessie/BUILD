@@ -113,6 +113,7 @@ filegroup(
     "@deb_jessie_libssh2_1//file",
     "@deb_jessie_libtasn1_6//file",
     "@deb_jessie_perl//file",
+    "@deb_jessie_perl_base//file",
     "@deb_jessie_perl_modules//file",
   ],
 )
@@ -145,6 +146,7 @@ filegroup(
     "@deb_jessie_libssh2_1//file",
     "@deb_jessie_libtasn1_6//file",
     "@deb_jessie_perl//file",
+    "@deb_jessie_perl_base//file",
     "@deb_jessie_perl_modules//file",
   ],
 )
@@ -248,18 +250,10 @@ filegroup(
   name = "nginx",
   srcs = [
     "@deb_jessie_gettext_base//file",
+    "@deb_jessie_init_system_helpers//file",
     "@deb_jessie_libasprintf0c2//file",
     "@deb_jessie_libssl1_0_0//file",
     "@deb_jessie_nginx//file",
-  ],
-)
-
-filegroup(
-  name = "nodejs",
-  srcs = [
-    "@deb_jessie_ca_certificates//file",
-    "@deb_jessie_nodejs//file",
-    "@deb_jessie_openssl//file",
   ],
 )
 
@@ -482,6 +476,7 @@ filegroup(
     "@deb_jessie_odbcinst1debian2//file",
     "@deb_jessie_openssl//file",
     "@deb_jessie_perl//file",
+    "@deb_jessie_perl_base//file",
     "@deb_jessie_perl_modules//file",
     "@deb_jessie_pgdg_keyring//file",
     "@deb_jessie_postgis//file",
