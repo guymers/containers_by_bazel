@@ -84,9 +84,8 @@ def dependency_repositories():
 
   native.new_http_archive(
     name = "sbt",
-    url = "https://cocl.us/sbt-" + SBT_VERSION + ".tgz",
-    type = "tgz",
-    sha256 = "22729580a581e966259267eda4d937a2aecad86848f8a82fcc716dcae8dc760c",
+    url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
+    sha256 = "c3f063d8122d87f0d80b25221d76b0a164e9247d35190f31ec360edcb4352ef0",
     build_file_content = "exports_files(['sbt'])",
   )
 
