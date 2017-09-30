@@ -15,8 +15,8 @@ container_layer(
   tars = [":nodejs_tar"],
   symlinks = {
     "./opt/nodejs": NODEJS_DIR,
-#    "./opt/node-v" + NODEJS_VERSION + "-linux-x64/bin/node": "/usr/bin/node",
-#    "./opt/node-v" + NODEJS_VERSION + "-linux-x64/bin/npm": "/usr/bin/npm"
+    "/usr/local/bin/node": "/opt/node-v" + NODEJS_VERSION + "-linux-x64/bin/node",
+    "/usr/local/bin/npm": "/opt/node-v" + NODEJS_VERSION + "-linux-x64/bin/npm",
   },
 
   visibility = ["//visibility:public"],
@@ -34,9 +34,6 @@ container_image(
   name = "nodejs",
   base = "//base:jessie",
   layers = ["//base/ca_certificates", ":nodejs_layer", ":yarn_layer"],
-  env = {
-    "PATH": NODEJS_DIR + "/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
-  },
 
   visibility = ["//visibility:public"],
 )

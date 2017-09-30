@@ -21,7 +21,7 @@ container_image(
 pkg_tar(
   name = "locale_archive_tar",
   package_dir = "/usr/lib/locale",
-  files = [":locale_archive_file"],
+  srcs = [":locale_archive_file"],
 )
 
 genrule(
