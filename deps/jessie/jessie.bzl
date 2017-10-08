@@ -16,8 +16,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_dnsmasq",
-    url = "http://deb.debian.org/debian/pool/main/d/dnsmasq/dnsmasq_2.72-3+deb8u1_all.deb",
-    sha256 = "198fb357673219759ade204f34660c3a5ff52c2ed5d2afca4433d62a4b5fa3b5",
+    url = "http://security.debian.org/pool/updates/main/d/dnsmasq/dnsmasq_2.72-3+deb8u2_all.deb",
+    sha256 = "fe35e04c65015833d143fa6a83a353b1eef679be27129a184efbed2dbe2dc6b3",
   )
   native.http_file(
     name = "deb_jessie_dnsmasq_base",
@@ -166,8 +166,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_gerrit",
-    url = "http://deb.gerritforge.com/dists/gerrit/contrib/binary-amd64/gerrit-2.14.2-1.noarch.deb",
-    sha256 = "3472bbf90073f86dddc1645d1dc78d16a8664e9bd58513313a1040b24a4b3ecf",
+    url = "http://deb.gerritforge.com/dists/gerrit/contrib/binary-amd64/gerrit-2.14.4-1.noarch.deb",
+    sha256 = "6efedce792780bea8b51039e46b50620bf056d990d95a51d4b52b19f242573ca",
   )
   native.http_file(
     name = "deb_jessie_gettext_base",

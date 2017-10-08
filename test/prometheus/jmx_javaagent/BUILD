@@ -23,7 +23,7 @@ container_test(
   size = "small",
   image = ":jmx_javaagent_test",
   daemon = True,
-  mem_limit = "2048m",
+  mem_limit = "1024m",
   test = "test.sh",
   golden = "output.txt",
 )

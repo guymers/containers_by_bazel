@@ -92,7 +92,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "bf5cf479dbd262939017779a7b610119e11f97b0649d875f64dbdfae9e93cf72",
+    sha256 = "e63ecd36d2daec6f406793864510b1f516b9a6c9cf1842e204fca95b58070c22",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
 
@@ -101,7 +101,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "14d0788d89be82958a46965de039a55813f9727bd4d0592dc77905976483ba95",
+    sha256 = "171c6b3d819fb0240ccd06831b4b493bc7d1eb37ca2632c94f907f15b3aedf7f",
   )
   native.http_file(
     name = "jenkins_agent_jar",
