@@ -31,7 +31,7 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_file",
-    url = "http://security.debian.org/pool/updates/main/f/file/file_5.30-1+deb9u1_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/f/file/file_5.30-1+deb9u1_amd64.deb",
     sha256 = "17f2e3a7f5e24fc20b1cf99b00d10c68d5fcc92dfc6cd76157f05744a2f4650b",
   )
   native.http_file(
@@ -86,8 +86,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libcurl3",
-    url = "http://deb.debian.org/debian/pool/main/c/curl/libcurl3_7.52.1-5_amd64.deb",
-    sha256 = "e5079e9c1c61acb02cc6e74df2a796bab5773ac8fec3e997fb322f00b19aa4ab",
+    url = "http://security.debian.org/pool/updates/main/c/curl/libcurl3_7.52.1-5+deb9u1_amd64.deb",
+    sha256 = "63045678a558af41235b258bb3f5daa0a9b38b14f9c0ca263ef619a419390e48",
   )
   native.http_file(
     name = "deb_stretch_libedit2",
@@ -116,8 +116,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libgnutls30",
-    url = "http://deb.debian.org/debian/pool/main/g/gnutls28/libgnutls30_3.5.8-5+deb9u2_amd64.deb",
-    sha256 = "5b9b178dfe2368f2f1bd86e801e797487fa05dfc5a7e58e4c0d3a690f8be27b8",
+    url = "http://deb.debian.org/debian/pool/main/g/gnutls28/libgnutls30_3.5.8-5+deb9u3_amd64.deb",
+    sha256 = "2c014e7323ab4ce6baf45fd2adf218f79e3e423dc68cf34ba875b7d23d2b29c4",
   )
   native.http_file(
     name = "deb_stretch_libgomp1",
@@ -126,13 +126,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libgssapi_krb5_2",
-    url = "http://deb.debian.org/debian/pool/main/k/krb5/libgssapi-krb5-2_1.15-1_amd64.deb",
-    sha256 = "25574fdba88aeb34231e1e4faaa6e143786d30840ca99bda3ef165edfd7154ed",
+    url = "http://deb.debian.org/debian/pool/main/k/krb5/libgssapi-krb5-2_1.15-1+deb9u1_amd64.deb",
+    sha256 = "1be19361962bc3549f310f7da90da7e3b96c5f930e2296d7ea170720455becbb",
   )
   native.http_file(
     name = "deb_stretch_libhogweed4",
-    url = "http://deb.debian.org/debian/pool/main/n/nettle/libhogweed4_3.3-1+b1_amd64.deb",
-    sha256 = "8414dd1f3790147c3afd0712f7283088669a38a3a07904eeda4588a8374a89c4",
+    url = "http://deb.debian.org/debian/pool/main/n/nettle/libhogweed4_3.3-1+b2_amd64.deb",
+    sha256 = "71658a201b566540bccefcbd06470cad77db47f5a11ce9754b5df58eb9ce57ff",
   )
   native.http_file(
     name = "deb_stretch_libicu57",
@@ -146,8 +146,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libidn2_0",
-    url = "http://deb.debian.org/debian/pool/main/libi/libidn2-0/libidn2-0_0.16-1_amd64.deb",
-    sha256 = "b111c0cab40d3279b80710a4e992b4c33f77933d52b62d909269cd138fcde087",
+    url = "http://deb.debian.org/debian/pool/main/libi/libidn2-0/libidn2-0_0.16-1+deb9u1_amd64.deb",
+    sha256 = "96fcb4479def709a9c1d8533bf091ee2c3e08a60a07d2f024668559e16aa90b4",
   )
   native.http_file(
     name = "deb_stretch_libisl15",
@@ -161,8 +161,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libk5crypto3",
-    url = "http://deb.debian.org/debian/pool/main/k/krb5/libk5crypto3_1.15-1_amd64.deb",
-    sha256 = "0ab97d1cb2f31a46af37b948b162176131ab54f8c617a2aa757e1b3372403d08",
+    url = "http://deb.debian.org/debian/pool/main/k/krb5/libk5crypto3_1.15-1+deb9u1_amd64.deb",
+    sha256 = "d576e066867e6a62b8664a468443bc90ff9cc17378b1d620726e4cf631e4a34a",
   )
   native.http_file(
     name = "deb_stretch_libkeyutils1",
@@ -171,23 +171,23 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libkrb5_3",
-    url = "http://deb.debian.org/debian/pool/main/k/krb5/libkrb5-3_1.15-1_amd64.deb",
-    sha256 = "46b539463c1c1b1c465b0502d143d39626ee2087ee7a31205a9620d3c1e0e6a6",
+    url = "http://deb.debian.org/debian/pool/main/k/krb5/libkrb5-3_1.15-1+deb9u1_amd64.deb",
+    sha256 = "7b788d4acbf79872756f78704260cf8c2bcfde224c6d927da2a18b5735356e7f",
   )
   native.http_file(
     name = "deb_stretch_libkrb5support0",
-    url = "http://deb.debian.org/debian/pool/main/k/krb5/libkrb5support0_1.15-1_amd64.deb",
-    sha256 = "095b00e10a946691b4228d6cf016869b8d8e402b7ac6a7d235de3ec61d0af9f8",
+    url = "http://deb.debian.org/debian/pool/main/k/krb5/libkrb5support0_1.15-1+deb9u1_amd64.deb",
+    sha256 = "e0224ec2485a534c8a6ac029e7156df3bfdd4dc9467672a5b6ee5cc1f513c136",
   )
   native.http_file(
     name = "deb_stretch_libldap_2_4_2",
-    url = "http://deb.debian.org/debian/pool/main/o/openldap/libldap-2.4-2_2.4.44+dfsg-5_amd64.deb",
-    sha256 = "0dff8dbc7dd73a06e3d518a503a51aeaa6d30e346f796a5964384cb7717d0227",
+    url = "http://deb.debian.org/debian/pool/main/o/openldap/libldap-2.4-2_2.4.44+dfsg-5+deb9u1_amd64.deb",
+    sha256 = "9c33f650be8c098e9366cf91fc8a36b693496b8001b78f6df2261a5a84a303c5",
   )
   native.http_file(
     name = "deb_stretch_libldap_common",
-    url = "http://deb.debian.org/debian/pool/main/o/openldap/libldap-common_2.4.44+dfsg-5_all.deb",
-    sha256 = "ca03ac35ecb4d59c6199a6bd85174c600cd0a96d446911db20ba91092c2891b4",
+    url = "http://deb.debian.org/debian/pool/main/o/openldap/libldap-common_2.4.44+dfsg-5+deb9u1_all.deb",
+    sha256 = "4e16fd189b803520e84f77ce2b2c5aeab7cac8e525ae2904834046ee82d21a37",
   )
   native.http_file(
     name = "deb_stretch_liblsan0",
@@ -201,12 +201,12 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libmagic1",
-    url = "http://security.debian.org/pool/updates/main/f/file/libmagic1_5.30-1+deb9u1_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/f/file/libmagic1_5.30-1+deb9u1_amd64.deb",
     sha256 = "94816946cab2a283807b8dbd4fb7a6c7aeaab23af488f9b7a9167f2ea4432062",
   )
   native.http_file(
     name = "deb_stretch_libmagic_mgc",
-    url = "http://security.debian.org/pool/updates/main/f/file/libmagic-mgc_5.30-1+deb9u1_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/f/file/libmagic-mgc_5.30-1+deb9u1_amd64.deb",
     sha256 = "a3a1a60347df51db20d3e0136e45f4a5c024df3e9391006cfde26a1f5b1c2e23",
   )
   native.http_file(
@@ -231,13 +231,18 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libncurses5",
-    url = "http://deb.debian.org/debian/pool/main/n/ncurses/libncurses5_6.0+20161126-1_amd64.deb",
-    sha256 = "1e0bef58ced9cd5e97bcebbd7457ada3a3444d48e3fc3485e8ed02c53006721a",
+    url = "http://deb.debian.org/debian/pool/main/n/ncurses/libncurses5_6.0+20161126-1+deb9u1_amd64.deb",
+    sha256 = "fda3631a3c1e65129e2b9e8caf8abbc83ff1982de9b5609d0d7a07857d2f9bc4",
+  )
+  native.http_file(
+    name = "deb_stretch_libncursesw5",
+    url = "http://deb.debian.org/debian/pool/main/n/ncurses/libncursesw5_6.0+20161126-1+deb9u1_amd64.deb",
+    sha256 = "9e70a203adb3f801f32467ab72c922821ebc9dffcabaf4f6a1d21684fcfb2cf5",
   )
   native.http_file(
     name = "deb_stretch_libnettle6",
-    url = "http://deb.debian.org/debian/pool/main/n/nettle/libnettle6_3.3-1+b1_amd64.deb",
-    sha256 = "5b22691b72ebbc4a05f178ad46c239f46f6f5380a6110a045e67ec24a439f240",
+    url = "http://deb.debian.org/debian/pool/main/n/nettle/libnettle6_3.3-1+b2_amd64.deb",
+    sha256 = "f6c93d83f21bad6bfd7fcc2b110cffb6c30297c40eaf2a6c2e1029c61dd99922",
   )
   native.http_file(
     name = "deb_stretch_libnghttp2_14",
@@ -271,12 +276,12 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libperl5_24",
-    url = "http://security.debian.org/pool/updates/main/p/perl/libperl5.24_5.24.1-3+deb9u2_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/p/perl/libperl5.24_5.24.1-3+deb9u2_amd64.deb",
     sha256 = "b5bb33b12989eaf81e5244b4001b29b202b03984ba2e99a7d55d47b6cb5db036",
   )
   native.http_file(
     name = "deb_stretch_libpq5",
-    url = "http://security.debian.org/pool/updates/main/p/postgresql-9.6/libpq5_9.6.4-0+deb9u1_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/p/postgresql-9.6/libpq5_9.6.4-0+deb9u1_amd64.deb",
     sha256 = "5eeda8bbbf8207432ea5ddcce04aa59135fd95b2ad49744f54ffcd84f8a2046e",
   )
   native.http_file(
@@ -340,6 +345,11 @@ def deb_stretch():
     sha256 = "a379d6406e14a6fb392a27d560a9929616485996ea8a024056ee99935502e2c6",
   )
   native.http_file(
+    name = "deb_stretch_libtinfo5",
+    url = "http://deb.debian.org/debian/pool/main/n/ncurses/libtinfo5_6.0+20161126-1+deb9u1_amd64.deb",
+    sha256 = "7bfea98a08d04d1cf7c0e69a9f6001b2e55751c1cba30c53b07d3c86dd05ed50",
+  )
+  native.http_file(
     name = "deb_stretch_libtool",
     url = "http://deb.debian.org/debian/pool/main/libt/libtool/libtool_2.4.6-2_all.deb",
     sha256 = "2781f99f13839a9439d4f65582c611a6e101b400d46a5e02c4fe30fea5f1956c",
@@ -361,13 +371,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libxml2",
-    url = "http://security.debian.org/pool/updates/main/libx/libxml2/libxml2_2.9.4+dfsg1-2.2+deb9u1_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-2.2+deb9u1_amd64.deb",
     sha256 = "ae2e74a33ea43d59d4a8294dd15a4ad4caeb059075968166cd3fd161167c5f2e",
   )
   native.http_file(
     name = "deb_stretch_linux_libc_dev",
-    url = "http://security.debian.org/pool/updates/main/l/linux/linux-libc-dev_4.9.30-2+deb9u5_amd64.deb",
-    sha256 = "2c6600d9baeb3884e2b7eac03a70120336e93c1bedbee44c3c2b98f93194fb0f",
+    url = "http://deb.debian.org/debian/pool/main/l/linux/linux-libc-dev_4.9.51-1_amd64.deb",
+    sha256 = "b667068cb959be8f5010272cae76b833660b9d38e467d6a3af0fde03f6aec539",
   )
   native.http_file(
     name = "deb_stretch_m4",
@@ -381,17 +391,17 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_perl",
-    url = "http://security.debian.org/pool/updates/main/p/perl/perl_5.24.1-3+deb9u2_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/p/perl/perl_5.24.1-3+deb9u2_amd64.deb",
     sha256 = "c6803865eb13a131387832377543ff4e01eb9bfe680088851b6371a30664b9fb",
   )
   native.http_file(
     name = "deb_stretch_perl_base",
-    url = "http://security.debian.org/pool/updates/main/p/perl/perl-base_5.24.1-3+deb9u2_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/p/perl/perl-base_5.24.1-3+deb9u2_amd64.deb",
     sha256 = "f9364fe44929930ded591ac8486330a7aa7327bf65771a78b63fcf6ab0f6f767",
   )
   native.http_file(
     name = "deb_stretch_perl_modules_5_24",
-    url = "http://security.debian.org/pool/updates/main/p/perl/perl-modules-5.24_5.24.1-3+deb9u2_all.deb",
+    url = "http://deb.debian.org/debian/pool/main/p/perl/perl-modules-5.24_5.24.1-3+deb9u2_all.deb",
     sha256 = "2468a971fc48b8275f99b52f2c29bafe4041940d7ed6a4ecbbbcde642e1bcb47",
   )
   native.http_file(
