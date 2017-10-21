@@ -1,13 +1,13 @@
 def deb_jessie():
   native.http_file(
     name = "deb_jessie_cassandra",
-    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra_3.11.0_all.deb",
-    sha256 = "b11372bcd2c1b0faebc1ec5e882f2036008cafcdb7d7efe7eff232b383459b86",
+    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra_3.11.1_all.deb",
+    sha256 = "62eda9060fc18f4953911ba5ca553ffd48ab4f4a51aaf2d3573e6ecd6cf7bc61",
   )
   native.http_file(
     name = "deb_jessie_cassandra_tools",
-    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra-tools_3.11.0_all.deb",
-    sha256 = "8af4ce6e0a1bf835c5b1d5a7d6bdfbb32a23a04e9f92d9eecb3020bd6efcb50f",
+    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra-tools_3.11.1_all.deb",
+    sha256 = "06a01afb62212f2894486b5002be0fe5e1f7022f79259addf2f53448d5055347",
   )
   native.http_file(
     name = "deb_jessie_cron",
@@ -166,8 +166,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_gerrit",
-    url = "http://deb.gerritforge.com/dists/gerrit/contrib/binary-amd64/gerrit-2.14.4-1.noarch.deb",
-    sha256 = "6efedce792780bea8b51039e46b50620bf056d990d95a51d4b52b19f242573ca",
+    url = "http://deb.gerritforge.com/dists/gerrit/contrib/binary-amd64/gerrit-2.14.5.1-1.noarch.deb",
+    sha256 = "d1da0748c971cb26deafd324d76f1b4067e7fbbaf0e3ee94c40427a2cd0400b1",
   )
   native.http_file(
     name = "deb_jessie_gettext_base",
@@ -186,8 +186,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_grafana",
-    url = "https://packagecloud.io/grafana/stable/debian/pool/wheezy/main/g/grafana/grafana_4.4.2_amd64.deb",
-    sha256 = "684acc3859de06dc3b2c4081413307513bcc0ba0fe1f6872a5bf10b407dcf098",
+    url = "https://packagecloud.io/grafana/stable/debian/pool/wheezy/main/g/grafana/grafana_4.5.2_amd64.deb",
+    sha256 = "0e9d6c8539d300ab352fb81b2f324cf759037fb1229864ba2e2d9a7562754d53",
   )
   native.http_file(
     name = "deb_jessie_init_system_helpers",
@@ -616,8 +616,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libmysqlclient18",
-    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/libmysqlclient18_5.5.57-0+deb8u1_amd64.deb",
-    sha256 = "1fdc7f9283717d5be6ea85877abcdb3f5ddcf7ac912f51e539069776b9b6b760",
+    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/libmysqlclient18_5.5.58-0+deb8u1_amd64.deb",
+    sha256 = "272b046574241219baf6673b0b36621bba57fbbabc6361e42a904a39afd6f8d9",
   )
   native.http_file(
     name = "deb_jessie_libnetcdfc7",
@@ -986,8 +986,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_mysql_common",
-    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/mysql-common_5.5.57-0+deb8u1_all.deb",
-    sha256 = "8e88095a88261a4984fe66ed7489cbed5af2bd82aaa67d41f6ccfbfd5765193c",
+    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/mysql-common_5.5.58-0+deb8u1_all.deb",
+    sha256 = "0e802b0e131161e97745b304c46b10b87940eacdf8f7bff9fdd270baa44176ba",
   )
   native.http_file(
     name = "deb_jessie_netbase",
@@ -1006,8 +1006,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_nginx",
-    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.13.5-2~jessie_amd64.deb",
-    sha256 = "5ff5683472530248ce099621f87d788872f655259212bfe8f0b8b30cb0523610",
+    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.13.6-1~jessie_amd64.deb",
+    sha256 = "b0897f011018442d71ec0ca1081f27453e7c11e56898306f7be40cd912e5711c",
   )
   native.http_file(
     name = "deb_jessie_numactl",
@@ -1040,19 +1040,14 @@ def deb_jessie():
     sha256 = "af85abf2b55fa8303d483f0a443f37086a228a4abe2b2a4a1b29a11849c35699",
   )
   native.http_file(
-    name = "deb_jessie_perl_base",
-    url = "http://security.debian.org/pool/updates/main/p/perl/perl-base_5.20.2-3+deb8u9_amd64.deb",
-    sha256 = "6e65f1fb195dd88c7cc506b385852a914d41b718f9de6d70f7956ef8136a6920",
-  )
-  native.http_file(
     name = "deb_jessie_perl_modules",
     url = "http://security.debian.org/pool/updates/main/p/perl/perl-modules_5.20.2-3+deb8u9_all.deb",
     sha256 = "a8d5eec17ff600c532559da108b1faeac0f97d5f070010b7169a95f97ca98f84",
   )
   native.http_file(
     name = "deb_jessie_pgdg_keyring",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/pgdg-keyring/pgdg-keyring_2017.1_all.deb",
-    sha256 = "75ff8a3187ae6ae7e2d11469f499408326f5c9e79c3542d2e623505ffdfbd068",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/pgdg-keyring/pgdg-keyring_2017.2_all.deb",
+    sha256 = "6a5e69bdac69c7cbdf1d867708e0cb44e400e46f199e6046924c90165fafde19",
   )
   native.http_file(
     name = "deb_jessie_postgis",

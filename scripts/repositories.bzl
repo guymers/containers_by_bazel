@@ -31,17 +31,17 @@ def dependency_repositories():
     tag = "0.6.0",
   )
 
-  # Update to 20170907 for amd64 (debuerreotype 0.4)
+  # Update to 20171009 for amd64 (debuerreotype 0.4)
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/97dc072ae1e6c66c1ccc71ead334ce5d5fc201f0/jessie/slim/rootfs.tar.xz",
-    sha256 = "ca23d8efaaea9207728cde6afcb73bc9c98e73e18be173958f01ed8feb8831bf",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/de09dd55b6328b37b89a33e76b698f9dbe611fab/jessie/slim/rootfs.tar.xz",
+    sha256 = "e38f225f2870c928a068b5828580fb6ffb6c8d57fca7deb68f77d01e3b26bbf8",
   )
-  # Update to 20170907 for amd64 (debuerreotype 0.4)
+  # Update to 20171009 for amd64 (debuerreotype 0.4)
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/97dc072ae1e6c66c1ccc71ead334ce5d5fc201f0/stretch/slim/rootfs.tar.xz",
-    sha256 = "1e19b4c93d872585b1f7f577814e4242fab5dcbec18ec40a13c68b6dac210424",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/de09dd55b6328b37b89a33e76b698f9dbe611fab/stretch/slim/rootfs.tar.xz",
+    sha256 = "d56af9c63a3a093a6ff6168b1174e9227a99af29db82a50020fc89166f1691f0",
   )
 
   deb_jessie()
@@ -70,7 +70,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "4779d5cf08c50ed368a57b102ab3895e5e830d6b355ca4bfecf718a034a164e0",
+    sha256 = "5028defde39c4b9975b6174a2dbf29983cbae9f18e9d8313d9187d4b1078da27",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -101,12 +101,12 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "171c6b3d819fb0240ccd06831b4b493bc7d1eb37ca2632c94f907f15b3aedf7f",
+    sha256 = "f6d1351beef34d980b32f8c463be505445f637e2fc62156fecd42891c53c97d3",
   )
   native.http_file(
     name = "jenkins_agent_jar",
     url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/" + JENKINS_SWARM_VERSION + "/swarm-client-" + JENKINS_SWARM_VERSION + ".jar",
-    sha256 = "931b026d311023fe19c130211bef137f4873fafc19e4a41bca8fa41ffbb27a49",
+    sha256 = "472404482b358279276d7c1c8d1e10b319229886ce153c620e8b84b0c16f3265",
   )
 
   ###### MAVEN
@@ -129,7 +129,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "kafka",
     url = "http://mirrors.ocf.berkeley.edu/apache/kafka/" + KAFKA_VERSION + "/kafka_2.12-" + KAFKA_VERSION + ".tgz",
-    sha256 = "ab6310dd0d9fce1e6e8045b51b471fb35c3e197714e6e6b03bc5864898785f2d",
+    sha256 = "c776f2dbb7f4e1af6b61e32d482b513a1788bf5f39602746b005ab92601a46f2",
     build_file_content = "exports_files(['kafka_2.12-" + KAFKA_VERSION + "'])",
   )
 
@@ -152,7 +152,7 @@ def dependency_repositories():
   native.http_file(
     name = "nodejs",
     url = "https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz",
-    sha256 = "e6f52c3ed7e2cc34ebddbc563434fdf043feb449a60f028101eb45227aec3444"
+    sha256 = "9d6f649576cac74ef0b6634af8265156370cf8fdf3676f03e867347d3207675d"
   )
 
   ###### YARN

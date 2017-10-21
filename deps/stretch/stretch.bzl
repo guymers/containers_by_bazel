@@ -235,11 +235,6 @@ def deb_stretch():
     sha256 = "fda3631a3c1e65129e2b9e8caf8abbc83ff1982de9b5609d0d7a07857d2f9bc4",
   )
   native.http_file(
-    name = "deb_stretch_libncursesw5",
-    url = "http://deb.debian.org/debian/pool/main/n/ncurses/libncursesw5_6.0+20161126-1+deb9u1_amd64.deb",
-    sha256 = "9e70a203adb3f801f32467ab72c922821ebc9dffcabaf4f6a1d21684fcfb2cf5",
-  )
-  native.http_file(
     name = "deb_stretch_libnettle6",
     url = "http://deb.debian.org/debian/pool/main/n/nettle/libnettle6_3.3-1+b2_amd64.deb",
     sha256 = "f6c93d83f21bad6bfd7fcc2b110cffb6c30297c40eaf2a6c2e1029c61dd99922",
@@ -345,11 +340,6 @@ def deb_stretch():
     sha256 = "a379d6406e14a6fb392a27d560a9929616485996ea8a024056ee99935502e2c6",
   )
   native.http_file(
-    name = "deb_stretch_libtinfo5",
-    url = "http://deb.debian.org/debian/pool/main/n/ncurses/libtinfo5_6.0+20161126-1+deb9u1_amd64.deb",
-    sha256 = "7bfea98a08d04d1cf7c0e69a9f6001b2e55751c1cba30c53b07d3c86dd05ed50",
-  )
-  native.http_file(
     name = "deb_stretch_libtool",
     url = "http://deb.debian.org/debian/pool/main/libt/libtool/libtool_2.4.6-2_all.deb",
     sha256 = "2781f99f13839a9439d4f65582c611a6e101b400d46a5e02c4fe30fea5f1956c",
@@ -393,11 +383,6 @@ def deb_stretch():
     name = "deb_stretch_perl",
     url = "http://deb.debian.org/debian/pool/main/p/perl/perl_5.24.1-3+deb9u2_amd64.deb",
     sha256 = "c6803865eb13a131387832377543ff4e01eb9bfe680088851b6371a30664b9fb",
-  )
-  native.http_file(
-    name = "deb_stretch_perl_base",
-    url = "http://deb.debian.org/debian/pool/main/p/perl/perl-base_5.24.1-3+deb9u2_amd64.deb",
-    sha256 = "f9364fe44929930ded591ac8486330a7aa7327bf65771a78b63fcf6ab0f6f767",
   )
   native.http_file(
     name = "deb_stretch_perl_modules_5_24",

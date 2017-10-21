@@ -113,7 +113,6 @@ filegroup(
     "@deb_jessie_libssh2_1//file",
     "@deb_jessie_libtasn1_6//file",
     "@deb_jessie_perl//file",
-    "@deb_jessie_perl_base//file",
     "@deb_jessie_perl_modules//file",
   ],
 )
@@ -146,7 +145,6 @@ filegroup(
     "@deb_jessie_libssh2_1//file",
     "@deb_jessie_libtasn1_6//file",
     "@deb_jessie_perl//file",
-    "@deb_jessie_perl_base//file",
     "@deb_jessie_perl_modules//file",
   ],
 )
@@ -372,7 +370,6 @@ filegroup(
     "@deb_jessie_odbcinst1debian2//file",
     "@deb_jessie_openssl//file",
     "@deb_jessie_perl//file",
-    "@deb_jessie_perl_base//file",
     "@deb_jessie_perl_modules//file",
     "@deb_jessie_pgdg_keyring//file",
     "@deb_jessie_postgis//file",
