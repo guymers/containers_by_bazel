@@ -70,7 +70,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "5028defde39c4b9975b6174a2dbf29983cbae9f18e9d8313d9187d4b1078da27",
+    sha256 = "9e0e3aeb4ae360ea284b0f751c1a2b40b664ea533ab90af58e8656700db0bc9b",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -101,7 +101,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "f6d1351beef34d980b32f8c463be505445f637e2fc62156fecd42891c53c97d3",
+    sha256 = "fcfb932a84ce03795abbf51ae7799439278155b0d42242d1d79a187034649fc8",
   )
   native.http_file(
     name = "jenkins_agent_jar",
@@ -121,7 +121,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "zookeeper",
     url = "http://mirrors.ocf.berkeley.edu/apache/zookeeper/zookeeper-" + ZOOKEEPER_VERSION + "/zookeeper-" + ZOOKEEPER_VERSION + ".tar.gz",
-    sha256 = "7f7f5414e044ac11fee2a1e0bc225469f51fb0cdf821e67df762a43098223f27",
+    sha256 = "f6bd68a1c8f7c13ea4c2c99f13082d0d71ac464ffaf3bf7a365879ab6ad10e84",
     build_file_content = "exports_files(['zookeeper-" + ZOOKEEPER_VERSION + "'])",
   )
 
@@ -129,7 +129,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "kafka",
     url = "http://mirrors.ocf.berkeley.edu/apache/kafka/" + KAFKA_VERSION + "/kafka_2.12-" + KAFKA_VERSION + ".tgz",
-    sha256 = "c776f2dbb7f4e1af6b61e32d482b513a1788bf5f39602746b005ab92601a46f2",
+    sha256 = "d5b1d00752252d9c129e9284f26f8280e9899dd374167f257e29d5346eb544b3",
     build_file_content = "exports_files(['kafka_2.12-" + KAFKA_VERSION + "'])",
   )
 
@@ -152,7 +152,7 @@ def dependency_repositories():
   native.http_file(
     name = "nodejs",
     url = "https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz",
-    sha256 = "9d6f649576cac74ef0b6634af8265156370cf8fdf3676f03e867347d3207675d"
+    sha256 = "8be82805f7c1ab3e64d4569fb9a90ded2de78dd27cadbb91bad1bf975dae1e2d"
   )
 
   ###### YARN
