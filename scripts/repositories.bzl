@@ -85,7 +85,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "c3f063d8122d87f0d80b25221d76b0a164e9247d35190f31ec360edcb4352ef0",
+    sha256 = "813776f81b1dfa990fba11cd6d0120df3467bee00742b115f282a0e8e254e23f",
     build_file_content = "exports_files(['sbt'])",
   )
 
@@ -113,7 +113,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "maven",
     url = "http://mirrors.ocf.berkeley.edu/apache/maven/maven-3/" + MAVEN_VERSION + "/binaries/apache-maven-" + MAVEN_VERSION + "-bin.tar.gz",
-    sha256 = "beb91419245395bd69a4a6edad5ca3ec1a8b64e41457672dc687c173a495f034",
+    sha256 = "707b1f6e390a65bde4af4cdaf2a24d45fc19a6ded00fff02e91626e3e42ceaff",
     build_file_content = "exports_files(['apache-maven-" + MAVEN_VERSION + "'])",
   )
 

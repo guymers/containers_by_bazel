@@ -86,8 +86,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libcurl3",
-    url = "http://security.debian.org/pool/updates/main/c/curl/libcurl3_7.52.1-5+deb9u2_amd64.deb",
-    sha256 = "122703f1a187ab1ce9f31c69e712a3cdd822d67ef652fe2757aae904a9d1c9c0",
+    url = "http://security.debian.org/pool/updates/main/c/curl/libcurl3_7.52.1-5+deb9u3_amd64.deb",
+    sha256 = "8367b88e4ce052792aa8e7cf1b924a2d5e535f666565e8694af33756c5592ce7",
   )
   native.http_file(
     name = "deb_stretch_libedit2",
