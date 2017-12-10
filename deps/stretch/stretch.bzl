@@ -86,7 +86,7 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libcurl3",
-    url = "http://security.debian.org/pool/updates/main/c/curl/libcurl3_7.52.1-5+deb9u3_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/c/curl/libcurl3_7.52.1-5+deb9u3_amd64.deb",
     sha256 = "8367b88e4ce052792aa8e7cf1b924a2d5e535f666565e8694af33756c5592ce7",
   )
   native.http_file(
@@ -136,8 +136,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libicu57",
-    url = "http://deb.debian.org/debian/pool/main/i/icu/libicu57_57.1-6_amd64.deb",
-    sha256 = "6d44f35bfc8b9a4c9040a420b72fa41fdb533490025c301d67c59ae8ff6d23f1",
+    url = "http://deb.debian.org/debian/pool/main/i/icu/libicu57_57.1-6+deb9u1_amd64.deb",
+    sha256 = "d7a5382b6aa772df09c8d30170de1c2e562ad72ea4324400e65dc7439114b1da",
   )
   native.http_file(
     name = "deb_stretch_libidn11",
@@ -276,7 +276,7 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libpq5",
-    url = "http://security.debian.org/pool/updates/main/p/postgresql-9.6/libpq5_9.6.6-0+deb9u1_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/p/postgresql-9.6/libpq5_9.6.6-0+deb9u1_amd64.deb",
     sha256 = "970d977b8a45817bae405c887f3d3ebf65009454651557038efd0914bb5122f0",
   )
   native.http_file(
@@ -321,17 +321,17 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libssl1_0_2",
-    url = "http://security.debian.org/pool/updates/main/o/openssl1.0/libssl1.0.2_1.0.2l-2+deb9u1_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/o/openssl1.0/libssl1.0.2_1.0.2l-2+deb9u1_amd64.deb",
     sha256 = "a5ed99bfdc44d3f7fed9d3e66ddf7218464d54f4277aeadea1124fc49392ba78",
   )
   native.http_file(
     name = "deb_stretch_libssl1_1",
-    url = "http://security.debian.org/pool/updates/main/o/openssl/libssl1.1_1.1.0f-3+deb9u1_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/o/openssl/libssl1.1_1.1.0f-3+deb9u1_amd64.deb",
     sha256 = "2149d11af407af31623e7607c301b2c3d5ea6ca6e86b49690c42778a05303b14",
   )
   native.http_file(
     name = "deb_stretch_libssl_dev",
-    url = "http://security.debian.org/pool/updates/main/o/openssl/libssl-dev_1.1.0f-3+deb9u1_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/o/openssl/libssl-dev_1.1.0f-3+deb9u1_amd64.deb",
     sha256 = "e4c87ba211af9f71b4418bef710fde1c84ee50fbeaeb45f6fec415bc0062b272",
   )
   native.http_file(
@@ -366,8 +366,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_linux_libc_dev",
-    url = "http://deb.debian.org/debian/pool/main/l/linux/linux-libc-dev_4.9.51-1_amd64.deb",
-    sha256 = "b667068cb959be8f5010272cae76b833660b9d38e467d6a3af0fde03f6aec539",
+    url = "http://deb.debian.org/debian/pool/main/l/linux/linux-libc-dev_4.9.65-3_amd64.deb",
+    sha256 = "44586ecc5e40e01b0726c0b88e7ba8901192bee773bf3472c179c62d5c54b971",
   )
   native.http_file(
     name = "deb_stretch_m4",

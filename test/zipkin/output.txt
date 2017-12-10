@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--
+      add 'base' tag to work around the fact that 'html-webpack-plugin' does not work
+      with '__webpack_public_path__' being set as reported at https://github.com/jantimon/html-webpack-plugin/issues/119
+    -->
+    <base href="/zipkin/">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
     <meta charset="UTF-8">
     <title>Webpack App</title>
-  <link href="/zipkin/app-3e5d8c94e20c3f7316d1.min.css" rel="stylesheet"></head>
+  <link href="app-6be171c246b852f9fc91.min.css" rel="stylesheet"></head>
   <body>
-  <script type="text/javascript" src="/zipkin/app-3e5d8c94e20c3f7316d1.min.js"></script></body>
+  <script type="text/javascript" src="app-6be171c246b852f9fc91.min.js"></script></body>
 </html>

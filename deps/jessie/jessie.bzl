@@ -16,12 +16,12 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_dnsmasq",
-    url = "http://security.debian.org/pool/updates/main/d/dnsmasq/dnsmasq_2.72-3+deb8u2_all.deb",
+    url = "http://deb.debian.org/debian/pool/main/d/dnsmasq/dnsmasq_2.72-3+deb8u2_all.deb",
     sha256 = "fe35e04c65015833d143fa6a83a353b1eef679be27129a184efbed2dbe2dc6b3",
   )
   native.http_file(
     name = "deb_jessie_dnsmasq_base",
-    url = "http://security.debian.org/pool/updates/main/d/dnsmasq/dnsmasq-base_2.72-3+deb8u2_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/d/dnsmasq/dnsmasq-base_2.72-3+deb8u2_amd64.deb",
     sha256 = "6a35d2509cfa458bc330d68680639ada63d48c24c4b960c3de08ba71762b9aaf",
   )
   native.http_file(
@@ -176,12 +176,12 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_git",
-    url = "http://security.debian.org/pool/updates/main/g/git/git_2.1.4-2.1+deb8u5_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/g/git/git_2.1.4-2.1+deb8u5_amd64.deb",
     sha256 = "b792fc1efe2fe807717a56a8154b0203b6772c39df0ead7c4dd1215194c25324",
   )
   native.http_file(
     name = "deb_jessie_git_man",
-    url = "http://security.debian.org/pool/updates/main/g/git/git-man_2.1.4-2.1+deb8u5_all.deb",
+    url = "http://deb.debian.org/debian/pool/main/g/git/git-man_2.1.4-2.1+deb8u5_all.deb",
     sha256 = "e4896b1da467dfa0bab335a189b7d58a6437c37c5adf7f15e7cc864b3baa0bf6",
   )
   native.http_file(
@@ -331,12 +331,12 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libcups2",
-    url = "http://deb.debian.org/debian/pool/main/c/cups/libcups2_1.7.5-11+deb8u1_amd64.deb",
-    sha256 = "0d1436b1175a5a2b047f3b521184524d32b99ca4eaae685b401eecd14ab4e12d",
+    url = "http://deb.debian.org/debian/pool/main/c/cups/libcups2_1.7.5-11+deb8u2_amd64.deb",
+    sha256 = "de3c486b8b9f837bac9a6cc8edf936a3623ffd2bf571ca9856421615591f84f1",
   )
   native.http_file(
     name = "deb_jessie_libcurl3_gnutls",
-    url = "http://security.debian.org/pool/updates/main/c/curl/libcurl3-gnutls_7.38.0-4+deb8u8_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/c/curl/libcurl3-gnutls_7.38.0-4+deb8u8_amd64.deb",
     sha256 = "3e1b509aee34f7499b894a976c5ff383540c6679e8a2cd8ef4d77ea564a5fe32",
   )
   native.http_file(
@@ -411,7 +411,7 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libfreexl1",
-    url = "http://security.debian.org/pool/updates/main/f/freexl/libfreexl1_1.0.0g-1+deb8u4_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/f/freexl/libfreexl1_1.0.0g-1+deb8u4_amd64.deb",
     sha256 = "3a7a2e42a8664d88087c8497ff6139b93751668daa596e14642994fad1f266dd",
   )
   native.http_file(
@@ -426,12 +426,12 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libgdk_pixbuf2_0_0",
-    url = "http://security.debian.org/pool/updates/main/g/gdk-pixbuf/libgdk-pixbuf2.0-0_2.31.1-2+deb8u6_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/g/gdk-pixbuf/libgdk-pixbuf2.0-0_2.31.1-2+deb8u6_amd64.deb",
     sha256 = "a75cbe337cb96fddd51d124344abf562d71572d9e38c8577a6011ee58d028701",
   )
   native.http_file(
     name = "deb_jessie_libgdk_pixbuf2_0_common",
-    url = "http://security.debian.org/pool/updates/main/g/gdk-pixbuf/libgdk-pixbuf2.0-common_2.31.1-2+deb8u6_all.deb",
+    url = "http://deb.debian.org/debian/pool/main/g/gdk-pixbuf/libgdk-pixbuf2.0-common_2.31.1-2+deb8u6_all.deb",
     sha256 = "7288698ee5d88501aada98736822f440672f23549fbbacca1c04ba66dac4b286",
   )
   native.http_file(
@@ -486,8 +486,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libgssapi_krb5_2",
-    url = "http://deb.debian.org/debian/pool/main/k/krb5/libgssapi-krb5-2_1.12.1+dfsg-19+deb8u2_amd64.deb",
-    sha256 = "06e83f850bb4271de223623f1f44cc2956390a289d0e94a150ba4fbb97ac8b4a",
+    url = "http://deb.debian.org/debian/pool/main/k/krb5/libgssapi-krb5-2_1.12.1+dfsg-19+deb8u4_amd64.deb",
+    sha256 = "47a50d69b9972fdb8f625e23583b51416bd18659e24276047302a22063135f01",
   )
   native.http_file(
     name = "deb_jessie_libgtk2_0_0",
@@ -521,8 +521,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libicu52",
-    url = "http://deb.debian.org/debian/pool/main/i/icu/libicu52_52.1-8+deb8u5_amd64.deb",
-    sha256 = "8882b51b67973d23719f078dec907a81fe3ec6675954dfa6b6784d0547cc66db",
+    url = "http://deb.debian.org/debian/pool/main/i/icu/libicu52_52.1-8+deb8u6_amd64.deb",
+    sha256 = "e31bb51c4b60f81709d8217ce69192bc0698045fd16d249d155217c4600e9d27",
   )
   native.http_file(
     name = "deb_jessie_libidn11",
@@ -556,8 +556,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libk5crypto3",
-    url = "http://deb.debian.org/debian/pool/main/k/krb5/libk5crypto3_1.12.1+dfsg-19+deb8u2_amd64.deb",
-    sha256 = "3560254d2fa86f56a29f6e2fbd7c54ef30503225c64d67c2cb44f126166eb9ac",
+    url = "http://deb.debian.org/debian/pool/main/k/krb5/libk5crypto3_1.12.1+dfsg-19+deb8u4_amd64.deb",
+    sha256 = "2c4cba5d1528310c1863c29e7d8a1f44c2ed8c98811953cafff1f0197b809abb",
   )
   native.http_file(
     name = "deb_jessie_libkeyutils1",
@@ -571,13 +571,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libkrb5_3",
-    url = "http://deb.debian.org/debian/pool/main/k/krb5/libkrb5-3_1.12.1+dfsg-19+deb8u2_amd64.deb",
-    sha256 = "dedd4adcdf8b347417c4cb09ae23eb49e232540374d6c51590b08910d2392532",
+    url = "http://deb.debian.org/debian/pool/main/k/krb5/libkrb5-3_1.12.1+dfsg-19+deb8u4_amd64.deb",
+    sha256 = "bfd66673f3874fb18a02a4073867bfec3e31c5d22af5ceb9b2d12a7fe41b2789",
   )
   native.http_file(
     name = "deb_jessie_libkrb5support0",
-    url = "http://deb.debian.org/debian/pool/main/k/krb5/libkrb5support0_1.12.1+dfsg-19+deb8u2_amd64.deb",
-    sha256 = "60134b1bdc5e7e0625c36d03ff271b727ced0041572149c0a871a44e1a0ddf9c",
+    url = "http://deb.debian.org/debian/pool/main/k/krb5/libkrb5support0_1.12.1+dfsg-19+deb8u4_amd64.deb",
+    sha256 = "b8fa115d2cf2135aaa700e9504ccfa70d37fc13075b1d03e0fe3e998cc60fdbf",
   )
   native.http_file(
     name = "deb_jessie_liblapack3",
@@ -616,7 +616,7 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libmysqlclient18",
-    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/libmysqlclient18_5.5.58-0+deb8u1_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/m/mysql-5.5/libmysqlclient18_5.5.58-0+deb8u1_amd64.deb",
     sha256 = "272b046574241219baf6673b0b36621bba57fbbabc6361e42a904a39afd6f8d9",
   )
   native.http_file(
@@ -776,7 +776,7 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libssl1_0_0",
-    url = "http://security.debian.org/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u7_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u7_amd64.deb",
     sha256 = "d99de2cdca54484d23badc5683c7211b3a191977272d9e5281837af863dcdd56",
   )
   native.http_file(
@@ -831,18 +831,18 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libx11_6",
-    url = "http://deb.debian.org/debian/pool/main/libx/libx11/libx11-6_1.6.2-3_amd64.deb",
-    sha256 = "cc2e144e3bf5bdbc51d24723a93e5910e0bf8fbdc43b93e51edfc91968a25f45",
+    url = "http://deb.debian.org/debian/pool/main/libx/libx11/libx11-6_1.6.2-3+deb8u1_amd64.deb",
+    sha256 = "380aa38372e949f74b57e962146626aae847850ed4f1fcb83784086f239d50c3",
   )
   native.http_file(
     name = "deb_jessie_libx11_data",
-    url = "http://deb.debian.org/debian/pool/main/libx/libx11/libx11-data_1.6.2-3_all.deb",
-    sha256 = "fcf58a1bd20d9557baf253a624704450b627184a34879efb48fc1968a4645cfa",
+    url = "http://deb.debian.org/debian/pool/main/libx/libx11/libx11-data_1.6.2-3+deb8u1_all.deb",
+    sha256 = "4879a3054d6508e86f737bf668737c3fc64980c3512b2912f18bceea823e1899",
   )
   native.http_file(
     name = "deb_jessie_libx11_xcb1",
-    url = "http://deb.debian.org/debian/pool/main/libx/libx11/libx11-xcb1_1.6.2-3_amd64.deb",
-    sha256 = "eaf29676eb974802864c475406eea03f768af942bfde1ba02a11c28aa0af60ea",
+    url = "http://deb.debian.org/debian/pool/main/libx/libx11/libx11-xcb1_1.6.2-3+deb8u1_amd64.deb",
+    sha256 = "1ef8ed1432b77d0be013c58b373ba5c776ac7392970b68bfe5443ee9b5c0b2a3",
   )
   native.http_file(
     name = "deb_jessie_libxau6",
@@ -896,8 +896,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libxcursor1",
-    url = "http://deb.debian.org/debian/pool/main/libx/libxcursor/libxcursor1_1.1.14-1+b1_amd64.deb",
-    sha256 = "2898c06482a26ba393db4777bc6ef33dbf9954a4ac0cee6f05f4317b19986abe",
+    url = "http://security.debian.org/pool/updates/main/libx/libxcursor/libxcursor1_1.1.14-1+deb8u1_amd64.deb",
+    sha256 = "31c05ccd419d5c255643e3d21c871204e154a06af25300c2bd2b721989d038f0",
   )
   native.http_file(
     name = "deb_jessie_libxdamage1",
@@ -921,13 +921,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libxfixes3",
-    url = "http://deb.debian.org/debian/pool/main/libx/libxfixes/libxfixes3_5.0.1-2+b2_amd64.deb",
-    sha256 = "c91a70500eb6fa104e64e8a5928707a2a882bbaabfa7620cd56e833d837d4c37",
+    url = "http://deb.debian.org/debian/pool/main/libx/libxfixes/libxfixes3_5.0.1-2+deb8u1_amd64.deb",
+    sha256 = "bc30bf139964c7505776374c7ba8a7f9bd7c6bd101823f3d6a1f3b0bf11e41ee",
   )
   native.http_file(
     name = "deb_jessie_libxi6",
-    url = "http://deb.debian.org/debian/pool/main/libx/libxi/libxi6_1.7.4-1+b2_amd64.deb",
-    sha256 = "de09bfa8a26b9d2164026163bb468f3b3c7245f9ef3624db4ebe1ad79515d1aa",
+    url = "http://deb.debian.org/debian/pool/main/libx/libxi/libxi6_1.7.4-1+deb8u1_amd64.deb",
+    sha256 = "a99de627a07f54bc40e5dc77e3ca7e9d9b5619e068f1bb303f86edd138d6d037",
   )
   native.http_file(
     name = "deb_jessie_libxinerama1",
@@ -936,13 +936,13 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libxml2",
-    url = "http://security.debian.org/pool/updates/main/libx/libxml2/libxml2_2.9.1+dfsg1-5+deb8u5_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.1+dfsg1-5+deb8u5_amd64.deb",
     sha256 = "a3c7aa345cb1de1920f1922fb2701a65c05f1ff9ec89370d229ddce298d5da0c",
   )
   native.http_file(
     name = "deb_jessie_libxrandr2",
-    url = "http://deb.debian.org/debian/pool/main/libx/libxrandr/libxrandr2_1.4.2-1+b1_amd64.deb",
-    sha256 = "bb32f6c2662521ecca854a869496c706c2f37e48192b050a804782d3a624c76e",
+    url = "http://deb.debian.org/debian/pool/main/libx/libxrandr/libxrandr2_1.4.2-1+deb8u1_amd64.deb",
+    sha256 = "e59996ac0e993331799aa7bc768f7edd7b0baec0fafdbeebeef658834ba96b63",
   )
   native.http_file(
     name = "deb_jessie_libxrender1",
@@ -961,8 +961,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libxtst6",
-    url = "http://deb.debian.org/debian/pool/main/libx/libxtst/libxtst6_1.2.2-1+b1_amd64.deb",
-    sha256 = "b01d143b2c607363f4ec41895da25ccbcb5a6a3923245c171786f97332d2e248",
+    url = "http://deb.debian.org/debian/pool/main/libx/libxtst/libxtst6_1.2.2-1+deb8u1_amd64.deb",
+    sha256 = "caf381b445c684c1d8b46e14750bba16999ab71067ec823060c70778d19d3300",
   )
   native.http_file(
     name = "deb_jessie_libxxf86vm1",
@@ -986,7 +986,7 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_mysql_common",
-    url = "http://security.debian.org/pool/updates/main/m/mysql-5.5/mysql-common_5.5.58-0+deb8u1_all.deb",
+    url = "http://deb.debian.org/debian/pool/main/m/mysql-5.5/mysql-common_5.5.58-0+deb8u1_all.deb",
     sha256 = "0e802b0e131161e97745b304c46b10b87940eacdf8f7bff9fdd270baa44176ba",
   )
   native.http_file(
@@ -1026,22 +1026,22 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_openssh_client",
-    url = "http://deb.debian.org/debian/pool/main/o/openssh/openssh-client_6.7p1-5+deb8u3_amd64.deb",
+    url = "http://security.debian.org/pool/updates/main/o/openssh/openssh-client_6.7p1-5+deb8u3_amd64.deb",
     sha256 = "0cfb382650c3263349f4829f3423833c650cb0c665b731be66d5d72f9779099d",
   )
   native.http_file(
     name = "deb_jessie_openssl",
-    url = "http://security.debian.org/pool/updates/main/o/openssl/openssl_1.0.1t-1+deb8u7_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.0.1t-1+deb8u7_amd64.deb",
     sha256 = "d0e1464148bb2d682ccdb6f433b27a6848e4d012e8bb8a61ed9f6ad708017640",
   )
   native.http_file(
     name = "deb_jessie_perl",
-    url = "http://security.debian.org/pool/updates/main/p/perl/perl_5.20.2-3+deb8u9_amd64.deb",
+    url = "http://deb.debian.org/debian/pool/main/p/perl/perl_5.20.2-3+deb8u9_amd64.deb",
     sha256 = "af85abf2b55fa8303d483f0a443f37086a228a4abe2b2a4a1b29a11849c35699",
   )
   native.http_file(
     name = "deb_jessie_perl_modules",
-    url = "http://security.debian.org/pool/updates/main/p/perl/perl-modules_5.20.2-3+deb8u9_all.deb",
+    url = "http://deb.debian.org/debian/pool/main/p/perl/perl-modules_5.20.2-3+deb8u9_all.deb",
     sha256 = "a8d5eec17ff600c532559da108b1faeac0f97d5f070010b7169a95f97ca98f84",
   )
   native.http_file(
@@ -1161,8 +1161,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_wget",
-    url = "http://deb.debian.org/debian/pool/main/w/wget/wget_1.16-1+deb8u2_amd64.deb",
-    sha256 = "2d796bb572b480ee2adfc3dac3cdb232aa45c3686827d2da1bd9ae6a013b2053",
+    url = "http://deb.debian.org/debian/pool/main/w/wget/wget_1.16-1+deb8u4_amd64.deb",
+    sha256 = "2fab51b775517489d68d79174e5889ba6d1b249e45390721288220de46fa9ea7",
   )
   native.http_file(
     name = "deb_jessie_x11_common",

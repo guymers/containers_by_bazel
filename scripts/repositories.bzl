@@ -70,7 +70,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "9e0e3aeb4ae360ea284b0f751c1a2b40b664ea533ab90af58e8656700db0bc9b",
+    sha256 = "e12917b25b32980daee0e9cf879d9ec197e2893924bd1574604eb0f550034d46",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -101,7 +101,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "fcfb932a84ce03795abbf51ae7799439278155b0d42242d1d79a187034649fc8",
+    sha256 = "f9f363959042fce1615ada81ae812e08d79075218c398ed28e68e1302c4b272f",
   )
   native.http_file(
     name = "jenkins_agent_jar",
@@ -137,14 +137,14 @@ def dependency_repositories():
   native.http_file(
     name = "elasticsearch",
     url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-" + ELASTICSEARCH_VERSION + ".deb",
-    sha256 = "0d8ae6a20ca122928ac9e8a924e463a244524e60a7d169365242079ba1c46ef9",
+    sha256 = "8be33a173f1f1df4f75ce0bbf2ca9d274217b94c603bac18455542c0bc1e8728",
   )
 
   ###### KIBANA
   native.http_file(
     name = "kibana",
     url = "https://artifacts.elastic.co/downloads/kibana/kibana-" + KIBANA_VERSION + "-amd64.deb",
-    sha256 = "6277c0d711a6aae029521e80ccf0ba7faaac45ed91eb1524eb0122c812b50344",
+    sha256 = "74f74ef7687ea74e99697d1acbbd1fc1e9d0d1728f86af1839c2622d69fe0ce1",
   )
 
 
@@ -152,7 +152,7 @@ def dependency_repositories():
   native.http_file(
     name = "nodejs",
     url = "https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz",
-    sha256 = "8be82805f7c1ab3e64d4569fb9a90ded2de78dd27cadbb91bad1bf975dae1e2d"
+    sha256 = "86f3aa593315f0503d069e3f4805019583ab8d86c0244a83c795d1942e3f99b7"
   )
 
   ###### YARN
@@ -183,13 +183,13 @@ def dependency_repositories():
   native.http_file(
     name = "zipkin",
     url = "https://jcenter.bintray.com/io/zipkin/java/zipkin-server/" + ZIPKIN_VERSION + "/zipkin-server-" + ZIPKIN_VERSION + "-exec.jar",
-    sha256 = "557832a7915e45fa21fa644ed8f35ae4858bd9baed3fdf4889e0a17f26709f4c",
+    sha256 = "c7cda6ced79f5243b22e2e6d20549bf243149487be3f95dba803a342ebdf5506",
   )
 
   native.http_file(
     name = "zipkin_kafka",
     url = "https://jcenter.bintray.com/io/zipkin/java/zipkin-autoconfigure-collector-kafka10/" + ZIPKIN_VERSION + "/zipkin-autoconfigure-collector-kafka10-" + ZIPKIN_VERSION + "-module.jar",
-    sha256 = "25013cdcc12b09132e965083f8a5b52e3df0f2a21e2c093cad823aef3886bbd8",
+    sha256 = "901478e3a7beff9d5890ff67599b8b806b52315331b49bd9b6576f6c90bb8057",
   )
 
   ###### JASPER

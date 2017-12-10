@@ -42,8 +42,8 @@ container_image(
   entrypoint = ["/entrypoint-prometheus"],
   cmd = [
     "/opt/prometheus",
-    "-config.file", PROMETHEUS_CONF + "/prometheus.yml",
-    "-storage.local.path", PROMETHEUS_HOME,
+    "--config.file", PROMETHEUS_CONF + "/prometheus.yml",
+    "--storage.tsdb.path", PROMETHEUS_HOME,
   ],
   visibility = ["//visibility:public"],
 )
