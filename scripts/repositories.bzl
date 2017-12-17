@@ -31,17 +31,17 @@ def dependency_repositories():
     tag = "0.6.0",
   )
 
-  # Update to 20171009 for amd64 (debuerreotype 0.4)
+  # Update to 20171210 for amd64 (debuerreotype 0.4)
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/de09dd55b6328b37b89a33e76b698f9dbe611fab/jessie/slim/rootfs.tar.xz",
-    sha256 = "e38f225f2870c928a068b5828580fb6ffb6c8d57fca7deb68f77d01e3b26bbf8",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/6af0f6159c515601731d92972a245199337e3ca6/jessie/slim/rootfs.tar.xz",
+    sha256 = "b7d9e281eb22e4bc9606bd3acbd4c5603911d9140e6e0fd1f1390ccdcce87790",
   )
-  # Update to 20171009 for amd64 (debuerreotype 0.4)
+  # Update to 20171210 for amd64 (debuerreotype 0.4)
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/de09dd55b6328b37b89a33e76b698f9dbe611fab/stretch/slim/rootfs.tar.xz",
-    sha256 = "d56af9c63a3a093a6ff6168b1174e9227a99af29db82a50020fc89166f1691f0",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/6af0f6159c515601731d92972a245199337e3ca6/stretch/slim/rootfs.tar.xz",
+    sha256 = "670bc48cf65e32a5f005e44a9be2f9bc5608de78f2015dfcb434d6fd79c70aa9",
   )
 
   deb_jessie()
