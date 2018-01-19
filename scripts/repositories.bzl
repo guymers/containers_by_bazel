@@ -85,7 +85,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "813776f81b1dfa990fba11cd6d0120df3467bee00742b115f282a0e8e254e23f",
+    sha256 = "9d8cb24b297507ed4c49b476d3050da0abe2c39f7e7d97ba6d48c1b17854e2d7",
     build_file_content = "exports_files(['sbt'])",
   )
 
@@ -101,7 +101,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "f9f363959042fce1615ada81ae812e08d79075218c398ed28e68e1302c4b272f",
+    sha256 = "014f669f32bc6e925e926e260503670b32662f006799b133a031a70a794c8a14",
   )
   native.http_file(
     name = "jenkins_agent_jar",
@@ -152,7 +152,7 @@ def dependency_repositories():
   native.http_file(
     name = "nodejs",
     url = "https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz",
-    sha256 = "86f3aa593315f0503d069e3f4805019583ab8d86c0244a83c795d1942e3f99b7"
+    sha256 = "68b94aac38cd5d87ab79c5b38306e34a20575f31a3ea788d117c20fffcca3370"
   )
 
   ###### YARN

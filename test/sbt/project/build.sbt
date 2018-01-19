@@ -1,6 +1,6 @@
 lazy val commonSettings = Seq(
   name := "containers-by-bazel",
-  scalaVersion := "2.12.1",
+  scalaVersion := "2.12.4",
 
   scalacOptions ++= Seq(
     "-deprecation",
@@ -25,5 +25,5 @@ lazy val commonSettings = Seq(
 lazy val root = project.in(file("."))
   .settings(commonSettings)
   .settings(libraryDependencies ++= Seq(
-    "com.chuusai" %% "shapeless" % "2.3.2"
+    "com.chuusai" %% "shapeless" % "2.3.3"
   ))
