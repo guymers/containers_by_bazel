@@ -286,8 +286,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libcurl3_gnutls",
-    url = "http://deb.debian.org/debian/pool/main/c/curl/libcurl3-gnutls_7.38.0-4+deb8u8_amd64.deb",
-    sha256 = "3e1b509aee34f7499b894a976c5ff383540c6679e8a2cd8ef4d77ea564a5fe32",
+    url = "http://security.debian.org/pool/updates/main/c/curl/libcurl3-gnutls_7.38.0-4+deb8u9_amd64.deb",
+    sha256 = "bef3395c9bf2ddb93153bf6839372ae08b3e4f19b5e4e33c13561ae8c0d5f8de",
   )
   native.http_file(
     name = "deb_jessie_libdap11",
@@ -621,8 +621,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libpoppler46",
-    url = "http://security.debian.org/pool/updates/main/p/poppler/libpoppler46_0.26.5-2+deb8u2_amd64.deb",
-    sha256 = "94463745121736f1cbc0fce9f831ea31fdce0e5f151451384ea77531233ae56b",
+    url = "http://security.debian.org/pool/updates/main/p/poppler/libpoppler46_0.26.5-2+deb8u3_amd64.deb",
+    sha256 = "03047f7678d87e62fb35dedef26d04b43a987bdb80fb852aea6fa3514c8d85ab",
   )
   native.http_file(
     name = "deb_jessie_libpopt0",
@@ -731,8 +731,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libtiff5",
-    url = "http://deb.debian.org/debian/pool/main/t/tiff/libtiff5_4.0.3-12.3+deb8u4_amd64.deb",
-    sha256 = "79eb932460fb975af5f0672201ec656eab1d1f2d0a5f25b0d5308de803b84c77",
+    url = "http://security.debian.org/pool/updates/main/t/tiff/libtiff5_4.0.3-12.3+deb8u5_amd64.deb",
+    sha256 = "2bdb12e49dd579e1ad8f27c709efff9ed2578560b235ec964ffba82459423834",
   )
   native.http_file(
     name = "deb_jessie_libtomcat7_java",
@@ -1061,6 +1061,6 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_zulu_8",
-    url = "http://repos.azulsystems.com/debian/pool/main/zulu8.25.0.1-jdk8.0.152-linux_amd64.deb",
-    sha256 = "7c44016848d22f941e221bdd12d265feb565213d1e5948eb7a41e990b5bd4502",
+    url = "http://repos.azulsystems.com/debian/pool/main/zulu8.27.0.7-jdk8.0.162-linux_amd64.deb",
+    sha256 = "23270cb781e4ffb9d9784f6760b740a66615f67744a9c5f7b4158c7fa32078cd",
   )
