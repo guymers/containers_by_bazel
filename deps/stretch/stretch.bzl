@@ -336,8 +336,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libtasn1_6",
-    url = "http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.10-1.1_amd64.deb",
-    sha256 = "a379d6406e14a6fb392a27d560a9929616485996ea8a024056ee99935502e2c6",
+    url = "http://security.debian.org/pool/updates/main/libt/libtasn1-6/libtasn1-6_4.10-1.1+deb9u1_amd64.deb",
+    sha256 = "48514239ecf51afe060445db92b69cee31e00af3d4485af160a23264d9a4119a",
   )
   native.http_file(
     name = "deb_stretch_libtool",

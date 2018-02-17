@@ -31,17 +31,17 @@ def dependency_repositories():
     tag = "0.7.0",
   )
 
-  # Update to 20171210 for amd64 (debuerreotype 0.4)
+  # Update to 20180213 for amd64 (debuerreotype 0.4)
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/6af0f6159c515601731d92972a245199337e3ca6/jessie/slim/rootfs.tar.xz",
-    sha256 = "b7d9e281eb22e4bc9606bd3acbd4c5603911d9140e6e0fd1f1390ccdcce87790",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/132a85df5e5e1528b46bcd44e8bfcc9d82ffce2d/jessie/slim/rootfs.tar.xz",
+    sha256 = "5457790b8ae912598cb0459c02e1d424a609a05a9c5cd5f8d5bcea5d792e71f1",
   )
-  # Update to 20171210 for amd64 (debuerreotype 0.4)
+  # Update to 20180213 for amd64 (debuerreotype 0.4)
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/6af0f6159c515601731d92972a245199337e3ca6/stretch/slim/rootfs.tar.xz",
-    sha256 = "670bc48cf65e32a5f005e44a9be2f9bc5608de78f2015dfcb434d6fd79c70aa9",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/132a85df5e5e1528b46bcd44e8bfcc9d82ffce2d/stretch/slim/rootfs.tar.xz",
+    sha256 = "205845ffbfe621496ed371c8a13cc4b8608d27c2a6403e8535c608651a88d675",
   )
 
   deb_jessie()
@@ -70,7 +70,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "e12917b25b32980daee0e9cf879d9ec197e2893924bd1574604eb0f550034d46",
+    sha256 = "f181f619c9a8e0750c1ac940eb00a0881cc50386d896f06f159e9a5b68db60a0",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -78,21 +78,21 @@ def dependency_repositories():
   native.maven_jar(
     name = "jmx_prometheus_javaagent",
     artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:" + PROMETHEUS_JMX_JAVAAGENT,
-    sha1 = "fd6a31dd3eaed80d29453b9fc0d6f5496424928f",
+    sha1 = "2b3d0e0af3ed9d8d809b6ad13cf0b9b3fdcb6a0f",
   )
 
 
   native.new_http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "9d8cb24b297507ed4c49b476d3050da0abe2c39f7e7d97ba6d48c1b17854e2d7",
+    sha256 = "8a9072155578f06c861be406e7f9fe989b3770d8da4069dd3cb5ad6c6d25c03b",
     build_file_content = "exports_files(['sbt'])",
   )
 
   native.new_http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "e63ecd36d2daec6f406793864510b1f516b9a6c9cf1842e204fca95b58070c22",
+    sha256 = "285b4cb407e2b2f36e2d12c43d95fbff2e2b18efc1d0fb4eae9d5b8dc2b1d1d5",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
 
@@ -101,12 +101,12 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
-    sha256 = "014f669f32bc6e925e926e260503670b32662f006799b133a031a70a794c8a14",
+    sha256 = "1d893aa30e49a3130e4f90268044dafb34f7c32b573970f2acca8c2c821f9b53",
   )
   native.http_file(
     name = "jenkins_agent_jar",
     url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/" + JENKINS_SWARM_VERSION + "/swarm-client-" + JENKINS_SWARM_VERSION + ".jar",
-    sha256 = "472404482b358279276d7c1c8d1e10b319229886ce153c620e8b84b0c16f3265",
+    sha256 = "726ccf7d590d9997f499a4e081831b2ddbee7fd304b1838dd85c8825134ea7e9",
   )
 
   ###### MAVEN
@@ -159,7 +159,7 @@ def dependency_repositories():
   native.http_file(
     name = "yarnpkg",
     url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "216ac08fecef0cda1f8d0cc8ebd5eaa0af91da5b102d44dcf5bb5c53be3a5c2c",
+    sha256 = "ec593e3f91b40b4c732ed9cb2513921469126e0e6a79bea4b4fd1269395df00f",
   )
 
 
@@ -183,13 +183,13 @@ def dependency_repositories():
   native.http_file(
     name = "zipkin",
     url = "https://jcenter.bintray.com/io/zipkin/java/zipkin-server/" + ZIPKIN_VERSION + "/zipkin-server-" + ZIPKIN_VERSION + "-exec.jar",
-    sha256 = "c7cda6ced79f5243b22e2e6d20549bf243149487be3f95dba803a342ebdf5506",
+    sha256 = "3f893ce96882cabdd6808a35af48a272be395c7b0b843ab57e0b5607eb2cfc27",
   )
 
   native.http_file(
     name = "zipkin_kafka",
     url = "https://jcenter.bintray.com/io/zipkin/java/zipkin-autoconfigure-collector-kafka10/" + ZIPKIN_VERSION + "/zipkin-autoconfigure-collector-kafka10-" + ZIPKIN_VERSION + "-module.jar",
-    sha256 = "901478e3a7beff9d5890ff67599b8b806b52315331b49bd9b6576f6c90bb8057",
+    sha256 = "d8245bb1bfa79088c948b93709cb3d21c853d3070f18c84369d27fcc92b5d587",
   )
 
   ###### JASPER
