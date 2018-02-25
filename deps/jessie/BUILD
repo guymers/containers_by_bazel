@@ -260,6 +260,7 @@ filegroup(
   srcs = [
     "@deb_jessie_fontconfig_config//file",
     "@deb_jessie_fonts_dejavu_core//file",
+    "@deb_jessie_gcc_4_9_base//file",
     "@deb_jessie_init_system_helpers//file",
     "@deb_jessie_libarmadillo4//file",
     "@deb_jessie_libarpack2//file",
@@ -277,6 +278,7 @@ filegroup(
     "@deb_jessie_libfontconfig1//file",
     "@deb_jessie_libfreetype6//file",
     "@deb_jessie_libfreexl1//file",
+    "@deb_jessie_libgcc1//file",
     "@deb_jessie_libgdal1h//file",
     "@deb_jessie_libgdbm3//file",
     "@deb_jessie_libgeos_3_4_2//file",
@@ -325,6 +327,7 @@ filegroup(
     "@deb_jessie_libsqlite3_0//file",
     "@deb_jessie_libssh2_1//file",
     "@deb_jessie_libssl1_0_0//file",
+    "@deb_jessie_libstdc__6//file",
     "@deb_jessie_libtasn1_6//file",
     "@deb_jessie_libtiff5//file",
     "@deb_jessie_liburiparser1//file",

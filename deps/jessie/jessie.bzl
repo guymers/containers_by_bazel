@@ -1,13 +1,13 @@
 def deb_jessie():
   native.http_file(
     name = "deb_jessie_cassandra",
-    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra_3.11.1_all.deb",
-    sha256 = "62eda9060fc18f4953911ba5ca553ffd48ab4f4a51aaf2d3573e6ecd6cf7bc61",
+    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra_3.11.2_all.deb",
+    sha256 = "2250fa59affeee5e2c559611f4d636804bb5790e5e62c8f78335cfca8acf1686",
   )
   native.http_file(
     name = "deb_jessie_cassandra_tools",
-    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra-tools_3.11.1_all.deb",
-    sha256 = "06a01afb62212f2894486b5002be0fe5e1f7022f79259addf2f53448d5055347",
+    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra-tools_3.11.2_all.deb",
+    sha256 = "4373dc5619cfa0de5279b9bcd22393e7cbbb938ccd8ad6324a31cd1dd8dbdda0",
   )
   native.http_file(
     name = "deb_jessie_cron",
@@ -163,6 +163,11 @@ def deb_jessie():
     name = "deb_jessie_fonts_dejavu_core",
     url = "http://deb.debian.org/debian/pool/main/f/fonts-dejavu/fonts-dejavu-core_2.34-1_all.deb",
     sha256 = "002c9fa9445cfec4964637f22c73265d8a868f0810104452a6c906af52e43dab",
+  )
+  native.http_file(
+    name = "deb_jessie_gcc_4_9_base",
+    url = "http://security.debian.org/pool/updates/main/g/gcc-4.9/gcc-4.9-base_4.9.2-10+deb8u1_amd64.deb",
+    sha256 = "f568b493ef91d9657a1c9ad2d5ce898d99d5e0f88c889b765bd24f66ea6eb602",
   )
   native.http_file(
     name = "deb_jessie_gerrit",
@@ -360,6 +365,11 @@ def deb_jessie():
     sha256 = "3a7a2e42a8664d88087c8497ff6139b93751668daa596e14642994fad1f266dd",
   )
   native.http_file(
+    name = "deb_jessie_libgcc1",
+    url = "http://security.debian.org/pool/updates/main/g/gcc-4.9/libgcc1_4.9.2-10+deb8u1_amd64.deb",
+    sha256 = "3101d5dc171fab3b4601bc3282bbc69f0fb9cfd1e1761389e1e6d2590e384623",
+  )
+  native.http_file(
     name = "deb_jessie_libgdal1h",
     url = "http://deb.debian.org/debian/pool/main/g/gdal/libgdal1h_1.10.1+dfsg-8+b3_amd64.deb",
     sha256 = "23a5c2130e03ce06ba74376c530ed74d5ecd0cdeb7283ee0c192e9c0707c210d",
@@ -391,8 +401,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libgfortran3",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-4.9/libgfortran3_4.9.2-10_amd64.deb",
-    sha256 = "77798b64f1f042daca070e3edead2658ffed6a9dcf888ba8e22f6f140012510c",
+    url = "http://security.debian.org/pool/updates/main/g/gcc-4.9/libgfortran3_4.9.2-10+deb8u1_amd64.deb",
+    sha256 = "05dc518146a4689e33d5f41c7b40a8861ad70b1ab6de018c48be6c929d0683d0",
   )
   native.http_file(
     name = "deb_jessie_libgif4",
@@ -661,8 +671,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libquadmath0",
-    url = "http://deb.debian.org/debian/pool/main/g/gcc-4.9/libquadmath0_4.9.2-10_amd64.deb",
-    sha256 = "76b71fdb834434e7b6dde5ba343af9bacddb987ef8ad9c788442dbe4e236e78f",
+    url = "http://security.debian.org/pool/updates/main/g/gcc-4.9/libquadmath0_4.9.2-10+deb8u1_amd64.deb",
+    sha256 = "7e3779d41a42a88621f93c47a77874547b266b7c8166c80e254721e8347c3355",
   )
   native.http_file(
     name = "deb_jessie_librtmp1",
@@ -703,6 +713,11 @@ def deb_jessie():
     name = "deb_jessie_libssl1_0_0",
     url = "http://deb.debian.org/debian/pool/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u7_amd64.deb",
     sha256 = "d99de2cdca54484d23badc5683c7211b3a191977272d9e5281837af863dcdd56",
+  )
+  native.http_file(
+    name = "deb_jessie_libstdc__6",
+    url = "http://security.debian.org/pool/updates/main/g/gcc-4.9/libstdc++6_4.9.2-10+deb8u1_amd64.deb",
+    sha256 = "a8f4ef6773b90bb39a8a8a0a5e3e20ca8501de6896204f665eb114d5b79f164f",
   )
   native.http_file(
     name = "deb_jessie_libswt_gtk_3_java",

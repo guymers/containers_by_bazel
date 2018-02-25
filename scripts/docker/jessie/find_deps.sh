@@ -52,6 +52,7 @@ VERSION_PREFIXES=(
   ["git-man"]="1:"
   ["libarmadillo4"]="1:"
   ["libbluray1"]="1:"
+  ["libgcc1"]="1:"
   ["libjpeg62-turbo"]="1:"
   ["libmodplug1"]="1:"
   ["libnetcdfc7"]="1:"
