@@ -12,14 +12,14 @@ user_layer(
 
 container_layer(
   name = "files",
-  debs = ["//deps/jessie:redis"],
   directory = "/",
+  debs = ["//deps/stretch:redis"],
   files = ["entrypoint-redis", "etc"],
 )
 
 container_image(
   name = "redis",
-  base = "//base:jessie",
+  base = "//base:stretch",
   layers = [":user", ":files"],
   env = {
     "REDIS_CONF": REDIS_CONF,

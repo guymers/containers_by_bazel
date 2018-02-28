@@ -2,19 +2,19 @@ load("@bazel_tools//tools/build_defs/pkg:pkg.bzl", "pkg_tar")
 
 container_layer(
   name = "locale",
-  debs = ["//deps/jessie:locales"],
+  debs = ["//deps/stretch:locales"],
   tars = [":locale_archive_tar"],
   visibility = ["//visibility:public"],
 )
 
 container_layer(
   name = "locale_files",
-  debs = ["//deps/jessie:locales"],
+  debs = ["//deps/stretch:locales"],
 )
 
 container_image(
   name = "locales",
-  base = "//base:jessie",
+  base = "//base:stretch",
   layers = [":locale_files"],
 )
 

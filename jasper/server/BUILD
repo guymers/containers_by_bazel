@@ -1,7 +1,7 @@
 load("//tomcat/war_to_tar:war_to_tar.bzl", "war_to_tar")
 
-CATALINA_BASE = "/var/lib/tomcat7"
-CATALINA_HOME = "/usr/share/tomcat7"
+CATALINA_BASE = "/var/lib/tomcat8"
+CATALINA_HOME = "/usr/share/tomcat8"
 
 config_setting(
   name = "jasperserver_context",

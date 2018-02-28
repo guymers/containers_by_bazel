@@ -31,7 +31,7 @@ container_layer(
 
 container_image(
   name = "prometheus",
-  base = "//base:jessie",
+  base = "//base:stretch",
   layers = [":user", ":files", ":init", ":config"],
   env = {
     "PROMETHEUS_HOME": PROMETHEUS_HOME,

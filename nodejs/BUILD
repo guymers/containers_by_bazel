@@ -32,7 +32,7 @@ container_layer(
 
 container_image(
   name = "nodejs",
-  base = "//base:jessie",
+  base = "//base:stretch",
   layers = ["//base/ca_certificates", ":nodejs_layer", ":yarn_layer"],
 
   visibility = ["//visibility:public"],

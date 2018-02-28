@@ -16,7 +16,7 @@ user_layer(
 container_layer(
   name = "files",
   directory = "/",
-  debs = ["@ejabberd//file", "//deps/jessie:ejabberd"],
+  debs = ["@ejabberd//file", "//deps/stretch:ejabberd"],
   files = ["entrypoint-ejabberd"],
   symlinks = {
     "./opt/ejabberd": "/opt/ejabberd-" + EJABBERD_VERSION,

@@ -1,9 +1,9 @@
-CATALINA_HOME = "/usr/share/tomcat7"
-CATALINA_BASE = "/var/lib/tomcat7"
+CATALINA_HOME = "/usr/share/tomcat8"
+CATALINA_BASE = "/var/lib/tomcat8"
 
 container_layer(
   name = "deps",
-  debs = ["//deps/jessie:zulu", "//deps/jessie:tomcat7"],
+  debs = ["//deps/stretch:zulu", "//deps/stretch:tomcat8"],
 )
 
 container_layer(
@@ -12,15 +12,20 @@ container_layer(
   files = [
     "@jasper_server//:buildomatic",
     "@jasper_server//:apache-ant",
-    "buildomatic"
   ],
+)
+
+container_layer(
+  name = "config",
+  directory = "/opt/jasperserver/buildomatic",
+  files = glob(["buildomatic/*"]),
 )
 
 # TODO reuse //tomcat
 container_image(
   name = "temp_database_tomcat",
   base = "//postgresql",
-  layers = [":deps", ":files"],
+  layers = [":deps", ":files", ":config"],
   env = {
     "JAVA_HOME": "/usr/lib/jvm/zulu-8-amd64",
 

@@ -12,7 +12,7 @@ user_layer(
 
 container_layer(
   name = "files",
-  debs = ["//deps/jessie:gerrit"] + ["//deps/jessie:ssh"],
+  debs = ["//deps/stretch:gerrit"] + ["//deps/stretch:ssh"],
 )
 
 container_layer(

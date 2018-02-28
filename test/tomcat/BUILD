@@ -8,7 +8,7 @@ war_to_tar(
 
 container_layer(
   name = "sample_war_layer",
-  directory = "/var/lib/tomcat7/webapps/ROOT",
+  directory = "/var/lib/tomcat8/webapps/ROOT",
   tars = [":sample_tar"],
 )
 container_image(

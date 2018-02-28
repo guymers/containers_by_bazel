@@ -16,6 +16,7 @@ load(
   "PENATHO_DI_VERSION",
   "PROMETHEUS_VERSION",
   "PROMETHEUS_JMX_JAVAAGENT",
+  "RABBITMQ_VERSION",
   "SBT_VERSION",
   "YARN_VERSION",
   "ZIPKIN_VERSION",
@@ -148,6 +149,14 @@ def dependency_repositories():
   )
 
 
+  ###### GRAFANA
+  native.http_file(
+    name = "grafana",
+    url = "https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_" + GRAFANA_VERSION + "_amd64.deb",
+    sha256 = "d022fceb939e7570d74b437932bee876e306b0e21ecdd830752c61b4e89dab31",
+  )
+
+
   ###### NODEJS
   native.http_file(
     name = "nodejs",
@@ -167,7 +176,7 @@ def dependency_repositories():
   ###### TOMCAT
   native.http_file(
     name = "tomcat_sample_war",
-    url = "https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war",
+    url = "https://tomcat.apache.org/tomcat-8.0-doc/appdev/sample/sample.war",
     sha256 = "89b33caa5bf4cfd235f060c396cb1a5acb2734a1366db325676f48c5f5ed92e5",
   )
 
@@ -178,6 +187,15 @@ def dependency_repositories():
     url = "https://www.process-one.net/downloads/ejabberd/" + EJABBERD_VERSION + "/ejabberd_" + EJABBERD_VERSION + "-0_amd64.deb",
     sha256 = "cc77e26c43c89dd382889ea3bd4a509033a9f746190ad6e198b557cb940a881f",
   )
+
+
+  ###### RABBITMQ
+  native.http_file(
+    name = "rabbitmq",
+    url = "https://github.com/rabbitmq/rabbitmq-server/releases/download/v" + RABBITMQ_VERSION + "/rabbitmq-server_" + RABBITMQ_VERSION + "-1_all.deb",
+    sha256 = "a6a8893e3053e8c0acde6bc1f199c50de848a94b1b26db8c0df325db08bff8f7",
+  )
+
 
   ###### ZIPKIN
   native.http_file(

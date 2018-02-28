@@ -14,7 +14,7 @@ user_layer(
 container_layer(
   name = "files",
   directory = "/",
-  debs = ["//deps/jessie:cassandra"],
+  debs = ["//deps/stretch:cassandra"],
 )
 
 container_layer(

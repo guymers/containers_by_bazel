@@ -1,4 +1,4 @@
-FROM bazel/dependencies:jessie-zulu
+FROM bazel/dependencies:stretch-zulu
 
 RUN apt-get update
 RUN apt-get -y install \

@@ -11,15 +11,26 @@ user_layer(
 
 container_layer(
   name = "files",
+  debs = ["@rabbitmq//file", "//deps/stretch:rabbitmq"],
+)
+
+container_layer(
+  name = "init",
+  mode = "0755",
   directory = "/",
-  debs = ["//deps/jessie:rabbitmq"],
-  files = ["entrypoint-rabbitmq", "etc"],
+  files = ["entrypoint-rabbitmq"],
+)
+
+container_layer(
+  name = "config",
+  directory = "/etc/rabbitmq",
+  files = glob(["etc/rabbitmq/*"]),
 )
 
 container_image(
   name = "rabbitmq",
   base = "//erlang",
-  layers = [":user", ":files"],
+  layers = [":user", ":files", ":init", ":config"],
   env = {
     "RABBITMQ_HOME": RABBITMQ_HOME,
     # logs to stdout

@@ -2,7 +2,7 @@ JASPER_STUDIO_VERSION = "6.2.2"
 
 container_layer(
   name = "client_deps",
-  debs = ["//deps/jessie:jasper_client"],
+  debs = ["//deps/stretch:jasper_client"],
 )
 
 container_layer(
@@ -13,7 +13,7 @@ container_layer(
 
 container_image(
   name = "client",
-  base = "//base:jessie",
+  base = "//base:stretch",
   layers = [":client_deps", ":client_files"],
   cmd = ["/opt/TIBCOJaspersoftStudio-" + JASPER_STUDIO_VERSION + ".final/Jaspersoft Studio"],
 )

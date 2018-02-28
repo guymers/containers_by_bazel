@@ -1,12 +1,12 @@
 container_layer(
   name = "files",
   directory = "/",
-  debs = ["//deps/jessie:erlang"],
+  debs = ["//deps/stretch:erlang"],
 )
 
 container_image(
   name = "erlang",
-  base = "//base:jessie",
+  base = "//base:stretch",
   layers = [":files"],
   visibility = ["//visibility:public"],
 )

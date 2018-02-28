@@ -2,7 +2,7 @@
 set -e
 set -o pipefail
 
-readonly container="bazel/dependencies:jessie-ca-certificates"
+readonly container="bazel/dependencies:stretch-ca-certificates"
 readonly certs_dir="/etc/ssl/certs"
 
 cat << EOF

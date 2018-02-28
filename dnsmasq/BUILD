@@ -4,13 +4,13 @@ CONF_DIR = "/etc/dnsmasq.d"
 
 container_layer(
   name = "files",
-  debs = ["//deps/jessie:dnsmasq"],
+  debs = ["//deps/stretch:dnsmasq"],
   directory = "/",
 )
 
 container_image(
   name = "dnsmasq",
-  base = "//base:jessie",
+  base = "//base:stretch",
   layers = ["//base/tini", ":files"],
   volumes = [ CONF_DIR ],
   ports = ["53"],

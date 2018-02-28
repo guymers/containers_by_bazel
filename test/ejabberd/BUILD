@@ -1,6 +1,6 @@
 container_layer(
   name = "python_files",
-  debs = ["//deps/jessie:python"],
+  debs = ["//deps/stretch:python"],
 )
 
 container_image(

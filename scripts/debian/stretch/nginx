@@ -1,2 +1,2 @@
 nginx=${NGINX_DEB_VERSION}
-gettext-base=0.19.3-2
+gettext-base=0.19.8.1-2

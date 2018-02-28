@@ -25,7 +25,7 @@ container_image(
 
 container_layer(
   name = "files",
-  debs = ["//deps/jessie:git"] + ["//deps/jessie:ssh"] + ["//deps/jessie:zip"],
+  debs = ["//deps/stretch:git"] + ["//deps/stretch:ssh"] + ["//deps/stretch:zip"],
   files = ["@jenkins_war//file"],
   directory = "/usr/share/jenkins",
 )

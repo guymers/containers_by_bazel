@@ -9,7 +9,7 @@ user_layer(
 
 container_layer(
   name = "files",
-  debs = ["//deps/jessie:nginx"],
+  debs = ["//deps/stretch:nginx"],
   symlinks = {
     "./var/log/nginx/access.log": "/dev/stdout",
     "./var/log/nginx/error.log": "/dev/stderr",
@@ -18,7 +18,7 @@ container_layer(
 
 container_image(
   name = "nginx",
-  base = "//base:jessie",
+  base = "//base:stretch",
   layers = [":user", ":files"],
   volumes = ["/etc/nginx", "/var/cache/nginx"],
   ports = ["80", "443"],

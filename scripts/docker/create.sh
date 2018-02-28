@@ -30,7 +30,7 @@ function build_image() {
 readonly jessie_image=$(bazel run //base:jessie | grep "^Tagging" | awk '{print $4}')
 docker tag "$jessie_image" bazel/base:jessie
 
-for app in base ca-certificates erlang zulu cassandra gerrit grafana java nginx postgresql rabbitmq; do
+for app in base; do
   # TODO do this in a single command
   build_image "$DIR/jessie" "jessie" "$app" | tee "$DIR/_built/jessie/$app.tmp"
   tail -n1 "$DIR/_built/jessie/$app.tmp" > "$DIR/_built/jessie/$app"
@@ -40,7 +40,7 @@ done
 readonly stretch_image=$(bazel run //base:stretch | grep "^Tagging" | awk '{print $4}')
 docker tag "$stretch_image" bazel/base:stretch
 
-for app in base ca-certificates; do
+for app in base ca-certificates zulu cassandra erlang gerrit java nginx postgresql; do
   build_image "$DIR/stretch" "stretch" "$app" | tee "$DIR/_built/stretch/$app.tmp"
   tail -n1 "$DIR/_built/stretch/$app.tmp" > "$DIR/_built/stretch/$app"
   rm -f "$DIR/_built/stretch/$app.tmp"

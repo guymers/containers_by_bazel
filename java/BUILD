@@ -6,12 +6,12 @@ container_layer(
 
 container_layer(
   name = "zulu_files",
-  debs = ["//deps/jessie:zulu"]
+  debs = ["//deps/stretch:zulu"]
 )
 
 container_image(
   name = "zulu",
-  base = "//base:jessie",
+  base = "//base:stretch",
   layers = ["//base/ca_certificates", ":zulu_files", "//java:script_files"],
   env = {
     "LANG": "C.UTF-8",

@@ -1,6 +1,6 @@
 genrule(
   name = "ca_certificates_crt",
-  srcs = ["//scripts/docker:_built/jessie/ca-certificates"],
+  srcs = ["//scripts/docker:_built/stretch/ca-certificates"],
   outs = ["ca-certificates.crt"],
   cmd = "$(location :crt_file) > $@",
   tools = [":crt_file"],
@@ -9,7 +9,7 @@ genrule(
 
 genrule(
   name = "build_file",
-  srcs = ["//scripts/docker:_built/jessie/ca-certificates"],
+  srcs = ["//scripts/docker:_built/stretch/ca-certificates"],
   outs = ["certs.BUILD"],
   cmd = "$(location :ca_certificates_build) > $@",
   tools = [":ca_certificates_build"],
