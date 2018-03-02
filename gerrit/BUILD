@@ -1,5 +1,7 @@
 load("//macros/user:user.bzl", "user_layer")
+load("//scripts/versions:versions.bzl", "GERRIT_VERSION")
 
+GERRIT_HOME = "/var/gerrit"
 GERRIT_CONF = "/etc/gerrit"
 GERRIT_SITE = "/gerrit"
 
@@ -11,8 +13,16 @@ user_layer(
 )
 
 container_layer(
+  name = "deps",
+  debs = ["//deps/stretch:git"] + ["//deps/stretch:ssh"],
+)
+container_layer(
   name = "files",
-  debs = ["//deps/stretch:gerrit"] + ["//deps/stretch:ssh"],
+  files = ["@gerrit_war//file"],
+  directory = GERRIT_HOME + "/bin",
+  symlinks = {
+    "." + GERRIT_HOME + "/bin/gerrit.war": GERRIT_HOME + "/bin/gerrit-" + GERRIT_VERSION + ".war",
+  },
 )
 
 container_layer(
@@ -38,10 +48,10 @@ container_layer(
 container_image(
   name = "gerrit",
   base = "//java:zulu",
-  layers = [":user", ":files", ":init", ":config", ":scripts"],
+  layers = [":user", ":deps", ":files", ":init", ":config", ":scripts"],
 
   env = {
-    "GERRIT_HOME": "/var/gerrit",
+    "GERRIT_HOME": GERRIT_HOME,
     "GERRIT_CONF": GERRIT_CONF,
     "GERRIT_SITE": GERRIT_SITE,
     "GERRIT_SLAVE": "false",

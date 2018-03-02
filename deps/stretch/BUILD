@@ -86,44 +86,6 @@ filegroup(
 )
 
 filegroup(
-  name = "gerrit",
-  srcs = [
-    "@deb_stretch_gerrit//file",
-    "@deb_stretch_git//file",
-    "@deb_stretch_git_man//file",
-    "@deb_stretch_libcurl3_gnutls//file",
-    "@deb_stretch_liberror_perl//file",
-    "@deb_stretch_libffi6//file",
-    "@deb_stretch_libgdbm3//file",
-    "@deb_stretch_libgmp10//file",
-    "@deb_stretch_libgnutls30//file",
-    "@deb_stretch_libgssapi_krb5_2//file",
-    "@deb_stretch_libhogweed4//file",
-    "@deb_stretch_libidn11//file",
-    "@deb_stretch_libidn2_0//file",
-    "@deb_stretch_libk5crypto3//file",
-    "@deb_stretch_libkeyutils1//file",
-    "@deb_stretch_libkrb5_3//file",
-    "@deb_stretch_libkrb5support0//file",
-    "@deb_stretch_libldap_2_4_2//file",
-    "@deb_stretch_libldap_common//file",
-    "@deb_stretch_libnettle6//file",
-    "@deb_stretch_libnghttp2_14//file",
-    "@deb_stretch_libp11_kit0//file",
-    "@deb_stretch_libperl5_24//file",
-    "@deb_stretch_libpsl5//file",
-    "@deb_stretch_librtmp1//file",
-    "@deb_stretch_libsasl2_2//file",
-    "@deb_stretch_libsasl2_modules_db//file",
-    "@deb_stretch_libssh2_1//file",
-    "@deb_stretch_libtasn1_6//file",
-    "@deb_stretch_libunistring0//file",
-    "@deb_stretch_perl//file",
-    "@deb_stretch_perl_modules_5_24//file",
-  ],
-)
-
-filegroup(
   name = "git",
   srcs = [
     "@deb_stretch_git//file",

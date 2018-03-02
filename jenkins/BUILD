@@ -1,5 +1,5 @@
 load("//macros/user:user.bzl", "user_layer")
-load("//scripts/versions:versions.bzl", "JENKINS_SWARM_VERSION")
+load("//scripts/versions:versions.bzl", "JENKINS_VERSION", "JENKINS_SWARM_VERSION")
 
 JENKINS_HOME = "/jenkins"
 
@@ -24,10 +24,16 @@ container_image(
 
 
 container_layer(
-  name = "files",
+  name = "deps",
   debs = ["//deps/stretch:git"] + ["//deps/stretch:ssh"] + ["//deps/stretch:zip"],
+)
+container_layer(
+  name = "files",
   files = ["@jenkins_war//file"],
   directory = "/usr/share/jenkins",
+  symlinks = {
+    "./usr/share/jenkins/jenkins.war": "/usr/share/jenkins/jenkins-war-" + JENKINS_VERSION + ".war",
+  },
 )
 
 container_layer(
@@ -57,7 +63,7 @@ container_layer(
 container_image(
   name = "jenkins",
   base = ":base",
-  layers = [":files", ":default_config", ":default_user", ":init_scripts", ":scripts"],
+  layers = [":deps", ":files", ":default_config", ":default_user", ":init_scripts", ":scripts"],
   env = {
     "JENKINS_AGENT_PORT": "50000",
   },

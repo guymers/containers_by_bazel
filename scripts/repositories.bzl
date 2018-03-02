@@ -101,13 +101,20 @@ def dependency_repositories():
   ###### JENKINS
   native.http_file(
     name = "jenkins_war",
-    url = "http://mirrors.jenkins-ci.org/war-stable/" + JENKINS_VERSION + "/jenkins.war",
+    url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war",
     sha256 = "1d893aa30e49a3130e4f90268044dafb34f7c32b573970f2acca8c2c821f9b53",
   )
   native.http_file(
     name = "jenkins_agent_jar",
     url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/" + JENKINS_SWARM_VERSION + "/swarm-client-" + JENKINS_SWARM_VERSION + ".jar",
     sha256 = "726ccf7d590d9997f499a4e081831b2ddbee7fd304b1838dd85c8825134ea7e9",
+  )
+
+  ###### JENKINS
+  native.http_file(
+    name = "gerrit_war",
+    url = "https://www.gerritcodereview.com/download/gerrit-" + GERRIT_VERSION + ".war",
+    sha256 = "1809c5564d698b9e32fead51cc179a1550a837b835c4b05e5f962c6fb5e3583b",
   )
 
   ###### MAVEN

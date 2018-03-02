@@ -10,7 +10,6 @@ dependencies(name = "stretch", dependencies = {
   ":stretch/dnsmasq": "base",
   ":stretch/ejabberd": "erlang",
   ":stretch/erlang": "erlang",
-  ":stretch/gerrit": "gerrit",
   ":stretch/git": "base",
   ":stretch/grafana": "base",
   ":stretch/jasper_client": "base",
