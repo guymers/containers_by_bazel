@@ -40,7 +40,7 @@ done
 readonly stretch_image=$(bazel run //base:stretch | grep "^Tagging" | awk '{print $4}')
 docker tag "$stretch_image" bazel/base:stretch
 
-for app in base ca-certificates zulu cassandra erlang java nginx postgresql; do
+for app in base ca-certificates zulu java cassandra erlang nginx postgresql; do
   build_image "$DIR/stretch" "stretch" "$app" | tee "$DIR/_built/stretch/$app.tmp"
   tail -n1 "$DIR/_built/stretch/$app.tmp" > "$DIR/_built/stretch/$app"
   rm -f "$DIR/_built/stretch/$app.tmp"

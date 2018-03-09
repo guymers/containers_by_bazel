@@ -26,10 +26,11 @@ load("//deps/jessie:jessie.bzl", "deb_jessie")
 load("//deps/stretch:stretch.bzl", "deb_stretch")
 
 def dependency_repositories():
-  native.git_repository(
+  native.http_archive(
     name = "bazel_rules_container",
-    remote = "https://github.com/guymers/bazel_rules_container.git",
-    tag = "0.7.0",
+    sha256 = "3538a74b1ac96a39ab96585ae7ab6b61898356d65a30119b2d1d9e5777d70d38",
+    strip_prefix = "bazel_rules_container-0.8.0",
+    url = "https://github.com/guymers/bazel_rules_container/archive/0.8.0.tar.gz",
   )
 
   # Update to 20180213 for amd64 (debuerreotype 0.4)
@@ -110,7 +111,7 @@ def dependency_repositories():
     sha256 = "726ccf7d590d9997f499a4e081831b2ddbee7fd304b1838dd85c8825134ea7e9",
   )
 
-  ###### JENKINS
+  ###### GERRIT
   native.http_file(
     name = "gerrit_war",
     url = "https://www.gerritcodereview.com/download/gerrit-" + GERRIT_VERSION + ".war",
