@@ -10,25 +10,31 @@ fi
 if [ "$1" = 'elasticsearch' ]; then
   source /java-opts.sh
 
-  # pull the bits from bin/elasticsearch.in.sh that have not been set by sourcing java-opts
+  # pull the bits from jvm.options that have not been set by sourcing java-opts
   ES_CLASSPATH="$ES_HOME/lib/*"
 
-  # Disables explicit GC
-  JAVA_OPTS="$JAVA_OPTS -XX:+DisableExplicitGC"
-
-  # Ensure UTF-8 encoding by default (e.g. filenames)
+  # ensure UTF-8 encoding by default (e.g. filenames)
   JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8"
 
-  # Use our provided JNA always versus the system one
+  # use our provided JNA always versus the system one
   JAVA_OPTS="$JAVA_OPTS -Djna.nosys=true"
+
+  # flags to configure Netty
+  JAVA_OPTS="$JAVA_OPTS -Dio.netty.noUnsafe=true"
+  JAVA_OPTS="$JAVA_OPTS -Dio.netty.noKeySetOptimization=true"
+  JAVA_OPTS="$JAVA_OPTS -Dio.netty.recycler.maxCapacityPerThread=0"
+
+  # log4j 2
+  JAVA_OPTS="$JAVA_OPTS -Dlog4j.shutdownHookEnabled=false"
+  JAVA_OPTS="$JAVA_OPTS -Dlog4j2.disable.jmx=true"
 
   # the command bin/elasticsearch executes
   exec chroot --userspec=elasticsearch / java $JAVA_OPTS \
     -Djava.security.policy="$CONF_DIR/java.policy" \
     -Des.path.home="$ES_HOME" \
+    -Des.path.conf="$CONF_DIR" \
     -cp "$ES_CLASSPATH" \
     org.elasticsearch.bootstrap.Elasticsearch \
-      -Epath.conf="$CONF_DIR" \
       -Epath.data="$DATA_DIR" \
       -Epath.logs="$LOG_DIR" \
       "${@:2}"

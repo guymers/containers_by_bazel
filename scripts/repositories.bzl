@@ -145,14 +145,14 @@ def dependency_repositories():
   native.http_file(
     name = "elasticsearch",
     url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-" + ELASTICSEARCH_VERSION + ".deb",
-    sha256 = "8be33a173f1f1df4f75ce0bbf2ca9d274217b94c603bac18455542c0bc1e8728",
+    sha256 = "b54a1b685656a1424d4956e48daed923752fc268b79bb1b8616cc91f6a78e3bb",
   )
 
   ###### KIBANA
   native.http_file(
     name = "kibana",
     url = "https://artifacts.elastic.co/downloads/kibana/kibana-" + KIBANA_VERSION + "-amd64.deb",
-    sha256 = "74f74ef7687ea74e99697d1acbbd1fc1e9d0d1728f86af1839c2622d69fe0ce1",
+    sha256 = "1f0c117bbafd839ef5c371b38eeaee74d9a9d911ef8cf5dacd86e9ae20fcb534",
   )
 
 

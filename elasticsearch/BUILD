@@ -55,7 +55,7 @@ container_image(
     "LOG_DIR": LOG_DIR,
     "PLUGINS_DIR": PLUGINS_DIR,
 
-    "JAVA_MAX_RAM_FRACTION": "2",
+    "JAVA_HEAP_SIZE_PERCENTAGE": "50",
 
     "ES_NETWORK_HOST": "0.0.0.0",
     "ES_CLUSTER_NAME": "Elasticsearch",
