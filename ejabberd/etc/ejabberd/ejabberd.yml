@@ -1,4 +1,4 @@
-### http://www.process-one.net/en/ejabberd/docs/
+### https://github.com/processone/ejabberd/blob/18.01/ejabberd.yml.example
 
 loglevel: 4 # Info
 
@@ -9,11 +9,8 @@ log_rotate_count: 1
 hosts:
   - "@@HOSTNAME@@"
 
-## Define common macros used by listeners
-define_macro:
-  'CERTFILE': "/opt/ejabberd-17.04/conf/server.pem"
-  'TLSOPTS':
-    - "no_sslv3"
+certfiles:
+  - "/opt/ejabberd-18.01/conf/server.pem"
 
 listen:
   -
@@ -21,8 +18,6 @@ listen:
     ip: "::"
     module: ejabberd_c2s
     starttls: true
-    certfile: 'CERTFILE'
-    protocol_options: 'TLSOPTS'
     zlib: true
     max_stanza_size: 65536
     shaper: c2s_shaper
@@ -38,11 +33,11 @@ listen:
     ip: "::"
     module: ejabberd_http
     request_handlers:
-      "/websocket": ejabberd_http_ws
+      "/ws": ejabberd_http_ws
+      "/bosh": mod_bosh
       "/api": mod_http_api
     web_admin: true
     http_bind: true
-    register: deny
     captcha: false
 
   ## To handle XML-RPC requests that provide admin credentials:

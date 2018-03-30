@@ -52,7 +52,7 @@ container_layer(
 container_image(
   name = "ejabberd",
   base = "//erlang",
-  layers = [":user", ":files", ":replaced_files", ":config"],
+  layers = ["//base/ca_certificates", ":user", ":files", ":replaced_files", ":config"],
   env = {
     "EJABBERD_HOME": EJABBERD_HOME,
     "EJABBERD_CONF": EJABBERD_CONF,

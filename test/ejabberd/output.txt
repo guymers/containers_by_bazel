@@ -1,2 +1,2 @@
-ejabberd 17.04 is running in that node
+ejabberd 18.01 is running in that node
 {'users': [{'username': 'admin'}, {'username': 'user'}]}

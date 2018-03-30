@@ -43,7 +43,25 @@ filegroup(
 filegroup(
   name = "ejabberd",
   srcs = [
+    "@deb_stretch_fontconfig_config//file",
+    "@deb_stretch_fonts_dejavu_core//file",
+    "@deb_stretch_libbsd0//file",
     "@deb_stretch_libexpat1//file",
+    "@deb_stretch_libfontconfig1//file",
+    "@deb_stretch_libfreetype6//file",
+    "@deb_stretch_libgd3//file",
+    "@deb_stretch_libjbig0//file",
+    "@deb_stretch_libjpeg62_turbo//file",
+    "@deb_stretch_libpng16_16//file",
+    "@deb_stretch_libtiff5//file",
+    "@deb_stretch_libwebp6//file",
+    "@deb_stretch_libx11_6//file",
+    "@deb_stretch_libx11_data//file",
+    "@deb_stretch_libxau6//file",
+    "@deb_stretch_libxcb1//file",
+    "@deb_stretch_libxdmcp6//file",
+    "@deb_stretch_libxpm4//file",
+    "@deb_stretch_ucf//file",
   ],
 )
 
@@ -794,6 +812,7 @@ filegroup(
   name = "tomcat8",
   srcs = [
     "@deb_stretch_libecj_java//file",
+    "@deb_stretch_libservlet3_1_java//file",
     "@deb_stretch_libtomcat8_java//file",
     "@deb_stretch_netcat//file",
     "@deb_stretch_netcat_traditional//file",

@@ -18,10 +18,7 @@ container_layer(
 
 container_layer(
   name = "webapp",
-  directory = CATALINA_BASE + "/webapps/" + select({
-    ":jasperserver_context": "jasperserver",
-    "//conditions:default": "ROOT",
-  }),
+  directory = CATALINA_BASE + "/webapps/jasperserver",
   tars = [":jasperserver_tar"],
 )
 
@@ -33,10 +30,7 @@ war_to_tar(
 
 container_layer(
   name = "webapp_config",
-  directory = CATALINA_BASE + "/webapps/" + select({
-    ":jasperserver_context": "jasperserver",
-    "//conditions:default": "ROOT",
-  }),
+  directory = CATALINA_BASE + "/webapps/jasperserver",
   files = ["jasperserver/META-INF", "jasperserver/WEB-INF"],
 )
 

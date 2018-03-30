@@ -12,7 +12,6 @@ dependencies(name = "stretch", dependencies = {
   ":stretch/erlang": "erlang",
   ":stretch/git": "base",
   ":stretch/grafana": "base",
-  ":stretch/jasper_client": "base",
   # TODO work out why i cant just put libsqlite3 inside the psotgis file
   ":stretch/libsqlite3": "base",
   ":stretch/locales": "base",

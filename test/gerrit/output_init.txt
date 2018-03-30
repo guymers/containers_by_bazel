@@ -1,4 +1,4 @@
-gerrit version 2.14.6
+gerrit version 2.14.7
 
 id	username	full name	email
 1000000	admin	Administrator	admin@test.com

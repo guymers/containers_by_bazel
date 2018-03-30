@@ -1,1 +1,2 @@
 tomcat8-user=${TOMCAT8_DEB_VERSION}
+libservlet3.1-java=${TOMCAT8_DEB_VERSION}
