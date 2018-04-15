@@ -1,7 +1,7 @@
 container_layer(
   name = "files",
   directory = "/",
-  debs = ["//deps/stretch:erlang"],
+  debs = ["@erlang//file", "//deps/stretch:erlang"],
 )
 
 container_image(

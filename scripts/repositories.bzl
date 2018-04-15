@@ -2,6 +2,7 @@ load(
   "//scripts/versions:versions.bzl",
   "EJABBERD_VERSION",
   "ELASTICSEARCH_VERSION",
+  "ERLANG_VERSION",
   "GERRIT_VERSION",
   "GRAFANA_VERSION",
   "JASPERREPORTS_SERVER_VERSION",
@@ -86,7 +87,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "5f77ce41a8a1e1faedb5952a2348b3137b9e001d675f2a79c6316496754cd270",
+    sha256 = "2fbd592b1cfd7bc3612154a32925d5843b602490e8c8977a53fa86b35e308341",
     build_file_content = "exports_files(['sbt'])",
   )
 
@@ -168,7 +169,7 @@ def dependency_repositories():
   native.http_file(
     name = "nodejs",
     url = "https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz",
-    sha256 = "180ef8c2a39c1696b9a05832883ed981ba11475ffa44ca77781a8d1c1954f944"
+    sha256 = "6617e245fa0f7fbe0e373e71d543fea878315324ab31dc64b4eba10e42d04c11"
   )
 
   ###### YARN
@@ -185,6 +186,14 @@ def dependency_repositories():
     name = "tomcat_sample_war",
     url = "https://tomcat.apache.org/tomcat-8.0-doc/appdev/sample/sample.war",
     sha256 = "89b33caa5bf4cfd235f060c396cb1a5acb2734a1366db325676f48c5f5ed92e5",
+  )
+
+
+  ###### ERLANG
+  native.http_file(
+    name = "erlang",
+    url = "http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_" + ERLANG_VERSION + "~debian~stretch_amd64.deb",
+    sha256 = "768203083185b04250d872e6a5adef26c24fbfd592d65ef6676d086c3cb1b808",
   )
 
 

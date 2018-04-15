@@ -8,8 +8,8 @@ dependencies(name = "jessie", dependencies = {
 dependencies(name = "stretch", dependencies = {
   ":stretch/cassandra": "cassandra",
   ":stretch/dnsmasq": "base",
-  ":stretch/ejabberd": "erlang",
-  ":stretch/erlang": "erlang",
+  ":stretch/ejabberd": "base",
+  ":stretch/erlang": "base",
   ":stretch/git": "base",
   ":stretch/grafana": "base",
   # TODO work out why i cant just put libsqlite3 inside the psotgis file
@@ -21,7 +21,7 @@ dependencies(name = "stretch", dependencies = {
   ":stretch/postgis": "postgresql",
   ":stretch/postgresql": "postgresql",
   ":stretch/python": "base",
-  ":stretch/rabbitmq": "erlang",
+  ":stretch/rabbitmq": "base",
   ":stretch/redis": "base",
   ":stretch/ssh": "base",
   ":stretch/tomcat8": "java",
