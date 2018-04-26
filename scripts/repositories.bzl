@@ -33,17 +33,17 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.8.0.tar.gz",
   )
 
-  # Update to 20180312 for amd64 (debuerreotype 0.4)
+  # Update to 20180423 for amd64 (debuerreotype 0.5)
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/603ba998fd1175e70bf3ac5d79a5d2c1ed9a52fe/jessie/slim/rootfs.tar.xz",
-    sha256 = "b242734c88788e04c2963112a4240539a9f3611f2a670e46c0f4579f786c83c2",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/52c9611567075da562bd357616d49564a56ae763/jessie/slim/rootfs.tar.xz",
+    sha256 = "b63d425104c84f878a4a76cc4be935c3e48b2705e9a884e570b740d0e3fe5ce2",
   )
-  # Update to 20180312 for amd64 (debuerreotype 0.4)
+  # Update to 20180423 for amd64 (debuerreotype 0.5)
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/603ba998fd1175e70bf3ac5d79a5d2c1ed9a52fe/stretch/slim/rootfs.tar.xz",
-    sha256 = "02081307d0c61d151b7db7b9b46358c9eaefad9bdbf3a871f5215391303a0386",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/52c9611567075da562bd357616d49564a56ae763/stretch/slim/rootfs.tar.xz",
+    sha256 = "9a638663cd6a4cd322bdcdf068fa0ecd1720c4f3a91281b0fcdc56b2dad5ee9d",
   )
 
   deb_jessie()
@@ -103,7 +103,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war",
-    sha256 = "cec74c80190ed1f6ce55d705d2f649ddb2eaf8aba3ae26796152921d46b31280",
+    sha256 = "079ab885be74ea3dd4d2a57dd804a296752fae861f2d7c379bce06b674ae67ed",
   )
   native.http_file(
     name = "jenkins_agent_jar",
@@ -146,14 +146,14 @@ def dependency_repositories():
   native.http_file(
     name = "elasticsearch",
     url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-" + ELASTICSEARCH_VERSION + ".deb",
-    sha256 = "b54a1b685656a1424d4956e48daed923752fc268b79bb1b8616cc91f6a78e3bb",
+    sha256 = "f9c889bf1e2e897a881f624dab6a4aa3be5ec1f9d65b6d115021095496351969",
   )
 
   ###### KIBANA
   native.http_file(
     name = "kibana",
     url = "https://artifacts.elastic.co/downloads/kibana/kibana-" + KIBANA_VERSION + "-amd64.deb",
-    sha256 = "1f0c117bbafd839ef5c371b38eeaee74d9a9d911ef8cf5dacd86e9ae20fcb534",
+    sha256 = "4df1c6fd3b2e41d92fe8ec850dd5253c554285d8c8cdabbefbf744e74f732345",
   )
 
 
