@@ -121,7 +121,7 @@ def dependency_repositories():
   ###### MAVEN
   native.new_http_archive(
     name = "maven",
-    url = "http://mirrors.ocf.berkeley.edu/apache/maven/maven-3/" + MAVEN_VERSION + "/binaries/apache-maven-" + MAVEN_VERSION + "-bin.tar.gz",
+    url = "https://archive.apache.org/dist/maven/maven-3/" + MAVEN_VERSION + "/binaries/apache-maven-" + MAVEN_VERSION + "-bin.tar.gz",
     sha256 = "b52956373fab1dd4277926507ab189fb797b3bc51a2a267a193c931fffad8408",
     build_file_content = "exports_files(['apache-maven-" + MAVEN_VERSION + "'])",
   )
@@ -129,15 +129,15 @@ def dependency_repositories():
   ###### ZOOKEEPER
   native.new_http_archive(
     name = "zookeeper",
-    url = "http://mirrors.ocf.berkeley.edu/apache/zookeeper/zookeeper-" + ZOOKEEPER_VERSION + "/zookeeper-" + ZOOKEEPER_VERSION + ".tar.gz",
-    sha256 = "f6bd68a1c8f7c13ea4c2c99f13082d0d71ac464ffaf3bf7a365879ab6ad10e84",
+    url = "https://archive.apache.org/dist/zookeeper/zookeeper-" + ZOOKEEPER_VERSION + "/zookeeper-" + ZOOKEEPER_VERSION + ".tar.gz",
+    sha256 = "c686f9319050565b58e642149cb9e4c9cc8c7207aacc2cb70c5c0672849594b9",
     build_file_content = "exports_files(['zookeeper-" + ZOOKEEPER_VERSION + "'])",
   )
 
   ###### KAFKA
   native.new_http_archive(
     name = "kafka",
-    url = "http://mirrors.ocf.berkeley.edu/apache/kafka/" + KAFKA_VERSION + "/kafka_2.12-" + KAFKA_VERSION + ".tgz",
+    url = "https://archive.apache.org/dist/kafka/" + KAFKA_VERSION + "/kafka_2.12-" + KAFKA_VERSION + ".tgz",
     sha256 = "499283970b5020358726949b4f1d93d3167bc5eecaa1d167076bae6bb2862d12",
     build_file_content = "exports_files(['kafka_2.12-" + KAFKA_VERSION + "'])",
   )
