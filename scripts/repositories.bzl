@@ -33,17 +33,17 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.8.0.tar.gz",
   )
 
-  # Update to 20180423 for amd64 (debuerreotype 0.5)
+  # Update to 20180426 for amd64
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/52c9611567075da562bd357616d49564a56ae763/jessie/slim/rootfs.tar.xz",
-    sha256 = "b63d425104c84f878a4a76cc4be935c3e48b2705e9a884e570b740d0e3fe5ce2",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/b024a792c752a5c6ccc422152ab0fd7197ae8860/jessie/slim/rootfs.tar.xz",
+    sha256 = "6639c55be85ef6bd4aa8925eab0b5b3a0722353740ad270679ea0a4943be70bd",
   )
-  # Update to 20180423 for amd64 (debuerreotype 0.5)
+  # Update to 20180426 for amd64
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/52c9611567075da562bd357616d49564a56ae763/stretch/slim/rootfs.tar.xz",
-    sha256 = "9a638663cd6a4cd322bdcdf068fa0ecd1720c4f3a91281b0fcdc56b2dad5ee9d",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/b024a792c752a5c6ccc422152ab0fd7197ae8860/stretch/slim/rootfs.tar.xz",
+    sha256 = "9bcc155abb8326d71f90915a4dc6948f0c252cbf199693e4843c106a5c4cd30d",
   )
 
   deb_jessie()
@@ -87,7 +87,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "2fbd592b1cfd7bc3612154a32925d5843b602490e8c8977a53fa86b35e308341",
+    sha256 = "8303d7496bc70eb441e8136bd29ffc295c629dadecefa4e7a475176ab4d282d5",
     build_file_content = "exports_files(['sbt'])",
   )
 
@@ -103,7 +103,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war",
-    sha256 = "079ab885be74ea3dd4d2a57dd804a296752fae861f2d7c379bce06b674ae67ed",
+    sha256 = "17a9e509bec5b16bde5b50bc7f59d5f1e458a55fe433deb86fd73b865bf89ab8",
   )
   native.http_file(
     name = "jenkins_agent_jar",
@@ -209,7 +209,7 @@ def dependency_repositories():
   native.http_file(
     name = "rabbitmq",
     url = "https://github.com/rabbitmq/rabbitmq-server/releases/download/v" + RABBITMQ_VERSION + "/rabbitmq-server_" + RABBITMQ_VERSION + "-1_all.deb",
-    sha256 = "a08874c3f6b629de02ad3ed65d0cfac9d29c8d3bba0a4d09bf2e268ec0f8644a",
+    sha256 = "156163a595b5cd648ae80008eb7080392aab1de843b364b1760ec86f7d5beb32",
   )
 
 
