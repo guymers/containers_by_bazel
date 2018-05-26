@@ -58,8 +58,7 @@ RABBITMQ_VERSION = "3.7.5"
 
 EJABBERD_VERSION = "18.04"
 
-# any higher version causes '7960 extra bytes at beginning or within zipfile'
-ZIPKIN_VERSION = "2.4.9"
+ZIPKIN_VERSION = "2.8.4"
 
 JENKINS_VERSION = "2.107.3"
 JENKINS_SWARM_VERSION = "3.12"

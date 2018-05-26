@@ -217,13 +217,13 @@ def dependency_repositories():
   native.http_file(
     name = "zipkin",
     url = "https://jcenter.bintray.com/io/zipkin/java/zipkin-server/" + ZIPKIN_VERSION + "/zipkin-server-" + ZIPKIN_VERSION + "-exec.jar",
-    sha256 = "4c18e842bd94775617082128f633857d75ea0b9c35eac8f6f49aad88d60ff188",
+    sha256 = "3c3edbe6f0bd20fa30a3795aa2c3da3f2dcf2bcfbd1e78a179afa64222b0aa9e",
   )
 
   native.http_file(
     name = "zipkin_kafka",
     url = "https://jcenter.bintray.com/io/zipkin/java/zipkin-autoconfigure-collector-kafka10/" + ZIPKIN_VERSION + "/zipkin-autoconfigure-collector-kafka10-" + ZIPKIN_VERSION + "-module.jar",
-    sha256 = "3938673f518d3b25045a497925eea6ab57262903bba447322e0183bc574bd496",
+    sha256 = "a00ef0637de5a6d024b2e0fc0f9b5f78cc8a58696d69d7b5c284214e9d47ba41",
   )
 
   ###### JASPER

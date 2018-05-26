@@ -8,7 +8,10 @@ readonly folder="zipkin"
 rm -rf "$folder"
 mkdir -p "$folder"
 
-unzip -qq -d "$folder" "$jar"
+# remove the shell script at the front https://github.com/openzipkin/zipkin/issues/1932
+zip -qq --fix "$jar" --out "$jar.zip"
+unzip -qq -d "$folder" "$jar.zip"
+rm -f "$jar.zip"
 
 # make the tar deterministic https://lists.gnu.org/archive/html/help-tar/2015-05/msg00005.html
 find "$folder" -exec touch -t 200001010000 {} \;
