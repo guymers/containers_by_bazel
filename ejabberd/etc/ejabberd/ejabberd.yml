@@ -10,7 +10,7 @@ hosts:
   - "@@HOSTNAME@@"
 
 certfiles:
-  - "/opt/ejabberd-18.01/conf/server.pem"
+  - "/opt/ejabberd-18.04/conf/server.pem"
 
 listen:
   -

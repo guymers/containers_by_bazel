@@ -80,7 +80,7 @@ def dependency_repositories():
   native.maven_jar(
     name = "jmx_prometheus_javaagent",
     artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:" + PROMETHEUS_JMX_JAVAAGENT,
-    sha1 = "748dc395caa33f4d1d3ade61a5c63108eefd4dd2",
+    sha1 = "ae9db209d5c3955bf4635bf91bde48869dfa5232",
   )
 
 
@@ -115,7 +115,7 @@ def dependency_repositories():
   native.http_file(
     name = "gerrit_war",
     url = "https://www.gerritcodereview.com/download/gerrit-" + GERRIT_VERSION + ".war",
-    sha256 = "7e5a105a14e9bc1334ab29bd18727f33207a2bc5dcba4666d9ee5d21f9cb910d",
+    sha256 = "e0c4961b0ce0fc1633a92f1fb56f86a33ebc5e32d99a4feec6f6d7a1c6051276",
   )
 
   ###### MAVEN
@@ -161,7 +161,7 @@ def dependency_repositories():
   native.http_file(
     name = "grafana",
     url = "https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_" + GRAFANA_VERSION + "_amd64.deb",
-    sha256 = "994f305781a80648741288bc4c1376d81c17c5f367edb709cc413b0438eee1f5",
+    sha256 = "07d332f72ef54511c105677786dbca51d50fda77e6c08bb57fc3d7cde04527c4",
   )
 
 
@@ -169,14 +169,14 @@ def dependency_repositories():
   native.http_file(
     name = "nodejs",
     url = "https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz",
-    sha256 = "6617e245fa0f7fbe0e373e71d543fea878315324ab31dc64b4eba10e42d04c11"
+    sha256 = "213599127d24496cbf1cbb2a7c51060a3506d6b11132c59bb7f9f8a0edd210a7"
   )
 
   ###### YARN
   native.http_file(
     name = "yarnpkg",
     url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "a4770cd8dcb13dc9a9218940dbd24b510ddf5eec78adb4e0da9ef3760b55a76e",
+    sha256 = "5fecee8378905bbd0c09f9f49d81d427576e3ebdfe9e71ac47eb6c5c5fe35825",
   )
 
 
@@ -201,7 +201,7 @@ def dependency_repositories():
   native.http_file(
     name = "ejabberd",
     url = "https://www.process-one.net/downloads/ejabberd/" + EJABBERD_VERSION + "/ejabberd_" + EJABBERD_VERSION + "-0_amd64.deb",
-    sha256 = "363c40558258c479f30b1f30d8bfcf2aa931053098f2825f0bef720cbba2807c",
+    sha256 = "35f49190ec5b63aa1615b735c15ba487451d67f2f0f86c453ac001c05dec308b",
   )
 
 

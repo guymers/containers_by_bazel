@@ -7,7 +7,7 @@ readonly ejabberdctl="chroot --userspec=ejabberd / ejabberdctl"
 # wait for the server to start
 $ejabberdctl started
 
-$ejabberdctl status | grep "ejabberd 18.01 is running in that node"
+$ejabberdctl status | grep "ejabberd 18.04 is running in that node"
 
 $ejabberdctl change_password admin "$HOSTNAME" "admin"
 readonly token=$(chroot --userspec=ejabberd / ejabberdctl oauth_issue_token "admin@$HOSTNAME" 120 "ejabberd:admin" | awk '{print $1}')
