@@ -72,7 +72,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "ec1798dbda1636f49d709c3931078dc17eafef76c480b67751aa09828396cf31",
+    sha256 = "3088dd15e4cbad65db40bff194e3c9c4e3df5245fe684c1251e5a48c18a1a822",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -103,7 +103,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war",
-    sha256 = "17a9e509bec5b16bde5b50bc7f59d5f1e458a55fe433deb86fd73b865bf89ab8",
+    sha256 = "5bb075b81a3929ceada4e960049e37df5f15a1e3cfc9dc24d749858e70b48919",
   )
   native.http_file(
     name = "jenkins_agent_jar",
