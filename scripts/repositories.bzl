@@ -33,17 +33,17 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.8.0.tar.gz",
   )
 
-  # Update to 20180426 for amd64
+  #  Update to 20180625 for amd64 (debuerreotype 0.8)
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/b024a792c752a5c6ccc422152ab0fd7197ae8860/jessie/slim/rootfs.tar.xz",
-    sha256 = "6639c55be85ef6bd4aa8925eab0b5b3a0722353740ad270679ea0a4943be70bd",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/a6d58975a606462f5ad2ca029c16856d21407751/jessie/slim/rootfs.tar.xz",
+    sha256 = "1827fdd4a8b69e8f3a54714b8b4174c8c56002bd025169a526ea8ab6f0ee30a4",
   )
-  # Update to 20180426 for amd64
+  #  Update to 20180625 for amd64 (debuerreotype 0.8)
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/b024a792c752a5c6ccc422152ab0fd7197ae8860/stretch/slim/rootfs.tar.xz",
-    sha256 = "9bcc155abb8326d71f90915a4dc6948f0c252cbf199693e4843c106a5c4cd30d",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/a6d58975a606462f5ad2ca029c16856d21407751/stretch/slim/rootfs.tar.xz",
+    sha256 = "739ea688dd1b7dfe67a3668167f83ed26ba3901943bbea572844a3c148e4a078",
   )
 
   deb_jessie()
@@ -54,13 +54,11 @@ def dependency_repositories():
     url = "https://github.com/ncopa/su-exec/archive/v0.2.tar.gz",
     sha256 = "ec4acbd8cde6ceeb2be67eda1f46c709758af6db35cacbcde41baac349855e25",
     strip_prefix = "su-exec-0.2",
-    build_file_content = " \
-      cc_binary( \
-        name = 'su_exec', \
-        srcs = ['su-exec.c'], \
-        visibility = ['//visibility:public'], \
-      )\
-    ",
+    build_file_content = "cc_binary( \
+      name = 'su_exec', \
+      srcs = ['su-exec.c'], \
+      visibility = ['//visibility:public'], \
+    )",
   )
 
   native.http_file(
@@ -72,7 +70,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "3088dd15e4cbad65db40bff194e3c9c4e3df5245fe684c1251e5a48c18a1a822",
+    sha256 = "adb76021fcff8a2a8363de8739fcb7ff5647c2a0ff90b2c02dcb56cf0cd836f0",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -87,7 +85,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "8303d7496bc70eb441e8136bd29ffc295c629dadecefa4e7a475176ab4d282d5",
+    sha256 = "f545b530884e3abbca026df08df33d5a15892e6d98da5b8c2297413d1c7b68c1",
     build_file_content = "exports_files(['sbt'])",
   )
 
@@ -161,7 +159,7 @@ def dependency_repositories():
   native.http_file(
     name = "grafana",
     url = "https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_" + GRAFANA_VERSION + "_amd64.deb",
-    sha256 = "07d332f72ef54511c105677786dbca51d50fda77e6c08bb57fc3d7cde04527c4",
+    sha256 = "97722140d58365c80e8bfff091e07b84cd0f7f3de9b6601fd062cdf49660c4f3",
   )
 
 
@@ -169,7 +167,7 @@ def dependency_repositories():
   native.http_file(
     name = "nodejs",
     url = "https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz",
-    sha256 = "213599127d24496cbf1cbb2a7c51060a3506d6b11132c59bb7f9f8a0edd210a7"
+    sha256 = "08e2fcfea66746bd966ea3a89f26851f1238d96f86c33eaf6274f67fce58421a"
   )
 
   ###### YARN
@@ -209,7 +207,7 @@ def dependency_repositories():
   native.http_file(
     name = "rabbitmq",
     url = "https://github.com/rabbitmq/rabbitmq-server/releases/download/v" + RABBITMQ_VERSION + "/rabbitmq-server_" + RABBITMQ_VERSION + "-1_all.deb",
-    sha256 = "156163a595b5cd648ae80008eb7080392aab1de843b364b1760ec86f7d5beb32",
+    sha256 = "c7745437adb831cfdc40d0e2e5b24b9b9d19c614734adab0c3fbd7bbe0a7106e",
   )
 
 
