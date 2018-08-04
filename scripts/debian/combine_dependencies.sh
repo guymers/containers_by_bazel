@@ -8,14 +8,15 @@ readonly BAZEL_DIR="$0.runfiles"
 source "$DIR/containers_by_bazel/scripts/bazel_functions.sh"
 
 prefix="$1"
-readonly parent="$2"
-readonly files=("${@:3}")
+readonly current_dependencies_file="$2"
+readonly parent_file="$3"
+readonly files=("${@:4}")
 
 existing_dependencies=()
-if [ -f "$parent" ]; then
+if [ -f "$parent_file" ]; then
   while read -r line; do
     existing_dependencies+=("$line")
-  done < <(grep "name = " "$parent" | sed -r -e 's#.*name = "([^"]+)".*#\1#')
+  done < <(grep "name = " "$parent_file" | sed -r -e 's#.*name = "([^"]+)".*#\1#')
 fi
 
 function find_element() {
@@ -27,6 +28,16 @@ function find_element() {
   done
   return 1
 }
+
+declare -A current_dependencies_name_to_sha
+declare -A current_dependencies_name_to_url
+
+if [ -f "$current_dependencies_file" ]; then
+  while read -r name url sha256; do
+    current_dependencies_name_to_sha["$name"]="$sha256"
+    current_dependencies_name_to_url["$name"]="$url"
+  done < <(cat "$current_dependencies_file")
+fi
 
 declare -A dependencies
 
@@ -48,7 +59,14 @@ readonly sortedDependencies=( $( printf "%s\n" "${!dependencies[@]}" | LC_ALL=C 
 echo "def $prefix():"
 for name in "${sortedDependencies[@]}"; do
   if ! find_element "${prefix}_${name}"; then
+
+    read -r url sha256 <<< ${dependencies[$name]}
+    current_sha256=${current_dependencies_name_to_sha["${prefix}_${name}"]}
+    if [ -n "$current_sha256" ] && [ "$current_sha256" == "$sha256" ]; then
+      url=${current_dependencies_name_to_url["${prefix}_${name}"]}
+    fi
+
     # shellcheck disable=SC2086
-    bazel_native_http_file "$prefix" "$name" ${dependencies[$name]}
+    bazel_native_http_file "$prefix" "$name" "$url" "$sha256"
   fi
 done

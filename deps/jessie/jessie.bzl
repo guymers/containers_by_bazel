@@ -56,8 +56,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libidn11",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/libi/libidn/libidn11_1.29-1+deb8u2_amd64.deb",
-    sha256 = "de106dcbcdaf046d61ee9eaaecf04854a5e45aef78a5aac6868af32b1d2cdfe8",
+    url = "http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/libi/libidn/libidn11_1.29-1+deb8u3_amd64.deb",
+    sha256 = "3aa3cab70f47130f9a9b72b02d61036cea97fc76b0207dfb931198674d44e660",
   )
   native.http_file(
     name = "deb_jessie_libk5crypto3",

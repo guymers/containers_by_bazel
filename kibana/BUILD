@@ -3,7 +3,8 @@ load("//scripts/versions:versions.bzl", "KIBANA_VERSION")
 
 KIBANA_HOME = "/usr/share/kibana"
 KIBANA_PLUGIN_DIR = KIBANA_HOME + "/plugins"
-CONF_DIR = "/etc/kibana"
+KIBANA_CONF_DIR = "/etc/kibana"
+KIBANA_TEMP_DIR = "/var/lib/kibana"
 VERSION = KIBANA_VERSION
 
 user_layer(
@@ -27,7 +28,7 @@ container_layer(
 
 container_layer(
   name = "config",
-  directory = CONF_DIR,
+  directory = KIBANA_CONF_DIR,
   files = glob(["config/*"]),
 )
 
@@ -39,12 +40,13 @@ container_image(
   env = {
     "KIBANA_HOME": KIBANA_HOME,
     "KIBANA_PLUGIN_DIR": KIBANA_PLUGIN_DIR,
-    "CONF_DIR": CONF_DIR,
+    "KIBANA_CONF_DIR": KIBANA_CONF_DIR,
+    "KIBANA_TEMP_DIR": KIBANA_TEMP_DIR,
 
     "BABEL_CACHE_PATH": "/tmp/kibana.babel.json",
     "KIBANA_NODE_OPTIONS": "",
   },
-  volumes = [KIBANA_PLUGIN_DIR, CONF_DIR],
+  volumes = [KIBANA_PLUGIN_DIR, KIBANA_CONF_DIR, KIBANA_TEMP_DIR],
   ports = ["5601"],
   # need tini for ctrl-c
   entrypoint = ["tini", "--", "/entrypoint-kibana"],

@@ -33,14 +33,24 @@ def dependencies(name, dependencies, prefix = "deb", parent_bzl_file = ""):
     ) for dependency in dependencies
   ]
 
+  extract_dependencies_target = target_path("extract_dependencies")
+
+  native.genrule(
+    name = "bazel_current_dependencies_file_%s" % name,
+    srcs = ["@containers_by_bazel//deps/%s:%s.bzl" % (name, name)],
+    outs = ["current_dependencies_%s" % name],
+    cmd = location(extract_dependencies_target) + " '" + location("@containers_by_bazel//deps/%s:%s.bzl" % (name, name)) + "' > $@",
+    tools = [extract_dependencies_target],
+  )
+
   combine_dependencies_target = target_path("combine_dependencies")
 
   native.genrule(
     name = "bazel_dependencies_file_%s" % name,
     srcs = [":debian_dependencies_%s_%s" % (name, dependency_name(dependency)) for dependency in dependencies],
     outs = [name + ".bzl"],
-    cmd = location(combine_dependencies_target) + " '" + prefix + "_" + name + "' '" + parent_bzl_file_location + "' $(SRCS) > $@",
-    tools = [combine_dependencies_target] + extra_deps_tools,
+    cmd = location(combine_dependencies_target) + " '" + prefix + "_" + name + "' '" + location("bazel_current_dependencies_file_%s" % name) + "' '" + parent_bzl_file_location + "' $(SRCS) > $@",
+    tools = [combine_dependencies_target, ":bazel_current_dependencies_file_%s" % name] + extra_deps_tools,
   )
 
   bazel_filegroup_target = target_path("bazel_filegroup")

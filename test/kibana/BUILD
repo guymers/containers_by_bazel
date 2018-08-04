@@ -6,7 +6,7 @@ container_image(
 
 container_test(
   name = "kibana",
-  size = "small",
+  size = "medium",
   image = ":kibana_wget",
   daemon = True,
   test = "test.sh",

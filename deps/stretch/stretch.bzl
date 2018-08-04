@@ -21,13 +21,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_cassandra",
-    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra_3.11.2_all.deb",
-    sha256 = "2250fa59affeee5e2c559611f4d636804bb5790e5e62c8f78335cfca8acf1686",
+    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra_3.11.3_all.deb",
+    sha256 = "149d09575130c0b067c987e08dbf4062d7a3b69f46effbc3b292babb46909294",
   )
   native.http_file(
     name = "deb_stretch_cassandra_tools",
-    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra-tools_3.11.2_all.deb",
-    sha256 = "4373dc5619cfa0de5279b9bcd22393e7cbbb938ccd8ad6324a31cd1dd8dbdda0",
+    url = "http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra-tools_3.11.3_all.deb",
+    sha256 = "06094ab1616f56d4ada1ae548ff7fccc09ae4cb33039557e8c1c50cbbef4e409",
   )
   native.http_file(
     name = "deb_stretch_cpp",
@@ -51,8 +51,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_file",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/f/file/file_5.30-1+deb9u1_amd64.deb",
-    sha256 = "17f2e3a7f5e24fc20b1cf99b00d10c68d5fcc92dfc6cd76157f05744a2f4650b",
+    url = "http://snapshot.debian.org/archive/debian/20180804T000000Z/pool/main/f/file/file_5.30-1+deb9u2_amd64.deb",
+    sha256 = "bd4c593e4955bf4d6897f9bea40c2af4de319d7cabe710aab46470dd4512f1be",
   )
   native.http_file(
     name = "deb_stretch_fontconfig",
@@ -201,33 +201,33 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libavcodec57",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/f/ffmpeg/libavcodec57_3.2.10-1~deb9u1_amd64.deb",
-    sha256 = "c067e6d37dd0159c1ed6fc45bf5099c2dff341176308c1eeb9f8b093228b3236",
+    url = "http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libavcodec57_3.2.12-1~deb9u1_amd64.deb",
+    sha256 = "aff568fb33263f03b2d5bc1cab551bb9ebef3e9ec124126c8a5b2945072bfb3e",
   )
   native.http_file(
     name = "deb_stretch_libavdevice57",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/f/ffmpeg/libavdevice57_3.2.10-1~deb9u1_amd64.deb",
-    sha256 = "412a23e8587ac6fd8ebcfad3f575e2dbbce902872c0782d91bc523c21a56ed08",
+    url = "http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libavdevice57_3.2.12-1~deb9u1_amd64.deb",
+    sha256 = "648041550c57ffb933023291c0a9eabb64e5f2df5611c6614dd6427dd93eedab",
   )
   native.http_file(
     name = "deb_stretch_libavfilter6",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/f/ffmpeg/libavfilter6_3.2.10-1~deb9u1_amd64.deb",
-    sha256 = "ee561e05ec9acede9b37ee1082998b5b52e3e78af0c17d31c67ba0a3287528fd",
+    url = "http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libavfilter6_3.2.12-1~deb9u1_amd64.deb",
+    sha256 = "2084e79ed1a7b8630063af899efe84f7a178326e23189577ff257dd5adc5f0e0",
   )
   native.http_file(
     name = "deb_stretch_libavformat57",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/f/ffmpeg/libavformat57_3.2.10-1~deb9u1_amd64.deb",
-    sha256 = "bbd92c11fd7839f14e6a8489361b0bfa865d617d235db420df6ff91fea16676c",
+    url = "http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libavformat57_3.2.12-1~deb9u1_amd64.deb",
+    sha256 = "a4786401a8fe93aba2170f273980b12ca6bf1508bac3f0e3926d45f6b532853e",
   )
   native.http_file(
     name = "deb_stretch_libavresample3",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/f/ffmpeg/libavresample3_3.2.10-1~deb9u1_amd64.deb",
-    sha256 = "743a6c4b0700a89db1440809764aaa393e59d36ecd2fa78d774f7a8c38446246",
+    url = "http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libavresample3_3.2.12-1~deb9u1_amd64.deb",
+    sha256 = "394aa3db1393a615ea627e2fa3d3028ed4fbc09ccf25bbf452e4cd683bd5a4f3",
   )
   native.http_file(
     name = "deb_stretch_libavutil55",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/f/ffmpeg/libavutil55_3.2.10-1~deb9u1_amd64.deb",
-    sha256 = "b1bb527414348efafa506e73ae7991771c5d4c18de01e4d95ca9f264410acb7a",
+    url = "http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libavutil55_3.2.12-1~deb9u1_amd64.deb",
+    sha256 = "f4ba8c5b08d00497d1affeff233b3e60cfeec9bf4edcb60246dfc8b92c2c9a68",
   )
   native.http_file(
     name = "deb_stretch_libblas3",
@@ -466,8 +466,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libfaad2",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/f/faad2/libfaad2_2.8.0~cvs20161113-1_amd64.deb",
-    sha256 = "b1ce0c6db8a3f4e71b0d1b96604ee333dd779ea7e18c6319dbf53d8b3039b297",
+    url = "http://snapshot.debian.org/archive/debian/20180804T000000Z/pool/main/f/faad2/libfaad2_2.8.0~cvs20161113-1+deb9u1_amd64.deb",
+    sha256 = "cf16b2e939d0dded2d13c8c57ebc12997b283dfaabb073914471234f6eb4c254",
   )
   native.http_file(
     name = "deb_stretch_libffi6",
@@ -781,13 +781,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libldap_2_4_2",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/o/openldap/libldap-2.4-2_2.4.44+dfsg-5+deb9u1_amd64.deb",
-    sha256 = "9c33f650be8c098e9366cf91fc8a36b693496b8001b78f6df2261a5a84a303c5",
+    url = "http://snapshot.debian.org/archive/debian/20180804T000000Z/pool/main/o/openldap/libldap-2.4-2_2.4.44+dfsg-5+deb9u2_amd64.deb",
+    sha256 = "57bfcdf35a9c6ef5d3d5c853c5b080e64e574925a76d733ee6692991149169da",
   )
   native.http_file(
     name = "deb_stretch_libldap_common",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/o/openldap/libldap-common_2.4.44+dfsg-5+deb9u1_all.deb",
-    sha256 = "4e16fd189b803520e84f77ce2b2c5aeab7cac8e525ae2904834046ee82d21a37",
+    url = "http://snapshot.debian.org/archive/debian/20180804T000000Z/pool/main/o/openldap/libldap-common_2.4.44+dfsg-5+deb9u2_all.deb",
+    sha256 = "727103c3d05df3c7eb13253e1c044d70d1d5846654f4b3ef02ecd26f7ca40dd4",
   )
   native.http_file(
     name = "deb_stretch_libldb1",
@@ -816,13 +816,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libmagic1",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/f/file/libmagic1_5.30-1+deb9u1_amd64.deb",
-    sha256 = "94816946cab2a283807b8dbd4fb7a6c7aeaab23af488f9b7a9167f2ea4432062",
+    url = "http://snapshot.debian.org/archive/debian/20180804T000000Z/pool/main/f/file/libmagic1_5.30-1+deb9u2_amd64.deb",
+    sha256 = "1bf8c1cf7d47d039f7b7e963100f9485d049303e3396e3c3dea4f857adc34d40",
   )
   native.http_file(
     name = "deb_stretch_libmagic_mgc",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/f/file/libmagic-mgc_5.30-1+deb9u1_amd64.deb",
-    sha256 = "a3a1a60347df51db20d3e0136e45f4a5c024df3e9391006cfde26a1f5b1c2e23",
+    url = "http://snapshot.debian.org/archive/debian/20180804T000000Z/pool/main/f/file/libmagic-mgc_5.30-1+deb9u2_amd64.deb",
+    sha256 = "61305296833d6599565a2d89e5c31e69f8868d21fe04d2ca4be8db0533d863bb",
   )
   native.http_file(
     name = "deb_stretch_libmariadbclient18",
@@ -1071,8 +1071,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libpostproc54",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/f/ffmpeg/libpostproc54_3.2.10-1~deb9u1_amd64.deb",
-    sha256 = "8dcf395cf455bfad6a3ce22f769101553ce16521ba2f9b124618017d8dc88bbd",
+    url = "http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libpostproc54_3.2.12-1~deb9u1_amd64.deb",
+    sha256 = "bf772a544b4c39b508e08cfacca9175a1a6ae49bb6ceba2abafe2ddf0d794089",
   )
   native.http_file(
     name = "deb_stretch_libpq5",
@@ -1311,13 +1311,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libswresample2",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/f/ffmpeg/libswresample2_3.2.10-1~deb9u1_amd64.deb",
-    sha256 = "7c30fa693a58f7ed84c1d4ec62ff6e8e55bfaf1e685f433d622cfb72126c3c68",
+    url = "http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libswresample2_3.2.12-1~deb9u1_amd64.deb",
+    sha256 = "cd3decd35f2028f73356fb345e66977dc37802ac92d52fb362a625072b87c43e",
   )
   native.http_file(
     name = "deb_stretch_libswscale4",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/f/ffmpeg/libswscale4_3.2.10-1~deb9u1_amd64.deb",
-    sha256 = "4949453caba3606a596c4bd6b9e5c45cf0bdc282a597b5649c08ea5dd5106b52",
+    url = "http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libswscale4_3.2.12-1~deb9u1_amd64.deb",
+    sha256 = "59021f926e5bca23987fefa2e4cd6c4b62d083982d101c96c15fa777ab6a54a8",
   )
   native.http_file(
     name = "deb_stretch_libsz2",
@@ -1626,8 +1626,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libxerces_c3_1",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/x/xerces-c/libxerces-c3.1_3.1.4+debian-2_amd64.deb",
-    sha256 = "962bc71575ada2cae35e695f7773db8fb00995bd5b012d1479a7c03dac777aa3",
+    url = "http://snapshot.debian.org/archive/debian/20180804T000000Z/pool/main/x/xerces-c/libxerces-c3.1_3.1.4+debian-2+deb9u1_amd64.deb",
+    sha256 = "4e99dc4eb77e0e6355d579433e89abbd1c6c99d73854a033191419f45861a112",
   )
   native.http_file(
     name = "deb_stretch_libxext6",
@@ -1756,8 +1756,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_linux_libc_dev",
-    url = "http://snapshot.debian.org/archive/debian-security/20180714T000000Z/pool/updates/main/l/linux/linux-libc-dev_4.9.88-1+deb9u1_amd64.deb",
-    sha256 = "edf9b2393e0624e963032b92c7b9f6f2f4de35ff41bc84ad60ee983eb1017440",
+    url = "http://snapshot.debian.org/archive/debian/20180804T000000Z/pool/main/l/linux/linux-libc-dev_4.9.110-1_amd64.deb",
+    sha256 = "2ecdb478eedc1206c2127d9ad646642347bd1f3947fdd64f1ae5c3cf45374a57",
   )
   native.http_file(
     name = "deb_stretch_locales",
@@ -1796,8 +1796,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_nginx",
-    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.15.0-1~stretch_amd64.deb",
-    sha256 = "7cc16c2635e540b18ce62ab4b93bbeb0df7cd680bffa94ee135d77cfc37b1920",
+    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.15.2-1~stretch_amd64.deb",
+    sha256 = "dd8d1cfa40dd967235f3e2547719975c655bfbf80fdcbf3f8abcf804c1b43d9b",
   )
   native.http_file(
     name = "deb_stretch_numactl",
@@ -2016,13 +2016,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_redis_server",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/r/redis/redis-server_3.2.6-1_amd64.deb",
-    sha256 = "beeaceed058ab4f55ca1a2ac34614891abdd1ef71c39423c3e9afd1a7dd6b251",
+    url = "http://snapshot.debian.org/archive/debian/20180804T000000Z/pool/main/r/redis/redis-server_3.2.6-3+deb9u2_amd64.deb",
+    sha256 = "097ecb62420b47deb78629cf00b15ebba6216078006f3a88a21bf55a5d1e9154",
   )
   native.http_file(
     name = "deb_stretch_redis_tools",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/r/redis/redis-tools_3.2.6-1_amd64.deb",
-    sha256 = "e477faa83688feaf7fc9ac67652cc88afcce9b77ed0d67047917be833d2c8109",
+    url = "http://snapshot.debian.org/archive/debian/20180804T000000Z/pool/main/r/redis/redis-tools_3.2.6-3+deb9u2_amd64.deb",
+    sha256 = "061da861c506626b54ab648f6120e96818ff423faa08c469ee8e44aaca87d2e5",
   )
   native.http_file(
     name = "deb_stretch_samba_libs",
@@ -2031,8 +2031,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_shared_mime_info",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/s/shared-mime-info/shared-mime-info_1.8-1_amd64.deb",
-    sha256 = "fde8d78e824983110a3b65261fe0276e089c018d232abaacb154accea1e5b6ee",
+    url = "http://snapshot.debian.org/archive/debian/20180804T000000Z/pool/main/s/shared-mime-info/shared-mime-info_1.8-1+deb9u1_amd64.deb",
+    sha256 = "d6591f13ee1200c4f0b5581c2299eb7b8097a6b04742dc333e34a7bb7ba47532",
   )
   native.http_file(
     name = "deb_stretch_shtool",
@@ -2066,8 +2066,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_wget",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/w/wget/wget_1.18-5+deb9u1_amd64.deb",
-    sha256 = "e8590ac526707f71f7b4b46c7bd8cf91254440e54cbfe7894dbf949a423f38de",
+    url = "http://snapshot.debian.org/archive/debian/20180804T000000Z/pool/main/w/wget/wget_1.18-5+deb9u2_amd64.deb",
+    sha256 = "8166197d46b5f3ff4fb0f006c6fea7dcc919e715be5169633a8405473bdb901b",
   )
   native.http_file(
     name = "deb_stretch_x11_common",
@@ -2086,6 +2086,6 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_zulu_8",
-    url = "http://repos.azulsystems.com/debian/pool/main/zulu8.30.0.1-jdk8.0.172-linux_amd64.deb",
-    sha256 = "19024ae39155e95cf572855ae6d35d71b294d89a29be6fcb8b569f20e798c593",
+    url = "http://repos.azulsystems.com/debian/pool/main/zulu8.31.0.1-jdk8.0.181-linux_amd64.deb",
+    sha256 = "d9d6aac4fae2fcbefc9cd0f4660ebbcbc6a9de7109b31f72a94b67d80ea43cb9",
   )

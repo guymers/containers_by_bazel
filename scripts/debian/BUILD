@@ -62,3 +62,8 @@ sh_library(
   name = "versions",
   srcs = ["//scripts/versions"],
 )
+
+py_binary(
+  name = "extract_dependencies",
+  srcs = ["extract_dependencies.py"],
+)

@@ -2,10 +2,17 @@
 set -e
 set -o pipefail
 
+# kibana needs to be able to extract stuff to /var/lib/kibana/
+if [ -d "$KIBANA_TEMP_DIR" -a "$(stat -c '%U' "$KIBANA_TEMP_DIR" 2>/dev/null)" = "root" ]; then
+  chown kibana "$KIBANA_TEMP_DIR"
+  chmod o-rwx "$KIBANA_TEMP_DIR"
+fi
+
 if [ "$1" = 'kibana' ]; then
   # the command bin/kibana executes
+  export NODE_ENV=production
   exec chroot --userspec=kibana / node $KIBANA_NODE_OPTIONS --no-warnings "$KIBANA_HOME/src/cli" \
-    --config "$CONF_DIR/kibana.yml" \
+    --config "$KIBANA_CONF_DIR/kibana.yml" \
     --plugin-dir "$KIBANA_HOME/src/core_plugins" \
     --plugin-dir "$KIBANA_PLUGIN_DIR" \
     "${@:2}"

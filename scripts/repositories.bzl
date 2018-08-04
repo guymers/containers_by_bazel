@@ -33,17 +33,17 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.8.0.tar.gz",
   )
 
-  #  Update to 20180625 for amd64 (debuerreotype 0.8)
+  # Update to 20180716 for amd64 (debuerreotype 0.8)
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/a6d58975a606462f5ad2ca029c16856d21407751/jessie/slim/rootfs.tar.xz",
-    sha256 = "1827fdd4a8b69e8f3a54714b8b4174c8c56002bd025169a526ea8ab6f0ee30a4",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/4d7d3902589728ef78ae36003e30e3f67efdbc3e/jessie/slim/rootfs.tar.xz",
+    sha256 = "bdfaba64626967f863a37b820a8ea46ec61365cbc023ad451418596905cd456e",
   )
-  #  Update to 20180625 for amd64 (debuerreotype 0.8)
+  # Update to 20180716 for amd64 (debuerreotype 0.8)
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/a6d58975a606462f5ad2ca029c16856d21407751/stretch/slim/rootfs.tar.xz",
-    sha256 = "739ea688dd1b7dfe67a3668167f83ed26ba3901943bbea572844a3c148e4a078",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/4d7d3902589728ef78ae36003e30e3f67efdbc3e/stretch/slim/rootfs.tar.xz",
+    sha256 = "e3f7edaf3ce097d70765bc84986e5e4153bcc6b162f774ef7f23cc3c57e6246f",
   )
 
   deb_jessie()
@@ -67,10 +67,11 @@ def dependency_repositories():
     sha256 = "8ce9b15e40955e77f96634ff344414122ce234cf7612d1a5ef5ce2728aeda8d7",
   )
 
+  ###### PROMETHEUS
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "adb76021fcff8a2a8363de8739fcb7ff5647c2a0ff90b2c02dcb56cf0cd836f0",
+    sha256 = "351931fe9bb252849b7d37183099047fbe6d7b79dcba013fb6ae19cc1bbd8552",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -92,7 +93,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "dfe47d5e5b3c6667854d967eede2f778169c01c55ad930a17f79ee6a59c36903",
+    sha256 = "870a1052f1a23ee4879f9b37263ee4d67972df30dae5f3ae83a5afcbbe41ab2d",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
 
@@ -101,26 +102,26 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war",
-    sha256 = "5bb075b81a3929ceada4e960049e37df5f15a1e3cfc9dc24d749858e70b48919",
+    sha256 = "da0f9d106e936246841a898471783fb4fbdbbacc8d42a156b7306a0855189602",
   )
   native.http_file(
     name = "jenkins_agent_jar",
     url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/" + JENKINS_SWARM_VERSION + "/swarm-client-" + JENKINS_SWARM_VERSION + ".jar",
-    sha256 = "6bfa7ae6da73d5d31ffdd3850873cb837d350a4603cf8d123f02ee7aced4d867",
+    sha256 = "85197cced609bb36efc677813bcd3242813569970ff32bef49a10ee6ad7fb630",
   )
 
   ###### GERRIT
   native.http_file(
     name = "gerrit_war",
     url = "https://www.gerritcodereview.com/download/gerrit-" + GERRIT_VERSION + ".war",
-    sha256 = "e0c4961b0ce0fc1633a92f1fb56f86a33ebc5e32d99a4feec6f6d7a1c6051276",
+    sha256 = "f213fd8d12748a353350e19896dd701ddf507f9f96ed74f84bc742c3edd5fdfe",
   )
 
   ###### MAVEN
   native.new_http_archive(
     name = "maven",
     url = "https://archive.apache.org/dist/maven/maven-3/" + MAVEN_VERSION + "/binaries/apache-maven-" + MAVEN_VERSION + "-bin.tar.gz",
-    sha256 = "b52956373fab1dd4277926507ab189fb797b3bc51a2a267a193c931fffad8408",
+    sha256 = "ce50b1c91364cb77efe3776f756a6d92b76d9038b0a0782f7d53acf1e997a14d",
     build_file_content = "exports_files(['apache-maven-" + MAVEN_VERSION + "'])",
   )
 
@@ -128,7 +129,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "zookeeper",
     url = "https://archive.apache.org/dist/zookeeper/zookeeper-" + ZOOKEEPER_VERSION + "/zookeeper-" + ZOOKEEPER_VERSION + ".tar.gz",
-    sha256 = "c686f9319050565b58e642149cb9e4c9cc8c7207aacc2cb70c5c0672849594b9",
+    sha256 = "7ced798e41d2027784b8fd55c908605ad5bd94a742d5dab2506be8f94770594d",
     build_file_content = "exports_files(['zookeeper-" + ZOOKEEPER_VERSION + "'])",
   )
 
@@ -144,14 +145,14 @@ def dependency_repositories():
   native.http_file(
     name = "elasticsearch",
     url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-" + ELASTICSEARCH_VERSION + ".deb",
-    sha256 = "f9c889bf1e2e897a881f624dab6a4aa3be5ec1f9d65b6d115021095496351969",
+    sha256 = "99a88db84165bd1910274fb640611a409b215480716e13d80390e225ffd8c318",
   )
 
   ###### KIBANA
   native.http_file(
     name = "kibana",
     url = "https://artifacts.elastic.co/downloads/kibana/kibana-" + KIBANA_VERSION + "-amd64.deb",
-    sha256 = "4df1c6fd3b2e41d92fe8ec850dd5253c554285d8c8cdabbefbf744e74f732345",
+    sha256 = "25d32923052f649cf19a29ab4dd71a64c73b3978477397cb7198433a060e5895",
   )
 
 
@@ -159,7 +160,7 @@ def dependency_repositories():
   native.http_file(
     name = "grafana",
     url = "https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_" + GRAFANA_VERSION + "_amd64.deb",
-    sha256 = "97722140d58365c80e8bfff091e07b84cd0f7f3de9b6601fd062cdf49660c4f3",
+    sha256 = "92fe11911a653d8e6ac175df4d0076cd41ace7c06068ec2c143b7bf2c86c3dab",
   )
 
 
@@ -199,7 +200,7 @@ def dependency_repositories():
   native.http_file(
     name = "ejabberd",
     url = "https://www.process-one.net/downloads/ejabberd/" + EJABBERD_VERSION + "/ejabberd_" + EJABBERD_VERSION + "-0_amd64.deb",
-    sha256 = "35f49190ec5b63aa1615b735c15ba487451d67f2f0f86c453ac001c05dec308b",
+    sha256 = "927cf9d9605ff21e85c54dc0e24ff6666350bdd1a7a7102594bd988759272e40",
   )
 
 
