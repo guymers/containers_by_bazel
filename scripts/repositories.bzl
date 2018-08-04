@@ -208,7 +208,7 @@ def dependency_repositories():
   native.http_file(
     name = "rabbitmq",
     url = "https://github.com/rabbitmq/rabbitmq-server/releases/download/v" + RABBITMQ_VERSION + "/rabbitmq-server_" + RABBITMQ_VERSION + "-1_all.deb",
-    sha256 = "c7745437adb831cfdc40d0e2e5b24b9b9d19c614734adab0c3fbd7bbe0a7106e",
+    sha256 = "72939a9474110daa158a395a60c73baaf84c896aa530efcc9ef3130a6c6fb33a",
   )
 
 
