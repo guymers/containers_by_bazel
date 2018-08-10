@@ -1076,8 +1076,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libpq5",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-10/libpq5_10.4-2.pgdg90+1_amd64.deb",
-    sha256 = "79ac9b74f3799d6980842dcff2b5b626560d8ca158122bc902e1ee938984d34f",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-10/libpq5_10.5-1.pgdg90+1_amd64.deb",
+    sha256 = "fca91d945047c2262a7941badaef72f75320d8de3a61003fecaa508de662870a",
   )
   native.http_file(
     name = "deb_stretch_libprocps6",
@@ -1756,8 +1756,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_linux_libc_dev",
-    url = "http://snapshot.debian.org/archive/debian/20180804T000000Z/pool/main/l/linux/linux-libc-dev_4.9.110-1_amd64.deb",
-    sha256 = "2ecdb478eedc1206c2127d9ad646642347bd1f3947fdd64f1ae5c3cf45374a57",
+    url = "http://snapshot.debian.org/archive/debian-security/20180810T000000Z/pool/updates/main/l/linux/linux-libc-dev_4.9.110-3+deb9u1_amd64.deb",
+    sha256 = "a392f434996835d1acbab2164add2db4465fffd0a60826ef651ae9dc82cd7d86",
   )
   native.http_file(
     name = "deb_stretch_locales",
@@ -1936,8 +1936,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_postgresql_10",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-10/postgresql-10_10.4-2.pgdg90+1_amd64.deb",
-    sha256 = "a8ecc2153ed2e0e42e795f344621cdcac954211faf9750945e7a3e1fafccc256",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-10/postgresql-10_10.5-1.pgdg90+1_amd64.deb",
+    sha256 = "eefe49a3e51da7cc33bc74a343362ac9bb7c7af01b2d04619f167136ecefc13d",
   )
   native.http_file(
     name = "deb_stretch_postgresql_10_postgis_2_4",
@@ -1951,18 +1951,18 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_postgresql_client_10",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-10/postgresql-client-10_10.4-2.pgdg90+1_amd64.deb",
-    sha256 = "dafdba0654d9f748e0c1c73fb3822c1467cd6dea7f0eaa2b15fee5739bdc770f",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-10/postgresql-client-10_10.5-1.pgdg90+1_amd64.deb",
+    sha256 = "3694cded65ddc7e3a6bc4bd484fe66de2b795fe9558d60f1dd2a793b9b908049",
   )
   native.http_file(
     name = "deb_stretch_postgresql_client_common",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_191.pgdg90+1_all.deb",
-    sha256 = "be0401a94db845d8c0385db6b298168528c4134912ed5f9f3445fad1618be47e",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_192.pgdg90+1_all.deb",
+    sha256 = "e3f3e338cc9414f552ddb43fc0f6949511a129136b813e06a1f63c09df91f079",
   )
   native.http_file(
     name = "deb_stretch_postgresql_common",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_191.pgdg90+1_all.deb",
-    sha256 = "63fa978250540c89a7209518be01addb9f2e4e41728e4dcc98c1020b585d0bde",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_192.pgdg90+1_all.deb",
+    sha256 = "1120afef09a9c3429f508ede00a98352b846a576ec2a8ffbf8c2c856173d1050",
   )
   native.http_file(
     name = "deb_stretch_procps",
