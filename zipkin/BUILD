@@ -29,12 +29,6 @@ jar_to_tar(
 )
 
 container_layer(
-  name = "kafka_files",
-  directory = "/opt/zipkin/kafka10",
-  tars = ["zipkin_kafka_tar"],
-)
-
-container_layer(
   name = "scripts",
   directory = "/",
   files = ["entrypoint-zipkin"],
@@ -43,7 +37,7 @@ container_layer(
 container_image(
   name = "zipkin",
   base = "//java:zulu",
-  layers = [":user", ":files", ":kafka_files", ":scripts"],
+  layers = [":user", ":files", ":scripts"],
   env = {
     "CASSANDRA3_CONTACT_POINTS": "",
   },
