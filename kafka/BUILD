@@ -24,7 +24,7 @@ container_layer(
 
 container_layer(
   name = "config_overrides",
-  directory = "/opt/kafka_2.11-" + VERSION + "/config",
+  directory = "/opt/kafka_2.12-" + VERSION + "/config",
   files = glob(["config/*"]),
 )
 

@@ -1236,8 +1236,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libsmbclient",
-    url = "http://snapshot.debian.org/archive/debian-security/20180714T000000Z/pool/updates/main/s/samba/libsmbclient_4.5.12+dfsg-2+deb9u2_amd64.deb",
-    sha256 = "e273f683e9a4e8e5762a6030c24094569b622e3a9d65882f090ff120c269ec79",
+    url = "http://snapshot.debian.org/archive/debian-security/20180831T000000Z/pool/updates/main/s/samba/libsmbclient_4.5.12+dfsg-2+deb9u3_amd64.deb",
+    sha256 = "3fc6d0ce24f45cfb96447f00000d0a3e4b9404fde34c36b2532e7aceec7bd53f",
   )
   native.http_file(
     name = "deb_stretch_libsnappy1v5",
@@ -1371,8 +1371,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libtomcat8_java",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/t/tomcat8/libtomcat8-java_8.5.14-1+deb9u2_all.deb",
-    sha256 = "c72bc5ffd699d3fa7975c6e4b3a7beec303001bc3d4516bdb98360cfc7cab64d",
+    url = "http://snapshot.debian.org/archive/debian-security/20180831T000000Z/pool/updates/main/t/tomcat8/libtomcat8-java_8.5.14-1+deb9u3_all.deb",
+    sha256 = "6e528f9202fde9085737d3cf151a5c1584d901ac6784cea9faa3a2faa94fc80c",
   )
   native.http_file(
     name = "deb_stretch_libtool",
@@ -1491,8 +1491,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libwbclient0",
-    url = "http://snapshot.debian.org/archive/debian-security/20180714T000000Z/pool/updates/main/s/samba/libwbclient0_4.5.12+dfsg-2+deb9u2_amd64.deb",
-    sha256 = "bf6488c3aa87a0498a28d869c6dd4cf07c3b10ab2b9abc09424e91596f1331cd",
+    url = "http://snapshot.debian.org/archive/debian-security/20180831T000000Z/pool/updates/main/s/samba/libwbclient0_4.5.12+dfsg-2+deb9u3_amd64.deb",
+    sha256 = "a91ec9c2bdf88063ad9af5d4d6ab606cd01834364b996b48467f5c510692645e",
   )
   native.http_file(
     name = "deb_stretch_libwebp6",
@@ -1756,8 +1756,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_linux_libc_dev",
-    url = "http://snapshot.debian.org/archive/debian-security/20180810T000000Z/pool/updates/main/l/linux/linux-libc-dev_4.9.110-3+deb9u1_amd64.deb",
-    sha256 = "a392f434996835d1acbab2164add2db4465fffd0a60826ef651ae9dc82cd7d86",
+    url = "http://snapshot.debian.org/archive/debian-security/20180831T000000Z/pool/updates/main/l/linux/linux-libc-dev_4.9.110-3+deb9u4_amd64.deb",
+    sha256 = "1201caf532dfbfda95facb0375be1465b5d8f8e11b1e1ad31cd3d47ed3f8a35c",
   )
   native.http_file(
     name = "deb_stretch_locales",
@@ -2026,8 +2026,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_samba_libs",
-    url = "http://snapshot.debian.org/archive/debian-security/20180714T000000Z/pool/updates/main/s/samba/samba-libs_4.5.12+dfsg-2+deb9u2_amd64.deb",
-    sha256 = "0132ecdbcb5ed27463a1055095a0466ff1c6c7ac8ecb5f60d764ef0a7e7eef45",
+    url = "http://snapshot.debian.org/archive/debian-security/20180831T000000Z/pool/updates/main/s/samba/samba-libs_4.5.12+dfsg-2+deb9u3_amd64.deb",
+    sha256 = "bde67fffb9c8eaeaba9d3ff9f927f804cf4abd80af50e1678be9e86f81f30b86",
   )
   native.http_file(
     name = "deb_stretch_shared_mime_info",
@@ -2051,8 +2051,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_tomcat8_common",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/t/tomcat8/tomcat8-common_8.5.14-1+deb9u2_all.deb",
-    sha256 = "93cc3a21239ca967325d2ceb1526bd811b5d74d99ff8db1e35fce597d2c86c0f",
+    url = "http://snapshot.debian.org/archive/debian-security/20180831T000000Z/pool/updates/main/t/tomcat8/tomcat8-common_8.5.14-1+deb9u3_all.deb",
+    sha256 = "ad70677c553bf5ab3a3c45cd9e15a947323c0bbe18ca10a813730275f15b920d",
   )
   native.http_file(
     name = "deb_stretch_tomcat8_user",
