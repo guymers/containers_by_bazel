@@ -113,7 +113,7 @@ def dependency_repositories():
   ###### GERRIT
   native.http_file(
     name = "gerrit_war",
-    url = "https://www.gerritcodereview.com/download/gerrit-" + GERRIT_VERSION + ".war",
+    url = "https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war",
     sha256 = "f213fd8d12748a353350e19896dd701ddf507f9f96ed74f84bc742c3edd5fdfe",
   )
 
