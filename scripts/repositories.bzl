@@ -71,7 +71,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "351931fe9bb252849b7d37183099047fbe6d7b79dcba013fb6ae19cc1bbd8552",
+    sha256 = "87bf22b527d34bb561ae0e93f59d9edd4e53bcd7f28a0b848ac8ca58ff9ff9a9",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -86,7 +86,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "f545b530884e3abbca026df08df33d5a15892e6d98da5b8c2297413d1c7b68c1",
+    sha256 = "d502fbe587a6c2181d6acc688741ae4131386bb10ca50c73c923effc60bafeeb",
     build_file_content = "exports_files(['sbt'])",
   )
 
@@ -102,12 +102,12 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war",
-    sha256 = "da0f9d106e936246841a898471783fb4fbdbbacc8d42a156b7306a0855189602",
+    sha256 = "ecb84b6575e86957b902cce5e68e360e6b0768b0921baa405e61d314239e5b27",
   )
   native.http_file(
     name = "jenkins_agent_jar",
     url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/" + JENKINS_SWARM_VERSION + "/swarm-client-" + JENKINS_SWARM_VERSION + ".jar",
-    sha256 = "85197cced609bb36efc677813bcd3242813569970ff32bef49a10ee6ad7fb630",
+    sha256 = "d3bdef93feda423b4271e6b03cd018d1d26a45e3c2527d631828223a5e5a21fc",
   )
 
   ###### GERRIT
@@ -160,7 +160,7 @@ def dependency_repositories():
   native.http_file(
     name = "grafana",
     url = "https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_" + GRAFANA_VERSION + "_amd64.deb",
-    sha256 = "92fe11911a653d8e6ac175df4d0076cd41ace7c06068ec2c143b7bf2c86c3dab",
+    sha256 = "e4fe9335c2e933d852ceb87848d32d99af4e351ac9a484d33ad907b43c1d3945",
   )
 
 
@@ -168,14 +168,14 @@ def dependency_repositories():
   native.http_file(
     name = "nodejs",
     url = "https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz",
-    sha256 = "08e2fcfea66746bd966ea3a89f26851f1238d96f86c33eaf6274f67fce58421a"
+    sha256 = "29a20479cd1e3a03396a4e74a1784ccdd1cf2f96928b56f6ffa4c8dae40c88f2"
   )
 
   ###### YARN
   native.http_file(
     name = "yarnpkg",
     url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "5fecee8378905bbd0c09f9f49d81d427576e3ebdfe9e71ac47eb6c5c5fe35825",
+    sha256 = "51c88afe52417b0804b464cc9805dcafd1d50e9bfab8553039bf24f95cbf2d73",
   )
 
 
