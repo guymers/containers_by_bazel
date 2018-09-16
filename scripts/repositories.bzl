@@ -33,17 +33,17 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.8.0.tar.gz",
   )
 
-  # Update to 20180716 for amd64 (debuerreotype 0.8)
+  # Update to 20180831 for amd64 (debuerreotype 0.8)
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/4d7d3902589728ef78ae36003e30e3f67efdbc3e/jessie/slim/rootfs.tar.xz",
-    sha256 = "bdfaba64626967f863a37b820a8ea46ec61365cbc023ad451418596905cd456e",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/ed15c6a0b511d2985ca252f59f4318b1fe2a7a59/jessie/slim/rootfs.tar.xz",
+    sha256 = "7d1ade63e785860e0ce2a23db1909385046ee8ad82207d58a13e0364fb9005a3",
   )
-  # Update to 20180716 for amd64 (debuerreotype 0.8)
+  # Update to 20180831 for amd64 (debuerreotype 0.8)
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/4d7d3902589728ef78ae36003e30e3f67efdbc3e/stretch/slim/rootfs.tar.xz",
-    sha256 = "e3f7edaf3ce097d70765bc84986e5e4153bcc6b162f774ef7f23cc3c57e6246f",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/ed15c6a0b511d2985ca252f59f4318b1fe2a7a59/stretch/slim/rootfs.tar.xz",
+    sha256 = "02a17548cb293e6f73ea544bb6fde65b4a164918e90966ac93431c9800ea2d6f",
   )
 
   deb_jessie()

@@ -386,13 +386,13 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libcurl3",
-    url = "http://snapshot.debian.org/archive/debian-security/20180714T000000Z/pool/updates/main/c/curl/libcurl3_7.52.1-5+deb9u6_amd64.deb",
-    sha256 = "cf6c7a59223ac7cca153212c058f753c6a1458507dbdaa97c230ea99492ef301",
+    url = "http://snapshot.debian.org/archive/debian-security/20180916T000000Z/pool/updates/main/c/curl/libcurl3_7.52.1-5+deb9u7_amd64.deb",
+    sha256 = "caab8a7a2a921496ae890463514c214a12ebbbac63ef7cb88296f892fa362834",
   )
   native.http_file(
     name = "deb_stretch_libcurl3_gnutls",
-    url = "http://snapshot.debian.org/archive/debian-security/20180714T000000Z/pool/updates/main/c/curl/libcurl3-gnutls_7.52.1-5+deb9u6_amd64.deb",
-    sha256 = "14bbd55f9854206ca1374484c5d9fc9b53d7d7283105d51d10f65e48e247604d",
+    url = "http://snapshot.debian.org/archive/debian-security/20180916T000000Z/pool/updates/main/c/curl/libcurl3-gnutls_7.52.1-5+deb9u7_amd64.deb",
+    sha256 = "e4d25bb95a9b641b462faf90eea7a8f86ebf15a3089630d2662df1620665db61",
   )
   native.http_file(
     name = "deb_stretch_libdap23",
@@ -776,8 +776,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_liblcms2_2",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/l/lcms2/liblcms2-2_2.8-4_amd64.deb",
-    sha256 = "006c3cc918c9465e40f30135770c1df0063907f5a39ce37986d23a6f5923166a",
+    url = "http://snapshot.debian.org/archive/debian-security/20180916T000000Z/pool/updates/main/l/lcms2/liblcms2-2_2.8-4+deb9u1_amd64.deb",
+    sha256 = "18d45f638c1628790f72a6a4b6502cb3f542feecc0388e15d8f272d8f4c8c03b",
   )
   native.http_file(
     name = "deb_stretch_libldap_2_4_2",
