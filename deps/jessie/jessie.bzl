@@ -6,8 +6,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_git_man",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/g/git/git-man_2.1.4-2.1+deb8u6_all.deb",
-    sha256 = "ac65d3741db47478d8f132826aa4bf72006e31eedda269601567086e033ebd47",
+    url = "http://snapshot.debian.org/archive/debian-security/20181007T000000Z/pool/updates/main/g/git/git-man_2.1.4-2.1+deb8u7_all.deb",
+    sha256 = "604a83dbe3fad8aad5706e7f0382ff7d56398e63734633f153fb2a86ebf6a4aa",
   )
   native.http_file(
     name = "deb_jessie_libcurl3_gnutls",

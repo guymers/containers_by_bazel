@@ -71,7 +71,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "87bf22b527d34bb561ae0e93f59d9edd4e53bcd7f28a0b848ac8ca58ff9ff9a9",
+    sha256 = "3aa063498ab3b4d1bee103d80098ba33d02b3fed63cb46e47e1d16290356db8a",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -93,7 +93,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "870a1052f1a23ee4879f9b37263ee4d67972df30dae5f3ae83a5afcbbe41ab2d",
+    sha256 = "d91fcc927ac90248d81ec741527668524388052abd7415548804dcb13a41e208",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
 
@@ -114,7 +114,7 @@ def dependency_repositories():
   native.http_file(
     name = "gerrit_war",
     url = "https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war",
-    sha256 = "f213fd8d12748a353350e19896dd701ddf507f9f96ed74f84bc742c3edd5fdfe",
+    sha256 = "ab0379301bb26e00f2c5316edde4aba5778c402879ccd409067e90581133ad97",
   )
 
   ###### MAVEN
@@ -137,7 +137,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "kafka",
     url = "https://archive.apache.org/dist/kafka/" + KAFKA_VERSION + "/kafka_2.12-" + KAFKA_VERSION + ".tgz",
-    sha256 = "499283970b5020358726949b4f1d93d3167bc5eecaa1d167076bae6bb2862d12",
+    sha256 = "b5f1539c4030e6f6e64d0c14a9acea31156e7cbf2cb66c93ca2b6ca732ba7955",
     build_file_content = "exports_files(['kafka_2.12-" + KAFKA_VERSION + "'])",
   )
 
@@ -175,7 +175,7 @@ def dependency_repositories():
   native.http_file(
     name = "yarnpkg",
     url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "51c88afe52417b0804b464cc9805dcafd1d50e9bfab8553039bf24f95cbf2d73",
+    sha256 = "d05f7eb42e2278df757f7a0075ccafb7826c273c1a1e39dc65bead10d659cf24",
   )
 
 
@@ -208,7 +208,7 @@ def dependency_repositories():
   native.http_file(
     name = "rabbitmq",
     url = "https://github.com/rabbitmq/rabbitmq-server/releases/download/v" + RABBITMQ_VERSION + "/rabbitmq-server_" + RABBITMQ_VERSION + "-1_all.deb",
-    sha256 = "72939a9474110daa158a395a60c73baaf84c896aa530efcc9ef3130a6c6fb33a",
+    sha256 = "11f70dd68e098e4dc32e3eda49ab68c795e599f3ac0b8b858014c79432173928",
   )
 
 
