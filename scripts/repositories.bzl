@@ -33,17 +33,16 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.8.0.tar.gz",
   )
 
-  # Update to 20180831 for amd64 (debuerreotype 0.8)
+  # Update to 20181011 for amd64 (debuerreotype 0.8)
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/ed15c6a0b511d2985ca252f59f4318b1fe2a7a59/jessie/slim/rootfs.tar.xz",
-    sha256 = "7d1ade63e785860e0ce2a23db1909385046ee8ad82207d58a13e0364fb9005a3",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/5ef18a5df15ee6aeb352f3e308e56cec44df2833/jessie/slim/rootfs.tar.xz",
+    sha256 = "bc16506a5ef2e52f2c743c8a7adb3bcb077b9308e8e3fd477f8babf28a92abf7",
   )
-  # Update to 20180831 for amd64 (debuerreotype 0.8)
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/ed15c6a0b511d2985ca252f59f4318b1fe2a7a59/stretch/slim/rootfs.tar.xz",
-    sha256 = "02a17548cb293e6f73ea544bb6fde65b4a164918e90966ac93431c9800ea2d6f",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/5ef18a5df15ee6aeb352f3e308e56cec44df2833/stretch/slim/rootfs.tar.xz",
+    sha256 = "f954fb7e4605bad0840165660bc14bffbbd30befe67ec496f9e40a5fee24a87f",
   )
 
   deb_jessie()
@@ -102,7 +101,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war",
-    sha256 = "ecb84b6575e86957b902cce5e68e360e6b0768b0921baa405e61d314239e5b27",
+    sha256 = "d8ed5a7033be57aa9a84a5342b355ef9f2ba6cdb490db042a6d03efb23ca1e83",
   )
   native.http_file(
     name = "jenkins_agent_jar",
@@ -168,14 +167,14 @@ def dependency_repositories():
   native.http_file(
     name = "nodejs",
     url = "https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz",
-    sha256 = "29a20479cd1e3a03396a4e74a1784ccdd1cf2f96928b56f6ffa4c8dae40c88f2"
+    sha256 = "0dc6dba645550b66f8f00541a428c29da7c3cde32fb7eda2eb626a9db3bbf08d"
   )
 
   ###### YARN
   native.http_file(
     name = "yarnpkg",
     url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "d05f7eb42e2278df757f7a0075ccafb7826c273c1a1e39dc65bead10d659cf24",
+    sha256 = "c5954b25a0e40656e53937fc899871a1a06f2e64c40139950b1f7ec65e366db4",
   )
 
 

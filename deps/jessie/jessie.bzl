@@ -41,8 +41,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libgnutls_deb0_28",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/g/gnutls28/libgnutls-deb0-28_3.3.8-6+deb8u7_amd64.deb",
-    sha256 = "a5685d0dc8bcf06a9e858bb8c8d9e9edf4376729dcabb9557e13fdac365e8a3c",
+    url = "http://snapshot.debian.org/archive/debian-security/20181106T000000Z/pool/updates/main/g/gnutls28/libgnutls-deb0-28_3.3.30-0+deb8u1_amd64.deb",
+    sha256 = "2f6c44f0ba6a4b4261c58065843b4997c796b6346f2784d4fe8f949fb136ea1c",
   )
   native.http_file(
     name = "deb_jessie_libgssapi_krb5_2",

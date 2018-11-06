@@ -62,7 +62,7 @@ You can use the ./build_container script. It ensures that you cannot override th
     ./scripts/build_container.sh //elasticsearch elasticsearch ${ELASTICSEARCH_VERSION}
     ./scripts/build_container.sh //gerrit gerrit ${GERRIT_VERSION}
     ./scripts/build_container.sh //grafana grafana ${GRAFANA_VERSION}
-    ./scripts/build_container.sh //java:zulu zulu ${ZULU_VERSION}
+    ./scripts/build_container.sh //java:zulu zulu ${JAVA_VERSION}
     ./scripts/build_container.sh //jenkins jenkins ${JENKINS_VERSION}
     ./scripts/build_container.sh //jenkins:agent jenkins-agent ${JENKINS_SWARM_VERSION}
     ./scripts/build_container.sh //kafka kafka ${KAFKA_VERSION}
