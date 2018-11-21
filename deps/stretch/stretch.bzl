@@ -46,8 +46,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_dnsmasq_base",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/d/dnsmasq/dnsmasq-base_2.76-5+deb9u1_amd64.deb",
-    sha256 = "637d801c946ff1c2ddd192f7eddb5765b5594727464d4317b314befd42922f1e",
+    url = "http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/d/dnsmasq/dnsmasq-base_2.76-5+deb9u2_amd64.deb",
+    sha256 = "b72a705c70986c45306750c2623e8b0a709f467471e5d1c482214b8fa6a4070f",
   )
   native.http_file(
     name = "deb_stretch_file",
@@ -86,8 +86,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_git",
-    url = "http://snapshot.debian.org/archive/debian-security/20180714T000000Z/pool/updates/main/g/git/git_2.11.0-3+deb9u3_amd64.deb",
-    sha256 = "b3165e6d1acf9c32d322057374f800273a3cc7a55088684e089b0779b2439410",
+    url = "http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/g/git/git_2.11.0-3+deb9u4_amd64.deb",
+    sha256 = "584b7e2ab42ab5c195f56cd8cfd6b39be40831267ec55e9bfcbe1df9c2e3aa19",
   )
   native.http_file(
     name = "deb_stretch_git_man",
@@ -396,18 +396,18 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libdap23",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/libd/libdap/libdap23_3.18.2-2_amd64.deb",
-    sha256 = "8f3015354afdbed6d614129decec584e9797aa6cfcaf267c4c24066e18471725",
+    url = "http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/libd/libdap/libdap23_3.18.2-2+deb9u1_amd64.deb",
+    sha256 = "6919d1e320a72691628626cce0f1cd278aa329c71933bef7eb7d5c4b72718fd0",
   )
   native.http_file(
     name = "deb_stretch_libdapclient6v5",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/libd/libdap/libdapclient6v5_3.18.2-2_amd64.deb",
-    sha256 = "08efdd3ff41d6be9975106114e60151a13127417fa91756af2e6f1333ff317e7",
+    url = "http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/libd/libdap/libdapclient6v5_3.18.2-2+deb9u1_amd64.deb",
+    sha256 = "e3b6870f828df011b345bf8ee2ba92f54131becea4d2218a78bbd8db0f69a98b",
   )
   native.http_file(
     name = "deb_stretch_libdapserver7v5",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/libd/libdap/libdapserver7v5_3.18.2-2_amd64.deb",
-    sha256 = "7c9c24a249b252bceaa496314913ab84d9eb236c525fb9e480b27fcf005f9c23",
+    url = "http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/libd/libdap/libdapserver7v5_3.18.2-2+deb9u1_amd64.deb",
+    sha256 = "a7e2306d5ffdc332251a9170aba7be68c57782ec89d7c49813c9612a54a2e34b",
   )
   native.http_file(
     name = "deb_stretch_libdatrie1",
@@ -596,8 +596,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libgnutls30",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/g/gnutls28/libgnutls30_3.5.8-5+deb9u3_amd64.deb",
-    sha256 = "2c014e7323ab4ce6baf45fd2adf218f79e3e423dc68cf34ba875b7d23d2b29c4",
+    url = "http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/g/gnutls28/libgnutls30_3.5.8-5+deb9u4_amd64.deb",
+    sha256 = "d86da40e32249060e95bccf49c9395dfe883b9f7553920fa4f402f43019fec3e",
   )
   native.http_file(
     name = "deb_stretch_libgomp1",
@@ -831,8 +831,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libmariadbclient18",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/m/mariadb-10.1/libmariadbclient18_10.1.26-0+deb9u1_amd64.deb",
-    sha256 = "4b2ca209ef1a700642a1215d7580c8c85c57165788810a9470495a496af7cc6e",
+    url = "http://snapshot.debian.org/archive/debian-security/20181121T000000Z/pool/updates/main/m/mariadb-10.1/libmariadbclient18_10.1.37-0+deb9u1_amd64.deb",
+    sha256 = "5ad25d8a55d3747a4bd9a6b710056185012f3876214a976d9dd7137c5d683585",
   )
   native.http_file(
     name = "deb_stretch_libmcrypt4",
@@ -981,8 +981,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libopenmpt0",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/libo/libopenmpt/libopenmpt0_0.2.7386~beta20.3-3+deb9u2_amd64.deb",
-    sha256 = "7578caab8b174bbb2426ce95361dddad0a25b50b87fb4bfe2434f827e793a066",
+    url = "http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/libo/libopenmpt/libopenmpt0_0.2.7386~beta20.3-3+deb9u3_amd64.deb",
+    sha256 = "16634a4d20cacd20e90d9695c85b2310e47333c64f8d5e4139084dee31913c0e",
   )
   native.http_file(
     name = "deb_stretch_libopenscenegraph100v5",
@@ -1081,8 +1081,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libpq5",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/libpq5_11.0-1.pgdg90+2_amd64.deb",
-    sha256 = "55417c5e52c574ef7fcd384d98b9273616a7540dca4011bf408aa231fe393198",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/libpq5_11.1-1.pgdg90+1_amd64.deb",
+    sha256 = "794cdc0798c62db6aacca60e118159c79ad29739a4a96da455aa1413b3c13c23",
   )
   native.http_file(
     name = "deb_stretch_libprocps6",
@@ -1211,8 +1211,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libservlet3_1_java",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/t/tomcat8/libservlet3.1-java_8.5.14-1+deb9u2_all.deb",
-    sha256 = "8dbfe204ce9798e95fb8cd0d5d5063e9b3e11642bd909a591e413b08fcb7cafc",
+    url = "http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/t/tomcat8/libservlet3.1-java_8.5.14-1+deb9u3_all.deb",
+    sha256 = "04dfd9f70ea719cfe38c3543cdc044738d18dd64a122f5cc6669979dac9d0791",
   )
   native.http_file(
     name = "deb_stretch_libsfcgal1",
@@ -1531,18 +1531,18 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libx11_6",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/libx/libx11/libx11-6_1.6.4-3_amd64.deb",
-    sha256 = "1b52b32b63e8dc55ebd2562cee9207ff6048ff4824cb8ee7ee0222e1207ff492",
+    url = "http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/libx/libx11/libx11-6_1.6.4-3+deb9u1_amd64.deb",
+    sha256 = "bfb881d47a72a6d79a66327bf43e106c13c4dfbd9e87987ff551c3c0cd6bc92e",
   )
   native.http_file(
     name = "deb_stretch_libx11_data",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/libx/libx11/libx11-data_1.6.4-3_all.deb",
-    sha256 = "6e15bcebc004532351f75b4cec6ed1158bd8e142260650c75b29264045388099",
+    url = "http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/libx/libx11/libx11-data_1.6.4-3+deb9u1_all.deb",
+    sha256 = "c589d2decc374dff78da717a4716c0d79d9646abb7ccc4a64e1f61534a2ba3b3",
   )
   native.http_file(
     name = "deb_stretch_libx11_xcb1",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/libx/libx11/libx11-xcb1_1.6.4-3_amd64.deb",
-    sha256 = "14914e3070f15532e83cdc99e2f7d0c339cdb36c916d06b67ec56ddac92626eb",
+    url = "http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/libx/libx11/libx11-xcb1_1.6.4-3+deb9u1_amd64.deb",
+    sha256 = "b8c259d8537378ade86b4d1add01475207d1531dff5ddb6032f3777c9be7b90e",
   )
   native.http_file(
     name = "deb_stretch_libx264_148",
@@ -1616,8 +1616,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_libxcursor1",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/libx/libxcursor/libxcursor1_1.1.14-1+deb9u1_amd64.deb",
-    sha256 = "3a26bef0c9760d768b2ce3a2a37cb0865c69b6ef89b2a9498887039528c17dfe",
+    url = "http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/libx/libxcursor/libxcursor1_1.1.14-1+deb9u2_amd64.deb",
+    sha256 = "af4908f3f2bcfe78586823eaf8ed65d838936cb26698c520538717367d836dc6",
   )
   native.http_file(
     name = "deb_stretch_libxdamage1",
@@ -1761,8 +1761,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_linux_libc_dev",
-    url = "http://snapshot.debian.org/archive/debian-security/20181106T000000Z/pool/updates/main/l/linux/linux-libc-dev_4.9.110-3+deb9u6_amd64.deb",
-    sha256 = "9109f0a2302871e6d219f872ca80e2e1d037275dcda48f90e0960b9e2330d179",
+    url = "http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/l/linux/linux-libc-dev_4.9.130-2_amd64.deb",
+    sha256 = "c454ea966ae1d570bbfc32323deabb1f4ab5a4ca95a5094d08ec1679eddba1e6",
   )
   native.http_file(
     name = "deb_stretch_locales",
@@ -1801,8 +1801,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_nginx",
-    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.15.5-1~stretch_amd64.deb",
-    sha256 = "622d4510a925db7c2e54397fd6758159559a2297b8f409b5273429987d9ee4dd",
+    url = "http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.15.6-1~stretch_amd64.deb",
+    sha256 = "376e6a12e6824ecc0eddc71bd54395d44c74d5c5f287ba113d9671f4bfa5bb3f",
   )
   native.http_file(
     name = "deb_stretch_numactl",
@@ -1821,8 +1821,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_openssh_client",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/o/openssh/openssh-client_7.4p1-10+deb9u3_amd64.deb",
-    sha256 = "3f9d6cd9909140c825fc59fca45da5a91049a6e32d6d4adfafb24159688990c3",
+    url = "http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/o/openssh/openssh-client_7.4p1-10+deb9u4_amd64.deb",
+    sha256 = "e352d88c4cfe7cceef76f4f7e8358555a03e747b3f4a48be67da479eff490231",
   )
   native.http_file(
     name = "deb_stretch_openssl",
@@ -1841,8 +1841,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_pgdg_keyring",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/pgdg-keyring/pgdg-keyring_2018.1_all.deb",
-    sha256 = "9a8c0ae8dc05217e60e0320bae3348d0fdf715a5affbecf22f935ef0d2db3fda",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/pgdg-keyring/pgdg-keyring_2018.2_all.deb",
+    sha256 = "48c435aeff4a9a9949bcfac639505a5ba050fd1439e2ee5de3af1a942dd97c74",
   )
   native.http_file(
     name = "deb_stretch_php7_0_bcmath",
@@ -1941,8 +1941,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_postgresql_11",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-11_11.0-1.pgdg90+2_amd64.deb",
-    sha256 = "51908ded8f796886692c57f3b138e6aeeb070959adbc5706e60288220288ba61",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-11_11.1-1.pgdg90+1_amd64.deb",
+    sha256 = "36ea3360b2294e53ef0f2ba7851b66ac38f98266abe9b31321e24e47c2152b5a",
   )
   native.http_file(
     name = "deb_stretch_postgresql_11_postgis_2_5",
@@ -1956,8 +1956,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_postgresql_client_11",
-    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-client-11_11.0-1.pgdg90+2_amd64.deb",
-    sha256 = "fa010a782aac77900d5b51c497ec372f27f82dd3debaa8f189a61eda0d842b02",
+    url = "http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-client-11_11.1-1.pgdg90+1_amd64.deb",
+    sha256 = "dc0219eaf1629f1133e46125fd9ffddc532770aebdd5d982a8b8b3d43bda50e1",
   )
   native.http_file(
     name = "deb_stretch_postgresql_client_common",
@@ -2061,8 +2061,8 @@ def deb_stretch():
   )
   native.http_file(
     name = "deb_stretch_tomcat8_user",
-    url = "http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/t/tomcat8/tomcat8-user_8.5.14-1+deb9u2_all.deb",
-    sha256 = "3c179b1a7e637ab9f44220aa17976143affc56cf8ca2651dd9d3645f734a1fc9",
+    url = "http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/t/tomcat8/tomcat8-user_8.5.14-1+deb9u3_all.deb",
+    sha256 = "c5fd51706a8f0339c7ec628f3ad65c752a00891dfb28ed694eff38324bdd9fc3",
   )
   native.http_file(
     name = "deb_stretch_ucf",

@@ -33,16 +33,16 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.8.0.tar.gz",
   )
 
-  # Update to 20181011 for amd64 (debuerreotype 0.8)
+  # Update to 20181112 for amd64 (debuerreotype 0.8)
   native.http_file(
     name = "debian_jessie",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/5ef18a5df15ee6aeb352f3e308e56cec44df2833/jessie/slim/rootfs.tar.xz",
-    sha256 = "bc16506a5ef2e52f2c743c8a7adb3bcb077b9308e8e3fd477f8babf28a92abf7",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/f539f8214ae5535749034ed038a5c7f7099e5011/jessie/slim/rootfs.tar.xz",
+    sha256 = "043c9f336b20f4766cd35563a1243205df4c76caa1575645c33ebb3e9b094887",
   )
   native.http_file(
     name = "debian_stretch",
-    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/5ef18a5df15ee6aeb352f3e308e56cec44df2833/stretch/slim/rootfs.tar.xz",
-    sha256 = "f954fb7e4605bad0840165660bc14bffbbd30befe67ec496f9e40a5fee24a87f",
+    url = "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/f539f8214ae5535749034ed038a5c7f7099e5011/stretch/slim/rootfs.tar.xz",
+    sha256 = "af6864e15ecffcab9a3cd2063476790b1b837d0abbebc71021f8dd79eb86ded9",
   )
 
   deb_jessie()
@@ -101,7 +101,7 @@ def dependency_repositories():
   native.http_file(
     name = "jenkins_war",
     url = "http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war",
-    sha256 = "d8ed5a7033be57aa9a84a5342b355ef9f2ba6cdb490db042a6d03efb23ca1e83",
+    sha256 = "953e4dda2d3065284c0016b3e8279e097f830c128b1f712d84780ff2b0751e7d",
   )
   native.http_file(
     name = "jenkins_agent_jar",
@@ -136,7 +136,7 @@ def dependency_repositories():
   native.new_http_archive(
     name = "kafka",
     url = "https://archive.apache.org/dist/kafka/" + KAFKA_VERSION + "/kafka_2.12-" + KAFKA_VERSION + ".tgz",
-    sha256 = "b5f1539c4030e6f6e64d0c14a9acea31156e7cbf2cb66c93ca2b6ca732ba7955",
+    sha256 = "14cef23b7541ef3089929d7e3d59c2cf000a865253c719c271f63341cac0c244",
     build_file_content = "exports_files(['kafka_2.12-" + KAFKA_VERSION + "'])",
   )
 
@@ -174,7 +174,7 @@ def dependency_repositories():
   native.http_file(
     name = "yarnpkg",
     url = "https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb",
-    sha256 = "c5954b25a0e40656e53937fc899871a1a06f2e64c40139950b1f7ec65e366db4",
+    sha256 = "6603e11cc938bf10fe1a8af11cebaac34f1ffb30a4513c614b6d850d93e652fc",
   )
 
 

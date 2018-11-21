@@ -11,8 +11,8 @@ def deb_jessie():
   )
   native.http_file(
     name = "deb_jessie_libcurl3_gnutls",
-    url = "http://snapshot.debian.org/archive/debian-security/20180916T000000Z/pool/updates/main/c/curl/libcurl3-gnutls_7.38.0-4+deb8u12_amd64.deb",
-    sha256 = "6c2a2f7aec717688a108d14257ed5dc223ea240103355892eafd85d8e13c92cb",
+    url = "http://snapshot.debian.org/archive/debian-security/20181121T000000Z/pool/updates/main/c/curl/libcurl3-gnutls_7.38.0-4+deb8u13_amd64.deb",
+    sha256 = "326beadc4fb48a27fc1e2a83c49c9094ffcbffcde5ef66ef8b8e5d359aea47cd",
   )
   native.http_file(
     name = "deb_jessie_liberror_perl",
