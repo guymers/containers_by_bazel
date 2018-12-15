@@ -1,5 +1,4 @@
 load("//macros/user:user.bzl", "user_layer")
-load("//scripts/versions:versions.bzl", "GERRIT_VERSION")
 
 GERRIT_HOME = "/var/gerrit"
 GERRIT_CONF = "/etc/gerrit"
@@ -20,9 +19,6 @@ container_layer(
   name = "files",
   files = ["@gerrit_war//file"],
   directory = GERRIT_HOME + "/bin",
-  symlinks = {
-    "." + GERRIT_HOME + "/bin/gerrit.war": GERRIT_HOME + "/bin/gerrit-" + GERRIT_VERSION + ".war",
-  },
 )
 
 container_layer(

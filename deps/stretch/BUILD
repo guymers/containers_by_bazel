@@ -202,6 +202,7 @@ filegroup(
     "@deb_stretch_libtasn1_6//file",
     "@deb_stretch_libunistring0//file",
     "@deb_stretch_perl//file",
+    "@deb_stretch_perl_base//file",
     "@deb_stretch_perl_modules_5_24//file",
   ],
 )
@@ -356,6 +357,7 @@ filegroup(
     "@deb_stretch_m4//file",
     "@deb_stretch_mime_support//file",
     "@deb_stretch_perl//file",
+    "@deb_stretch_perl_base//file",
     "@deb_stretch_perl_modules_5_24//file",
     "@deb_stretch_php7_0_cli//file",
     "@deb_stretch_php7_0_common//file",
@@ -670,6 +672,7 @@ filegroup(
     "@deb_stretch_odbcinst1debian2//file",
     "@deb_stretch_openssl//file",
     "@deb_stretch_perl//file",
+    "@deb_stretch_perl_base//file",
     "@deb_stretch_perl_modules_5_24//file",
     "@deb_stretch_pgdg_keyring//file",
     "@deb_stretch_postgis//file",

@@ -12,7 +12,7 @@ with open(sys.argv[1], "r") as f:
             if not name: raise Exception("Failed to find name in line: {0}".format(line))
             i = 2
         elif i == 2:
-            match = re.search(r'url = "(.+)",$', line)
+            match = re.search(r'urls = \["(.+)"\],$', line)
             url = match.group(1) if match else None
             if not url: raise Exception("Failed to find url in line: {0}".format(line))
             i = 3
@@ -25,5 +25,5 @@ with open(sys.argv[1], "r") as f:
             if line != ")": raise Exception("Expected ')' actual: {0}".format(line))
             print('{0} {1} {2}'.format(name, url, sha256))
             i = 0
-        elif line == "native.http_file(":
+        elif line == "http_file(":
             i = 1

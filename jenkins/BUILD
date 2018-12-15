@@ -1,5 +1,4 @@
 load("//macros/user:user.bzl", "user_layer")
-load("//scripts/versions:versions.bzl", "JENKINS_VERSION", "JENKINS_SWARM_VERSION")
 
 JENKINS_HOME = "/jenkins"
 
@@ -31,9 +30,6 @@ container_layer(
   name = "files",
   files = ["@jenkins_war//file"],
   directory = "/usr/share/jenkins",
-  symlinks = {
-    "./usr/share/jenkins/jenkins.war": "/usr/share/jenkins/jenkins-war-" + JENKINS_VERSION + ".war",
-  },
 )
 
 container_layer(
@@ -78,9 +74,6 @@ container_layer(
   name = "agent_files",
   files = ["@jenkins_agent_jar//file"],
   directory = "/usr/share/jenkins",
-  symlinks = {
-    "/usr/share/jenkins/swarm-client.jar": "/usr/share/jenkins/swarm-client-" + JENKINS_SWARM_VERSION + ".jar"
-  },
 )
 
 container_layer(

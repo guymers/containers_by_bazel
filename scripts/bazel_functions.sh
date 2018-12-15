@@ -15,16 +15,16 @@ http_file(
 EOF
 }
 
-function bazel_native_http_file() {
+function bazel_http_file() {
   local prefix="$1"
   local name="$2"
   local url="$3"
   local sha256="$4"
 
 cat << EOF
-  native.http_file(
+  http_file(
     name = "${prefix}_${name}",
-    url = "$url",
+    urls = ["$url"],
     sha256 = "$sha256",
   )
 EOF

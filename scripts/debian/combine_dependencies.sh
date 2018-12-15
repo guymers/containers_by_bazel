@@ -56,6 +56,8 @@ done
 ## http://unix.stackexchange.com/a/195749
 readonly sortedDependencies=( $( printf "%s\n" "${!dependencies[@]}" | LC_ALL=C sort ) )
 
+echo 'load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_file")'
+echo ''
 echo "def $prefix():"
 for name in "${sortedDependencies[@]}"; do
   if ! find_element "${prefix}_${name}"; then
@@ -67,6 +69,6 @@ for name in "${sortedDependencies[@]}"; do
     fi
 
     # shellcheck disable=SC2086
-    bazel_native_http_file "$prefix" "$name" "$url" "$sha256"
+    bazel_http_file "$prefix" "$name" "$url" "$sha256"
   fi
 done
