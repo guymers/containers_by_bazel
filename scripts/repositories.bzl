@@ -52,7 +52,7 @@ def dependency_repositories():
   deb_jessie()
   deb_stretch()
 
-  native.new_http_archive(
+  http_archive(
     name = "su_exec",
     url = "https://github.com/ncopa/su-exec/archive/v0.2.tar.gz",
     sha256 = "ec4acbd8cde6ceeb2be67eda1f46c709758af6db35cacbcde41baac349855e25",
@@ -72,7 +72,7 @@ def dependency_repositories():
   )
 
   ###### PROMETHEUS
-  native.new_http_archive(
+  http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
     sha256 = "3aa063498ab3b4d1bee103d80098ba33d02b3fed63cb46e47e1d16290356db8a",
@@ -87,14 +87,14 @@ def dependency_repositories():
   )
 
 
-  native.new_http_archive(
+  http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "d502fbe587a6c2181d6acc688741ae4131386bb10ca50c73c923effc60bafeeb",
+    sha256 = "2625cbd8db75ec9b4a57e9a0af55a5ee8ad7700e1eba7d97ad78d9296450e781",
     build_file_content = "exports_files(['sbt'])",
   )
 
-  native.new_http_archive(
+  http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
     sha256 = "d91fcc927ac90248d81ec741527668524388052abd7415548804dcb13a41e208",
@@ -107,7 +107,7 @@ def dependency_repositories():
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war"],
-    sha256 = "953e4dda2d3065284c0016b3e8279e097f830c128b1f712d84780ff2b0751e7d",
+    sha256 = "7a38586d5a3a1a83498809a83715728bb2f01b58a7dd3a88366f076efdaf6669",
   )
   http_file(
     name = "jenkins_agent_jar",
@@ -121,11 +121,11 @@ def dependency_repositories():
     name = "gerrit_war",
     downloaded_file_path = "gerrit.war",
     urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
-    sha256 = "ab0379301bb26e00f2c5316edde4aba5778c402879ccd409067e90581133ad97",
+    sha256 = "75246a4c0a1f6d982a02e4e14155ecb5b2cb863c90120ec06ade48260d26e08a",
   )
 
   ###### MAVEN
-  native.new_http_archive(
+  http_archive(
     name = "maven",
     url = "https://archive.apache.org/dist/maven/maven-3/" + MAVEN_VERSION + "/binaries/apache-maven-" + MAVEN_VERSION + "-bin.tar.gz",
     sha256 = "ce50b1c91364cb77efe3776f756a6d92b76d9038b0a0782f7d53acf1e997a14d",
@@ -133,7 +133,7 @@ def dependency_repositories():
   )
 
   ###### ZOOKEEPER
-  native.new_http_archive(
+  http_archive(
     name = "zookeeper",
     url = "https://archive.apache.org/dist/zookeeper/zookeeper-" + ZOOKEEPER_VERSION + "/zookeeper-" + ZOOKEEPER_VERSION + ".tar.gz",
     sha256 = "7ced798e41d2027784b8fd55c908605ad5bd94a742d5dab2506be8f94770594d",
@@ -141,7 +141,7 @@ def dependency_repositories():
   )
 
   ###### KAFKA
-  native.new_http_archive(
+  http_archive(
     name = "kafka",
     url = "https://archive.apache.org/dist/kafka/" + KAFKA_VERSION + "/kafka_2.12-" + KAFKA_VERSION + ".tgz",
     sha256 = "14cef23b7541ef3089929d7e3d59c2cf000a865253c719c271f63341cac0c244",
@@ -170,7 +170,7 @@ def dependency_repositories():
     name = "grafana",
     downloaded_file_path = "grafana.deb",
     urls = ["https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
-    sha256 = "e4fe9335c2e933d852ceb87848d32d99af4e351ac9a484d33ad907b43c1d3945",
+    sha256 = "05aeca73f50e521a927a0c9ae7375cb78011908a5657e5673c37ee1f55f7f611",
   )
 
 
@@ -179,7 +179,7 @@ def dependency_repositories():
     name = "nodejs",
     downloaded_file_path = "nodejs.tar.xz",
     urls = ["https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz"],
-    sha256 = "0dc6dba645550b66f8f00541a428c29da7c3cde32fb7eda2eb626a9db3bbf08d"
+    sha256 = "e43de13bf7bee440a106a844c1bc3a2adb8829fd58b857702c8f1838fdd02a2a"
   )
 
   ###### YARN
@@ -237,7 +237,7 @@ def dependency_repositories():
   )
 
   ###### JASPER
-  native.new_http_archive(
+  http_archive(
     name = "jasper_server",
     url = "https://sourceforge.net/projects/jasperserver/files/JasperServer/JasperReports%20Server%20Community%20Edition%20" + JASPERREPORTS_SERVER_VERSION + "/TIB_js-jrs-cp_" + JASPERREPORTS_SERVER_VERSION + "_bin.zip/download",
     type = "zip",
@@ -255,7 +255,7 @@ def dependency_repositories():
     sha1 = "38931d70811d9bfcecf9c06f7222973c038a12de",
   )
 
-  native.new_http_archive(
+  http_archive(
     name = "pentaho_data_integration",
     url = "http://downloads.sourceforge.net/project/pentaho/Data%20Integration/7.1/pdi-ce-" + PENATHO_DI_VERSION + ".zip",
     sha256 = "e53a7e7327a50b19bb1d16a06d589a8ba3719e5a678abf5cea713503453d37f2",

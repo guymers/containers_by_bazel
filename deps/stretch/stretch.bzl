@@ -1298,8 +1298,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libssl1_0_2",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20180714T000000Z/pool/updates/main/o/openssl1.0/libssl1.0.2_1.0.2l-2+deb9u3_amd64.deb"],
-    sha256 = "62d514491f47e0cbf494896fbb5af862af20020c37e2f89521228e959cf8246d",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20181221T000000Z/pool/updates/main/o/openssl1.0/libssl1.0.2_1.0.2q-1~deb9u1_amd64.deb"],
+    sha256 = "b10fe19f572db3415bd2eece22b88cd65864355ea187ccabd264256d0310fdd9",
   )
   http_file(
     name = "deb_stretch_libssl1_1",
@@ -1803,8 +1803,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_nginx",
-    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.15.6-1~stretch_amd64.deb"],
-    sha256 = "376e6a12e6824ecc0eddc71bd54395d44c74d5c5f287ba113d9671f4bfa5bb3f",
+    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.15.7-1~stretch_amd64.deb"],
+    sha256 = "f10fd5dc22d9d8748530c5b651e0ab45e3d43e2ec75dbdf5940d5456cc6a09be",
   )
   http_file(
     name = "deb_stretch_numactl",
@@ -2098,6 +2098,6 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_zulu_8",
-    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu8.31.0.1-jdk8.0.181-linux_amd64.deb"],
-    sha256 = "d9d6aac4fae2fcbefc9cd0f4660ebbcbc6a9de7109b31f72a94b67d80ea43cb9",
+    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu8.33.0.1-jdk8.0.192-linux_amd64.deb"],
+    sha256 = "56f134b24730e783928e914af8a174d30bc8127b920b81358b9edcfb2d1c3b2a",
   )
