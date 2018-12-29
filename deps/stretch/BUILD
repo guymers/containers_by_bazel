@@ -835,7 +835,35 @@ filegroup(
 )
 
 filegroup(
-  name = "zulu",
+  name = "zulu_11",
+  srcs = [
+    "@deb_stretch_fontconfig_config//file",
+    "@deb_stretch_fonts_dejavu_core//file",
+    "@deb_stretch_java_common//file",
+    "@deb_stretch_libasound2//file",
+    "@deb_stretch_libasound2_data//file",
+    "@deb_stretch_libbsd0//file",
+    "@deb_stretch_libexpat1//file",
+    "@deb_stretch_libfontconfig1//file",
+    "@deb_stretch_libfreetype6//file",
+    "@deb_stretch_libpng16_16//file",
+    "@deb_stretch_libx11_6//file",
+    "@deb_stretch_libx11_data//file",
+    "@deb_stretch_libxau6//file",
+    "@deb_stretch_libxcb1//file",
+    "@deb_stretch_libxdmcp6//file",
+    "@deb_stretch_libxext6//file",
+    "@deb_stretch_libxi6//file",
+    "@deb_stretch_libxrender1//file",
+    "@deb_stretch_libxtst6//file",
+    "@deb_stretch_ucf//file",
+    "@deb_stretch_x11_common//file",
+    "@deb_stretch_zulu_11//file",
+  ],
+)
+
+filegroup(
+  name = "zulu_8",
   srcs = [
     "@deb_stretch_fontconfig_config//file",
     "@deb_stretch_fonts_dejavu_core//file",

@@ -2092,6 +2092,11 @@ def deb_stretch():
     sha256 = "3dabdf9fecbdd7cab151fd9f20355f79c150a8e939be7dcecb2c0574f8dadf69",
   )
   http_file(
+    name = "deb_stretch_zulu_11",
+    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu11.2.3-jdk11.0.1-linux_amd64.deb"],
+    sha256 = "ec2fecc38dd6cb91e708d031011476e4bbbffe6edbdcb9dc8eb62ae5ee6046b8",
+  )
+  http_file(
     name = "deb_stretch_zulu_8",
     urls = ["http://repos.azulsystems.com/debian/pool/main/zulu8.33.0.1-jdk8.0.192-linux_amd64.deb"],
     sha256 = "56f134b24730e783928e914af8a174d30bc8127b920b81358b9edcfb2d1c3b2a",

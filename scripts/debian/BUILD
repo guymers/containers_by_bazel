@@ -27,7 +27,8 @@ dependencies(name = "stretch", dependencies = {
   ":stretch/tomcat8": "java",
   ":stretch/wget": "base",
   ":stretch/zip": "base",
-  ":stretch/zulu": "zulu",
+  ":stretch/zulu_8": "zulu",
+  ":stretch/zulu_11": "zulu",
 })
 
 sh_binary(
