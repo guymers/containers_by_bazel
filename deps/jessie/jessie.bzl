@@ -127,11 +127,6 @@ def deb_jessie():
     sha256 = "59a9a43de7b22250ee38b69ae46cd4748e7903db4f410b57373667d0c36d33f5",
   )
   http_file(
-    name = "deb_jessie_perl_base",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/perl/perl-base_5.20.2-3+deb8u12_amd64.deb"],
-    sha256 = "2abf3c877878bcef6573c58b6b06161d623bab42637cf9d50ba5e7e12796f60c",
-  )
-  http_file(
     name = "deb_jessie_perl_modules",
     urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/perl/perl-modules_5.20.2-3+deb8u12_all.deb"],
     sha256 = "509ab29bd80eefe8e4a732e1c4f52fa15782b2b7a7b4001f2b71d944ea5007ae",

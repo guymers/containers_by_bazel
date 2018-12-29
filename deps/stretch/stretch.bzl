@@ -1837,11 +1837,6 @@ def deb_stretch():
     sha256 = "7acfe28654dc7fa679a96bad3a7a00f3f85ddbea78046234e4c84f3ec08aeec4",
   )
   http_file(
-    name = "deb_stretch_perl_base",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/perl/perl-base_5.24.1-3+deb9u5_amd64.deb"],
-    sha256 = "839353c685ecd026437709f105eac2558e3ab04ae8b000347b16f367d7412b94",
-  )
-  http_file(
     name = "deb_stretch_perl_modules_5_24",
     urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/perl/perl-modules-5.24_5.24.1-3+deb9u5_all.deb"],
     sha256 = "4e6997224779a11ec08bc395357818e50621eec349892ec8ff6efd8830b9e850",
