@@ -48,8 +48,8 @@ def deb_jessie():
   )
   http_file(
     name = "deb_jessie_libgssapi_krb5_2",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/k/krb5/libgssapi-krb5-2_1.12.1+dfsg-19+deb8u4_amd64.deb"],
-    sha256 = "47a50d69b9972fdb8f625e23583b51416bd18659e24276047302a22063135f01",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190131T000000Z/pool/updates/main/k/krb5/libgssapi-krb5-2_1.12.1+dfsg-19+deb8u5_amd64.deb"],
+    sha256 = "630e68234f0ab3cc4f721b5325ee65d24e9ad6aefefc1ec5cb1711fd4e9f9d8c",
   )
   http_file(
     name = "deb_jessie_libhogweed2",
@@ -63,8 +63,8 @@ def deb_jessie():
   )
   http_file(
     name = "deb_jessie_libk5crypto3",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/k/krb5/libk5crypto3_1.12.1+dfsg-19+deb8u4_amd64.deb"],
-    sha256 = "2c4cba5d1528310c1863c29e7d8a1f44c2ed8c98811953cafff1f0197b809abb",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190131T000000Z/pool/updates/main/k/krb5/libk5crypto3_1.12.1+dfsg-19+deb8u5_amd64.deb"],
+    sha256 = "88083a84697afa321441d9e361331f5bf204a6525a9fdb47765bcc877d1d4b6e",
   )
   http_file(
     name = "deb_jessie_libkeyutils1",
@@ -73,13 +73,13 @@ def deb_jessie():
   )
   http_file(
     name = "deb_jessie_libkrb5_3",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/k/krb5/libkrb5-3_1.12.1+dfsg-19+deb8u4_amd64.deb"],
-    sha256 = "bfd66673f3874fb18a02a4073867bfec3e31c5d22af5ceb9b2d12a7fe41b2789",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190131T000000Z/pool/updates/main/k/krb5/libkrb5-3_1.12.1+dfsg-19+deb8u5_amd64.deb"],
+    sha256 = "d3303726dc9799a4ae5b487de6c890d5fbf9bc9209bc8381a6b5de9a36321e3d",
   )
   http_file(
     name = "deb_jessie_libkrb5support0",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/k/krb5/libkrb5support0_1.12.1+dfsg-19+deb8u4_amd64.deb"],
-    sha256 = "b8fa115d2cf2135aaa700e9504ccfa70d37fc13075b1d03e0fe3e998cc60fdbf",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190131T000000Z/pool/updates/main/k/krb5/libkrb5support0_1.12.1+dfsg-19+deb8u5_amd64.deb"],
+    sha256 = "5166c6d93e383f0fd366a8744b9592a4fbb1f72243b9e5dc5937fb9b6628bd6b",
   )
   http_file(
     name = "deb_jessie_libldap_2_4_2",

@@ -1083,8 +1083,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libpq5",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/libpq5_11.1-1.pgdg90+1_amd64.deb"],
-    sha256 = "794cdc0798c62db6aacca60e118159c79ad29739a4a96da455aa1413b3c13c23",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/libpq5_11.1-3.pgdg90+1_amd64.deb"],
+    sha256 = "b77954fe97d88034c89ab93ac318fe5ae096aca85c4b2c2dad5b6efc8c03ad52",
   )
   http_file(
     name = "deb_stretch_libprocps6",
@@ -1748,8 +1748,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libzmq5",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/z/zeromq3/libzmq5_4.2.1-4_amd64.deb"],
-    sha256 = "2a9f77cd40ff37dfc66b492327600fd01008a3c7bc34ba53177de1fcc83c39cb",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190131T000000Z/pool/updates/main/z/zeromq3/libzmq5_4.2.1-4+deb9u1_amd64.deb"],
+    sha256 = "9d16bd4fec6f53e0c1295de7254706edd9a77a8e342c6d64cd334b0d745122df",
   )
   http_file(
     name = "deb_stretch_libzvbi0",
@@ -1803,8 +1803,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_nginx",
-    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.15.7-1~stretch_amd64.deb"],
-    sha256 = "f10fd5dc22d9d8748530c5b651e0ab45e3d43e2ec75dbdf5940d5456cc6a09be",
+    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.15.8-1~stretch_amd64.deb"],
+    sha256 = "cf3e96849bebd60672cd7ba5fbb38712ffe3075e3361155a2cbe68b6697e305b",
   )
   http_file(
     name = "deb_stretch_numactl",
@@ -1943,8 +1943,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_postgresql_11",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-11_11.1-1.pgdg90+1_amd64.deb"],
-    sha256 = "36ea3360b2294e53ef0f2ba7851b66ac38f98266abe9b31321e24e47c2152b5a",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-11_11.1-3.pgdg90+1_amd64.deb"],
+    sha256 = "ddebf13684b1e09bcbea6b80d2e4610343cd58ec4b9aa659d8b9e7c55daee235",
   )
   http_file(
     name = "deb_stretch_postgresql_11_postgis_2_5",
@@ -1958,18 +1958,18 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_postgresql_client_11",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-client-11_11.1-1.pgdg90+1_amd64.deb"],
-    sha256 = "dc0219eaf1629f1133e46125fd9ffddc532770aebdd5d982a8b8b3d43bda50e1",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-client-11_11.1-3.pgdg90+1_amd64.deb"],
+    sha256 = "b15486b315a5b42480fc71e0bea042a9728caab1af64526daf8a8fd93e716064",
   )
   http_file(
     name = "deb_stretch_postgresql_client_common",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_197.pgdg90+1_all.deb"],
-    sha256 = "8b1432dac0c334ca525d928e6753d7428c30b33fd52a588c4761af725adaaa9d",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_199.pgdg90+1_all.deb"],
+    sha256 = "15e30c4a4fce853df9bd41dca89b79746590eef9c903ea1b6574122c57f0eb76",
   )
   http_file(
     name = "deb_stretch_postgresql_common",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_197.pgdg90+1_all.deb"],
-    sha256 = "3542e2dd91b083c774f407944d45abc5ee424a4032451d576bfb39108c6fc1a9",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_199.pgdg90+1_all.deb"],
+    sha256 = "456fa10a0bf80c6b4880f5a99b21f57a9eada0973cd31b6c683ffca6f2f2b60d",
   )
   http_file(
     name = "deb_stretch_procps",
@@ -2093,11 +2093,11 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_zulu_11",
-    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu11.2.3-jdk11.0.1-linux_amd64.deb"],
-    sha256 = "ec2fecc38dd6cb91e708d031011476e4bbbffe6edbdcb9dc8eb62ae5ee6046b8",
+    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu11.29.3-ca-jdk11.0.2-linux_amd64.deb"],
+    sha256 = "4815a113bf4c84828c671ac17a78e16ffd8dac2ac6d98bb4249358d88bea3552",
   )
   http_file(
     name = "deb_stretch_zulu_8",
-    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu8.33.0.1-jdk8.0.192-linux_amd64.deb"],
-    sha256 = "56f134b24730e783928e914af8a174d30bc8127b920b81358b9edcfb2d1c3b2a",
+    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu8.35.0.3-ca-jdk8.0.202-linux_amd64.deb"],
+    sha256 = "0f470cdfc54bac67141cacc00985e1c5d26e1435f4c93f7ca20933d0b64bb26e",
   )

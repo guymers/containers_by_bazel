@@ -35,18 +35,18 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/053137fa9fff94ef8657a6b095dfc73e35608987.zip",
   )
 
-  # Update to 20181226 for amd64 (debuerreotype 0.8)
+  # Update to 20190122 for amd64 (debuerreotype 0.8)
   http_file(
     name = "debian_jessie",
     downloaded_file_path = "jessie-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/223b1234e2bcd3248b7e8feb86b8aedd00e5487f/jessie/slim/rootfs.tar.xz"],
-    sha256 = "34c6d137958d6b3c60c0cfb2fe0e5472a51241adfe7d273ab81938adb71e4e4f",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/4b886062242c3cc15836c2a60a5b033c51298ff5/jessie/slim/rootfs.tar.xz"],
+    sha256 = "645315be17a124ce794635620737983665942f0a0a5ded9da29ae2ea74024b6b",
   )
   http_file(
     name = "debian_stretch",
     downloaded_file_path = "stretch-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/223b1234e2bcd3248b7e8feb86b8aedd00e5487f/stretch/slim/rootfs.tar.xz"],
-    sha256 = "0b8e05459c3e6abe8323d937cf2fa8f7a8e6b4456646ee87b8c52cf2699cc347",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/4b886062242c3cc15836c2a60a5b033c51298ff5/stretch/slim/rootfs.tar.xz"],
+    sha256 = "b74075b3efc41517bcb4f6237d912f0c4f32257b7e8c99bc20003c84fdc2b32e",
   )
 
   deb_jessie()
@@ -97,7 +97,7 @@ def dependency_repositories():
   http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "d91fcc927ac90248d81ec741527668524388052abd7415548804dcb13a41e208",
+    sha256 = "1186c7552c544b9addf4b379647a680a0750b17c9732228925d7a8a6d7c13a1e",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
 
@@ -107,7 +107,7 @@ def dependency_repositories():
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war"],
-    sha256 = "7a38586d5a3a1a83498809a83715728bb2f01b58a7dd3a88366f076efdaf6669",
+    sha256 = "fab70f4e209855e0806315cc419e0cbbbf1bd9b31c6f221f7702aa21145040f8",
   )
   http_file(
     name = "jenkins_agent_jar",
@@ -121,7 +121,7 @@ def dependency_repositories():
     name = "gerrit_war",
     downloaded_file_path = "gerrit.war",
     urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
-    sha256 = "75246a4c0a1f6d982a02e4e14155ecb5b2cb863c90120ec06ade48260d26e08a",
+    sha256 = "d6389d4b1a4f91feb591538e037d72dc703e6efb0add6cc27d374c54b878127a",
   )
 
   ###### MAVEN
@@ -179,7 +179,7 @@ def dependency_repositories():
     name = "nodejs",
     downloaded_file_path = "nodejs.tar.xz",
     urls = ["https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz"],
-    sha256 = "e43de13bf7bee440a106a844c1bc3a2adb8829fd58b857702c8f1838fdd02a2a"
+    sha256 = "77db68544c7812e925b82ccc41cd4669fdeb191cea8e20053e3f0e86889c4fce"
   )
 
   ###### YARN
@@ -187,7 +187,7 @@ def dependency_repositories():
     name = "yarnpkg",
     downloaded_file_path = "yarnpkg.deb",
     urls = ["https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb"],
-    sha256 = "6603e11cc938bf10fe1a8af11cebaac34f1ffb30a4513c614b6d850d93e652fc",
+    sha256 = "385cb3723583c49e7e8c5eb99196bcaebe57c2b069f793d6f547fbc37c1879ca",
   )
 
 
