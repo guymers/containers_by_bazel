@@ -23,13 +23,13 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_cassandra",
-    urls = ["http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra_3.11.3_all.deb"],
-    sha256 = "149d09575130c0b067c987e08dbf4062d7a3b69f46effbc3b292babb46909294",
+    urls = ["http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra_3.11.4_all.deb"],
+    sha256 = "8a9488211af39324e7cd18a21bd0acb2222e3116d5cfe80a02b58a9683a8ff36",
   )
   http_file(
     name = "deb_stretch_cassandra_tools",
-    urls = ["http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra-tools_3.11.3_all.deb"],
-    sha256 = "06094ab1616f56d4ada1ae548ff7fccc09ae4cb33039557e8c1c50cbbef4e409",
+    urls = ["http://www.apache.org/dist/cassandra/debian/pool/main/c/cassandra/cassandra-tools_3.11.4_all.deb"],
+    sha256 = "a4c1ebada13adc585c238d10ca7c400bb5ec3b602f4f652bd39ea498f92e5b75",
   )
   http_file(
     name = "deb_stretch_cpp",
@@ -302,19 +302,24 @@ def deb_stretch():
     sha256 = "030e441cc6368041536a69adcaed6b4f4a37e0145817fc3eff16f37e3a81ecae",
   )
   http_file(
+    name = "deb_stretch_libc6",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/g/glibc/libc6_2.24-11+deb9u4_amd64.deb"],
+    sha256 = "c4602def4345f4db0e04a6d6164c7aa35656a5a45092dea74e601fa7b90300d2",
+  )
+  http_file(
     name = "deb_stretch_libc6_dev",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/g/glibc/libc6-dev_2.24-11+deb9u3_amd64.deb"],
-    sha256 = "8bdebd7bc1fc4138e0181821a1fe1fb576cbae241f03a31ab3c6cfc3a9875dc6",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/g/glibc/libc6-dev_2.24-11+deb9u4_amd64.deb"],
+    sha256 = "3e7655930adc6ed69ddb1c263ef6fa428590e19479863785adc723367f6bf21d",
   )
   http_file(
     name = "deb_stretch_libc_dev_bin",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/g/glibc/libc-dev-bin_2.24-11+deb9u3_amd64.deb"],
-    sha256 = "65c83db131de5d300edf56fe3bedddbd54259bb0a47a68bbe7d6f2d710324603",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/g/glibc/libc-dev-bin_2.24-11+deb9u4_amd64.deb"],
+    sha256 = "f165e460021e06cb932acdd00a892c01f96634be03b3299e66d397c7376dc2c6",
   )
   http_file(
     name = "deb_stretch_libc_l10n",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/g/glibc/libc-l10n_2.24-11+deb9u3_all.deb"],
-    sha256 = "5de29dd83d378d89352f58ccaaf1613783208c42d409885de22463fa50e614a1",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/g/glibc/libc-l10n_2.24-11+deb9u4_all.deb"],
+    sha256 = "768bba9f4f1f8199f6a50513e897184dbbf0135e6036e6c1f207c216520de83b",
   )
   http_file(
     name = "deb_stretch_libcaca0",
@@ -383,18 +388,18 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libcups2",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20180714T000000Z/pool/updates/main/c/cups/libcups2_2.2.1-8+deb9u2_amd64.deb"],
-    sha256 = "9f4edf3ad20a40c4f9eba426e2b45c88701b5344ded5588e3b2d05634a6716f8",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/c/cups/libcups2_2.2.1-8+deb9u3_amd64.deb"],
+    sha256 = "ff10dee95eb95d27677e15ff2cafda27acc77c80ba633ea10bf38c667cf9b3aa",
   )
   http_file(
     name = "deb_stretch_libcurl3",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181106T000000Z/pool/updates/main/c/curl/libcurl3_7.52.1-5+deb9u8_amd64.deb"],
-    sha256 = "3e6c0cafa877035ab5d232f2eb66d9cde1ae1e1e01e3ad40a5dd3b0107749b21",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/c/curl/libcurl3_7.52.1-5+deb9u9_amd64.deb"],
+    sha256 = "f8c55748a97693588c83a0f272cdb1943d8efb55c4d0485e543a7d43cd4a9637",
   )
   http_file(
     name = "deb_stretch_libcurl3_gnutls",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181106T000000Z/pool/updates/main/c/curl/libcurl3-gnutls_7.52.1-5+deb9u8_amd64.deb"],
-    sha256 = "89557feef7ca4c2b7d00499590d73253b5b974692c9b44f46efdfea84dd56b3a",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/c/curl/libcurl3-gnutls_7.52.1-5+deb9u9_amd64.deb"],
+    sha256 = "ff13e2c339faf456f17d16bff2976b63b86d4cceff49eb1c57c2b4a5fe053758",
   )
   http_file(
     name = "deb_stretch_libdap23",
@@ -523,8 +528,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libgd3",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/libg/libgd2/libgd3_2.2.4-2+deb9u2_amd64.deb"],
-    sha256 = "5c52bdedaf29a0b2ddfff0d509b433c40fa71e4a9d7d7c2a2f83751de2d03271",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/libg/libgd2/libgd3_2.2.4-2+deb9u4_amd64.deb"],
+    sha256 = "9877bb927adb67c19bb8437c2c56009c52261accb0ef0dd10fa0494bc92d7227",
   )
   http_file(
     name = "deb_stretch_libgdal20",
@@ -1083,8 +1088,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libpq5",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/libpq5_11.1-3.pgdg90+1_amd64.deb"],
-    sha256 = "b77954fe97d88034c89ab93ac318fe5ae096aca85c4b2c2dad5b6efc8c03ad52",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/libpq5_11.2-1.pgdg90+1_amd64.deb"],
+    sha256 = "45d69fbe162307afc6693117f397adfd8a893993d98f6e462d1ecebbe2928fd4",
   )
   http_file(
     name = "deb_stretch_libprocps6",
@@ -1243,8 +1248,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libsmbclient",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/s/samba/libsmbclient_4.5.12+dfsg-2+deb9u4_amd64.deb"],
-    sha256 = "35d9c56ffdb69b7f010860281aaf41dafd08a1e03ace809c71b20f5f5c20e1db",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/s/samba/libsmbclient_4.5.16+dfsg-1_amd64.deb"],
+    sha256 = "bd58497d7ac47fc49d36566e7c7fab1789d1c6780385a36ab6b18cfb69e94fd6",
   )
   http_file(
     name = "deb_stretch_libsnappy1v5",
@@ -1293,8 +1298,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libssh_gcrypt_4",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181106T000000Z/pool/updates/main/libs/libssh/libssh-gcrypt-4_0.7.3-2+deb9u1_amd64.deb"],
-    sha256 = "9e4b8b41f1f329e2be320f61ee3e2072e8da65d218efe4bdf892ff0548ba5dc0",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/libs/libssh/libssh-gcrypt-4_0.7.3-2+deb9u2_amd64.deb"],
+    sha256 = "95bf90ac66452f4a98c51589c9eeeea3194d57a8b604ec4348a387aabb5d075c",
   )
   http_file(
     name = "deb_stretch_libssl1_0_2",
@@ -1408,8 +1413,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_liburiparser1",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/u/uriparser/liburiparser1_0.8.4-1_amd64.deb"],
-    sha256 = "55fbbfe649a1a5c5014f2709523769d9f304f7ac2834865c3294643bae5d8371",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/u/uriparser/liburiparser1_0.8.4-1+deb9u1_amd64.deb"],
+    sha256 = "6583a57cc4ad291946cae8a944ff8e44100e08b46546d713b064c99cc0e7fac7",
   )
   http_file(
     name = "deb_stretch_libusb_1_0_0",
@@ -1478,13 +1483,13 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libwayland_client0",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/w/wayland/libwayland-client0_1.12.0-1_amd64.deb"],
-    sha256 = "2fe4eb21056505ee04cdd2b710c4263a7d37ed8ea849e545e4c21d2ec4d2bc69",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/w/wayland/libwayland-client0_1.12.0-1+deb9u1_amd64.deb"],
+    sha256 = "c1083bb3a1d55801733c8a44496c7c34f866a1276eb8fdd633e71540532bebac",
   )
   http_file(
     name = "deb_stretch_libwayland_cursor0",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/w/wayland/libwayland-cursor0_1.12.0-1_amd64.deb"],
-    sha256 = "5dbf08687ee9f4984bde781e4a31470b81bb2652b79165645328790f7baa3ade",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/w/wayland/libwayland-cursor0_1.12.0-1+deb9u1_amd64.deb"],
+    sha256 = "5d7818a942a4c99b8c94f216bf7583cebeb17e394abb5d18c7a79b71025dac71",
   )
   http_file(
     name = "deb_stretch_libwayland_egl1_mesa",
@@ -1493,13 +1498,13 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libwayland_server0",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/w/wayland/libwayland-server0_1.12.0-1_amd64.deb"],
-    sha256 = "3b365f78e16fe4fab01f07e8b372d5c9dc4afef696ada39984a1e652619bb88b",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/w/wayland/libwayland-server0_1.12.0-1+deb9u1_amd64.deb"],
+    sha256 = "47160e3351f3601bcf554ad2f7a197bc85622bbcea0cf8213650226eddee44a8",
   )
   http_file(
     name = "deb_stretch_libwbclient0",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/s/samba/libwbclient0_4.5.12+dfsg-2+deb9u4_amd64.deb"],
-    sha256 = "85bde9e12a6625ea935df7b3e4ae3fb6c801ba486a85ab6b007184454fcab9cf",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/s/samba/libwbclient0_4.5.16+dfsg-1_amd64.deb"],
+    sha256 = "8bf92f1a4f8d4b5050592ff2418b147ee5ab458ebd620e71d0b2199ec9cb6e10",
   )
   http_file(
     name = "deb_stretch_libwebp6",
@@ -1763,13 +1768,13 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_linux_libc_dev",
-    urls = ["http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/l/linux/linux-libc-dev_4.9.130-2_amd64.deb"],
-    sha256 = "c454ea966ae1d570bbfc32323deabb1f4ab5a4ca95a5094d08ec1679eddba1e6",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/l/linux/linux-libc-dev_4.9.144-3.1_amd64.deb"],
+    sha256 = "b5839fea4b5928b8d8ad92a8c27cf366f345c0c5e729ec8498f5a9ce67e0cd63",
   )
   http_file(
     name = "deb_stretch_locales",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/g/glibc/locales_2.24-11+deb9u3_all.deb"],
-    sha256 = "e112db9d631fb86d7b998801e0c906dc29e28cc9b3ace96d9a4c370b7dd1ca0f",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/g/glibc/locales_2.24-11+deb9u4_all.deb"],
+    sha256 = "7a57eeecdf1150b5daa7de0b8a2a27500a4ffb2716fca8544610015962822543",
   )
   http_file(
     name = "deb_stretch_m4",
@@ -1823,8 +1828,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_openssh_client",
-    urls = ["http://snapshot.debian.org/archive/debian/20181121T000000Z/pool/main/o/openssh/openssh-client_7.4p1-10+deb9u4_amd64.deb"],
-    sha256 = "e352d88c4cfe7cceef76f4f7e8358555a03e747b3f4a48be67da479eff490231",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/o/openssh/openssh-client_7.4p1-10+deb9u5_amd64.deb"],
+    sha256 = "ca20e823b6c4334f6d8e9b853d0a12475587fe1d59039b30a51a9a421103bd2d",
   )
   http_file(
     name = "deb_stretch_openssl",
@@ -1943,8 +1948,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_postgresql_11",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-11_11.1-3.pgdg90+1_amd64.deb"],
-    sha256 = "ddebf13684b1e09bcbea6b80d2e4610343cd58ec4b9aa659d8b9e7c55daee235",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-11_11.2-1.pgdg90+1_amd64.deb"],
+    sha256 = "6ec44dac8cd21255aed48a0298190442b0cf5c8836a9538125626e9f66c3a6be",
   )
   http_file(
     name = "deb_stretch_postgresql_11_postgis_2_5",
@@ -1958,8 +1963,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_postgresql_client_11",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-client-11_11.1-3.pgdg90+1_amd64.deb"],
-    sha256 = "b15486b315a5b42480fc71e0bea042a9728caab1af64526daf8a8fd93e716064",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-client-11_11.2-1.pgdg90+1_amd64.deb"],
+    sha256 = "ec844817d38ec5c5f70ed9091d8b48bcdd7c24506c402896b38f0234c08ccedd",
   )
   http_file(
     name = "deb_stretch_postgresql_client_common",
@@ -2033,8 +2038,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_samba_libs",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/s/samba/samba-libs_4.5.12+dfsg-2+deb9u4_amd64.deb"],
-    sha256 = "f1f9e510f6553ea8be047fe29eb80e32780a5626871929db4d1ab055185027ba",
+    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/s/samba/samba-libs_4.5.16+dfsg-1_amd64.deb"],
+    sha256 = "7e811537b42ba512cd5570f7324798350099d6d1740519add87098e98efa0f5f",
   )
   http_file(
     name = "deb_stretch_shared_mime_info",
