@@ -320,7 +320,6 @@ filegroup(
     "@deb_stretch_libasan3//file",
     "@deb_stretch_libatomic1//file",
     "@deb_stretch_libbsd0//file",
-    "@deb_stretch_libc6//file",
     "@deb_stretch_libc6_dev//file",
     "@deb_stretch_libc_dev_bin//file",
     "@deb_stretch_libcc1_0//file",

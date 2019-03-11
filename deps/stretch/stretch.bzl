@@ -302,11 +302,6 @@ def deb_stretch():
     sha256 = "030e441cc6368041536a69adcaed6b4f4a37e0145817fc3eff16f37e3a81ecae",
   )
   http_file(
-    name = "deb_stretch_libc6",
-    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/g/glibc/libc6_2.24-11+deb9u4_amd64.deb"],
-    sha256 = "c4602def4345f4db0e04a6d6164c7aa35656a5a45092dea74e601fa7b90300d2",
-  )
-  http_file(
     name = "deb_stretch_libc6_dev",
     urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/g/glibc/libc6-dev_2.24-11+deb9u4_amd64.deb"],
     sha256 = "3e7655930adc6ed69ddb1c263ef6fa428590e19479863785adc723367f6bf21d",
@@ -798,8 +793,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libldb1",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/l/ldb/libldb1_1.1.27-1+b1_amd64.deb"],
-    sha256 = "b2f7dad003711389ab44b4f139f06e6a2711a6f7654f57f767e68a3c66b41ced",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190309T000000Z/pool/updates/main/l/ldb/libldb1_1.1.27-1+deb9u1_amd64.deb"],
+    sha256 = "bc3f2d252627a0165aa4cdb33e84942de65031f32b028a5e8a8002756bcc2c1a",
   )
   http_file(
     name = "deb_stretch_libllvm6_0",
@@ -1303,8 +1298,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libssl1_0_2",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181221T000000Z/pool/updates/main/o/openssl1.0/libssl1.0.2_1.0.2q-1~deb9u1_amd64.deb"],
-    sha256 = "b10fe19f572db3415bd2eece22b88cd65864355ea187ccabd264256d0310fdd9",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190309T000000Z/pool/updates/main/o/openssl1.0/libssl1.0.2_1.0.2r-1~deb9u1_amd64.deb"],
+    sha256 = "894834166bdeb772707ebfaf2dc755c966c6c2a33611e6480ede3b4f94765d48",
   )
   http_file(
     name = "deb_stretch_libssl1_1",
@@ -1853,73 +1848,73 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_php7_0_bcmath",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/php7.0/php7.0-bcmath_7.0.33-0+deb9u1_amd64.deb"],
-    sha256 = "be5d8f5fa613c9c19a159d8ebc1aabb5c4b25307f8d4035bac33d10c957c914b",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190309T000000Z/pool/updates/main/p/php7.0/php7.0-bcmath_7.0.33-0+deb9u3_amd64.deb"],
+    sha256 = "c866615c4f68635f946abde68f3f74738d75161a5beaeda31c6b95c5380a3cf0",
   )
   http_file(
     name = "deb_stretch_php7_0_cli",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/php7.0/php7.0-cli_7.0.33-0+deb9u1_amd64.deb"],
-    sha256 = "2331216bf4fd434573e5424225e860601345426987a977f5614c43aa8e1c3f67",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190309T000000Z/pool/updates/main/p/php7.0/php7.0-cli_7.0.33-0+deb9u3_amd64.deb"],
+    sha256 = "a3e3e69e1e88329e22fc84910ff2c02209977740478e3980e07fc04c7e59fe02",
   )
   http_file(
     name = "deb_stretch_php7_0_common",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/php7.0/php7.0-common_7.0.33-0+deb9u1_amd64.deb"],
-    sha256 = "7e4f1f0e1cbcb164ddf5fd1a6d22641d91fff812220f28654a1a007749be6bac",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190309T000000Z/pool/updates/main/p/php7.0/php7.0-common_7.0.33-0+deb9u3_amd64.deb"],
+    sha256 = "31017f84be0eab8c3884504d3a75b902996f581ccc65c2702005a2f868fd844e",
   )
   http_file(
     name = "deb_stretch_php7_0_curl",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/php7.0/php7.0-curl_7.0.33-0+deb9u1_amd64.deb"],
-    sha256 = "fb4abb7265045ed79240934795b9127e317dca7097020f1a8877b1e464b1edad",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190309T000000Z/pool/updates/main/p/php7.0/php7.0-curl_7.0.33-0+deb9u3_amd64.deb"],
+    sha256 = "f54cd0d90072bd163ef4a6e6ca7c10de024c72e97445e3393f8c1de0cfe08a58",
   )
   http_file(
     name = "deb_stretch_php7_0_dev",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/php7.0/php7.0-dev_7.0.33-0+deb9u1_amd64.deb"],
-    sha256 = "dd038536f6d7ea55d82d037fb068b3a455652e481779818ea4a7209dbf44a7d1",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190309T000000Z/pool/updates/main/p/php7.0/php7.0-dev_7.0.33-0+deb9u3_amd64.deb"],
+    sha256 = "5d19da9c24081edc6076812a29c3189d2f4a69d1c830550d15e7cf28eb890c7d",
   )
   http_file(
     name = "deb_stretch_php7_0_fpm",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/php7.0/php7.0-fpm_7.0.33-0+deb9u1_amd64.deb"],
-    sha256 = "3a6476b6c78bc287a675a9609a1ab5b0e096ef1e26a6fefff755948b542aa480",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190309T000000Z/pool/updates/main/p/php7.0/php7.0-fpm_7.0.33-0+deb9u3_amd64.deb"],
+    sha256 = "06006c2285b09f7b15946a4add859370465d6063b8d2afa175372f3f09d60385",
   )
   http_file(
     name = "deb_stretch_php7_0_intl",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/php7.0/php7.0-intl_7.0.33-0+deb9u1_amd64.deb"],
-    sha256 = "13d69be7f01b5c8712f6af698fa9b5e853842b2839355ce2ebfe9c733cfc4ff3",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190309T000000Z/pool/updates/main/p/php7.0/php7.0-intl_7.0.33-0+deb9u3_amd64.deb"],
+    sha256 = "074fc22f985ad18f5bbf33ce80b1d1b2a5a7c2c41924a89f012b96428b1d13c7",
   )
   http_file(
     name = "deb_stretch_php7_0_json",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/php7.0/php7.0-json_7.0.33-0+deb9u1_amd64.deb"],
-    sha256 = "e94790b52c9f8fb892c22399b8e1eecfffbcfea78db01dfd8a87facbf85237d4",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190309T000000Z/pool/updates/main/p/php7.0/php7.0-json_7.0.33-0+deb9u3_amd64.deb"],
+    sha256 = "e4f7877c0465c2a159e2ae095bb73c5cbf70dcbe94a0f1adb3c2ecdc97795294",
   )
   http_file(
     name = "deb_stretch_php7_0_mbstring",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/php7.0/php7.0-mbstring_7.0.33-0+deb9u1_amd64.deb"],
-    sha256 = "6fca2058430640bb317b798d2c14d1371b6d829133064b2c3acd8f2cedb675d5",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190309T000000Z/pool/updates/main/p/php7.0/php7.0-mbstring_7.0.33-0+deb9u3_amd64.deb"],
+    sha256 = "d6ecfde7bb9069d2094296bc4844ca0c09cc4551152ad53c2315776ce1c920e1",
   )
   http_file(
     name = "deb_stretch_php7_0_mcrypt",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/php7.0/php7.0-mcrypt_7.0.33-0+deb9u1_amd64.deb"],
-    sha256 = "b258aabdc05f176cb83c019b02e1bd12f96a0fdd60d056dd6be0996225c695c4",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190309T000000Z/pool/updates/main/p/php7.0/php7.0-mcrypt_7.0.33-0+deb9u3_amd64.deb"],
+    sha256 = "882ed53341eb11caa07c6dbbe1e0805bba91c52037f28762d2971249e00e7cb3",
   )
   http_file(
     name = "deb_stretch_php7_0_opcache",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/php7.0/php7.0-opcache_7.0.33-0+deb9u1_amd64.deb"],
-    sha256 = "e6b67259f214b87c42f38a51a1bfad277ef081a55d8f17d8a4179ffc2d5ebf33",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190309T000000Z/pool/updates/main/p/php7.0/php7.0-opcache_7.0.33-0+deb9u3_amd64.deb"],
+    sha256 = "5dd187ce5694594301b56db1e9f0a821c0e0685df630aebd26321810ec080815",
   )
   http_file(
     name = "deb_stretch_php7_0_pgsql",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/php7.0/php7.0-pgsql_7.0.33-0+deb9u1_amd64.deb"],
-    sha256 = "6f472a56b137bc8384996a8bbb8f348fe14e71a952e22cffa071f02e3f488b45",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190309T000000Z/pool/updates/main/p/php7.0/php7.0-pgsql_7.0.33-0+deb9u3_amd64.deb"],
+    sha256 = "1464f35635d473ddc4453030deb85eb6a9578e9d9dae7c8709efdd506cabf535",
   )
   http_file(
     name = "deb_stretch_php7_0_phpdbg",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/php7.0/php7.0-phpdbg_7.0.33-0+deb9u1_amd64.deb"],
-    sha256 = "8ebe94195b9386c4fd52345f2e0d8890cf100c7d902b530a413b22374a2005a5",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190309T000000Z/pool/updates/main/p/php7.0/php7.0-phpdbg_7.0.33-0+deb9u3_amd64.deb"],
+    sha256 = "7f6401ce779575091ff7020161d66291f3409c90ce454f4dd0075349dd87db55",
   )
   http_file(
     name = "deb_stretch_php7_0_readline",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181214T000000Z/pool/updates/main/p/php7.0/php7.0-readline_7.0.33-0+deb9u1_amd64.deb"],
-    sha256 = "f02c21dc4d815aeaa6c1c6b6ce38b674656330d4ed149f3995f953a9638f5490",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190309T000000Z/pool/updates/main/p/php7.0/php7.0-readline_7.0.33-0+deb9u3_amd64.deb"],
+    sha256 = "55579be4d77d87d33ea0dd65ecf50ee0d8b4733aebc91d857f5f6b8386b4ea17",
   )
   http_file(
     name = "deb_stretch_php_apcu",
@@ -2103,6 +2098,6 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_zulu_8",
-    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu8.35.0.3-ca-jdk8.0.202-linux_amd64.deb"],
-    sha256 = "0f470cdfc54bac67141cacc00985e1c5d26e1435f4c93f7ca20933d0b64bb26e",
+    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu8.36.0.1-ca-jdk8.0.202-linux_amd64.deb"],
+    sha256 = "1bd47344d65f566b8443f8110b02886a3b2f5890375056e4cd0968f5c5854da2",
   )
