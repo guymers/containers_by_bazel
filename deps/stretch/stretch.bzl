@@ -813,8 +813,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_liblwgeom_2_5_0",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/liblwgeom-2.5-0_2.5.1+dfsg-1.pgdg90+1_amd64.deb"],
-    sha256 = "2d7d70deeffcae57a4404573d4d80959416cacc13f55f7b291dcdbded2eaaaca",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/liblwgeom-2.5-0_2.5.2+dfsg-1~exp1.pgdg90+1_amd64.deb"],
+    sha256 = "249fcb962f5c65180acf632f2b493c6309ca96145761bebd99c1f810546aa31e",
   )
   http_file(
     name = "deb_stretch_libmad0",
@@ -978,8 +978,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libopenjp2_7",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/o/openjpeg2/libopenjp2-7_2.1.2-1.1+deb9u2_amd64.deb"],
-    sha256 = "f80c09ef2b2ecb1560a736bd4bf5e1797287b998d17cce9866a627a6fcc83ff9",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190323T000000Z/pool/updates/main/o/openjpeg2/libopenjp2-7_2.1.2-1.1+deb9u3_amd64.deb"],
+    sha256 = "c27e9a64efd804baccb0bd2721286a928a352d822710abe00a96d12e9e7c8789",
   )
   http_file(
     name = "deb_stretch_libopenmpt0",
@@ -1803,8 +1803,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_nginx",
-    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.15.8-1~stretch_amd64.deb"],
-    sha256 = "cf3e96849bebd60672cd7ba5fbb38712ffe3075e3361155a2cbe68b6697e305b",
+    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.15.9-1~stretch_amd64.deb"],
+    sha256 = "ca2171eaa319bc37e0f695909c4c4b54f2a227c1d240abefd68b1212bb0d7d41",
   )
   http_file(
     name = "deb_stretch_numactl",
@@ -1938,8 +1938,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_postgis",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgis_2.5.1+dfsg-1.pgdg90+1_amd64.deb"],
-    sha256 = "7309aac628021ab6e4bec2aad7260e813e98b311ac53a412c74c8f0c86376017",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgis_2.5.2+dfsg-1~exp1.pgdg90+1_amd64.deb"],
+    sha256 = "979dd30b80259d05c458441f4c3ace402e502a993d5f4951d62b712fbf53e20a",
   )
   http_file(
     name = "deb_stretch_postgresql_11",
@@ -1948,13 +1948,13 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_postgresql_11_postgis_2_5",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-11-postgis-2.5_2.5.1+dfsg-1.pgdg90+1_amd64.deb"],
-    sha256 = "640be3eff9fe6097231805d8ff27f2672bbad6f4c1fb436ae0dfa74fe200d8a6",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-11-postgis-2.5_2.5.2+dfsg-1~exp1.pgdg90+1_amd64.deb"],
+    sha256 = "6513778cf3d2f30f10d722b54dda48beac70296c49dcdf0d19fbefa24aabc18e",
   )
   http_file(
     name = "deb_stretch_postgresql_11_postgis_2_5_scripts",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-11-postgis-2.5-scripts_2.5.1+dfsg-1.pgdg90+1_all.deb"],
-    sha256 = "3a6acfb0fb36e731d7e4e16018786403c41acaa83b20de8d128932715ccb17a4",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-11-postgis-2.5-scripts_2.5.2+dfsg-1~exp1.pgdg90+1_all.deb"],
+    sha256 = "27c09ded2056a8d3967890a7ca5818a5ec4fc714539c5e8b05b2d7974567a346",
   )
   http_file(
     name = "deb_stretch_postgresql_client_11",

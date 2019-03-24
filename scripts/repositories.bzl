@@ -75,7 +75,7 @@ def dependency_repositories():
   http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "3aa063498ab3b4d1bee103d80098ba33d02b3fed63cb46e47e1d16290356db8a",
+    sha256 = "b8649bc6317af31fd3c998648ef0aa8bc0099fece24952fd1aca1bff665e9216",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -83,21 +83,21 @@ def dependency_repositories():
   native.maven_jar(
     name = "jmx_prometheus_javaagent",
     artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:" + PROMETHEUS_JMX_JAVAAGENT,
-    sha1 = "ae9db209d5c3955bf4635bf91bde48869dfa5232",
+    sha1 = "535a033b38298ee19d4faa458de8af4072e9fd3a",
   )
 
 
   http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "2625cbd8db75ec9b4a57e9a0af55a5ee8ad7700e1eba7d97ad78d9296450e781",
+    sha256 = "9bb9212541176d6fcce7bd12e4cf8a9c9649f5b63f88b3aff474e0b02c7cfe58",
     build_file_content = "exports_files(['sbt'])",
   )
 
   http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "1186c7552c544b9addf4b379647a680a0750b17c9732228925d7a8a6d7c13a1e",
+    sha256 = "2123325b6aaaae1ff2131fd1b2958ff4f828b27847c8e1afe0f26b06c9bb8a60",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
 
@@ -107,13 +107,13 @@ def dependency_repositories():
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war"],
-    sha256 = "fab70f4e209855e0806315cc419e0cbbbf1bd9b31c6f221f7702aa21145040f8",
+    sha256 = "65543f5632ee54344f3351b34b305702df12393b3196a95c3771ddb3819b220b",
   )
   http_file(
     name = "jenkins_agent_jar",
     downloaded_file_path = "swarm-client.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/" + JENKINS_SWARM_VERSION + "/swarm-client-" + JENKINS_SWARM_VERSION + ".jar"],
-    sha256 = "d3bdef93feda423b4271e6b03cd018d1d26a45e3c2527d631828223a5e5a21fc",
+    sha256 = "6812e86a220d2d6c4d3fffabd646b7bb19a4144693958b2a943fa6b845f081b1",
   )
 
   ###### GERRIT
@@ -121,14 +121,14 @@ def dependency_repositories():
     name = "gerrit_war",
     downloaded_file_path = "gerrit.war",
     urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
-    sha256 = "d6389d4b1a4f91feb591538e037d72dc703e6efb0add6cc27d374c54b878127a",
+    sha256 = "de0b730ac038b928950d23346852663111c29e85985152dc3c206a2c1d61f269",
   )
 
   ###### MAVEN
   http_archive(
     name = "maven",
     url = "https://archive.apache.org/dist/maven/maven-3/" + MAVEN_VERSION + "/binaries/apache-maven-" + MAVEN_VERSION + "-bin.tar.gz",
-    sha256 = "ce50b1c91364cb77efe3776f756a6d92b76d9038b0a0782f7d53acf1e997a14d",
+    sha256 = "6a1b346af36a1f1a491c1c1a141667c5de69b42e6611d3687df26868bc0f4637",
     build_file_content = "exports_files(['apache-maven-" + MAVEN_VERSION + "'])",
   )
 
@@ -144,7 +144,7 @@ def dependency_repositories():
   http_archive(
     name = "kafka",
     url = "https://archive.apache.org/dist/kafka/" + KAFKA_VERSION + "/kafka_2.12-" + KAFKA_VERSION + ".tgz",
-    sha256 = "14cef23b7541ef3089929d7e3d59c2cf000a865253c719c271f63341cac0c244",
+    sha256 = "2053edce853c6c4f1204bf72f2760fc8cfda2cfb8ad624572d81bc3571eca7be",
     build_file_content = "exports_files(['kafka_2.12-" + KAFKA_VERSION + "'])",
   )
 
@@ -153,7 +153,7 @@ def dependency_repositories():
     name = "elasticsearch",
     downloaded_file_path = "elasticsearch.deb",
     urls = ["https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-" + ELASTICSEARCH_VERSION + ".deb"],
-    sha256 = "99a88db84165bd1910274fb640611a409b215480716e13d80390e225ffd8c318",
+    sha256 = "e5aa8b1449fb08b56ec5d9a52324cadd7439c29533fa7662badede051a9a9778",
   )
 
   ###### KIBANA
@@ -161,7 +161,7 @@ def dependency_repositories():
     name = "kibana",
     downloaded_file_path = "kibana.deb",
     urls = ["https://artifacts.elastic.co/downloads/kibana/kibana-" + KIBANA_VERSION + "-amd64.deb"],
-    sha256 = "25d32923052f649cf19a29ab4dd71a64c73b3978477397cb7198433a060e5895",
+    sha256 = "5fa5a5758027116c02f0f73b37ddeae7799e04314290d6609571b889659c3f9f",
   )
 
 
@@ -169,8 +169,8 @@ def dependency_repositories():
   http_file(
     name = "grafana",
     downloaded_file_path = "grafana.deb",
-    urls = ["https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
-    sha256 = "05aeca73f50e521a927a0c9ae7375cb78011908a5657e5673c37ee1f55f7f611",
+    urls = ["https://dl.grafana.com/oss/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
+    sha256 = "2a57ccf5128fe90f069c5fd3403eee432dddf772712bca81b0e00e36d39ab680",
   )
 
 
@@ -179,7 +179,7 @@ def dependency_repositories():
     name = "nodejs",
     downloaded_file_path = "nodejs.tar.xz",
     urls = ["https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz"],
-    sha256 = "77db68544c7812e925b82ccc41cd4669fdeb191cea8e20053e3f0e86889c4fce"
+    sha256 = "c10eece562cfeef1627f0d2bde7dc0be810948f6bf9a932e30a8c3b425652015"
   )
 
   ###### YARN
@@ -187,7 +187,7 @@ def dependency_repositories():
     name = "yarnpkg",
     downloaded_file_path = "yarnpkg.deb",
     urls = ["https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb"],
-    sha256 = "385cb3723583c49e7e8c5eb99196bcaebe57c2b069f793d6f547fbc37c1879ca",
+    sha256 = "f9937c34bb822307cfb9599e0e6a566c133505547279af436bc0019179b20a6c",
   )
 
 
@@ -224,7 +224,7 @@ def dependency_repositories():
     name = "rabbitmq",
     downloaded_file_path = "rabbitmq.deb",
     urls = ["https://github.com/rabbitmq/rabbitmq-server/releases/download/v" + RABBITMQ_VERSION + "/rabbitmq-server_" + RABBITMQ_VERSION + "-1_all.deb"],
-    sha256 = "11f70dd68e098e4dc32e3eda49ab68c795e599f3ac0b8b858014c79432173928",
+    sha256 = "5e723abf766e73f08894e09355f7df875a32b1d167e0f8cc567ff025f5a23d60",
   )
 
 
@@ -233,7 +233,7 @@ def dependency_repositories():
     name = "zipkin",
     downloaded_file_path = "zipkin.jar",
     urls = ["http://central.maven.org/maven2/io/zipkin/java/zipkin-server/" + ZIPKIN_VERSION + "/zipkin-server-" + ZIPKIN_VERSION + "-exec.jar"],
-    sha256 = "55d9036caea2f574b10b54355af055a941cc77601dde35eb442ebbdd75ff522e",
+    sha256 = "4de28dba97826f228608fd5069426c3b79889c3a5c26c6746ccfb5aa8f59efa9",
   )
 
   ###### JASPER
