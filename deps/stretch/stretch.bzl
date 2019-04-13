@@ -1243,8 +1243,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libsmbclient",
-    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/s/samba/libsmbclient_4.5.16+dfsg-1_amd64.deb"],
-    sha256 = "bd58497d7ac47fc49d36566e7c7fab1789d1c6780385a36ab6b18cfb69e94fd6",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190412T000000Z/pool/updates/main/s/samba/libsmbclient_4.5.16+dfsg-1+deb9u1_amd64.deb"],
+    sha256 = "d3462857af05f1527f72276239c9d4e3b1ccc92b596f78e2c00fac7ec89d5968",
   )
   http_file(
     name = "deb_stretch_libsnappy1v5",
@@ -1498,8 +1498,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libwbclient0",
-    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/s/samba/libwbclient0_4.5.16+dfsg-1_amd64.deb"],
-    sha256 = "8bf92f1a4f8d4b5050592ff2418b147ee5ab458ebd620e71d0b2199ec9cb6e10",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190412T000000Z/pool/updates/main/s/samba/libwbclient0_4.5.16+dfsg-1+deb9u1_amd64.deb"],
+    sha256 = "d20efabf78c39c17a0c9ac7a8485b005fff7dcd991337044840406566f12b52b",
   )
   http_file(
     name = "deb_stretch_libwebp6",
@@ -2033,8 +2033,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_samba_libs",
-    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/s/samba/samba-libs_4.5.16+dfsg-1_amd64.deb"],
-    sha256 = "7e811537b42ba512cd5570f7324798350099d6d1740519add87098e98efa0f5f",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190412T000000Z/pool/updates/main/s/samba/samba-libs_4.5.16+dfsg-1+deb9u1_amd64.deb"],
+    sha256 = "51582c2b8208ab8632783f739948a54c9de586d6f746172daa016b23f5883ec4",
   )
   http_file(
     name = "deb_stretch_shared_mime_info",

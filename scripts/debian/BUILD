@@ -2,9 +2,6 @@ package(default_visibility = ["//visibility:public"])
 
 load("//scripts/debian:dependencies.bzl", "dependencies")
 
-dependencies(name = "jessie", dependencies = {
-  ":jessie/git": "base",
-})
 dependencies(name = "stretch", dependencies = {
   ":stretch/cassandra": "cassandra",
   ":stretch/dnsmasq": "base",

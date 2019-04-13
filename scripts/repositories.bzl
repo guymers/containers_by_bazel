@@ -22,7 +22,6 @@ load(
   "ZIPKIN_VERSION",
   "ZOOKEEPER_VERSION"
 )
-load("//deps/jessie:jessie.bzl", "deb_jessie")
 load("//deps/stretch:stretch.bzl", "deb_stretch")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_file")
@@ -35,21 +34,14 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/053137fa9fff94ef8657a6b095dfc73e35608987.zip",
   )
 
-  # Update to 20190228 for amd64
-  http_file(
-    name = "debian_jessie",
-    downloaded_file_path = "jessie-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/3e751c2c2f60037e9231ed94bbd1f95347af2c87/jessie/slim/rootfs.tar.xz"],
-    sha256 = "608cbd3f30dbe7f56b1be4078bb7e061debde397690dfeadb95fd7057218cfbe",
-  )
+  # Update to 20190326 for amd64
   http_file(
     name = "debian_stretch",
     downloaded_file_path = "stretch-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/3e751c2c2f60037e9231ed94bbd1f95347af2c87/stretch/slim/rootfs.tar.xz"],
-    sha256 = "10aacc5e8ac3f8c736fc69b771b15a5adf58a0745ee9de4a5d66241b377e1261",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/064f343bfa6ebf043aac2bbd4c870256cfe82f5a/stretch/slim/rootfs.tar.xz"],
+    sha256 = "168fe0b1c9a15a7f2e6d45ca866b1e0634508883b8e4b6db02d607b1621c97b5",
   )
 
-  deb_jessie()
   deb_stretch()
 
   http_archive(

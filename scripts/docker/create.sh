@@ -6,7 +6,7 @@ readonly DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOCKER_NO_CACHE=${DOCKER_NO_CACHE:-false}
 [ "$DOCKER_NO_CACHE" = "true" ] && NO_CACHE="--no-cache" || NO_CACHE=""
 
-bazel build //base:jessie //base:stretch
+bazel build //base:stretch
 
 # when https://github.com/docker/docker/issues/9656 is fixed run docker builds in parallel
 
@@ -26,16 +26,6 @@ function build_image() {
   docker rmi "$random_tag"
   echo "$id"
 }
-
-readonly jessie_image=$(bazel run //base:jessie | grep "^Tagging" | awk '{print $4}')
-docker tag "$jessie_image" bazel/base:jessie
-
-for app in base; do
-  # TODO do this in a single command
-  build_image "$DIR/jessie" "jessie" "$app" | tee "$DIR/_built/jessie/$app.tmp"
-  tail -n1 "$DIR/_built/jessie/$app.tmp" > "$DIR/_built/jessie/$app"
-  rm -f "$DIR/_built/jessie/$app.tmp"
-done
 
 readonly stretch_image=$(bazel run //base:stretch | grep "^Tagging" | awk '{print $4}')
 docker tag "$stretch_image" bazel/base:stretch
