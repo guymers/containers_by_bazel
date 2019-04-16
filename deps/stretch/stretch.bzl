@@ -1288,8 +1288,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libssh2_1",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/libs/libssh2/libssh2-1_1.7.0-1_amd64.deb"],
-    sha256 = "d368cf3b7d0b4be11718eb06615051b4d2966aa3e9247f3ce89a6556aa3123a9",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190416T000000Z/pool/updates/main/libs/libssh2/libssh2-1_1.7.0-1+deb9u1_amd64.deb"],
+    sha256 = "bbfed9143db9b5e84849f559806b453d0f7fb546e2be456d9394ec0a695cf8f6",
   )
   http_file(
     name = "deb_stretch_libssh_gcrypt_4",
