@@ -16,19 +16,11 @@ if [ "$JAVA_RANDOM_PERFORMANCE" = "true" ]; then
 fi
 
 AUTO_JAVA_HEAP_SIZE=${AUTO_JAVA_HEAP_SIZE:-true}
-if [ "$AUTO_JAVA_HEAP_SIZE" = "true" ]; then
-  if [ -n "$JAVA_HEAP_SIZE_PERCENTAGE" ]; then
-    readonly MEMORY_LIMIT_IN_BYTES=$(cat /sys/fs/cgroup/memory/memory.limit_in_bytes 2> /dev/null || echo 1073741824)
-    readonly MEMORY_LIMIT=$((MEMORY_LIMIT_IN_BYTES / 1024 / 1024))
-    JAVA_HEAP_SIZE=$((MEMORY_LIMIT * JAVA_HEAP_SIZE_PERCENTAGE / 100))
-  fi
-
-  if [ -n "$JAVA_HEAP_SIZE" ]; then
-    JAVA_OPTS="$JAVA_OPTS -Xms${JAVA_HEAP_SIZE}m -Xmx${JAVA_HEAP_SIZE}m"
-  else
-    JAVA_MAX_RAM_FRACTION=${JAVA_MAX_RAM_FRACTION:-1}
-    JAVA_OPTS="$JAVA_OPTS -XX:+UseCGroupMemoryLimitForHeap -XX:MaxRAMFraction=$JAVA_MAX_RAM_FRACTION"
-  fi
+if [ -n "$JAVA_HEAP_SIZE_PERCENTAGE" ] || [ "$AUTO_JAVA_HEAP_SIZE" = "true" ]; then
+  JAVA_HEAP_SIZE_PERCENTAGE=${JAVA_HEAP_SIZE_PERCENTAGE:-75.0}
+  JAVA_OPTS="$JAVA_OPTS -XX:InitialRAMPercentage=$JAVA_HEAP_SIZE_PERCENTAGE -XX:MaxRAMPercentage=$JAVA_HEAP_SIZE_PERCENTAGE"
+elif [ -n "$JAVA_HEAP_SIZE" ]; then
+  JAVA_OPTS="$JAVA_OPTS -Xms${JAVA_HEAP_SIZE}m -Xmx${JAVA_HEAP_SIZE}m"
 fi
 
 USE_G1GC=${USE_G1GC:-true}

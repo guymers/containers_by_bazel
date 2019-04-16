@@ -10,7 +10,6 @@ container_test(
   image = ":elasticsearch_wget",
   daemon = True,
   mem_limit = "1024m",
-  env = { "JAVA_HEAP_SIZE_PERCENTAGE": "80" }, # MaxRAMFraction does not set initial heap to maximum heap so ES cries
   read_only = False, # loads native libs from /tmp
   test = "test.sh",
   golden = "output.txt",
