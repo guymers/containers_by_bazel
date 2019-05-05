@@ -29,9 +29,9 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_file"
 def dependency_repositories():
   http_archive(
     name = "bazel_rules_container",
-    sha256 = "ac2d6169e4680ecbbcf89a234f2413fb837dc5b3fb897a8e5b63e97dd6254ce8",
-    strip_prefix = "bazel_rules_container-053137fa9fff94ef8657a6b095dfc73e35608987",
-    url = "https://github.com/guymers/bazel_rules_container/archive/053137fa9fff94ef8657a6b095dfc73e35608987.zip",
+    sha256 = "31a19bd1ccb25271f8d0cf03095fd4cdf43f86811504fd3928b049f68b7f445b",
+    strip_prefix = "bazel_rules_container-0.9.0",
+    url = "https://github.com/guymers/bazel_rules_container/archive/0.9.0.zip",
   )
 
   # Update to 20190326 for amd64

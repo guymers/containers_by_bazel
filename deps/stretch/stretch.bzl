@@ -113,8 +113,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_java_common",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/j/java-common/java-common_0.58_all.deb"],
-    sha256 = "8fedb587197c93a1064c24118e31646d10398ffc34853ff985a04e24fc9ed77b",
+    urls = ["http://snapshot.debian.org/archive/debian/20190505T000000Z/pool/main/j/java-common/java-common_0.58+deb9u1_all.deb"],
+    sha256 = "ceee63ee76d04af5d95785a4586cd621ad9cbf6a87ee54c7e163c6d1434c4765",
   )
   http_file(
     name = "deb_stretch_libaec0",
@@ -833,8 +833,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libmariadbclient18",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20181121T000000Z/pool/updates/main/m/mariadb-10.1/libmariadbclient18_10.1.37-0+deb9u1_amd64.deb"],
-    sha256 = "5ad25d8a55d3747a4bd9a6b710056185012f3876214a976d9dd7137c5d683585",
+    urls = ["http://snapshot.debian.org/archive/debian/20190505T000000Z/pool/main/m/mariadb-10.1/libmariadbclient18_10.1.38-0+deb9u1_amd64.deb"],
+    sha256 = "8aa60a327876a83f7ed7c032331154252a0395df8e601f3bae866bc83f56864a",
   )
   http_file(
     name = "deb_stretch_libmcrypt4",
@@ -1058,8 +1058,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libpng16_16",
-    urls = ["http://snapshot.debian.org/archive/debian/20180714T000000Z/pool/main/libp/libpng1.6/libpng16-16_1.6.28-1_amd64.deb"],
-    sha256 = "5afd2e7505bfc9845a8a46f9dcd72983f8d2a3d33be36d071b4e3bcdf215786c",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190505T000000Z/pool/updates/main/libp/libpng1.6/libpng16-16_1.6.28-1+deb9u1_amd64.deb"],
+    sha256 = "1d0b8014cba18f84ce77398da9db9c71e1a8ce53fd8157cd7bf9ccf1d56a42f4",
   )
   http_file(
     name = "deb_stretch_libpoppler64",
@@ -1763,8 +1763,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_linux_libc_dev",
-    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/l/linux/linux-libc-dev_4.9.144-3.1_amd64.deb"],
-    sha256 = "b5839fea4b5928b8d8ad92a8c27cf366f345c0c5e729ec8498f5a9ce67e0cd63",
+    urls = ["http://snapshot.debian.org/archive/debian/20190505T000000Z/pool/main/l/linux/linux-libc-dev_4.9.168-1_amd64.deb"],
+    sha256 = "b1e30ea1aabb94c1a66735076dac8064b3001aa50d05704bcdf73596f65cfc94",
   )
   http_file(
     name = "deb_stretch_locales",
@@ -1823,8 +1823,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_openssh_client",
-    urls = ["http://snapshot.debian.org/archive/debian/20190224T000000Z/pool/main/o/openssh/openssh-client_7.4p1-10+deb9u5_amd64.deb"],
-    sha256 = "ca20e823b6c4334f6d8e9b853d0a12475587fe1d59039b30a51a9a421103bd2d",
+    urls = ["http://snapshot.debian.org/archive/debian/20190505T000000Z/pool/main/o/openssh/openssh-client_7.4p1-10+deb9u6_amd64.deb"],
+    sha256 = "8d498ebef367eeb5e326dd99b2e51614e8c2529b18c8e53bf6c1187d82fa2282",
   )
   http_file(
     name = "deb_stretch_openssl",
@@ -2073,8 +2073,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_wget",
-    urls = ["http://snapshot.debian.org/archive/debian/20180804T000000Z/pool/main/w/wget/wget_1.18-5+deb9u2_amd64.deb"],
-    sha256 = "8166197d46b5f3ff4fb0f006c6fea7dcc919e715be5169633a8405473bdb901b",
+    urls = ["http://snapshot.debian.org/archive/debian/20190505T000000Z/pool/main/w/wget/wget_1.18-5+deb9u3_amd64.deb"],
+    sha256 = "c0d4ceeeac01947df3574a34d8a17b7abcf16918503ea3faae3496f00c348585",
   )
   http_file(
     name = "deb_stretch_x11_common",
