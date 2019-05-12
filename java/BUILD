@@ -1,3 +1,5 @@
+load("//scripts/versions:versions.bzl", "GRAAL_VERSION")
+
 container_layer(
   name = "script_files",
   directory = "/",
@@ -48,6 +50,40 @@ container_image(
     "LC_CTYPE": "C.UTF-8",
     "JAVA_HOME": "/usr/lib/jvm/zulu-11-amd64",
     "PATH": "/usr/lib/jvm/zulu-11-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+
+    "JMX_MONITORING": "true",
+    "JMX_HOSTNAME": "127.0.0.1",
+    "JMX_PORT": "1099",
+
+    #"GC_LOG_FOLDER": "/var/log/java/gc",
+    "OOM_DUMP_FOLDER": "/var/log/java/oom",
+  },
+  ports = ["1099"],
+  volumes = [
+    "/var/log/java/gc",
+    "/var/log/java/oom",
+  ],
+  visibility = ["//visibility:public"],
+)
+
+
+##### graal
+container_layer(
+  name = "graal_files",
+  directory = "/opt",
+  files = ["@graal//:graalvm-ce-" + GRAAL_VERSION],
+  symlinks = { "/opt/graalvm": "/opt/graalvm-ce-" + GRAAL_VERSION },
+)
+
+container_image(
+  name = "graal",
+  base = "//base:stretch",
+  layers = ["//base/ca_certificates", ":graal_files", "//java:script_files"],
+  env = {
+    "LANG": "C.UTF-8",
+    "LC_CTYPE": "C.UTF-8",
+    "JAVA_HOME": "/opt/graalvm",
+    "PATH": "/opt/graalvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
 
     "JMX_MONITORING": "true",
     "JMX_HOSTNAME": "127.0.0.1",

@@ -4,6 +4,7 @@ load(
   "ELASTICSEARCH_VERSION",
   "ERLANG_VERSION",
   "GERRIT_VERSION",
+  "GRAAL_VERSION",
   "GRAFANA_VERSION",
   "JASPERREPORTS_SERVER_VERSION",
   "JENKINS_VERSION",
@@ -34,12 +35,12 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.9.0.zip",
   )
 
-  # Update to 20190326 for amd64
+  # Update to 20190506 for amd64 (debuerreotype 0.10)
   http_file(
     name = "debian_stretch",
     downloaded_file_path = "stretch-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/064f343bfa6ebf043aac2bbd4c870256cfe82f5a/stretch/slim/rootfs.tar.xz"],
-    sha256 = "168fe0b1c9a15a7f2e6d45ca866b1e0634508883b8e4b6db02d607b1621c97b5",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/fd138cb56a6a6a4fd9cb30c2acce9e8d9cccd28a/stretch/slim/rootfs.tar.xz"],
+    sha256 = "c445220e07159d3f35982cda27daa07aec4b4174ae063601f140e9514bad379e",
   )
 
   deb_stretch()
@@ -62,6 +63,17 @@ def dependency_repositories():
     urls = ["https://github.com/krallin/tini/releases/download/v0.17.0/tini_0.17.0-amd64.deb"],
     sha256 = "8ce9b15e40955e77f96634ff344414122ce234cf7612d1a5ef5ce2728aeda8d7",
   )
+
+  ###### GRAAL
+  http_archive(
+    name = "graal",
+    url = "https://github.com/oracle/graal/releases/download/vm-" + GRAAL_VERSION + "/graalvm-ce-linux-amd64-" + GRAAL_VERSION + ".tar.gz",
+    sha256 = "7ad124cdb19cbaa962f6d2f26d1e3eccfeb93afabbf8e81cb65976519f15730c",
+    #strip_prefix = "graalvm-ce-" + GRAAL_VERSION,
+    #build_file_content = "exports_files(['graal'])",
+    build_file_content = "exports_files(['graalvm-ce-" + GRAAL_VERSION + "'])",
+  )
+
 
   ###### PROMETHEUS
   http_archive(
@@ -145,7 +157,7 @@ def dependency_repositories():
     name = "elasticsearch",
     downloaded_file_path = "elasticsearch.deb",
     urls = ["https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-" + ELASTICSEARCH_VERSION + ".deb"],
-    sha256 = "e5aa8b1449fb08b56ec5d9a52324cadd7439c29533fa7662badede051a9a9778",
+    sha256 = "8ad69655c22eabe94295ffb23434ae26ef4d839555ee9cb65261a6fe48e0dc12",
   )
 
   ###### KIBANA
@@ -153,7 +165,7 @@ def dependency_repositories():
     name = "kibana",
     downloaded_file_path = "kibana.deb",
     urls = ["https://artifacts.elastic.co/downloads/kibana/kibana-" + KIBANA_VERSION + "-amd64.deb"],
-    sha256 = "5fa5a5758027116c02f0f73b37ddeae7799e04314290d6609571b889659c3f9f",
+    sha256 = "219f005c071c90e12f4606e20d4872b0c341c24ea42bc3c96737ee9aadfc22be",
   )
 
 
@@ -162,7 +174,7 @@ def dependency_repositories():
     name = "grafana",
     downloaded_file_path = "grafana.deb",
     urls = ["https://dl.grafana.com/oss/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
-    sha256 = "2a57ccf5128fe90f069c5fd3403eee432dddf772712bca81b0e00e36d39ab680",
+    sha256 = "ebcafa78e5fef4b6417a6da586d76e4967b151d739ab56e4de6f699472432c50",
   )
 
 
@@ -179,7 +191,7 @@ def dependency_repositories():
     name = "yarnpkg",
     downloaded_file_path = "yarnpkg.deb",
     urls = ["https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb"],
-    sha256 = "f9937c34bb822307cfb9599e0e6a566c133505547279af436bc0019179b20a6c",
+    sha256 = "734165d3b6cccefa153bb007b567669be7b882a7abb50bd9149739d800b3a5ed",
   )
 
 

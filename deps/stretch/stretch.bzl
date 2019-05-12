@@ -1083,8 +1083,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libpq5",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/libpq5_11.2-1.pgdg90+1_amd64.deb"],
-    sha256 = "45d69fbe162307afc6693117f397adfd8a893993d98f6e462d1ecebbe2928fd4",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/libpq5_11.3-1.pgdg90+1_amd64.deb"],
+    sha256 = "285368588f8945934bd81c8a298a68439fc3bac377289ac88c9f6e13ea0f014f",
   )
   http_file(
     name = "deb_stretch_libprocps6",
@@ -1803,8 +1803,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_nginx",
-    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.15.9-1~stretch_amd64.deb"],
-    sha256 = "ca2171eaa319bc37e0f695909c4c4b54f2a227c1d240abefd68b1212bb0d7d41",
+    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.15.12-1~stretch_amd64.deb"],
+    sha256 = "d446977413a9f1a3814f01dd92a13cbc53818c0bbdd2bd0bf20e05bacf653588",
   )
   http_file(
     name = "deb_stretch_numactl",
@@ -1943,8 +1943,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_postgresql_11",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-11_11.2-1.pgdg90+1_amd64.deb"],
-    sha256 = "6ec44dac8cd21255aed48a0298190442b0cf5c8836a9538125626e9f66c3a6be",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-11_11.3-1.pgdg90+1_amd64.deb"],
+    sha256 = "0a87f99cc865b8513294219905cfadbf1ad72db9c70d8ada26a5ddf631eea4a3",
   )
   http_file(
     name = "deb_stretch_postgresql_11_postgis_2_5",
@@ -1958,18 +1958,18 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_postgresql_client_11",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-client-11_11.2-1.pgdg90+1_amd64.deb"],
-    sha256 = "ec844817d38ec5c5f70ed9091d8b48bcdd7c24506c402896b38f0234c08ccedd",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-client-11_11.3-1.pgdg90+1_amd64.deb"],
+    sha256 = "2dfd9d5406ba7a05334e36210f4235649eb0143281b171660d972be78269cd4b",
   )
   http_file(
     name = "deb_stretch_postgresql_client_common",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_199.pgdg90+1_all.deb"],
-    sha256 = "15e30c4a4fce853df9bd41dca89b79746590eef9c903ea1b6574122c57f0eb76",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_201.pgdg90+1_all.deb"],
+    sha256 = "ebbf0eca89e7abf212b7f11dc0efa6c27087fa242f5e2bf64734bdac5d9b786b",
   )
   http_file(
     name = "deb_stretch_postgresql_common",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_199.pgdg90+1_all.deb"],
-    sha256 = "456fa10a0bf80c6b4880f5a99b21f57a9eada0973cd31b6c683ffca6f2f2b60d",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_201.pgdg90+1_all.deb"],
+    sha256 = "9389e3ea82e995fe7b35529dc013ca5e587cb4087ab1967eba33118867a13b3a",
   )
   http_file(
     name = "deb_stretch_procps",
