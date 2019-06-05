@@ -203,33 +203,33 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libavcodec57",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libavcodec57_3.2.12-1~deb9u1_amd64.deb"],
-    sha256 = "aff568fb33263f03b2d5bc1cab551bb9ebef3e9ec124126c8a5b2945072bfb3e",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190605T000000Z/pool/updates/main/f/ffmpeg/libavcodec57_3.2.14-1~deb9u1_amd64.deb"],
+    sha256 = "74538b536dc30208bd724194943aa82b4dd04982c7b3a98fdd2e4fa4f3609a6d",
   )
   http_file(
     name = "deb_stretch_libavdevice57",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libavdevice57_3.2.12-1~deb9u1_amd64.deb"],
-    sha256 = "648041550c57ffb933023291c0a9eabb64e5f2df5611c6614dd6427dd93eedab",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190605T000000Z/pool/updates/main/f/ffmpeg/libavdevice57_3.2.14-1~deb9u1_amd64.deb"],
+    sha256 = "28dd7694db191df5734c1945609f4924b481ea63516bf902536bc43a70dc5a8a",
   )
   http_file(
     name = "deb_stretch_libavfilter6",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libavfilter6_3.2.12-1~deb9u1_amd64.deb"],
-    sha256 = "2084e79ed1a7b8630063af899efe84f7a178326e23189577ff257dd5adc5f0e0",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190605T000000Z/pool/updates/main/f/ffmpeg/libavfilter6_3.2.14-1~deb9u1_amd64.deb"],
+    sha256 = "a8bb037f963fa77e7c7c4facad9c6a401c22f55b5595b9c1e59640e61520c83f",
   )
   http_file(
     name = "deb_stretch_libavformat57",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libavformat57_3.2.12-1~deb9u1_amd64.deb"],
-    sha256 = "a4786401a8fe93aba2170f273980b12ca6bf1508bac3f0e3926d45f6b532853e",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190605T000000Z/pool/updates/main/f/ffmpeg/libavformat57_3.2.14-1~deb9u1_amd64.deb"],
+    sha256 = "5992b8b5735c859a21c8d3bc0f7c493c86fa1b3428583458b9d75926586c49d0",
   )
   http_file(
     name = "deb_stretch_libavresample3",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libavresample3_3.2.12-1~deb9u1_amd64.deb"],
-    sha256 = "394aa3db1393a615ea627e2fa3d3028ed4fbc09ccf25bbf452e4cd683bd5a4f3",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190605T000000Z/pool/updates/main/f/ffmpeg/libavresample3_3.2.14-1~deb9u1_amd64.deb"],
+    sha256 = "31246a8555b13f3eda40a1e5e3fec39cd77406ef3936d22a6e1e8d958e07cde3",
   )
   http_file(
     name = "deb_stretch_libavutil55",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libavutil55_3.2.12-1~deb9u1_amd64.deb"],
-    sha256 = "f4ba8c5b08d00497d1affeff233b3e60cfeec9bf4edcb60246dfc8b92c2c9a68",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190605T000000Z/pool/updates/main/f/ffmpeg/libavutil55_3.2.14-1~deb9u1_amd64.deb"],
+    sha256 = "32202162b75b6acf0042e5ad2e0fb84d7c5159bfec782ecda96624b059550dc0",
   )
   http_file(
     name = "deb_stretch_libblas3",
@@ -1078,8 +1078,8 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libpostproc54",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libpostproc54_3.2.12-1~deb9u1_amd64.deb"],
-    sha256 = "bf772a544b4c39b508e08cfacca9175a1a6ae49bb6ceba2abafe2ddf0d794089",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190605T000000Z/pool/updates/main/f/ffmpeg/libpostproc54_3.2.14-1~deb9u1_amd64.deb"],
+    sha256 = "8f6c8698aa850779f21620098d1ee26c703291005cbb08f1e7876c8783b9b2cf",
   )
   http_file(
     name = "deb_stretch_libpq5",
@@ -1318,13 +1318,13 @@ def deb_stretch():
   )
   http_file(
     name = "deb_stretch_libswresample2",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libswresample2_3.2.12-1~deb9u1_amd64.deb"],
-    sha256 = "cd3decd35f2028f73356fb345e66977dc37802ac92d52fb362a625072b87c43e",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190605T000000Z/pool/updates/main/f/ffmpeg/libswresample2_3.2.14-1~deb9u1_amd64.deb"],
+    sha256 = "216dec64fb49bbeba82ce051d0c4b6eb2ffc85beb8dd1fc979f624abd47e8d09",
   )
   http_file(
     name = "deb_stretch_libswscale4",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20180804T000000Z/pool/updates/main/f/ffmpeg/libswscale4_3.2.12-1~deb9u1_amd64.deb"],
-    sha256 = "59021f926e5bca23987fefa2e4cd6c4b62d083982d101c96c15fa777ab6a54a8",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20190605T000000Z/pool/updates/main/f/ffmpeg/libswscale4_3.2.14-1~deb9u1_amd64.deb"],
+    sha256 = "4c372e9a650ab7eca78e26a4ba0c7a7bbce62aaf2255b54fdcb2e3ae40326bc8",
   )
   http_file(
     name = "deb_stretch_libsz2",
