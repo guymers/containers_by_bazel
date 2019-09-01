@@ -1,5 +1,5 @@
 container_image(
-  name = "elasticsearch_wget",
+  name = "wget",
   base = "//elasticsearch",
   layers = ["//test:wget"],
 )
@@ -7,7 +7,7 @@ container_image(
 container_test(
   name = "elasticsearch",
   size = "small",
-  image = ":elasticsearch_wget",
+  image = ":wget",
   daemon = True,
   mem_limit = "1024m",
   read_only = False, # loads native libs from /tmp

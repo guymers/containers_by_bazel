@@ -2,5 +2,6 @@ network:
   host: ${ES_NETWORK_HOST}
 cluster:
   name: ${ES_CLUSTER_NAME}
+  initial_master_nodes: ${HOSTNAME}
 node:
   name: ${HOSTNAME}

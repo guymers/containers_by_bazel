@@ -9,6 +9,11 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
+          name: Install python 3
+          command: |
+            sudo apt-get update
+            sudo apt-get install python3
+      - run:
           name: Install docker client
           command: |
             VER="18.06.1-ce"

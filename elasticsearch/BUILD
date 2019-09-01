@@ -58,7 +58,7 @@ container_image(
     "JAVA_HEAP_SIZE_PERCENTAGE": "50.0",
 
     "ES_NETWORK_HOST": "0.0.0.0",
-    "ES_CLUSTER_NAME": "Elasticsearch",
+    "ES_CLUSTER_NAME": "elasticsearch",
   },
   volumes = [ES_DATA, ES_CONF_DIR, ES_PLUGINS_DIR],
   ports = ["9200", "9300"],

@@ -11,6 +11,7 @@ load(
   "JENKINS_SWARM_VERSION",
   "KAFKA_VERSION",
   "KIBANA_VERSION",
+  "NODEJS_FOR_KIBANA_VERSION",
   "MAVEN_VERSION",
   "NEXUS_VERSION",
   "NODEJS_VERSION",
@@ -154,8 +155,8 @@ def dependency_repositories():
   http_file(
     name = "elasticsearch",
     downloaded_file_path = "elasticsearch.deb",
-    urls = ["https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-" + ELASTICSEARCH_VERSION + ".deb"],
-    sha256 = "8ad69655c22eabe94295ffb23434ae26ef4d839555ee9cb65261a6fe48e0dc12",
+    urls = ["https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-" + ELASTICSEARCH_VERSION + "-amd64.deb"],
+    sha256 = "570af7456603fd103408ed61ccec4473302976d46e1ff845b74a881122977e02",
   )
 
   ###### KIBANA
@@ -163,7 +164,14 @@ def dependency_repositories():
     name = "kibana",
     downloaded_file_path = "kibana.deb",
     urls = ["https://artifacts.elastic.co/downloads/kibana/kibana-" + KIBANA_VERSION + "-amd64.deb"],
-    sha256 = "219f005c071c90e12f4606e20d4872b0c341c24ea42bc3c96737ee9aadfc22be",
+    sha256 = "24b470d6cd5e846f7c7fea89bfeabe4fef045237b7887b438339ad4cb54e8320",
+  )
+
+  http_file(
+    name = "nodejs_for_kibana",
+    downloaded_file_path = "nodejs.tar.xz",
+    urls = ["https://nodejs.org/dist/v" + NODEJS_FOR_KIBANA_VERSION + "/node-v" + NODEJS_FOR_KIBANA_VERSION + "-linux-x64.tar.xz"],
+    sha256 = "c10eece562cfeef1627f0d2bde7dc0be810948f6bf9a932e30a8c3b425652015"
   )
 
 
@@ -181,7 +189,7 @@ def dependency_repositories():
     name = "nodejs",
     downloaded_file_path = "nodejs.tar.xz",
     urls = ["https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz"],
-    sha256 = "c10eece562cfeef1627f0d2bde7dc0be810948f6bf9a932e30a8c3b425652015"
+    sha256 = "d2271fd8cf997fa7447d638dfa92749ff18ca4b0d796bf89f2a82bf7800d5506"
   )
 
   ###### YARN
@@ -189,7 +197,7 @@ def dependency_repositories():
     name = "yarnpkg",
     downloaded_file_path = "yarnpkg.deb",
     urls = ["https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb"],
-    sha256 = "734165d3b6cccefa153bb007b567669be7b882a7abb50bd9149739d800b3a5ed",
+    sha256 = "44fe52f4003f9d92ad1478c5fb8dcd3d93021ac9ca70370e1d955c407a5cada0",
   )
 
 
