@@ -11,5 +11,5 @@ readonly version=2.3.0
 readonly url="${redirect_url}?r=${repo}&g=${group_id}&a=${artifact_id}&v=${version}"
 
 readonly tmp_file="${artifact_id}-${version}.jar"
-wget -q --retry-connrefused --waitretry=10 --timeout=20 --tries=10 -O "/tmp/$tmp_file" "$url"
+wget --retry-connrefused --waitretry=10 --timeout=20 --tries=10 -O "/tmp/$tmp_file" "$url"
 cd /tmp && sha256sum "$tmp_file"

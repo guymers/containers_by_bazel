@@ -1,15 +1,15 @@
-NGINX_VERSION = "1.15.12-1"
+NGINX_VERSION = "1.17.3-1"
 NGINX_DEB_VERSION = NGINX_VERSION + "~stretch"
 
 NODEJS_VERSION = "10.15.2"
 YARN_VERSION = "1.16.0"
 
-ZULU_8_VERSION = "8.38.0.13"
-JAVA_8_VERSION = "8.0.212"
-ZULU_11_VERSION = "11.31+11"
-JAVA_11_VERSION = "11.0.3"
+ZULU_8_VERSION = "8.40.0.25"
+JAVA_8_VERSION = "8.0.222"
+ZULU_11_VERSION = "11.33+15"
+JAVA_11_VERSION = "11.0.4"
 JAVA_VERSION = JAVA_8_VERSION
-GRAAL_VERSION = "19.0.0"
+GRAAL_VERSION = "19.2.0"
 
 ZOOKEEPER_VERSION = "3.4.13"
 KAFKA_VERSION = "2.1.1"
@@ -21,7 +21,7 @@ KIBANA_VERSION = "6.7.2"
 SBT_VERSION = "1.2.8"
 
 POSTGRESQL_MINOR_VERSION = "11"
-POSTGRESQL_VERSION = POSTGRESQL_MINOR_VERSION + "." + "3-1"
+POSTGRESQL_VERSION = POSTGRESQL_MINOR_VERSION + "." + "5-1"
 POSTGRESQL_DEB_VERSION = POSTGRESQL_VERSION + "." + "pgdg90+1"
 POSTGIS_MINOR_VERSION = "2.5"
 POSTGIS_VERSION = POSTGIS_MINOR_VERSION + ".2"
@@ -49,15 +49,15 @@ GRAFANA_DEB_VERSION = GRAFANA_VERSION
 CASSANDRA_VERSION = "3.11.4"
 CASSANDRA_DEB_VERSION = CASSANDRA_VERSION
 
-NEXUS_VERSION = "2.14.12-02"
+NEXUS_VERSION = "2.14.14-01"
 
-GERRIT_VERSION = "2.16.7"
+GERRIT_VERSION = "2.16.10"
 
 DNSMASQ_VERSION = "2.76-5"
 DNSMASQ_DEB_VERSION = DNSMASQ_VERSION + "+deb9u1"
 
-ERLANG_VERSION = "20.3-1"
-ERLANG_DEB_VERSION = ERLANG_VERSION + ""
+ERLANG_VERSION = "20.3"
+ERLANG_DEB_VERSION = ERLANG_VERSION + ".8.21-1"
 
 RABBITMQ_VERSION = "3.7.13"
 
@@ -74,7 +74,7 @@ PENATHO_DI_VERSION = "7.1.0.0-12"
 
 def _version_shell_script_impl(ctx):
   # (.+)=(%\{.+\})   =>   "$2": $1,
-  ctx.template_action(
+  ctx.actions.expand_template(
     template=ctx.file._template,
     substitutions={
       "%{NGINX_VERSION}": NGINX_VERSION,
@@ -133,8 +133,8 @@ version_shell_script = rule(
   attrs={
     "_template": attr.label(
       default=Label("//scripts/versions:template"),
-      single_file=True,
-      allow_files=True)
+      allow_single_file=True,
+    )
   },
   outputs={
     "script": "%{name}.sh"

@@ -2,7 +2,7 @@ load(
   "//scripts/versions:versions.bzl",
   "EJABBERD_VERSION",
   "ELASTICSEARCH_VERSION",
-  "ERLANG_VERSION",
+  "ERLANG_DEB_VERSION",
   "GERRIT_VERSION",
   "GRAAL_VERSION",
   "GRAFANA_VERSION",
@@ -30,17 +30,17 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_file"
 def dependency_repositories():
   http_archive(
     name = "bazel_rules_container",
-    sha256 = "31a19bd1ccb25271f8d0cf03095fd4cdf43f86811504fd3928b049f68b7f445b",
-    strip_prefix = "bazel_rules_container-0.9.0",
-    url = "https://github.com/guymers/bazel_rules_container/archive/0.9.0.zip",
+    sha256 = "937e251356309f8e8e8f92c7d03cdf9dd298386412d2e7bcfc8be2dc8c6026e9",
+    strip_prefix = "bazel_rules_container-80e14379ffc15856cb3c0459ef5f9010ee30b8fc",
+    url = "https://github.com/guymers/bazel_rules_container/archive/80e14379ffc15856cb3c0459ef5f9010ee30b8fc.zip",
   )
 
-  # Update to 20190506 for amd64 (debuerreotype 0.10)
+  # Update to 20190812 for amd64 (debuerreotype 0.10)
   http_file(
     name = "debian_stretch",
     downloaded_file_path = "stretch-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/fd138cb56a6a6a4fd9cb30c2acce9e8d9cccd28a/stretch/slim/rootfs.tar.xz"],
-    sha256 = "c445220e07159d3f35982cda27daa07aec4b4174ae063601f140e9514bad379e",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/7a4fe39587941f207bf42ae4514f8d28d2352f69/stretch/slim/rootfs.tar.xz"],
+    sha256 = "d67ecb39c4edaf67e9dabc332fdb15975ae2d222ce4066047456330e9b91d68c",
   )
 
   deb_stretch()
@@ -68,9 +68,7 @@ def dependency_repositories():
   http_archive(
     name = "graal",
     url = "https://github.com/oracle/graal/releases/download/vm-" + GRAAL_VERSION + "/graalvm-ce-linux-amd64-" + GRAAL_VERSION + ".tar.gz",
-    sha256 = "7ad124cdb19cbaa962f6d2f26d1e3eccfeb93afabbf8e81cb65976519f15730c",
-    #strip_prefix = "graalvm-ce-" + GRAAL_VERSION,
-    #build_file_content = "exports_files(['graal'])",
+    sha256 = "9d8a82788c3aaede4a05366f79f8b0b328957d0bb7479c986f6f1354b1c7c4ea",
     build_file_content = "exports_files(['graalvm-ce-" + GRAAL_VERSION + "'])",
   )
 
@@ -101,7 +99,7 @@ def dependency_repositories():
   http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "2123325b6aaaae1ff2131fd1b2958ff4f828b27847c8e1afe0f26b06c9bb8a60",
+    sha256 = "cd31f134791fb64d01e4d7488477e5c2defb3c2dc15eca871e97ccd281f59e80",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
 
@@ -125,7 +123,7 @@ def dependency_repositories():
     name = "gerrit_war",
     downloaded_file_path = "gerrit.war",
     urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
-    sha256 = "de0b730ac038b928950d23346852663111c29e85985152dc3c206a2c1d61f269",
+    sha256 = "dd72c5838889b582aa4df421544bcca1b021bb593dfa884656fd8a209d87d26a",
   )
 
   ###### MAVEN
@@ -209,8 +207,8 @@ def dependency_repositories():
   http_file(
     name = "erlang",
     downloaded_file_path = "erlang.deb",
-    urls = ["http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_" + ERLANG_VERSION + "~debian~stretch_amd64.deb"],
-    sha256 = "768203083185b04250d872e6a5adef26c24fbfd592d65ef6676d086c3cb1b808",
+    urls = ["https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_" + ERLANG_DEB_VERSION + "~debian~stretch_amd64.deb"],
+    sha256 = "a6baafd74a754c29411f4d94bfa5d1ed6eeffc3086e5da11dd624055d659b96f",
   )
 
 

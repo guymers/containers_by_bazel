@@ -1,15 +1,15 @@
 container_image(
-  name = "gerrit_wget",
+  name = "wget",
   base = "//gerrit",
   layers = ["//test:wget"],
 )
 
 container_test(
-  name = "gerrit_init",
+  name = "init",
   size = "medium",
   image = "//gerrit",
   daemon = True,
-  mem_limit = "1024m",
+  mem_limit = "1500m",
   volume_files = ["init.d/change_admin_email.sh"],
   volume_mounts = ["/init.d/change_admin_email.sh"],
   test = "test_init.sh",
@@ -18,11 +18,11 @@ container_test(
 )
 
 container_test(
-  name = "gerrit_web",
+  name = "web",
   size = "medium",
-  image = ":gerrit_wget",
+  image = ":wget",
   daemon = True,
-  mem_limit = "1024m",
+  mem_limit = "1500m",
   test = "test_web.sh",
   golden = "output_web.txt",
   tags = ["not_circleci"], # dont know why this is failing
