@@ -18,7 +18,7 @@ container_layer(
 
 container_image(
   name = "base",
-  base = "//base:stretch",
+  base = "//base:buster",
   layers = ["//base/locale", ":user", ":files"],
   env = {
     "LANG": "en_US.UTF-8",
@@ -39,7 +39,7 @@ container_image(
 
 container_layer(
   name = "postgresql_files",
-  debs = ["//deps/stretch:postgresql"],
+  debs = ["//deps/buster:postgresql"],
 )
 container_image(
   name = "postgresql",
@@ -51,10 +51,10 @@ container_image(
 
 container_layer(
   name = "postgis_files",
-  debs = ["//deps/stretch:postgresql", "//deps/stretch:postgis", "//deps/stretch:libsqlite3"],
+  debs = ["//deps/buster:postgresql", "//deps/buster:postgis", "//deps/buster:libsqlite3"],
   symlinks = {
-    "./usr/lib/libblas.so.3": "/usr/lib/libblas/libblas.so.3",
-    "./usr/lib/liblapack.so.3": "/usr/lib/lapack/liblapack.so.3",
+    "./usr/lib/libblas.so.3": "/usr/lib/x86_64-linux-gnu/blas/libblas.so.3",
+    "./usr/lib/liblapack.so.3": "/usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3",
   },
 )
 container_image(

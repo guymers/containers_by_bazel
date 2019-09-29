@@ -2,13 +2,13 @@
 set -e
 set -o pipefail
 
-mkdir -p /var/cache/tomcat8/work
-chown tomcat /var/cache/tomcat8/work
+mkdir -p /var/cache/tomcat9/work
+chown tomcat /var/cache/tomcat9/work
 
-mkdir -p /etc/tomcat8/Catalina/localhost
-chgrp -R tomcat /etc/tomcat8/Catalina/
+mkdir -p /etc/tomcat9/Catalina/localhost
+chgrp -R tomcat /etc/tomcat9/Catalina/
 
-cp --no-clobber /usr/share/tomcat8/skel/conf/* /etc/tomcat8/
+cp --no-clobber /usr/share/tomcat9/skel/conf/* /etc/tomcat9/
 
 if [ "$1" = 'tomcat' ]; then
   source /java-opts.sh

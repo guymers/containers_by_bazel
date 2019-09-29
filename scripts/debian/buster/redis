@@ -1,0 +1,2 @@
+redis-server=5:${REDIS_DEB_VERSION}
+redis-tools=5:${REDIS_DEB_VERSION}

@@ -36,7 +36,7 @@ container_layer(
 
 container_image(
   name = "nodejs",
-  base = "//base:stretch",
+  base = "//base:buster",
   layers = ["//base/ca_certificates", ":nodejs_layer", ":yarn_layer"],
 
   visibility = ["//visibility:public"],
@@ -54,7 +54,7 @@ container_layer(
 
 container_image(
   name = "kibana",
-  base = "//base:stretch",
+  base = "//base:buster",
   layers = ["//base/ca_certificates", ":nodejs_for_kibana_layer"],
 
   visibility = ["//visibility:public"],

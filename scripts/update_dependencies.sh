@@ -10,7 +10,7 @@ bazel build --jobs "$(nproc)" --verbose_failures \
   //scripts/ssl:all
 
 echo "- Updating dependencies"
-for dist in "stretch"; do
+for dist in "buster"; do
   cp "$OUT_DIR/scripts/debian/$dist.bzl" "$ROOT/deps/$dist/"
   cp "$OUT_DIR/scripts/debian/$dist.filegroup" "$ROOT/deps/$dist/BUILD"
 done

@@ -24,7 +24,7 @@ load(
   "ZIPKIN_VERSION",
   "ZOOKEEPER_VERSION"
 )
-load("//deps/stretch:stretch.bzl", "deb_stretch")
+load("//deps/buster:buster.bzl", "deb_buster")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_file")
 
@@ -36,15 +36,14 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/80e14379ffc15856cb3c0459ef5f9010ee30b8fc.zip",
   )
 
-  # Update to 20190812 for amd64 (debuerreotype 0.10)
+  # Update to 20190910 for amd64 (debuerreotype 0.10)
   http_file(
-    name = "debian_stretch",
-    downloaded_file_path = "stretch-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/7a4fe39587941f207bf42ae4514f8d28d2352f69/stretch/slim/rootfs.tar.xz"],
-    sha256 = "d67ecb39c4edaf67e9dabc332fdb15975ae2d222ce4066047456330e9b91d68c",
+    name = "debian_buster",
+    downloaded_file_path = "buster-slim-rootfs.tar.xz",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/74e1a3304401c2eb9c6624ae1056d0a438c15189/buster/slim/rootfs.tar.xz"],
+    sha256 = "3203b7e670a5282bf3f9320ad13e3f001ef9fa7fa3b479105bda4755dcdf4f30",
   )
-
-  deb_stretch()
+  deb_buster()
 
   http_archive(
     name = "su_exec",
@@ -78,7 +77,7 @@ def dependency_repositories():
   http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "b8649bc6317af31fd3c998648ef0aa8bc0099fece24952fd1aca1bff665e9216",
+    sha256 = "b9f57b6e64fb3048742cfa7dbcc727e1df906d8020ef246a5e81b7959ae97e08",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -215,8 +214,8 @@ def dependency_repositories():
   http_file(
     name = "erlang",
     downloaded_file_path = "erlang.deb",
-    urls = ["https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_" + ERLANG_DEB_VERSION + "~debian~stretch_amd64.deb"],
-    sha256 = "a6baafd74a754c29411f4d94bfa5d1ed6eeffc3086e5da11dd624055d659b96f",
+    urls = ["https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_" + ERLANG_DEB_VERSION + "~debian~buster_amd64.deb"],
+    sha256 = "6fc7ac86216ad7da02501060796237a59462c1b8451eb726083889e6ff40387f",
   )
 
 

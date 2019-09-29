@@ -6,7 +6,7 @@ readonly DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOCKER_NO_CACHE=${DOCKER_NO_CACHE:-false}
 [ "$DOCKER_NO_CACHE" = "true" ] && NO_CACHE="--no-cache" || NO_CACHE=""
 
-bazel build //base:stretch
+bazel build //base:buster
 
 # when https://github.com/docker/docker/issues/9656 is fixed run docker builds in parallel
 
@@ -27,11 +27,11 @@ function build_image() {
   echo "$id"
 }
 
-readonly stretch_image=$(bazel run //base:stretch | grep "^Tagging" | awk '{print $4}')
-docker tag "$stretch_image" bazel/base:stretch
+readonly buster_image=$(bazel run //base:buster | grep "^Tagging" | awk '{print $4}')
+docker tag "$buster_image" bazel/base:buster
 
 for app in base ca-certificates zulu java cassandra nginx postgresql; do
-  build_image "$DIR/stretch" "stretch" "$app" | tee "$DIR/_built/stretch/$app.tmp"
-  tail -n1 "$DIR/_built/stretch/$app.tmp" > "$DIR/_built/stretch/$app"
-  rm -f "$DIR/_built/stretch/$app.tmp"
+  build_image "$DIR/buster" "buster" "$app" | tee "$DIR/_built/buster/$app.tmp"
+  tail -n1 "$DIR/_built/buster/$app.tmp" > "$DIR/_built/buster/$app"
+  rm -f "$DIR/_built/buster/$app.tmp"
 done

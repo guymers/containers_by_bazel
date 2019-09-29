@@ -13,7 +13,7 @@ user_layer(
 
 container_layer(
   name = "deps",
-  debs = ["//deps/stretch:git"] + ["//deps/stretch:ssh"],
+  debs = ["//deps/buster:git"] + ["//deps/buster:ssh"],
 )
 container_layer(
   name = "files",

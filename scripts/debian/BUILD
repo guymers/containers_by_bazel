@@ -2,30 +2,30 @@ package(default_visibility = ["//visibility:public"])
 
 load("//scripts/debian:dependencies.bzl", "dependencies")
 
-dependencies(name = "stretch", dependencies = {
-  ":stretch/cassandra": "cassandra",
-  ":stretch/dnsmasq": "base",
-  ":stretch/ejabberd": "base",
-  ":stretch/erlang": "base",
-  ":stretch/git": "base",
-  ":stretch/grafana": "base",
+dependencies(name = "buster", dependencies = {
+  ":buster/cassandra": "cassandra",
+  ":buster/dnsmasq": "base",
+  ":buster/ejabberd": "base",
+  ":buster/erlang": "base",
+  ":buster/git": "base",
+  ":buster/grafana": "base",
   # TODO work out why i cant just put libsqlite3 inside the psotgis file
-  ":stretch/libsqlite3": "base",
-  ":stretch/locales": "base",
-  ":stretch/nginx": "nginx",
-  ":stretch/php": "postgresql",
-  ":stretch/php_dev": "postgresql",
-  ":stretch/postgis": "postgresql",
-  ":stretch/postgresql": "postgresql",
-  ":stretch/python": "base",
-  ":stretch/rabbitmq": "base",
-  ":stretch/redis": "base",
-  ":stretch/ssh": "base",
-  ":stretch/tomcat8": "java",
-  ":stretch/wget": "base",
-  ":stretch/zip": "base",
-  ":stretch/zulu_8": "zulu",
-  ":stretch/zulu_11": "zulu",
+  ":buster/libsqlite3": "base",
+  ":buster/locales": "base",
+  ":buster/nginx": "nginx",
+  ":buster/php": "postgresql",
+  ":buster/php_dev": "postgresql",
+  ":buster/postgis": "postgresql",
+  ":buster/postgresql": "postgresql",
+  ":buster/python": "base",
+  ":buster/rabbitmq": "base",
+  ":buster/redis": "base",
+  ":buster/ssh": "base",
+  ":buster/tomcat9": "java",
+  ":buster/wget": "base",
+  ":buster/zip": "base",
+  ":buster/zulu_8": "zulu",
+  ":buster/zulu_11": "zulu",
 })
 
 sh_binary(

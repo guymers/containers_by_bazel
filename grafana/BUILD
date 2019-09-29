@@ -13,7 +13,7 @@ user_layer(
 
 container_layer(
   name = "files",
-  debs = ["@grafana//file", "//deps/stretch:grafana"],
+  debs = ["@grafana//file", "//deps/buster:grafana"],
 )
 
 container_layer(
@@ -32,7 +32,7 @@ container_layer(
 # see https://github.com/grafana/grafana-docker
 container_image(
   name = "grafana",
-  base = "//base:stretch",
+  base = "//base:buster",
   layers = [":user", ":files", ":init", ":config"],
 
   env = {

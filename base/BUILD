@@ -1,17 +1,17 @@
 package(default_visibility = ["//visibility:public"])
 
 genrule(
-  name = "stretch_tar",
-  srcs = ["@debian_stretch//file"],
-  outs = ["stretch_extracted.tar"],
+  name = "buster_tar",
+  srcs = ["@debian_buster//file"],
+  outs = ["buster_extracted.tar"],
   cmd = "cat $< | xzcat >$@",
 )
 
 container_layer(
-  name = "stretch_layer",
-  tars = [":stretch_tar"],
+  name = "buster_layer",
+  tars = [":buster_tar"],
 )
 container_image(
-  name = "stretch",
-  layers = [":stretch_layer"],
+  name = "buster",
+  layers = [":buster_layer"],
 )

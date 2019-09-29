@@ -8,12 +8,12 @@ container_layer(
 
 container_layer(
   name = "zulu_8_files",
-  debs = ["//deps/stretch:zulu_8"]
+  debs = ["//deps/buster:zulu_8"]
 )
 
 container_image(
   name = "zulu",
-  base = "//base:stretch",
+  base = "//base:buster",
   layers = ["//base/ca_certificates", ":zulu_8_files", "//java:script_files"],
   env = {
     "LANG": "C.UTF-8",
@@ -38,12 +38,12 @@ container_image(
 
 container_layer(
   name = "zulu_11_files",
-  debs = ["//deps/stretch:zulu_11"]
+  debs = ["//deps/buster:zulu_11"]
 )
 
 container_image(
   name = "zulu_11",
-  base = "//base:stretch",
+  base = "//base:buster",
   layers = ["//base/ca_certificates", ":zulu_11_files", "//java:script_files"],
   env = {
     "LANG": "C.UTF-8",
@@ -77,7 +77,7 @@ container_layer(
 
 container_image(
   name = "graal",
-  base = "//base:stretch",
+  base = "//base:buster",
   layers = ["//base/ca_certificates", ":graal_files", "//java:script_files"],
   env = {
     "LANG": "C.UTF-8",
