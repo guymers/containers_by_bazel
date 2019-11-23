@@ -1,9 +1,9 @@
-CATALINA_HOME = "/usr/share/tomcat8"
-CATALINA_BASE = "/var/lib/tomcat8"
+CATALINA_HOME = "/usr/share/tomcat9"
+CATALINA_BASE = "/var/lib/tomcat9"
 
 container_layer(
   name = "deps",
-  debs = ["//deps/buster:zulu", "//deps/buster:tomcat9"],
+  debs = ["//deps/buster:zulu_8", "//deps/buster:tomcat9"],
 )
 
 container_layer(

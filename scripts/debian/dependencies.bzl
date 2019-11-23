@@ -83,7 +83,7 @@ def target_path( script):
   return "@containers_by_bazel//scripts/debian:" + script
 
 def dependency_name(dependency):
-  return dependency.strip(chars=':')
+  return dependency.strip(':')
 
 def container_image(name, tag):
   return "bazel/dependencies:%s-%s" % (name, tag)

@@ -1,7 +1,10 @@
 -mem 2048
 -ivy /ivy2
 
--Dsbt.preloaded=/usr/share/sbt/lib/local-preloaded
+-J-Dsbt.preloaded=/usr/share/sbt/lib/local-preloaded
+
+-J-Dsbt.banner=false
+-J-Dsbt.supershell=false
 
 -J-XX:+CMSClassUnloadingEnabled
 -J-XX:+UseConcMarkSweepGC

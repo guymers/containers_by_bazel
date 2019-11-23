@@ -1,5 +1,5 @@
-libncurses5=6.0+20161126-1+deb9u2
-libsctp1=1.0.17+dfsg-1+b1
-libssl1.0.2=1.0.2s-1~deb9u1
-libwxgtk3.0-0v5=3.0.2+dfsg-4
-procps=2:3.3.12-3+deb9u1
+libncurses5=6.1+20181013-2+deb10u2
+libsctp1=1.0.18+dfsg-1
+libssl1.1=1.1.1d-0+deb10u2
+libwxgtk3.0-0v5=3.0.4+dfsg-8
+procps=2:3.3.15-2

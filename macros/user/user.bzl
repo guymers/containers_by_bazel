@@ -1,4 +1,4 @@
-load("@bazel_rules_container//container:layer.bzl", "container_layer")
+load("@io_bazel_rules_docker//container:container.bzl", "container_layer")
 
 def user_layer(name, id, user, home, shell = "/usr/sbin/nologin"):
   native.genrule(

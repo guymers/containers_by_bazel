@@ -30,18 +30,18 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_file"
 
 def dependency_repositories():
   http_archive(
-    name = "bazel_rules_container",
-    sha256 = "937e251356309f8e8e8f92c7d03cdf9dd298386412d2e7bcfc8be2dc8c6026e9",
-    strip_prefix = "bazel_rules_container-80e14379ffc15856cb3c0459ef5f9010ee30b8fc",
-    url = "https://github.com/guymers/bazel_rules_container/archive/80e14379ffc15856cb3c0459ef5f9010ee30b8fc.zip",
+    name = "bazel_rules_container_test",
+    sha256 = "46b4c002d853a60f90fb95756c640f60417903c19c1e6d928c3489b1308a81a2",
+    strip_prefix = "bazel_rules_container_test-0.10.0",
+    url = "https://github.com/guymers/bazel_rules_container/archive/0.10.0.tar.gz",
   )
 
-  # Update to 20190910 for amd64 (debuerreotype 0.10)
+  # Update to 20191118 for amd64 (debuerreotype 0.10)
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/74e1a3304401c2eb9c6624ae1056d0a438c15189/buster/slim/rootfs.tar.xz"],
-    sha256 = "3203b7e670a5282bf3f9320ad13e3f001ef9fa7fa3b479105bda4755dcdf4f30",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/17d8dadb220460bf153bf2de493c2bc873ef52de/buster/slim/rootfs.tar.xz"],
+    sha256 = "fb8807e05d5b4cbf1685a78b1c65d750bc1605cc660f9701c9f5ecee1e39a430",
   )
   deb_buster()
 
@@ -68,7 +68,7 @@ def dependency_repositories():
   http_archive(
     name = "graal",
     url = "https://github.com/oracle/graal/releases/download/vm-" + GRAAL_VERSION + "/graalvm-ce-linux-amd64-" + GRAAL_VERSION + ".tar.gz",
-    sha256 = "9d8a82788c3aaede4a05366f79f8b0b328957d0bb7479c986f6f1354b1c7c4ea",
+    sha256 = "c3af1238c8021cbf018e4824a39823a246256596979bd6ec55685ccf661b253b",
     build_file_content = "exports_files(['graalvm-ce-" + GRAAL_VERSION + "'])",
   )
 
@@ -85,21 +85,21 @@ def dependency_repositories():
   native.maven_jar(
     name = "jmx_prometheus_javaagent",
     artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:" + PROMETHEUS_JMX_JAVAAGENT,
-    sha1 = "535a033b38298ee19d4faa458de8af4072e9fd3a",
+    sha256 = "0c8e2f7b9753fd540c17546bf1a6bfdbb39747493e02ea8ad8566097607c0c2d",
   )
 
 
   http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "9bb9212541176d6fcce7bd12e4cf8a9c9649f5b63f88b3aff474e0b02c7cfe58",
+    sha256 = "fe64a24ecd26ae02ac455336f664bbd7db6a040144b3106f1c45ebd42e8a476c",
     build_file_content = "exports_files(['sbt'])",
   )
 
   http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "cd31f134791fb64d01e4d7488477e5c2defb3c2dc15eca871e97ccd281f59e80",
+    sha256 = "3fadef67092484898d8752c5f2372132b2de7b52b953338a779259b84ce6da32",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
 
@@ -109,13 +109,13 @@ def dependency_repositories():
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war"],
-    sha256 = "65543f5632ee54344f3351b34b305702df12393b3196a95c3771ddb3819b220b",
+    sha256 = "79c2042b30ad71dc9cf17a5877f64eaed405fa03e24e002ca60f8db73b7ad490",
   )
   http_file(
     name = "jenkins_agent_jar",
     downloaded_file_path = "swarm-client.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/" + JENKINS_SWARM_VERSION + "/swarm-client-" + JENKINS_SWARM_VERSION + ".jar"],
-    sha256 = "6812e86a220d2d6c4d3fffabd646b7bb19a4144693958b2a943fa6b845f081b1",
+    sha256 = "f5480b39bb54f8d7a91749e61d34199aa533f9ceb1d329edcc6d404beec3a617",
   )
 
   ###### GERRIT
@@ -179,7 +179,7 @@ def dependency_repositories():
     name = "grafana",
     downloaded_file_path = "grafana.deb",
     urls = ["https://dl.grafana.com/oss/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
-    sha256 = "ebcafa78e5fef4b6417a6da586d76e4967b151d739ab56e4de6f699472432c50",
+    sha256 = "3a5d1a76dd0b07de506a880e241cfd49cfd58b5c2e24e66d828ad59bd85ed200",
   )
 
 
@@ -188,7 +188,7 @@ def dependency_repositories():
     name = "nodejs",
     downloaded_file_path = "nodejs.tar.xz",
     urls = ["https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz"],
-    sha256 = "d2271fd8cf997fa7447d638dfa92749ff18ca4b0d796bf89f2a82bf7800d5506"
+    sha256 = "aca06db37589966829b1ef0f163a5859b156a1d8e51b415bf47590f667c30a25"
   )
 
   ###### YARN
@@ -196,7 +196,7 @@ def dependency_repositories():
     name = "yarnpkg",
     downloaded_file_path = "yarnpkg.deb",
     urls = ["https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb"],
-    sha256 = "44fe52f4003f9d92ad1478c5fb8dcd3d93021ac9ca70370e1d955c407a5cada0",
+    sha256 = "673743ed216c7d4294c3e54bf90996ac99b569cf083227261e99c5426bcf7c51",
   )
 
 
@@ -261,7 +261,7 @@ def dependency_repositories():
   native.maven_jar(
     name = "postgresql_driver",
     artifact = "org.postgresql:postgresql:9.4.1212",
-    sha1 = "38931d70811d9bfcecf9c06f7222973c038a12de",
+    sha256 = "0cb2a158be31acf218e0a4e18c8f3dbac68a3bc34806468773fc44094b0c365d",
   )
 
   http_archive(

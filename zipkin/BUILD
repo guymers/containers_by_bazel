@@ -22,12 +22,6 @@ container_layer(
   tars = ["zipkin_tar"],
 )
 
-jar_to_tar(
-  name = "zipkin_kafka_tar",
-  jar = "@zipkin_kafka//file",
-  tar = "zipkin_kafka_files.tar",
-)
-
 container_layer(
   name = "scripts",
   directory = "/",

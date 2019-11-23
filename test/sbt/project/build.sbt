@@ -1,6 +1,6 @@
 lazy val commonSettings = Seq(
   name := "containers-by-bazel",
-  scalaVersion := "2.12.4",
+  scalaVersion := "2.12.10",
 
   scalacOptions ++= Seq(
     "-deprecation",

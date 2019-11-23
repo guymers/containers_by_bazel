@@ -2,7 +2,7 @@
 set -e
 set -o pipefail
 readonly DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-readonly OUT_DIR="$DIR/../bazel-genfiles/"
+readonly OUT_DIR="$DIR/../bazel-bin/"
 readonly ROOT="$DIR/.."
 
 bazel build --jobs "$(nproc)" --verbose_failures \

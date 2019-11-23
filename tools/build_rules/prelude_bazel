@@ -1,3 +1,2 @@
-load("@bazel_rules_container//container:layer.bzl", "container_layer")
-load("@bazel_rules_container//container:image.bzl", "container_image")
-load("@bazel_rules_container//container:test.bzl", "container_test")
+load("@io_bazel_rules_docker//container:container.bzl", "container_layer", "container_image")
+load("@bazel_rules_container_test//container:test.bzl", "container_test")

@@ -55,6 +55,14 @@ container_layer(
   symlinks = {
     "./usr/lib/libblas.so.3": "/usr/lib/x86_64-linux-gnu/blas/libblas.so.3",
     "./usr/lib/liblapack.so.3": "/usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3",
+
+    "./usr/share/postgresql/12/extension/address_standardizer.control": "/usr/share/postgresql/12/extension/address_standardizer-3.control",
+    "./usr/share/postgresql/12/extension/address_standardizer_data_us.control": "/usr/share/postgresql/12/extension/address_standardizer_data_us-3.control",
+    "./usr/share/postgresql/12/extension/postgis.control": "/usr/share/postgresql/12/extension/postgis-3.control",
+    "./usr/share/postgresql/12/extension/postgis_raster.control": "/usr/share/postgresql/12/extension/postgis_raster-3.control",
+    "./usr/share/postgresql/12/extension/postgis_sfcgal.control": "/usr/share/postgresql/12/extension/postgis_sfcgal-3.control",
+    "./usr/share/postgresql/12/extension/postgis_tiger_geocoder.control": "/usr/share/postgresql/12/extension/postgis_tiger_geocoder-3.control",
+    "./usr/share/postgresql/12/extension/postgis_topology.control": "/usr/share/postgresql/12/extension/postgis_topology-3.control",
   },
 )
 container_image(
