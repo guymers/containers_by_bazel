@@ -688,7 +688,7 @@ def deb_buster():
   http_file(
     name = "deb_buster_libhiredis0_14",
     downloaded_file_path = "deb_buster_libhiredis0_14.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/h/hiredis/libhiredis0.14_0.14.0-3_amd64.deb"],
+    urls = ["http://snapshot.debian.org/archive/debian/20191207/pool/main/h/hiredis/libhiredis0.14_0.14.0-3_amd64.deb"],
     sha256 = "c78fdb6480b5b54e162306cec9373e1e2c3e234d3f04e9245e88a0a2142368d2",
   )
   http_file(
@@ -850,7 +850,7 @@ def deb_buster():
   http_file(
     name = "deb_buster_liblua5_1_0",
     downloaded_file_path = "deb_buster_liblua5_1_0.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/l/lua5.1/liblua5.1-0_5.1.5-8.1+b2_amd64.deb"],
+    urls = ["http://snapshot.debian.org/archive/debian/20191207/pool/main/l/lua5.1/liblua5.1-0_5.1.5-8.1+b2_amd64.deb"],
     sha256 = "45866b0b9776888a263f1738c667d7ed81d75b99717e90209fb315baf2134df5",
   )
   http_file(
@@ -952,8 +952,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libnss3",
     downloaded_file_path = "deb_buster_libnss3.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/n/nss/libnss3_3.42.1-1+deb10u1_amd64.deb"],
-    sha256 = "5f27fb28acc2e3cce1e874ea33284a9d746857a736bdc92ab1e8281a6b0beb86",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20191207/pool/updates/main/n/nss/libnss3_3.42.1-1+deb10u2_amd64.deb"],
+    sha256 = "e9a421a3ca17274eb471d55034b13a5845306c55967619d2b1f3c5ee54bfa891",
   )
   http_file(
     name = "deb_buster_libnuma1",
@@ -1522,13 +1522,13 @@ def deb_buster():
   http_file(
     name = "deb_buster_lua_bitop",
     downloaded_file_path = "deb_buster_lua_bitop.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/l/lua-bitop/lua-bitop_1.0.2-5_amd64.deb"],
+    urls = ["http://snapshot.debian.org/archive/debian/20191207/pool/main/l/lua-bitop/lua-bitop_1.0.2-5_amd64.deb"],
     sha256 = "e7a286f04b4fced769b4da574e13a058dac1e6ad23660998643bf1af8a875b1a",
   )
   http_file(
     name = "deb_buster_lua_cjson",
     downloaded_file_path = "deb_buster_lua_cjson.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/l/lua-cjson/lua-cjson_2.1.0+dfsg-2.1_amd64.deb"],
+    urls = ["http://snapshot.debian.org/archive/debian/20191207/pool/main/l/lua-cjson/lua-cjson_2.1.0+dfsg-2.1_amd64.deb"],
     sha256 = "4bdf90fe39c1de756c22c3c52332bc6e694c53645c4059932e2e0917e9f07517",
   )
   http_file(
@@ -1834,14 +1834,14 @@ def deb_buster():
   http_file(
     name = "deb_buster_redis_server",
     downloaded_file_path = "deb_buster_redis_server.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20191028/pool/main/r/redis/redis-server_5.0.6-1~bpo10+1_amd64.deb"],
-    sha256 = "4f86d59caba484ab33c34e8461d8c1d154f1e87f530ee1a56b44ff94bd8531b9",
+    urls = ["http://snapshot.debian.org/archive/debian/20191207/pool/main/r/redis/redis-server_5.0.7-1~bpo10+1_amd64.deb"],
+    sha256 = "4d894f88a9cbde52a9729f6b7d3a3aaad32d6ce8a7c43a984fe93e92cc8cf021",
   )
   http_file(
     name = "deb_buster_redis_tools",
     downloaded_file_path = "deb_buster_redis_tools.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20191028/pool/main/r/redis/redis-tools_5.0.6-1~bpo10+1_amd64.deb"],
-    sha256 = "144ba1ff565023823b1967bc76b1052bcd08dbad06669ac50884f4e84da79736",
+    urls = ["http://snapshot.debian.org/archive/debian/20191207/pool/main/r/redis/redis-tools_5.0.7-1~bpo10+1_amd64.deb"],
+    sha256 = "00928941695cabc02f5019d25a8b889aa8368f212475ca1d8f978d2573c90bb9",
   )
   http_file(
     name = "deb_buster_sensible_utils",
@@ -1912,8 +1912,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_zulu_11",
     downloaded_file_path = "deb_buster_zulu_11.deb",
-    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu11.35.13-ca-jdk11.0.5-linux_amd64.deb"],
-    sha256 = "6148d4468620d4153e72978b71073ed93627c41883ebebc7343921234d80ccab",
+    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu11.35.15-ca-jdk11.0.5-linux_amd64.deb"],
+    sha256 = "379f5684a3567874f660ec7fe2775af69115612a3a1e15e516822c6855008cad",
   )
   http_file(
     name = "deb_buster_zulu_8",

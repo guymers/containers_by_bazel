@@ -92,7 +92,7 @@ def dependency_repositories():
   http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "fe64a24ecd26ae02ac455336f664bbd7db6a040144b3106f1c45ebd42e8a476c",
+    sha256 = "55cc71e4f21f2dde9ba928b6c76f12016443505b32d0c47b19adf3288f94e62f",
     build_file_content = "exports_files(['sbt'])",
   )
 
@@ -123,14 +123,14 @@ def dependency_repositories():
     name = "gerrit_war",
     downloaded_file_path = "gerrit.war",
     urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
-    sha256 = "dd72c5838889b582aa4df421544bcca1b021bb593dfa884656fd8a209d87d26a",
+    sha256 = "d8e39297c53652f5b9075f5a2493c9ef49a383151eff49d2fb366bb42011759b",
   )
 
   ###### MAVEN
   http_archive(
     name = "maven",
     url = "https://archive.apache.org/dist/maven/maven-3/" + MAVEN_VERSION + "/binaries/apache-maven-" + MAVEN_VERSION + "-bin.tar.gz",
-    sha256 = "6a1b346af36a1f1a491c1c1a141667c5de69b42e6611d3687df26868bc0f4637",
+    sha256 = "26ad91d751b3a9a53087aefa743f4e16a17741d3915b219cf74112bf87a438c5",
     build_file_content = "exports_files(['apache-maven-" + MAVEN_VERSION + "'])",
   )
 
@@ -138,7 +138,7 @@ def dependency_repositories():
   http_archive(
     name = "zookeeper",
     url = "https://archive.apache.org/dist/zookeeper/zookeeper-" + ZOOKEEPER_VERSION + "/zookeeper-" + ZOOKEEPER_VERSION + ".tar.gz",
-    sha256 = "7ced798e41d2027784b8fd55c908605ad5bd94a742d5dab2506be8f94770594d",
+    sha256 = "b14f7a0fece8bd34c7fffa46039e563ac5367607c612517aa7bd37306afbd1cd",
     build_file_content = "exports_files(['zookeeper-" + ZOOKEEPER_VERSION + "'])",
   )
 
@@ -179,7 +179,7 @@ def dependency_repositories():
     name = "grafana",
     downloaded_file_path = "grafana.deb",
     urls = ["https://dl.grafana.com/oss/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
-    sha256 = "3a5d1a76dd0b07de506a880e241cfd49cfd58b5c2e24e66d828ad59bd85ed200",
+    sha256 = "ea1d6ec1d55398e908726931b2e6c13ae94f55a331c3dbe6f6e1b0b95e78e161",
   )
 
 
@@ -196,7 +196,7 @@ def dependency_repositories():
     name = "yarnpkg",
     downloaded_file_path = "yarnpkg.deb",
     urls = ["https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb"],
-    sha256 = "673743ed216c7d4294c3e54bf90996ac99b569cf083227261e99c5426bcf7c51",
+    sha256 = "cc33d0ec6bdefe8a2d0057cefbb0145c3985020cbcd9d07ef3b1580ce2b3446f",
   )
 
 
