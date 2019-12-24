@@ -27,6 +27,7 @@ load(
 load("//deps/buster:buster.bzl", "deb_buster")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_file")
+load("@bazel_tools//tools/build_defs/repo:maven_rules.bzl", "maven_jar")
 
 def dependency_repositories():
   http_archive(
@@ -82,10 +83,10 @@ def dependency_repositories():
     build_file_content = "exports_files(['prometheus'])",
   )
 
-  native.maven_jar(
+  maven_jar(
     name = "jmx_prometheus_javaagent",
     artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:" + PROMETHEUS_JMX_JAVAAGENT,
-    sha256 = "0c8e2f7b9753fd540c17546bf1a6bfdbb39747493e02ea8ad8566097607c0c2d",
+    sha1 = "535a033b38298ee19d4faa458de8af4072e9fd3a",
   )
 
 
@@ -258,10 +259,10 @@ def dependency_repositories():
       'buildomatic', \
     ])"
   )
-  native.maven_jar(
+  maven_jar(
     name = "postgresql_driver",
     artifact = "org.postgresql:postgresql:9.4.1212",
-    sha256 = "0cb2a158be31acf218e0a4e18c8f3dbac68a3bc34806468773fc44094b0c365d",
+    sha1 = "38931d70811d9bfcecf9c06f7222973c038a12de",
   )
 
   http_archive(

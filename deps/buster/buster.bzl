@@ -136,8 +136,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_git_man",
     downloaded_file_path = "deb_buster_git_man.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/g/git/git-man_2.20.1-2_all.deb"],
-    sha256 = "c1eb9d4b879e537b3a374b31bcd51c87619f06cf9b354098fe8d40af4c2bd4b4",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20191224/pool/updates/main/g/git/git-man_2.20.1-2+deb10u1_all.deb"],
+    sha256 = "1eb18ed61e8812bee205b12ff605b76117ce094a337f39e9f3009284eddd6ea1",
   )
   http_file(
     name = "deb_buster_gtk_update_icon_cache",
@@ -1156,14 +1156,14 @@ def deb_buster():
   http_file(
     name = "deb_buster_libsasl2_2",
     downloaded_file_path = "deb_buster_libsasl2_2.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.27+dfsg-1_amd64.deb"],
-    sha256 = "d5876fb193c476a2220a1b36e377962dcd0273e3f8a2ea42e9b599ff480eb655",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20191224/pool/updates/main/c/cyrus-sasl2/libsasl2-2_2.1.27+dfsg-1+deb10u1_amd64.deb"],
+    sha256 = "4a3fb6e0953789f3de455ad7c921294978d734e6395bc45bd6039dcd9634d263",
   )
   http_file(
     name = "deb_buster_libsasl2_modules_db",
     downloaded_file_path = "deb_buster_libsasl2_modules_db.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/c/cyrus-sasl2/libsasl2-modules-db_2.1.27+dfsg-1_amd64.deb"],
-    sha256 = "b2eec6e91610c3daf0b934931553cc3c8130a435ca9cdacbbae4ffa629546f91",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20191224/pool/updates/main/c/cyrus-sasl2/libsasl2-modules-db_2.1.27+dfsg-1+deb10u1_amd64.deb"],
+    sha256 = "c99437674b33964f44eb54b1a4d8cb5bbca0293989cd3d426bcb54e9f54d88db",
   )
   http_file(
     name = "deb_buster_libsctp1",
