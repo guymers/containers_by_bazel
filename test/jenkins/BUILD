@@ -9,7 +9,7 @@ container_test(
   size = "small",
   image = ":jenkins_wget",
   daemon = True,
-  mem_limit = "1024m",
+  mem_limit = "1500m",
   read_only = False, # loads native libs from /tmp
   test = "test.sh",
   golden = "output.txt",

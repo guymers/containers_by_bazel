@@ -1576,8 +1576,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_nginx",
     downloaded_file_path = "deb_buster_nginx.deb",
-    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.17.6-1~buster_amd64.deb"],
-    sha256 = "fa6ca776d3dc6b8fd72b698c6377b25ba676a1b6602386d525caca04b81a6747",
+    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.17.7-1~buster_amd64.deb"],
+    sha256 = "71603aa975b124d5478396b2c4f86e968b5e5a746c8681dfb5232735dbf68547",
   )
   http_file(
     name = "deb_buster_numactl",

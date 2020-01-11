@@ -37,12 +37,12 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.10.0.tar.gz",
   )
 
-  # Update to 20191118 for amd64 (debuerreotype 0.10)
+  # Update to 20191224 for amd64 (debuerreotype 0.10)
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/17d8dadb220460bf153bf2de493c2bc873ef52de/buster/slim/rootfs.tar.xz"],
-    sha256 = "fb8807e05d5b4cbf1685a78b1c65d750bc1605cc660f9701c9f5ecee1e39a430",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/7a782c4f5f3a161936db0cd26a2623b4017d797c/buster/slim/rootfs.tar.xz"],
+    sha256 = "e9f5df29b919b82a1580ef26f0cc254134d511af37c264c525d551fff8af4e27",
   )
   deb_buster()
 
@@ -66,12 +66,17 @@ def dependency_repositories():
   )
 
   ###### GRAAL
-  http_archive(
-    name = "graal",
-    url = "https://github.com/oracle/graal/releases/download/vm-" + GRAAL_VERSION + "/graalvm-ce-linux-amd64-" + GRAAL_VERSION + ".tar.gz",
-    sha256 = "c3af1238c8021cbf018e4824a39823a246256596979bd6ec55685ccf661b253b",
-    build_file_content = "exports_files(['graalvm-ce-" + GRAAL_VERSION + "'])",
-  )
+  [
+    http_archive(
+      name = "graal_" + v,
+      url = "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-" + GRAAL_VERSION + "/graalvm-ce-java" + v + "-linux-amd64-" + GRAAL_VERSION + ".tar.gz",
+      sha256 = sha,
+      build_file_content = "exports_files(['graalvm-ce-java" + v + "-" + GRAAL_VERSION + "'])",
+    ) for (v, sha) in [
+      ("8",  "5749d5b552078d62e5419b33409fedc566d9a085d2850f8f42d7d0eb4faac56f"),
+      ("11", "f28968eb8c977b14a088ff673ff9dd9fee15f0b8b62f5132e0209a43458ceaa7"),
+    ]
+  ]
 
 
   ###### PROMETHEUS
@@ -93,7 +98,7 @@ def dependency_repositories():
   http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "55cc71e4f21f2dde9ba928b6c76f12016443505b32d0c47b19adf3288f94e62f",
+    sha256 = "8871e54f6772bb397b36bcd503fa605b3f3afd60feddc594c8f35b25c0958cee",
     build_file_content = "exports_files(['sbt'])",
   )
 
@@ -110,7 +115,7 @@ def dependency_repositories():
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war"],
-    sha256 = "79c2042b30ad71dc9cf17a5877f64eaed405fa03e24e002ca60f8db73b7ad490",
+    sha256 = "12b9ebbf9eb1cd1deab0d11512511bcd80a5d3a754dffab54dd6385d788d5284",
   )
   http_file(
     name = "jenkins_agent_jar",
@@ -124,7 +129,7 @@ def dependency_repositories():
     name = "gerrit_war",
     downloaded_file_path = "gerrit.war",
     urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
-    sha256 = "d8e39297c53652f5b9075f5a2493c9ef49a383151eff49d2fb366bb42011759b",
+    sha256 = "7497afbd0f12bdc815aac4eca2a9b4cd8ea81252e8d58d8102c462851f990a06",
   )
 
   ###### MAVEN
@@ -189,7 +194,7 @@ def dependency_repositories():
     name = "nodejs",
     downloaded_file_path = "nodejs.tar.xz",
     urls = ["https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz"],
-    sha256 = "aca06db37589966829b1ef0f163a5859b156a1d8e51b415bf47590f667c30a25"
+    sha256 = "07cfcaa0aa9d0fcb6e99725408d9e0b07be03b844701588e3ab5dbc395b98e1b"
   )
 
   ###### YARN
