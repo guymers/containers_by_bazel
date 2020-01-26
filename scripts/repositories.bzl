@@ -247,8 +247,8 @@ def dependency_repositories():
   http_file(
     name = "zipkin",
     downloaded_file_path = "zipkin.jar",
-    urls = ["http://central.maven.org/maven2/io/zipkin/java/zipkin-server/" + ZIPKIN_VERSION + "/zipkin-server-" + ZIPKIN_VERSION + "-exec.jar"],
-    sha256 = "4de28dba97826f228608fd5069426c3b79889c3a5c26c6746ccfb5aa8f59efa9",
+    urls = ["https://repo1.maven.org/maven2/io/zipkin/zipkin-server/" + ZIPKIN_VERSION + "/zipkin-server-" + ZIPKIN_VERSION + "-exec.jar"],
+    sha256 = "5fa9a71fcbbf5389f86ecc1f4a3aa9e3933e88fc0cb7691dff6cfc1a5542a212",
   )
 
   ###### JASPER
