@@ -1264,8 +1264,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libtiff5",
     downloaded_file_path = "deb_buster_libtiff5.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/t/tiff/libtiff5_4.0.10-4_amd64.deb"],
-    sha256 = "e9bd4fab9218441b5869fedb85ed48122f62da0fe7f4590e2175055f900e5e38",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20200126/pool/updates/main/t/tiff/libtiff5_4.1.0+git191117-2~deb10u1_amd64.deb"],
+    sha256 = "3fe1a515b8be7987aecc8bfde57066e6f008289e86493bbd676d1ebd8e40cd7e",
   )
   http_file(
     name = "deb_buster_libtinfo5",
@@ -1912,12 +1912,12 @@ def deb_buster():
   http_file(
     name = "deb_buster_zulu_11",
     downloaded_file_path = "deb_buster_zulu_11.deb",
-    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu11.35.15-ca-jdk11.0.5-linux_amd64.deb"],
-    sha256 = "379f5684a3567874f660ec7fe2775af69115612a3a1e15e516822c6855008cad",
+    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu11.37.17-ca-jdk11.0.6-linux_amd64.deb"],
+    sha256 = "427568dc97b61ffcd94eeb337d449458076b2288591b60815de5c6aa9326df38",
   )
   http_file(
     name = "deb_buster_zulu_8",
     downloaded_file_path = "deb_buster_zulu_8.deb",
-    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu8.42.0.23-ca-jdk8.0.232-linux_amd64.deb"],
-    sha256 = "5b9e97a162d702e00889f905b6f1856ec7e2b95169f4d6b5ca5963aaeec377d5",
+    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu8.44.0.11-ca-jdk8.0.242-linux_amd64.deb"],
+    sha256 = "5ad763e747b36c1fed0f22766bf836d1092beda3eb1f63293cef056d357dafcd",
   )

@@ -73,8 +73,8 @@ def dependency_repositories():
       sha256 = sha,
       build_file_content = "exports_files(['graalvm-ce-java" + v + "-" + GRAAL_VERSION + "'])",
     ) for (v, sha) in [
-      ("8",  "5749d5b552078d62e5419b33409fedc566d9a085d2850f8f42d7d0eb4faac56f"),
-      ("11", "f28968eb8c977b14a088ff673ff9dd9fee15f0b8b62f5132e0209a43458ceaa7"),
+      ("8",  "815385a1c35a1db54b9b9622059c9e8e5155460f65c3d713e55d3a84222c9194"),
+      ("11", "691f0577c75c4ba0fb50916087925e6eb8a5a73de51994a37eee022d1e2c9e7d"),
     ]
   ]
 
@@ -98,7 +98,7 @@ def dependency_repositories():
   http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "8871e54f6772bb397b36bcd503fa605b3f3afd60feddc594c8f35b25c0958cee",
+    sha256 = "813d4a3b7d2f9d8e5585d959fd5bc389c999770d5b6f2b9c313cc009f7729814",
     build_file_content = "exports_files(['sbt'])",
   )
 
@@ -152,7 +152,7 @@ def dependency_repositories():
   http_archive(
     name = "kafka",
     url = "https://archive.apache.org/dist/kafka/" + KAFKA_VERSION + "/kafka_2.12-" + KAFKA_VERSION + ".tgz",
-    sha256 = "2053edce853c6c4f1204bf72f2760fc8cfda2cfb8ad624572d81bc3571eca7be",
+    sha256 = "b9582bab0c3e8d131953b1afa72d6885ca1caae0061c2623071e7f396f2ccfee",
     build_file_content = "exports_files(['kafka_2.12-" + KAFKA_VERSION + "'])",
   )
 
