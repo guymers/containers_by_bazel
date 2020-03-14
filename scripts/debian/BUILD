@@ -3,7 +3,7 @@ package(default_visibility = ["//visibility:public"])
 load("//scripts/debian:dependencies.bzl", "dependencies")
 
 dependencies(name = "buster", dependencies = {
-  ":buster/cassandra": "cassandra",
+  ":buster/cassandra": "java",
   ":buster/dnsmasq": "base",
   ":buster/ejabberd": "base",
   ":buster/erlang": "base",

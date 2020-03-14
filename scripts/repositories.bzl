@@ -1,5 +1,6 @@
 load(
   "//scripts/versions:versions.bzl",
+  "CASSANDRA_DEB_VERSION",
   "EJABBERD_VERSION",
   "ELASTICSEARCH_VERSION",
   "ERLANG_DEB_VERSION",
@@ -37,12 +38,12 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.10.0.tar.gz",
   )
 
-  # Update to 20191224 for amd64 (debuerreotype 0.10)
+  # Update to 20200224 for amd64 (debuerreotype 0.10)
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/7a782c4f5f3a161936db0cd26a2623b4017d797c/buster/slim/rootfs.tar.xz"],
-    sha256 = "e9f5df29b919b82a1580ef26f0cc254134d511af37c264c525d551fff8af4e27",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/d6eeda93542f8e2a7d5f6e500b58fc4f12d055ce/buster/slim/rootfs.tar.xz"],
+    sha256 = "28d4d471cbaf6ed1115ddb4f38bac02902bc68058dd391f3f45cf72f395e145d",
   )
   deb_buster()
 
@@ -102,13 +103,26 @@ def dependency_repositories():
     build_file_content = "exports_files(['sbt'])",
   )
 
+  ###### CASSANDRA
+  http_file(
+    name = "cassandra",
+    downloaded_file_path = "cassandra.deb",
+    urls = ["https://dl.bintray.com/apache/cassandra/pool/main/c/cassandra/cassandra_" + CASSANDRA_DEB_VERSION + ".deb"],
+    sha256 = "64fd9ffa8fe85960e7ba3403ce2f29ea7d147145b52dd91005e920e0407c73cf",
+  )
+  http_file(
+    name = "cassandra_tools",
+    downloaded_file_path = "cassandra-tools.deb",
+    urls = ["https://dl.bintray.com/apache/cassandra/pool/main/c/cassandra/cassandra-tools_" + CASSANDRA_DEB_VERSION + ".deb"],
+    sha256 = "e6f35b20c565d06e211c50141ae672733dbd07a847381e9753892d6c1d4a3e9f",
+  )
+
   http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
     sha256 = "3fadef67092484898d8752c5f2372132b2de7b52b953338a779259b84ce6da32",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
-
 
   ###### JENKINS
   http_file(

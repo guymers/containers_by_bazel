@@ -1,5 +1,5 @@
 load("//macros/user:user.bzl", "user_layer")
-load("//scripts/versions:versions.bzl", "POSTGRESQL_MINOR_VERSION")
+load("//scripts/versions:versions.bzl", "POSTGRESQL_MAJOR_VERSION")
 
 POSTGRES_HOME = "/var/lib/postgresql"
 
@@ -24,7 +24,7 @@ container_image(
     "LANG": "en_US.UTF-8",
     "POSTGRES_HOME": POSTGRES_HOME,
     "POSTGRES_PASSWORD": "postgres",
-    "PATH": "/usr/lib/postgresql/" + POSTGRESQL_MINOR_VERSION + "/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "PATH": "/usr/lib/postgresql/" + POSTGRESQL_MAJOR_VERSION + "/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
   },
   volumes = [
     "/var/lib/postgresql",

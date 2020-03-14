@@ -1,4 +1,3 @@
-cassandra=${CASSANDRA_DEB_VERSION}
-cassandra-tools=${CASSANDRA_DEB_VERSION}
+python=2.7.16-1
 libjemalloc2=5.1.0-3
 numactl=2.0.12-1

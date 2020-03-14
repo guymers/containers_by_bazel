@@ -30,7 +30,7 @@ function build_image() {
 readonly buster_image=$(bazel run //base:buster | grep "^Tagging" | awk '{print $4}')
 docker tag "$buster_image" bazel/base:buster
 
-for app in base ca-certificates zulu java cassandra nginx postgresql; do
+for app in base ca-certificates zulu java nginx postgresql; do
   build_image "$DIR/buster" "buster" "$app" | tee "$DIR/_built/buster/$app.tmp"
   tail -n1 "$DIR/_built/buster/$app.tmp" > "$DIR/_built/buster/$app"
   rm -f "$DIR/_built/buster/$app.tmp"

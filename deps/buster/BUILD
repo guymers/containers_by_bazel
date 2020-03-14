@@ -5,8 +5,6 @@ exports_files(["buster.bzl"])
 filegroup(
   name = "cassandra",
   srcs = [
-    "@deb_buster_cassandra//file",
-    "@deb_buster_cassandra_tools//file",
     "@deb_buster_libjemalloc2//file",
     "@deb_buster_libnuma1//file",
     "@deb_buster_libpython2_7_minimal//file",
