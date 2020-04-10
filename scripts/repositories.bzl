@@ -38,12 +38,12 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.10.0.tar.gz",
   )
 
-  # Update to 20200224 for amd64 (debuerreotype 0.10)
+  # Update to 20200327 for amd64 (debuerreotype 0.10)
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/d6eeda93542f8e2a7d5f6e500b58fc4f12d055ce/buster/slim/rootfs.tar.xz"],
-    sha256 = "28d4d471cbaf6ed1115ddb4f38bac02902bc68058dd391f3f45cf72f395e145d",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/c7d149fa1214588199f3f0b8c30851b9cea47c6b/buster/slim/rootfs.tar.xz"],
+    sha256 = "715b23267fc20adceae86420f20ce6c1ac2884751a8bfcb46615084acf7ffff8",
   )
   deb_buster()
 
@@ -74,8 +74,8 @@ def dependency_repositories():
       sha256 = sha,
       build_file_content = "exports_files(['graalvm-ce-java" + v + "-" + GRAAL_VERSION + "'])",
     ) for (v, sha) in [
-      ("8",  "815385a1c35a1db54b9b9622059c9e8e5155460f65c3d713e55d3a84222c9194"),
-      ("11", "691f0577c75c4ba0fb50916087925e6eb8a5a73de51994a37eee022d1e2c9e7d"),
+      ("8",  "16ef8d89f014b4d295b7ca0c54343eab3c7d24e18b2d376665f5b12bb643723d"),
+      ("11", "d16c4a340a4619d98936754caeb6f49ee7a61d809c5a270e192b91cbc474c726"),
     ]
   ]
 
@@ -99,7 +99,7 @@ def dependency_repositories():
   http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "813d4a3b7d2f9d8e5585d959fd5bc389c999770d5b6f2b9c313cc009f7729814",
+    sha256 = "ecd4e9b23a07d739065ecc2e00d040063a156131cbc9a9c0e9d8ca57966f641a",
     build_file_content = "exports_files(['sbt'])",
   )
 
@@ -129,7 +129,7 @@ def dependency_repositories():
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war"],
-    sha256 = "12b9ebbf9eb1cd1deab0d11512511bcd80a5d3a754dffab54dd6385d788d5284",
+    sha256 = "5a6cbb836ceb79728c2d9f72645d0680f789cdb09a44485076aba6143bea953e",
   )
   http_file(
     name = "jenkins_agent_jar",
@@ -143,7 +143,7 @@ def dependency_repositories():
     name = "gerrit_war",
     downloaded_file_path = "gerrit.war",
     urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
-    sha256 = "7497afbd0f12bdc815aac4eca2a9b4cd8ea81252e8d58d8102c462851f990a06",
+    sha256 = "81894ca564626fdc774fd09a14b91b9d0c7e836e35fe9f55653f740d451124de",
   )
 
   ###### MAVEN
@@ -166,7 +166,7 @@ def dependency_repositories():
   http_archive(
     name = "kafka",
     url = "https://archive.apache.org/dist/kafka/" + KAFKA_VERSION + "/kafka_2.12-" + KAFKA_VERSION + ".tgz",
-    sha256 = "b9582bab0c3e8d131953b1afa72d6885ca1caae0061c2623071e7f396f2ccfee",
+    sha256 = "2177cbd14118999e1d76fec628ca78ace7e6f841219dbc6035027c796bbe1a2a",
     build_file_content = "exports_files(['kafka_2.12-" + KAFKA_VERSION + "'])",
   )
 
@@ -208,7 +208,7 @@ def dependency_repositories():
     name = "nodejs",
     downloaded_file_path = "nodejs.tar.xz",
     urls = ["https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz"],
-    sha256 = "07cfcaa0aa9d0fcb6e99725408d9e0b07be03b844701588e3ab5dbc395b98e1b"
+    sha256 = "f94a6eb06e80ef2794ebf51a2baed0b89ed307d3196ab5579f16c0fa7cc62901"
   )
 
   ###### YARN
@@ -216,7 +216,7 @@ def dependency_repositories():
     name = "yarnpkg",
     downloaded_file_path = "yarnpkg.deb",
     urls = ["https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb"],
-    sha256 = "cc33d0ec6bdefe8a2d0057cefbb0145c3985020cbcd9d07ef3b1580ce2b3446f",
+    sha256 = "fca964a971a39f7fe182ef5d0565abd2fe050bc4dcd9750eac3d383ec08ccd91",
   )
 
 
