@@ -1,7 +1,6 @@
 load(
   "//scripts/versions:versions.bzl",
   "CASSANDRA_DEB_VERSION",
-  "EJABBERD_VERSION",
   "ELASTICSEARCH_VERSION",
   "ERLANG_DEB_VERSION",
   "GERRIT_VERSION",
@@ -84,7 +83,7 @@ def dependency_repositories():
   http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "b9f57b6e64fb3048742cfa7dbcc727e1df906d8020ef246a5e81b7959ae97e08",
+    sha256 = "a3b0f1638e442c4b3d057404a93154f20df5a6073cef472a09b19a17b0c4ebfe",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -92,7 +91,7 @@ def dependency_repositories():
   maven_jar(
     name = "jmx_prometheus_javaagent",
     artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:" + PROMETHEUS_JMX_JAVAAGENT,
-    sha1 = "535a033b38298ee19d4faa458de8af4072e9fd3a",
+    sha1 = "d53e0ee016eab76c46309c51e3078b6ce6056ecc",
   )
 
 
@@ -120,7 +119,7 @@ def dependency_repositories():
   http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "3fadef67092484898d8752c5f2372132b2de7b52b953338a779259b84ce6da32",
+    sha256 = "86e7b6cfabe60e751f3cfa6ca9c4834384af071199d984804cae061925fa8445",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
 
@@ -199,7 +198,7 @@ def dependency_repositories():
     name = "grafana",
     downloaded_file_path = "grafana.deb",
     urls = ["https://dl.grafana.com/oss/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
-    sha256 = "ea1d6ec1d55398e908726931b2e6c13ae94f55a331c3dbe6f6e1b0b95e78e161",
+    sha256 = "2f307d8ec8ef72aa2831efe1d1d82d5975a801276d6ebadebb9ab0e35a59bb86",
   )
 
 
@@ -239,21 +238,12 @@ def dependency_repositories():
   )
 
 
-  ###### EJABBERD
-  http_file(
-    name = "ejabberd",
-    downloaded_file_path = "ejabberd.deb",
-    urls = ["https://www.process-one.net/downloads/ejabberd/" + EJABBERD_VERSION + "/ejabberd_" + EJABBERD_VERSION + "-0_amd64.deb"],
-    sha256 = "927cf9d9605ff21e85c54dc0e24ff6666350bdd1a7a7102594bd988759272e40",
-  )
-
-
   ###### RABBITMQ
   http_file(
     name = "rabbitmq",
     downloaded_file_path = "rabbitmq.deb",
     urls = ["https://github.com/rabbitmq/rabbitmq-server/releases/download/v" + RABBITMQ_VERSION + "/rabbitmq-server_" + RABBITMQ_VERSION + "-1_all.deb"],
-    sha256 = "5e723abf766e73f08894e09355f7df875a32b1d167e0f8cc567ff025f5a23d60",
+    sha256 = "595386aa06cd27b6c9d67f9710c80298bddd790809fc783c74634597b44b7976",
   )
 
 

@@ -1,1 +1,1 @@
-  <title>Grafana</title>
+    <title>Grafana</title>

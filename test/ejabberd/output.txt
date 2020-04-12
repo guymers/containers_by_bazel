@@ -1,2 +1,0 @@
-ejabberd 18.06 is running in that node
-{'users': [{'username': 'admin'}, {'username': 'user'}]}
