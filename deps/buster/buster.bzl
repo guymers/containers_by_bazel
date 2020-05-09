@@ -124,8 +124,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_git_man",
     downloaded_file_path = "deb_buster_git_man.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200314/pool/main/g/git/git-man_2.20.1-2+deb10u1_all.deb"],
-    sha256 = "1eb18ed61e8812bee205b12ff605b76117ce094a337f39e9f3009284eddd6ea1",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20200509/pool/updates/main/g/git/git-man_2.20.1-2+deb10u3_all.deb"],
+    sha256 = "336e0fb622ba1db1a5985f555e0437c83339c96a3491113501dc569371b7f32c",
   )
   http_file(
     name = "deb_buster_gtk_update_icon_cache",
@@ -808,14 +808,14 @@ def deb_buster():
   http_file(
     name = "deb_buster_libldap_2_4_2",
     downloaded_file_path = "deb_buster_libldap_2_4_2.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/o/openldap/libldap-2.4-2_2.4.47+dfsg-3+deb10u1_amd64.deb"],
-    sha256 = "780b7e3f4d5780a705bf5bbb6b3d1d7e93cb822e831ec4a3d0da5ffd6fc39c40",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20200509/pool/updates/main/o/openldap/libldap-2.4-2_2.4.47+dfsg-3+deb10u2_amd64.deb"],
+    sha256 = "e1751738e0f3cf798c8db1f6424789f1d388a423c158bf182c18325e109a9140",
   )
   http_file(
     name = "deb_buster_libldap_common",
     downloaded_file_path = "deb_buster_libldap_common.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/o/openldap/libldap-common_2.4.47+dfsg-3+deb10u1_all.deb"],
-    sha256 = "ee6a95d9e8a88de8770b9279239ba7bcdc754edab7b06220d960ba6eb3aaf306",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20200509/pool/updates/main/o/openldap/libldap-common_2.4.47+dfsg-3+deb10u2_all.deb"],
+    sha256 = "b3392a29de0cea29f9e8e07793d1f03fcb84a3ca25b7471e2db0e0fa93ffa566",
   )
   http_file(
     name = "deb_buster_libllvm7",
@@ -1216,14 +1216,14 @@ def deb_buster():
   http_file(
     name = "deb_buster_libssl1_1",
     downloaded_file_path = "deb_buster_libssl1_1.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20191028/pool/updates/main/o/openssl/libssl1.1_1.1.1d-0+deb10u2_amd64.deb"],
-    sha256 = "31c15130e0e4b2c907ef7cd92e50be23320a22c0c3b54e130b5258fe6bd8df2d",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20200509/pool/updates/main/o/openssl/libssl1.1_1.1.1d-0+deb10u3_amd64.deb"],
+    sha256 = "b293309a892730986e779aea48e97ea94cd58f34f07fefbd432c210ee4a427e2",
   )
   http_file(
     name = "deb_buster_libssl_dev",
     downloaded_file_path = "deb_buster_libssl_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20191028/pool/updates/main/o/openssl/libssl-dev_1.1.1d-0+deb10u2_amd64.deb"],
-    sha256 = "68f8aa67cf6d6c49da368d592ab6fc1d6b92161f3d7869204f89074f0c782b30",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20200509/pool/updates/main/o/openssl/libssl-dev_1.1.1d-0+deb10u3_amd64.deb"],
+    sha256 = "a37897b52338012c3864a76533f536ff9e2b2c6e353fb01ef90b13c3976a788b",
   )
   http_file(
     name = "deb_buster_libsuperlu5",
@@ -1264,8 +1264,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libtomcat9_java",
     downloaded_file_path = "deb_buster_libtomcat9_java.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/t/tomcat9/libtomcat9-java_9.0.16-4_all.deb"],
-    sha256 = "f7b5ca431a72ac8809fe89e4da90d74e696f3d8bbb1ba34af2c0cf92e5f128aa",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20200509/pool/updates/main/t/tomcat9/libtomcat9-java_9.0.31-1~deb10u1_all.deb"],
+    sha256 = "ff1d46c2c79cc6d18badd29bffb6e3c95e4903b3ec0caef9950f3a4efddf1435",
   )
   http_file(
     name = "deb_buster_libtool",
@@ -1492,8 +1492,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_linux_libc_dev",
     downloaded_file_path = "deb_buster_linux_libc_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200314/pool/main/l/linux/linux-libc-dev_4.19.98-1_amd64.deb"],
-    sha256 = "41c1e5b7fd58a41ed1e7e772b0cc9f1c32375446d43015e31d2d9a526e8ec55d",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20200509/pool/updates/main/l/linux/linux-libc-dev_4.19.98-1+deb10u1_amd64.deb"],
+    sha256 = "8c15e69853b37b171617f45170cf0a454371e7143578a1c7690c356b3bc46500",
   )
   http_file(
     name = "deb_buster_locales",
@@ -1564,8 +1564,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_nginx",
     downloaded_file_path = "deb_buster_nginx.deb",
-    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.17.9-1~buster_amd64.deb"],
-    sha256 = "b822c523d940d12c56f40ea29b0279a99e9b5aebba3e26c45bef2bf013a3273f",
+    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.17.10-1~buster_amd64.deb"],
+    sha256 = "0559f1ed55ed9a49b8d0c0dd078c28069d888ba559ec029d10cfc37e5a57e680",
   )
   http_file(
     name = "deb_buster_numactl",
@@ -1594,8 +1594,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_openssl",
     downloaded_file_path = "deb_buster_openssl.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20191028/pool/updates/main/o/openssl/openssl_1.1.1d-0+deb10u2_amd64.deb"],
-    sha256 = "66737f435331e6c535fd0b666fd2b100a0e2ed180188c632b39a6aa904c31ef3",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20200509/pool/updates/main/o/openssl/openssl_1.1.1d-0+deb10u3_amd64.deb"],
+    sha256 = "03a133833154325c731291c8a87daef5962dcfb75dee7cdb11f7fb923de2db82",
   )
   http_file(
     name = "deb_buster_perl",
@@ -1822,14 +1822,14 @@ def deb_buster():
   http_file(
     name = "deb_buster_redis_server",
     downloaded_file_path = "deb_buster_redis_server.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20191207/pool/main/r/redis/redis-server_5.0.7-1~bpo10+1_amd64.deb"],
-    sha256 = "4d894f88a9cbde52a9729f6b7d3a3aaad32d6ce8a7c43a984fe93e92cc8cf021",
+    urls = ["http://snapshot.debian.org/archive/debian/20200509/pool/main/r/redis/redis-server_5.0.7-7~bpo10+1_amd64.deb"],
+    sha256 = "e4270ca86ed86109bd7a7dd8662be500db889ea03f66ba820bb40deff2f837f4",
   )
   http_file(
     name = "deb_buster_redis_tools",
     downloaded_file_path = "deb_buster_redis_tools.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20191207/pool/main/r/redis/redis-tools_5.0.7-1~bpo10+1_amd64.deb"],
-    sha256 = "00928941695cabc02f5019d25a8b889aa8368f212475ca1d8f978d2573c90bb9",
+    urls = ["http://snapshot.debian.org/archive/debian/20200509/pool/main/r/redis/redis-tools_5.0.7-7~bpo10+1_amd64.deb"],
+    sha256 = "b892afd0e6dab8d4d81c24e71552467ed8ac11e5bd60be53280363785305517e",
   )
   http_file(
     name = "deb_buster_sensible_utils",
@@ -1864,8 +1864,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_tomcat9_common",
     downloaded_file_path = "deb_buster_tomcat9_common.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/t/tomcat9/tomcat9-common_9.0.16-4_all.deb"],
-    sha256 = "5e3dcc84c8a34cc65d30f30160822a46ae138b8b4e0120eab5f1e8d7a77d5f20",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20200509/pool/updates/main/t/tomcat9/tomcat9-common_9.0.31-1~deb10u1_all.deb"],
+    sha256 = "7b10eb6fda4fcff020005e6b2290908c5eb49cf6e8795e3f59ba97f27222eb09",
   )
   http_file(
     name = "deb_buster_tomcat9_user",
@@ -1900,12 +1900,12 @@ def deb_buster():
   http_file(
     name = "deb_buster_zulu_11",
     downloaded_file_path = "deb_buster_zulu_11.deb",
-    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu11.37.17-ca-jdk11.0.6-linux_amd64.deb"],
-    sha256 = "427568dc97b61ffcd94eeb337d449458076b2288591b60815de5c6aa9326df38",
+    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu11.39.15-ca-jdk11.0.7-linux_amd64.deb"],
+    sha256 = "5b98824997311f77f7d329852349d4eb1f6795d1d55fa075c76b9f488789d1fc",
   )
   http_file(
     name = "deb_buster_zulu_8",
     downloaded_file_path = "deb_buster_zulu_8.deb",
-    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu8.44.0.11-ca-jdk8.0.242-linux_amd64.deb"],
-    sha256 = "5ad763e747b36c1fed0f22766bf836d1092beda3eb1f63293cef056d357dafcd",
+    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu8.46.0.19-ca-jdk8.0.252-linux_amd64.deb"],
+    sha256 = "abd537f6e713c9bee2b016b96c6abb0deecc2c7de2f998e70024f9e8fcd82699",
   )
