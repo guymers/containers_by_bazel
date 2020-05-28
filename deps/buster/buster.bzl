@@ -118,8 +118,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_git",
     downloaded_file_path = "deb_buster_git.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200314/pool/main/g/git/git_2.20.1-2+deb10u1_amd64.deb"],
-    sha256 = "02d1269a1defb84544b89e37b15d5f1363bfbb8df6cbe834f5095282f85d719f",
+    urls = ["http://snapshot.debian.org/archive/debian/20200528/pool/main/g/git/git_2.20.1-2+deb10u3_amd64.deb"],
+    sha256 = "4cfa1d3ffd1c75cfe5a4053cf56f63a60d0616ec8ee59a2ec7259a4e8c43fde5",
   )
   http_file(
     name = "deb_buster_git_man",
@@ -358,8 +358,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libcups2",
     downloaded_file_path = "deb_buster_libcups2.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200314/pool/main/c/cups/libcups2_2.2.10-6+deb10u2_amd64.deb"],
-    sha256 = "d5dea9519516290f4f424099add8b6bb77d77c188ccca23073d855517c13b79c",
+    urls = ["http://snapshot.debian.org/archive/debian/20200528/pool/main/c/cups/libcups2_2.2.10-6+deb10u3_amd64.deb"],
+    sha256 = "e475a41483f15969f321691613eee0656a9bb4d2f05f0c5d8ddef7d309f6df1b",
   )
   http_file(
     name = "deb_buster_libcurl3_gnutls",
@@ -970,20 +970,20 @@ def deb_buster():
   http_file(
     name = "deb_buster_libpango_1_0_0",
     downloaded_file_path = "deb_buster_libpango_1_0_0.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20191028/pool/main/p/pango1.0/libpango-1.0-0_1.42.4-7~deb10u1_amd64.deb"],
-    sha256 = "2426547312628b7c1585f7043f316271d97fe32d663b1fe5b1afae8d71aa4186",
+    urls = ["http://snapshot.debian.org/archive/debian/20200528/pool/main/p/pango1.0/libpango-1.0-0_1.42.4-8~deb10u1_amd64.deb"],
+    sha256 = "efd677c77cb5e89dd94a6f981c7dd4e705e393b61ba4fd3610009d2ca140fa11",
   )
   http_file(
     name = "deb_buster_libpangocairo_1_0_0",
     downloaded_file_path = "deb_buster_libpangocairo_1_0_0.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20191028/pool/main/p/pango1.0/libpangocairo-1.0-0_1.42.4-7~deb10u1_amd64.deb"],
-    sha256 = "deccaebf49890ae9569ab94b1dbf97dfb84553c71d140d2d493f2984306c5233",
+    urls = ["http://snapshot.debian.org/archive/debian/20200528/pool/main/p/pango1.0/libpangocairo-1.0-0_1.42.4-8~deb10u1_amd64.deb"],
+    sha256 = "3ca2e8aaa6c061f91ae05163ce31b3bc63a611c63c1a43ccf855330e505825f0",
   )
   http_file(
     name = "deb_buster_libpangoft2_1_0_0",
     downloaded_file_path = "deb_buster_libpangoft2_1_0_0.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20191028/pool/main/p/pango1.0/libpangoft2-1.0-0_1.42.4-7~deb10u1_amd64.deb"],
-    sha256 = "31e25bb0553175cb1ae81c89fcf084c6222d9c66b3d801385a25d73c300a21d5",
+    urls = ["http://snapshot.debian.org/archive/debian/20200528/pool/main/p/pango1.0/libpangoft2-1.0-0_1.42.4-8~deb10u1_amd64.deb"],
+    sha256 = "4724bb2dfa25beb9c1a978de0c5780f6d3ce5aa03232e47c11b297b4899a6073",
   )
   http_file(
     name = "deb_buster_libpciaccess0",
@@ -1054,8 +1054,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libpq5",
     downloaded_file_path = "deb_buster_libpq5.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/libpq5_12.2-2.pgdg100+1_amd64.deb"],
-    sha256 = "db3035db87773756163ce342b839dd7ceecc70b8ed7d561c748fbbbdaf3673c8",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/libpq5_12.3-1.pgdg100+1_amd64.deb"],
+    sha256 = "2a08fa46631ceeb803b3cea63a352097838e1c8b284d5bfddc1712c8c8407a5d",
   )
   http_file(
     name = "deb_buster_libprocps7",
@@ -1492,8 +1492,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_linux_libc_dev",
     downloaded_file_path = "deb_buster_linux_libc_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200509/pool/updates/main/l/linux/linux-libc-dev_4.19.98-1+deb10u1_amd64.deb"],
-    sha256 = "8c15e69853b37b171617f45170cf0a454371e7143578a1c7690c356b3bc46500",
+    urls = ["http://snapshot.debian.org/archive/debian/20200528/pool/main/l/linux/linux-libc-dev_4.19.118-2_amd64.deb"],
+    sha256 = "de4cc5a658fcc7da868fe041c27c7352e00c4c387b9d8fbafa9bf3bbec56cadc",
   )
   http_file(
     name = "deb_buster_locales",
@@ -1726,8 +1726,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_postgresql_12",
     downloaded_file_path = "deb_buster_postgresql_12.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/postgresql-12_12.2-2.pgdg100+1_amd64.deb"],
-    sha256 = "dec83384e4df145f33dd88dc184f27525113318c2652776a07348f1509b3a2df",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/postgresql-12_12.3-1.pgdg100+1_amd64.deb"],
+    sha256 = "7917abf25a4acd5827ecda1ae17c3efcb0b6c5397c245bf40176ceafeabc0afe",
   )
   http_file(
     name = "deb_buster_postgresql_12_postgis_3",
@@ -1744,20 +1744,20 @@ def deb_buster():
   http_file(
     name = "deb_buster_postgresql_client_12",
     downloaded_file_path = "deb_buster_postgresql_client_12.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/postgresql-client-12_12.2-2.pgdg100+1_amd64.deb"],
-    sha256 = "4061513fcead266b4d97f3ec3684be638181f48e6034d0f9a447742ab8eb7792",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/postgresql-client-12_12.3-1.pgdg100+1_amd64.deb"],
+    sha256 = "3c09075da09838466a5b5bb79a79882c2b7f9c38b4ff4a939c1a692882ca6c58",
   )
   http_file(
     name = "deb_buster_postgresql_client_common",
     downloaded_file_path = "deb_buster_postgresql_client_common.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_213.pgdg100+1_all.deb"],
-    sha256 = "f2c0ff066447e258a625d59eb6a22f5654093fc4e7d00d14c4d19739023b610a",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_215.pgdg100+1_all.deb"],
+    sha256 = "29c9e812d6129603c518548e9173da209027ed24a3e882784847e83ff01fe003",
   )
   http_file(
     name = "deb_buster_postgresql_common",
     downloaded_file_path = "deb_buster_postgresql_common.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_213.pgdg100+1_all.deb"],
-    sha256 = "400879b6dfe2d32b420d9c94eeede65e3d48ff8ca3564c456af41d7d1999c30d",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_215.pgdg100+1_all.deb"],
+    sha256 = "cf5ddd7a4cc7797528c43d34118b21dff441ff25255e09a24f9ef781ae6516af",
   )
   http_file(
     name = "deb_buster_procps",
@@ -1822,14 +1822,14 @@ def deb_buster():
   http_file(
     name = "deb_buster_redis_server",
     downloaded_file_path = "deb_buster_redis_server.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200509/pool/main/r/redis/redis-server_5.0.7-7~bpo10+1_amd64.deb"],
-    sha256 = "e4270ca86ed86109bd7a7dd8662be500db889ea03f66ba820bb40deff2f837f4",
+    urls = ["http://snapshot.debian.org/archive/debian/20200528/pool/main/r/redis/redis-server_5.0.3-4+deb10u1_amd64.deb"],
+    sha256 = "d9ef0d43d3c13c0e8dc50c286d857110e72c8da7af71e9e23d605a6358139fb6",
   )
   http_file(
     name = "deb_buster_redis_tools",
     downloaded_file_path = "deb_buster_redis_tools.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200509/pool/main/r/redis/redis-tools_5.0.7-7~bpo10+1_amd64.deb"],
-    sha256 = "b892afd0e6dab8d4d81c24e71552467ed8ac11e5bd60be53280363785305517e",
+    urls = ["http://snapshot.debian.org/archive/debian/20200528/pool/main/r/redis/redis-tools_5.0.3-4+deb10u1_amd64.deb"],
+    sha256 = "b77006d5f476178e7195612ad64dfe03850b4248b500efc4f3dfac907c1ec03a",
   )
   http_file(
     name = "deb_buster_sensible_utils",

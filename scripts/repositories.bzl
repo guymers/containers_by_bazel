@@ -37,12 +37,12 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.10.0.tar.gz",
   )
 
-  # Update to 20200327 for amd64 (debuerreotype 0.10)
+  # Update to 20200514 for amd64 (debuerreotype 0.10)
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/c7d149fa1214588199f3f0b8c30851b9cea47c6b/buster/slim/rootfs.tar.xz"],
-    sha256 = "715b23267fc20adceae86420f20ce6c1ac2884751a8bfcb46615084acf7ffff8",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/18cb4d0418be1c80fb19141b69ac2e0600b2d601/buster/slim/rootfs.tar.xz"],
+    sha256 = "b2bdc0d3ccd0760249a3cb876ed0c4150403940e286c0e09c8a49e7d7625eec5",
   )
   deb_buster()
 
