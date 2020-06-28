@@ -37,12 +37,12 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.10.0.tar.gz",
   )
 
-  # Update to 20200514 for amd64 (debuerreotype 0.10)
+  # Update to 20200607 for amd64 (debuerreotype 0.10)
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/18cb4d0418be1c80fb19141b69ac2e0600b2d601/buster/slim/rootfs.tar.xz"],
-    sha256 = "b2bdc0d3ccd0760249a3cb876ed0c4150403940e286c0e09c8a49e7d7625eec5",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/c46f32c73cf092481df492dae1564a2431c5b988/buster/slim/rootfs.tar.xz"],
+    sha256 = "aba1645c00539892aa4cb2409a58c3366ab48f9c126386ca959b339616dcb7b4",
   )
   deb_buster()
 
@@ -73,8 +73,8 @@ def dependency_repositories():
       sha256 = sha,
       build_file_content = "exports_files(['graalvm-ce-java" + v + "-" + GRAAL_VERSION + "'])",
     ) for (v, sha) in [
-      ("8",  "16ef8d89f014b4d295b7ca0c54343eab3c7d24e18b2d376665f5b12bb643723d"),
-      ("11", "d16c4a340a4619d98936754caeb6f49ee7a61d809c5a270e192b91cbc474c726"),
+      ( "8", "4fac212b37cd548831fd6587dd4d59dc068068815aa20323b47fde9529d6bb6e"),
+      ("11", "18f2dc19652c66ccd5bd54198e282db645ea894d67357bf5e4121a9392fc9394"),
     ]
   ]
 
@@ -119,7 +119,7 @@ def dependency_repositories():
   http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "86e7b6cfabe60e751f3cfa6ca9c4834384af071199d984804cae061925fa8445",
+    sha256 = "350af8b270bec7fda5861a15b8a5b7870fd8903d0b9a210754113d5a966ce6a6",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
 
@@ -128,7 +128,7 @@ def dependency_repositories():
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war"],
-    sha256 = "5a6cbb836ceb79728c2d9f72645d0680f789cdb09a44485076aba6143bea953e",
+    sha256 = "6375eb3a09bfde4c1fb3a7296985e225bfe2007153990a8b587e3f5f926f675d",
   )
   http_file(
     name = "jenkins_agent_jar",
@@ -142,7 +142,7 @@ def dependency_repositories():
     name = "gerrit_war",
     downloaded_file_path = "gerrit.war",
     urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
-    sha256 = "81894ca564626fdc774fd09a14b91b9d0c7e836e35fe9f55653f740d451124de",
+    sha256 = "3ac86faa44cbb3ecb57c8832950b61f55857a5e470d553de23447205d1ca2622",
   )
 
   ###### MAVEN

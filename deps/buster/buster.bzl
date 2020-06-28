@@ -1492,8 +1492,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_linux_libc_dev",
     downloaded_file_path = "deb_buster_linux_libc_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200528/pool/main/l/linux/linux-libc-dev_4.19.118-2_amd64.deb"],
-    sha256 = "de4cc5a658fcc7da868fe041c27c7352e00c4c387b9d8fbafa9bf3bbec56cadc",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20200624/pool/updates/main/l/linux/linux-libc-dev_4.19.118-2+deb10u1_amd64.deb"],
+    sha256 = "6b4516cee829b262897781b956f9cf80123c20cc6f7c04d7f1d402ae9bb67888",
   )
   http_file(
     name = "deb_buster_locales",
