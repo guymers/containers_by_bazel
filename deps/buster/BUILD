@@ -272,6 +272,7 @@ filegroup(
     "@deb_buster_libnghttp2_14//file",
     "@deb_buster_libpcre2_8_0//file",
     "@deb_buster_libpq5//file",
+    "@deb_buster_libprocps7//file",
     "@deb_buster_libpsl5//file",
     "@deb_buster_librtmp1//file",
     "@deb_buster_libsasl2_2//file",
@@ -280,6 +281,7 @@ filegroup(
     "@deb_buster_libssh2_1//file",
     "@deb_buster_libssl1_1//file",
     "@deb_buster_libxml2//file",
+    "@deb_buster_lsb_base//file",
     "@deb_buster_mime_support//file",
     "@deb_buster_php7_3_bcmath//file",
     "@deb_buster_php7_3_cli//file",
@@ -294,6 +296,7 @@ filegroup(
     "@deb_buster_php7_3_readline//file",
     "@deb_buster_php_apcu//file",
     "@deb_buster_php_common//file",
+    "@deb_buster_procps//file",
     "@deb_buster_psmisc//file",
     "@deb_buster_sensible_utils//file",
     "@deb_buster_ucf//file",
@@ -659,6 +662,7 @@ filegroup(
     "@deb_buster_ucf//file",
     "@deb_buster_x11_common//file",
     "@deb_buster_zulu_11//file",
+    "@deb_buster_zulu_repo//file",
   ],
 )
 

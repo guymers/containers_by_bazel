@@ -207,7 +207,7 @@ def dependency_repositories():
     name = "nodejs",
     downloaded_file_path = "nodejs.tar.xz",
     urls = ["https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz"],
-    sha256 = "f94a6eb06e80ef2794ebf51a2baed0b89ed307d3196ab5579f16c0fa7cc62901"
+    sha256 = "b8dc634798ee783482c2ae1755bd7dff09d83fa7bb037cdc370b601d0a5e5cbb"
   )
 
   ###### YARN
