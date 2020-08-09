@@ -693,6 +693,7 @@ filegroup(
     "@deb_buster_ucf//file",
     "@deb_buster_x11_common//file",
     "@deb_buster_zulu_8//file",
+    "@deb_buster_zulu_repo//file",
   ],
 )
 

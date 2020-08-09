@@ -8,8 +8,11 @@ dependency_repositories()
 load("@bazel_rules_container_test//container:repositories.bzl", container_test_repositories = "repositories")
 container_test_repositories()
 
-load("@io_bazel_rules_docker//repositories:repositories.bzl", docker_rules_repositories = "repositories")
-docker_rules_repositories()
+load("@io_bazel_rules_docker//repositories:repositories.bzl", container_repositories = "repositories")
+container_repositories()
 
-load("@io_bazel_rules_docker//repositories:deps.bzl", docker_rules_deps = "deps")
-docker_rules_deps()
+load("@io_bazel_rules_docker//repositories:deps.bzl", container_deps = "deps")
+container_deps()
+
+load("@io_bazel_rules_docker//repositories:pip_repositories.bzl", "pip_deps")
+pip_deps()

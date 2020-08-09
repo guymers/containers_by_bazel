@@ -400,8 +400,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libdbus_1_3",
     downloaded_file_path = "deb_buster_libdbus_1_3.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/d/dbus/libdbus-1-3_1.12.16-1_amd64.deb"],
-    sha256 = "b6667d3d29f2a4b5efb3f7368eb750582341ab0554213246d2d6713af09e552f",
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/d/dbus/libdbus-1-3_1.12.20-0+deb10u1_amd64.deb"],
+    sha256 = "e394bd35626e3ccf437e1e7776e6573636e6413b0ebe2483bd54ac243eed1007",
   )
   http_file(
     name = "deb_buster_libdrm2",
@@ -442,7 +442,7 @@ def deb_buster():
   http_file(
     name = "deb_buster_libeclipse_jdt_core_java",
     downloaded_file_path = "deb_buster_libeclipse_jdt_core_java.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/e/eclipse-jdt-core/libeclipse-jdt-core-java_3.16.0+eclipse4.10-1_all.deb"],
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/e/eclipse-jdt-core/libeclipse-jdt-core-java_3.16.0+eclipse4.10-1_all.deb"],
     sha256 = "eed81e5cf972949572e3ec7b8b4ff1e27cb131a9d0032e121e1aea8b2e085033",
   )
   http_file(
@@ -676,7 +676,7 @@ def deb_buster():
   http_file(
     name = "deb_buster_libhiredis0_14",
     downloaded_file_path = "deb_buster_libhiredis0_14.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20191207/pool/main/h/hiredis/libhiredis0.14_0.14.0-3_amd64.deb"],
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/h/hiredis/libhiredis0.14_0.14.0-3_amd64.deb"],
     sha256 = "c78fdb6480b5b54e162306cec9373e1e2c3e234d3f04e9245e88a0a2142368d2",
   )
   http_file(
@@ -730,8 +730,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libjson_c3",
     downloaded_file_path = "deb_buster_libjson_c3.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200410/pool/main/j/json-c/libjson-c3_0.12.1+ds-2_amd64.deb"],
-    sha256 = "5b0194dac67efa04ef6df15e3080bd53448b0209f6cf25ff6a46c6ba8dccc354",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20200809/pool/updates/main/j/json-c/libjson-c3_0.12.1+ds-2+deb10u1_amd64.deb"],
+    sha256 = "5b010246a415b210cb621a54324534cab5ac2cd94481a80705a0f2c426ae8a92",
   )
   http_file(
     name = "deb_buster_libk5crypto3",
@@ -838,7 +838,7 @@ def deb_buster():
   http_file(
     name = "deb_buster_liblua5_1_0",
     downloaded_file_path = "deb_buster_liblua5_1_0.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20191207/pool/main/l/lua5.1/liblua5.1-0_5.1.5-8.1+b2_amd64.deb"],
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/l/lua5.1/liblua5.1-0_5.1.5-8.1+b2_amd64.deb"],
     sha256 = "45866b0b9776888a263f1738c667d7ed81d75b99717e90209fb315baf2134df5",
   )
   http_file(
@@ -856,8 +856,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libmariadb3",
     downloaded_file_path = "deb_buster_libmariadb3.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200410/pool/main/m/mariadb-10.3/libmariadb3_10.3.22-0+deb10u1_amd64.deb"],
-    sha256 = "d1ea3bbf04124a8d0aab4541956bd30c8854259fe8d1b761ad1b3107a45ce3c3",
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/m/mariadb-10.3/libmariadb3_10.3.23-0+deb10u1_amd64.deb"],
+    sha256 = "7dade1def9ad94dea664cce8dde6ae04a764bfe84362233333023fff8f55dba0",
   )
   http_file(
     name = "deb_buster_libminizip1",
@@ -1024,8 +1024,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libperl5_28",
     downloaded_file_path = "deb_buster_libperl5_28.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/p/perl/libperl5.28_5.28.1-6_amd64.deb"],
-    sha256 = "a98281678609f7a3eb05bbeb6bcd389556dfb95d86babda9df32b4e340fdaf1f",
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/p/perl/libperl5.28_5.28.1-6+deb10u1_amd64.deb"],
+    sha256 = "0ca12c0fe7534a5a08df265b773b6a15a9704db008c15f366dc41cd4be53a2ad",
   )
   http_file(
     name = "deb_buster_libpixman_1_0",
@@ -1264,7 +1264,7 @@ def deb_buster():
   http_file(
     name = "deb_buster_libtomcat9_java",
     downloaded_file_path = "deb_buster_libtomcat9_java.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200718/pool/updates/main/t/tomcat9/libtomcat9-java_9.0.31-1~deb10u2_all.deb"],
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/t/tomcat9/libtomcat9-java_9.0.31-1~deb10u2_all.deb"],
     sha256 = "155a5ac2a645b43e224c0e138f664364fecaea5a749d89b12e6a4cc6baab8415",
   )
   http_file(
@@ -1492,8 +1492,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_linux_libc_dev",
     downloaded_file_path = "deb_buster_linux_libc_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200624/pool/updates/main/l/linux/linux-libc-dev_4.19.118-2+deb10u1_amd64.deb"],
-    sha256 = "6b4516cee829b262897781b956f9cf80123c20cc6f7c04d7f1d402ae9bb67888",
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/l/linux/linux-libc-dev_4.19.132-1_amd64.deb"],
+    sha256 = "7867ae34902ab3e961b530d178ee620ce3833dfb24f6d754d0d8b5ad9a252acb",
   )
   http_file(
     name = "deb_buster_locales",
@@ -1510,13 +1510,13 @@ def deb_buster():
   http_file(
     name = "deb_buster_lua_bitop",
     downloaded_file_path = "deb_buster_lua_bitop.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20191207/pool/main/l/lua-bitop/lua-bitop_1.0.2-5_amd64.deb"],
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/l/lua-bitop/lua-bitop_1.0.2-5_amd64.deb"],
     sha256 = "e7a286f04b4fced769b4da574e13a058dac1e6ad23660998643bf1af8a875b1a",
   )
   http_file(
     name = "deb_buster_lua_cjson",
     downloaded_file_path = "deb_buster_lua_cjson.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20191207/pool/main/l/lua-cjson/lua-cjson_2.1.0+dfsg-2.1_amd64.deb"],
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/l/lua-cjson/lua-cjson_2.1.0+dfsg-2.1_amd64.deb"],
     sha256 = "4bdf90fe39c1de756c22c3c52332bc6e694c53645c4059932e2e0917e9f07517",
   )
   http_file(
@@ -1528,8 +1528,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_mariadb_common",
     downloaded_file_path = "deb_buster_mariadb_common.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200410/pool/main/m/mariadb-10.3/mariadb-common_10.3.22-0+deb10u1_all.deb"],
-    sha256 = "54fb0fcefe4c0e74e6ad57cea0f47d5b585c2e9597423d8f0205aee8b0982975",
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/m/mariadb-10.3/mariadb-common_10.3.23-0+deb10u1_all.deb"],
+    sha256 = "271e2fb67a07fb9fd81f43c0e24199f28c3df437e203078345d92fa7ca6489d3",
   )
   http_file(
     name = "deb_buster_mime_support",
@@ -1552,13 +1552,13 @@ def deb_buster():
   http_file(
     name = "deb_buster_netcat",
     downloaded_file_path = "deb_buster_netcat.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/n/netcat/netcat_1.10-41.1_all.deb"],
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/n/netcat/netcat_1.10-41.1_all.deb"],
     sha256 = "26e2a9720cbd234ba3a2f769e59deb506e08356bfb08c71cd32b1f09c1e9cf42",
   )
   http_file(
     name = "deb_buster_netcat_traditional",
     downloaded_file_path = "deb_buster_netcat_traditional.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/n/netcat/netcat-traditional_1.10-41.1_amd64.deb"],
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/n/netcat/netcat-traditional_1.10-41.1_amd64.deb"],
     sha256 = "c93954faae08c48d4ad49315a53c90ac56522943782d5b72a28a8c1ceb06a175",
   )
   http_file(
@@ -1600,14 +1600,14 @@ def deb_buster():
   http_file(
     name = "deb_buster_perl",
     downloaded_file_path = "deb_buster_perl.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/p/perl/perl_5.28.1-6_amd64.deb"],
-    sha256 = "dcd5b010f41c636822e8d4e51ccee48d66dd3cc663a61cc316ac489887e210e2",
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/p/perl/perl_5.28.1-6+deb10u1_amd64.deb"],
+    sha256 = "0b7a8c30b3511f5a0de38a4300a14ccb8a9e304a3e96c0aa105e12cb4033562c",
   )
   http_file(
     name = "deb_buster_perl_modules_5_28",
     downloaded_file_path = "deb_buster_perl_modules_5_28.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/p/perl/perl-modules-5.28_5.28.1-6_all.deb"],
-    sha256 = "578764a9d163c9718158374b7bb24b012b4567cec4c74119a4e4c752d6cd6de9",
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/p/perl/perl-modules-5.28_5.28.1-6+deb10u1_all.deb"],
+    sha256 = "61c00b6f4c7a242aa6aefdc07012747607cd9c6c5392c1dcd087ce27031dd1dd",
   )
   http_file(
     name = "deb_buster_pgdg_keyring",
@@ -1822,14 +1822,14 @@ def deb_buster():
   http_file(
     name = "deb_buster_redis_server",
     downloaded_file_path = "deb_buster_redis_server.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200528/pool/main/r/redis/redis-server_5.0.3-4+deb10u1_amd64.deb"],
-    sha256 = "d9ef0d43d3c13c0e8dc50c286d857110e72c8da7af71e9e23d605a6358139fb6",
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/r/redis/redis-server_5.0.3-4+deb10u2_amd64.deb"],
+    sha256 = "787629e75b544bf6c707cc108d485df117d6fb0b515bc896046075772d93f958",
   )
   http_file(
     name = "deb_buster_redis_tools",
     downloaded_file_path = "deb_buster_redis_tools.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200528/pool/main/r/redis/redis-tools_5.0.3-4+deb10u1_amd64.deb"],
-    sha256 = "b77006d5f476178e7195612ad64dfe03850b4248b500efc4f3dfac907c1ec03a",
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/r/redis/redis-tools_5.0.3-4+deb10u2_amd64.deb"],
+    sha256 = "79cae34050898fefc1cbaee3bf81eec93ad2cca74c416afc7cd1aec49d762bbe",
   )
   http_file(
     name = "deb_buster_sensible_utils",
@@ -1864,14 +1864,14 @@ def deb_buster():
   http_file(
     name = "deb_buster_tomcat9_common",
     downloaded_file_path = "deb_buster_tomcat9_common.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200718/pool/updates/main/t/tomcat9/tomcat9-common_9.0.31-1~deb10u2_all.deb"],
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/t/tomcat9/tomcat9-common_9.0.31-1~deb10u2_all.deb"],
     sha256 = "79b545acc04b040c3ec5eddcb9a5bfa60183f87ba296cdf0d359a119cecf19a4",
   )
   http_file(
     name = "deb_buster_tomcat9_user",
     downloaded_file_path = "deb_buster_tomcat9_user.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/t/tomcat9/tomcat9-user_9.0.16-4_all.deb"],
-    sha256 = "cfeddfbba7b2b3e9d1d85545c0f4b792303bb06ddd8ff3a6557bdeafea0a1494",
+    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/t/tomcat9/tomcat9-user_9.0.31-1~deb10u2_all.deb"],
+    sha256 = "0e1c88727711adbb7280fe60fb88408949400ea25050c43c083bf8c86c2a27c6",
   )
   http_file(
     name = "deb_buster_ucf",
@@ -1906,8 +1906,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_zulu_8",
     downloaded_file_path = "deb_buster_zulu_8.deb",
-    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu8.46.0.19-ca-jdk8.0.252-linux_amd64.deb"],
-    sha256 = "abd537f6e713c9bee2b016b96c6abb0deecc2c7de2f998e70024f9e8fcd82699",
+    urls = ["http://repos.azulsystems.com/debian/pool/main/zulu8.48.0.51_1-ca-jdk8.0.262-linux_amd64.deb"],
+    sha256 = "516f0b6bb37dee16a1d665f3ac3872d2961097162be9499e94b8ea2713e507b0",
   )
   http_file(
     name = "deb_buster_zulu_repo",

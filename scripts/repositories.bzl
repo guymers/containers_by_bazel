@@ -32,17 +32,17 @@ load("@bazel_tools//tools/build_defs/repo:maven_rules.bzl", "maven_jar")
 def dependency_repositories():
   http_archive(
     name = "bazel_rules_container_test",
-    sha256 = "46b4c002d853a60f90fb95756c640f60417903c19c1e6d928c3489b1308a81a2",
-    strip_prefix = "bazel_rules_container_test-0.10.0",
-    url = "https://github.com/guymers/bazel_rules_container/archive/0.10.0.tar.gz",
+    sha256 = "0ea03839bf059c0ec7c4f95cb6cb048b84094b180b051c737cbef9ca150bcc0b",
+    strip_prefix = "bazel_rules_container_test-0.11.0",
+    url = "https://github.com/guymers/bazel_rules_container/archive/0.11.0.tar.gz",
   )
 
-  # Update to 20200607 for amd64 (debuerreotype 0.10)
+  # Update to 20200803 for amd64 (debuerreotype 0.10)
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/c46f32c73cf092481df492dae1564a2431c5b988/buster/slim/rootfs.tar.xz"],
-    sha256 = "aba1645c00539892aa4cb2409a58c3366ab48f9c126386ca959b339616dcb7b4",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/3503997cf522377bc4e4967c7f0fcbcb18c69fc8/buster/slim/rootfs.tar.xz"],
+    sha256 = "b1fe295f97980407edb25366a6eb00cfb4f9d4576acde98bfb29c7827006dfac",
   )
   deb_buster()
 
