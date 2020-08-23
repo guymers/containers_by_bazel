@@ -1,31 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <!--
-      add 'base' tag to work around the fact that 'html-webpack-plugin' does not work
-      with '__webpack_public_path__' being set as reported at https://github.com/jantimon/html-webpack-plugin/issues/119
-    -->
-    <base href="/zipkin/">
-
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-    <meta charset="UTF-8">
-    <title>Webpack App</title>
-  <link href="app-267158b70c95ccd76051.min.css" rel="stylesheet"></head>
-  <body>
-
-    <!-- we include a reduced header on page load, as this makes the page load feel much smoother -->
-
-    <div class='navbar navbar-inverse' role='navigation'>
-      <div class='container'>
-        <div class='navbar-header'>
-          <a class='navbar-brand' href='#'>
-            Zipkin<span class='muted' style='font-size: .75em; padding-left: 10px;' data-i18n="nav.inves">Investigate system behavior</span>
-          </a>
-        </div>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-
-  <script type="text/javascript" src="app-267158b70c95ccd76051.min.js"></script></body>
-</html>
+<link rel="icon" href="./favicon.ico"/>
+<link href="./static/css/2.287eba14.chunk.css" rel="stylesheet">
+<link href="./static/css/main.70d1a5e3.chunk.css" rel="stylesheet">
+<script>
+<script src="./static/js/2.5a14ec3f.chunk.js">
+<script src="./static/js/main.a16ed487.chunk.js">
