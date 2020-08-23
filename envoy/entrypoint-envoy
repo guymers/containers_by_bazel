@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
+if [ -d "$ENVOY_DATA" -a "$(stat -c '%U' "$ENVOY_DATA" 2>/dev/null)" = "root" ]; then
+  chown envoy "$ENVOY_DATA"
+  chmod o-rwx "$ENVOY_DATA"
+fi
+
+if [ -d "$ENVOY_LOGS" -a "$(stat -c '%U' "$ENVOY_LOGS" 2>/dev/null)" = "root" ]; then
+  chown envoy "$ENVOY_LOGS"
+  chmod o-rwx "$ENVOY_LOGS"
+fi
+
+if [ "$1" = 'envoy' ]; then
+  exec chroot --userspec=envoy / "$@" \
+    -c "$ENVOY_CONF/envoy.yaml" \
+    --log-level "$ENVOY_LOGLEVEL"
+else
+  exec "$@"
+fi

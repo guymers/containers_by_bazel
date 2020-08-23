@@ -104,6 +104,7 @@ Update dependencies in files:
     921 prometheus
     922 grafana
     923 kibana
+    929 envoy
     930 nginx
     931 redis
     938 ejabberd

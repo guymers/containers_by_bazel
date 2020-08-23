@@ -3,6 +3,7 @@ load(
   "CASSANDRA_DEB_VERSION",
   "ELASTICSEARCH_VERSION",
   "ERLANG_DEB_VERSION",
+  "ENVOY_VERSION",
   "GERRIT_VERSION",
   "GRAAL_VERSION",
   "GRAFANA_VERSION",
@@ -143,6 +144,14 @@ def dependency_repositories():
     downloaded_file_path = "gerrit.war",
     urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
     sha256 = "a76d651d20b691fee38e600a096eb7ea8732981de337cf1cbe5f628c8b5dbd41",
+  )
+
+  ###### ENVOY
+  http_file(
+    name = "envoy",
+    downloaded_file_path = "envoy.deb",
+    urls = ["https://dl.bintray.com/tetrate/getenvoy-deb/pool/stable/g/getenvoy-envoy/getenvoy-envoy_" + ENVOY_VERSION + ".p0.g50ef094-1p67.g2aa564b_amd64.deb"],
+    sha256 = "4d29aef1c0c62a7f29fe9300a96bda0aad7238c2327b1d3fc9126914bd3fdfeb",
   )
 
   ###### MAVEN
