@@ -2,8 +2,8 @@ load(
   "//scripts/versions:versions.bzl",
   "CASSANDRA_DEB_VERSION",
   "ELASTICSEARCH_VERSION",
-  "ERLANG_DEB_VERSION",
   "ENVOY_VERSION",
+  "ERLANG_DEB_VERSION",
   "GERRIT_VERSION",
   "GRAAL_VERSION",
   "GRAFANA_VERSION",
@@ -79,30 +79,6 @@ def dependency_repositories():
     ]
   ]
 
-
-  ###### PROMETHEUS
-  http_archive(
-    name = "prometheus",
-    url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "8fb248b579b8b9a88dd9b1686f7f68db7071960a45b28619145d3a4037375dcb",
-    strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
-    build_file_content = "exports_files(['prometheus'])",
-  )
-
-  maven_jar(
-    name = "jmx_prometheus_javaagent",
-    artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:" + PROMETHEUS_JMX_JAVAAGENT,
-    sha1 = "e1d9de7995c5172527002fc8da4fcdd86fff253b",
-  )
-
-
-  http_archive(
-    name = "sbt",
-    url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "ecd4e9b23a07d739065ecc2e00d040063a156131cbc9a9c0e9d8ca57966f641a",
-    build_file_content = "exports_files(['sbt'])",
-  )
-
   ###### CASSANDRA
   http_file(
     name = "cassandra",
@@ -117,11 +93,44 @@ def dependency_repositories():
     sha256 = "e6f35b20c565d06e211c50141ae672733dbd07a847381e9753892d6c1d4a3e9f",
   )
 
-  http_archive(
-    name = "nexus",
-    url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "350af8b270bec7fda5861a15b8a5b7870fd8903d0b9a210754113d5a966ce6a6",
-    build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
+  ###### ELASTICSEARCH
+  http_file(
+    name = "elasticsearch",
+    downloaded_file_path = "elasticsearch.deb",
+    urls = ["https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-" + ELASTICSEARCH_VERSION + "-amd64.deb"],
+    sha256 = "570af7456603fd103408ed61ccec4473302976d46e1ff845b74a881122977e02",
+  )
+
+  ###### ENVOY
+  http_file(
+    name = "envoy",
+    downloaded_file_path = "envoy.deb",
+    urls = ["https://dl.bintray.com/tetrate/getenvoy-deb/pool/stable/g/getenvoy-envoy/getenvoy-envoy_" + ENVOY_VERSION + ".p0.g50ef094-1p67.g2aa564b_amd64.deb"],
+    sha256 = "4d29aef1c0c62a7f29fe9300a96bda0aad7238c2327b1d3fc9126914bd3fdfeb",
+  )
+
+  ###### ERLANG
+  http_file(
+    name = "erlang",
+    downloaded_file_path = "erlang.deb",
+    urls = ["https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_" + ERLANG_DEB_VERSION + "~debian~buster_amd64.deb"],
+    sha256 = "f55fd3e12e375f958322f9ede1dda267346ab91cae371c4db6662ec85c628e74",
+  )
+
+  ###### GERRIT
+  http_file(
+    name = "gerrit_war",
+    downloaded_file_path = "gerrit.war",
+    urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
+    sha256 = "a76d651d20b691fee38e600a096eb7ea8732981de337cf1cbe5f628c8b5dbd41",
+  )
+
+  ###### GRAFANA
+  http_file(
+    name = "grafana",
+    downloaded_file_path = "grafana.deb",
+    urls = ["https://dl.grafana.com/oss/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
+    sha256 = "add1dc39a8a441e76bb9c72108b08a85870f2a308459a311901cb6d66a503b9d",
   )
 
   ###### JENKINS
@@ -136,54 +145,6 @@ def dependency_repositories():
     downloaded_file_path = "swarm-client.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/" + JENKINS_SWARM_VERSION + "/swarm-client-" + JENKINS_SWARM_VERSION + ".jar"],
     sha256 = "f5480b39bb54f8d7a91749e61d34199aa533f9ceb1d329edcc6d404beec3a617",
-  )
-
-  ###### GERRIT
-  http_file(
-    name = "gerrit_war",
-    downloaded_file_path = "gerrit.war",
-    urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
-    sha256 = "a76d651d20b691fee38e600a096eb7ea8732981de337cf1cbe5f628c8b5dbd41",
-  )
-
-  ###### ENVOY
-  http_file(
-    name = "envoy",
-    downloaded_file_path = "envoy.deb",
-    urls = ["https://dl.bintray.com/tetrate/getenvoy-deb/pool/stable/g/getenvoy-envoy/getenvoy-envoy_" + ENVOY_VERSION + ".p0.g50ef094-1p67.g2aa564b_amd64.deb"],
-    sha256 = "4d29aef1c0c62a7f29fe9300a96bda0aad7238c2327b1d3fc9126914bd3fdfeb",
-  )
-
-  ###### MAVEN
-  http_archive(
-    name = "maven",
-    url = "https://archive.apache.org/dist/maven/maven-3/" + MAVEN_VERSION + "/binaries/apache-maven-" + MAVEN_VERSION + "-bin.tar.gz",
-    sha256 = "26ad91d751b3a9a53087aefa743f4e16a17741d3915b219cf74112bf87a438c5",
-    build_file_content = "exports_files(['apache-maven-" + MAVEN_VERSION + "'])",
-  )
-
-  ###### ZOOKEEPER
-  http_archive(
-    name = "zookeeper",
-    url = "https://archive.apache.org/dist/zookeeper/zookeeper-" + ZOOKEEPER_VERSION + "/zookeeper-" + ZOOKEEPER_VERSION + ".tar.gz",
-    sha256 = "b14f7a0fece8bd34c7fffa46039e563ac5367607c612517aa7bd37306afbd1cd",
-    build_file_content = "exports_files(['zookeeper-" + ZOOKEEPER_VERSION + "'])",
-  )
-
-  ###### KAFKA
-  http_archive(
-    name = "kafka",
-    url = "https://archive.apache.org/dist/kafka/" + KAFKA_VERSION + "/kafka_2.12-" + KAFKA_VERSION + ".tgz",
-    sha256 = "2177cbd14118999e1d76fec628ca78ace7e6f841219dbc6035027c796bbe1a2a",
-    build_file_content = "exports_files(['kafka_2.12-" + KAFKA_VERSION + "'])",
-  )
-
-  ###### ELASTICSEARCH
-  http_file(
-    name = "elasticsearch",
-    downloaded_file_path = "elasticsearch.deb",
-    urls = ["https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-" + ELASTICSEARCH_VERSION + "-amd64.deb"],
-    sha256 = "570af7456603fd103408ed61ccec4473302976d46e1ff845b74a881122977e02",
   )
 
   ###### KIBANA
@@ -201,15 +162,29 @@ def dependency_repositories():
     sha256 = "c10eece562cfeef1627f0d2bde7dc0be810948f6bf9a932e30a8c3b425652015"
   )
 
-
-  ###### GRAFANA
-  http_file(
-    name = "grafana",
-    downloaded_file_path = "grafana.deb",
-    urls = ["https://dl.grafana.com/oss/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
-    sha256 = "add1dc39a8a441e76bb9c72108b08a85870f2a308459a311901cb6d66a503b9d",
+  ###### KAFKA
+  http_archive(
+    name = "kafka",
+    url = "https://archive.apache.org/dist/kafka/" + KAFKA_VERSION + "/kafka_2.12-" + KAFKA_VERSION + ".tgz",
+    sha256 = "2177cbd14118999e1d76fec628ca78ace7e6f841219dbc6035027c796bbe1a2a",
+    build_file_content = "exports_files(['kafka_2.12-" + KAFKA_VERSION + "'])",
   )
 
+  ###### MAVEN
+  http_archive(
+    name = "maven",
+    url = "https://archive.apache.org/dist/maven/maven-3/" + MAVEN_VERSION + "/binaries/apache-maven-" + MAVEN_VERSION + "-bin.tar.gz",
+    sha256 = "26ad91d751b3a9a53087aefa743f4e16a17741d3915b219cf74112bf87a438c5",
+    build_file_content = "exports_files(['apache-maven-" + MAVEN_VERSION + "'])",
+  )
+
+  ###### NEXUS
+  http_archive(
+    name = "nexus",
+    url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
+    sha256 = "350af8b270bec7fda5861a15b8a5b7870fd8903d0b9a210754113d5a966ce6a6",
+    build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
+  )
 
   ###### NODEJS
   http_file(
@@ -217,6 +192,45 @@ def dependency_repositories():
     downloaded_file_path = "nodejs.tar.xz",
     urls = ["https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz"],
     sha256 = "b79e02e48d0a1ee4cd4ae138de97fda5413542f2a4f441a7d0e189697b8da563"
+  )
+
+  ###### PROMETHEUS
+  http_archive(
+    name = "prometheus",
+    url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
+    sha256 = "8fb248b579b8b9a88dd9b1686f7f68db7071960a45b28619145d3a4037375dcb",
+    strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
+    build_file_content = "exports_files(['prometheus'])",
+  )
+
+  maven_jar(
+    name = "jmx_prometheus_javaagent",
+    artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:" + PROMETHEUS_JMX_JAVAAGENT,
+    sha1 = "e1d9de7995c5172527002fc8da4fcdd86fff253b",
+  )
+
+  ###### RABBITMQ
+  http_file(
+    name = "rabbitmq",
+    downloaded_file_path = "rabbitmq.deb",
+    urls = ["https://github.com/rabbitmq/rabbitmq-server/releases/download/v" + RABBITMQ_VERSION + "/rabbitmq-server_" + RABBITMQ_VERSION + "-1_all.deb"],
+    sha256 = "19f9dd7f465100ef112645fe3855d71ed944829a6bc38f5f0a916bd015308af9",
+  )
+
+  ###### SBT
+  http_archive(
+    name = "sbt",
+    url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
+    sha256 = "ecd4e9b23a07d739065ecc2e00d040063a156131cbc9a9c0e9d8ca57966f641a",
+    build_file_content = "exports_files(['sbt'])",
+  )
+
+  ###### TOMCAT
+  http_file(
+    name = "tomcat_sample_war",
+    downloaded_file_path = "tomcat-sample.war",
+    urls = ["https://tomcat.apache.org/tomcat-8.0-doc/appdev/sample/sample.war"],
+    sha256 = "89b33caa5bf4cfd235f060c396cb1a5acb2734a1366db325676f48c5f5ed92e5",
   )
 
   ###### YARN
@@ -227,35 +241,6 @@ def dependency_repositories():
     sha256 = "fca964a971a39f7fe182ef5d0565abd2fe050bc4dcd9750eac3d383ec08ccd91",
   )
 
-
-
-  ###### TOMCAT
-  http_file(
-    name = "tomcat_sample_war",
-    downloaded_file_path = "tomcat-sample.war",
-    urls = ["https://tomcat.apache.org/tomcat-8.0-doc/appdev/sample/sample.war"],
-    sha256 = "89b33caa5bf4cfd235f060c396cb1a5acb2734a1366db325676f48c5f5ed92e5",
-  )
-
-
-  ###### ERLANG
-  http_file(
-    name = "erlang",
-    downloaded_file_path = "erlang.deb",
-    urls = ["https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_" + ERLANG_DEB_VERSION + "~debian~buster_amd64.deb"],
-    sha256 = "f55fd3e12e375f958322f9ede1dda267346ab91cae371c4db6662ec85c628e74",
-  )
-
-
-  ###### RABBITMQ
-  http_file(
-    name = "rabbitmq",
-    downloaded_file_path = "rabbitmq.deb",
-    urls = ["https://github.com/rabbitmq/rabbitmq-server/releases/download/v" + RABBITMQ_VERSION + "/rabbitmq-server_" + RABBITMQ_VERSION + "-1_all.deb"],
-    sha256 = "19f9dd7f465100ef112645fe3855d71ed944829a6bc38f5f0a916bd015308af9",
-  )
-
-
   ###### ZIPKIN
   http_file(
     name = "zipkin",
@@ -263,6 +248,15 @@ def dependency_repositories():
     urls = ["https://repo1.maven.org/maven2/io/zipkin/zipkin-server/" + ZIPKIN_VERSION + "/zipkin-server-" + ZIPKIN_VERSION + "-exec.jar"],
     sha256 = "3fa02004ac5bd70ddbef29a187f13e0ab7797d95f399b286825fff48ddd44580",
   )
+
+  ###### ZOOKEEPER
+  http_archive(
+    name = "zookeeper",
+    url = "https://archive.apache.org/dist/zookeeper/zookeeper-" + ZOOKEEPER_VERSION + "/zookeeper-" + ZOOKEEPER_VERSION + ".tar.gz",
+    sha256 = "b14f7a0fece8bd34c7fffa46039e563ac5367607c612517aa7bd37306afbd1cd",
+    build_file_content = "exports_files(['zookeeper-" + ZOOKEEPER_VERSION + "'])",
+  )
+
 
   ###### JASPER
   http_archive(
