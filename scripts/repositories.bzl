@@ -38,12 +38,12 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.11.0.tar.gz",
   )
 
-  # Update to 20200803 for amd64 (debuerreotype 0.10)
+  # Update to 20200908 for amd64 (debuerreotype 0.11)
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/3503997cf522377bc4e4967c7f0fcbcb18c69fc8/buster/slim/rootfs.tar.xz"],
-    sha256 = "b1fe295f97980407edb25366a6eb00cfb4f9d4576acde98bfb29c7827006dfac",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/efcff1239e086ffbbdc5d62d6c0856e500783861/buster/slim/rootfs.tar.xz"],
+    sha256 = "61ebf1a1543b820a642d1932b0a0952f0f35858acd94cf0feb5436cf9effefcc",
   )
   deb_buster()
 
@@ -238,7 +238,7 @@ def dependency_repositories():
     name = "yarnpkg",
     downloaded_file_path = "yarnpkg.deb",
     urls = ["https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb"],
-    sha256 = "fca964a971a39f7fe182ef5d0565abd2fe050bc4dcd9750eac3d383ec08ccd91",
+    sha256 = "d1834b4d738cf4f8a5a5661ca5dda14d5b6c2ca3350e6424c68400bdfae73895",
   )
 
   ###### ZIPKIN
