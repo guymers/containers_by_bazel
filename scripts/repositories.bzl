@@ -84,13 +84,13 @@ def dependency_repositories():
     name = "cassandra",
     downloaded_file_path = "cassandra.deb",
     urls = ["https://dl.bintray.com/apache/cassandra/pool/main/c/cassandra/cassandra_" + CASSANDRA_DEB_VERSION + ".deb"],
-    sha256 = "64fd9ffa8fe85960e7ba3403ce2f29ea7d147145b52dd91005e920e0407c73cf",
+    sha256 = "1374b0ed57a58f6f23ad558273035b145e818d195722d4616867d4a7345c0da6",
   )
   http_file(
     name = "cassandra_tools",
     downloaded_file_path = "cassandra-tools.deb",
     urls = ["https://dl.bintray.com/apache/cassandra/pool/main/c/cassandra/cassandra-tools_" + CASSANDRA_DEB_VERSION + ".deb"],
-    sha256 = "e6f35b20c565d06e211c50141ae672733dbd07a847381e9753892d6c1d4a3e9f",
+    sha256 = "3e95398d9b976ead1eeb319d95d434768f8c3de8fce16f996c7facf7ef5d2aaa",
   )
 
   ###### ELASTICSEARCH
