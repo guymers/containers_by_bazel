@@ -38,12 +38,12 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.11.0.tar.gz",
   )
 
-  # Update to 20201012 for amd64 (debuerreotype 0.11)
+  # Update to 20201117 for amd64 (debuerreotype 0.11)
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/b31d4538a203c4128acf04399e96b33bc6fdc0a0/buster/slim/rootfs.tar.xz"],
-    sha256 = "493739ccb2628bc9eecebb71786d3b6d291132f3328ede4b451bf84e17ccc23f",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/794e462d2825fb1ebb3d54ff5c93dd401cf28b9a/buster/slim/rootfs.tar.xz"],
+    sha256 = "77deb263ac04c69de13fa48ed3ab7ac638c45833fe4e0b53cfd7e609de7444fa",
   )
   deb_buster()
 
@@ -74,8 +74,8 @@ def dependency_repositories():
       sha256 = sha,
       build_file_content = "exports_files(['graalvm-ce-java" + v + "-" + GRAAL_VERSION + "'])",
     ) for (v, sha) in [
-      ( "8", "60951c774c708caeebd1fa3886c05aa1260d81c7595ede0c9c3e689be7fcc4e8"),
-      ("11", "5db74b5b8888712d2ac3cd7ae2a8361c2aa801bc94c801f5839351aba5064e29"),
+      ( "8", "455cadf810780161b74da9e23b529426398ce40843603cacbc11edbd2310aba4"),
+      ("11", "557aafd6f4fb8c103ce853adda452a7dc3eeca2ef1af00940b70efafe00fb3d5"),
     ]
   ]
 
@@ -122,7 +122,7 @@ def dependency_repositories():
     name = "gerrit_war",
     downloaded_file_path = "gerrit.war",
     urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
-    sha256 = "a76d651d20b691fee38e600a096eb7ea8732981de337cf1cbe5f628c8b5dbd41",
+    sha256 = "7b7dd9a8eeee24e8e5b46f4bdb7194d66130dade25d96c2eadf061db96385106",
   )
 
   ###### GRAFANA
@@ -130,7 +130,7 @@ def dependency_repositories():
     name = "grafana",
     downloaded_file_path = "grafana.deb",
     urls = ["https://dl.grafana.com/oss/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
-    sha256 = "add1dc39a8a441e76bb9c72108b08a85870f2a308459a311901cb6d66a503b9d",
+    sha256 = "91452456a8502faecc544282906a085315176cba0d26c1242ebd313055edbf14",
   )
 
   ###### JENKINS
@@ -138,13 +138,13 @@ def dependency_repositories():
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war"],
-    sha256 = "c786f7b18fd3fc1bafce85b3b9bc5d8c5f09e3a313cfd618bae8c1d920b6f70b",
+    sha256 = "8de8f11d5688c79967bc53a8124960926a90d623e5e9f03f1315ccf3e7c49702",
   )
   http_file(
     name = "jenkins_agent_jar",
     downloaded_file_path = "swarm-client.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/" + JENKINS_SWARM_VERSION + "/swarm-client-" + JENKINS_SWARM_VERSION + ".jar"],
-    sha256 = "f5480b39bb54f8d7a91749e61d34199aa533f9ceb1d329edcc6d404beec3a617",
+    sha256 = "2b7dd9d7c0fe752984d1b880c65b96ea825be4d5377d046fe91ab4ad4218f730",
   )
 
   ###### KIBANA
@@ -182,7 +182,7 @@ def dependency_repositories():
   http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "350af8b270bec7fda5861a15b8a5b7870fd8903d0b9a210754113d5a966ce6a6",
+    sha256 = "5bf321e40b219756441fbdb9fa0d270493a25640af67076111ccd151ab007b7e",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
 
@@ -191,7 +191,7 @@ def dependency_repositories():
     name = "nodejs",
     downloaded_file_path = "nodejs.tar.xz",
     urls = ["https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz"],
-    sha256 = "b79e02e48d0a1ee4cd4ae138de97fda5413542f2a4f441a7d0e189697b8da563"
+    sha256 = "608732c7b8c2ac0683fee459847ad3993a428f0398c73555b9270345f4a64752"
   )
 
   ###### PROMETHEUS
@@ -246,7 +246,7 @@ def dependency_repositories():
     name = "zipkin",
     downloaded_file_path = "zipkin.jar",
     urls = ["https://repo1.maven.org/maven2/io/zipkin/zipkin-server/" + ZIPKIN_VERSION + "/zipkin-server-" + ZIPKIN_VERSION + "-exec.jar"],
-    sha256 = "3fa02004ac5bd70ddbef29a187f13e0ab7797d95f399b286825fff48ddd44580",
+    sha256 = "35736e123ac1d242c02c7eace882dfe537a10864a5c4134e93986a8589eb733d",
   )
 
   ###### ZOOKEEPER

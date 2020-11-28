@@ -6,7 +6,7 @@ php7.3-intl=${PHP_DEB_VERSION}
 php7.3-json=${PHP_DEB_VERSION}
 php7.3-mbstring=${PHP_DEB_VERSION}
 php7.3-opcache=${PHP_DEB_VERSION}
-libpq5=13.0-1.pgdg100+1
+libpq5=13.1-1.pgdg100+1
 php7.3-pgsql=${PHP_DEB_VERSION}
 
 php-apcu=5.1.17+4.0.11-1
