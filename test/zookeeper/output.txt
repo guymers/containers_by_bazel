@@ -1,2 +1,6 @@
+Connecting to 127.0.0.1:2181
+
+WATCHER::
+
+WatchedEvent state:SyncConnected type:None path:null
 jimjams
-dataLength = 7

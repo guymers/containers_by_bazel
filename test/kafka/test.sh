@@ -8,7 +8,7 @@ export JMX_PORT=""
 readonly zookeeper_pid=$!
 
 # TODO find a way to poll until a topic can be created
-sleep 20
+sleep 15
 readonly ZOOKEEPER=localhost:2181
 
 "$KAFKA_HOME/bin/kafka-topics.sh" --create --zookeeper "$ZOOKEEPER" \

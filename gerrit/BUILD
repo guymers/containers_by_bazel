@@ -43,7 +43,7 @@ container_layer(
 
 container_image(
   name = "gerrit",
-  base = "//java:zulu",
+  base = "//java:zulu11",
   layers = [":user", ":deps", ":files", ":init", ":config", ":scripts"],
 
   env = {

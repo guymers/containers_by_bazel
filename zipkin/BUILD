@@ -30,7 +30,7 @@ container_layer(
 
 container_image(
   name = "zipkin",
-  base = "//java:zulu",
+  base = "//java:zulu8",
   layers = [":user", ":files", ":scripts"],
   env = {
     "CASSANDRA3_CONTACT_POINTS": "",

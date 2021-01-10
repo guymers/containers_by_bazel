@@ -35,7 +35,7 @@ container_layer(
 
 container_image(
   name = "nexus",
-  base = "//java:zulu",
+  base = "//java:zulu8",
   layers = ["//base/su_exec", ":user", ":files", ":config", ":scripts"],
   env = {
     "NEXUS_HOME": NEXUS_HOME,

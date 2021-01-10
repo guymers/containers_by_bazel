@@ -38,12 +38,12 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.11.0.tar.gz",
   )
 
-  # Update to 20201117 for amd64 (debuerreotype 0.11)
+  # Update to 20201209 for amd64 (debuerreotype 0.11)
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/794e462d2825fb1ebb3d54ff5c93dd401cf28b9a/buster/slim/rootfs.tar.xz"],
-    sha256 = "77deb263ac04c69de13fa48ed3ab7ac638c45833fe4e0b53cfd7e609de7444fa",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/d5a5b49170b3f736cc7952787f074d7e24cf56fd/buster/slim/rootfs.tar.xz"],
+    sha256 = "db32242c51745352f7241b16daabfb1b53a08fbb15898abbd5a21db019b38346",
   )
   deb_buster()
 
@@ -122,7 +122,7 @@ def dependency_repositories():
     name = "gerrit_war",
     downloaded_file_path = "gerrit.war",
     urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
-    sha256 = "7b7dd9a8eeee24e8e5b46f4bdb7194d66130dade25d96c2eadf061db96385106",
+    sha256 = "617d2db4c5298ca821b4915a36fc8ffac76fff8119e738ed038a40de2b1d926b",
   )
 
   ###### GRAFANA
@@ -138,7 +138,7 @@ def dependency_repositories():
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war"],
-    sha256 = "8de8f11d5688c79967bc53a8124960926a90d623e5e9f03f1315ccf3e7c49702",
+    sha256 = "0eedeb2b11a32726acb57db26e262b1923cf408e84708baf471e3b53462ed6f1",
   )
   http_file(
     name = "jenkins_agent_jar",
@@ -165,9 +165,9 @@ def dependency_repositories():
   ###### KAFKA
   http_archive(
     name = "kafka",
-    url = "https://archive.apache.org/dist/kafka/" + KAFKA_VERSION + "/kafka_2.12-" + KAFKA_VERSION + ".tgz",
-    sha256 = "2177cbd14118999e1d76fec628ca78ace7e6f841219dbc6035027c796bbe1a2a",
-    build_file_content = "exports_files(['kafka_2.12-" + KAFKA_VERSION + "'])",
+    url = "https://archive.apache.org/dist/kafka/" + KAFKA_VERSION + "/kafka_2.13-" + KAFKA_VERSION + ".tgz",
+    sha256 = "1dd84b763676a02fecb48fa5d7e7e94a2bf2be9ff87bce14cf14109ce1cb7f90",
+    build_file_content = "exports_files(['kafka_2.13-" + KAFKA_VERSION + "'])",
   )
 
   ###### MAVEN
@@ -182,7 +182,7 @@ def dependency_repositories():
   http_archive(
     name = "nexus",
     url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "5bf321e40b219756441fbdb9fa0d270493a25640af67076111ccd151ab007b7e",
+    sha256 = "0d09b35265b06e0f1ecadb00f31d0f7e187a35b39fc34d762c0393918ccf19c8",
     build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
 
@@ -252,9 +252,9 @@ def dependency_repositories():
   ###### ZOOKEEPER
   http_archive(
     name = "zookeeper",
-    url = "https://archive.apache.org/dist/zookeeper/zookeeper-" + ZOOKEEPER_VERSION + "/zookeeper-" + ZOOKEEPER_VERSION + ".tar.gz",
-    sha256 = "b14f7a0fece8bd34c7fffa46039e563ac5367607c612517aa7bd37306afbd1cd",
-    build_file_content = "exports_files(['zookeeper-" + ZOOKEEPER_VERSION + "'])",
+    url = "https://archive.apache.org/dist/zookeeper/zookeeper-" + ZOOKEEPER_VERSION + "/apache-zookeeper-" + ZOOKEEPER_VERSION + "-bin.tar.gz",
+    sha256 = "476f6fce10f9528e3a4ad00e6cd1714563f602dd4924db78e506c0df28fea1e5",
+    build_file_content = "exports_files(['apache-zookeeper-" + ZOOKEEPER_VERSION + "-bin'])",
   )
 
 

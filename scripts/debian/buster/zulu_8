@@ -1,1 +1,1 @@
-zulu-8=${ZULU_8_VERSION}
+zulu8-jre-headless=${ZULU_8_VERSION}

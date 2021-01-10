@@ -2,42 +2,37 @@
 set -e
 set -o pipefail
 
-if [ -d "$ZK_DATA" -a "$(stat -c '%U' "$ZK_DATA" 2>/dev/null)" = "root" ]; then
-  chown zookeeper "$ZK_DATA"
-  chmod o-rwx "$ZK_DATA"
+if [ -d "$ZOO_DATA_DIR" -a "$(stat -c '%U' "$ZOO_DATA_DIR" 2>/dev/null)" = "root" ]; then
+  chown zookeeper "$ZOO_DATA_DIR"
+  chmod o-rwx "$ZOO_DATA_DIR"
 fi
 
-if [ -d "$EXHIBITOR_SHARED" -a "$(stat -c '%U' "$EXHIBITOR_SHARED" 2>/dev/null)" = "root" ]; then
-  chown zookeeper "$EXHIBITOR_SHARED"
-  chmod o-rwx "$EXHIBITOR_SHARED"
+if [ -d "$ZOO_DATA_LOG_DIR" -a "$(stat -c '%U' "$ZOO_DATA_LOG_DIR" 2>/dev/null)" = "root" ]; then
+  chown zookeeper "$ZOO_DATA_LOG_DIR"
+  chmod o-rwx "$ZOO_DATA_LOG_DIR"
 fi
 
 if [ "$1" = 'zookeeper' ]; then
-  chown zookeeper "$ZK_HOME/"
-  chown zookeeper "$ZK_HOME/conf/"
 
-  export JMX_MONITORING=false
   source /java-opts.sh
 
-  readonly default_props_file=/tmp/exhibitor_default.properties
-  cat /etc/exhibitor/default.properties > "$default_props_file"
-  if [ -f "/etc/exhibitor/java.env" ]; then
-    java_env=""
-    while read line; do
-      before_equals=$(echo "${line%%=*}")
-      after_equals=$(echo "${line#*=}")
-      java_env="$java_env $before_equals=\"$(eval echo "$after_equals")\";"
-    done </etc/exhibitor/java.env
-    echo "java-environment=$java_env" >> "$default_props_file"
-  fi
-  if [ -n "$ZK_ENSEMBLE_SIZE" ]; then
-    echo "auto-manage-instances-fixed-ensemble-size=${ZK_ENSEMBLE_SIZE}" >> "$default_props_file"
+  # Write myid only if it doesn't exist
+  if [[ ! -f "$ZOO_DATA_DIR/myid" ]]; then
+    echo "${ZOO_MY_ID:-1}" > "$ZOO_DATA_DIR/myid"
   fi
 
-  exec chroot --userspec=zookeeper / java -jar /opt/exhibitor/exhibitor.jar \
-    --defaultconfig "$default_props_file" \
-    --hostname ${HOSTNAME} \
-    "${@:2}"
+  # from bin/zkEnv.sh
+  CLASSPATH="$ZOOCFGDIR:$CLASSPATH"
+  LIBPATH=("${ZOOBINDIR}"/../lib/*.jar)
+  for i in "${LIBPATH[@]}"; do
+    CLASSPATH="$i:$CLASSPATH"
+  done
+
+  exec chroot --userspec=zookeeper / java $JAVA_OPTS \
+    -XX:OnOutOfMemoryError='kill -9 %p' \
+    -cp "$CLASSPATH" \
+    org.apache.zookeeper.server.quorum.QuorumPeerMain \
+    "$ZOOCFGDIR/zoo.cfg"
 else
   exec "$@"
 fi

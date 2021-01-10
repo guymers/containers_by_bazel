@@ -31,7 +31,7 @@ container_layer(
 
 container_image(
   name = "cassandra",
-  base = "//java:zulu",
+  base = "//java:zulu8",
   layers = [":user", ":files", ":config", ":init"],
 
   env = {

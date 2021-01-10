@@ -24,7 +24,7 @@ container_layer(
 
 container_image(
   name = "tomcat",
-  base = "//java:zulu",
+  base = "//java:zulu8",
   layers = [":user", ":files"],
   env = {
     "CATALINA_BASE": CATALINA_BASE,

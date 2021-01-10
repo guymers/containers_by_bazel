@@ -11,7 +11,7 @@ user_layer(
 
 container_image(
   name = "base",
-  base = "//java:zulu",
+  base = "//java:zulu11",
   layers = [":user"],
   env = {
     "JENKINS_HOME": JENKINS_HOME,

@@ -25,7 +25,9 @@ dependencies(name = "buster", dependencies = {
   ":buster/wget": "base",
   ":buster/zip": "base",
   ":buster/zulu_8": "zulu",
+  ":buster/zulu_8_jdk": "zulu",
   ":buster/zulu_11": "zulu",
+  ":buster/zulu_11_jdk": "zulu",
 })
 
 sh_binary(

@@ -1,30 +1,23 @@
 load("//macros/user:user.bzl", "user_layer")
 load("//scripts/versions:versions.bzl", "ZOOKEEPER_VERSION")
 
-ZK_HOME = "/opt/zookeeper"
-ZK_DATA = "/zookeeper"
-EXHIBITOR_SHARED = "/exhibitor"
+ZK_DATA = "/zookeeper/data"
+ZOO_DATA_LOG = "/zookeeper/data_log"
 VERSION = ZOOKEEPER_VERSION
 
 user_layer(
   name = "user",
   id = "919",
   user = "zookeeper",
-  home = ZK_DATA,
-)
-
-container_layer(
-  name = "exhibitor",
-  directory = "/opt/exhibitor",
-  files = ["//zookeeper/exhibitor"],
+  home = "/opt/zookeeper",
 )
 
 container_layer(
   name = "files",
   directory = "/opt",
   mode = "0755",
-  files = ["@zookeeper//:zookeeper-" + VERSION],
-  symlinks = { "/opt/zookeeper": "/opt/zookeeper-" + VERSION },
+  files = ["@zookeeper//:apache-zookeeper-" + VERSION + "-bin"],
+  symlinks = { "/opt/zookeeper": "/opt/apache-zookeeper-" + VERSION + "-bin" },
 )
 
 container_layer(
@@ -35,21 +28,19 @@ container_layer(
 
 container_image(
   name = "zookeeper",
-  base = "//java:zulu",
-  layers = [
-    "//base/tini", ":user",
-    ":exhibitor", ":files", ":scripts",
-  ],
+  base = "//java:zulu8_jdk",
+  layers = [ "//base/tini", ":user", ":files", ":scripts" ],
   env = {
-    "ZK_HOME": ZK_HOME,
-    "ZK_DATA": ZK_DATA,
-    "EXHIBITOR_SHARED": EXHIBITOR_SHARED,
+    "ZOOBINDIR": "/opt/zookeeper/bin",
+    "ZOOCFGDIR": "/etc/zookeeper",
+    "ZOO_DATA_DIR": ZK_DATA,
+    "ZOO_DATA_LOG_DIR": ZOO_DATA_LOG,
   },
-  volumes = [ZK_DATA, EXHIBITOR_SHARED],
+  volumes = [ZK_DATA, ZOO_DATA_LOG],
   ports = ["2181", "2888", "3888", "8080"],
-  workdir = ZK_DATA,
+  workdir = "/opt/zookeeper",
   entrypoint = ["tini", "--", "/entrypoint-zookeeper"],
-  cmd = ["zookeeper", "-c", "file", "--fsconfigdir", EXHIBITOR_SHARED],
+  cmd = ["zookeeper"],
 
   visibility = ["//visibility:public"],
 )

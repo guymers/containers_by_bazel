@@ -43,7 +43,7 @@ container_layer(
 
 container_image(
   name = "elasticsearch",
-  base = "//java:zulu",
+  base = "//java:zulu11",
   layers = [":user", ":files", ":init", ":config", ":scripts"],
 
   env = {

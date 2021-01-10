@@ -16,15 +16,15 @@ user_layer(
 container_layer(
   name = "files",
   directory = "/opt",
-  files = ["@kafka//:kafka_2.12-" + VERSION],
+  files = ["@kafka//:kafka_2.13-" + VERSION],
   symlinks = {
-    "/opt/kafka": "/opt/kafka_2.12-" + VERSION,
+    "/opt/kafka": "/opt/kafka_2.13-" + VERSION,
   },
 )
 
 container_layer(
   name = "config_overrides",
-  directory = "/opt/kafka_2.12-" + VERSION + "/config",
+  directory = "/opt/kafka_2.13-" + VERSION + "/config",
   files = glob(["config/*"]),
 )
 
@@ -36,7 +36,7 @@ container_layer(
 
 container_image(
   name = "kafka",
-  base = "//java:zulu",
+  base = "//java:zulu8",
   layers = [":user", ":files", ":config_overrides", ":scripts"],
   env = {
     "KAFKA_HOME": KAFKA_HOME,

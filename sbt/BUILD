@@ -28,7 +28,7 @@ container_layer(
 
 container_image(
   name = "sbt",
-  base = "//java:zulu",
+  base = "//java:zulu11_jdk",
   layers = [
     ":files",
     ":config",
