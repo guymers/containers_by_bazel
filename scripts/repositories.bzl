@@ -42,8 +42,8 @@ def dependency_repositories():
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/d5a5b49170b3f736cc7952787f074d7e24cf56fd/buster/slim/rootfs.tar.xz"],
-    sha256 = "db32242c51745352f7241b16daabfb1b53a08fbb15898abbd5a21db019b38346",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/b05117a87fbd32f977b4909e399fe368c75767ad/buster/slim/rootfs.tar.xz"],
+    sha256 = "a9c59629a193577d20ea43c69b35f8994380a7ae61b2afc749f6e47d4c13b0da",
   )
   deb_buster()
 
@@ -74,8 +74,8 @@ def dependency_repositories():
       sha256 = sha,
       build_file_content = "exports_files(['graalvm-ce-java" + v + "-" + GRAAL_VERSION + "'])",
     ) for (v, sha) in [
-      ( "8", "455cadf810780161b74da9e23b529426398ce40843603cacbc11edbd2310aba4"),
-      ("11", "557aafd6f4fb8c103ce853adda452a7dc3eeca2ef1af00940b70efafe00fb3d5"),
+      ( "8", "a10a7632bf0afdb162ed1419311540af93c95ad659eb391a709743bb6e457d5c"),
+      ("11", "bd3fbe796e803c4fe5cd089371588d3d716fa3cdb653fe8dd6dba31b57bef934"),
     ]
   ]
 
@@ -122,7 +122,7 @@ def dependency_repositories():
     name = "gerrit_war",
     downloaded_file_path = "gerrit.war",
     urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
-    sha256 = "617d2db4c5298ca821b4915a36fc8ffac76fff8119e738ed038a40de2b1d926b",
+    sha256 = "b6a94900dc49976af46713dbeddf0a53d7113105053d4226ff3329e3344418bd",
   )
 
   ###### GRAFANA
@@ -138,7 +138,7 @@ def dependency_repositories():
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war"],
-    sha256 = "0eedeb2b11a32726acb57db26e262b1923cf408e84708baf471e3b53462ed6f1",
+    sha256 = "399741db1152ee7bbe8dc08e0972efa0b128a1b55a0f8b10c087fefeec66d151",
   )
   http_file(
     name = "jenkins_agent_jar",

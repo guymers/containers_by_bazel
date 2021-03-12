@@ -64,14 +64,14 @@ def deb_buster():
   http_file(
     name = "deb_buster_dnsmasq_base",
     downloaded_file_path = "deb_buster_dnsmasq_base.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/d/dnsmasq/dnsmasq-base_2.80-1_amd64.deb"],
-    sha256 = "114a1df89dac61de4a1c8c75c11a7d243df32e4ac48b6de35b5731bebc5bfd98",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/d/dnsmasq/dnsmasq-base_2.80-1+deb10u1_amd64.deb"],
+    sha256 = "2e4a1e3729afbfb55da363a2cc698390bd86da27bf6e419f567c1f4686798fdb",
   )
   http_file(
     name = "deb_buster_file",
     downloaded_file_path = "deb_buster_file.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20191028/pool/updates/main/f/file/file_5.35-4+deb10u1_amd64.deb"],
-    sha256 = "a65ea1c2a2c32995ea5337dc769ea2de503dd65e0ee2cde345d565ba06575d0c",
+    urls = ["http://snapshot.debian.org/archive/debian/20210312/pool/main/f/file/file_5.35-4+deb10u2_amd64.deb"],
+    sha256 = "526541e1e36d4fc042e93ae53bb21425e6bba2821ce09fa6c95119dffc5bf866",
   )
   http_file(
     name = "deb_buster_fontconfig",
@@ -316,8 +316,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libcairo2",
     downloaded_file_path = "deb_buster_libcairo2.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20191028/pool/main/c/cairo/libcairo2_1.16.0-4_amd64.deb"],
-    sha256 = "32fcf6fb0cffe41263927f692a88911796c9006402b6cc2137ca78db3c96068e",
+    urls = ["http://snapshot.debian.org/archive/debian/20210312/pool/main/c/cairo/libcairo2_1.16.0-4+deb10u1_amd64.deb"],
+    sha256 = "228e8af1f2ea388367c26a64a4491ee3f758d9e61a73f421bb60a03c07b30d2b",
   )
   http_file(
     name = "deb_buster_libcc1_0",
@@ -390,6 +390,12 @@ def deb_buster():
     downloaded_file_path = "deb_buster_libdbus_1_3.deb",
     urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/d/dbus/libdbus-1-3_1.12.20-0+deb10u1_amd64.deb"],
     sha256 = "e394bd35626e3ccf437e1e7776e6573636e6413b0ebe2483bd54ac243eed1007",
+  )
+  http_file(
+    name = "deb_buster_libdpkg_perl",
+    downloaded_file_path = "deb_buster_libdpkg_perl.deb",
+    urls = ["http://snapshot.debian.org/archive/debian/20210312/pool/main/d/dpkg/libdpkg-perl_1.19.7_all.deb"],
+    sha256 = "1cb272a8168138e9b8334e87cc26388259f232b74667b3a7f3856f227adcc4ba",
   )
   http_file(
     name = "deb_buster_libdrm2",
@@ -796,14 +802,14 @@ def deb_buster():
   http_file(
     name = "deb_buster_libldap_2_4_2",
     downloaded_file_path = "deb_buster_libldap_2_4_2.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20201128/pool/updates/main/o/openldap/libldap-2.4-2_2.4.47+dfsg-3+deb10u4_amd64.deb"],
-    sha256 = "1fcf11e140f3d6139579309167e190c186032d7f828d4ee3fe057aa4eb4604a5",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/o/openldap/libldap-2.4-2_2.4.47+dfsg-3+deb10u6_amd64.deb"],
+    sha256 = "246b2f152d29ca1552b8c422721f0726fcc8a0b1c50b04ac99bf3c42c198e742",
   )
   http_file(
     name = "deb_buster_libldap_common",
     downloaded_file_path = "deb_buster_libldap_common.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20201128/pool/updates/main/o/openldap/libldap-common_2.4.47+dfsg-3+deb10u4_all.deb"],
-    sha256 = "5217a51f2a21740b9e2bc3095480a34b6addf4f50fb0ee99cb97444970a10fe8",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/o/openldap/libldap-common_2.4.47+dfsg-3+deb10u6_all.deb"],
+    sha256 = "ec2bb7b5165d47516cbf40a688352764fd093484ea4e3269349c9e626d2a53de",
   )
   http_file(
     name = "deb_buster_libllvm7",
@@ -832,14 +838,14 @@ def deb_buster():
   http_file(
     name = "deb_buster_libmagic1",
     downloaded_file_path = "deb_buster_libmagic1.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20191028/pool/updates/main/f/file/libmagic1_5.35-4+deb10u1_amd64.deb"],
-    sha256 = "1ac02a14c1739d09c5b351a26617357579b4bfab2f2e8325e90d8ac24ae2174a",
+    urls = ["http://snapshot.debian.org/archive/debian/20210312/pool/main/f/file/libmagic1_5.35-4+deb10u2_amd64.deb"],
+    sha256 = "247e6681da3f2062e24b8ac9ebd0c4d6738b40efdf1e69d8adc62c10f05b24e2",
   )
   http_file(
     name = "deb_buster_libmagic_mgc",
     downloaded_file_path = "deb_buster_libmagic_mgc.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20191028/pool/updates/main/f/file/libmagic-mgc_5.35-4+deb10u1_amd64.deb"],
-    sha256 = "138494ccd9661911a40460c7a90f141de397589d4b2f6c5aa2ecca1b71f46208",
+    urls = ["http://snapshot.debian.org/archive/debian/20210312/pool/main/f/file/libmagic-mgc_5.35-4+deb10u2_amd64.deb"],
+    sha256 = "4b685fb59cb69a276b8f03035c0cc86c45e78c956aa84b2a3263cde0229edfca",
   )
   http_file(
     name = "deb_buster_libmariadb3",
@@ -1042,8 +1048,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libpq5",
     downloaded_file_path = "deb_buster_libpq5.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/libpq5_13.1-1.pgdg100+1_amd64.deb"],
-    sha256 = "d221cc7e13e4060cf48a5a488700d4c9acf1b4ea176af39868fecd243063b6d4",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/libpq5_13.2-1.pgdg100+1_amd64.deb"],
+    sha256 = "c83bd3f381c564690166d5ce9caee13f19d5afa670ebe7a13110ffca14eb8d31",
   )
   http_file(
     name = "deb_buster_libprocps7",
@@ -1204,14 +1210,14 @@ def deb_buster():
   http_file(
     name = "deb_buster_libssl1_1",
     downloaded_file_path = "deb_buster_libssl1_1.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20210110/pool/updates/main/o/openssl/libssl1.1_1.1.1d-0+deb10u4_amd64.deb"],
-    sha256 = "b02b468f0fad929b5d2b38ae05607c22c4f1ef70adc2688fb02b9d9514d6ac51",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/o/openssl/libssl1.1_1.1.1d-0+deb10u5_amd64.deb"],
+    sha256 = "1741ec08b10caa4d3c8a165768323a14946278a7e6fb9cd56ae59cf4fe1ef970",
   )
   http_file(
     name = "deb_buster_libssl_dev",
     downloaded_file_path = "deb_buster_libssl_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20210110/pool/updates/main/o/openssl/libssl-dev_1.1.1d-0+deb10u4_amd64.deb"],
-    sha256 = "377637e40c5e4c1253f70557c43f46486959c5e31f22f6435ed9413c2348a0e3",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/o/openssl/libssl-dev_1.1.1d-0+deb10u5_amd64.deb"],
+    sha256 = "efbaae50aa4186a09a5e6e781610ba78042119b7e6ee16e9f9336214ab39a9b0",
   )
   http_file(
     name = "deb_buster_libsuperlu5",
@@ -1252,8 +1258,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libtomcat9_java",
     downloaded_file_path = "deb_buster_libtomcat9_java.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/t/tomcat9/libtomcat9-java_9.0.31-1~deb10u2_all.deb"],
-    sha256 = "155a5ac2a645b43e224c0e138f664364fecaea5a749d89b12e6a4cc6baab8415",
+    urls = ["http://snapshot.debian.org/archive/debian/20210312/pool/main/t/tomcat9/libtomcat9-java_9.0.31-1~deb10u3_all.deb"],
+    sha256 = "3aa39ffb7a29425bd37cfbf5afd3166920a083e1f235f0e14ea266c6fff72eb1",
   )
   http_file(
     name = "deb_buster_libtool",
@@ -1474,8 +1480,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_linux_libc_dev",
     downloaded_file_path = "deb_buster_linux_libc_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20210110/pool/main/l/linux/linux-libc-dev_4.19.160-2_amd64.deb"],
-    sha256 = "d0a9fff522a4ab7590bf08c4d29a3c98d50485058ac78d8f5903c9588e54a9dc",
+    urls = ["http://snapshot.debian.org/archive/debian/20210312/pool/main/l/linux/linux-libc-dev_4.19.171-2_amd64.deb"],
+    sha256 = "6c58470dbad9231aadfc924823e8328ebabc6b49c344a7080cacc72e58742217",
   )
   http_file(
     name = "deb_buster_locales",
@@ -1576,8 +1582,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_openssl",
     downloaded_file_path = "deb_buster_openssl.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20210110/pool/updates/main/o/openssl/openssl_1.1.1d-0+deb10u4_amd64.deb"],
-    sha256 = "fa997ab8745f28ea3553ebc623872bb6809cc94898f6c72d81a757d9ee47dfe3",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/o/openssl/openssl_1.1.1d-0+deb10u5_amd64.deb"],
+    sha256 = "f4c32a3f851adeb0145edafb8ea271aed8330ee864de23f155f4141a81dc6e10",
   )
   http_file(
     name = "deb_buster_perl",
@@ -1600,80 +1606,80 @@ def deb_buster():
   http_file(
     name = "deb_buster_php7_3_bcmath",
     downloaded_file_path = "deb_buster_php7_3_bcmath.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200718/pool/updates/main/p/php7.3/php7.3-bcmath_7.3.19-1~deb10u1_amd64.deb"],
-    sha256 = "c1bfaf4ad0f53fd8e9f56212aa514bcbcd47c59abd4330a2697b932ea1fd1d26",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/p/php7.3/php7.3-bcmath_7.3.27-1~deb10u1_amd64.deb"],
+    sha256 = "ed9d93ada164df7c6d6acfa6e98f3b04e5f868cdad7969ac0e7de0d91738b072",
   )
   http_file(
     name = "deb_buster_php7_3_cli",
     downloaded_file_path = "deb_buster_php7_3_cli.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200718/pool/updates/main/p/php7.3/php7.3-cli_7.3.19-1~deb10u1_amd64.deb"],
-    sha256 = "30263f918793264ca38e707058baf328372388d4572747588d1781ea1cb64fc3",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/p/php7.3/php7.3-cli_7.3.27-1~deb10u1_amd64.deb"],
+    sha256 = "31ae838ea74b1e7bd9e1ce10fe9f92a5e3161d5e78f91bbc6ef16966ecd0d589",
   )
   http_file(
     name = "deb_buster_php7_3_common",
     downloaded_file_path = "deb_buster_php7_3_common.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200718/pool/updates/main/p/php7.3/php7.3-common_7.3.19-1~deb10u1_amd64.deb"],
-    sha256 = "ee89aa85109abfdfdfe9e11158862115d79b9bc93d8ca7a6df44c10a979741f7",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/p/php7.3/php7.3-common_7.3.27-1~deb10u1_amd64.deb"],
+    sha256 = "b5758584149811641ae86f8b6c70f143bc917bc4058dd895682ffce214e880d9",
   )
   http_file(
     name = "deb_buster_php7_3_curl",
     downloaded_file_path = "deb_buster_php7_3_curl.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200718/pool/updates/main/p/php7.3/php7.3-curl_7.3.19-1~deb10u1_amd64.deb"],
-    sha256 = "c329245c4c30ad7198ae5258beddae79943872a76994a1152bb42e3676532c34",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/p/php7.3/php7.3-curl_7.3.27-1~deb10u1_amd64.deb"],
+    sha256 = "30ea130914c1953218b469996286660ba49a1a66e741322830fc2bacc6687998",
   )
   http_file(
     name = "deb_buster_php7_3_dev",
     downloaded_file_path = "deb_buster_php7_3_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200718/pool/updates/main/p/php7.3/php7.3-dev_7.3.19-1~deb10u1_amd64.deb"],
-    sha256 = "d64729b4567d68d1b2f8f10b7ba6cfc1337f30961a3beda6b97d34ff3ae45c91",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/p/php7.3/php7.3-dev_7.3.27-1~deb10u1_amd64.deb"],
+    sha256 = "592a130e882ae486f1d91265a0f45d93f5e85e163fa22b2065434643d79cde24",
   )
   http_file(
     name = "deb_buster_php7_3_fpm",
     downloaded_file_path = "deb_buster_php7_3_fpm.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200718/pool/updates/main/p/php7.3/php7.3-fpm_7.3.19-1~deb10u1_amd64.deb"],
-    sha256 = "03c0f5824332c39191fd36015a7f794f0301f46147b2d16a7f8e554bd5368e20",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/p/php7.3/php7.3-fpm_7.3.27-1~deb10u1_amd64.deb"],
+    sha256 = "b37f0ec36ce62b217deba0c628198fdd62e1bba519c54406aeb6b74270e85488",
   )
   http_file(
     name = "deb_buster_php7_3_intl",
     downloaded_file_path = "deb_buster_php7_3_intl.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200718/pool/updates/main/p/php7.3/php7.3-intl_7.3.19-1~deb10u1_amd64.deb"],
-    sha256 = "745683f7a85a6fc8d5311a88357b6e02328452dea09213e147df7d1af3038589",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/p/php7.3/php7.3-intl_7.3.27-1~deb10u1_amd64.deb"],
+    sha256 = "8d7708c4783e0ecf060764db3194419512f117e33e6fb8724d1f357c021e3609",
   )
   http_file(
     name = "deb_buster_php7_3_json",
     downloaded_file_path = "deb_buster_php7_3_json.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200718/pool/updates/main/p/php7.3/php7.3-json_7.3.19-1~deb10u1_amd64.deb"],
-    sha256 = "fa9ad46a6c44f76ad169b6733ff5b3ededa2192939bfba47cf53d28e0c2152e3",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/p/php7.3/php7.3-json_7.3.27-1~deb10u1_amd64.deb"],
+    sha256 = "97c23072cd7912b3fbdc1ae9bbe8197b99f665bd048f04dec8fbbcfe4cfd8f48",
   )
   http_file(
     name = "deb_buster_php7_3_mbstring",
     downloaded_file_path = "deb_buster_php7_3_mbstring.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200718/pool/updates/main/p/php7.3/php7.3-mbstring_7.3.19-1~deb10u1_amd64.deb"],
-    sha256 = "16398efa39ecf4dbd40196e4d6cc34c290318cfb121c4d6cb239d51eab8d3a75",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/p/php7.3/php7.3-mbstring_7.3.27-1~deb10u1_amd64.deb"],
+    sha256 = "8d3c55eaa3abae7309fa6123fcbbc4e6467ed08638dc75d9db6b80f8c08717cc",
   )
   http_file(
     name = "deb_buster_php7_3_opcache",
     downloaded_file_path = "deb_buster_php7_3_opcache.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200718/pool/updates/main/p/php7.3/php7.3-opcache_7.3.19-1~deb10u1_amd64.deb"],
-    sha256 = "a72e5d01c357a5271a5d960c355cc8fe68fc7f088b99b2c4a0a9c4ed8227768c",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/p/php7.3/php7.3-opcache_7.3.27-1~deb10u1_amd64.deb"],
+    sha256 = "b283209c970ad5f14626282a13218194509e133401cb7a4935e4214b430ec17b",
   )
   http_file(
     name = "deb_buster_php7_3_pgsql",
     downloaded_file_path = "deb_buster_php7_3_pgsql.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200718/pool/updates/main/p/php7.3/php7.3-pgsql_7.3.19-1~deb10u1_amd64.deb"],
-    sha256 = "092556383ae7590620ee1f58e7117363a6f9175d7ccd79bb0db7121db4dcff77",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/p/php7.3/php7.3-pgsql_7.3.27-1~deb10u1_amd64.deb"],
+    sha256 = "d85fe9acea5e3b9fb52716465a40015183e2df28be36aa45c0a23d87632a5803",
   )
   http_file(
     name = "deb_buster_php7_3_phpdbg",
     downloaded_file_path = "deb_buster_php7_3_phpdbg.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200718/pool/updates/main/p/php7.3/php7.3-phpdbg_7.3.19-1~deb10u1_amd64.deb"],
-    sha256 = "63f03e64b9cfbc1f1e5058642fe528e57048726e76d3b1c22262ef27d6942d69",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/p/php7.3/php7.3-phpdbg_7.3.27-1~deb10u1_amd64.deb"],
+    sha256 = "46b392881220c7143ecc6c4bf07371dd529213f7e77ec1d33f6010478e7a5e9f",
   )
   http_file(
     name = "deb_buster_php7_3_readline",
     downloaded_file_path = "deb_buster_php7_3_readline.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20200718/pool/updates/main/p/php7.3/php7.3-readline_7.3.19-1~deb10u1_amd64.deb"],
-    sha256 = "adc83a7c3c9e0c584145316a08e1f2f122563df363feab25620774ff4e614ca1",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20210312/pool/updates/main/p/php7.3/php7.3-readline_7.3.27-1~deb10u1_amd64.deb"],
+    sha256 = "9a8985374d4f41c621101eaf72ea26bd31990dcca8c0a0f3c206ef75ffc4ed37",
   )
   http_file(
     name = "deb_buster_php_apcu",
@@ -1700,46 +1706,52 @@ def deb_buster():
     sha256 = "13ef83aa4030726a83b2a08ec56041cf4826addede14cbeb1fed0eeff172a752",
   )
   http_file(
+    name = "deb_buster_pkg_config",
+    downloaded_file_path = "deb_buster_pkg_config.deb",
+    urls = ["http://snapshot.debian.org/archive/debian/20210312/pool/main/p/pkg-config/pkg-config_0.29-6_amd64.deb"],
+    sha256 = "61fc3d4e34671d05f097e4aee5c03223b66de4fcbc76887ad1dbc55885c3965b",
+  )
+  http_file(
     name = "deb_buster_postgis",
     downloaded_file_path = "deb_buster_postgis.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgis_3.1.0+dfsg-1.pgdg100+1_amd64.deb"],
-    sha256 = "356d45649811f77c1044b22aaba624d6981979841304a0816627dd71d31171e0",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgis_3.1.1+dfsg-1.pgdg100+1_amd64.deb"],
+    sha256 = "d3e04878e37b89c5c777bdb83efa410b8185f644de2a7f8e305d337be36b444e",
   )
   http_file(
-    name = "deb_buster_postgresql_12",
-    downloaded_file_path = "deb_buster_postgresql_12.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/postgresql-12_12.5-1.pgdg100+1_amd64.deb"],
-    sha256 = "e1a6cce53b97fe08b1ab4005d24560316485ccde2fefc8f0fdff56f8b5f09c0f",
+    name = "deb_buster_postgresql_13",
+    downloaded_file_path = "deb_buster_postgresql_13.deb",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.2-1.pgdg100+1_amd64.deb"],
+    sha256 = "36140659f49a88fe03af2aa6b05b363d0a3c0f1d57dc7728486f2ffb57a23b72",
   )
   http_file(
-    name = "deb_buster_postgresql_12_postgis_3",
-    downloaded_file_path = "deb_buster_postgresql_12_postgis_3.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-12-postgis-3_3.1.0+dfsg-1.pgdg100+1_amd64.deb"],
-    sha256 = "220ac767606cf893984284b10f7f859585379a2b6d531eea247788a70cc94f69",
+    name = "deb_buster_postgresql_13_postgis_3",
+    downloaded_file_path = "deb_buster_postgresql_13_postgis_3.deb",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-13-postgis-3_3.1.1+dfsg-1.pgdg100+1_amd64.deb"],
+    sha256 = "3f4309fa9b5c8a5b99fad036068497aef96601a551a84915424ddc29917f2c15",
   )
   http_file(
-    name = "deb_buster_postgresql_12_postgis_3_scripts",
-    downloaded_file_path = "deb_buster_postgresql_12_postgis_3_scripts.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-12-postgis-3-scripts_3.1.0+dfsg-1.pgdg100+1_all.deb"],
-    sha256 = "15a2bbd9b405cf9fa1205d90216ab5efa5e7f031cfb48cbc217320581113bbb5",
+    name = "deb_buster_postgresql_13_postgis_3_scripts",
+    downloaded_file_path = "deb_buster_postgresql_13_postgis_3_scripts.deb",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-13-postgis-3-scripts_3.1.1+dfsg-1.pgdg100+1_all.deb"],
+    sha256 = "89481673441a685a04adac9df8e3daa7cf1514f4ff93e6df329ec3c60bddc705",
   )
   http_file(
-    name = "deb_buster_postgresql_client_12",
-    downloaded_file_path = "deb_buster_postgresql_client_12.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/postgresql-client-12_12.5-1.pgdg100+1_amd64.deb"],
-    sha256 = "6f8c5008c684c998432204cde29ccd455e48f11888978ae2072cca285c4d06a8",
+    name = "deb_buster_postgresql_client_13",
+    downloaded_file_path = "deb_buster_postgresql_client_13.deb",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-client-13_13.2-1.pgdg100+1_amd64.deb"],
+    sha256 = "1fbd0144015feda0188857de1dd1c377573f9b9e26f2c81ff62eed4ca775c4b2",
   )
   http_file(
     name = "deb_buster_postgresql_client_common",
     downloaded_file_path = "deb_buster_postgresql_client_common.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_223.pgdg100+1_all.deb"],
-    sha256 = "1a38cca8f395b7122f014ac30dda5afe80c79e0f261f24ad08c079f1093ff18f",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_225.pgdg100+1_all.deb"],
+    sha256 = "a7390e8a2bcb79b3c568dc70b2a0608e900389257a627ba86c98e17849937861",
   )
   http_file(
     name = "deb_buster_postgresql_common",
     downloaded_file_path = "deb_buster_postgresql_common.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_223.pgdg100+1_all.deb"],
-    sha256 = "8c66092ce552c3cecd40a24bf77e60bde830b99fd666cbfa85aa5c8691ca846b",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_225.pgdg100+1_all.deb"],
+    sha256 = "e90fde0657c411da0e58aaea70efecfac82debb94b7017386db1e6387b5c6151",
   )
   http_file(
     name = "deb_buster_procps",
@@ -1846,14 +1858,14 @@ def deb_buster():
   http_file(
     name = "deb_buster_tomcat9_common",
     downloaded_file_path = "deb_buster_tomcat9_common.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/t/tomcat9/tomcat9-common_9.0.31-1~deb10u2_all.deb"],
-    sha256 = "79b545acc04b040c3ec5eddcb9a5bfa60183f87ba296cdf0d359a119cecf19a4",
+    urls = ["http://snapshot.debian.org/archive/debian/20210312/pool/main/t/tomcat9/tomcat9-common_9.0.31-1~deb10u3_all.deb"],
+    sha256 = "0356db2d59bb5be435b7c342e5d570a2838c4b071289deb9202741f600bf87f5",
   )
   http_file(
     name = "deb_buster_tomcat9_user",
     downloaded_file_path = "deb_buster_tomcat9_user.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/t/tomcat9/tomcat9-user_9.0.31-1~deb10u2_all.deb"],
-    sha256 = "0e1c88727711adbb7280fe60fb88408949400ea25050c43c083bf8c86c2a27c6",
+    urls = ["http://snapshot.debian.org/archive/debian/20210312/pool/main/t/tomcat9/tomcat9-user_9.0.31-1~deb10u3_all.deb"],
+    sha256 = "d62201fc919ddd2e770190daaca1cc7ebc6d0c2974f8e4db77841720090d4ddd",
   )
   http_file(
     name = "deb_buster_ucf",
@@ -1882,48 +1894,48 @@ def deb_buster():
   http_file(
     name = "deb_buster_zulu11_ca_jdk_headless",
     downloaded_file_path = "deb_buster_zulu11_ca_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11-ca/zulu11-ca-jdk-headless_11.0.9.1-3_amd64.deb"],
-    sha256 = "e6a6aa2120f5a7919f5e0fe9976971b04c0662e98bf5c3e835bac6854ad20732",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11-ca/zulu11-ca-jdk-headless_11.0.10-1_amd64.deb"],
+    sha256 = "83520a8b2440fbc6a95281edbcd452ade63f9279cc46482a49dc7658850c0734",
   )
   http_file(
     name = "deb_buster_zulu11_ca_jre_headless",
     downloaded_file_path = "deb_buster_zulu11_ca_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11-ca/zulu11-ca-jre-headless_11.0.9.1-3_amd64.deb"],
-    sha256 = "d026b988ed681b75487dce15ae4a433aef98007f5af341ac867ed063dd235a78",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11-ca/zulu11-ca-jre-headless_11.0.10-1_amd64.deb"],
+    sha256 = "7ee6e4ee96d026e2dd54ff6407d2b9e0f438898c1b5e2defdaa11a58d682ad60",
   )
   http_file(
     name = "deb_buster_zulu11_jdk_headless",
     downloaded_file_path = "deb_buster_zulu11_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jdk-headless_11.0.9.1-3_amd64.deb"],
-    sha256 = "b74895a8f167d2c48a33a9826a8fa0d30bef490d3d12892ea1347a7f920c6c2b",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jdk-headless_11.0.10-1_amd64.deb"],
+    sha256 = "fca4ea1ef91673ed788111dfb08c57c5dd95bba231143324b54262567ca343c3",
   )
   http_file(
     name = "deb_buster_zulu11_jre_headless",
     downloaded_file_path = "deb_buster_zulu11_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jre-headless_11.0.9.1-3_amd64.deb"],
-    sha256 = "4e0334ef754f8f502c75a4ffa25f215623d798907bd27de065ff46f2e6d1e32f",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jre-headless_11.0.10-1_amd64.deb"],
+    sha256 = "e3a52b921491fcd31d1bac8d2c8dd57e5d22d631cf17f8eaa9d4ec0843bf4e7f",
   )
   http_file(
     name = "deb_buster_zulu8_ca_jdk_headless",
     downloaded_file_path = "deb_buster_zulu8_ca_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8-ca/zulu8-ca-jdk-headless_8.0.275-3_amd64.deb"],
-    sha256 = "2900b38a074dd203b4aac4c5ec81f564dcd9343532637ae2b746aa7efa4e82af",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8-ca/zulu8-ca-jdk-headless_8.0.282-1_amd64.deb"],
+    sha256 = "e860f87648fe5c635520f626c747d8ac8bd0f1c93a2aeb1f8026c4416f3e37f4",
   )
   http_file(
     name = "deb_buster_zulu8_ca_jre_headless",
     downloaded_file_path = "deb_buster_zulu8_ca_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8-ca/zulu8-ca-jre-headless_8.0.275-3_amd64.deb"],
-    sha256 = "aaa15808fc8c478dd54bd86c1f3c56094691ad700c7f98e4c942c03c937e185e",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8-ca/zulu8-ca-jre-headless_8.0.282-1_amd64.deb"],
+    sha256 = "0708bbc04e3d0c4d5bf528ffa0e24034dc98b293146a3b643b34b556746722fd",
   )
   http_file(
     name = "deb_buster_zulu8_jdk_headless",
     downloaded_file_path = "deb_buster_zulu8_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8/zulu8-jdk-headless_8.0.275-3_amd64.deb"],
-    sha256 = "cc3753d93a35cc685490aacb42c3f52d3316e96923b5f65ff7038e2207f9f32f",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8/zulu8-jdk-headless_8.0.282-1_amd64.deb"],
+    sha256 = "e80b9458fa00ff7a80765811f53a35577d905d3d59844cfc8bc81c74898f851a",
   )
   http_file(
     name = "deb_buster_zulu8_jre_headless",
     downloaded_file_path = "deb_buster_zulu8_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8/zulu8-jre-headless_8.0.275-3_amd64.deb"],
-    sha256 = "973425a969e16b4d2b74a147cc06dcea7dca358b5f6ef46ab2eede169bbae239",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8/zulu8-jre-headless_8.0.282-1_amd64.deb"],
+    sha256 = "114c86d1b89a3cfb66d0d631cd91e1640e026636da221008e5aaea158f4c9420",
   )
