@@ -1,1 +1,1 @@
-        <title>Prometheus Time Series Collection and Processing Server</title>
+Prometheus Time Series Collection and Processing Server

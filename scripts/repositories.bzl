@@ -38,12 +38,12 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.11.0.tar.gz",
   )
 
-  # Update to 20201209 for amd64 (debuerreotype 0.11)
+  # Update to 20210511 for amd64 (debuerreotype 0.12)
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/b05117a87fbd32f977b4909e399fe368c75767ad/buster/slim/rootfs.tar.xz"],
-    sha256 = "a9c59629a193577d20ea43c69b35f8994380a7ae61b2afc749f6e47d4c13b0da",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/259b60f4615af002995c1749c00f1abf9d9f01d8/buster/slim/rootfs.tar.xz"],
+    sha256 = "a0eecf2cf312c031a04b17d7846056eae9644e7de74c9a38d4c73dbf3fb9fea9",
   )
   deb_buster()
 
@@ -74,8 +74,8 @@ def dependency_repositories():
       sha256 = sha,
       build_file_content = "exports_files(['graalvm-ce-java" + v + "-" + GRAAL_VERSION + "'])",
     ) for (v, sha) in [
-      ( "8", "a10a7632bf0afdb162ed1419311540af93c95ad659eb391a709743bb6e457d5c"),
-      ("11", "bd3fbe796e803c4fe5cd089371588d3d716fa3cdb653fe8dd6dba31b57bef934"),
+      ( "8", "fbb3bd8bed21dbcec905c40d40253b00fcd9a77a62aa203214f09a1c268f50cf"),
+      ("11", "39252954d2cb16dbc8ce4269f8b93a326a0efffdce04625615e827fe5b5e4ab7"),
     ]
   ]
 
@@ -122,7 +122,7 @@ def dependency_repositories():
     name = "gerrit_war",
     downloaded_file_path = "gerrit.war",
     urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
-    sha256 = "b6a94900dc49976af46713dbeddf0a53d7113105053d4226ff3329e3344418bd",
+    sha256 = "18d52948af5c7331884b2be8d392ab2f378efb3466e5d1183a65f63b2ed38f31",
   )
 
   ###### GRAFANA
@@ -130,21 +130,21 @@ def dependency_repositories():
     name = "grafana",
     downloaded_file_path = "grafana.deb",
     urls = ["https://dl.grafana.com/oss/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
-    sha256 = "91452456a8502faecc544282906a085315176cba0d26c1242ebd313055edbf14",
+    sha256 = "81a3c667e19c69e555800a3cec115768df87999003aac0c9d8a32aaf75ab62b0",
   )
 
   ###### JENKINS
   http_file(
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
-    urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/" + JENKINS_VERSION + "/jenkins-war-" + JENKINS_VERSION + ".war"],
-    sha256 = "399741db1152ee7bbe8dc08e0972efa0b128a1b55a0f8b10c087fefeec66d151",
+    urls = ["https://get.jenkins.io/war-stable/" + JENKINS_VERSION + "/jenkins.war"],
+    sha256 = "70f9cc6ff1ac59aeeb831b980709a9ddb0ee70d216ee50625a8508b9840f75f2",
   )
   http_file(
     name = "jenkins_agent_jar",
     downloaded_file_path = "swarm-client.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/" + JENKINS_SWARM_VERSION + "/swarm-client-" + JENKINS_SWARM_VERSION + ".jar"],
-    sha256 = "2b7dd9d7c0fe752984d1b880c65b96ea825be4d5377d046fe91ab4ad4218f730",
+    sha256 = "2b7dd9d7c0fe752984d1b880c65b96ea825be4d5377d046fe91ab4ad4218f731",
   )
 
   ###### KIBANA
@@ -166,7 +166,7 @@ def dependency_repositories():
   http_archive(
     name = "kafka",
     url = "https://archive.apache.org/dist/kafka/" + KAFKA_VERSION + "/kafka_2.13-" + KAFKA_VERSION + ".tgz",
-    sha256 = "1dd84b763676a02fecb48fa5d7e7e94a2bf2be9ff87bce14cf14109ce1cb7f90",
+    sha256 = "3fa380ae5d1385111ee9c83b0d1806172924ffec2e29399fd1a42671a97492c6",
     build_file_content = "exports_files(['kafka_2.13-" + KAFKA_VERSION + "'])",
   )
 
@@ -174,7 +174,7 @@ def dependency_repositories():
   http_archive(
     name = "maven",
     url = "https://archive.apache.org/dist/maven/maven-3/" + MAVEN_VERSION + "/binaries/apache-maven-" + MAVEN_VERSION + "-bin.tar.gz",
-    sha256 = "26ad91d751b3a9a53087aefa743f4e16a17741d3915b219cf74112bf87a438c5",
+    sha256 = "26ad91d751b3a9a53087aefa743f4e16a17741d3915b219cf74112bf87a438c6",
     build_file_content = "exports_files(['apache-maven-" + MAVEN_VERSION + "'])",
   )
 
@@ -191,14 +191,14 @@ def dependency_repositories():
     name = "nodejs",
     downloaded_file_path = "nodejs.tar.xz",
     urls = ["https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz"],
-    sha256 = "608732c7b8c2ac0683fee459847ad3993a428f0398c73555b9270345f4a64752"
+    sha256 = "494b161759a3d19c70e3172d33ce1918dd8df9ad20d29d1652a8387a84e2d308"
   )
 
   ###### PROMETHEUS
   http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "8fb248b579b8b9a88dd9b1686f7f68db7071960a45b28619145d3a4037375dcb",
+    sha256 = "ce637d0167d5e6d2561f3bd37e1c58fe8601e13e4e1ea745653c068f6e1317ae",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -221,7 +221,7 @@ def dependency_repositories():
   http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "ecd4e9b23a07d739065ecc2e00d040063a156131cbc9a9c0e9d8ca57966f641a",
+    sha256 = "d7490840dcbedd5d520f8b8466cfc127813a6d3091577c2304df20c3d8ebf554",
     build_file_content = "exports_files(['sbt'])",
   )
 
@@ -246,14 +246,14 @@ def dependency_repositories():
     name = "zipkin",
     downloaded_file_path = "zipkin.jar",
     urls = ["https://repo1.maven.org/maven2/io/zipkin/zipkin-server/" + ZIPKIN_VERSION + "/zipkin-server-" + ZIPKIN_VERSION + "-exec.jar"],
-    sha256 = "35736e123ac1d242c02c7eace882dfe537a10864a5c4134e93986a8589eb733d",
+    sha256 = "1305fed981df2b5a460de7748d89dbca2afcf110fe74ed4e994015069beda27b",
   )
 
   ###### ZOOKEEPER
   http_archive(
     name = "zookeeper",
     url = "https://archive.apache.org/dist/zookeeper/zookeeper-" + ZOOKEEPER_VERSION + "/apache-zookeeper-" + ZOOKEEPER_VERSION + "-bin.tar.gz",
-    sha256 = "476f6fce10f9528e3a4ad00e6cd1714563f602dd4924db78e506c0df28fea1e5",
+    sha256 = "fed19a8e8daa3cd49e721d61929b90613dc0b19faa8ccb7d0b3a85db46b0c922",
     build_file_content = "exports_files(['apache-zookeeper-" + ZOOKEEPER_VERSION + "-bin'])",
   )
 

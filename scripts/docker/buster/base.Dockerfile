@@ -1,10 +1,10 @@
 FROM bazel/base:buster
 
-RUN echo "deb http://snapshot.debian.org/archive/debian/20210312 buster main" > /etc/apt/sources.list
-RUN echo "deb http://snapshot.debian.org/archive/debian/20210312 buster-updates main" >> /etc/apt/sources.list
-RUN echo "deb http://snapshot.debian.org/archive/debian-security/20210312 buster/updates main" >> /etc/apt/sources.list
+RUN echo "deb http://snapshot.debian.org/archive/debian/20210611 buster main" > /etc/apt/sources.list
+RUN echo "deb http://snapshot.debian.org/archive/debian/20210611 buster-updates main" >> /etc/apt/sources.list
+RUN echo "deb http://snapshot.debian.org/archive/debian-security/20210611 buster/updates main" >> /etc/apt/sources.list
 
-RUN echo "deb http://snapshot.debian.org/archive/debian/20210312 buster-backports main" > /etc/apt/sources.list.d/backports.list
+RUN echo "deb http://snapshot.debian.org/archive/debian/20210611 buster-backports main" > /etc/apt/sources.list.d/backports.list
 
 RUN apt-get update
 RUN apt-get autoremove -y && apt-get autoclean -y && apt-get clean -y

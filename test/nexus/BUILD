@@ -9,7 +9,7 @@ container_test(
   size = "medium",
   image = ":wget",
   daemon = True,
-  mem_limit = "2000m",
+  mem_limit = "1000m",
   test = "test.sh",
   golden = "output.txt",
 )

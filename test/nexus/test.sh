@@ -5,8 +5,8 @@ set -e
 readonly redirect_url=http://localhost:8081/service/local/artifact/maven/redirect
 readonly repo=central
 readonly group_id=com.chuusai
-readonly artifact_id=shapeless_2.11
-readonly version=2.3.0
+readonly artifact_id=shapeless_2.13
+readonly version=2.3.4
 
 readonly url="${redirect_url}?r=${repo}&g=${group_id}&a=${artifact_id}&v=${version}"
 

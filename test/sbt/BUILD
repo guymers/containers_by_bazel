@@ -1,8 +1,8 @@
 container_test(
   name = "sbt",
-  size = "large",
+  size = "medium",
   image = "//sbt",
-  mem_limit = "1024m",
+  mem_limit = "1500m",
   read_only = False, # loads native libs from /tmp
   test = "test.sh",
   files = [

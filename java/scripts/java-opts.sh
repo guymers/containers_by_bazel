@@ -15,30 +15,24 @@ if [ "$JAVA_RANDOM_PERFORMANCE" = "true" ]; then
   JAVA_OPTS="$JAVA_OPTS -Djava.security.egd=file:/dev/./urandom"
 fi
 
-AUTO_JAVA_HEAP_SIZE=${AUTO_JAVA_HEAP_SIZE:-true}
-if [ -n "$JAVA_HEAP_SIZE_PERCENTAGE" ] || [ "$AUTO_JAVA_HEAP_SIZE" = "true" ]; then
+if [ -n "$JAVA_NUM_PROCESSORS" ]; then
+  JAVA_OPTS="$JAVA_OPTS -XX:ActiveProcessorCount=${JAVA_NUM_PROCESSORS}"
+fi
+
+JAVA_AUTO_HEAP_SIZE=${JAVA_AUTO_HEAP_SIZE:-true}
+if [ -n "$JAVA_HEAP_SIZE_PERCENTAGE" ] || [ "$JAVA_AUTO_HEAP_SIZE" = "true" ]; then
   JAVA_HEAP_SIZE_PERCENTAGE=${JAVA_HEAP_SIZE_PERCENTAGE:-75.0}
-  JAVA_OPTS="$JAVA_OPTS -XX:InitialRAMPercentage=$JAVA_HEAP_SIZE_PERCENTAGE"
-  JAVA_OPTS="$JAVA_OPTS -XX:MinRAMPercentage=$JAVA_HEAP_SIZE_PERCENTAGE -XX:MaxRAMPercentage=$JAVA_HEAP_SIZE_PERCENTAGE"
+  JAVA_OPTS="$JAVA_OPTS -XX:MaxRAMPercentage=$JAVA_HEAP_SIZE_PERCENTAGE"
 elif [ -n "$JAVA_HEAP_SIZE" ]; then
   JAVA_OPTS="$JAVA_OPTS -Xms${JAVA_HEAP_SIZE}m -Xmx${JAVA_HEAP_SIZE}m"
 fi
 
-USE_G1GC=${USE_G1GC:-true}
-if [ "$USE_G1GC" = "true" ]; then
-  # https://jenkins.io/blog/2016/11/21/gc-tuning/
-  JAVA_OPTS="$JAVA_OPTS -XX:+UseG1GC -XX:G1RSetUpdatingPauseTimePercent=5"
-  JAVA_OPTS="$JAVA_OPTS -XX:+ExplicitGCInvokesConcurrent -XX:+ParallelRefProcEnabled"
-  JAVA_OPTS="$JAVA_OPTS -XX:+UseStringDeduplication -XX:G1NewSizePercent=20"
-  JAVA_OPTS="$JAVA_OPTS -XX:+UnlockDiagnosticVMOptions -XX:G1SummarizeRSetStatsPeriod=1"
-else
-  # http://blog.sokolenko.me/2014/11/javavm-options-production.html
-  # https://engineering.linkedin.com/garbage-collection/garbage-collection-optimization-high-throughput-and-low-latency-java-applications
-  JAVA_OPTS="$JAVA_OPTS -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+ParallelRefProcEnabled"
-  JAVA_OPTS="$JAVA_OPTS -XX:+CMSClassUnloadingEnabled -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=75"
-fi
+# https://jenkins.io/blog/2016/11/21/gc-tuning/
+JAVA_OPTS="$JAVA_OPTS -XX:+UseG1GC -XX:G1RSetUpdatingPauseTimePercent=5"
+JAVA_OPTS="$JAVA_OPTS -XX:+ExplicitGCInvokesConcurrent -XX:+ParallelRefProcEnabled"
+JAVA_OPTS="$JAVA_OPTS -XX:+UseStringDeduplication -XX:G1NewSizePercent=25"
 
-DNS_TTL=${DNS_TTL:-60}
+DNS_TTL=${DNS_TTL:-30}
 JAVA_OPTS="$JAVA_OPTS -Dsun.net.inetaddr.ttl=$DNS_TTL"
 
 JMX_MONITORING=${JMX_MONITORING:-true}
@@ -51,9 +45,10 @@ if [ "$JMX_MONITORING" = "true" ]; then
 fi
 
 if [ -n "$OOM_DUMP_FOLDER" ]; then
-  JAVA_OPTS="$JAVA_OPTS -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=$OOM_DUMP_FOLDER/${HOSTNAME}_$(date --iso-8601=seconds).hprof"
+  JAVA_OPTS="$JAVA_OPTS -XX:+ExitOnOutOfMemoryError -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=$OOM_DUMP_FOLDER/${HOSTNAME}_$(date --iso-8601=seconds).hprof"
 fi
 
+# TODO java 11 GC logging options
 if [ -n "$GC_LOG_FOLDER" ]; then
   JAVA_OPTS="$JAVA_OPTS -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintTenuringDistribution"
   JAVA_OPTS="$JAVA_OPTS -XX:+PrintHeapAtGC -XX:+PrintGCCause -XX:+PrintReferenceGC -XX:+PrintAdaptiveSizePolicy"
