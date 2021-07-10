@@ -38,12 +38,12 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.11.0.tar.gz",
   )
 
-  # Update to 20210511 for amd64 (debuerreotype 0.12)
+  # Update to 20210621 for amd64 (debuerreotype 0.12)
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/259b60f4615af002995c1749c00f1abf9d9f01d8/buster/slim/rootfs.tar.xz"],
-    sha256 = "a0eecf2cf312c031a04b17d7846056eae9644e7de74c9a38d4c73dbf3fb9fea9",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/a4f413e5917d5917fb2343c0c37ea0728114c084/buster/slim/rootfs.tar.xz"],
+    sha256 = "c292207f0572464b8945ec83bc5cc50bc7f103fb19b94e5a57d21139b8dc8969",
   )
   deb_buster()
 
@@ -83,14 +83,14 @@ def dependency_repositories():
   http_file(
     name = "cassandra",
     downloaded_file_path = "cassandra.deb",
-    urls = ["https://dl.bintray.com/apache/cassandra/pool/main/c/cassandra/cassandra_" + CASSANDRA_DEB_VERSION + ".deb"],
-    sha256 = "1374b0ed57a58f6f23ad558273035b145e818d195722d4616867d4a7345c0da6",
+    urls = ["https://downloads.apache.org/cassandra/debian/pool/main/c/cassandra/cassandra_" + CASSANDRA_DEB_VERSION + ".deb"],
+    sha256 = "2066390530c8084790e3463f35f61943f4fb606595e7729640561ed2f60afcf1",
   )
   http_file(
     name = "cassandra_tools",
     downloaded_file_path = "cassandra-tools.deb",
-    urls = ["https://dl.bintray.com/apache/cassandra/pool/main/c/cassandra/cassandra-tools_" + CASSANDRA_DEB_VERSION + ".deb"],
-    sha256 = "3e95398d9b976ead1eeb319d95d434768f8c3de8fce16f996c7facf7ef5d2aaa",
+    urls = ["https://downloads.apache.org/cassandra/debian/pool/main/c/cassandra/cassandra-tools_" + CASSANDRA_DEB_VERSION + ".deb"],
+    sha256 = "56d395fe3f0dc23536eba8ee7ae79e3745ebb6c740aadb234d5540737635d258",
   )
 
   ###### ELASTICSEARCH
@@ -102,11 +102,11 @@ def dependency_repositories():
   )
 
   ###### ENVOY
-  http_file(
+  http_archive(
     name = "envoy",
-    downloaded_file_path = "envoy.deb",
-    urls = ["https://dl.bintray.com/tetrate/getenvoy-deb/pool/stable/g/getenvoy-envoy/getenvoy-envoy_" + ENVOY_VERSION + ".p0.g50ef094-1p67.g2aa564b_amd64.deb"],
-    sha256 = "4d29aef1c0c62a7f29fe9300a96bda0aad7238c2327b1d3fc9126914bd3fdfeb",
+    urls = ["https://github.com/tetratelabs/archive-envoy/releases/download/v" + ENVOY_VERSION + "/envoy-v" + ENVOY_VERSION + "-linux-amd64.tar.xz"],
+    sha256 = "227c6166d4fb73e6d8ef8976549536a50fa9e5b0fdc6984190524d829a33b9b2",
+    build_file_content = "exports_files(['envoy-v" + ENVOY_VERSION + "-linux-amd64'])",
   )
 
   ###### ERLANG
@@ -206,7 +206,7 @@ def dependency_repositories():
   maven_jar(
     name = "jmx_prometheus_javaagent",
     artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:" + PROMETHEUS_JMX_JAVAAGENT,
-    sha1 = "e1d9de7995c5172527002fc8da4fcdd86fff253b",
+    sha1 = "f769b466c8dc7c83ccdb5e32612590007ba224e1",
   )
 
   ###### RABBITMQ

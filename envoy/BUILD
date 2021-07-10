@@ -1,5 +1,7 @@
 load("//macros/user:user.bzl", "user_layer")
+load("//scripts/versions:versions.bzl", "ENVOY_VERSION")
 
+VERSION = ENVOY_VERSION
 ENVOY_CONF = "/etc/envoy"
 ENVOY_DATA = "/envoy"
 ENVOY_LOGS = ENVOY_DATA + "/logs"
@@ -13,8 +15,12 @@ user_layer(
 
 container_layer(
   name = "files",
-  directory = "/",
-  debs = ["@envoy//file"],
+  directory = "/opt",
+  files = ["@envoy//:envoy-v" + VERSION + "-linux-amd64"],
+  symlinks = {
+  	"/opt/envoy": "/opt/envoy-v" + VERSION + "-linux-amd64",
+    "/usr/local/bin/envoy": "/opt/envoy/bin/envoy",
+  },
 )
 
 container_layer(
