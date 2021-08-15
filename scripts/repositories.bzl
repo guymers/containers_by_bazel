@@ -38,12 +38,12 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.11.0.tar.gz",
   )
 
-  # Update to 20210621 for amd64 (debuerreotype 0.12)
+  # Update to 20210721 for amd64 (debuerreotype 0.12)
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/a4f413e5917d5917fb2343c0c37ea0728114c084/buster/slim/rootfs.tar.xz"],
-    sha256 = "c292207f0572464b8945ec83bc5cc50bc7f103fb19b94e5a57d21139b8dc8969",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/40788cbd2ff186239b1bf6ff63f3a506e43e5896/buster/slim/rootfs.tar.xz"],
+    sha256 = "619fdb033b1eed60703f9c0292e01d065df2c84ee2bd469132b81b73f9b212b5",
   )
   deb_buster()
 
@@ -74,8 +74,8 @@ def dependency_repositories():
       sha256 = sha,
       build_file_content = "exports_files(['graalvm-ce-java" + v + "-" + GRAAL_VERSION + "'])",
     ) for (v, sha) in [
-      ( "8", "fbb3bd8bed21dbcec905c40d40253b00fcd9a77a62aa203214f09a1c268f50cf"),
-      ("11", "39252954d2cb16dbc8ce4269f8b93a326a0efffdce04625615e827fe5b5e4ab7"),
+      ( "8", "0ea16ff2fe178800195e2918ee7ceee352601d4161a17eac67979febaaecfe05"),
+      ("11", "bbd3e03025168172a76c2a29e6a14c1c37e3476b30774259c3ef5952fb86f470"),
     ]
   ]
 
@@ -130,7 +130,7 @@ def dependency_repositories():
     name = "grafana",
     downloaded_file_path = "grafana.deb",
     urls = ["https://dl.grafana.com/oss/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
-    sha256 = "81a3c667e19c69e555800a3cec115768df87999003aac0c9d8a32aaf75ab62b0",
+    sha256 = "25e8ed4889ee2ade30a936092aa0f054c67054f5dcac148fdfd9cfb3115b644d",
   )
 
   ###### JENKINS
@@ -138,7 +138,7 @@ def dependency_repositories():
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
     urls = ["https://get.jenkins.io/war-stable/" + JENKINS_VERSION + "/jenkins.war"],
-    sha256 = "70f9cc6ff1ac59aeeb831b980709a9ddb0ee70d216ee50625a8508b9840f75f2",
+    sha256 = "996dfd29d5f933546af9e9f77c29b371fb0627b8266b6c9f134ac2e0f1248b87",
   )
   http_file(
     name = "jenkins_agent_jar",
@@ -191,7 +191,7 @@ def dependency_repositories():
     name = "nodejs",
     downloaded_file_path = "nodejs.tar.xz",
     urls = ["https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz"],
-    sha256 = "494b161759a3d19c70e3172d33ce1918dd8df9ad20d29d1652a8387a84e2d308"
+    sha256 = "2d759de07a50cd7f75bd73d67e97b0d0e095ee3c413efac7d1b3d1e84ed76fff"
   )
 
   ###### PROMETHEUS
