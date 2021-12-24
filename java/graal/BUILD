@@ -6,7 +6,7 @@ load("//scripts/versions:versions.bzl", "GRAAL_VERSION")
     directory = "/opt",
     files = ["@graal_" + v + "//:graalvm-ce-java" + v + "-" + GRAAL_VERSION],
     symlinks = { "/opt/graalvm": "/opt/graalvm-ce-java" + v + "-" + GRAAL_VERSION },
-  ) for v in ["8", "11"]
+  ) for v in ["11", "17"]
 ]
 
 [
@@ -33,5 +33,5 @@ load("//scripts/versions:versions.bzl", "GRAAL_VERSION")
       "/var/log/java/oom",
     ],
     visibility = ["//visibility:public"],
-  ) for v in ["8", "11"]
+  ) for v in ["11", "17"]
 ]

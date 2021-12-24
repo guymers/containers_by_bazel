@@ -38,12 +38,12 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.11.0.tar.gz",
   )
 
-  # Update to 20210721 for amd64 (debuerreotype 0.12)
+  # Update to 20211220 for amd64 (debuerreotype 0.13)
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/40788cbd2ff186239b1bf6ff63f3a506e43e5896/buster/slim/rootfs.tar.xz"],
-    sha256 = "619fdb033b1eed60703f9c0292e01d065df2c84ee2bd469132b81b73f9b212b5",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/d5eb7c589d016973bce6f3e1827b5c315b7cefbc/buster/slim/rootfs.tar.xz"],
+    sha256 = "532c2235d13be8abc5fa550860c11694a2a9e2d4b9e85dec23e4d904f5ba00de",
   )
   deb_buster()
 
@@ -74,8 +74,8 @@ def dependency_repositories():
       sha256 = sha,
       build_file_content = "exports_files(['graalvm-ce-java" + v + "-" + GRAAL_VERSION + "'])",
     ) for (v, sha) in [
-      ( "8", "0ea16ff2fe178800195e2918ee7ceee352601d4161a17eac67979febaaecfe05"),
-      ("11", "bbd3e03025168172a76c2a29e6a14c1c37e3476b30774259c3ef5952fb86f470"),
+      ("11", "3a1bc8eaf0518c128aaacb987ceb0b0e288776f48af630c11c01fd31122d93fa"),
+      ("17", "11d8039e0a7a31b799a6f20a0e806e4128730e9a2595a7ffdec1443539d4c3f6"),
     ]
   ]
 
@@ -122,7 +122,7 @@ def dependency_repositories():
     name = "gerrit_war",
     downloaded_file_path = "gerrit.war",
     urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
-    sha256 = "18d52948af5c7331884b2be8d392ab2f378efb3466e5d1183a65f63b2ed38f31",
+    sha256 = "4d264c0d6bc3ecde24f932cf99b41fddd8dbd53f0e711dcb10a133a4c595f80d",
   )
 
   ###### GRAFANA
@@ -130,7 +130,7 @@ def dependency_repositories():
     name = "grafana",
     downloaded_file_path = "grafana.deb",
     urls = ["https://dl.grafana.com/oss/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
-    sha256 = "25e8ed4889ee2ade30a936092aa0f054c67054f5dcac148fdfd9cfb3115b644d",
+    sha256 = "44be296a2656f737aedda4674e97ab2066996ef00c52526d373bd556ae82bb46",
   )
 
   ###### JENKINS
@@ -138,13 +138,13 @@ def dependency_repositories():
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
     urls = ["https://get.jenkins.io/war-stable/" + JENKINS_VERSION + "/jenkins.war"],
-    sha256 = "996dfd29d5f933546af9e9f77c29b371fb0627b8266b6c9f134ac2e0f1248b87",
+    sha256 = "7e4b848a752eda740c2c7a60956bf05d9df42602c805bbaeac897179b630a562",
   )
   http_file(
     name = "jenkins_agent_jar",
     downloaded_file_path = "swarm-client.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/" + JENKINS_SWARM_VERSION + "/swarm-client-" + JENKINS_SWARM_VERSION + ".jar"],
-    sha256 = "2b7dd9d7c0fe752984d1b880c65b96ea825be4d5377d046fe91ab4ad4218f731",
+    sha256 = "2b7dd9d7c0fe752984d1b880c65b96ea825be4d5377d046fe91ab4ad4218f733",
   )
 
   ###### KIBANA
@@ -166,7 +166,7 @@ def dependency_repositories():
   http_archive(
     name = "kafka",
     url = "https://archive.apache.org/dist/kafka/" + KAFKA_VERSION + "/kafka_2.13-" + KAFKA_VERSION + ".tgz",
-    sha256 = "3fa380ae5d1385111ee9c83b0d1806172924ffec2e29399fd1a42671a97492c6",
+    sha256 = "4888b03e3b27dd94f2d830ce3bae9d7d98b0ccee3a5d30c919ccb60e0fa1f139",
     build_file_content = "exports_files(['kafka_2.13-" + KAFKA_VERSION + "'])",
   )
 
@@ -174,7 +174,7 @@ def dependency_repositories():
   http_archive(
     name = "maven",
     url = "https://archive.apache.org/dist/maven/maven-3/" + MAVEN_VERSION + "/binaries/apache-maven-" + MAVEN_VERSION + "-bin.tar.gz",
-    sha256 = "26ad91d751b3a9a53087aefa743f4e16a17741d3915b219cf74112bf87a438c6",
+    sha256 = "2cdc9c519427bb20fdc25bef5a9063b790e4abd930e7b14b4e9f4863d6f9f13c",
     build_file_content = "exports_files(['apache-maven-" + MAVEN_VERSION + "'])",
   )
 
@@ -191,14 +191,14 @@ def dependency_repositories():
     name = "nodejs",
     downloaded_file_path = "nodejs.tar.xz",
     urls = ["https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz"],
-    sha256 = "2d759de07a50cd7f75bd73d67e97b0d0e095ee3c413efac7d1b3d1e84ed76fff"
+    sha256 = "a3721f87cecc0b52b0be8587c20776ac7305db413751db02c55aa2bffac15198"
   )
 
   ###### PROMETHEUS
   http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "ce637d0167d5e6d2561f3bd37e1c58fe8601e13e4e1ea745653c068f6e1317ae",
+    sha256 = "f08e96d73330a9ee7e6922a9f5b72ea188988a083bbfa9932359339fcf504a74",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -206,7 +206,7 @@ def dependency_repositories():
   maven_jar(
     name = "jmx_prometheus_javaagent",
     artifact = "io.prometheus.jmx:jmx_prometheus_javaagent:" + PROMETHEUS_JMX_JAVAAGENT,
-    sha1 = "f769b466c8dc7c83ccdb5e32612590007ba224e1",
+    sha1 = "d3952d71a19007372240657b07f5b1b42994880e",
   )
 
   ###### RABBITMQ
