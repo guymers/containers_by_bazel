@@ -1,0 +1,23 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+
+    - name: bazel cache
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/bazel
+        key: ${{ runner.os }}-bazel-${{ github.ref_name }}
+        restore-keys: ${{ runner.os }}-bazel-master
+
+    - name: bazel version
+      run: bazel version
+
+    - name: test
+      run: ./scripts/ci.sh

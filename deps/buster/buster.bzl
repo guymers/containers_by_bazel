@@ -142,7 +142,7 @@ def deb_buster():
   http_file(
     name = "deb_buster_java_common",
     downloaded_file_path = "deb_buster_java_common.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/j/java-common/java-common_0.71_all.deb"],
+    urls = ["http://snapshot.debian.org/archive/debian/20220129/pool/main/j/java-common/java-common_0.71_all.deb"],
     sha256 = "2e95634737ec5436357f416ec47dd26c0e8fe1070dd9fa97ccf169b7cecefcc7",
   )
   http_file(
@@ -940,8 +940,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libnss3",
     downloaded_file_path = "deb_buster_libnss3.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20211224/pool/updates/main/n/nss/libnss3_3.42.1-1+deb10u4_amd64.deb"],
-    sha256 = "f6af756cfd53731f51e784fcdcf57d73aef8b6044d52eb338108e7cb701cf85c",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20220129/pool/updates/main/n/nss/libnss3_3.42.1-1+deb10u5_amd64.deb"],
+    sha256 = "665a09fc51d273fc71abcda80abcae1c50f380b2d5e660c908b729aeaf6fb6c1",
   )
   http_file(
     name = "deb_buster_libnuma1",
@@ -1288,8 +1288,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_liburiparser1",
     downloaded_file_path = "deb_buster_liburiparser1.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200410/pool/main/u/uriparser/liburiparser1_0.9.1-1_amd64.deb"],
-    sha256 = "005564c21755fcaae2e1c10c277b43c94eec546c52797eb6d053977cebea2d8b",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20220129/pool/updates/main/u/uriparser/liburiparser1_0.9.1-1+deb10u1_amd64.deb"],
+    sha256 = "e7fa57dfcc0c0f878a1b8713f1590c8d94957debb14d4804b2b7ccad779d9510",
   )
   http_file(
     name = "deb_buster_libwebp6",
@@ -1558,8 +1558,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_nginx",
     downloaded_file_path = "deb_buster_nginx.deb",
-    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.21.4-1~buster_amd64.deb"],
-    sha256 = "5b81771d2581d52241aba1f2a93338d0c498359042992f0f29f76a03289c7e35",
+    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.21.6-1~buster_amd64.deb"],
+    sha256 = "b2ace277162c76f9d19a1437746aade97bffc78103b55327eb6be263a834b413",
   )
   http_file(
     name = "deb_buster_numactl",
@@ -1900,48 +1900,48 @@ def deb_buster():
   http_file(
     name = "deb_buster_zulu11_ca_jdk_headless",
     downloaded_file_path = "deb_buster_zulu11_ca_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11-ca/zulu11-ca-jdk-headless_11.0.13-1_amd64.deb"],
-    sha256 = "3dc1de5d090d7435989f708a28883747eebe6fbb254127ee389081d28b8c0ebf",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11-ca/zulu11-ca-jdk-headless_11.0.14-1_amd64.deb"],
+    sha256 = "98db6d47c6e8e34a322e7dac1c0136ea7113d54152a72b016bc9aae39084e24c",
   )
   http_file(
     name = "deb_buster_zulu11_ca_jre_headless",
     downloaded_file_path = "deb_buster_zulu11_ca_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11-ca/zulu11-ca-jre-headless_11.0.13-1_amd64.deb"],
-    sha256 = "2e52c0ecd78978f53a5e4164abc75f571b712cba703226f8b72b8b2563b2b684",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11-ca/zulu11-ca-jre-headless_11.0.14-1_amd64.deb"],
+    sha256 = "789dbb1b8fcfb0b8fbff32d9e203dc20e9be0b796a2ae8eed9b62eba63ac8b3f",
   )
   http_file(
     name = "deb_buster_zulu11_jdk_headless",
     downloaded_file_path = "deb_buster_zulu11_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jdk-headless_11.0.13-1_amd64.deb"],
-    sha256 = "f1e03f7d551f25c689cf0199218853e29c593ebc108a354b98d2b586efa04e09",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jdk-headless_11.0.14-1_amd64.deb"],
+    sha256 = "7564153a9b7fc40c2f48fb254db30d8572af4e3e0cabc92d12a3b4a014fad7c1",
   )
   http_file(
     name = "deb_buster_zulu11_jre_headless",
     downloaded_file_path = "deb_buster_zulu11_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jre-headless_11.0.13-1_amd64.deb"],
-    sha256 = "2929fabde3f95c3be8eac2b4a3b6a6ee6e3a49425251aceb7d2f5e0f4357be02",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jre-headless_11.0.14-1_amd64.deb"],
+    sha256 = "a06c880e4e1dd2a25882990ab47be402e9551a3a47d90c672a23aa8899b9272a",
   )
   http_file(
     name = "deb_buster_zulu8_ca_jdk_headless",
     downloaded_file_path = "deb_buster_zulu8_ca_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8-ca/zulu8-ca-jdk-headless_8.0.312-1_amd64.deb"],
-    sha256 = "0f5e388e1fdac163d3cdd7f3259face046d7e9103ef4f1ba6cf975d26bfa403c",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8-ca/zulu8-ca-jdk-headless_8.0.322-1_amd64.deb"],
+    sha256 = "1883a699fefa3d549de54189b102c6f6fe5d2c9ff0d5fff8e837f4fe2a407f21",
   )
   http_file(
     name = "deb_buster_zulu8_ca_jre_headless",
     downloaded_file_path = "deb_buster_zulu8_ca_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8-ca/zulu8-ca-jre-headless_8.0.312-1_amd64.deb"],
-    sha256 = "7843211a89a39f822559f0cc31bba19b785fe0f709f8581892e35f937f781021",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8-ca/zulu8-ca-jre-headless_8.0.322-1_amd64.deb"],
+    sha256 = "30d677e243f3e02946dee68670380619a39932823ca83ab2420ce1020fd236da",
   )
   http_file(
     name = "deb_buster_zulu8_jdk_headless",
     downloaded_file_path = "deb_buster_zulu8_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8/zulu8-jdk-headless_8.0.312-1_amd64.deb"],
-    sha256 = "12b8c46118f839923ee061453bf9cfd8394635bc99c07b3fee6038c4fa1bdcd5",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8/zulu8-jdk-headless_8.0.322-1_amd64.deb"],
+    sha256 = "2d7d35e9788adb013a2ce7a56645a5ae901d56633ebe4a0e4d3b86762ab95940",
   )
   http_file(
     name = "deb_buster_zulu8_jre_headless",
     downloaded_file_path = "deb_buster_zulu8_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8/zulu8-jre-headless_8.0.312-1_amd64.deb"],
-    sha256 = "68e39d594b9e32003799a0a44f832763ea4ad40cc6776aa6b7b72a7494b54bcb",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8/zulu8-jre-headless_8.0.322-1_amd64.deb"],
+    sha256 = "0d179bd91e62b42cb115ac5028598be516b77e8f75abc0e01e99b0db9aa40064",
   )

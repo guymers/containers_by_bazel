@@ -33,17 +33,17 @@ load("@bazel_tools//tools/build_defs/repo:maven_rules.bzl", "maven_jar")
 def dependency_repositories():
   http_archive(
     name = "bazel_rules_container_test",
-    sha256 = "0ea03839bf059c0ec7c4f95cb6cb048b84094b180b051c737cbef9ca150bcc0b",
-    strip_prefix = "bazel_rules_container_test-0.11.0",
-    url = "https://github.com/guymers/bazel_rules_container/archive/0.11.0.tar.gz",
+    sha256 = "819fb160f4bc43b201f781521938b4dfde9883f973e7f72c1e82d8f8584ed519",
+    strip_prefix = "bazel_rules_container_test-0.12.0",
+    url = "https://github.com/guymers/bazel_rules_container/archive/0.12.0.tar.gz",
   )
 
-  # Update to 20211220 for amd64 (debuerreotype 0.13)
+  # Update to 20220125 for amd64 (debuerreotype 0.13)
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/d5eb7c589d016973bce6f3e1827b5c315b7cefbc/buster/slim/rootfs.tar.xz"],
-    sha256 = "532c2235d13be8abc5fa550860c11694a2a9e2d4b9e85dec23e4d904f5ba00de",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/de5fb2efd50a009baa2aaccd2b7874ec728bd7a9/buster/slim/rootfs.tar.xz"],
+    sha256 = "eb15a70aabe19af189354a568ee5d6e9257b07623f361ea0680e9671c5a5cd1d",
   )
   deb_buster()
 
@@ -74,8 +74,8 @@ def dependency_repositories():
       sha256 = sha,
       build_file_content = "exports_files(['graalvm-ce-java" + v + "-" + GRAAL_VERSION + "'])",
     ) for (v, sha) in [
-      ("11", "3a1bc8eaf0518c128aaacb987ceb0b0e288776f48af630c11c01fd31122d93fa"),
-      ("17", "11d8039e0a7a31b799a6f20a0e806e4128730e9a2595a7ffdec1443539d4c3f6"),
+      ("11", "bc86083bb7e2778c7e4fe4f55d74790e42255b96f7806a7fefa51d06f3bc7103"),
+      ("17", "4f743e0ed3d974b7d619ca2ed6014554e8c12e5ebbb38b9bc9e820b182169bd4"),
     ]
   ]
 
@@ -130,7 +130,7 @@ def dependency_repositories():
     name = "grafana",
     downloaded_file_path = "grafana.deb",
     urls = ["https://dl.grafana.com/oss/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
-    sha256 = "44be296a2656f737aedda4674e97ab2066996ef00c52526d373bd556ae82bb46",
+    sha256 = "9ed2e2a46d9f8e519554a08082204fd99d0cae296fe3fb7b4e8ba9d9ba8631ed",
   )
 
   ###### JENKINS
@@ -138,7 +138,7 @@ def dependency_repositories():
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
     urls = ["https://get.jenkins.io/war-stable/" + JENKINS_VERSION + "/jenkins.war"],
-    sha256 = "7e4b848a752eda740c2c7a60956bf05d9df42602c805bbaeac897179b630a562",
+    sha256 = "020c8db10469e20e22e68c81e7e83bf35ccb6a435b712c4b643851949e75a553",
   )
   http_file(
     name = "jenkins_agent_jar",
@@ -191,7 +191,7 @@ def dependency_repositories():
     name = "nodejs",
     downloaded_file_path = "nodejs.tar.xz",
     urls = ["https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz"],
-    sha256 = "a3721f87cecc0b52b0be8587c20776ac7305db413751db02c55aa2bffac15198"
+    sha256 = "7f5e9a42d6e86147867d35643c7b1680c27ccd45db85666fc52798ead5e74421"
   )
 
   ###### PROMETHEUS
@@ -221,7 +221,7 @@ def dependency_repositories():
   http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "d7490840dcbedd5d520f8b8466cfc127813a6d3091577c2304df20c3d8ebf554",
+    sha256 = "60286bf1b875b31e2955f8a699888cd2612e9afd94d03cde0a2e71efd7492ffc",
     build_file_content = "exports_files(['sbt'])",
   )
 

@@ -244,6 +244,7 @@ filegroup(
   name = "nginx",
   srcs = [
     "@deb_buster_gettext_base//file",
+    "@deb_buster_libpcre2_8_0//file",
     "@deb_buster_libssl1_1//file",
     "@deb_buster_lsb_base//file",
     "@deb_buster_nginx//file",
