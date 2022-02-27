@@ -1,7 +1,7 @@
 container_image(
   name = "kibana_wget",
   base = "//kibana",
-  layers = ["//test:wget"],
+  layers = ["//test:wget_buster"],
 )
 
 container_test(

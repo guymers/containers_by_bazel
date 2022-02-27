@@ -9,8 +9,9 @@ readonly urls=($(echo "$pkg_dep_info" | grep ^\' | cut -d\' -f2))
 
 function find_url() {
   local seeking=$1
-  # + is escaped in the url
+  # + and ~ are escaped in the url
   seeking=${seeking//[+]/%2b}
+  seeking=${seeking//[~]/%7e}
   local e=
   for element in "${urls[@]}"; do
     if [[ "$element" == *"$seeking" ]]; then

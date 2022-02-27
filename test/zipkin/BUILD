@@ -1,7 +1,7 @@
 container_image(
   name = "zipkin_wget",
   base = "//zipkin",
-  layers = ["//test:wget"],
+  layers = ["//test:wget_buster"],
 )
 
 container_test(

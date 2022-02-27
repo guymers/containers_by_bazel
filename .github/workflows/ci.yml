@@ -3,7 +3,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
 
     steps:
     - name: checkout
@@ -13,8 +13,8 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ~/.cache/bazel
-        key: ${{ runner.os }}-bazel-${{ github.ref_name }}
-        restore-keys: ${{ runner.os }}-bazel-master
+        key: ${{ runner.os }}-bazel-v2-${{ github.ref_name }}
+        restore-keys: ${{ runner.os }}-bazel-v2-master
 
     - name: bazel version
       run: bazel version

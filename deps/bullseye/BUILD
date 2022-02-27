@@ -25,6 +25,51 @@ filegroup(
 )
 
 filegroup(
+  name = "grafana",
+  srcs = [
+    "@deb_bullseye_fontconfig_config//file",
+    "@deb_bullseye_fonts_dejavu_core//file",
+    "@deb_bullseye_libbrotli1//file",
+    "@deb_bullseye_libexpat1//file",
+    "@deb_bullseye_libfontconfig1//file",
+    "@deb_bullseye_libfreetype6//file",
+    "@deb_bullseye_libpng16_16//file",
+    "@deb_bullseye_sensible_utils//file",
+    "@deb_bullseye_ucf//file",
+  ],
+)
+
+filegroup(
+  name = "nginx",
+  srcs = [
+    "@deb_bullseye_gettext_base//file",
+    "@deb_bullseye_nginx//file",
+  ],
+)
+
+filegroup(
+  name = "redis",
+  srcs = [
+    "@deb_bullseye_libatomic1//file",
+    "@deb_bullseye_libjemalloc2//file",
+    "@deb_bullseye_liblua5_1_0//file",
+    "@deb_bullseye_liblzf1//file",
+    "@deb_bullseye_lua_bitop//file",
+    "@deb_bullseye_lua_cjson//file",
+    "@deb_bullseye_redis_server//file",
+    "@deb_bullseye_redis_tools//file",
+  ],
+)
+
+filegroup(
+  name = "wget",
+  srcs = [
+    "@deb_bullseye_libpsl5//file",
+    "@deb_bullseye_wget//file",
+  ],
+)
+
+filegroup(
   name = "zulu_11",
   srcs = [
     "@deb_bullseye_fontconfig_config//file",

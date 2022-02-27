@@ -210,20 +210,6 @@ filegroup(
 )
 
 filegroup(
-  name = "grafana",
-  srcs = [
-    "@deb_buster_fontconfig_config//file",
-    "@deb_buster_fonts_dejavu_core//file",
-    "@deb_buster_libexpat1//file",
-    "@deb_buster_libfontconfig1//file",
-    "@deb_buster_libfreetype6//file",
-    "@deb_buster_libpng16_16//file",
-    "@deb_buster_sensible_utils//file",
-    "@deb_buster_ucf//file",
-  ],
-)
-
-filegroup(
   name = "libsqlite3",
   srcs = [
     "@deb_buster_libsqlite3_0//file",
@@ -235,17 +221,6 @@ filegroup(
   srcs = [
     "@deb_buster_libc_l10n//file",
     "@deb_buster_locales//file",
-  ],
-)
-
-filegroup(
-  name = "nginx",
-  srcs = [
-    "@deb_buster_gettext_base//file",
-    "@deb_buster_libpcre2_8_0//file",
-    "@deb_buster_libssl1_1//file",
-    "@deb_buster_lsb_base//file",
-    "@deb_buster_nginx//file",
   ],
 )
 
@@ -583,21 +558,6 @@ filegroup(
     "@deb_buster_libssl1_1//file",
     "@deb_buster_libwrap0//file",
     "@deb_buster_socat//file",
-  ],
-)
-
-filegroup(
-  name = "redis",
-  srcs = [
-    "@deb_buster_libatomic1//file",
-    "@deb_buster_libhiredis0_14//file",
-    "@deb_buster_libjemalloc2//file",
-    "@deb_buster_liblua5_1_0//file",
-    "@deb_buster_lsb_base//file",
-    "@deb_buster_lua_bitop//file",
-    "@deb_buster_lua_cjson//file",
-    "@deb_buster_redis_server//file",
-    "@deb_buster_redis_tools//file",
   ],
 )
 

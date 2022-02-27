@@ -9,7 +9,7 @@ user_layer(
 
 container_layer(
   name = "files",
-  debs = ["//deps/buster:nginx"],
+  debs = ["//deps/bullseye:nginx"],
   symlinks = {
     "./var/log/nginx/access.log": "/dev/stdout",
     "./var/log/nginx/error.log": "/dev/stderr",
@@ -18,7 +18,7 @@ container_layer(
 
 container_image(
   name = "nginx",
-  base = "//base:buster",
+  base = "//base:bullseye",
   layers = [":user", ":files"],
   volumes = ["/etc/nginx", "/var/cache/nginx"],
   ports = ["80", "443"],

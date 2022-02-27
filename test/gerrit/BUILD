@@ -1,7 +1,7 @@
 container_image(
   name = "wget",
   base = "//gerrit",
-  layers = ["//test:wget"],
+  layers = ["//test:wget_buster"],
 )
 
 container_test(
@@ -25,5 +25,4 @@ container_test(
   mem_limit = "1500m",
   test = "test_web.sh",
   golden = "output_web.txt",
-  tags = ["not_circleci"], # dont know why this is failing
 )

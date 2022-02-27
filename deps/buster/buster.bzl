@@ -110,12 +110,6 @@ def deb_buster():
     sha256 = "6e0fce32cf2e85ad2539482087d712bf2258d05e1838f3586a17ad2dc6bb7410",
   )
   http_file(
-    name = "deb_buster_gettext_base",
-    downloaded_file_path = "deb_buster_gettext_base.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/g/gettext/gettext-base_0.19.8.1-9_amd64.deb"],
-    sha256 = "3a87d6732e563fe95162a1ddcfba196ae022fb730df4f701b5ee367d98bb34e4",
-  )
-  http_file(
     name = "deb_buster_git",
     downloaded_file_path = "deb_buster_git.deb",
     urls = ["http://snapshot.debian.org/archive/debian/20200528/pool/main/g/git/git_2.20.1-2+deb10u3_amd64.deb"],
@@ -668,12 +662,6 @@ def deb_buster():
     sha256 = "1236ee56593adf5f06ea6e407d5d7d77c782b9b4c71cada16fe2b867c95f8cd7",
   )
   http_file(
-    name = "deb_buster_libhiredis0_14",
-    downloaded_file_path = "deb_buster_libhiredis0_14.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/h/hiredis/libhiredis0.14_0.14.0-3_amd64.deb"],
-    sha256 = "c78fdb6480b5b54e162306cec9373e1e2c3e234d3f04e9245e88a0a2142368d2",
-  )
-  http_file(
     name = "deb_buster_libice6",
     downloaded_file_path = "deb_buster_libice6.deb",
     urls = ["http://snapshot.debian.org/archive/debian/20191028/pool/main/libi/libice/libice6_1.0.9-2_amd64.deb"],
@@ -834,12 +822,6 @@ def deb_buster():
     downloaded_file_path = "deb_buster_libltdl7.deb",
     urls = ["http://snapshot.debian.org/archive/debian/20200410/pool/main/libt/libtool/libltdl7_2.4.6-9_amd64.deb"],
     sha256 = "d5fc0ab86db9a6a02c2ad517671788c08cf86cfa0186bac1b5c863b14e2e7eb6",
-  )
-  http_file(
-    name = "deb_buster_liblua5_1_0",
-    downloaded_file_path = "deb_buster_liblua5_1_0.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/l/lua5.1/liblua5.1-0_5.1.5-8.1+b2_amd64.deb"],
-    sha256 = "45866b0b9776888a263f1738c667d7ed81d75b99717e90209fb315baf2134df5",
   )
   http_file(
     name = "deb_buster_libmagic1",
@@ -1526,18 +1508,6 @@ def deb_buster():
     sha256 = "2dd69416c4e8decda8a9ed56e36275df7645aea7851b05eb16d42fed61b6a12f",
   )
   http_file(
-    name = "deb_buster_lua_bitop",
-    downloaded_file_path = "deb_buster_lua_bitop.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/l/lua-bitop/lua-bitop_1.0.2-5_amd64.deb"],
-    sha256 = "e7a286f04b4fced769b4da574e13a058dac1e6ad23660998643bf1af8a875b1a",
-  )
-  http_file(
-    name = "deb_buster_lua_cjson",
-    downloaded_file_path = "deb_buster_lua_cjson.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/l/lua-cjson/lua-cjson_2.1.0+dfsg-2.1_amd64.deb"],
-    sha256 = "4bdf90fe39c1de756c22c3c52332bc6e694c53645c4059932e2e0917e9f07517",
-  )
-  http_file(
     name = "deb_buster_m4",
     downloaded_file_path = "deb_buster_m4.deb",
     urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/m/m4/m4_1.4.18-2_amd64.deb"],
@@ -1578,12 +1548,6 @@ def deb_buster():
     downloaded_file_path = "deb_buster_netcat_traditional.deb",
     urls = ["http://snapshot.debian.org/archive/debian/20200809/pool/main/n/netcat/netcat-traditional_1.10-41.1_amd64.deb"],
     sha256 = "c93954faae08c48d4ad49315a53c90ac56522943782d5b72a28a8c1ceb06a175",
-  )
-  http_file(
-    name = "deb_buster_nginx",
-    downloaded_file_path = "deb_buster_nginx.deb",
-    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.21.6-1~buster_amd64.deb"],
-    sha256 = "b2ace277162c76f9d19a1437746aade97bffc78103b55327eb6be263a834b413",
   )
   http_file(
     name = "deb_buster_numactl",
@@ -1866,18 +1830,6 @@ def deb_buster():
     downloaded_file_path = "deb_buster_readline_common.deb",
     urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/r/readline/readline-common_7.0-5_all.deb"],
     sha256 = "153d8a5ddb04044d10f877a8955d944612ec9035f4c73eec99d85a92c3816712",
-  )
-  http_file(
-    name = "deb_buster_redis_server",
-    downloaded_file_path = "deb_buster_redis_server.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220226/pool/updates/main/r/redis/redis-server_5.0.14-1+deb10u2_amd64.deb"],
-    sha256 = "f3ca8e21d179771309e04ba74bd4d7fe10006d48f0a381d41d0e961b7f7e5afc",
-  )
-  http_file(
-    name = "deb_buster_redis_tools",
-    downloaded_file_path = "deb_buster_redis_tools.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220226/pool/updates/main/r/redis/redis-tools_5.0.14-1+deb10u2_amd64.deb"],
-    sha256 = "c3fcc65f76f397ee5f68a2e48ffbe7d6cfdb5e6d62d0e251c10ae2388a1ab2e4",
   )
   http_file(
     name = "deb_buster_sensible_utils",

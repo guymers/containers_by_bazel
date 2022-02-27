@@ -1,7 +1,7 @@
 container_image(
   name = "wget",
   base = "//elasticsearch",
-  layers = ["//test:wget"],
+  layers = ["//test:wget_buster"],
 )
 
 container_test(

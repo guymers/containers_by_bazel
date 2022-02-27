@@ -18,7 +18,7 @@ container_layer(
   directory = "/opt",
   files = ["@envoy//:envoy-v" + VERSION + "-linux-amd64"],
   symlinks = {
-  	"/opt/envoy": "/opt/envoy-v" + VERSION + "-linux-amd64",
+    "/opt/envoy": "/opt/envoy-v" + VERSION + "-linux-amd64",
     "/usr/local/bin/envoy": "/opt/envoy/bin/envoy",
   },
 )
@@ -37,7 +37,7 @@ container_layer(
 
 container_image(
   name = "envoy",
-  base = "//base:buster",
+  base = "//base:bullseye",
   layers = [":user", ":files", ":config", ":init"],
 
   env = {

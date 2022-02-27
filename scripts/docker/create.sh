@@ -28,14 +28,14 @@ function build_image() {
   echo "$id"
 }
 
-#readonly buster_image=$(bazel run //base:buster | grep "^Tagging" | awk '{print $4}')
-#docker tag "$buster_image" bazel/base:buster
-#
-#for app in base ca-certificates zulu java nginx postgresql; do
-#  build_image "$DIR/buster" "buster" "$app" | tee "$DIR/_built/buster/$app.tmp"
-#  tail -n1 "$DIR/_built/buster/$app.tmp" > "$DIR/_built/buster/$app"
-#  rm -f "$DIR/_built/buster/$app.tmp"
-#done
+readonly buster_image=$(bazel run //base:buster | grep "^Tagging" | awk '{print $4}')
+docker tag "$buster_image" bazel/base:buster
+
+for app in base ca-certificates zulu java nginx postgresql; do
+  build_image "$DIR/buster" "buster" "$app" | tee "$DIR/_built/buster/$app.tmp"
+  tail -n1 "$DIR/_built/buster/$app.tmp" > "$DIR/_built/buster/$app"
+  rm -f "$DIR/_built/buster/$app.tmp"
+done
 
 readonly bullseye_image=$(bazel run //base:bullseye | grep "^Tagging" | awk '{print $4}')
 docker tag "$bullseye_image" bazel/base:bullseye

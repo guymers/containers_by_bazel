@@ -14,10 +14,22 @@ def deb_bullseye():
     sha256 = "1f67421437b6eb18669d2868e3e02cb88668683d635198142f48aacc5b397118",
   )
   http_file(
+    name = "deb_bullseye_gettext_base",
+    downloaded_file_path = "deb_bullseye_gettext_base.deb",
+    urls = ["http://snapshot.debian.org/archive/debian/20220226/pool/main/g/gettext/gettext-base_0.21-4_amd64.deb"],
+    sha256 = "d688bd1d65b8c6cd62e1d6f52c709b46ca423dcd29b3ac6ce023c8c4aebbd05f",
+  )
+  http_file(
     name = "deb_bullseye_java_common",
     downloaded_file_path = "deb_bullseye_java_common.deb",
     urls = ["http://snapshot.debian.org/archive/debian/20220226/pool/main/j/java-common/java-common_0.72_all.deb"],
     sha256 = "92e94f399da9f79ae0b93f3fda3bdd2d842ddf4254ca66a576307a402a57e868",
+  )
+  http_file(
+    name = "deb_bullseye_libatomic1",
+    downloaded_file_path = "deb_bullseye_libatomic1.deb",
+    urls = ["http://snapshot.debian.org/archive/debian/20220226/pool/main/g/gcc-10/libatomic1_10.2.1-6_amd64.deb"],
+    sha256 = "e8f1d04653698ab185c1144f35f905a1de87571c12ea630b65be669a2823d8c7",
   )
   http_file(
     name = "deb_bullseye_libbrotli1",
@@ -50,6 +62,18 @@ def deb_bullseye():
     sha256 = "dcb79555b137ad70c9d392ca31e04533e3a10b63aa0db02d5a26f464060cc0f5",
   )
   http_file(
+    name = "deb_bullseye_liblua5_1_0",
+    downloaded_file_path = "deb_bullseye_liblua5_1_0.deb",
+    urls = ["http://snapshot.debian.org/archive/debian/20220226/pool/main/l/lua5.1/liblua5.1-0_5.1.5-8.1%2bb3_amd64.deb"],
+    sha256 = "8f5341aba9fd26a797ff826b4aa4c626fd487ebe2bf659bc8b2cee450ec7f9f2",
+  )
+  http_file(
+    name = "deb_bullseye_liblzf1",
+    downloaded_file_path = "deb_bullseye_liblzf1.deb",
+    urls = ["http://snapshot.debian.org/archive/debian/20220226/pool/main/libl/liblzf/liblzf1_3.6-3_amd64.deb"],
+    sha256 = "9854b0866201b63e04f1e446f45f01ef4a6f72c61f2250b75f944f6046cc7e8c",
+  )
+  http_file(
     name = "deb_bullseye_libmpdec3",
     downloaded_file_path = "deb_bullseye_libmpdec3.deb",
     urls = ["http://snapshot.debian.org/archive/debian/20220226/pool/main/m/mpdecimal/libmpdec3_2.5.1-1_amd64.deb"],
@@ -72,6 +96,12 @@ def deb_bullseye():
     downloaded_file_path = "deb_bullseye_libpng16_16.deb",
     urls = ["http://snapshot.debian.org/archive/debian/20220226/pool/main/libp/libpng1.6/libpng16-16_1.6.37-3_amd64.deb"],
     sha256 = "7d5336af395d1f658d0e66d74d0e1f4c632028750e7e04314d1a650e0317f3d6",
+  )
+  http_file(
+    name = "deb_bullseye_libpsl5",
+    downloaded_file_path = "deb_bullseye_libpsl5.deb",
+    urls = ["http://snapshot.debian.org/archive/debian/20220226/pool/main/libp/libpsl/libpsl5_0.21.0-1.2_amd64.deb"],
+    sha256 = "d716f5b4346ec85bb728f4530abeb1da4a79f696c72d7f774c59ba127c202fa7",
   )
   http_file(
     name = "deb_bullseye_libpython3_9_minimal",
@@ -104,10 +134,28 @@ def deb_bullseye():
     sha256 = "a0b8d3acf4a0483048637637d269be93af48d5c16f6f139f53edd13384ad4686",
   )
   http_file(
+    name = "deb_bullseye_lua_bitop",
+    downloaded_file_path = "deb_bullseye_lua_bitop.deb",
+    urls = ["http://snapshot.debian.org/archive/debian/20220226/pool/main/l/lua-bitop/lua-bitop_1.0.2-5_amd64.deb"],
+    sha256 = "e7a286f04b4fced769b4da574e13a058dac1e6ad23660998643bf1af8a875b1a",
+  )
+  http_file(
+    name = "deb_bullseye_lua_cjson",
+    downloaded_file_path = "deb_bullseye_lua_cjson.deb",
+    urls = ["http://snapshot.debian.org/archive/debian/20220226/pool/main/l/lua-cjson/lua-cjson_2.1.0%2bdfsg-2.1_amd64.deb"],
+    sha256 = "4bdf90fe39c1de756c22c3c52332bc6e694c53645c4059932e2e0917e9f07517",
+  )
+  http_file(
     name = "deb_bullseye_media_types",
     downloaded_file_path = "deb_bullseye_media_types.deb",
     urls = ["http://snapshot.debian.org/archive/debian/20220226/pool/main/m/media-types/media-types_4.0.0_all.deb"],
     sha256 = "f9835dcf3cdbaf163104d4e511c9c4e0f41a56822e147e57f28f749fcbf7d44c",
+  )
+  http_file(
+    name = "deb_bullseye_nginx",
+    downloaded_file_path = "deb_bullseye_nginx.deb",
+    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.21.6-1%7ebullseye_amd64.deb"],
+    sha256 = "7c59809dc57c550fb43d64d97ad1cc20069a0e38a3d3bc1dc2ebc3a2c8a6ae85",
   )
   http_file(
     name = "deb_bullseye_numactl",
@@ -146,6 +194,18 @@ def deb_bullseye():
     sha256 = "3f947176ef949f93e4ad5d76c067d33fa97cf90b62ee0748acb4f5f64790edc8",
   )
   http_file(
+    name = "deb_bullseye_redis_server",
+    downloaded_file_path = "deb_bullseye_redis_server.deb",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20220226/pool/updates/main/r/redis/redis-server_6.0.16-1%2bdeb11u2_amd64.deb"],
+    sha256 = "d7d3d93e00d414982eef09b57de3ad39db5ab61c16aef58241dedb75db0105fc",
+  )
+  http_file(
+    name = "deb_bullseye_redis_tools",
+    downloaded_file_path = "deb_bullseye_redis_tools.deb",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20220226/pool/updates/main/r/redis/redis-tools_6.0.16-1%2bdeb11u2_amd64.deb"],
+    sha256 = "0329056b6cf1cc65ec1069a66bb0825ddb8307d1c6c5c93ab022fb19187138fd",
+  )
+  http_file(
     name = "deb_bullseye_sensible_utils",
     downloaded_file_path = "deb_bullseye_sensible_utils.deb",
     urls = ["http://snapshot.debian.org/archive/debian/20220226/pool/main/s/sensible-utils/sensible-utils_0.0.14_all.deb"],
@@ -156,6 +216,12 @@ def deb_bullseye():
     downloaded_file_path = "deb_bullseye_ucf.deb",
     urls = ["http://snapshot.debian.org/archive/debian/20220226/pool/main/u/ucf/ucf_3.0043_all.deb"],
     sha256 = "ebef6bcd777b5c0cc2699926f2159db08433aed07c50cb321fd828b28c5e8d53",
+  )
+  http_file(
+    name = "deb_bullseye_wget",
+    downloaded_file_path = "deb_bullseye_wget.deb",
+    urls = ["http://snapshot.debian.org/archive/debian/20220226/pool/main/w/wget/wget_1.21-1%2bdeb11u1_amd64.deb"],
+    sha256 = "4642d6a748815497d57d3b69ac22938ba8df3d0764ec47d2ceb50eec2a46ab3b",
   )
   http_file(
     name = "deb_bullseye_zulu11_ca_jdk_headless",

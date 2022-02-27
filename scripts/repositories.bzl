@@ -143,7 +143,7 @@ def dependency_repositories():
     name = "grafana",
     downloaded_file_path = "grafana.deb",
     urls = ["https://dl.grafana.com/oss/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
-    sha256 = "9ed2e2a46d9f8e519554a08082204fd99d0cae296fe3fb7b4e8ba9d9ba8631ed",
+    sha256 = "bb831dc1a3cae5f96160ab218aae473cafa399ac8233a4635dab712139de7198",
   )
 
   ###### JENKINS
@@ -211,7 +211,7 @@ def dependency_repositories():
   http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "f08e96d73330a9ee7e6922a9f5b72ea188988a083bbfa9932359339fcf504a74",
+    sha256 = "18aea1c8e6833fe01423000139a4778780542f3bbafe3d5b97437704aa15b130",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
