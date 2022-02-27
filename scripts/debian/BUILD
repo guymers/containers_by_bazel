@@ -30,6 +30,14 @@ dependencies(name = "buster", dependencies = {
   ":buster/zulu_11_jdk": "zulu",
 })
 
+dependencies(name = "bullseye", dependencies = {
+  ":bullseye/cassandra": "java",
+  ":bullseye/zulu_8": "zulu",
+  ":bullseye/zulu_8_jdk": "zulu",
+  ":bullseye/zulu_11": "zulu",
+  ":bullseye/zulu_11_jdk": "zulu",
+})
+
 sh_binary(
   name = "bazel_filegroup",
   srcs = ["bazel_filegroup.sh"],

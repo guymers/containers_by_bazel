@@ -12,7 +12,7 @@ load("//scripts/versions:versions.bzl", "GRAAL_VERSION")
 [
   container_image(
     name = v,
-    base = "//base:buster",
+    base = "//base:bullseye",
     layers = ["//base/ca_certificates", ":files_" + v, "//java:script_files"],
     env = {
       "LANG": "C.UTF-8",

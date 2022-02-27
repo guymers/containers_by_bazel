@@ -22,7 +22,7 @@ fi
 JAVA_AUTO_HEAP_SIZE=${JAVA_AUTO_HEAP_SIZE:-true}
 if [ -n "$JAVA_HEAP_SIZE_PERCENTAGE" ] || [ "$JAVA_AUTO_HEAP_SIZE" = "true" ]; then
   JAVA_HEAP_SIZE_PERCENTAGE=${JAVA_HEAP_SIZE_PERCENTAGE:-75.0}
-  JAVA_OPTS="$JAVA_OPTS -XX:MaxRAMPercentage=$JAVA_HEAP_SIZE_PERCENTAGE"
+  JAVA_OPTS="$JAVA_OPTS -XX:MinRAMPercentage=$JAVA_HEAP_SIZE_PERCENTAGE -XX:MaxRAMPercentage=$JAVA_HEAP_SIZE_PERCENTAGE"
 elif [ -n "$JAVA_HEAP_SIZE" ]; then
   JAVA_OPTS="$JAVA_OPTS -Xms${JAVA_HEAP_SIZE}m -Xmx${JAVA_HEAP_SIZE}m"
 fi
@@ -50,9 +50,14 @@ fi
 
 # TODO java 11 GC logging options
 if [ -n "$GC_LOG_FOLDER" ]; then
-  JAVA_OPTS="$JAVA_OPTS -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintTenuringDistribution"
-  JAVA_OPTS="$JAVA_OPTS -XX:+PrintHeapAtGC -XX:+PrintGCCause -XX:+PrintReferenceGC -XX:+PrintAdaptiveSizePolicy"
-  JAVA_OPTS="$JAVA_OPTS -XX:+PrintPromotionFailure -XX:+PrintGCApplicationStoppedTime -XX:-OmitStackTraceInFastThrow"
-  JAVA_OPTS="$JAVA_OPTS -Xloggc:$GC_LOG_FOLDER -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M"
+  if [ $JAVA_VERSION -ge 11 ] ; then
+    JAVA_OPTS="$JAVA_OPTS -Xlog:gc=info,heap*=trace,age*=debug,safepoint=info,promotion*=trace:file=$GC_LOG_FOLDER/gc.log:time,uptime,pid,tid,level:filecount=10,filesize=10485760"
+  else
+    JAVA_OPTS="$JAVA_OPTS -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintTenuringDistribution"
+    JAVA_OPTS="$JAVA_OPTS -XX:+PrintHeapAtGC -XX:+PrintGCCause -XX:+PrintReferenceGC -XX:+PrintAdaptiveSizePolicy"
+    JAVA_OPTS="$JAVA_OPTS -XX:+PrintPromotionFailure -XX:+PrintGCApplicationStoppedTime -XX:-OmitStackTraceInFastThrow"
+    JAVA_OPTS="$JAVA_OPTS -Xloggc:$GC_LOG_FOLDER -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M"
+  fi
 fi
+
 export JAVA_OPTS

@@ -31,7 +31,7 @@ container_layer(
 
 container_image(
   name = "cassandra",
-  base = "//java:zulu8",
+  base = "//java:zulu11",
   layers = [":user", ":files", ":config", ":init"],
 
   env = {
@@ -39,7 +39,9 @@ container_image(
     "CASSANDRA_CONF": CASSANDRA_CONF,
     "CASSANDRA_DATA": CASSANDRA_DATA,
 
+    "JAVA_VERSION": "11",
     "JAVA_HEAP_SIZE_PERCENTAGE": "25.0",
+    "GC_LOG_FOLDER": "/var/log/cassandra"
   },
   volumes = [CASSANDRA_CONF, CASSANDRA_DATA],
   ports = ["7000", "7001", "9042", "9160"],

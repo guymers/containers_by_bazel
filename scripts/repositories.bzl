@@ -1,5 +1,6 @@
 load(
   "//scripts/versions:versions.bzl",
+  "CASSANDRA_VERSION",
   "CASSANDRA_DEB_VERSION",
   "ELASTICSEARCH_VERSION",
   "ENVOY_VERSION",
@@ -26,6 +27,7 @@ load(
   "ZOOKEEPER_VERSION"
 )
 load("//deps/buster:buster.bzl", "deb_buster")
+load("//deps/bullseye:bullseye.bzl", "deb_bullseye")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_file")
 load("@bazel_tools//tools/build_defs/repo:maven_rules.bzl", "maven_jar")
@@ -47,6 +49,15 @@ def dependency_repositories():
   )
   deb_buster()
 
+  # Update to 20220125 for amd64 (debuerreotype 0.13)
+  http_file(
+    name = "debian_bullseye",
+    downloaded_file_path = "bullseye-slim-rootfs.tar.xz",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/de5fb2efd50a009baa2aaccd2b7874ec728bd7a9/bullseye/slim/rootfs.tar.xz"],
+    sha256 = "2585cecfb05b67e8922fb44c1c3497adb185a2cf64ffcc9ccbcf93f20397ea5c",
+  )
+  deb_bullseye()
+
   http_archive(
     name = "su_exec",
     url = "https://github.com/ncopa/su-exec/archive/v0.2.tar.gz",
@@ -55,6 +66,8 @@ def dependency_repositories():
     build_file_content = "cc_binary( \
       name = 'su_exec', \
       srcs = ['su-exec.c'], \
+      linkstatic = 1, \
+      features = ['fully_static_link'], \
       visibility = ['//visibility:public'], \
     )",
   )
@@ -83,14 +96,14 @@ def dependency_repositories():
   http_file(
     name = "cassandra",
     downloaded_file_path = "cassandra.deb",
-    urls = ["https://downloads.apache.org/cassandra/debian/pool/main/c/cassandra/cassandra_" + CASSANDRA_DEB_VERSION + ".deb"],
-    sha256 = "2066390530c8084790e3463f35f61943f4fb606595e7729640561ed2f60afcf1",
+    urls = ["https://dlcdn.apache.org/cassandra/" + CASSANDRA_VERSION + "/debian/cassandra_" + CASSANDRA_DEB_VERSION + ".deb"],
+    sha256 = "5a5fb3823b21625b213100a633c3cd0a4d67cf0137e231815cdfe30bf535ee77",
   )
   http_file(
     name = "cassandra_tools",
     downloaded_file_path = "cassandra-tools.deb",
-    urls = ["https://downloads.apache.org/cassandra/debian/pool/main/c/cassandra/cassandra-tools_" + CASSANDRA_DEB_VERSION + ".deb"],
-    sha256 = "56d395fe3f0dc23536eba8ee7ae79e3745ebb6c740aadb234d5540737635d258",
+    urls = ["https://dlcdn.apache.org/cassandra/" + CASSANDRA_VERSION + "/debian/cassandra-tools_" + CASSANDRA_DEB_VERSION + ".deb"],
+    sha256 = "257a7385d619ca5bd176fe4db9f1402a3beaaa15f1215595da3fa48c47c08817",
   )
 
   ###### ELASTICSEARCH
@@ -221,7 +234,7 @@ def dependency_repositories():
   http_archive(
     name = "sbt",
     url = "https://github.com/sbt/sbt/releases/download/v" + SBT_VERSION + "/sbt-" + SBT_VERSION + ".tgz",
-    sha256 = "60286bf1b875b31e2955f8a699888cd2612e9afd94d03cde0a2e71efd7492ffc",
+    sha256 = "637637b6c4e6fa04ab62cd364061e32b12480b09001cd23303df62b36fadd440",
     build_file_content = "exports_files(['sbt'])",
   )
 

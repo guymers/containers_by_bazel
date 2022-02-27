@@ -7,6 +7,11 @@ if [ -d "$CASSANDRA_DATA" -a "$(stat -c '%U' "$CASSANDRA_DATA" 2>/dev/null)" = "
   chmod o-rwx "$CASSANDRA_DATA"
 fi
 
+if [ -d "$GC_LOG_FOLDER" -a "$(stat -c '%U' "$GC_LOG_FOLDER" 2>/dev/null)" = "root" ]; then
+  chown cassandra "$GC_LOG_FOLDER"
+  chmod o-rwx "$GC_LOG_FOLDER"
+fi
+
 if [ "$1" = 'cassandra' ]; then
 
   # dont modify cassandra.yaml directly, copy it to tmp, modify and use -Dcassandra.config
@@ -14,7 +19,7 @@ if [ "$1" = 'cassandra' ]; then
   cp -a "$CASSANDRA_CONF/cassandra.yaml" /tmp/__cassandra/conf/
   readonly CASSANDRA_CONFIG_FILE=/tmp/__cassandra/conf/cassandra.yaml
 
-  # from https://github.com/docker-library/cassandra/blob/d83b850cd17bc9198876f8686197c730e29c7448/3.10/docker-entrypoint.sh
+  # from https://github.com/docker-library/cassandra/blob/51b30b5d78616d8db73153dede5df440d0ea7fc4/4.0/docker-entrypoint.sh
   : ${CASSANDRA_RPC_ADDRESS='0.0.0.0'}
 
   : ${CASSANDRA_LISTEN_ADDRESS='auto'}
