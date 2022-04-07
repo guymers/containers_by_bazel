@@ -1,7 +1,7 @@
 container_image(
   name = "wget",
   base = "//gerrit",
-  layers = ["//test:wget_buster"],
+  layers = ["//test:wget"],
 )
 
 container_test(

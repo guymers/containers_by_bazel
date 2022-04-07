@@ -1,0 +1,4 @@
+php7.4-dev=${PHP_DEB_VERSION}
+php7.4-phpdbg=${PHP_DEB_VERSION}
+php-xdebug=3.0.2+2.9.8+2.8.1+2.5.5-2
+php-tideways=5.0.4-2

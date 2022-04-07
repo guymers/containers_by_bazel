@@ -1,7 +1,7 @@
 container_image(
   name = "wget",
   base = "//nexus",
-  layers = ["//test:wget_buster"],
+  layers = ["//test:wget"],
 )
 
 container_test(

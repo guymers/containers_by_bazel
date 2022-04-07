@@ -1,12 +1,12 @@
 container_layer(
   name = "files",
   directory = "/",
-  debs = ["@erlang//file", "//deps/buster:erlang"],
+  debs = ["//deps/bullseye:erlang"],
 )
 
 container_image(
   name = "erlang",
-  base = "//base:buster",
+  base = "//base:bullseye",
   layers = [":files"],
   visibility = ["//visibility:public"],
 )

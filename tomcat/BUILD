@@ -14,7 +14,7 @@ user_layer(
 
 container_layer(
   name = "files",
-  debs = ["//deps/buster:tomcat9"],
+  debs = ["//deps/bullseye:tomcat9"],
   files = ["entrypoint-tomcat", "etc"],
   symlinks = {
     CATALINA_BASE + "/conf": TOMCAT_CONF,

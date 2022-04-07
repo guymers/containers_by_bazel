@@ -1,15 +1,15 @@
 container_layer(
   name = "files",
-  debs = ["//deps/buster:php"],
+  debs = ["//deps/bullseye:php"],
   symlinks = {
-    "./usr/bin/php": "/usr/bin/php7.3",
-    "./usr/bin/php-fpm": "/usr/bin/php-fpm7.3",
+    "./usr/bin/php": "/usr/bin/php7.4",
+    "./usr/bin/php-fpm": "/usr/bin/php-fpm7.4",
   },
 )
 
 container_image(
   name = "php",
-  base = "//base:buster",
+  base = "//base:bullseye",
   layers = [":files"],
 
   visibility = ["//visibility:public"],
@@ -18,7 +18,7 @@ container_image(
 
 container_layer(
   name = "dev_files",
-  debs = ["//deps/buster:php_dev"],
+  debs = ["//deps/bullseye:php_dev"],
 )
 
 container_image(

@@ -1,7 +1,7 @@
 container_image(
   name = "jenkins_wget",
   base = "//jenkins",
-  layers = ["//test:wget_buster"],
+  layers = ["//test:wget"],
 )
 
 container_test(

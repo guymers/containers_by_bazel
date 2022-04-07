@@ -14,7 +14,7 @@ container_layer(
 container_image(
   name = "jmx_javaagent_test",
   base = ":jmx_javaagent_nexus",
-  layers = [":files", "//test:wget_buster"],
+  layers = [":files", "//test:wget"],
   entrypoint = ["/entrypoint.sh"],
 )
 

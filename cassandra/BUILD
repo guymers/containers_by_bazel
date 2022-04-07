@@ -14,7 +14,7 @@ user_layer(
 container_layer(
   name = "files",
   directory = "/",
-  debs = ["//deps/buster:cassandra", "@cassandra//file", "@cassandra_tools//file"],
+  debs = ["//deps/bullseye:cassandra", "@cassandra//file", "@cassandra_tools//file"],
 )
 
 container_layer(

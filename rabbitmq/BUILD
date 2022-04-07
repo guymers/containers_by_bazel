@@ -11,7 +11,7 @@ user_layer(
 
 container_layer(
   name = "files",
-  debs = ["@rabbitmq//file", "//deps/buster:rabbitmq"],
+  debs = ["@rabbitmq//file", "//deps/bullseye:rabbitmq"],
 )
 
 container_layer(

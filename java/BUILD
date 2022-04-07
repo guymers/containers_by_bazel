@@ -8,14 +8,14 @@ container_layer(
 [
   container_layer(
     name = "zulu" + v + "_files",
-    debs = ["//deps/buster:zulu_" + v]
+    debs = ["//deps/bullseye:zulu_" + v]
   ) for v in ["8", "11"]
 ]
 
 [
   container_image(
     name = "zulu" + v,
-    base = "//base:buster",
+    base = "//base:bullseye",
     layers = ["//base/ca_certificates", ":zulu" + v + "_files", "//java:script_files"],
     env = {
       "LANG": "C.UTF-8",
@@ -44,8 +44,8 @@ container_layer(
     name = "zulu" + v + "_jdk_files",
     # not the nicest way of doing this
     debs = [
-      "@deb_buster_zulu" + v + "_jdk_headless//file",
-      "@deb_buster_zulu" + v + "_ca_jdk_headless//file",
+      "@deb_bullseye_zulu" + v + "_jdk_headless//file",
+      "@deb_bullseye_zulu" + v + "_ca_jdk_headless//file",
     ],
   ) for v in ["8", "11"]
 ]

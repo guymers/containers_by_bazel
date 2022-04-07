@@ -26,7 +26,6 @@ load(
   "ZIPKIN_VERSION",
   "ZOOKEEPER_VERSION"
 )
-load("//deps/buster:buster.bzl", "deb_buster")
 load("//deps/bullseye:bullseye.bzl", "deb_bullseye")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_file")
@@ -39,15 +38,6 @@ def dependency_repositories():
     strip_prefix = "bazel_rules_container_test-0.12.0",
     url = "https://github.com/guymers/bazel_rules_container/archive/0.12.0.tar.gz",
   )
-
-  # Update to 20220328 for amd64 (debuerreotype 0.14)
-  http_file(
-    name = "debian_buster",
-    downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/a8f25eed890bf577a323b246cbd380093d116c3f/buster/slim/rootfs.tar.xz"],
-    sha256 = "4238aa3fd4df5c3d5e3bd2fd1953b9ecaa12fa77163628244ce8cf16b18c7b79",
-  )
-  deb_buster()
 
   # Update to 20220328 for amd64 (debuerreotype 0.14)
   http_file(
@@ -120,14 +110,6 @@ def dependency_repositories():
     urls = ["https://github.com/tetratelabs/archive-envoy/releases/download/v" + ENVOY_VERSION + "/envoy-v" + ENVOY_VERSION + "-linux-amd64.tar.xz"],
     sha256 = "227c6166d4fb73e6d8ef8976549536a50fa9e5b0fdc6984190524d829a33b9b2",
     build_file_content = "exports_files(['envoy-v" + ENVOY_VERSION + "-linux-amd64'])",
-  )
-
-  ###### ERLANG
-  http_file(
-    name = "erlang",
-    downloaded_file_path = "erlang.deb",
-    urls = ["https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_" + ERLANG_DEB_VERSION + "~debian~buster_amd64.deb"],
-    sha256 = "f55fd3e12e375f958322f9ede1dda267346ab91cae371c4db6662ec85c628e74",
   )
 
   ###### GERRIT

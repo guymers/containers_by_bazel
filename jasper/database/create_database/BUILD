@@ -3,7 +3,7 @@ CATALINA_BASE = "/var/lib/tomcat9"
 
 container_layer(
   name = "deps",
-  debs = ["//deps/buster:zulu_8", "//deps/buster:tomcat9"],
+  debs = ["//deps/bullseye:zulu_8", "//deps/bullseye:tomcat9"],
 )
 
 container_layer(

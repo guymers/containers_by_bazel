@@ -24,7 +24,7 @@ container_image(
 
 container_layer(
   name = "deps",
-  debs = ["//deps/buster:git"] + ["//deps/buster:ssh"] + ["//deps/buster:zip"],
+  debs = ["//deps/bullseye:git"] + ["//deps/bullseye:ssh"] + ["//deps/bullseye:zip"],
 )
 container_layer(
   name = "files",

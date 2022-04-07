@@ -14,7 +14,7 @@ container_layer(
 container_image(
   name = "tomcat_test",
   base = "//tomcat",
-  layers = ["//test:wget_buster", ":sample_war_layer"],
+  layers = ["//test:wget", ":sample_war_layer"],
 )
 
 container_test(
