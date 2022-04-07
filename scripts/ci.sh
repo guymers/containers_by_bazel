@@ -1,7 +1,9 @@
 #!/bin/bash
-set -e
 
 bazel fetch //test/...
+set -e
+bazel fetch //test/...
+
 bazel build //test/...
 
 set +e
