@@ -13,5 +13,4 @@ container_test(
   volume_mounts = ["/etc/envoy/envoy.yaml"],
   test = "test.sh",
   golden = "output.txt",
-  tags = ["not_circleci"], # remote docker doesnt support volumes
 )

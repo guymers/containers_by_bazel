@@ -13,5 +13,4 @@ container_test(
   read_only = False, # loads native libs from /tmp
   test = "test.sh",
   golden = "output.txt",
-  tags = ["not_circleci"], # fails for some reason on ci
 )

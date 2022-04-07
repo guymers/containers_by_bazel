@@ -40,21 +40,21 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.12.0.tar.gz",
   )
 
-  # Update to 20220125 for amd64 (debuerreotype 0.13)
+  # Update to 20220328 for amd64 (debuerreotype 0.14)
   http_file(
     name = "debian_buster",
     downloaded_file_path = "buster-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/de5fb2efd50a009baa2aaccd2b7874ec728bd7a9/buster/slim/rootfs.tar.xz"],
-    sha256 = "eb15a70aabe19af189354a568ee5d6e9257b07623f361ea0680e9671c5a5cd1d",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/a8f25eed890bf577a323b246cbd380093d116c3f/buster/slim/rootfs.tar.xz"],
+    sha256 = "4238aa3fd4df5c3d5e3bd2fd1953b9ecaa12fa77163628244ce8cf16b18c7b79",
   )
   deb_buster()
 
-  # Update to 20220125 for amd64 (debuerreotype 0.13)
+  # Update to 20220328 for amd64 (debuerreotype 0.14)
   http_file(
     name = "debian_bullseye",
     downloaded_file_path = "bullseye-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/de5fb2efd50a009baa2aaccd2b7874ec728bd7a9/bullseye/slim/rootfs.tar.xz"],
-    sha256 = "2585cecfb05b67e8922fb44c1c3497adb185a2cf64ffcc9ccbcf93f20397ea5c",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/a8f25eed890bf577a323b246cbd380093d116c3f/bullseye/slim/rootfs.tar.xz"],
+    sha256 = "40d7a131ef0bcc34edcafc50817b1a3c3fecfa5d72e1e11ee7d12b6488eb0199",
   )
   deb_bullseye()
 

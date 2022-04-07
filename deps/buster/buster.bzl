@@ -292,20 +292,20 @@ def deb_buster():
   http_file(
     name = "deb_buster_libc6_dev",
     downloaded_file_path = "deb_buster_libc6_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/g/glibc/libc6-dev_2.28-10_amd64.deb"],
-    sha256 = "43915a1d28e04039097f97c833b697b8d1703c7da9289fba7eb1834ba6fa23b0",
+    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/g/glibc/libc6-dev_2.28-10+deb10u1_amd64.deb"],
+    sha256 = "76b8413920d91a9a4289f99839933d0d30095e0ec12b05bb4f1a7f27e5ef4a55",
   )
   http_file(
     name = "deb_buster_libc_dev_bin",
     downloaded_file_path = "deb_buster_libc_dev_bin.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/g/glibc/libc-dev-bin_2.28-10_amd64.deb"],
-    sha256 = "8ee8daa87132e1f2eb6a82370dd01565cf9d3b299b96d3054711f144dd8f174a",
+    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/g/glibc/libc-dev-bin_2.28-10+deb10u1_amd64.deb"],
+    sha256 = "4686a7402040d86de622cbfb4af24bc0d0361c077b9270b7c5d2cfda251afa0c",
   )
   http_file(
     name = "deb_buster_libc_l10n",
     downloaded_file_path = "deb_buster_libc_l10n.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/g/glibc/libc-l10n_2.28-10_all.deb"],
-    sha256 = "9f819634b0f61ef0e785c607bbc422630ae5bfc2b2eb2c0ca52857e9cc18ae28",
+    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/g/glibc/libc-l10n_2.28-10+deb10u1_all.deb"],
+    sha256 = "8e94197a53abbcdcf8385284fdd8f15f916f9dc93f1d10e52389d17b64b45a58",
   )
   http_file(
     name = "deb_buster_libcairo2",
@@ -340,8 +340,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libcups2",
     downloaded_file_path = "deb_buster_libcups2.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20210110/pool/main/c/cups/libcups2_2.2.10-6+deb10u4_amd64.deb"],
-    sha256 = "62ea6f113f85d575fa293904cd48c4b644a616225a52c124c1e8e8e4810a20d6",
+    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/c/cups/libcups2_2.2.10-6+deb10u5_amd64.deb"],
+    sha256 = "a6460a9415c465d9bc7d413bc9e2a5a90ea57e0e00cf8fba2dae3e8c82f47ddb",
   )
   http_file(
     name = "deb_buster_libcurl3_gnutls",
@@ -460,8 +460,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libexpat1",
     downloaded_file_path = "deb_buster_libexpat1.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220226/pool/updates/main/e/expat/libexpat1_2.2.6-2+deb10u3_amd64.deb"],
-    sha256 = "9e8fb62714987d78c6a7b6b0305e1e988314ae310f1684c339d5e5e93d9946f5",
+    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/e/expat/libexpat1_2.2.6-2+deb10u4_amd64.deb"],
+    sha256 = "57487f376fd22c3f104355f9febb8ff2f52f3c1b02aaaca63a2248fec68c9a74",
   )
   http_file(
     name = "deb_buster_libfontconfig1",
@@ -610,8 +610,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libgmpxx4ldbl",
     downloaded_file_path = "deb_buster_libgmpxx4ldbl.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20200410/pool/main/g/gmp/libgmpxx4ldbl_6.1.2+dfsg-4_amd64.deb"],
-    sha256 = "c76db3a522a78289f02a79b4c91775825333efe308a6a06baa8ed0a61ad10e69",
+    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/g/gmp/libgmpxx4ldbl_6.1.2+dfsg-4+deb10u1_amd64.deb"],
+    sha256 = "e41ba1f18ba464f1a6a6093847c23c8b9f14a2770a7133c13072d46eae10da94",
   )
   http_file(
     name = "deb_buster_libgomp1",
@@ -670,8 +670,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libicu63",
     downloaded_file_path = "deb_buster_libicu63.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20211224/pool/updates/main/i/icu/libicu63_63.1-6+deb10u2_amd64.deb"],
-    sha256 = "4da969c10107a0fdcf182a4be0455d8e808f49c9058f17967fa6fa34aaa8f252",
+    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/i/icu/libicu63_63.1-6+deb10u3_amd64.deb"],
+    sha256 = "38f65aaec4ee088f65330cf636c1cd6edef38109c80559836ecf38e2390a5761",
   )
   http_file(
     name = "deb_buster_libidn11",
@@ -838,8 +838,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libmariadb3",
     downloaded_file_path = "deb_buster_libmariadb3.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20211224/pool/main/m/mariadb-10.3/libmariadb3_10.3.31-0+deb10u1_amd64.deb"],
-    sha256 = "9f2e627972a667ac2a00d646b1afdd2ba5dbed47340d3317c20d12e8315e5ee4",
+    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/m/mariadb-10.3/libmariadb3_10.3.34-0+deb10u1_amd64.deb"],
+    sha256 = "35553f32dea247f40e2c1e5b9c23f7f1f39416e3f13de52c94d5cc9512f096a9",
   )
   http_file(
     name = "deb_buster_libminizip1",
@@ -1222,14 +1222,14 @@ def deb_buster():
   http_file(
     name = "deb_buster_libssl1_1",
     downloaded_file_path = "deb_buster_libssl1_1.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20211224/pool/main/o/openssl/libssl1.1_1.1.1d-0+deb10u7_amd64.deb"],
-    sha256 = "49e1171928d3930fb8ba5659a80e8862d7d585c6d750acb6520b1c133ac00b29",
+    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/o/openssl/libssl1.1_1.1.1n-0+deb10u1_amd64.deb"],
+    sha256 = "500d3941a0887f77395ad43f9cfc35730ddaa59647b8d8b46893b1060dd66062",
   )
   http_file(
     name = "deb_buster_libssl_dev",
     downloaded_file_path = "deb_buster_libssl_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20211224/pool/main/o/openssl/libssl-dev_1.1.1d-0+deb10u7_amd64.deb"],
-    sha256 = "fb6e5dbe9a36aa7b3dcddf996ec1d65a64ea8f6aa47581b9aa58014660b807d1",
+    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/o/openssl/libssl-dev_1.1.1n-0+deb10u1_amd64.deb"],
+    sha256 = "91cd6f562e5a58ed36addc45121ec71d3f0e405f9999c7b75892cc2d50592f66",
   )
   http_file(
     name = "deb_buster_libsuperlu5",
@@ -1258,8 +1258,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libtiff5",
     downloaded_file_path = "deb_buster_libtiff5.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20211224/pool/updates/main/t/tiff/libtiff5_4.1.0+git191117-2~deb10u3_amd64.deb"],
-    sha256 = "df6cffa0ee25da5bc8b49fef26dcbcc5abef698a5b34113af1bdace6beefc0b8",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20220407/pool/updates/main/t/tiff/libtiff5_4.1.0+git191117-2~deb10u4_amd64.deb"],
+    sha256 = "858302f16faa680de8236ac5c8cb41503bd6c41c46e33fc74c93ca67eacff84a",
   )
   http_file(
     name = "deb_buster_libtinfo5",
@@ -1450,8 +1450,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_libxml2",
     downloaded_file_path = "deb_buster_libxml2.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20210710/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-7+deb10u2_amd64.deb"],
-    sha256 = "3d8137a458b53eb85c4b7440faf62086b645077e1cfaef94065bd79c18a1118e",
+    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-7+deb10u3_amd64.deb"],
+    sha256 = "b649c6d70cbed8b4e17f0039e5a6a85f49ee622ffe106c4240fdc0f319d3efd1",
   )
   http_file(
     name = "deb_buster_libxpm4",
@@ -1492,14 +1492,14 @@ def deb_buster():
   http_file(
     name = "deb_buster_linux_libc_dev",
     downloaded_file_path = "deb_buster_linux_libc_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20211224/pool/main/l/linux/linux-libc-dev_4.19.208-1_amd64.deb"],
-    sha256 = "04a1b837d00d2d690f71124cf9e2598efb0d5cf9603f5e48fdfb7892c6bda220",
+    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/l/linux/linux-libc-dev_4.19.235-1_amd64.deb"],
+    sha256 = "ff013fe40fb7cd3c7601914cfaff86cc308f128e334023c88bb9c1146839bd7a",
   )
   http_file(
     name = "deb_buster_locales",
     downloaded_file_path = "deb_buster_locales.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20190928/pool/main/g/glibc/locales_2.28-10_all.deb"],
-    sha256 = "af4062bc13ddd12391ffb8ab19719d8db801b9f291923c7978e3e6965512ad22",
+    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/g/glibc/locales_2.28-10+deb10u1_all.deb"],
+    sha256 = "7ac14b375a823f3d4eec143029e95af39d08eca0ddfa9022a9518f11b88082b7",
   )
   http_file(
     name = "deb_buster_lsb_base",
@@ -1516,8 +1516,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_mariadb_common",
     downloaded_file_path = "deb_buster_mariadb_common.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20211224/pool/main/m/mariadb-10.3/mariadb-common_10.3.31-0+deb10u1_all.deb"],
-    sha256 = "b3662cf0370a4fa466b0da05b97452dd4e2514494a5f76c365b11b9cddc2aaad",
+    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/m/mariadb-10.3/mariadb-common_10.3.34-0+deb10u1_all.deb"],
+    sha256 = "71ecd8f7205dbafd88c3f8ed508fb2e77243947f170de033ed642badfdcbdcde",
   )
   http_file(
     name = "deb_buster_mime_support",
@@ -1576,8 +1576,8 @@ def deb_buster():
   http_file(
     name = "deb_buster_openssl",
     downloaded_file_path = "deb_buster_openssl.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20211224/pool/main/o/openssl/openssl_1.1.1d-0+deb10u7_amd64.deb"],
-    sha256 = "eb2c128d1b378547bab986c7024bc297573a4ac6f180d2b44465b6ad5b432284",
+    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/o/openssl/openssl_1.1.1n-0+deb10u1_amd64.deb"],
+    sha256 = "8f8f281e5e41ec1a79984da79bb04cea4b151bd23231f0e34fc2013372a531b8",
   )
   http_file(
     name = "deb_buster_perl",

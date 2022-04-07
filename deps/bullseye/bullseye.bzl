@@ -40,8 +40,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libexpat1",
     downloaded_file_path = "deb_bullseye_libexpat1.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220226/pool/updates/main/e/expat/libexpat1_2.2.10-2%2bdeb11u2_amd64.deb"],
-    sha256 = "9199411e2d136efdd9ec9c97f3ffa3de63c201b953b17e91f6090a7f6aef0eb7",
+    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/e/expat/libexpat1_2.2.10-2%2bdeb11u3_amd64.deb"],
+    sha256 = "e3069628af14657a2fb2cc597c35982bf71d392ccf4e70207c92b156a0e341f5",
   )
   http_file(
     name = "deb_bullseye_libfontconfig1",

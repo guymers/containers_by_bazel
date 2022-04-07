@@ -14,7 +14,6 @@ container_test(
   volume_mounts = ["/init.d/change_admin_email.sh"],
   test = "test_init.sh",
   golden = "output_init.txt",
-  tags = ["not_circleci"], # remote docker doesnt support volumes
 )
 
 container_test(
