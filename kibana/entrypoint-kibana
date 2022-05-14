@@ -9,13 +9,7 @@ if [ -d "$KIBANA_TEMP_DIR" -a "$(stat -c '%U' "$KIBANA_TEMP_DIR" 2>/dev/null)" =
 fi
 
 if [ "$1" = 'kibana' ]; then
-  # the command bin/kibana executes
-  export NODE_ENV=production
-  exec chroot --userspec=kibana / node $KIBANA_NODE_OPTIONS --no-warnings "$KIBANA_HOME/src/cli" \
-    --config "$KIBANA_CONF_DIR/kibana.yml" \
-    --plugin-dir "$KIBANA_HOME/src/core_plugins" \
-    --plugin-dir "$KIBANA_PLUGIN_DIR" \
-    "${@:2}"
+  exec chroot --userspec=kibana / "$KIBANA_HOME/bin/kibana" "${@:2}"
 else
   exec "$@"
 fi

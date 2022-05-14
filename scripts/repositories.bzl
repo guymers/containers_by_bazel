@@ -13,7 +13,6 @@ load(
   "JENKINS_SWARM_VERSION",
   "KAFKA_VERSION",
   "KIBANA_VERSION",
-  "NODEJS_FOR_KIBANA_VERSION",
   "MAVEN_VERSION",
   "NEXUS_VERSION",
   "NODEJS_VERSION",
@@ -22,7 +21,6 @@ load(
   "PROMETHEUS_JMX_JAVAAGENT",
   "RABBITMQ_VERSION",
   "SBT_VERSION",
-  "YARN_VERSION",
   "ZIPKIN_VERSION",
   "ZOOKEEPER_VERSION"
 )
@@ -39,12 +37,12 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.12.0.tar.gz",
   )
 
-  # Update to 20220328 for amd64 (debuerreotype 0.14)
+  # Update to 20220418 for amd64 (debuerreotype 0.14)
   http_file(
     name = "debian_bullseye",
     downloaded_file_path = "bullseye-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/a8f25eed890bf577a323b246cbd380093d116c3f/bullseye/slim/rootfs.tar.xz"],
-    sha256 = "40d7a131ef0bcc34edcafc50817b1a3c3fecfa5d72e1e11ee7d12b6488eb0199",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/e8e26161d828d035f0eb2f06a57c7972375a769a/bullseye/slim/rootfs.tar.xz"],
+    sha256 = "9e9015afde90ad5963a41c127fdbc51e81b364a9e7dc78210f7a45cd643b3ba6",
   )
   deb_bullseye()
 
@@ -117,7 +115,7 @@ def dependency_repositories():
     name = "gerrit_war",
     downloaded_file_path = "gerrit.war",
     urls = ["https://gerrit-releases.storage.googleapis.com/gerrit-" + GERRIT_VERSION + ".war"],
-    sha256 = "4d264c0d6bc3ecde24f932cf99b41fddd8dbd53f0e711dcb10a133a4c595f80d",
+    sha256 = "3fb5de878b6470dc8ef65ce22f2709cb8baecb5f16d89497dfaa33a0f33f7920",
   )
 
   ###### GRAFANA
@@ -125,7 +123,7 @@ def dependency_repositories():
     name = "grafana",
     downloaded_file_path = "grafana.deb",
     urls = ["https://dl.grafana.com/oss/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
-    sha256 = "bb831dc1a3cae5f96160ab218aae473cafa399ac8233a4635dab712139de7198",
+    sha256 = "1893c73078c69014697633c20f5841ab630a27839dc35317a9c8c5ffa56713ca",
   )
 
   ###### JENKINS
@@ -133,13 +131,13 @@ def dependency_repositories():
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
     urls = ["https://get.jenkins.io/war-stable/" + JENKINS_VERSION + "/jenkins.war"],
-    sha256 = "020c8db10469e20e22e68c81e7e83bf35ccb6a435b712c4b643851949e75a553",
+    sha256 = "c7aa41378608437400922b9dbf75b34719204080f939fcdb5c5ddb24b07a117c",
   )
   http_file(
     name = "jenkins_agent_jar",
     downloaded_file_path = "swarm-client.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/" + JENKINS_SWARM_VERSION + "/swarm-client-" + JENKINS_SWARM_VERSION + ".jar"],
-    sha256 = "2b7dd9d7c0fe752984d1b880c65b96ea825be4d5377d046fe91ab4ad4218f733",
+    sha256 = "2b7dd9d7c0fe752984d1b880c65b96ea825be4d5377d046fe91ab4ad4218f732",
   )
 
   ###### KIBANA
@@ -147,14 +145,7 @@ def dependency_repositories():
     name = "kibana",
     downloaded_file_path = "kibana.deb",
     urls = ["https://artifacts.elastic.co/downloads/kibana/kibana-" + KIBANA_VERSION + "-amd64.deb"],
-    sha256 = "24b470d6cd5e846f7c7fea89bfeabe4fef045237b7887b438339ad4cb54e8320",
-  )
-
-  http_file(
-    name = "nodejs_for_kibana",
-    downloaded_file_path = "nodejs.tar.xz",
-    urls = ["https://nodejs.org/dist/v" + NODEJS_FOR_KIBANA_VERSION + "/node-v" + NODEJS_FOR_KIBANA_VERSION + "-linux-x64.tar.xz"],
-    sha256 = "c10eece562cfeef1627f0d2bde7dc0be810948f6bf9a932e30a8c3b425652015"
+    sha256 = "d57e64a12a73adbd0f39098e6ae2903dbaac27f27965107a7a8644b740b74828",
   )
 
   ###### KAFKA
@@ -186,7 +177,7 @@ def dependency_repositories():
     name = "nodejs",
     downloaded_file_path = "nodejs.tar.xz",
     urls = ["https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz"],
-    sha256 = "7f5e9a42d6e86147867d35643c7b1680c27ccd45db85666fc52798ead5e74421"
+    sha256 = "e40c6f81bfd078976d85296b5e657be19e06862497741ad82902d0704b34bb1b"
   )
 
   ###### PROMETHEUS
@@ -226,14 +217,6 @@ def dependency_repositories():
     downloaded_file_path = "tomcat-sample.war",
     urls = ["https://tomcat.apache.org/tomcat-8.0-doc/appdev/sample/sample.war"],
     sha256 = "89b33caa5bf4cfd235f060c396cb1a5acb2734a1366db325676f48c5f5ed92e5",
-  )
-
-  ###### YARN
-  http_file(
-    name = "yarnpkg",
-    downloaded_file_path = "yarnpkg.deb",
-    urls = ["https://github.com/yarnpkg/yarn/releases/download/v" + YARN_VERSION + "/yarn_" + YARN_VERSION + "_all.deb"],
-    sha256 = "d1834b4d738cf4f8a5a5661ca5dda14d5b6c2ca3350e6424c68400bdfae73895",
   )
 
   ###### ZIPKIN

@@ -2284,48 +2284,48 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_zulu11_ca_jdk_headless",
     downloaded_file_path = "deb_bullseye_zulu11_ca_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11-ca/zulu11-ca-jdk-headless_11.0.14.1-1_amd64.deb"],
-    sha256 = "667d3e164ddad32292a89624ea1a8ddc8f0cdb51f2cb3443b72332bb37a495c0",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11-ca/zulu11-ca-jdk-headless_11.0.15-1_amd64.deb"],
+    sha256 = "ec58ae4f7ffaca9e7005e350854e6f19e331d107b83ceddd24d4c9f5a9ba3ea7",
   )
   http_file(
     name = "deb_bullseye_zulu11_ca_jre_headless",
     downloaded_file_path = "deb_bullseye_zulu11_ca_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11-ca/zulu11-ca-jre-headless_11.0.14.1-1_amd64.deb"],
-    sha256 = "24fe7665e27e4060719402d68bf25396fdc50adaf5bf112cdd71bcd4878afea9",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11-ca/zulu11-ca-jre-headless_11.0.15-1_amd64.deb"],
+    sha256 = "d70840e34018d31155b939f7ddc76288d3b06e3ef5d09f57a3a43db12552801a",
   )
   http_file(
     name = "deb_bullseye_zulu11_jdk_headless",
     downloaded_file_path = "deb_bullseye_zulu11_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jdk-headless_11.0.14.1-1_amd64.deb"],
-    sha256 = "e1fb680729e6565decaabedfd2c06ca58638be30dfbf0651737268e9a9f15a45",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jdk-headless_11.0.15-1_amd64.deb"],
+    sha256 = "f551f44e7e4436512f89473137670fd8d63b2204700a313f25f7999bffe84cd1",
   )
   http_file(
     name = "deb_bullseye_zulu11_jre_headless",
     downloaded_file_path = "deb_bullseye_zulu11_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jre-headless_11.0.14.1-1_amd64.deb"],
-    sha256 = "fdf18890ec2cd39c2bc94582dc1fd3f5bdc1acdef25a09e56c0c47e8bd95d4d9",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jre-headless_11.0.15-1_amd64.deb"],
+    sha256 = "65dfa2e35694f82c3be17b731fa73fc0c76acccac26db880d77523eeb2d78a51",
   )
   http_file(
     name = "deb_bullseye_zulu8_ca_jdk_headless",
     downloaded_file_path = "deb_bullseye_zulu8_ca_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8-ca/zulu8-ca-jdk-headless_8.0.322-1_amd64.deb"],
-    sha256 = "1883a699fefa3d549de54189b102c6f6fe5d2c9ff0d5fff8e837f4fe2a407f21",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8-ca/zulu8-ca-jdk-headless_8.0.332-1_amd64.deb"],
+    sha256 = "15d9ed53ad925f1ccfddf3e259e179772befda2a0514702fa9d9f32afb9f199c",
   )
   http_file(
     name = "deb_bullseye_zulu8_ca_jre_headless",
     downloaded_file_path = "deb_bullseye_zulu8_ca_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8-ca/zulu8-ca-jre-headless_8.0.322-1_amd64.deb"],
-    sha256 = "30d677e243f3e02946dee68670380619a39932823ca83ab2420ce1020fd236da",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8-ca/zulu8-ca-jre-headless_8.0.332-1_amd64.deb"],
+    sha256 = "8cc03c5330abc2ef5a3c18872973ba994ca6d5d93c88d1720285f6e0dd1d5e72",
   )
   http_file(
     name = "deb_bullseye_zulu8_jdk_headless",
     downloaded_file_path = "deb_bullseye_zulu8_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8/zulu8-jdk-headless_8.0.322-1_amd64.deb"],
-    sha256 = "2d7d35e9788adb013a2ce7a56645a5ae901d56633ebe4a0e4d3b86762ab95940",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8/zulu8-jdk-headless_8.0.332-1_amd64.deb"],
+    sha256 = "41e413b54b6ffeeef4b15e6d02fc9aba979da270c19bd39954bb9db503204dcd",
   )
   http_file(
     name = "deb_bullseye_zulu8_jre_headless",
     downloaded_file_path = "deb_bullseye_zulu8_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8/zulu8-jre-headless_8.0.322-1_amd64.deb"],
-    sha256 = "0d179bd91e62b42cb115ac5028598be516b77e8f75abc0e01e99b0db9aa40064",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8/zulu8-jre-headless_8.0.332-1_amd64.deb"],
+    sha256 = "d959cdaec6fad89d61303f6e705eec348c84c82d94adbe19cd77e5d9238b8d54",
   )
