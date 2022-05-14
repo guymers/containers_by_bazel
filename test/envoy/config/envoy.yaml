@@ -1,9 +1,11 @@
-# from https://github.com/envoyproxy/envoy/blob/v1.15.0/configs/google_com_proxy.v2.yaml
+# from https://github.com/envoyproxy/envoy/blob/v1.22.0/configs/envoyproxy_io_proxy.yaml
 admin:
   access_log_path: /envoy/logs/admin.log
   address:
-    socket_address: { address: 0.0.0.0, port_value: 9901 }
-
+    socket_address:
+      protocol: TCP
+      address: 0.0.0.0
+      port_value: 9901
 static_resources:
   listeners:
     - name: listener_0
@@ -16,39 +18,43 @@ static_resources:
         - filters:
             - name: envoy.filters.network.http_connection_manager
               typed_config:
-                "@type": type.googleapis.com/envoy.config.filter.network.http_connection_manager.v2.HttpConnectionManager
+                "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+                scheme_header_transformation:
+                  scheme_to_overwrite: https
                 stat_prefix: ingress_http
                 route_config:
                   name: local_route
                   virtual_hosts:
                     - name: local_service
-                      domains: ["*"]
+                      domains: [ "*" ]
                       routes:
                         - match:
                             prefix: "/"
                           route:
-                            host_rewrite: www.google.com
-                            cluster: service_google
+                            host_rewrite_literal: www.envoyproxy.io
+                            cluster: service_envoyproxy_io
                 http_filters:
                   - name: envoy.filters.http.router
+                    typed_config:
+                      "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
   clusters:
-    - name: service_google
-      connect_timeout: 0.25s
+    - name: service_envoyproxy_io
+      connect_timeout: 30s
       type: LOGICAL_DNS
       # Comment out the following line to test on v6 networks
       dns_lookup_family: V4_ONLY
       lb_policy: ROUND_ROBIN
       load_assignment:
-        cluster_name: service_google
+        cluster_name: service_envoyproxy_io
         endpoints:
           - lb_endpoints:
               - endpoint:
                   address:
                     socket_address:
-                      address: www.google.com
+                      address: www.envoyproxy.io
                       port_value: 443
       transport_socket:
         name: envoy.transport_sockets.tls
         typed_config:
-          "@type": type.googleapis.com/envoy.api.v2.auth.UpstreamTlsContext
-          sni: www.google.com
+          "@type": type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.UpstreamTlsContext
+          sni: www.envoyproxy.io

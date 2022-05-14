@@ -27,6 +27,8 @@ dependencies(name = "bullseye", dependencies = {
   ":bullseye/zulu_8_jdk": "zulu",
   ":bullseye/zulu_11": "zulu",
   ":bullseye/zulu_11_jdk": "zulu",
+  ":bullseye/zulu_17": "zulu",
+  ":bullseye/zulu_17_jdk": "zulu",
 })
 
 sh_binary(

@@ -711,6 +711,44 @@ filegroup(
 )
 
 filegroup(
+  name = "zulu_17",
+  srcs = [
+    "@deb_bullseye_fontconfig_config//file",
+    "@deb_bullseye_fonts_dejavu_core//file",
+    "@deb_bullseye_java_common//file",
+    "@deb_bullseye_libbrotli1//file",
+    "@deb_bullseye_libexpat1//file",
+    "@deb_bullseye_libfontconfig1//file",
+    "@deb_bullseye_libfreetype6//file",
+    "@deb_bullseye_libpng16_16//file",
+    "@deb_bullseye_sensible_utils//file",
+    "@deb_bullseye_ucf//file",
+    "@deb_bullseye_zulu17_ca_jre_headless//file",
+    "@deb_bullseye_zulu17_jre_headless//file",
+  ],
+)
+
+filegroup(
+  name = "zulu_17_jdk",
+  srcs = [
+    "@deb_bullseye_fontconfig_config//file",
+    "@deb_bullseye_fonts_dejavu_core//file",
+    "@deb_bullseye_java_common//file",
+    "@deb_bullseye_libbrotli1//file",
+    "@deb_bullseye_libexpat1//file",
+    "@deb_bullseye_libfontconfig1//file",
+    "@deb_bullseye_libfreetype6//file",
+    "@deb_bullseye_libpng16_16//file",
+    "@deb_bullseye_sensible_utils//file",
+    "@deb_bullseye_ucf//file",
+    "@deb_bullseye_zulu17_ca_jdk_headless//file",
+    "@deb_bullseye_zulu17_ca_jre_headless//file",
+    "@deb_bullseye_zulu17_jdk_headless//file",
+    "@deb_bullseye_zulu17_jre_headless//file",
+  ],
+)
+
+filegroup(
   name = "zulu_8",
   srcs = [
     "@deb_bullseye_fontconfig_config//file",

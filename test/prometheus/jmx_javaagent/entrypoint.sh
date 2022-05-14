@@ -4,4 +4,4 @@ set -o pipefail
 
 export JAVA_OPTS="$JMX_PROMETHEUS_JAVA_OPTS"
 
-exec /entrypoint-nexus "$@"
+exec /entrypoint-gerrit "$@"

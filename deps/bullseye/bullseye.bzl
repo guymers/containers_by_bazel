@@ -1378,8 +1378,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libpq5",
     downloaded_file_path = "deb_bullseye_libpq5.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/libpq5_14.2-1.pgdg110%2b1_amd64.deb"],
-    sha256 = "85fb88ba4d503492eb1f606f07581b0a50c9e7c1ce7e8b161f1edbb425eda2ea",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/libpq5_14.3-1.pgdg110%2b1_amd64.deb"],
+    sha256 = "854d6a01e513ce46fda2c80d4620f5f75cef31f4abe95c546d990dafe1051335",
   )
   http_file(
     name = "deb_bullseye_libprocps8",
@@ -1858,8 +1858,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_linux_libc_dev",
     downloaded_file_path = "deb_bullseye_linux_libc_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/l/linux/linux-libc-dev_5.10.106-1_amd64.deb"],
-    sha256 = "b0fd3092465b364965cb064a91dcaf838aa48402d90ed6e00702fbdec5365868",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20220514/pool/updates/main/l/linux/linux-libc-dev_5.10.113-1_amd64.deb"],
+    sha256 = "7ffbcd6920f04bc05df947e76b3fe1c1078140d19d4221d6be3adee7d2571d5e",
   )
   http_file(
     name = "deb_bullseye_locales",
@@ -2098,8 +2098,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_postgresql_14",
     downloaded_file_path = "deb_bullseye_postgresql_14.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/postgresql-14_14.2-1.pgdg110%2b1_amd64.deb"],
-    sha256 = "8561a208dc07fae971a371da10c5d3b2fe199dce19fc610a73cffb2436531f74",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/postgresql-14_14.3-1.pgdg110%2b1_amd64.deb"],
+    sha256 = "7257a645076ab4122509f76bcdd7363e17d8f62cb9d29d2579c46b839d4fe8da",
   )
   http_file(
     name = "deb_bullseye_postgresql_14_postgis_3",
@@ -2116,20 +2116,20 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_postgresql_client_14",
     downloaded_file_path = "deb_bullseye_postgresql_client_14.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/postgresql-client-14_14.2-1.pgdg110%2b1_amd64.deb"],
-    sha256 = "2c13865f72a3bffad9c1fa72eb331de370d582c6865b378c9598224cee29f32b",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/postgresql-client-14_14.3-1.pgdg110%2b1_amd64.deb"],
+    sha256 = "a081ac1014490c1f85f92e529ff15f784721b332646e0f4059cf0583ba37dd5e",
   )
   http_file(
     name = "deb_bullseye_postgresql_client_common",
     downloaded_file_path = "deb_bullseye_postgresql_client_common.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_238.pgdg110%2b1_all.deb"],
-    sha256 = "e861c13adaac41d6bc9eef7a6c5a7e188619ad657c38f60a8706d969c2f84263",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_241.pgdg110%2b1_all.deb"],
+    sha256 = "102d4199aed2d18c94b516f28f32963ea42d465cd12cb65faac51af45eb36728",
   )
   http_file(
     name = "deb_bullseye_postgresql_common",
     downloaded_file_path = "deb_bullseye_postgresql_common.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_238.pgdg110%2b1_all.deb"],
-    sha256 = "de272a7e55b20622d57021a19852a86c55cf2ba2775986a401d6980896619b7f",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_241.pgdg110%2b1_all.deb"],
+    sha256 = "7986cfa435e1d3633d8e3d20d325368e0392a90167908d74d92f57b8534bc036",
   )
   http_file(
     name = "deb_bullseye_procps",
@@ -2304,6 +2304,30 @@ def deb_bullseye():
     downloaded_file_path = "deb_bullseye_zulu11_jre_headless.deb",
     urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jre-headless_11.0.15-1_amd64.deb"],
     sha256 = "65dfa2e35694f82c3be17b731fa73fc0c76acccac26db880d77523eeb2d78a51",
+  )
+  http_file(
+    name = "deb_bullseye_zulu17_ca_jdk_headless",
+    downloaded_file_path = "deb_bullseye_zulu17_ca_jdk_headless.deb",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu17-ca/zulu17-ca-jdk-headless_17.0.3-1_amd64.deb"],
+    sha256 = "95f34175f3b6bf10c36ca6c07817071c8851a26045f27f4b87cb33a044b13590",
+  )
+  http_file(
+    name = "deb_bullseye_zulu17_ca_jre_headless",
+    downloaded_file_path = "deb_bullseye_zulu17_ca_jre_headless.deb",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu17-ca/zulu17-ca-jre-headless_17.0.3-1_amd64.deb"],
+    sha256 = "d58abbc98836227f073b6a12fd31d90aa0707720e0f3f2794165ca57fcece3a0",
+  )
+  http_file(
+    name = "deb_bullseye_zulu17_jdk_headless",
+    downloaded_file_path = "deb_bullseye_zulu17_jdk_headless.deb",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu17/zulu17-jdk-headless_17.0.3-1_amd64.deb"],
+    sha256 = "f9732028e9d990fa0a5c08573ade778b4a533ea4be13a666476b4a46f9a5ebc8",
+  )
+  http_file(
+    name = "deb_bullseye_zulu17_jre_headless",
+    downloaded_file_path = "deb_bullseye_zulu17_jre_headless.deb",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu17/zulu17-jre-headless_17.0.3-1_amd64.deb"],
+    sha256 = "ff3bcae7d9be3b2f66ba54993d3c4ad543a02e55b89151d9366291ff4a843cec",
   )
   http_file(
     name = "deb_bullseye_zulu8_ca_jdk_headless",

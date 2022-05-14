@@ -2,7 +2,7 @@ load("//prometheus:prometheus.bzl", "jmx_javaagent")
 
 jmx_javaagent(
   name = "jmx_javaagent_nexus",
-  base = "//nexus",
+  base = "//gerrit",
 )
 
 container_layer(

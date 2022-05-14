@@ -1,3 +1,5 @@
+VERSIONS = ["8", "11", "17"]
+
 container_layer(
   name = "script_files",
   directory = "/",
@@ -9,7 +11,7 @@ container_layer(
   container_layer(
     name = "zulu" + v + "_files",
     debs = ["//deps/bullseye:zulu_" + v]
-  ) for v in ["8", "11"]
+  ) for v in VERSIONS
 ]
 
 [
@@ -36,7 +38,7 @@ container_layer(
       "/var/log/java/oom",
     ],
     visibility = ["//visibility:public"],
-  ) for v in ["8", "11"]
+  ) for v in VERSIONS
 ]
 
 [
@@ -47,7 +49,7 @@ container_layer(
       "@deb_bullseye_zulu" + v + "_jdk_headless//file",
       "@deb_bullseye_zulu" + v + "_ca_jdk_headless//file",
     ],
-  ) for v in ["8", "11"]
+  ) for v in VERSIONS
 ]
 
 [
@@ -56,5 +58,5 @@ container_layer(
     base = "zulu" + v,
     layers = [":zulu" + v + "_jdk_files"],
     visibility = ["//visibility:public"],
-  ) for v in ["8", "11"]
+  ) for v in VERSIONS
 ]

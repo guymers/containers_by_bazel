@@ -2,7 +2,6 @@ load(
   "//scripts/versions:versions.bzl",
   "CASSANDRA_VERSION",
   "CASSANDRA_DEB_VERSION",
-  "ELASTICSEARCH_VERSION",
   "ENVOY_VERSION",
   "ERLANG_DEB_VERSION",
   "GERRIT_VERSION",
@@ -12,9 +11,7 @@ load(
   "JENKINS_VERSION",
   "JENKINS_SWARM_VERSION",
   "KAFKA_VERSION",
-  "KIBANA_VERSION",
   "MAVEN_VERSION",
-  "NEXUS_VERSION",
   "NODEJS_VERSION",
   "PENATHO_DI_VERSION",
   "PROMETHEUS_VERSION",
@@ -37,28 +34,14 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.12.0.tar.gz",
   )
 
-  # Update to 20220418 for amd64 (debuerreotype 0.14)
+  # Update to 20220509 for amd64 (debuerreotype 0.14)
   http_file(
     name = "debian_bullseye",
     downloaded_file_path = "bullseye-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/e8e26161d828d035f0eb2f06a57c7972375a769a/bullseye/slim/rootfs.tar.xz"],
-    sha256 = "9e9015afde90ad5963a41c127fdbc51e81b364a9e7dc78210f7a45cd643b3ba6",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/c796e02735a18985129d7dc11accb42b6a651815/bullseye/slim/rootfs.tar.xz"],
+    sha256 = "ebb8e296a9b0af683c34ac2de5e933d7ea00ba44d058801d4915688979a5c5fb",
   )
   deb_bullseye()
-
-  http_archive(
-    name = "su_exec",
-    url = "https://github.com/ncopa/su-exec/archive/v0.2.tar.gz",
-    sha256 = "ec4acbd8cde6ceeb2be67eda1f46c709758af6db35cacbcde41baac349855e25",
-    strip_prefix = "su-exec-0.2",
-    build_file_content = "cc_binary( \
-      name = 'su_exec', \
-      srcs = ['su-exec.c'], \
-      linkstatic = 1, \
-      features = ['fully_static_link'], \
-      visibility = ['//visibility:public'], \
-    )",
-  )
 
   http_file(
     name = "tini",
@@ -85,28 +68,20 @@ def dependency_repositories():
     name = "cassandra",
     downloaded_file_path = "cassandra.deb",
     urls = ["https://dlcdn.apache.org/cassandra/" + CASSANDRA_VERSION + "/debian/cassandra_" + CASSANDRA_DEB_VERSION + ".deb"],
-    sha256 = "5a5fb3823b21625b213100a633c3cd0a4d67cf0137e231815cdfe30bf535ee77",
+    sha256 = "155f0516469c34c9222643dc85a784bf7ad516d0fe39115a3639e350edfd6510",
   )
   http_file(
     name = "cassandra_tools",
     downloaded_file_path = "cassandra-tools.deb",
     urls = ["https://dlcdn.apache.org/cassandra/" + CASSANDRA_VERSION + "/debian/cassandra-tools_" + CASSANDRA_DEB_VERSION + ".deb"],
-    sha256 = "257a7385d619ca5bd176fe4db9f1402a3beaaa15f1215595da3fa48c47c08817",
-  )
-
-  ###### ELASTICSEARCH
-  http_file(
-    name = "elasticsearch",
-    downloaded_file_path = "elasticsearch.deb",
-    urls = ["https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-" + ELASTICSEARCH_VERSION + "-amd64.deb"],
-    sha256 = "570af7456603fd103408ed61ccec4473302976d46e1ff845b74a881122977e02",
+    sha256 = "809e80466bb1f8cf021d91f5adbeb2c564f63e598b3971a546096845757acf72",
   )
 
   ###### ENVOY
   http_archive(
     name = "envoy",
     urls = ["https://github.com/tetratelabs/archive-envoy/releases/download/v" + ENVOY_VERSION + "/envoy-v" + ENVOY_VERSION + "-linux-amd64.tar.xz"],
-    sha256 = "227c6166d4fb73e6d8ef8976549536a50fa9e5b0fdc6984190524d829a33b9b2",
+    sha256 = "4de288921a57ce3907876e010b7c1951f0d72585809b770db20ebf2533f2619f",
     build_file_content = "exports_files(['envoy-v" + ENVOY_VERSION + "-linux-amd64'])",
   )
 
@@ -123,7 +98,7 @@ def dependency_repositories():
     name = "grafana",
     downloaded_file_path = "grafana.deb",
     urls = ["https://dl.grafana.com/oss/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
-    sha256 = "1893c73078c69014697633c20f5841ab630a27839dc35317a9c8c5ffa56713ca",
+    sha256 = "333aa32933b416dae7702293ad077c64153c5bb9e8cdbbb59f60a894792c9957",
   )
 
   ###### JENKINS
@@ -131,21 +106,13 @@ def dependency_repositories():
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
     urls = ["https://get.jenkins.io/war-stable/" + JENKINS_VERSION + "/jenkins.war"],
-    sha256 = "c7aa41378608437400922b9dbf75b34719204080f939fcdb5c5ddb24b07a117c",
+    sha256 = "d193f179aadf3a7ceb61adebc3ab51218ac4a7852b88932ff33b44fd7be6010f",
   )
   http_file(
     name = "jenkins_agent_jar",
     downloaded_file_path = "swarm-client.war",
     urls = ["http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/" + JENKINS_SWARM_VERSION + "/swarm-client-" + JENKINS_SWARM_VERSION + ".jar"],
     sha256 = "2b7dd9d7c0fe752984d1b880c65b96ea825be4d5377d046fe91ab4ad4218f732",
-  )
-
-  ###### KIBANA
-  http_file(
-    name = "kibana",
-    downloaded_file_path = "kibana.deb",
-    urls = ["https://artifacts.elastic.co/downloads/kibana/kibana-" + KIBANA_VERSION + "-amd64.deb"],
-    sha256 = "d57e64a12a73adbd0f39098e6ae2903dbaac27f27965107a7a8644b740b74828",
   )
 
   ###### KAFKA
@@ -160,16 +127,8 @@ def dependency_repositories():
   http_archive(
     name = "maven",
     url = "https://archive.apache.org/dist/maven/maven-3/" + MAVEN_VERSION + "/binaries/apache-maven-" + MAVEN_VERSION + "-bin.tar.gz",
-    sha256 = "2cdc9c519427bb20fdc25bef5a9063b790e4abd930e7b14b4e9f4863d6f9f13c",
+    sha256 = "2cdc9c519427bb20fdc25bef5a9063b790e4abd930e7b14b4e9f4863d6f9f13d",
     build_file_content = "exports_files(['apache-maven-" + MAVEN_VERSION + "'])",
-  )
-
-  ###### NEXUS
-  http_archive(
-    name = "nexus",
-    url = "https://download.sonatype.com/nexus/oss/nexus-" + NEXUS_VERSION + "-bundle.tar.gz",
-    sha256 = "0d09b35265b06e0f1ecadb00f31d0f7e187a35b39fc34d762c0393918ccf19c8",
-    build_file_content = "exports_files(['nexus-" + NEXUS_VERSION + "'])",
   )
 
   ###### NODEJS
@@ -177,14 +136,14 @@ def dependency_repositories():
     name = "nodejs",
     downloaded_file_path = "nodejs.tar.xz",
     urls = ["https://nodejs.org/dist/v" + NODEJS_VERSION + "/node-v" + NODEJS_VERSION + "-linux-x64.tar.xz"],
-    sha256 = "e40c6f81bfd078976d85296b5e657be19e06862497741ad82902d0704b34bb1b"
+    sha256 = "ebdf4dc9d992d19631f0931cca2fc33c6d0d382543639bc6560d31d5060a8372"
   )
 
   ###### PROMETHEUS
   http_archive(
     name = "prometheus",
     url = "https://github.com/prometheus/prometheus/releases/download/v" + PROMETHEUS_VERSION + "/prometheus-" + PROMETHEUS_VERSION + ".linux-amd64.tar.gz",
-    sha256 = "18aea1c8e6833fe01423000139a4778780542f3bbafe3d5b97437704aa15b130",
+    sha256 = "e4546960688d1c85530ec3a93e109d15b540f3251e1f4736d0d9735e1e857faf",
     strip_prefix = "prometheus-" + PROMETHEUS_VERSION + ".linux-amd64",
     build_file_content = "exports_files(['prometheus'])",
   )
@@ -200,7 +159,7 @@ def dependency_repositories():
     name = "rabbitmq",
     downloaded_file_path = "rabbitmq.deb",
     urls = ["https://github.com/rabbitmq/rabbitmq-server/releases/download/v" + RABBITMQ_VERSION + "/rabbitmq-server_" + RABBITMQ_VERSION + "-1_all.deb"],
-    sha256 = "19f9dd7f465100ef112645fe3855d71ed944829a6bc38f5f0a916bd015308af9",
+    sha256 = "56c4d2aefac13966c16280a3465c3876a50fe8e8fcac21b34db9063a9e5335a8",
   )
 
   ###### SBT
@@ -224,7 +183,7 @@ def dependency_repositories():
     name = "zipkin",
     downloaded_file_path = "zipkin.jar",
     urls = ["https://repo1.maven.org/maven2/io/zipkin/zipkin-server/" + ZIPKIN_VERSION + "/zipkin-server-" + ZIPKIN_VERSION + "-exec.jar"],
-    sha256 = "1305fed981df2b5a460de7748d89dbca2afcf110fe74ed4e994015069beda27b",
+    sha256 = "83cd660944fe173afac67ab3de68e102290c9c512af18ec2a124fb30c3db804e",
   )
 
   ###### ZOOKEEPER
