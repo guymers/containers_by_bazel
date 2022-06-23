@@ -610,8 +610,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libcups2",
     downloaded_file_path = "deb_bullseye_libcups2.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/c/cups/libcups2_2.3.3op2-3%2bdeb11u1_amd64.deb"],
-    sha256 = "b9545555975d3560612a44b23c362a03be517a75ddfa7a63bf828e03c57be37c",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20220623/pool/updates/main/c/cups/libcups2_2.3.3op2-3%2bdeb11u2_amd64.deb"],
+    sha256 = "67c6cf6ba6259468660da16676fcb7ac77cf4a14ca812a60375ca26263a7b273",
   )
   http_file(
     name = "deb_bullseye_libcurl3_gnutls",
@@ -682,8 +682,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libdpkg_perl",
     downloaded_file_path = "deb_bullseye_libdpkg_perl.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/d/dpkg/libdpkg-perl_1.20.9_all.deb"],
-    sha256 = "134bd00e60fa30d39d5f676d306d6f1d61c7f6ec6086c1785dbc355ce6190f29",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20220623/pool/updates/main/d/dpkg/libdpkg-perl_1.20.10_all.deb"],
+    sha256 = "c3eff1bc40b28bde5b9e87940a8c2576c13bd5d26997dcafd480da102f806a3b",
   )
   http_file(
     name = "deb_bullseye_libdrm2",
@@ -1120,8 +1120,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libldap_2_4_2",
     downloaded_file_path = "deb_bullseye_libldap_2_4_2.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/o/openldap/libldap-2.4-2_2.4.57%2bdfsg-3_amd64.deb"],
-    sha256 = "4186d0d3f086202d391da49d1bb5ced6dde5eafba1dbcffef9a8e1238a7ef7c3",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20220623/pool/updates/main/o/openldap/libldap-2.4-2_2.4.57%2bdfsg-3%2bdeb11u1_amd64.deb"],
+    sha256 = "3d79ee84c42c1d1b58a6e0d7debc7e3c8444147b84412b8248a7789809bc3163",
   )
   http_file(
     name = "deb_bullseye_libllvm11",
@@ -1378,8 +1378,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libpq5",
     downloaded_file_path = "deb_bullseye_libpq5.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/libpq5_14.3-1.pgdg110%2b1_amd64.deb"],
-    sha256 = "854d6a01e513ce46fda2c80d4620f5f75cef31f4abe95c546d990dafe1051335",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/libpq5_14.4-1.pgdg110%2b1_amd64.deb"],
+    sha256 = "da46284880604aa28822a410e5b9ecd47f36a4f55a1e88b873dd209150790bb7",
   )
   http_file(
     name = "deb_bullseye_libprocps8",
@@ -1546,8 +1546,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libssl_dev",
     downloaded_file_path = "deb_bullseye_libssl_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/o/openssl/libssl-dev_1.1.1n-0%2bdeb11u1_amd64.deb"],
-    sha256 = "b16a382e122acfbaeb40969cdefbc6ef9a99d677c134b571c3df79e0d5810f22",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20220623/pool/updates/main/o/openssl/libssl-dev_1.1.1n-0%2bdeb11u2_amd64.deb"],
+    sha256 = "1674cddd23ee661850436680fa5287247630c5bbe46cf36606e14dd4d82a7108",
   )
   http_file(
     name = "deb_bullseye_libsuperlu5",
@@ -1810,8 +1810,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libxml2",
     downloaded_file_path = "deb_bullseye_libxml2.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg-6.7%2bdeb11u1_amd64.deb"],
-    sha256 = "c4335b83890d05760f455393c0ddd9406056d46cebe59c6de4a2876f2db04847",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20220623/pool/updates/main/libx/libxml2/libxml2_2.9.10%2bdfsg-6.7%2bdeb11u2_amd64.deb"],
+    sha256 = "4e0fe50fee6c42eeb8a77c55f08baca4f7ebc7d443760ffaaf5f437274f25800",
   )
   http_file(
     name = "deb_bullseye_libxpm4",
@@ -1858,8 +1858,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_linux_libc_dev",
     downloaded_file_path = "deb_bullseye_linux_libc_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220514/pool/updates/main/l/linux/linux-libc-dev_5.10.113-1_amd64.deb"],
-    sha256 = "7ffbcd6920f04bc05df947e76b3fe1c1078140d19d4221d6be3adee7d2571d5e",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20220623/pool/updates/main/l/linux/linux-libc-dev_5.10.120-1_amd64.deb"],
+    sha256 = "702a4d4a67acedbc774065456cccad3a41adbd1234332b7e1ac33eb77ba355ad",
   )
   http_file(
     name = "deb_bullseye_locales",
@@ -1960,8 +1960,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_openssl",
     downloaded_file_path = "deb_bullseye_openssl.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/o/openssl/openssl_1.1.1n-0%2bdeb11u1_amd64.deb"],
-    sha256 = "80b49ac2cf598b3ec0970be2bd44f6279adbce8e865544627c22881cc4965f2c",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20220623/pool/updates/main/o/openssl/openssl_1.1.1n-0%2bdeb11u2_amd64.deb"],
+    sha256 = "4c2f12a2022e5f1239a46cedbd7bd1c962e0852766a51e37f0b8fcf1267e018a",
   )
   http_file(
     name = "deb_bullseye_perl",
@@ -2098,8 +2098,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_postgresql_14",
     downloaded_file_path = "deb_bullseye_postgresql_14.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/postgresql-14_14.3-1.pgdg110%2b1_amd64.deb"],
-    sha256 = "7257a645076ab4122509f76bcdd7363e17d8f62cb9d29d2579c46b839d4fe8da",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/postgresql-14_14.4-1.pgdg110%2b1_amd64.deb"],
+    sha256 = "2f8b45a546b2c00c6016fb28afc14ce87eb95fc258b236bb455f2aaa81f2a03d",
   )
   http_file(
     name = "deb_bullseye_postgresql_14_postgis_3",
@@ -2116,8 +2116,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_postgresql_client_14",
     downloaded_file_path = "deb_bullseye_postgresql_client_14.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/postgresql-client-14_14.3-1.pgdg110%2b1_amd64.deb"],
-    sha256 = "a081ac1014490c1f85f92e529ff15f784721b332646e0f4059cf0583ba37dd5e",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/postgresql-client-14_14.4-1.pgdg110%2b1_amd64.deb"],
+    sha256 = "f1e8231ff821b7eeaa5c6ab55c8700634b7f230003ba29c3e7879e30f1622afa",
   )
   http_file(
     name = "deb_bullseye_postgresql_client_common",

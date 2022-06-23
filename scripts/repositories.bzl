@@ -29,17 +29,17 @@ load("@bazel_tools//tools/build_defs/repo:maven_rules.bzl", "maven_jar")
 def dependency_repositories():
   http_archive(
     name = "bazel_rules_container_test",
-    sha256 = "819fb160f4bc43b201f781521938b4dfde9883f973e7f72c1e82d8f8584ed519",
-    strip_prefix = "bazel_rules_container_test-0.12.0",
-    url = "https://github.com/guymers/bazel_rules_container/archive/0.12.0.tar.gz",
+    sha256 = "81cdfb3c2bd22d4e94ab96eee7617242b0d42afcb433114c785fdd25503915ef",
+    strip_prefix = "bazel_rules_container_test-0.13.0",
+    url = "https://github.com/guymers/bazel_rules_container/archive/0.13.0.tar.gz",
   )
 
-  # Update to 20220509 for amd64 (debuerreotype 0.14)
+  # Update to 20220622 for amd64 (debuerreotype 0.14)
   http_file(
     name = "debian_bullseye",
     downloaded_file_path = "bullseye-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/c796e02735a18985129d7dc11accb42b6a651815/bullseye/slim/rootfs.tar.xz"],
-    sha256 = "ebb8e296a9b0af683c34ac2de5e933d7ea00ba44d058801d4915688979a5c5fb",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/6032f248d825fd35e8b37037b26dc332e4659c64/bullseye/slim/rootfs.tar.xz"],
+    sha256 = "59eed9d82dc6503fe4fbb29d52ab7665ecd1276c0f96283afba4fddde4f57e53",
   )
   deb_bullseye()
 
@@ -58,8 +58,8 @@ def dependency_repositories():
       sha256 = sha,
       build_file_content = "exports_files(['graalvm-ce-java" + v + "-" + GRAAL_VERSION + "'])",
     ) for (v, sha) in [
-      ("11", "bc86083bb7e2778c7e4fe4f55d74790e42255b96f7806a7fefa51d06f3bc7103"),
-      ("17", "4f743e0ed3d974b7d619ca2ed6014554e8c12e5ebbb38b9bc9e820b182169bd4"),
+      ("11", "78c628707007bb97b09562932ee16f50beb1c3fa4a36e4311a0465a4a718e683"),
+      ("17", "f11d46098efbf78465a875c502028767e3de410a31e45d92a9c5cf5046f42aa2"),
     ]
   ]
 
@@ -98,7 +98,7 @@ def dependency_repositories():
     name = "grafana",
     downloaded_file_path = "grafana.deb",
     urls = ["https://dl.grafana.com/oss/release/grafana_" + GRAFANA_VERSION + "_amd64.deb"],
-    sha256 = "333aa32933b416dae7702293ad077c64153c5bb9e8cdbbb59f60a894792c9957",
+    sha256 = "e1097292be26f500d944927a328cb06e63bafee4754a408b9004ea632e62eb6f",
   )
 
   ###### JENKINS
@@ -106,7 +106,7 @@ def dependency_repositories():
     name = "jenkins_war",
     downloaded_file_path = "jenkins.war",
     urls = ["https://get.jenkins.io/war-stable/" + JENKINS_VERSION + "/jenkins.war"],
-    sha256 = "d193f179aadf3a7ceb61adebc3ab51218ac4a7852b88932ff33b44fd7be6010f",
+    sha256 = "176e2ce5c23d3c0b439befe0461e7ed1f53ac3091db05980198c23c7fde53b27",
   )
   http_file(
     name = "jenkins_agent_jar",
@@ -127,7 +127,7 @@ def dependency_repositories():
   http_archive(
     name = "maven",
     url = "https://archive.apache.org/dist/maven/maven-3/" + MAVEN_VERSION + "/binaries/apache-maven-" + MAVEN_VERSION + "-bin.tar.gz",
-    sha256 = "2cdc9c519427bb20fdc25bef5a9063b790e4abd930e7b14b4e9f4863d6f9f13d",
+    sha256 = "2cdc9c519427bb20fdc25bef5a9063b790e4abd930e7b14b4e9f4863d6f9f134",
     build_file_content = "exports_files(['apache-maven-" + MAVEN_VERSION + "'])",
   )
 
