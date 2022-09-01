@@ -34,12 +34,12 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.13.0.tar.gz",
   )
 
-  # Update to 20220622 for amd64 (debuerreotype 0.14)
+  # Update to 20220822 for amd64 (debuerreotype 0.15)
   http_file(
     name = "debian_bullseye",
     downloaded_file_path = "bullseye-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/6032f248d825fd35e8b37037b26dc332e4659c64/bullseye/slim/rootfs.tar.xz"],
-    sha256 = "59eed9d82dc6503fe4fbb29d52ab7665ecd1276c0f96283afba4fddde4f57e53",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/e5c204e07387a56c1680483ff7cba16c22146657/bullseye/slim/rootfs.tar.xz"],
+    sha256 = "19e3b395e426feaa28ccedae3985ae76de2d076f6e74847c43fecc0e7691f6fb",
   )
   deb_bullseye()
 
@@ -58,8 +58,8 @@ def dependency_repositories():
       sha256 = sha,
       build_file_content = "exports_files(['graalvm-ce-java" + v + "-" + GRAAL_VERSION + "'])",
     ) for (v, sha) in [
-      ("11", "78c628707007bb97b09562932ee16f50beb1c3fa4a36e4311a0465a4a718e683"),
-      ("17", "f11d46098efbf78465a875c502028767e3de410a31e45d92a9c5cf5046f42aa2"),
+      ("11", "882363c75d1b1782a48bbf7dd8b155ab231b0957fd5885941376d90b69f21b9e"),
+      ("17", "cd903566d030bf44a8c5c0f50914fc9c9d89cb2954e1f90512b137a0bfedc3ca"),
     ]
   ]
 
