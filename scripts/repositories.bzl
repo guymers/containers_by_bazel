@@ -34,12 +34,12 @@ def dependency_repositories():
     url = "https://github.com/guymers/bazel_rules_container/archive/0.13.0.tar.gz",
   )
 
-  # Update to 20220822 for amd64 (debuerreotype 0.15)
+  # Update to 20221024 for amd64 (debuerreotype 0.15)
   http_file(
     name = "debian_bullseye",
     downloaded_file_path = "bullseye-slim-rootfs.tar.xz",
-    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/e5c204e07387a56c1680483ff7cba16c22146657/bullseye/slim/rootfs.tar.xz"],
-    sha256 = "19e3b395e426feaa28ccedae3985ae76de2d076f6e74847c43fecc0e7691f6fb",
+    urls = ["https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/4cc8b1d2be137ca1da010b1afd4f764e92eb3f8f/bullseye/slim/rootfs.tar.xz"],
+    sha256 = "eb4104064662ccd2aa5c8b27f799e2867ef462c09b9eec664aa342d4b51be9ea",
   )
   deb_bullseye()
 
@@ -58,8 +58,8 @@ def dependency_repositories():
       sha256 = sha,
       build_file_content = "exports_files(['graalvm-ce-java" + v + "-" + GRAAL_VERSION + "'])",
     ) for (v, sha) in [
-      ("11", "882363c75d1b1782a48bbf7dd8b155ab231b0957fd5885941376d90b69f21b9e"),
-      ("17", "cd903566d030bf44a8c5c0f50914fc9c9d89cb2954e1f90512b137a0bfedc3ca"),
+      ("11", "d4200bcc43e5ad4e6949c1b1edc1e59f63066e3a2280d5bd82d0c9b1d67c3f2c"),
+      ("17", "3473d8b3b1bc682e95adfb3ac1d9a59b51b0f43e2b752f2a5b550e4ebfa2fd17"),
     ]
   ]
 
@@ -67,14 +67,15 @@ def dependency_repositories():
   http_file(
     name = "cassandra",
     downloaded_file_path = "cassandra.deb",
-    urls = ["https://dlcdn.apache.org/cassandra/" + CASSANDRA_VERSION + "/debian/cassandra_" + CASSANDRA_DEB_VERSION + ".deb"],
-    sha256 = "155f0516469c34c9222643dc85a784bf7ad516d0fe39115a3639e350edfd6510",
+    urls = ["https://debian.cassandra.apache.org/pool/main/c/cassandra/cassandra_" + CASSANDRA_DEB_VERSION + ".deb"],
+    # https://debian.cassandra.apache.org/pool/main/c/cassandra/cassandra_4.0.7_all.deb
+    sha256 = "5cda40a2e0a216d37776f3312577cc33c14bc7ac02e44b976175bca2ba60ee39",
   )
   http_file(
     name = "cassandra_tools",
     downloaded_file_path = "cassandra-tools.deb",
-    urls = ["https://dlcdn.apache.org/cassandra/" + CASSANDRA_VERSION + "/debian/cassandra-tools_" + CASSANDRA_DEB_VERSION + ".deb"],
-    sha256 = "809e80466bb1f8cf021d91f5adbeb2c564f63e598b3971a546096845757acf72",
+    urls = ["https://debian.cassandra.apache.org/pool/main/c/cassandra/cassandra-tools_" + CASSANDRA_DEB_VERSION + ".deb"],
+    sha256 = "f4ede6136782e38d7c344e1e1c59e69657a9246e114883136b6173a7cdfb53eb",
   )
 
   ###### ENVOY
