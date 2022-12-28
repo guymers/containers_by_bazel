@@ -760,8 +760,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libexpat1",
     downloaded_file_path = "deb_bullseye_libexpat1.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20221029/pool/updates/main/e/expat/libexpat1_2.2.10-2%2bdeb11u4_amd64.deb"],
-    sha256 = "d482f5d15353291e3a9e58c382d2ad3a412f028d3e553695a12f002c70b5a256",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/e/expat/libexpat1_2.2.10-2%2bdeb11u5_amd64.deb"],
+    sha256 = "5744040c4735bcdd51238aebfa3e402b857244897f1007f61154982ebe5abbd7",
   )
   http_file(
     name = "deb_bullseye_libfido2_1",
@@ -1168,8 +1168,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libmariadb3",
     downloaded_file_path = "deb_bullseye_libmariadb3.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/m/mariadb-10.5/libmariadb3_10.5.15-0%2bdeb11u1_amd64.deb"],
-    sha256 = "81e470c15a8c1fe476cc92f107a80890566af4aa7d27059cc498e4250e98c00f",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/m/mariadb-10.5/libmariadb3_10.5.18-0%2bdeb11u1_amd64.deb"],
+    sha256 = "05af4a8ef1aafe3270a7a588065a53f037ae834ac30f843553122a53a626aba6",
   )
   http_file(
     name = "deb_bullseye_libmd0",
@@ -1360,8 +1360,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libpixman_1_0",
     downloaded_file_path = "deb_bullseye_libpixman_1_0.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/p/pixman/libpixman-1-0_0.40.0-1_amd64.deb"],
-    sha256 = "55236a7d4b9db107eb480ac56b3aa786572ea577ba34323baf46aceb7ba6d012",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/p/pixman/libpixman-1-0_0.40.0-1.1%7edeb11u1_amd64.deb"],
+    sha256 = "1d0b392aec96fc3dc9c9cffa1241f4abfa7be0282f3451fce72492a934477c3e",
   )
   http_file(
     name = "deb_bullseye_libpng16_16",
@@ -1378,8 +1378,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libpq5",
     downloaded_file_path = "deb_bullseye_libpq5.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-15/libpq5_15.0-1.pgdg110%2b1_amd64.deb"],
-    sha256 = "1bf3b621af3c97c7a20e373ca0dde39705f7276fc96c8341fcaa78304b3c2f97",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-15/libpq5_15.1-1.pgdg110%2b1_amd64.deb"],
+    sha256 = "d23c6031e8f8dd64b4a9b32ad0bb69f1020f8dfb9487ec17e9f98b0b1b3cbdd2",
   )
   http_file(
     name = "deb_bullseye_libprocps8",
@@ -1588,8 +1588,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libtomcat9_java",
     downloaded_file_path = "deb_bullseye_libtomcat9_java.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/t/tomcat9/libtomcat9-java_9.0.43-2%7edeb11u3_all.deb"],
-    sha256 = "8d52a35d945bc192df27b5e3c77049ad28639c724cde2c047450b6e4048fa707",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/t/tomcat9/libtomcat9-java_9.0.43-2%7edeb11u4_all.deb"],
+    sha256 = "12108f8fcdf4e9b9a46af5c338c15e2c7efd0ec1792f68a8b15e4512fcafb42c",
   )
   http_file(
     name = "deb_bullseye_libtool",
@@ -1810,8 +1810,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libxml2",
     downloaded_file_path = "deb_bullseye_libxml2.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220623/pool/updates/main/libx/libxml2/libxml2_2.9.10%2bdfsg-6.7%2bdeb11u2_amd64.deb"],
-    sha256 = "4e0fe50fee6c42eeb8a77c55f08baca4f7ebc7d443760ffaaf5f437274f25800",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg-6.7%2bdeb11u3_amd64.deb"],
+    sha256 = "41e535698c9e9e5a3552bfa80eecfda7f324363527dfb8855beec90d9e4a2b81",
   )
   http_file(
     name = "deb_bullseye_libxpm4",
@@ -1858,8 +1858,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_linux_libc_dev",
     downloaded_file_path = "deb_bullseye_linux_libc_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20221029/pool/updates/main/l/linux/linux-libc-dev_5.10.149-2_amd64.deb"],
-    sha256 = "e6c4602a9593b43f535e183daa5c3a68b8e4fc9a5217387e1cc1039f8a0ead89",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/l/linux/linux-libc-dev_5.10.158-2_amd64.deb"],
+    sha256 = "754648d5e3b73fb306eaec18ac66381569b7db2b7dea1d18bee6b8b8c2b3d5db",
   )
   http_file(
     name = "deb_bullseye_locales",
@@ -1894,8 +1894,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_mariadb_common",
     downloaded_file_path = "deb_bullseye_mariadb_common.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/m/mariadb-10.5/mariadb-common_10.5.15-0%2bdeb11u1_all.deb"],
-    sha256 = "a98b12228a79f29c588cb621f0fee395b263fcfc5037b912a22e8b168be3550d",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/m/mariadb-10.5/mariadb-common_10.5.18-0%2bdeb11u1_all.deb"],
+    sha256 = "67447e2ef8af21afda5cd7cc18b988e6340002bc06416b925a2024b766200874",
   )
   http_file(
     name = "deb_bullseye_media_types",
@@ -1976,88 +1976,82 @@ def deb_bullseye():
     sha256 = "6fa15be322c3c89ec4a07d704ad58d4a2d1aabf866135a859f6d8d58c59e9df4",
   )
   http_file(
-    name = "deb_bullseye_pgdg_keyring",
-    downloaded_file_path = "deb_bullseye_pgdg_keyring.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/pgdg-keyring/pgdg-keyring_2018.2_all.deb"],
-    sha256 = "48c435aeff4a9a9949bcfac639505a5ba050fd1439e2ee5de3af1a942dd97c74",
-  )
-  http_file(
     name = "deb_bullseye_php7_4_bcmath",
     downloaded_file_path = "deb_bullseye_php7_4_bcmath.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220831/pool/updates/main/p/php7.4/php7.4-bcmath_7.4.30-1%2bdeb11u1_amd64.deb"],
-    sha256 = "8454602d38e521ae714cb789cb0056f14f12e5da033697d720cd1948edc21fd5",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/p/php7.4/php7.4-bcmath_7.4.33-1%2bdeb11u1_amd64.deb"],
+    sha256 = "8d45fe0eda8ad0b30914758a2ee3c9202d0041a8877fe042cda10dc215fc4021",
   )
   http_file(
     name = "deb_bullseye_php7_4_cli",
     downloaded_file_path = "deb_bullseye_php7_4_cli.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220831/pool/updates/main/p/php7.4/php7.4-cli_7.4.30-1%2bdeb11u1_amd64.deb"],
-    sha256 = "3905c8f1f421aa9a04ae4e00b641d92f90c0d9ee04ef0e44e6acf4c830ba1f0b",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/p/php7.4/php7.4-cli_7.4.33-1%2bdeb11u1_amd64.deb"],
+    sha256 = "13cc914b19c0452bc46bc167418cdf11323b87866199524f970c8c9ed791a49a",
   )
   http_file(
     name = "deb_bullseye_php7_4_common",
     downloaded_file_path = "deb_bullseye_php7_4_common.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220831/pool/updates/main/p/php7.4/php7.4-common_7.4.30-1%2bdeb11u1_amd64.deb"],
-    sha256 = "51f85c96f168fbac6484bbaf3311a258b2c294ded2dc81b07dbeeda4334d4b36",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/p/php7.4/php7.4-common_7.4.33-1%2bdeb11u1_amd64.deb"],
+    sha256 = "a5e1defd36ba29fc48c7e7966b6d1503873e0f624af389af0656d0d32b94f513",
   )
   http_file(
     name = "deb_bullseye_php7_4_curl",
     downloaded_file_path = "deb_bullseye_php7_4_curl.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220831/pool/updates/main/p/php7.4/php7.4-curl_7.4.30-1%2bdeb11u1_amd64.deb"],
-    sha256 = "c0272e38f553fc5d036689fd6b5393b9b4530d4ea2dbcdc2c2ec65ceb5eec0d5",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/p/php7.4/php7.4-curl_7.4.33-1%2bdeb11u1_amd64.deb"],
+    sha256 = "3deeea3d4f6ac818faff80ad8e5ab2239c5263700a47381e7afda26808027b04",
   )
   http_file(
     name = "deb_bullseye_php7_4_dev",
     downloaded_file_path = "deb_bullseye_php7_4_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220831/pool/updates/main/p/php7.4/php7.4-dev_7.4.30-1%2bdeb11u1_amd64.deb"],
-    sha256 = "6ad9adfdd2a875dd0cf0bf3a80e7c0a75a40f5df6dddf8aafe8d6aaa71fd690c",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/p/php7.4/php7.4-dev_7.4.33-1%2bdeb11u1_amd64.deb"],
+    sha256 = "5a1602504a65a160a91cc6235ccde6bf66c705956ac2589a2d71cb3372da6b39",
   )
   http_file(
     name = "deb_bullseye_php7_4_fpm",
     downloaded_file_path = "deb_bullseye_php7_4_fpm.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220831/pool/updates/main/p/php7.4/php7.4-fpm_7.4.30-1%2bdeb11u1_amd64.deb"],
-    sha256 = "14e2328f03fca5f133593c33c753efa8d2f9c979a1a1e17b03566eccb7f84bc3",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/p/php7.4/php7.4-fpm_7.4.33-1%2bdeb11u1_amd64.deb"],
+    sha256 = "36dbdd86767b03a34a7ac270f3fbfbe213bd7a39a91a006e2278f8364c396706",
   )
   http_file(
     name = "deb_bullseye_php7_4_intl",
     downloaded_file_path = "deb_bullseye_php7_4_intl.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220831/pool/updates/main/p/php7.4/php7.4-intl_7.4.30-1%2bdeb11u1_amd64.deb"],
-    sha256 = "8236ad6017196a69139e2943650c46c36c48f2d50b9e34e77becd6a4c916d97e",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/p/php7.4/php7.4-intl_7.4.33-1%2bdeb11u1_amd64.deb"],
+    sha256 = "f215f518de9535a2037af06251b29bbe75c2bb1990651be02577887a89ff9ac2",
   )
   http_file(
     name = "deb_bullseye_php7_4_json",
     downloaded_file_path = "deb_bullseye_php7_4_json.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220831/pool/updates/main/p/php7.4/php7.4-json_7.4.30-1%2bdeb11u1_amd64.deb"],
-    sha256 = "bf11d40cff4ee12100b468b7f619a82c7ecc24affef5f5e943afcdae1db29ee7",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/p/php7.4/php7.4-json_7.4.33-1%2bdeb11u1_amd64.deb"],
+    sha256 = "344e2c4d9421ba6e2576d14e350efc8a80aa9b3da6f0cc703e9f7ee52f9fd7a4",
   )
   http_file(
     name = "deb_bullseye_php7_4_mbstring",
     downloaded_file_path = "deb_bullseye_php7_4_mbstring.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220831/pool/updates/main/p/php7.4/php7.4-mbstring_7.4.30-1%2bdeb11u1_amd64.deb"],
-    sha256 = "8fea19b5e7d1d364b327a4558a0d992c7b275540ce5da05c3aee3149e8b86c5b",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/p/php7.4/php7.4-mbstring_7.4.33-1%2bdeb11u1_amd64.deb"],
+    sha256 = "3a0844bec6da96312f5abb282b7b212a029c7d9654e37490c73c2b2a6e02171b",
   )
   http_file(
     name = "deb_bullseye_php7_4_opcache",
     downloaded_file_path = "deb_bullseye_php7_4_opcache.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220831/pool/updates/main/p/php7.4/php7.4-opcache_7.4.30-1%2bdeb11u1_amd64.deb"],
-    sha256 = "294190fe0104118d357f4893852a1dfd43ad6fe5a86ea78ba9f574adac0ee84e",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/p/php7.4/php7.4-opcache_7.4.33-1%2bdeb11u1_amd64.deb"],
+    sha256 = "0834a329e61e8c3db5636def277694df60229cd836ce9964f4b91aa9bace8895",
   )
   http_file(
     name = "deb_bullseye_php7_4_pgsql",
     downloaded_file_path = "deb_bullseye_php7_4_pgsql.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220831/pool/updates/main/p/php7.4/php7.4-pgsql_7.4.30-1%2bdeb11u1_amd64.deb"],
-    sha256 = "2fc3788428a2426c42fefd2cd492f9b1be427251c7908fadfe7ced851d7358b3",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/p/php7.4/php7.4-pgsql_7.4.33-1%2bdeb11u1_amd64.deb"],
+    sha256 = "8ea7ffc383108518e58dd010629534956462ac689f2d03bff83af36eb82ea140",
   )
   http_file(
     name = "deb_bullseye_php7_4_phpdbg",
     downloaded_file_path = "deb_bullseye_php7_4_phpdbg.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220831/pool/updates/main/p/php7.4/php7.4-phpdbg_7.4.30-1%2bdeb11u1_amd64.deb"],
-    sha256 = "ca6d3dc488044f053a7a5fce923619c9544e6af6de1cab5824f3d0d410f75e24",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/p/php7.4/php7.4-phpdbg_7.4.33-1%2bdeb11u1_amd64.deb"],
+    sha256 = "834be0d2ab8d8dcdabcf5dd0c74ef00fab717e53953fe793afd3d2d53cb0a2c5",
   )
   http_file(
     name = "deb_bullseye_php7_4_readline",
     downloaded_file_path = "deb_bullseye_php7_4_readline.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220831/pool/updates/main/p/php7.4/php7.4-readline_7.4.30-1%2bdeb11u1_amd64.deb"],
-    sha256 = "1505dd6012a0bafa53989dd224b8a49a707a8ec8c2514412cb2285be75cb148d",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/p/php7.4/php7.4-readline_7.4.33-1%2bdeb11u1_amd64.deb"],
+    sha256 = "5274f9dc536e36c97ceaf1f5469f137d827ea5409b4c5582c21288ba83241081",
   )
   http_file(
     name = "deb_bullseye_php_apcu",
@@ -2092,44 +2086,44 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_postgis",
     downloaded_file_path = "deb_bullseye_postgis.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgis_3.3.1%2bdfsg-1.pgdg110%2b1_amd64.deb"],
-    sha256 = "05f3350db257ad5649d98d5f87678441834e15c4bf178b426698007baec8192d",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgis_3.3.2%2bdfsg-1.pgdg110%2b1_amd64.deb"],
+    sha256 = "4292d32c3e12ce3279c82bb5ad14afa00e9d74467173312cfed5dc473f0e1c5d",
   )
   http_file(
     name = "deb_bullseye_postgresql_14",
     downloaded_file_path = "deb_bullseye_postgresql_14.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/postgresql-14_14.5-2.pgdg110%2b2_amd64.deb"],
-    sha256 = "81c90e43468740d05d1a27048ab8b22f1a268cea2664efe37b9ad87b1b2025b1",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/postgresql-14_14.6-1.pgdg110%2b1_amd64.deb"],
+    sha256 = "29fe5839a8997202ebee8f250a22e4266d9c2a91c5e7c7760e242e769ef329bc",
   )
   http_file(
     name = "deb_bullseye_postgresql_14_postgis_3",
     downloaded_file_path = "deb_bullseye_postgresql_14_postgis_3.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-14-postgis-3_3.3.1%2bdfsg-1.pgdg110%2b1_amd64.deb"],
-    sha256 = "be018a59cdacce3466860f8227208bdaec80124647bc94c82f2db12f601139bc",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-14-postgis-3_3.3.2%2bdfsg-1.pgdg110%2b1_amd64.deb"],
+    sha256 = "af078fbd4ce00738b9d0c902902f69e8ce26f3600d2f8036bdbee6ca658eff53",
   )
   http_file(
     name = "deb_bullseye_postgresql_14_postgis_3_scripts",
     downloaded_file_path = "deb_bullseye_postgresql_14_postgis_3_scripts.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-14-postgis-3-scripts_3.3.1%2bdfsg-1.pgdg110%2b1_all.deb"],
-    sha256 = "92af25423c7677db78f4fd591e1339fe7d47f26cfa40c9bc53eac72f43ef8324",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-14-postgis-3-scripts_3.3.2%2bdfsg-1.pgdg110%2b1_all.deb"],
+    sha256 = "df88e00a9efda7e789edeec7278af29982456033c78d31cb19d46eab0b0d3162",
   )
   http_file(
     name = "deb_bullseye_postgresql_client_14",
     downloaded_file_path = "deb_bullseye_postgresql_client_14.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/postgresql-client-14_14.5-2.pgdg110%2b2_amd64.deb"],
-    sha256 = "4681cd7645816b192bcf94d694792d957d9ff686d16bf2c83ceb6382823eda5d",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/postgresql-client-14_14.6-1.pgdg110%2b1_amd64.deb"],
+    sha256 = "7092a0cc9650726ff00708b3ab01f6955f6eb1c988a2a8c609180738df10ce2e",
   )
   http_file(
     name = "deb_bullseye_postgresql_client_common",
     downloaded_file_path = "deb_bullseye_postgresql_client_common.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_244.pgdg110%2b1_all.deb"],
-    sha256 = "c89769314559a39fd7ba84751b5a282806edc43901a0347d062fcd01bed2f7c5",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_246.pgdg110%2b1_all.deb"],
+    sha256 = "38346a4f489159e7fd696e6086d1fed5c3faf651c7f28b32d9afc211c7648c59",
   )
   http_file(
     name = "deb_bullseye_postgresql_common",
     downloaded_file_path = "deb_bullseye_postgresql_common.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_244.pgdg110%2b1_all.deb"],
-    sha256 = "9648ac37ce7c96be60ac9b4e794819a2149cfe5ac530ddaf860a76fccc6c18ce",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_246.pgdg110%2b1_all.deb"],
+    sha256 = "91bd881fc95c4c8d86ca7f5f456995fda540d4fe5a1447313370734356ad58e6",
   )
   http_file(
     name = "deb_bullseye_procps",
@@ -2242,14 +2236,14 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_tomcat9_common",
     downloaded_file_path = "deb_bullseye_tomcat9_common.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/t/tomcat9/tomcat9-common_9.0.43-2%7edeb11u3_all.deb"],
-    sha256 = "59c1548fd7358a5ba293ce061e122d99754603d678abd2f7dcce63a2758d08a5",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/t/tomcat9/tomcat9-common_9.0.43-2%7edeb11u4_all.deb"],
+    sha256 = "5ebf1424ed119c6672755deaa73b37d1289f976a7ece75efe14cbe5cf6b6aed2",
   )
   http_file(
     name = "deb_bullseye_tomcat9_user",
     downloaded_file_path = "deb_bullseye_tomcat9_user.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/t/tomcat9/tomcat9-user_9.0.43-2%7edeb11u3_all.deb"],
-    sha256 = "e96887472fd95f4bdf2fde9ce30b307fd585fb57a44ca839c7ec2fb7f9a22f4c",
+    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/t/tomcat9/tomcat9-user_9.0.43-2%7edeb11u4_all.deb"],
+    sha256 = "77756da8d83f43c1b5249ff14dfbd077c686cce6384fb582a3425c34e5144991",
   )
   http_file(
     name = "deb_bullseye_ucf",
