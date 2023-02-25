@@ -352,8 +352,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_git_man",
     downloaded_file_path = "deb_bullseye_git_man.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/g/git/git-man_2.30.2-1_all.deb"],
-    sha256 = "ec24234ea25d4d966a6db770f2113a396644ba26883a6e48a63af284f861fff6",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20230224/pool/updates/main/g/git/git-man_2.30.2-1%2bdeb11u2_all.deb"],
+    sha256 = "d77d7d288ad70c87cf52128036c0ab1ead4bee1793c24ab1bc626d9385baffea",
   )
   http_file(
     name = "deb_bullseye_glib_networking",
@@ -616,14 +616,14 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libcurl3_gnutls",
     downloaded_file_path = "deb_bullseye_libcurl3_gnutls.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20221029/pool/main/c/curl/libcurl3-gnutls_7.74.0-1.3%2bdeb11u3_amd64.deb"],
-    sha256 = "fee665729e973230946efcd463c36b74c394c5a9187720aa11ce3ad34a025f2d",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20230224/pool/updates/main/c/curl/libcurl3-gnutls_7.74.0-1.3%2bdeb11u5_amd64.deb"],
+    sha256 = "206cff825a89aec5dd4fe8ad81b8898052a7d4157be7f7dfedbca935dff9044f",
   )
   http_file(
     name = "deb_bullseye_libcurl4",
     downloaded_file_path = "deb_bullseye_libcurl4.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20221029/pool/main/c/curl/libcurl4_7.74.0-1.3%2bdeb11u3_amd64.deb"],
-    sha256 = "bb97694b96b2e52a411f94b223dd0f05d4bb5164ba9a0802f1f53d24fbc68632",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20230224/pool/updates/main/c/curl/libcurl4_7.74.0-1.3%2bdeb11u5_amd64.deb"],
+    sha256 = "4eec91ca3da7f5b803fdaf6d9d976ed70cda4bb8a2f0356ca8770fa3c40475e2",
   )
   http_file(
     name = "deb_bullseye_libdap27",
@@ -664,8 +664,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libde265_0",
     downloaded_file_path = "deb_bullseye_libde265_0.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/libd/libde265/libde265-0_1.0.8-1_amd64.deb"],
-    sha256 = "82b2f1e53b7e23ead6e375fc12c979fee63d2cdce9a3054fe1177403da86a7fd",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20230224/pool/updates/main/libd/libde265/libde265-0_1.0.11-0%2bdeb11u1_amd64.deb"],
+    sha256 = "b67a48ebe1b5d23b7bd0fd57bc1c6f713b472d48cbdeec501769fa34ba827198",
   )
   http_file(
     name = "deb_bullseye_libdeflate0",
@@ -1264,8 +1264,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libnss3",
     downloaded_file_path = "deb_bullseye_libnss3.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220407/pool/main/n/nss/libnss3_3.61-1%2bdeb11u2_amd64.deb"],
-    sha256 = "41c6ceecdbe0067fd6ff99f7f96f52599542f712a1f94173980283b3cacbe30d",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20230224/pool/updates/main/n/nss/libnss3_3.61-1%2bdeb11u3_amd64.deb"],
+    sha256 = "778cf6dabc49e5e16fc976609e06117bf64fdf5ece56357741b0aba2891b1485",
   )
   http_file(
     name = "deb_bullseye_libnuma1",
@@ -1378,8 +1378,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libpq5",
     downloaded_file_path = "deb_bullseye_libpq5.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-15/libpq5_15.1-1.pgdg110%2b1_amd64.deb"],
-    sha256 = "d23c6031e8f8dd64b4a9b32ad0bb69f1020f8dfb9487ec17e9f98b0b1b3cbdd2",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-15/libpq5_15.2-1.pgdg110%2b1_amd64.deb"],
+    sha256 = "ac0e7f5c8f43856ac3c2d65cce6e3cb5bcbdb9aa821957e8f7f0722d9e55fcdd",
   )
   http_file(
     name = "deb_bullseye_libprocps8",
@@ -1546,8 +1546,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libssl_dev",
     downloaded_file_path = "deb_bullseye_libssl_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220831/pool/main/o/openssl/libssl-dev_1.1.1n-0%2bdeb11u3_amd64.deb"],
-    sha256 = "31ea36803b8d249a9c8a3769f77ac51238e122089415432809de46c84350b5c1",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20230224/pool/updates/main/o/openssl/libssl-dev_1.1.1n-0%2bdeb11u4_amd64.deb"],
+    sha256 = "58b94df14743d35ac280d35cdc29d90548e55ab6e9b7399d070ab7f2e4f6f11f",
   )
   http_file(
     name = "deb_bullseye_libsuperlu5",
@@ -1576,8 +1576,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_libtiff5",
     downloaded_file_path = "deb_bullseye_libtiff5.deb",
-    urls = ["http://snapshot.debian.org/archive/debian-security/20220407/pool/updates/main/t/tiff/libtiff5_4.2.0-1%2bdeb11u1_amd64.deb"],
-    sha256 = "b22d25e14421a36c4c3b721c04c6312d79ccd91c9a0e2291f58e36b8d4a07fbb",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20230224/pool/updates/main/t/tiff/libtiff5_4.2.0-1%2bdeb11u3_amd64.deb"],
+    sha256 = "e17894675d9225a1a565bde7d4694c6a484fa34c31ae49700963923c24c58baf",
   )
   http_file(
     name = "deb_bullseye_libtirpc_dev",
@@ -1858,8 +1858,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_linux_libc_dev",
     downloaded_file_path = "deb_bullseye_linux_libc_dev.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20221228/pool/main/l/linux/linux-libc-dev_5.10.158-2_amd64.deb"],
-    sha256 = "754648d5e3b73fb306eaec18ac66381569b7db2b7dea1d18bee6b8b8c2b3d5db",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20230224/pool/updates/main/l/linux/linux-libc-dev_5.10.162-1_amd64.deb"],
+    sha256 = "d7cae63cfedb9749e57a44d61b2ad5e630b6fd6ee13611652c3573fa3fdb7a5b",
   )
   http_file(
     name = "deb_bullseye_locales",
@@ -1930,8 +1930,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_nginx",
     downloaded_file_path = "deb_bullseye_nginx.deb",
-    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.21.6-1%7ebullseye_amd64.deb"],
-    sha256 = "7c59809dc57c550fb43d64d97ad1cc20069a0e38a3d3bc1dc2ebc3a2c8a6ae85",
+    urls = ["http://nginx.org/packages/mainline/debian/pool/nginx/n/nginx/nginx_1.23.3-1%7ebullseye_amd64.deb"],
+    sha256 = "814296c6f71c04c05ca1a1313a3e31fb0f68a23f3f458f150f2a3aa4f9874c39",
   )
   http_file(
     name = "deb_bullseye_numactl",
@@ -1960,8 +1960,8 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_openssl",
     downloaded_file_path = "deb_bullseye_openssl.deb",
-    urls = ["http://snapshot.debian.org/archive/debian/20220831/pool/main/o/openssl/openssl_1.1.1n-0%2bdeb11u3_amd64.deb"],
-    sha256 = "3691cf432febeb8dd621c6a36e3cc66b45fc119016532ffb33c742861aec868b",
+    urls = ["http://snapshot.debian.org/archive/debian-security/20230224/pool/updates/main/o/openssl/openssl_1.1.1n-0%2bdeb11u4_amd64.deb"],
+    sha256 = "0354f1f234a2528885bb3fff9785050d9b01d4c41445afc101790162ae043ef2",
   )
   http_file(
     name = "deb_bullseye_perl",
@@ -2090,40 +2090,40 @@ def deb_bullseye():
     sha256 = "4292d32c3e12ce3279c82bb5ad14afa00e9d74467173312cfed5dc473f0e1c5d",
   )
   http_file(
-    name = "deb_bullseye_postgresql_14",
-    downloaded_file_path = "deb_bullseye_postgresql_14.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/postgresql-14_14.6-1.pgdg110%2b1_amd64.deb"],
-    sha256 = "29fe5839a8997202ebee8f250a22e4266d9c2a91c5e7c7760e242e769ef329bc",
+    name = "deb_bullseye_postgresql_15",
+    downloaded_file_path = "deb_bullseye_postgresql_15.deb",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-15/postgresql-15_15.2-1.pgdg110%2b1_amd64.deb"],
+    sha256 = "3581c697915db590d932440ae747bb5347573e4b86e056c539fe5f477802eb1b",
   )
   http_file(
-    name = "deb_bullseye_postgresql_14_postgis_3",
-    downloaded_file_path = "deb_bullseye_postgresql_14_postgis_3.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-14-postgis-3_3.3.2%2bdfsg-1.pgdg110%2b1_amd64.deb"],
-    sha256 = "af078fbd4ce00738b9d0c902902f69e8ce26f3600d2f8036bdbee6ca658eff53",
+    name = "deb_bullseye_postgresql_15_postgis_3",
+    downloaded_file_path = "deb_bullseye_postgresql_15_postgis_3.deb",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-15-postgis-3_3.3.2%2bdfsg-1.pgdg110%2b1_amd64.deb"],
+    sha256 = "493ed60032ecc4a9ca25ce63091edc5b5b9459ec0ab92ce97f327129518b22f6",
   )
   http_file(
-    name = "deb_bullseye_postgresql_14_postgis_3_scripts",
-    downloaded_file_path = "deb_bullseye_postgresql_14_postgis_3_scripts.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-14-postgis-3-scripts_3.3.2%2bdfsg-1.pgdg110%2b1_all.deb"],
-    sha256 = "df88e00a9efda7e789edeec7278af29982456033c78d31cb19d46eab0b0d3162",
+    name = "deb_bullseye_postgresql_15_postgis_3_scripts",
+    downloaded_file_path = "deb_bullseye_postgresql_15_postgis_3_scripts.deb",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgis/postgresql-15-postgis-3-scripts_3.3.2%2bdfsg-1.pgdg110%2b1_all.deb"],
+    sha256 = "1b4526688cb6acc455fded8b7509dba8ba4cd4ef54bd3e7a98447741ec2eddd2",
   )
   http_file(
-    name = "deb_bullseye_postgresql_client_14",
-    downloaded_file_path = "deb_bullseye_postgresql_client_14.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-14/postgresql-client-14_14.6-1.pgdg110%2b1_amd64.deb"],
-    sha256 = "7092a0cc9650726ff00708b3ab01f6955f6eb1c988a2a8c609180738df10ce2e",
+    name = "deb_bullseye_postgresql_client_15",
+    downloaded_file_path = "deb_bullseye_postgresql_client_15.deb",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-15/postgresql-client-15_15.2-1.pgdg110%2b1_amd64.deb"],
+    sha256 = "44b7538c26fc68f374dec246609364d6722c2f563601cb814733e6b6dbf8cd93",
   )
   http_file(
     name = "deb_bullseye_postgresql_client_common",
     downloaded_file_path = "deb_bullseye_postgresql_client_common.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_246.pgdg110%2b1_all.deb"],
-    sha256 = "38346a4f489159e7fd696e6086d1fed5c3faf651c7f28b32d9afc211c7648c59",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-client-common_247.pgdg110%2b1_all.deb"],
+    sha256 = "c84b5a8a90da13a4437be6e49afae935c42f67feed7248b2830f2cec2884cc5a",
   )
   http_file(
     name = "deb_bullseye_postgresql_common",
     downloaded_file_path = "deb_bullseye_postgresql_common.deb",
-    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_246.pgdg110%2b1_all.deb"],
-    sha256 = "91bd881fc95c4c8d86ca7f5f456995fda540d4fe5a1447313370734356ad58e6",
+    urls = ["http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_247.pgdg110%2b1_all.deb"],
+    sha256 = "039afa645893e8a403a8b83b388b93c0cc056d32754855c7b4c90b1885514ae2",
   )
   http_file(
     name = "deb_bullseye_procps",
@@ -2278,72 +2278,72 @@ def deb_bullseye():
   http_file(
     name = "deb_bullseye_zulu11_ca_jdk_headless",
     downloaded_file_path = "deb_bullseye_zulu11_ca_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11-ca/zulu11-ca-jdk-headless_11.0.17-1_amd64.deb"],
-    sha256 = "121b9acd5861c4eecbf250f878dc8e45d23214d46ab341ca060eb50f7b255020",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11-ca/zulu11-ca-jdk-headless_11.0.18-1_amd64.deb"],
+    sha256 = "5949f54aa2caeee4be7eeede64ab63b0a44a0d0a1ead2512573d5b83c6c87378",
   )
   http_file(
     name = "deb_bullseye_zulu11_ca_jre_headless",
     downloaded_file_path = "deb_bullseye_zulu11_ca_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11-ca/zulu11-ca-jre-headless_11.0.17-1_amd64.deb"],
-    sha256 = "a9ad7f94a1475b163dd5946c1529a862b04b7f2887b0967d3e549dae3f053bc8",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11-ca/zulu11-ca-jre-headless_11.0.18-1_amd64.deb"],
+    sha256 = "13cb33449d949280c1c500d1adecf392af542dd27fc2a926418708999c58baa5",
   )
   http_file(
     name = "deb_bullseye_zulu11_jdk_headless",
     downloaded_file_path = "deb_bullseye_zulu11_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jdk-headless_11.0.17-1_amd64.deb"],
-    sha256 = "eabac5c4eef8b635ee27ca40cc6eda64d0254a94d0ab58b3a29ddab2caf8409c",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jdk-headless_11.0.18-1_amd64.deb"],
+    sha256 = "e1b25d8f9c07d7fc08ecf9bb728990c6acfdaef76a9b412a32470146f8830c27",
   )
   http_file(
     name = "deb_bullseye_zulu11_jre_headless",
     downloaded_file_path = "deb_bullseye_zulu11_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jre-headless_11.0.17-1_amd64.deb"],
-    sha256 = "1e8c9608da11f5376d85f7ca2345adcc05d37a23bd61aa07943550b0d88877c0",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu11/zulu11-jre-headless_11.0.18-1_amd64.deb"],
+    sha256 = "a16df32f2560ab875dacd3275833ae8aa77e6c3cfe036da7efa6e527df8d63e5",
   )
   http_file(
     name = "deb_bullseye_zulu17_ca_jdk_headless",
     downloaded_file_path = "deb_bullseye_zulu17_ca_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu17-ca/zulu17-ca-jdk-headless_17.0.5-1_amd64.deb"],
-    sha256 = "03a2e7bbe5fdbabf2a77f7560a8977b034ea52a07a315e43adc89a9afecb547c",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu17-ca/zulu17-ca-jdk-headless_17.0.6-1_amd64.deb"],
+    sha256 = "067a0a316284ff8a079333d33ddb01d32439b97b84e46bd9826b6edb4d606e24",
   )
   http_file(
     name = "deb_bullseye_zulu17_ca_jre_headless",
     downloaded_file_path = "deb_bullseye_zulu17_ca_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu17-ca/zulu17-ca-jre-headless_17.0.5-1_amd64.deb"],
-    sha256 = "65bdec9dfee8ea2d2cb47e441e62ca4808870aa82e9d7f6100288f06b9d68796",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu17-ca/zulu17-ca-jre-headless_17.0.6-1_amd64.deb"],
+    sha256 = "934beac354addb2abf041bd9ad532349206909073da87d443af4ef0441c6ce04",
   )
   http_file(
     name = "deb_bullseye_zulu17_jdk_headless",
     downloaded_file_path = "deb_bullseye_zulu17_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu17/zulu17-jdk-headless_17.0.5-1_amd64.deb"],
-    sha256 = "bd6d0e78b6de252efb47b8b99634156583e05cc11ece2ab7e5ef07604ab5acb4",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu17/zulu17-jdk-headless_17.0.6-1_amd64.deb"],
+    sha256 = "c98a7937a6cc993a4f2f65a949757c61ca9aa9f9c6bf17759003f046906c20d1",
   )
   http_file(
     name = "deb_bullseye_zulu17_jre_headless",
     downloaded_file_path = "deb_bullseye_zulu17_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu17/zulu17-jre-headless_17.0.5-1_amd64.deb"],
-    sha256 = "25f8b2fa462e579b9d6215badb4571f0df3634b3136667ff65106d27813f84dc",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu17/zulu17-jre-headless_17.0.6-1_amd64.deb"],
+    sha256 = "45c5ff90a2d71ae82bbf7d7bc58dbd913be614a1d18a639b637113783fceb75a",
   )
   http_file(
     name = "deb_bullseye_zulu8_ca_jdk_headless",
     downloaded_file_path = "deb_bullseye_zulu8_ca_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8-ca/zulu8-ca-jdk-headless_8.0.352-1_amd64.deb"],
-    sha256 = "a81f32540cc35b128ad754cea578fcf284a6dcdb649e0cc9aee64bb69e8388ad",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8-ca/zulu8-ca-jdk-headless_8.0.362-3_amd64.deb"],
+    sha256 = "a2692234ffacbb7fe50387c63c77b2d60950f1cec83ee97886c99f34880af1c9",
   )
   http_file(
     name = "deb_bullseye_zulu8_ca_jre_headless",
     downloaded_file_path = "deb_bullseye_zulu8_ca_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8-ca/zulu8-ca-jre-headless_8.0.352-1_amd64.deb"],
-    sha256 = "c69f95698d191642d756647d34ae2fd5b53d07b305ad96c1f45c472f908a6b7f",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8-ca/zulu8-ca-jre-headless_8.0.362-3_amd64.deb"],
+    sha256 = "88002d9e3e37617e4e27974495c85c0de8b83a6f3e4c3a85876d2f608c50bccd",
   )
   http_file(
     name = "deb_bullseye_zulu8_jdk_headless",
     downloaded_file_path = "deb_bullseye_zulu8_jdk_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8/zulu8-jdk-headless_8.0.352-1_amd64.deb"],
-    sha256 = "629e099d69f32b98407986f0e2e22a1d9b81285154150f1bc92a51ed1bf59095",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8/zulu8-jdk-headless_8.0.362-3_amd64.deb"],
+    sha256 = "d8ca3d2811f0c0e8663560cc68a36c22d5ec78d47d8976f9857113f80dc86353",
   )
   http_file(
     name = "deb_bullseye_zulu8_jre_headless",
     downloaded_file_path = "deb_bullseye_zulu8_jre_headless.deb",
-    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8/zulu8-jre-headless_8.0.352-1_amd64.deb"],
-    sha256 = "1cedbb792b58bd9d78b26561d7bcd19e6add3899e6d0044a3bc2b3da78606f97",
+    urls = ["http://repos.azul.com/zulu/deb/pool/main/z/zulu8/zulu8-jre-headless_8.0.362-3_amd64.deb"],
+    sha256 = "6863b57b7c4057ba4cfb3d1fd0df16b58a12da1bce41b6d330d6ef8bfe7a9152",
   )

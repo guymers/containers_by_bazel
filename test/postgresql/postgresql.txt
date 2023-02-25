@@ -7,8 +7,8 @@ INSERT 0 1
              1 | blah
 (1 row)
 
-                             List of databases
- Name |  Owner   | Encoding |   Collate   |    Ctype    | Access privileges 
-------+----------+----------+-------------+-------------+-------------------
- test | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+                                             List of databases
+ Name |  Owner   | Encoding |   Collate   |    Ctype    | ICU Locale | Locale Provider | Access privileges 
+------+----------+----------+-------------+-------------+------------+-----------------+-------------------
+ test | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 |            | libc            | 
 (1 row)

@@ -13,6 +13,7 @@ container_test(
   size = "medium",
   image = ":rabbitmq_nodejs",
   daemon = True,
+  mem_limit = "4000m", # lol wtf needs 4gb to start...
   test = "test.sh",
   files = ["main.js"],
   golden = "output.txt",
